@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ankommer-v4';
+const CACHE_NAME = 'ankommer-v5';
 
 const PRECACHE_URLS = [
   '/',
@@ -36,13 +36,19 @@ self.addEventListener('activate', event => {
   self.clients.claim();
 });
 
-// ── Fetch: network-first, cache fallback ────────────────────────────────────
+// ── Fetch: network-first, cache fallback (same-origin only) ─────────────────
 self.addEventListener('fetch', event => {
   const { request } = event;
   const url = new URL(request.url);
 
   // Skip non-http(s) schemes (e.g. chrome-extension://)
   if (!url.protocol.startsWith('http')) return;
+
+  // Only intercept same-origin requests. Third-party APIs (Open-Meteo, DAWA,
+  // Rejseplanen proxy, Groq) must NOT be cached — they return live data and
+  // serving stale weather/exchange-rate/chat responses would be wrong. They
+  // pass through to the network unhandled.
+  if (url.origin !== self.location.origin) return;
 
   event.respondWith(networkFirst(request));
 });
@@ -56,7 +62,7 @@ async function networkFirst(request) {
     // Always attempt the network first
     const networkResponse = await fetch(request);
 
-    // Cache a fresh copy for future offline use (only GET responses)
+    // Cache a fresh copy for future offline use (only GET, only OK responses)
     if (request.method === 'GET' && networkResponse.ok) {
       const cache = await caches.open(CACHE_NAME);
       cache.put(request, networkResponse.clone());

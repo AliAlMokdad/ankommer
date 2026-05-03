@@ -597,7 +597,7 @@ const TRANSLATIONS = {
     daily_exchange: "Live-Wechselkurs",
         footer_tagline: "Dein Leben in Dänemark. Kapitel für Kapitel.",
     footer_chapters: "Kapitel",
-    footer_tools: "Tools",
+    footer_tools: "Werkzeuge",
     footer_bjorn: "Björn",
     footer_ask: "Alles fragen",
     footer_doc: "Dokument übersetzen",

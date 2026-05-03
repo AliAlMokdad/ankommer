@@ -2,7 +2,7 @@
 <html lang="en" data-theme="dark" data-time="day" data-season="spring">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Moving to Denmark — The Complete Guide | ANKOMMER</title>
   <meta name="description" content="Everything you need to move to Denmark — CPR number, housing, banking, healthcare, work permits and more. Free chapter-by-chapter guide in 10 languages. Powered by Björn, your Viking AI guide." />
 
@@ -112,7 +112,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
     </button>
     <!-- Dark mode -->
-    <button class="icon-btn" id="theme-toggle" title="Toggle theme" aria-label="Toggle dark mode">
+    <button class="icon-btn" id="theme-toggle" title="Toggle theme" aria-label="Toggle dark mode" aria-pressed="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
     <!-- Björn toggle -->
@@ -122,7 +122,7 @@
     </button>
   </div>
   <!-- Mobile hamburger -->
-  <button class="hamburger" id="hamburger" aria-label="Menu">
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="chapter-rail">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -140,7 +140,7 @@
 
   <!-- Copenhagen skyline SVG -->
   <div class="hero-skyline-wrap">
-    <svg class="hero-skyline" viewBox="0 0 1400 280" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+    <svg class="hero-skyline" viewBox="0 0 1400 280" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation">
       <!-- Water -->
       <rect x="0" y="240" width="1400" height="40" class="sky-water"/>
       <!-- Water shimmer -->
@@ -743,7 +743,7 @@
 <!-- ═══════════════════════════════════ BJÖRN CHAT ═══════════════════════════════════ -->
 <div id="bjorn-widget" class="bjorn-widget closed">
   <!-- Toggle button -->
-  <button class="bjorn-toggle" id="bjorn-toggle" aria-label="Toggle Björn">
+  <button class="bjorn-toggle" id="bjorn-toggle" aria-label="Toggle Björn chat" aria-expanded="false" aria-controls="bjorn-panel">
     <div class="bjorn-avatar-sm" id="bjorn-avatar-sm">
       <svg viewBox="0 0 60 60" class="bjorn-svg-sm">
         <!-- Face -->

@@ -3329,3 +3329,139 @@ h4 { font-size: 1rem; font-weight: 600; }
   .hero-line-cycle { animation: none !important; }
 }
 
+/* ════════════════════════════════════════════════════════════════
+   ACCESSIBILITY & MOBILE POLISH (audit fixes)
+   ──────────────────────────────────────────────────────────────
+   Added in v5: iOS safe-area, 44×44 touch targets, mobile lang
+   dropdown, Björn panel mobile width, touch :active feedback,
+   RTL chapter rail slide direction.
+══════════════════════════════════════════════════════════════ */
+
+/* ── iOS safe-area (notch + home indicator) ───────────────────── */
+#main-nav {
+  padding-top: max(8px, env(safe-area-inset-top));
+  padding-left:  max(16px, env(safe-area-inset-left));
+  padding-right: max(16px, env(safe-area-inset-right));
+}
+.bjorn-widget {
+  bottom: max(16px, calc(env(safe-area-inset-bottom) + 8px));
+  right:  max(16px, env(safe-area-inset-right));
+}
+.pwa-install-banner {
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+}
+.chapter-rail {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ── Touch :active feedback (replaces hover-only states) ──────── */
+@media (hover: none) {
+  .tool-card:active,
+  .ch-preview-card:active,
+  .story-card:active,
+  .lang-btn:active,
+  .icon-btn:active,
+  .btn-primary:active,
+  .btn-secondary:active {
+    transform: scale(0.98);
+    transition: transform 80ms ease-out;
+  }
+}
+
+/* ── 44×44 minimum touch targets on mobile ────────────────────── */
+@media (max-width: 768px) {
+  .icon-btn,
+  .lang-btn,
+  .bjorn-icon-btn,
+  .bjorn-close-btn,
+  .pwa-dismiss-btn,
+  .weather-quick-btn,
+  .col-city-tab,
+  .filter-chip,
+  .wdot,
+  .tl-chapter-btn {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Lang chips need a bit more breathing room when forced to 44px */
+  .lang-btn { padding: 6px 10px; }
+}
+
+/* ── Mobile lang dropdown — collapse 10 chips below 600px ─────── */
+@media (max-width: 600px) {
+  .lang-selector { position: relative; }
+  .lang-selector .lang-btn { display: none; }
+  .lang-selector::before {
+    content: attr(data-current-lang);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--brand-red);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  /* When .lang-selector has class .open we expand into a vertical menu */
+  .lang-selector.open {
+    position: absolute;
+    top: calc(env(safe-area-inset-top) + 56px);
+    right: 12px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    z-index: 1000;
+    flex-direction: column;
+    display: flex !important;
+  }
+  .lang-selector.open .lang-btn {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* ── Björn panel — keep inside viewport on small phones ───────── */
+@media (max-width: 480px) {
+  .bjorn-panel {
+    position: fixed;
+    right: 12px;
+    left: 12px;
+    width: auto;
+    max-width: none;
+    max-height: min(600px, calc(100vh - 100px - env(safe-area-inset-top)));
+  }
+}
+
+/* ── Tool cards: stress-cap weather donut on tiny screens ─────── */
+@media (max-width: 360px) {
+  .result-donut-wrap { width: min(180px, 60vw); height: min(180px, 60vw); }
+}
+
+/* ── RTL chapter rail — slide in from right side ──────────────── */
+[dir="rtl"] .chapter-rail {
+  transform: translateX(100%);
+}
+[dir="rtl"] .chapter-rail.open {
+  transform: translateX(0);
+}
+
+/* ── Decorative skyline shouldn't steal screen reader attention ─ */
+.hero-skyline { speak: none; }
+
+/* ── Stronger focus indicator across the board for keyboard use ─ */
+:focus-visible {
+  outline: 2px solid var(--nordic-blue, #2E6DA4);
+  outline-offset: 2px;
+}
+

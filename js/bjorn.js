@@ -424,9 +424,19 @@ To unlock my full AI capabilities (so I can actually think and search and give y
     container.scrollTop = container.scrollHeight;
   };
 
+  /* ── ESCAPE HTML (XSS prevention) ─────────────────────── */
+  const escapeHtml = (str) => String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
   /* ── FORMAT MESSAGE ──────────────────────────────────── */
+  // IMPORTANT: input is escaped FIRST, then markdown is applied to escaped text.
+  // This prevents XSS via user-typed HTML/script while still allowing **bold**, *italic*, etc.
   const formatMessage = (text) => {
-    return text
+    return escapeHtml(text)
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.*?)\*/g, '<em>$1</em>')
       .replace(/`(.*?)`/g, '<code style="background:rgba(0,0,0,0.1);padding:1px 4px;border-radius:3px;font-family:monospace">$1</code>')
@@ -434,7 +444,8 @@ To unlock my full AI capabilities (so I can actually think and search and give y
       .replace(/^## (.*$)/gm, '<h3 style="margin:8px 0 4px">$1</h3>')
       .replace(/^- (.*$)/gm, '• $1<br>')
       .replace(/^\d+\. (.*$)/gm, (m, p1, offset, str) => `${m}<br>`)
-      .replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g, '<a href="$2" target="_blank" rel="noopener" style="color:var(--nordic-blue)">$1 ↗</a>')
+      // Markdown links: escapeHtml turned & into &amp; so we match both forms in URLs
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color:var(--nordic-blue)">$1 ↗</a>')
       .replace(/\n\n/g, '<br><br>')
       .replace(/\n/g, '<br>');
   };
@@ -516,10 +527,26 @@ To unlock my full AI capabilities (so I can actually think and search and give y
   };
 
   /* ── OPEN / CLOSE ────────────────────────────────────── */
+  let _focusTrap = null;
+
   const open = () => {
     const widget = document.getElementById('bjorn-widget');
     if (widget) widget.classList.remove('closed');
     isOpen = true;
+
+    // Reflect open state on toggle button for screen readers
+    const toggleBtn = document.getElementById('bjorn-toggle');
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
+
+    // Focus trap on the panel — Escape closes, Tab cycles inside
+    const panel = document.getElementById('bjorn-panel') || widget;
+    if (panel && window.FocusTrap) {
+      _focusTrap = window.FocusTrap(panel, { onEscape: close });
+      _focusTrap.activate(toggleBtn);
+      requestAnimationFrame(() => {
+        document.getElementById('bjorn-input')?.focus({ preventScroll: true });
+      });
+    }
 
     const msgs = document.getElementById('bjorn-messages');
     if (!msgs) return;
@@ -556,6 +583,11 @@ To unlock my full AI capabilities (so I can actually think and search and give y
   const close = () => {
     const widget = document.getElementById('bjorn-widget');
     if (!widget) return;
+    // Tear down focus trap and restore focus to the toggle button
+    _focusTrap?.deactivate();
+    _focusTrap = null;
+    const toggleBtn = document.getElementById('bjorn-toggle');
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
     // Animate panel out before hiding it
     widget.classList.add('closing');
     setTimeout(() => {

@@ -10,6 +10,10 @@ const _detectedLang = navigator.language?.slice(0,2).toLowerCase();
 window.currentLang = localStorage.getItem('ankommer_lang')
   || (_SUPPORTED_LANGS.includes(_detectedLang) ? _detectedLang : 'en');
 
+// Sync <html lang/dir> immediately so screen readers + RTL work from first paint
+document.documentElement.setAttribute('lang', window.currentLang);
+document.documentElement.setAttribute('dir', ['ar','ur','fa'].includes(window.currentLang) ? 'rtl' : 'ltr');
+
 /* ── UI TRANSLATIONS ───────────────────────────────── */
 const UI_T = {
   yourChecklist: { en:'Your Checklist', fr:'Votre Liste de Tâches', ar:'قائمة مهامك', es:'Tu Lista de Tareas', da:'Din Tjekliste', ur:'آپ کی چیک لسٹ', fa:'چک‌لیست شما' },
@@ -85,6 +89,58 @@ const AppState = {
   profile: safeGetJSON('ankommer_profile', {}),
 };
 
+/* ══════════════════════════════════════════════════════
+   FOCUS TRAP — accessibility for modals/dialogs
+   Returns a handler obj: { activate(triggerEl), deactivate() }
+   - Tab/Shift+Tab cycles focus inside `container`
+   - Escape calls onEscape() if provided
+   - Restores focus to the element that opened the modal
+══════════════════════════════════════════════════════ */
+const FocusTrap = (container, { onEscape } = {}) => {
+  const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+  let lastFocused = null;
+  let keyHandler = null;
+
+  const getFocusable = () =>
+    [...container.querySelectorAll(FOCUSABLE)].filter(el =>
+      !el.hasAttribute('hidden') && el.offsetParent !== null
+    );
+
+  return {
+    activate: (triggerEl) => {
+      lastFocused = triggerEl || document.activeElement;
+      keyHandler = (e) => {
+        if (e.key === 'Escape' && onEscape) {
+          e.preventDefault();
+          onEscape();
+          return;
+        }
+        if (e.key !== 'Tab') return;
+        const items = getFocusable();
+        if (!items.length) return;
+        const first = items[0];
+        const last  = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
+      };
+      container.addEventListener('keydown', keyHandler);
+    },
+    deactivate: () => {
+      if (keyHandler) container.removeEventListener('keydown', keyHandler);
+      keyHandler = null;
+      // Restore focus to whatever opened us
+      try { lastFocused?.focus({ preventScroll: true }); } catch (_) {}
+      lastFocused = null;
+    }
+  };
+};
+
+// Expose so bjorn.js (separate file) can use it
+window.FocusTrap = FocusTrap;
+
 /* ── XP RANKS ──────────────────────────────────────── */
 const XP_RANKS = [
   { min:0,    label:'Nybegynder',       en:'Newcomer' },
@@ -135,6 +191,7 @@ const i18n = {
     renderChaptersPreview();
     RoadmapStrip.refresh();
     updateDailyFeed();
+    window.dispatchEvent(new CustomEvent('langChange', { detail: lang }));
   }
 };
 
@@ -249,6 +306,11 @@ const ThemeManager = {
     document.documentElement.setAttribute('data-theme', theme);
     safeSetItem('ankommer_theme', theme);
     const btn = document.getElementById('theme-toggle');
+    if (btn) {
+      // aria-pressed reflects "dark mode is currently active"
+      btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+      btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    }
     if (btn) btn.innerHTML = theme === 'dark'
       ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`
       : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
@@ -324,6 +386,8 @@ const STEP_NAMES = ['Timeline', 'Purpose', 'Location', 'Household', 'Passport', 
 
 const Wizard = {
 
+  _focusTrap: null,
+
   open: () => {
     const overlay = document.getElementById('wizard-overlay');
     if (!overlay) return;
@@ -336,11 +400,22 @@ const Wizard = {
     const res = document.getElementById('wizard-result');
     if (res) res.classList.add('hidden');
     Wizard.renderStep(0);
+    // Activate focus trap (Escape closes, Tab cycles inside modal)
+    Wizard._focusTrap = FocusTrap(overlay, { onEscape: Wizard.close });
+    Wizard._focusTrap.activate(document.activeElement);
+    // Defer initial focus to first focusable element so screen readers announce it
+    requestAnimationFrame(() => {
+      const first = overlay.querySelector('button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+      first?.focus({ preventScroll: true });
+    });
   },
 
   close: () => {
     const overlay = document.getElementById('wizard-overlay');
     if (!overlay) return;
+    // Tear down focus trap and restore focus to opener
+    Wizard._focusTrap?.deactivate();
+    Wizard._focusTrap = null;
     // Animate out before hiding
     overlay.classList.add('closing');
     setTimeout(() => {
@@ -1409,8 +1484,9 @@ const initMobileSidebar = () => {
   const rail = document.getElementById('chapter-rail');
 
   hamburger?.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
+    const opened = hamburger.classList.toggle('open');
     rail?.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', opened ? 'true' : 'false');
   });
 
   // Close on outside click
@@ -1420,6 +1496,7 @@ const initMobileSidebar = () => {
         !hamburger?.contains(e.target)) {
       rail.classList.remove('open');
       hamburger?.classList.remove('open');
+      hamburger?.setAttribute('aria-expanded', 'false');
     }
   });
 };
@@ -1437,6 +1514,35 @@ const hideLoader = () => {
    LANGUAGE BUTTONS
 ══════════════════════════════════════════════════════ */
 const initLangButtons = () => {
+  // Tag the .lang-selector with the current code so the mobile dropdown
+  // (CSS ::before content: attr(data-current-lang)) shows e.g. "EN" / "AR"
+  const syncCurrentLang = () => {
+    const selector = document.querySelector('.lang-selector');
+    if (selector) selector.dataset.currentLang = (window.currentLang || 'en').toUpperCase();
+  };
+  syncCurrentLang();
+  // Re-sync after every language switch
+  window.addEventListener('langChange', syncCurrentLang);
+
+  // Mobile: tap the ::before pill to expand/collapse the dropdown
+  const selector = document.querySelector('.lang-selector');
+  if (selector) {
+    selector.addEventListener('click', (e) => {
+      // Only toggle when the click is on the bare selector (not a lang-btn child)
+      if (window.matchMedia('(max-width: 600px)').matches && e.target === selector) {
+        selector.classList.toggle('open');
+      }
+    });
+    // Close after picking a language on mobile
+    selector.addEventListener('click', (e) => {
+      if (e.target.classList.contains('lang-btn')) selector.classList.remove('open');
+    });
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!selector.contains(e.target)) selector.classList.remove('open');
+    });
+  }
+
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => i18n.setLang(btn.dataset.lang));
   });
@@ -1618,6 +1724,8 @@ const Search = (() => {
     });
   };
 
+  let focusTrap = null;
+
   const open = () => {
     const overlay = document.getElementById('search-overlay');
     const input   = document.getElementById('search-input');
@@ -1631,25 +1739,29 @@ const Search = (() => {
       input?.select();
     }));
     render([], '');
+    // Focus trap: Tab cycles inside, Escape closes, focus returns to trigger
+    focusTrap = FocusTrap(overlay, { onEscape: close });
+    focusTrap.activate(document.activeElement);
   };
 
   const close = () => {
     const overlay = document.getElementById('search-overlay');
-    if (!overlay) return;
+    if (!overlay || overlay.classList.contains('hidden')) return;
     overlay.classList.add('hidden');
     document.body.style.overflow = '';
     const input = document.getElementById('search-input');
     if (input) input.value = '';
+    focusTrap?.deactivate();
+    focusTrap = null;
   };
 
   const init = () => {
     document.getElementById('search-open-btn')?.addEventListener('click', open);
     document.getElementById('search-backdrop')?.addEventListener('click', close);
 
-    // Ctrl+K / Cmd+K
+    // Ctrl+K / Cmd+K — Escape is handled by FocusTrap when overlay is open
     document.addEventListener('keydown', (e) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); open(); }
-      if (e.key === 'Escape') close();
     });
 
     // Input handler
