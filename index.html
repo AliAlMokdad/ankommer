@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-time="day" data-season="spring">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moving to Denmark — The Complete Guide | ANKOMMER</title>
+  <meta name="description" content="Everything you need to move to Denmark — CPR number, housing, banking, healthcare, work permits and more. Free chapter-by-chapter guide in 10 languages. Powered by Björn, your Viking AI guide." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://movingtodenmark.org/" />
+  <meta property="og:title"       content="Moving to Denmark — The Complete Guide | ANKOMMER" />
+  <meta property="og:description" content="Everything you need to move to Denmark — CPR number, housing, banking, healthcare, work permits and more. Free chapter-by-chapter guide in 10 languages." />
+  <meta property="og:image"       content="https://movingtodenmark.org/og-image.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type"   content="image/png" />
+  <meta property="og:locale"      content="en_US" />
+  <meta property="og:site_name"   content="ANKOMMER" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:url"         content="https://movingtodenmark.org/" />
+  <meta name="twitter:title"       content="Moving to Denmark — The Complete Guide | ANKOMMER" />
+  <meta name="twitter:description" content="Everything you need to move to Denmark. CPR, housing, banking, healthcare, jobs, culture — 15 deep chapters, 10 languages, free." />
+  <meta name="twitter:image"       content="https://movingtodenmark.org/og-image.png" />
+
+  <!-- Additional SEO -->
+  <meta name="keywords" content="moving to Denmark, living in Denmark, Denmark expat guide, CPR number Denmark, work in Denmark, Denmark immigration, Denmark visa, NemKonto, MitID, Danish life, relocate Denmark" />
+  <meta name="robots"   content="index, follow" />
+  <link rel="canonical" href="https://movingtodenmark.org/" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="ANKOMMER" />
+  <meta name="theme-color" content="#C60C30" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+  </script>
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ANKOMMER",
+    "alternateName": "Moving to Denmark Guide",
+    "url": "https://movingtodenmark.org/",
+    "description": "The world's most complete guide for internationals moving to Denmark. 15 chapters covering CPR, housing, banking, healthcare, employment, culture and more.",
+    "inLanguage": ["en", "fr", "ar", "es", "da", "de", "uk", "pl", "ur", "fa"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://movingtodenmark.org/#search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+<a href="#main-content" class="skip-to-content">Skip to content</a>
+
+<!-- ═══════════════════════════════════ LOADING SCREEN ═══════════════════════════════════ -->
+<div id="loader">
+  <div class="loader-wordmark">
+    <span class="loader-a">A</span><span class="loader-rest">NKOMMER</span>
+  </div>
+  <div class="loader-sub" data-i18n="loader_sub">Preparing your Denmark…</div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- ═══════════════════════════════════ NAVIGATION ═══════════════════════════════════ -->
+<nav id="main-nav" aria-label="Main navigation">
+  <div class="nav-left">
+    <button class="nav-logo" onclick="scrollToTop()" aria-label="ANKOMMER — go to top">
+      <span class="logo-a">A</span>NKOMMER
+    </button>
+  </div>
+  <div class="nav-center" id="nav-progress-wrap">
+    <div class="nav-progress-label" data-i18n="nav_progress">Your journey</div>
+    <div class="nav-progress-bar"><div class="nav-progress-fill" id="nav-progress-fill"></div></div>
+    <div class="nav-progress-pct" id="nav-progress-pct">0%</div>
+  </div>
+  <div class="nav-right">
+    <!-- Language selector -->
+    <div class="lang-selector" id="lang-selector" role="group" aria-label="Language selection">
+      <button class="lang-btn active" data-lang="en" aria-label="English" aria-pressed="true">🇬🇧 EN</button>
+      <button class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="false">🇫🇷 FR</button>
+      <button class="lang-btn" data-lang="ar" aria-label="العربية" aria-pressed="false">🇸🇦 AR</button>
+      <button class="lang-btn" data-lang="es" aria-label="Español" aria-pressed="false">🇪🇸 ES</button>
+      <button class="lang-btn" data-lang="da" aria-label="Dansk" aria-pressed="false">🇩🇰 DA</button>
+      <button class="lang-btn" data-lang="de" aria-label="Deutsch" aria-pressed="false">🇩🇪 DE</button>
+      <button class="lang-btn" data-lang="uk" aria-label="Українська" aria-pressed="false">🇺🇦 UK</button>
+      <button class="lang-btn" data-lang="pl" aria-label="Polski" aria-pressed="false">🇵🇱 PL</button>
+      <button class="lang-btn" data-lang="ur" aria-label="اردو" aria-pressed="false">🇵🇰 UR</button>
+      <button class="lang-btn" data-lang="fa" aria-label="فارسی" aria-pressed="false">🇮🇷 FA</button>
+    </div>
+    <!-- Search -->
+    <button class="icon-btn search-nav-btn" id="search-open-btn" title="Search (Ctrl+K)" aria-label="Search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    </button>
+    <!-- Dark mode -->
+    <button class="icon-btn" id="theme-toggle" title="Toggle theme" aria-label="Toggle dark mode">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <!-- Björn toggle -->
+    <button class="bjorn-nav-btn" id="bjorn-open-btn" title="Ask Björn" aria-label="Open Björn">
+      <div class="bjorn-nav-face">🛡️</div>
+      <span data-i18n="nav_bjorn">Ask Björn</span>
+    </button>
+  </div>
+  <!-- Mobile hamburger -->
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ═══════════════════════════════════ HERO SECTION ═══════════════════════════════════ -->
+<section id="hero">
+  <!-- Animated sky gradient -->
+  <div class="hero-sky" id="hero-sky"></div>
+
+  <!-- Stars (night mode) -->
+  <div class="hero-stars" id="hero-stars"></div>
+
+  <!-- Aurora (night / winter) -->
+  <div class="hero-aurora" id="hero-aurora"></div>
+
+  <!-- Copenhagen skyline SVG -->
+  <div class="hero-skyline-wrap">
+    <svg class="hero-skyline" viewBox="0 0 1400 280" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg">
+      <!-- Water -->
+      <rect x="0" y="240" width="1400" height="40" class="sky-water"/>
+      <!-- Water shimmer -->
+      <rect x="0" y="240" width="1400" height="8" class="sky-water-shimmer"/>
+      <!-- Building group left -->
+      <rect x="20" y="180" width="60" height="60" class="sky-building"/>
+      <rect x="30" y="160" width="40" height="20" class="sky-building-dark"/>
+      <rect x="90" y="160" width="80" height="80" class="sky-building"/>
+      <rect x="100" y="140" width="60" height="22" class="sky-building-dark"/>
+      <!-- Nyhavn houses -->
+      <rect x="180" y="170" width="38" height="70" class="sky-house-red"/>
+      <rect x="220" y="160" width="36" height="80" class="sky-house-yellow"/>
+      <rect x="258" y="172" width="36" height="68" class="sky-house-blue"/>
+      <rect x="296" y="165" width="38" height="75" class="sky-house-red"/>
+      <rect x="336" y="170" width="34" height="70" class="sky-house-yellow"/>
+      <!-- Peaked rooftops for Nyhavn -->
+      <polygon points="180,170 199,148 218,170" class="sky-roof-red"/>
+      <polygon points="220,160 238,136 256,160" class="sky-roof-yellow"/>
+      <polygon points="258,172 276,150 294,172" class="sky-roof-blue"/>
+      <polygon points="296,165 315,140 334,165" class="sky-roof-red"/>
+      <polygon points="336,170 353,148 370,170" class="sky-roof-yellow"/>
+      <!-- Round Tower (Rundetårn) -->
+      <rect x="420" y="110" width="45" height="130" class="sky-building"/>
+      <ellipse cx="442" cy="110" rx="22" ry="12" class="sky-building-dark"/>
+      <rect x="437" y="90" width="10" height="22" class="sky-spire"/>
+      <!-- Church spire left -->
+      <rect x="520" y="140" width="55" height="100" class="sky-building"/>
+      <polygon points="520,140 547,60 575,140" class="sky-spire"/>
+      <!-- Buildings center -->
+      <rect x="600" y="150" width="90" height="90" class="sky-building"/>
+      <rect x="615" y="130" width="60" height="22" class="sky-building-dark"/>
+      <rect x="700" y="140" width="120" height="100" class="sky-building"/>
+      <rect x="715" y="115" width="90" height="27" class="sky-building-dark"/>
+      <!-- Frelsers Kirke spire -->
+      <rect x="840" y="120" width="60" height="120" class="sky-building"/>
+      <polygon points="840,120 870,20 900,120" class="sky-spire"/>
+      <line x1="870" y1="20" x2="870" y2="5" stroke="var(--amber)" stroke-width="2"/>
+      <!-- Buildings right -->
+      <rect x="920" y="160" width="80" height="80" class="sky-building"/>
+      <rect x="1010" y="145" width="100" height="95" class="sky-building"/>
+      <rect x="1025" y="125" width="70" height="22" class="sky-building-dark"/>
+      <rect x="1120" y="170" width="70" height="70" class="sky-building"/>
+      <rect x="1200" y="155" width="85" height="85" class="sky-building"/>
+      <rect x="1295" y="165" width="100" height="75" class="sky-building"/>
+      <!-- Windows scattered -->
+      <rect x="95" y="175" width="8" height="8" class="sky-window"/>
+      <rect x="110" y="175" width="8" height="8" class="sky-window"/>
+      <rect x="95" y="190" width="8" height="8" class="sky-window"/>
+      <rect x="705" y="160" width="10" height="10" class="sky-window"/>
+      <rect x="722" y="160" width="10" height="10" class="sky-window"/>
+      <rect x="740" y="160" width="10" height="10" class="sky-window"/>
+      <rect x="705" y="178" width="10" height="10" class="sky-window"/>
+      <rect x="722" y="178" width="10" height="10" class="sky-window"/>
+      <rect x="1015" y="162" width="10" height="10" class="sky-window"/>
+      <rect x="1032" y="162" width="10" height="10" class="sky-window"/>
+      <rect x="1050" y="162" width="10" height="10" class="sky-window"/>
+    </svg>
+  </div>
+
+  <!-- Rain canvas -->
+  <canvas id="rain-canvas" class="rain-canvas"></canvas>
+
+  <!-- Hero content -->
+  <div class="hero-content">
+    <div class="hero-tagline-wrap">
+      <p class="hero-tagline" id="hero-line1" data-i18n="hero_line1">You just landed.</p>
+      <p class="hero-tagline hero-tagline-2" id="hero-line2" data-i18n="hero_line2">Or you're about to.</p>
+      <h1 class="hero-title" id="hero-line3" data-i18n="hero_title">Either way — we've got you.</h1>
+      <p class="hero-sub" id="hero-line4" data-i18n="hero_sub">The world's most complete guide to life in Denmark. Chapter by chapter, we'll help you build everything.</p>
+    </div>
+    <div class="hero-ctas" id="hero-ctas">
+      <button class="btn-primary btn-xl" id="begin-btn" data-i18n="hero_cta_begin">Begin My Journey →</button>
+      <button class="btn-ghost btn-xl" id="bjorn-hero-btn" data-i18n="hero_cta_bjorn">💬 Ask Björn Anything</button>
+    </div>
+    <!-- Live stats bar -->
+    <div class="hero-stats" id="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-num" id="stat-visitors">—</span><span data-i18n="stat_users">newcomers helped</span></div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat"><span class="hero-stat-num">16</span><span data-i18n="stat_chapters">life chapters</span></div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat"><span class="hero-stat-num" id="stat-bjorn">—</span><span data-i18n="stat_bjorn">questions answered by Björn</span></div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat"><span class="hero-stat-num">10</span><span data-i18n="stat_langs">languages</span></div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span data-i18n="scroll_hint">Scroll to explore</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ SEARCH OVERLAY ═══════════════════════════════════ -->
+<div id="search-overlay" class="search-overlay hidden" role="dialog" aria-modal="true" aria-label="Search">
+  <div class="search-backdrop" id="search-backdrop"></div>
+  <div class="search-modal">
+    <div class="search-input-wrap">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="search-input" placeholder="Search chapters, topics, tasks…" data-i18n-placeholder="search_placeholder" aria-label="Search the guide" autocomplete="off" spellcheck="false" />
+      <kbd class="search-esc-hint">ESC</kbd>
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-footer">
+      <span>↑↓ navigate</span>
+      <span>↵ open chapter</span>
+      <span>ESC close</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ MY ROADMAP STRIP ═══════════════════════════════════ -->
+<div id="my-roadmap-strip" class="my-roadmap-strip hidden">
+  <div class="roadmap-strip-inner">
+    <div class="roadmap-strip-left">
+      <div class="roadmap-strip-avatar">🛡️</div>
+      <div class="roadmap-strip-text">
+        <div class="roadmap-strip-title" id="roadmap-strip-title">Your Denmark Roadmap</div>
+        <div class="roadmap-strip-sub" id="roadmap-strip-sub">Your personalised next steps</div>
+      </div>
+    </div>
+    <div class="roadmap-strip-priorities" id="roadmap-strip-priorities"></div>
+    <div class="roadmap-strip-actions">
+      <button class="roadmap-edit-btn" id="roadmap-edit-btn" title="Edit your profile">✏️ Update</button>
+      <button class="roadmap-dismiss-btn" id="roadmap-dismiss-btn" title="Hide">✕</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ TIMELINE SECTION ═══════════════════════════════════ -->
+<section id="timeline-section" class="timeline-section">
+  <div class="section-header">
+    <h2 class="section-title" data-i18n="timeline_title">Your First Year — Week by Week</h2>
+    <p class="section-sub" data-i18n="timeline_sub">What to do and when. Tap any task to mark it done.</p>
+  </div>
+  <div class="timeline-tabs" id="timeline-tabs" role="tablist" aria-label="Your first year timeline">
+    <button class="tl-tab active" data-phase="week1" role="tab" aria-selected="true" aria-controls="timeline-content">Week 1</button>
+    <button class="tl-tab" data-phase="month1" role="tab" aria-selected="false" aria-controls="timeline-content">Month 1</button>
+    <button class="tl-tab" data-phase="month3" role="tab" aria-selected="false" aria-controls="timeline-content">Month 3</button>
+    <button class="tl-tab" data-phase="month6" role="tab" aria-selected="false" aria-controls="timeline-content">Month 6</button>
+    <button class="tl-tab" data-phase="year1" role="tab" aria-selected="false" aria-controls="timeline-content">Year 1</button>
+  </div>
+  <div id="timeline-content" class="timeline-content" role="tabpanel" aria-live="polite"></div>
+</section>
+
+<!-- ═══════════════════════════════════ WIZARD OVERLAY ═══════════════════════════════════ -->
+<div id="wizard-overlay" class="wizard-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="wiz-step-label">
+  <div class="wizard-modal">
+    <button class="wizard-close" id="wizard-close" aria-label="Close wizard">✕</button>
+
+    <!-- Progress Header -->
+    <div class="wiz-progress-wrap" id="wiz-progress-wrap">
+      <div class="wiz-progress-top">
+        <span class="wiz-step-label" id="wiz-step-label">Step 1 of 6 · Timeline</span>
+        <span class="wiz-pct-label" id="wiz-pct-label"></span>
+      </div>
+      <div class="wiz-bar-track">
+        <div class="wiz-bar-fill" id="wiz-bar-fill" style="width:0%"></div>
+      </div>
+      <div class="wizard-dots" id="wizard-dots">
+        <span class="wdot active" data-step="0"></span>
+        <span class="wdot" data-step="1"></span>
+        <span class="wdot" data-step="2"></span>
+        <span class="wdot" data-step="3"></span>
+        <span class="wdot" data-step="4"></span>
+        <span class="wdot" data-step="5"></span>
+      </div>
+    </div>
+
+    <!-- Questions container -->
+    <div id="wizard-questions"></div>
+    <!-- Result screen -->
+    <div class="wizard-result hidden" id="wizard-result"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ MAIN APP LAYOUT ═══════════════════════════════════ -->
+<div id="app-layout" class="app-layout hidden">
+
+  <!-- Chapter rail / sidebar -->
+  <aside class="chapter-rail" id="chapter-rail" aria-label="Chapter navigation">
+    <div class="rail-header" data-i18n="rail_header">Your Journey</div>
+    <nav class="rail-nav" id="rail-nav" aria-label="Chapters">
+      <!-- Populated by JS -->
+    </nav>
+    <!-- XP display -->
+    <div class="rail-xp">
+      <div class="xp-label"><span data-i18n="xp_label">Viking Points</span> <span id="xp-display">0</span></div>
+      <div class="xp-bar"><div class="xp-fill" id="xp-fill"></div></div>
+      <div class="xp-rank" id="xp-rank">Nybegynder</div>
+      <div class="xp-motivate" id="xp-motivate" style="display:none"></div>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main-content" id="main-content">
+    <!-- Chapter content injected here by JS -->
+  </main>
+
+</div>
+
+<!-- ═══════════════════════════════════ CHAPTERS PREVIEW ═══════════════════════════════════ -->
+<section id="chapters-preview-section" class="chapters-preview-section">
+  <div class="section-header">
+    <h2 data-i18n="chapters_preview_title">16 Chapters. Every Step Covered.</h2>
+    <p data-i18n="chapters_preview_sub">From before you land to citizenship — your complete guide to life in Denmark.</p>
+  </div>
+  <div id="chapters-preview-grid" class="chapters-preview-grid">
+    <!-- Populated by renderChaptersPreview() in app.js -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ CALCULATORS SECTION ═══════════════════════════════════ -->
+<section id="tools-section" class="tools-section">
+  <div class="section-header">
+    <h2 data-i18n="tools_title">Smart Tools</h2>
+    <p data-i18n="tools_sub">Real Danish numbers. Real calculations. No guesswork.</p>
+  </div>
+  <div class="tools-grid">
+
+    <!-- Salary Calculator -->
+    <div class="tool-card" id="salary-tool">
+      <div class="tool-icon">💰</div>
+      <h3 data-i18n="tool_salary_title">Salary Calculator</h3>
+      <p data-i18n="tool_salary_sub">Real Danish tax math. See exactly what you take home.</p>
+      <div class="tool-body">
+        <div class="tool-field">
+          <label for="salary-input" data-i18n="tool_salary_gross">Gross monthly salary (DKK)</label>
+          <input type="number" id="salary-input" placeholder="45000" min="0" max="999999" />
+        </div>
+        <div class="tool-field">
+          <label for="salary-municipality" data-i18n="tool_salary_city">Municipality</label>
+          <select id="salary-municipality">
+            <option value="24.97">Average Denmark (24.97%)</option>
+            <option value="23.80">Copenhagen (23.80%)</option>
+            <option value="24.52">Aarhus (24.52%)</option>
+            <option value="25.30">Odense (25.30%)</option>
+            <option value="25.30">Aalborg (25.30%)</option>
+            <option value="26.30">Bornholm (26.30%)</option>
+          </select>
+        </div>
+        <button class="btn-primary" id="salary-calc-btn" data-i18n="tool_calc">Calculate</button>
+        <div class="tool-result hidden" id="salary-result">
+          <div class="result-donut-wrap">
+            <canvas id="salary-donut" width="180" height="180"></canvas>
+            <div class="donut-center">
+              <span class="donut-label" data-i18n="donut_net">Net</span>
+              <span class="donut-value" id="donut-net-val">—</span>
+            </div>
+          </div>
+          <div class="result-breakdown" id="salary-breakdown"></div>
+          <div class="result-context" id="salary-context"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Monthly Budget Estimator -->
+    <div class="tool-card" id="col-tool">
+      <div class="tool-icon">🏙️</div>
+      <h3 data-i18n="tool_budget_title">Monthly Budget Estimator</h3>
+      <p data-i18n="tool_budget_sub">Tell us your lifestyle — we'll build your real Danish monthly budget.</p>
+      <div class="tool-body">
+        <!-- City -->
+        <div class="tool-field">
+          <label>City</label>
+          <div class="col-city-tabs" id="col-city-tabs">
+            <button class="col-city-tab active" data-city="cph">Copenhagen</button>
+            <button class="col-city-tab" data-city="aar">Aarhus</button>
+            <button class="col-city-tab" data-city="ode">Odense</button>
+            <button class="col-city-tab" data-city="aal">Aalborg</button>
+          </div>
+        </div>
+        <!-- Apartment -->
+        <div class="tool-field">
+          <label for="col-apt">Apartment</label>
+          <select id="col-apt">
+            <option value="room">Room / flatshare</option>
+            <option value="studio">Studio apartment</option>
+            <option value="1bed" selected>1-bedroom apartment</option>
+            <option value="2bed">2-bedroom apartment</option>
+            <option value="3bed">3+ bedroom / family</option>
+          </select>
+        </div>
+        <!-- Transport -->
+        <div class="tool-field">
+          <label for="col-transport">Getting around</label>
+          <select id="col-transport">
+            <option value="bike">🚲 Bike only</option>
+            <option value="public" selected>🚌 Public transport</option>
+            <option value="car">🚗 Car owner</option>
+          </select>
+        </div>
+        <!-- Food -->
+        <div class="tool-field">
+          <label for="col-food">Food habits</label>
+          <select id="col-food">
+            <option value="budget">🥦 Budget home cooking</option>
+            <option value="normal" selected>🍳 Regular home cooking</option>
+            <option value="mixed">🍝 Mix: cooking + dining out</option>
+            <option value="dine">🍽️ Mostly restaurants & takeaway</option>
+          </select>
+        </div>
+        <!-- Subscriptions -->
+        <div class="tool-field">
+          <label for="col-subs">Subscriptions & lifestyle</label>
+          <select id="col-subs">
+            <option value="minimal">📱 Just internet & phone</option>
+            <option value="normal" selected>🎬 Internet + streaming (Netflix/HBO)</option>
+            <option value="active">🏋️ + Gym membership</option>
+            <option value="full">🎧 + Gym + Spotify + extras</option>
+          </select>
+        </div>
+        <button class="btn-primary" id="col-calc-btn">Estimate My Monthly Budget</button>
+        <div class="tool-result hidden" id="col-result">
+          <div class="col-breakdown" id="col-breakdown"></div>
+          <div class="col-total-bar" id="col-total-bar"></div>
+          <div class="col-context" id="col-context"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rent Price Checker — Statistics Denmark data -->
+    <div class="tool-card" id="rent-tool">
+      <div class="tool-icon">🏠</div>
+      <h3 data-i18n="tool_rent_title">Rent Price Checker</h3>
+      <p data-i18n="tool_rent_sub">Is your rent fair? Compare against real Danish market averages by city and neighbourhood.</p>
+      <div class="tool-body">
+        <!-- City -->
+        <div class="tool-field">
+          <label for="rent-city">City</label>
+          <select id="rent-city">
+            <option value="cph">Copenhagen (overall)</option>
+            <option value="cph-nb">Copenhagen — by neighbourhood</option>
+            <option value="frederiksberg">Frederiksberg</option>
+            <option value="aarhus">Aarhus</option>
+            <option value="odense">Odense</option>
+            <option value="aalborg">Aalborg</option>
+            <option value="roskilde">Roskilde</option>
+            <option value="vejle">Vejle</option>
+            <option value="kolding">Kolding</option>
+            <option value="horsens">Horsens</option>
+            <option value="esbjerg">Esbjerg</option>
+          </select>
+        </div>
+        <!-- Neighbourhood (CPH only) -->
+        <div class="tool-field" id="rent-nb-wrap" style="display:none">
+          <label for="rent-neighbourhood">Neighbourhood</label>
+          <select id="rent-neighbourhood">
+            <option value="indre-by">Indre By (City Centre)</option>
+            <option value="frederiksberg-nb">Frederiksberg</option>
+            <option value="osterbro">Østerbro</option>
+            <option value="vesterbro">Vesterbro / Kgs. Enghave</option>
+            <option value="norrebro">Nørrebro</option>
+            <option value="bispebjerg">Bispebjerg</option>
+            <option value="amager-east">Amager East (Øresund)</option>
+            <option value="amager-west">Amager West (Sundby)</option>
+            <option value="valby">Valby</option>
+            <option value="vanlose">Vanløse</option>
+            <option value="bronshoj">Brønshøj / Husum</option>
+          </select>
+        </div>
+        <!-- Size -->
+        <div class="tool-field">
+          <label for="rent-size">Apartment size (m²)</label>
+          <input type="number" id="rent-size" placeholder="e.g. 65" min="10" max="500" />
+        </div>
+        <!-- Monthly rent -->
+        <div class="tool-field">
+          <label for="rent-monthly">Your monthly rent (DKK)</label>
+          <input type="number" id="rent-monthly" placeholder="e.g. 9500" min="500" max="100000" />
+        </div>
+        <button class="btn-primary" id="rent-check-btn">Check My Rent</button>
+        <div class="tool-result hidden" id="rent-result"></div>
+      </div>
+    </div>
+
+    <!-- Denmark Weather Planner — DMI Climate Normals -->
+    <div class="tool-card" id="weather-tool">
+      <div class="tool-icon">🌤️</div>
+      <h3 data-i18n="tool_weather_title">Denmark Weather Planner</h3>
+      <p data-i18n="tool_weather_sub">Pick any date — get a real forecast, actual past data, or monthly climate averages.</p>
+      <div class="tool-body">
+        <div class="tool-field">
+          <label for="weather-date">Date</label>
+          <div class="weather-date-row">
+            <input type="date" id="weather-date" />
+            <div class="weather-quick-btns">
+              <button class="weather-quick-btn" data-offset="0">Today</button>
+              <button class="weather-quick-btn" data-offset="1">Tomorrow</button>
+              <button class="weather-quick-btn" data-offset="7">+1 week</button>
+              <button class="weather-quick-btn" data-offset="14">+2 weeks</button>
+            </div>
+          </div>
+        </div>
+        <div class="tool-field">
+          <label for="weather-city">City</label>
+          <select id="weather-city">
+            <option value="cph">Copenhagen</option>
+            <option value="aar">Aarhus</option>
+            <option value="ode">Odense</option>
+            <option value="aal">Aalborg</option>
+          </select>
+        </div>
+        <div id="weather-result"></div>
+      </div>
+    </div>
+
+    <!-- Find Your Kommune — DAWA API -->
+    <div class="tool-card" id="dawa-tool">
+      <div class="tool-icon">📍</div>
+      <h3 data-i18n="tool_kommune_title">Find Your Kommune</h3>
+      <p data-i18n="tool_kommune_sub">Type any Danish address — instantly see your municipality, tax rate, hospital, and local services.</p>
+      <div class="tool-body">
+        <div class="tool-field">
+          <label for="dawa-input">Your Danish address</label>
+          <div class="dawa-input-wrap">
+            <input type="text" id="dawa-input" placeholder="Start typing — e.g. Nørrebrogade 20…" autocomplete="off" spellcheck="false" />
+            <div class="dawa-suggestions hidden" id="dawa-suggestions"></div>
+          </div>
+        </div>
+        <div class="tool-result hidden" id="dawa-result"></div>
+      </div>
+    </div>
+
+    <!-- Journey Planner — Rejseplanen -->
+    <div class="tool-card" id="journey-tool">
+      <div class="tool-icon">🚌</div>
+      <h3 data-i18n="tool_journey_title">Plan Your Journey</h3>
+      <p data-i18n="tool_journey_sub">Denmark's official public transport — find routes anywhere by train, metro, or bus.</p>
+      <div class="tool-body">
+        <div class="tool-field">
+          <label for="journey-from">From</label>
+          <div class="dawa-input-wrap">
+            <input type="text" id="journey-from" placeholder="e.g. Copenhagen Central…" autocomplete="off" spellcheck="false" />
+            <div class="dawa-suggestions hidden" id="journey-from-sugg"></div>
+          </div>
+        </div>
+        <div class="tool-field">
+          <label for="journey-to">To</label>
+          <div class="dawa-input-wrap">
+            <input type="text" id="journey-to" placeholder="e.g. Aarhus…" autocomplete="off" spellcheck="false" />
+            <div class="dawa-suggestions hidden" id="journey-to-sugg"></div>
+          </div>
+        </div>
+        <div class="tool-field">
+          <label for="journey-when">Departure time</label>
+          <input type="datetime-local" id="journey-when" />
+        </div>
+        <button class="btn-primary" id="journey-search-btn">Find Routes →</button>
+        <div class="tool-result hidden" id="journey-result"></div>
+      </div>
+    </div>
+
+    <!-- Job Search — Danish Job Boards -->
+    <div class="tool-card" id="jobs-tool">
+      <div class="tool-icon">💼</div>
+      <h3 data-i18n="tool_jobs_title">Find Work in Denmark</h3>
+      <p data-i18n="tool_jobs_sub">Search all major Danish job boards at once — filtered to your role and city.</p>
+      <div class="tool-body">
+        <div class="tool-field">
+          <label for="jobs-query">Job title or field</label>
+          <input type="text" id="jobs-query" placeholder="e.g. Software engineer, nurse, marketing…" />
+        </div>
+        <div class="job-chips" id="jobs-suggest-chips"></div>
+        <div class="tool-field">
+          <label for="jobs-location">Location</label>
+          <select id="jobs-location">
+            <option value="">All Denmark</option>
+            <option value="københavn">Copenhagen</option>
+            <option value="aarhus">Aarhus</option>
+            <option value="odense">Odense</option>
+            <option value="aalborg">Aalborg</option>
+            <option value="esbjerg">Esbjerg</option>
+            <option value="vejle">Vejle</option>
+            <option value="randers">Randers</option>
+          </select>
+        </div>
+        <div class="tool-field">
+          <label>Job type</label>
+          <div class="job-type-tabs" id="job-type-tabs">
+            <button class="job-type-tab active" data-type="">All</button>
+            <button class="job-type-tab" data-type="fuldtid">Full-time</button>
+            <button class="job-type-tab" data-type="deltid">Part-time</button>
+            <button class="job-type-tab" data-type="freelance">Freelance</button>
+          </div>
+        </div>
+        <button class="btn-primary" id="jobs-search-btn">Search Danish Jobs →</button>
+        <div class="tool-result hidden" id="jobs-result"></div>
+      </div>
+    </div>
+
+    <!-- Visa Decision Tree -->
+    <div class="tool-card" id="visa-tool">
+      <div class="tool-icon">📄</div>
+      <h3 data-i18n="tool_visa_title">Visa Decision Tree</h3>
+      <p data-i18n="tool_visa_sub">Answer 3 questions. Know exactly which visa you need.</p>
+      <div class="tool-body" id="visa-tree-body">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <!-- Residency Countdown -->
+    <div class="tool-card" id="residency-tool">
+      <div class="tool-icon">⏱️</div>
+      <h3 data-i18n="tool_res_title">Residency Timeline</h3>
+      <p data-i18n="tool_res_sub">When can you apply for permanent residency? Citizenship?</p>
+      <div class="tool-body">
+        <div class="tool-field">
+          <label for="res-arrival-date" data-i18n="tool_res_arrival">Arrival date in Denmark</label>
+          <input type="date" id="res-arrival-date" />
+        </div>
+        <div class="tool-field">
+          <label for="res-permit-type" data-i18n="tool_res_type">Permit type</label>
+          <select id="res-permit-type">
+            <option value="eu">EU / EEA citizen</option>
+            <option value="work_permit">Work permit (non-EU)</option>
+            <option value="student_visa">Student permit</option>
+            <option value="family_reunification">Family reunification</option>
+            <option value="refugee">Asylum / Refugee</option>
+          </select>
+        </div>
+        <button class="btn-primary" id="res-calc-btn" data-i18n="tool_calc">Calculate</button>
+        <div class="tool-result hidden" id="res-result"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════ DAILY FEED ═══════════════════════════════════ -->
+<section id="daily-section" class="daily-section">
+  <div class="daily-inner">
+    <div class="daily-card" id="daily-weather">
+      <div class="daily-icon">🌡️</div>
+      <div class="daily-label" data-i18n="daily_dk">Today in Denmark</div>
+      <div class="daily-value" id="daily-weather-val">Fetching…</div>
+    </div>
+    <div class="daily-card" id="daily-phrase">
+      <div class="daily-icon">🗣️</div>
+      <div class="daily-label" data-i18n="daily_phrase">Danish phrase of the day</div>
+      <div class="daily-value" id="daily-phrase-val">—</div>
+      <div class="daily-sub" id="daily-phrase-sub">—</div>
+    </div>
+    <div class="daily-card" id="daily-fact">
+      <div class="daily-icon">🧊</div>
+      <div class="daily-label" data-i18n="daily_fact">Culture fact</div>
+      <div class="daily-value" id="daily-fact-val">—</div>
+    </div>
+    <div class="daily-card" id="daily-light">
+      <div class="daily-icon">☀️</div>
+      <div class="daily-label" data-i18n="daily_light">Daylight today</div>
+      <div class="daily-value" id="daily-light-val">—</div>
+      <div class="daily-sub" id="daily-light-sub">—</div>
+    </div>
+    <div class="daily-card" id="daily-exchange">
+      <div class="daily-icon">💱</div>
+      <div class="daily-label" data-i18n="daily_exchange">Live exchange rate</div>
+      <div class="daily-value" id="daily-exchange-val">Fetching…</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+<footer id="main-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-a">A</span>NKOMMER
+      <p data-i18n="footer_tagline">Your life in Denmark. Chapter by chapter.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4 data-i18n="footer_chapters">Chapters</h4>
+        <a href="#" onclick="openChapter(0)">Before You Land</a>
+        <a href="#" onclick="openChapter(1)">First 72 Hours</a>
+        <a href="#" onclick="openChapter(2)">Papers &amp; Legal</a>
+        <a href="#" onclick="openChapter(3)">Housing</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_tools">Tools</h4>
+        <a href="#tools-section" data-i18n="tool_salary_title">Salary Calculator</a>
+        <a href="#tools-section" data-i18n="tool_col_title">Cost of Living</a>
+        <a href="#tools-section" data-i18n="tool_visa_title">Visa Tree</a>
+        <a href="#tools-section">Budget Estimator</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_bjorn">Björn</h4>
+        <a href="#" onclick="openBjorn()" data-i18n="footer_ask">Ask anything</a>
+        <a href="#" onclick="openBjorn()" data-i18n="footer_doc">Translate a document</a>
+        <a href="#" onclick="openBjorn()" data-i18n="footer_form">Navigate a form</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer_made">Made with ❤️ for everyone who ever arrived somewhere new.</p>
+      <p class="footer-legal" data-i18n="footer_legal">ANKOMMER is an independent guide. Always verify with official Danish authorities.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════ BJÖRN CHAT ═══════════════════════════════════ -->
+<div id="bjorn-widget" class="bjorn-widget closed">
+  <!-- Toggle button -->
+  <button class="bjorn-toggle" id="bjorn-toggle" aria-label="Toggle Björn">
+    <div class="bjorn-avatar-sm" id="bjorn-avatar-sm">
+      <svg viewBox="0 0 60 60" class="bjorn-svg-sm">
+        <!-- Face -->
+        <circle cx="30" cy="28" r="18" fill="#C8A96E"/>
+        <!-- Hair/helmet -->
+        <ellipse cx="30" cy="12" rx="18" ry="8" fill="#4a3728"/>
+        <!-- Horns -->
+        <ellipse cx="12" cy="10" rx="4" ry="7" fill="#e8e0d0" transform="rotate(-20,12,10)"/>
+        <ellipse cx="48" cy="10" rx="4" ry="7" fill="#e8e0d0" transform="rotate(20,48,10)"/>
+        <!-- Eyes -->
+        <circle cx="23" cy="27" r="2.5" fill="#2d1f0e" class="bjorn-eye-l"/>
+        <circle cx="37" cy="27" r="2.5" fill="#2d1f0e" class="bjorn-eye-r"/>
+        <!-- Eye shine -->
+        <circle cx="24" cy="26" r="0.8" fill="white"/>
+        <circle cx="38" cy="26" r="0.8" fill="white"/>
+        <!-- Beard -->
+        <path d="M18 34 Q20 44 30 46 Q40 44 42 34" fill="#7a5c3a"/>
+        <!-- Braid lines -->
+        <line x1="26" y1="42" x2="26" y2="52" stroke="#5a3c1e" stroke-width="2"/>
+        <line x1="34" y1="42" x2="34" y2="52" stroke="#5a3c1e" stroke-width="2"/>
+        <!-- Smile -->
+        <path d="M24 32 Q30 36 36 32" stroke="#5a3c1e" stroke-width="1.5" fill="none"/>
+        <!-- Sweater hint -->
+        <rect x="14" y="44" width="32" height="16" rx="4" fill="#2E6DA4"/>
+      </svg>
+    </div>
+    <span class="bjorn-badge" id="bjorn-badge">1</span>
+  </button>
+
+  <!-- Chat panel -->
+  <div class="bjorn-panel" id="bjorn-panel">
+    <div class="bjorn-panel-header">
+      <div class="bjorn-panel-avatar">
+        <svg viewBox="0 0 80 80" class="bjorn-svg-lg">
+          <circle cx="40" cy="36" r="22" fill="#C8A96E"/>
+          <ellipse cx="40" cy="16" rx="22" ry="10" fill="#4a3728"/>
+          <ellipse cx="17" cy="13" rx="5" ry="8" fill="#e8e0d0" transform="rotate(-20,17,13)"/>
+          <ellipse cx="63" cy="13" rx="5" ry="8" fill="#e8e0d0" transform="rotate(20,63,13)"/>
+          <circle cx="31" cy="35" r="3" fill="#2d1f0e"/>
+          <circle cx="49" cy="35" r="3" fill="#2d1f0e"/>
+          <circle cx="32.2" cy="33.8" r="1" fill="white"/>
+          <circle cx="50.2" cy="33.8" r="1" fill="white"/>
+          <path d="M25 44 Q28 56 40 58 Q52 56 55 44" fill="#7a5c3a"/>
+          <line x1="35" y1="54" x2="35" y2="68" stroke="#5a3c1e" stroke-width="2.5"/>
+          <line x1="45" y1="54" x2="45" y2="68" stroke="#5a3c1e" stroke-width="2.5"/>
+          <path d="M31 40 Q40 46 49 40" stroke="#5a3c1e" stroke-width="2" fill="none"/>
+          <rect x="20" y="58" width="40" height="22" rx="5" fill="#2E6DA4"/>
+        </svg>
+      </div>
+      <div class="bjorn-panel-info">
+        <h3>Björn</h3>
+        <span class="bjorn-status" data-i18n="bjorn_status">Your Denmark guide since 836 AD</span>
+      </div>
+      <div class="bjorn-header-actions">
+        <button class="bjorn-icon-btn" id="bjorn-translate-btn" title="Translate a Danish document" aria-label="Translate document">📋</button>
+        <button class="bjorn-icon-btn" id="bjorn-clear-history" title="Clear chat history" aria-label="Clear history">🗑️</button>
+        <button class="bjorn-close-btn" id="bjorn-close" aria-label="Close Björn">✕</button>
+      </div>
+    </div>
+
+    <!-- Document Translator Panel -->
+    <div class="bjorn-translate-panel hidden" id="bjorn-translate-panel">
+      <div class="bjorn-translate-header">
+        <span>📋 Translate a Danish Document</span>
+        <button class="bjorn-icon-btn" id="bjorn-translate-close" aria-label="Close translator">✕</button>
+      </div>
+      <p class="bjorn-translate-hint">Paste the text from any letter or document you received and Björn will explain it.</p>
+      <textarea id="bjorn-doc-text" class="bjorn-doc-textarea" rows="5" placeholder="Paste Danish text here…" aria-label="Document text to translate"></textarea>
+      <button class="bjorn-translate-send" id="bjorn-translate-send">Explain this document →</button>
+    </div>
+
+    <!-- API Setup (hidden — shown only if API key needed) -->
+    <div class="bjorn-api-setup hidden" id="bjorn-api-setup">
+      <p class="bjorn-api-info" data-i18n="bjorn_api_info">Björn is your AI guide to Denmark — powered by the latest language models and ready to answer anything.</p>
+      <button class="btn-primary" id="bjorn-api-save" data-i18n="bjorn_api_save">Start Chatting with Björn</button>
+      <p class="bjorn-api-note" data-i18n="bjorn_api_note">Your conversation stays on this device. Björn never shares what you ask.</p>
+    </div>
+
+    <!-- Chat messages -->
+    <div class="bjorn-messages" id="bjorn-messages"></div>
+
+    <!-- Thinking indicator -->
+    <div class="bjorn-thinking hidden" id="bjorn-thinking">
+      <span></span><span></span><span></span>
+    </div>
+
+    <!-- Quick prompts -->
+    <div class="bjorn-quick" id="bjorn-quick">
+      <button class="quick-btn" data-i18n="qp1" data-msg="How do I get my CPR number?">CPR number?</button>
+      <button class="quick-btn" data-i18n="qp2" data-msg="What is MitID and how do I get it?">MitID help</button>
+      <button class="quick-btn" data-i18n="qp3" data-msg="How does Danish tax work?">Tax explained</button>
+      <button class="quick-btn" data-i18n="qp4" data-msg="How do I find an apartment in Denmark?">Find housing</button>
+      <button class="quick-btn" data-i18n="qp5" data-msg="What is a-kasse and should I join?">A-kasse?</button>
+      <button class="quick-btn quick-btn-translate" id="bjorn-quick-translate" data-i18n="qp6">📋 Translate a document</button>
+    </div>
+
+    <!-- Input area -->
+    <div class="bjorn-input-area">
+      <textarea id="bjorn-input" rows="1" placeholder="Ask Björn anything…" data-i18n-placeholder="bjorn_placeholder" aria-label="Message to Björn"></textarea>
+      <button class="bjorn-send" id="bjorn-send" aria-label="Send">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ TOAST NOTIFICATIONS ═══════════════════════════════════ -->
+<div id="toast-container" class="toast-container"></div>
+
+<!-- ═══════════════════════════════════ PWA INSTALL BANNER ═══════════════════════════════════ -->
+<div id="pwa-install-banner" class="pwa-install-banner hidden" role="complementary" aria-label="Install app">
+  <div class="pwa-banner-icon">🇩🇰</div>
+  <div class="pwa-banner-text">
+    <strong>Install ANKOMMER</strong>
+    <span>Read offline, any time</span>
+  </div>
+  <button class="pwa-install-btn" id="pwa-install-btn">Install</button>
+  <button class="pwa-dismiss-btn" id="pwa-dismiss-btn" aria-label="Dismiss">✕</button>
+</div>
+
+<!-- ═══════════════════════════════════ SCRIPTS ═══════════════════════════════════ -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/data.js"></script>
+<script src="js/bjorn.js"></script>
+<script src="js/calculators.js"></script>
+<script src="js/apis.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

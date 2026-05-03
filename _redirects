@@ -1,0 +1,5 @@
+# Redirect all routes to index.html (SPA fallback)
+/*    /index.html   200
+
+# Explicit 404 page
+/404  /404.html     404

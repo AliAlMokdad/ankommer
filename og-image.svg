@@ -1,0 +1,518 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background gradient: dark navy top to slightly lighter navy bottom -->
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0F1B2D"/>
+      <stop offset="100%" stop-color="#1B3A5C"/>
+    </linearGradient>
+
+    <!-- Bottom strip gradient -->
+    <linearGradient id="stripGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E3F62"/>
+      <stop offset="100%" stop-color="#163350"/>
+    </linearGradient>
+
+    <!-- Star glow filter -->
+    <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle text glow -->
+    <filter id="textGlow" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Clip path for the whole image -->
+    <clipPath id="imageClip">
+      <rect width="1200" height="630"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#imageClip)">
+
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- BACKGROUND                                      -->
+    <!-- ══════════════════════════════════════════════ -->
+    <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+    <!-- Very subtle noise/texture overlay using tiny circles -->
+    <circle cx="120" cy="80" r="180" fill="#1a3050" opacity="0.25"/>
+    <circle cx="1080" cy="120" r="200" fill="#0d2240" opacity="0.2"/>
+    <circle cx="600" cy="300" r="320" fill="#163050" opacity="0.12"/>
+
+
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- DANISH FLAG ACCENT LINE (subtle, decorative)   -->
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- Thin horizontal stripe across the top using Danish flag red/white -->
+    <rect x="0" y="0" width="1200" height="4" fill="#C60C30" opacity="0.7"/>
+    <rect x="0" y="4" width="1200" height="2" fill="#FFFFFF" opacity="0.25"/>
+
+
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- STARS (scattered in upper portion)             -->
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- Using 5-pointed star paths, scattered naturally -->
+
+    <!-- Star helper: small 5-pt star polygon macro via polygon -->
+    <!-- Star at 160, 90 -->
+    <polygon points="160,83 162,89 168,89 163,93 165,99 160,95 155,99 157,93 152,89 158,89"
+             fill="#FFFFFF" opacity="0.75" filter="url(#starGlow)"/>
+
+    <!-- Star at 310, 55 -->
+    <polygon points="310,49 311.5,54 317,54 312.5,57.5 314,63 310,59.5 306,63 307.5,57.5 303,54 308.5,54"
+             fill="#FFFFFF" opacity="0.55" filter="url(#starGlow)" transform="scale(0.75) translate(103,20)"/>
+
+    <!-- Star at 480, 75 -->
+    <polygon points="480,69 481.5,74 487,74 482.5,77.5 484,83 480,79.5 476,83 477.5,77.5 473,74 478.5,74"
+             fill="#FFFFFF" opacity="0.65" filter="url(#starGlow)"/>
+
+    <!-- Star at 700, 45 -->
+    <polygon points="700,39 701.5,44 707,44 702.5,47.5 704,53 700,49.5 696,53 697.5,47.5 693,44 698.5,44"
+             fill="#FFFFFF" opacity="0.8" filter="url(#starGlow)"/>
+
+    <!-- Star at 860, 88 -->
+    <polygon points="860,82 861.5,87 867,87 862.5,90.5 864,96 860,92.5 856,96 857.5,90.5 853,87 858.5,87"
+             fill="#FFFFFF" opacity="0.6" filter="url(#starGlow)"/>
+
+    <!-- Star at 1020, 58 -->
+    <polygon points="1020,52 1021.5,57 1027,57 1022.5,60.5 1024,66 1020,62.5 1016,66 1017.5,60.5 1013,57 1018.5,57"
+             fill="#FFFFFF" opacity="0.7" filter="url(#starGlow)"/>
+
+    <!-- Tiny dot stars -->
+    <circle cx="230" cy="110" r="1.5" fill="#FFFFFF" opacity="0.5"/>
+    <circle cx="550" cy="48"  r="1.5" fill="#FFFFFF" opacity="0.45"/>
+    <circle cx="780" cy="100" r="1.2" fill="#FFFFFF" opacity="0.4"/>
+    <circle cx="940" cy="40"  r="1.5" fill="#FFFFFF" opacity="0.55"/>
+    <circle cx="1100" cy="95" r="1.2" fill="#FFFFFF" opacity="0.5"/>
+    <circle cx="400" cy="35"  r="1"   fill="#FFFFFF" opacity="0.4"/>
+    <circle cx="650" cy="115" r="1"   fill="#FFFFFF" opacity="0.35"/>
+    <circle cx="1150" cy="50" r="1.5" fill="#FFFFFF" opacity="0.45"/>
+    <circle cx="80"  cy="130" r="1.2" fill="#FFFFFF" opacity="0.4"/>
+
+
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- COPENHAGEN SKYLINE SILHOUETTE (bottom)         -->
+    <!-- ══════════════════════════════════════════════ -->
+    <!--
+      Buildings, round tower, church spires — all in #0d1826
+      The skyline fills the bottom ~130px of the image.
+      We draw from left to right as a single filled path.
+    -->
+    <path d="
+      M0,630
+      L0,530
+      L30,530
+      L30,510
+      L50,510
+      L50,490
+      L55,490
+      L55,480
+      L60,475
+      L65,480
+      L65,490
+      L70,490
+      L70,510
+      L90,510
+      L90,530
+      L120,530
+      L120,505
+      L140,505
+      L140,500
+      L145,495
+      L147,490
+      L149,485
+      L151,480
+      L153,475
+      L155,470
+      L157,465
+      L158,455
+      L159,450
+      L160,455
+      L161,465
+      L162,470
+      L164,475
+      L166,480
+      L168,485
+      L170,490
+      L172,495
+      L175,500
+      L175,505
+      L195,505
+      L195,510
+      L215,510
+      L215,530
+      L240,530
+      L240,515
+      L260,515
+      L260,510
+      L280,510
+      L280,515
+      L300,515
+      L300,520
+      L330,520
+      L330,500
+      L345,500
+      L345,495
+      L350,490
+      L355,485
+      L357,480
+      L358,470
+      L359,460
+      L360,455
+      L361,460
+      L362,470
+      L363,480
+      L365,485
+      L370,490
+      L375,495
+      L375,500
+      L390,500
+      L390,520
+      L410,520
+      L410,510
+      L425,510
+      L425,515
+      L445,515
+      L445,510
+      L455,510
+      L455,500
+      L460,500
+      L460,490
+      L468,490
+      L468,500
+      L475,500
+      L475,510
+      L490,510
+      L490,515
+      L510,515
+      L510,520
+      L530,520
+
+      <!-- Round Tower area: wide cylindrical structure -->
+      L530,505
+      L540,505
+      L540,500
+      L548,500
+      L548,495
+      L556,495
+      L556,490
+      L558,488
+      L560,487
+      L562,488
+      L564,490
+      L564,495
+      L572,495
+      L572,500
+      L580,500
+      L580,505
+      L590,505
+      L590,520
+      L610,520
+
+      L610,510
+      L625,510
+      L625,505
+      L635,505
+      L635,515
+      L650,515
+      L650,510
+      L660,510
+      L660,505
+      L670,505
+      L670,510
+      L685,510
+      L685,515
+      L700,515
+      L700,520
+      L720,520
+      L720,510
+      L730,510
+      L730,500
+      L740,500
+      L740,505
+      L755,505
+      L755,510
+      L770,510
+      L770,515
+      L790,515
+      L790,520
+      L810,520
+
+      <!-- Church spire section right-center -->
+      L810,505
+      L820,505
+      L820,498
+      L825,492
+      L827,485
+      L828,478
+      L829,470
+      L830,462
+      L831,455
+      L832,448
+      L833,442
+      L834,435
+      L835,442
+      L836,448
+      L837,455
+      L838,462
+      L839,470
+      L840,478
+      L841,485
+      L842,492
+      L845,498
+      L845,505
+      L855,505
+      L855,520
+      L875,520
+
+      L875,510
+      L890,510
+      L890,505
+      L900,505
+      L900,498
+      L905,495
+      L907,490
+      L908,485
+      L909,478
+      L910,470
+      L911,463
+      L912,455
+      L913,463
+      L914,470
+      L915,478
+      L916,485
+      L917,490
+      L919,495
+      L922,498
+      L922,505
+      L940,505
+      L940,510
+      L955,510
+      L955,515
+      L975,515
+      L975,520
+      L990,520
+
+      L990,500
+      L1000,500
+      L1000,495
+      L1005,490
+      L1007,485
+      L1008,478
+      L1009,472
+      L1010,465
+      L1011,472
+      L1012,478
+      L1013,485
+      L1015,490
+      L1020,495
+      L1020,500
+      L1030,500
+      L1030,520
+      L1050,520
+      L1050,510
+      L1065,510
+      L1065,515
+      L1080,515
+      L1080,510
+      L1095,510
+      L1095,505
+      L1110,505
+      L1110,510
+      L1120,510
+      L1120,520
+      L1140,520
+      L1140,510
+      L1150,510
+      L1150,500
+      L1160,500
+      L1160,510
+      L1170,510
+      L1170,515
+      L1185,515
+      L1185,520
+      L1200,520
+      L1200,630
+      Z
+    " fill="#0d1826" opacity="0.9"/>
+
+    <!-- Second layer of buildings for depth -->
+    <path d="
+      M0,560 L0,545 L40,545 L40,555 L80,555 L80,550 L110,550 L110,545
+      L150,545 L150,555 L190,555 L190,550 L220,550 L220,545 L260,545
+      L260,555 L310,555 L310,560 L360,560 L360,555 L400,555 L400,545
+      L440,545 L440,550 L480,550 L480,555 L520,555 L520,560 L560,560
+      L560,550 L600,550 L600,555 L650,555 L650,550 L690,550 L690,560
+      L730,560 L730,555 L770,555 L770,545 L810,545 L810,550 L850,550
+      L850,555 L890,555 L890,560 L940,560 L940,555 L980,555 L980,550
+      L1020,550 L1020,545 L1060,545 L1060,550 L1100,550 L1100,555
+      L1140,555 L1140,560 L1200,560 L1200,630 L0,630 Z
+    " fill="#0d1826" opacity="0.5"/>
+
+
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- DANISH FLAG EMOJI AREA (top-left)              -->
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- Flag badge background -->
+    <rect x="60" y="52" width="80" height="50" rx="8" ry="8"
+          fill="#0F1B2D" stroke="#2a4a6a" stroke-width="1.5" opacity="0.85"/>
+    <!-- Actual Danish flag (🇩🇰): red rectangle with white cross -->
+    <!-- Flag proportions: 28:37, cross bar at roughly 12/28 from left -->
+    <rect x="68" y="59" width="65" height="36" rx="3" fill="#C60C30"/>
+    <!-- Vertical bar of cross -->
+    <rect x="88" y="59" width="10" height="36" fill="#FFFFFF"/>
+    <!-- Horizontal bar of cross -->
+    <rect x="68" y="72" width="65" height="10" fill="#FFFFFF"/>
+
+
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- MAIN CONTENT AREA                              -->
+    <!-- ══════════════════════════════════════════════ -->
+
+    <!-- Subtle horizontal divider line above ANKOMMER -->
+    <line x1="200" y1="200" x2="1000" y2="200"
+          stroke="#FFFFFF" stroke-width="0.75" opacity="0.12"/>
+
+    <!-- ANKOMMER main title -->
+    <text
+      x="600" y="295"
+      font-family="'Playfair Display', 'Georgia', 'Times New Roman', serif"
+      font-size="118"
+      font-weight="700"
+      letter-spacing="14"
+      fill="#FFFFFF"
+      text-anchor="middle"
+      filter="url(#textGlow)"
+      opacity="1"
+    >ANKOMMER</text>
+
+    <!-- Subtle divider below ANKOMMER -->
+    <line x1="300" y1="318" x2="900" y2="318"
+          stroke="#FFFFFF" stroke-width="0.75" opacity="0.2"/>
+
+    <!-- Tagline -->
+    <text
+      x="600" y="362"
+      font-family="'Playfair Display', 'Georgia', 'Times New Roman', serif"
+      font-size="28"
+      font-weight="400"
+      letter-spacing="3"
+      fill="#FFFFFF"
+      text-anchor="middle"
+      opacity="0.85"
+    >Moving to Denmark — The Complete Guide</text>
+
+
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- PILL BADGES                                    -->
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- Three badges centered, roughly 190px wide each, 10px gap -->
+    <!-- Total width: 3×190 + 2×16 = 602px, centered at 600 → starts at 299 -->
+
+    <!-- Badge 1: "16 Chapters" — x starts at 299 -->
+    <rect x="299" y="398" width="190" height="40" rx="20" ry="20"
+          fill="none"
+          stroke="#FFFFFF" stroke-width="1.2" opacity="0.4"/>
+    <text
+      x="394" y="424"
+      font-family="'Helvetica Neue', 'Arial', sans-serif"
+      font-size="15"
+      font-weight="500"
+      letter-spacing="1.5"
+      fill="#FFFFFF"
+      text-anchor="middle"
+      opacity="0.85"
+    >16 CHAPTERS</text>
+
+    <!-- Badge 2: "5 Languages" — x starts at 505 -->
+    <rect x="505" y="398" width="190" height="40" rx="20" ry="20"
+          fill="none"
+          stroke="#FFFFFF" stroke-width="1.2" opacity="0.4"/>
+    <text
+      x="600" y="424"
+      font-family="'Helvetica Neue', 'Arial', sans-serif"
+      font-size="15"
+      font-weight="500"
+      letter-spacing="1.5"
+      fill="#FFFFFF"
+      text-anchor="middle"
+      opacity="0.85"
+    >5 LANGUAGES</text>
+
+    <!-- Badge 3: "AI Guide Björn" — x starts at 711 -->
+    <rect x="711" y="398" width="190" height="40" rx="20" ry="20"
+          fill="none"
+          stroke="#FFFFFF" stroke-width="1.2" opacity="0.4"/>
+    <text
+      x="806" y="424"
+      font-family="'Helvetica Neue', 'Arial', sans-serif"
+      font-size="15"
+      font-weight="500"
+      letter-spacing="1.5"
+      fill="#FFFFFF"
+      text-anchor="middle"
+      opacity="0.85"
+    >AI GUIDE BJÖRN</text>
+
+
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- BOTTOM STRIP                                   -->
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- Strip background -->
+    <rect x="0" y="578" width="1200" height="52" fill="url(#stripGradient)" opacity="0.95"/>
+    <!-- Top border of strip -->
+    <line x1="0" y1="578" x2="1200" y2="578"
+          stroke="#FFFFFF" stroke-width="0.75" opacity="0.15"/>
+
+    <!-- Small decorative dot separators flanking URL -->
+    <circle cx="540" cy="604" r="2.5" fill="#FFFFFF" opacity="0.3"/>
+    <circle cx="660" cy="604" r="2.5" fill="#FFFFFF" opacity="0.3"/>
+
+    <!-- URL text -->
+    <text
+      x="600" y="609"
+      font-family="'Helvetica Neue', 'Arial', sans-serif"
+      font-size="17"
+      font-weight="400"
+      letter-spacing="2.5"
+      fill="#FFFFFF"
+      text-anchor="middle"
+      opacity="0.55"
+    >movingtodenmark.org</text>
+
+
+    <!-- ══════════════════════════════════════════════ -->
+    <!-- SUBTLE DECORATIVE ELEMENTS                     -->
+    <!-- ══════════════════════════════════════════════ -->
+
+    <!-- Right-side vertical Danish cross accent (very subtle) -->
+    <!-- Vertical thin line -->
+    <line x1="1115" y1="130" x2="1115" y2="480"
+          stroke="#C60C30" stroke-width="1.5" opacity="0.12"/>
+    <!-- Horizontal thin line -->
+    <line x1="1060" y1="230" x2="1170" y2="230"
+          stroke="#C60C30" stroke-width="1.5" opacity="0.12"/>
+
+    <!-- Matching subtle accent on left -->
+    <line x1="85" y1="130" x2="85" y2="480"
+          stroke="#C60C30" stroke-width="1.5" opacity="0.1"/>
+    <line x1="30" y1="230" x2="140" y2="230"
+          stroke="#C60C30" stroke-width="1.5" opacity="0.1"/>
+
+    <!-- Top corner ornament dots (right side, balancing the flag) -->
+    <circle cx="1085" cy="65" r="3" fill="#FFFFFF" opacity="0.2"/>
+    <circle cx="1100" cy="65" r="3" fill="#FFFFFF" opacity="0.2"/>
+    <circle cx="1115" cy="65" r="3" fill="#FFFFFF" opacity="0.2"/>
+    <circle cx="1130" cy="65" r="3" fill="#FFFFFF" opacity="0.2"/>
+
+  </g>
+</svg>
