@@ -561,6 +561,119 @@ const Calculators = (() => {
   };
 
   /* ══════════════════════════════════════════════════════
+     5. DENMARK DEADLINE CALENDAR — .ics generator (RFC 5545)
+     ──────────────────────────────────────────────────────
+     Takes the user's arrival date and produces a downloadable
+     .ics file that imports into Apple / Google / Outlook
+     calendars with all key Danish deadlines as reminders.
+     Pure JS, no library. ~50 lines.
+  ══════════════════════════════════════════════════════ */
+  const padICS = (n) => String(n).padStart(2, '0');
+
+  // Format a Date as YYYYMMDD (ICS DATE value, not DATE-TIME — we use
+  // all-day events so timezones don't bite us)
+  const icsDate = (d) =>
+    `${d.getFullYear()}${padICS(d.getMonth() + 1)}${padICS(d.getDate())}`;
+
+  // ICS spec: text fields must be folded at 75 octets; commas, semicolons,
+  // backslashes, and newlines must be escaped. Keep it simple — we own
+  // the source strings so we just escape the chars.
+  const icsEscape = (s) => String(s)
+    .replace(/\\/g, '\\\\')
+    .replace(/;/g, '\\;')
+    .replace(/,/g, '\\,')
+    .replace(/\n/g, '\\n');
+
+  // Add days to a date safely (handles month boundaries, DST)
+  const addDays = (date, days) => {
+    const d = new Date(date);
+    d.setDate(d.getDate() + days);
+    return d;
+  };
+
+  /**
+   * Build an .ics file body from TIMELINE_EVENTS anchored to arrivalDate.
+   * Events are all-day. Urgent ones get a 24-hour-prior alarm; others
+   * get a 7-day-prior alarm so the user has time to act.
+   */
+  const buildICS = (arrivalDate, lang = 'en') => {
+    const events = (typeof TIMELINE_EVENTS !== 'undefined') ? TIMELINE_EVENTS : [];
+    const now = new Date();
+    const stamp = `${icsDate(now)}T${padICS(now.getHours())}${padICS(now.getMinutes())}${padICS(now.getSeconds())}Z`;
+    const lines = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//ANKOMMER//Denmark Deadline Calendar//EN',
+      'CALSCALE:GREGORIAN',
+      'METHOD:PUBLISH',
+      'X-WR-CALNAME:Denmark Deadlines',
+      'X-WR-CALDESC:Your personal Denmark relocation timeline from ANKOMMER'
+    ];
+
+    events.forEach(ev => {
+      const start = addDays(arrivalDate, ev.offsetDays);
+      const end   = addDays(start, ev.durationDays || 1);   // DTEND is exclusive in all-day form
+      const summary = ev.summary[lang] || ev.summary.en;
+      const description = (ev.description || '') +
+        ' — More in ANKOMMER chapter ' + (ev.chapter ?? '');
+      const alarmLead = ev.urgent ? '-PT24H' : '-P7D';
+      lines.push(
+        'BEGIN:VEVENT',
+        `UID:${ev.id}-${icsDate(start)}@ankommer.github.io`,
+        `DTSTAMP:${stamp}`,
+        `DTSTART;VALUE=DATE:${icsDate(start)}`,
+        `DTEND;VALUE=DATE:${icsDate(end)}`,
+        `SUMMARY:${icsEscape(summary)}`,
+        `DESCRIPTION:${icsEscape(description)}`,
+        'BEGIN:VALARM',
+        'ACTION:DISPLAY',
+        `TRIGGER:${alarmLead}`,
+        `DESCRIPTION:${icsEscape(summary)}`,
+        'END:VALARM',
+        'END:VEVENT'
+      );
+    });
+    lines.push('END:VCALENDAR');
+    // RFC 5545 requires CRLF line endings
+    return lines.join('\r\n');
+  };
+
+  const initDeadlineCalendar = () => {
+    const btn = document.getElementById('cal-download-btn');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const dateInput = document.getElementById('cal-arrival-date');
+      const v = dateInput?.value;
+      if (!v) {
+        window.App?.showToast?.('Please enter your arrival date', 'warning');
+        // Fallback if no toast component — focus the field
+        dateInput?.focus();
+        return;
+      }
+      const arrival = new Date(v + 'T00:00:00');
+      if (isNaN(arrival.getTime())) {
+        alert('Please enter a valid date.');
+        return;
+      }
+      const lang = window.currentLang || 'en';
+      const ics = buildICS(arrival, lang);
+      const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+      const url  = URL.createObjectURL(blob);
+      const a    = document.createElement('a');
+      a.href     = url;
+      a.download = `denmark-deadlines-${icsDate(arrival)}.ics`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      // Visible confirmation
+      const orig = btn.textContent;
+      btn.textContent = '✓ ' + ((window.i18n?.t?.('cal_done')) || 'Calendar downloaded');
+      setTimeout(() => { btn.textContent = orig; }, 2500);
+    });
+  };
+
+  /* ══════════════════════════════════════════════════════
      INIT ALL
   ══════════════════════════════════════════════════════ */
   const init = () => {
@@ -568,7 +681,8 @@ const Calculators = (() => {
     initCostOfLiving();
     initVisaTree();
     initResidencyCalc();
+    initDeadlineCalendar();
   };
 
-  return { init };
+  return { init, buildICS };
 })();

@@ -75,6 +75,12 @@ const TRANSLATIONS = {
     footer_ask: "Ask anything",
     footer_doc: "Translate a document",
     footer_form: "Navigate a form",
+    tool_cal_title: "Denmark Deadline Calendar",
+    tool_cal_sub: "Get every Danish deadline as a calendar file — CPR, MitID, tax card, school enrollment. Reminders straight in your phone.",
+    tool_cal_arrival: "Your arrival date in Denmark",
+    tool_cal_download: "⬇ Download my calendar (.ics)",
+    tool_cal_note: "Works with Apple Calendar, Google Calendar, Outlook, and most phones. Each deadline includes a reminder before it's due.",
+    cal_done: "Calendar downloaded",
     footer_progress_label: "Switching device or worried about losing your progress?",
     footer_progress_export: "⬇ Download my plan",
     footer_progress_import: "⬆ Restore from file",
@@ -188,6 +194,12 @@ const TRANSLATIONS = {
     footer_ask: "Posez n'importe quelle question",
     footer_doc: "Traduire un document",
     footer_form: "Naviguer dans un formulaire",
+    tool_cal_title: "Calendrier des échéances danoises",
+    tool_cal_sub: "Recevez toutes les échéances danoises sous forme d'agenda — CPR, MitID, carte fiscale, inscription scolaire. Des rappels directement sur votre téléphone.",
+    tool_cal_arrival: "Votre date d'arrivée au Danemark",
+    tool_cal_download: "⬇ Télécharger mon calendrier (.ics)",
+    tool_cal_note: "Compatible avec Apple Calendar, Google Calendar, Outlook et la plupart des téléphones. Chaque échéance inclut un rappel avant la date.",
+    cal_done: "Calendrier téléchargé",
     footer_progress_label: "Vous changez d'appareil ou craignez de perdre votre progression ?",
     footer_progress_export: "⬇ Télécharger mon plan",
     footer_progress_import: "⬆ Restaurer depuis un fichier",
@@ -301,6 +313,12 @@ const TRANSLATIONS = {
     footer_ask: "اسأل أي شيء",
     footer_doc: "ترجمة وثيقة",
     footer_form: "التنقل في نموذج",
+    tool_cal_title: "تقويم المواعيد النهائية للدنمارك",
+    tool_cal_sub: "احصل على كل المواعيد النهائية الدنماركية كملف تقويم — CPR، MitID، بطاقة الضرائب، تسجيل المدارس. تذكيرات مباشرة في هاتفك.",
+    tool_cal_arrival: "تاريخ وصولك إلى الدنمارك",
+    tool_cal_download: "⬇ تنزيل تقويمي (.ics)",
+    tool_cal_note: "يعمل مع Apple Calendar وGoogle Calendar وOutlook ومعظم الهواتف. كل موعد نهائي يتضمن تذكيراً قبل موعده.",
+    cal_done: "تم تنزيل التقويم",
     footer_progress_label: "هل تنتقل إلى جهاز آخر أو تقلق من فقدان تقدّمك؟",
     footer_progress_export: "⬇ حفظ خطّتي",
     footer_progress_import: "⬆ استعادة من ملف",
@@ -414,6 +432,12 @@ const TRANSLATIONS = {
     footer_ask: "Pregunta lo que quieras",
     footer_doc: "Traducir un documento",
     footer_form: "Navegar un formulario",
+    tool_cal_title: "Calendario de plazos en Dinamarca",
+    tool_cal_sub: "Obtén cada plazo danés como archivo de calendario — CPR, MitID, tarjeta fiscal, inscripción escolar. Recordatorios directamente en tu móvil.",
+    tool_cal_arrival: "Tu fecha de llegada a Dinamarca",
+    tool_cal_download: "⬇ Descargar mi calendario (.ics)",
+    tool_cal_note: "Funciona con Apple Calendar, Google Calendar, Outlook y la mayoría de los teléfonos. Cada plazo incluye un recordatorio antes de su fecha.",
+    cal_done: "Calendario descargado",
     footer_progress_label: "¿Cambias de dispositivo o te preocupa perder tu progreso?",
     footer_progress_export: "⬇ Descargar mi plan",
     footer_progress_import: "⬆ Restaurar desde archivo",
@@ -527,6 +551,12 @@ const TRANSLATIONS = {
     footer_ask: "Spørg om alt",
     footer_doc: "Oversæt et dokument",
     footer_form: "Naviger en formular",
+    tool_cal_title: "Danske deadlines i din kalender",
+    tool_cal_sub: "Få alle danske deadlines som en kalenderfil — CPR, MitID, skattekort, indskrivning til skole. Påmindelser direkte på din telefon.",
+    tool_cal_arrival: "Din ankomstdato i Danmark",
+    tool_cal_download: "⬇ Hent min kalender (.ics)",
+    tool_cal_note: "Virker med Apple Kalender, Google Kalender, Outlook og de fleste telefoner. Hver deadline har en påmindelse, før den udløber.",
+    cal_done: "Kalender hentet",
     footer_progress_label: "Skifter du enhed eller bange for at miste din fremgang?",
     footer_progress_export: "⬇ Hent min plan",
     footer_progress_import: "⬆ Gendan fra fil",
@@ -642,6 +672,12 @@ const TRANSLATIONS = {
     footer_ask: "Alles fragen",
     footer_doc: "Dokument übersetzen",
     footer_form: "Formular ausfüllen",
+    tool_cal_title: "Dänemark-Termin-Kalender",
+    tool_cal_sub: "Alle dänischen Fristen als Kalenderdatei — CPR, MitID, Steuerkarte, Schulanmeldung. Erinnerungen direkt auf Ihrem Handy.",
+    tool_cal_arrival: "Ihr Ankunftsdatum in Dänemark",
+    tool_cal_download: "⬇ Meinen Kalender herunterladen (.ics)",
+    tool_cal_note: "Funktioniert mit Apple Calendar, Google Calendar, Outlook und den meisten Smartphones. Jede Frist enthält eine Erinnerung im Voraus.",
+    cal_done: "Kalender heruntergeladen",
     footer_progress_label: "Wechseln Sie das Gerät oder fürchten Sie, Ihren Fortschritt zu verlieren?",
     footer_progress_export: "⬇ Meinen Plan speichern",
     footer_progress_import: "⬆ Aus Datei wiederherstellen",
@@ -757,6 +793,12 @@ const TRANSLATIONS = {
     footer_ask: "Запитай будь-що",
     footer_doc: "Перекласти документ",
     footer_form: "Допомога з формою",
+    tool_cal_title: "Календар датських термінів",
+    tool_cal_sub: "Отримайте усі датські терміни у календарному файлі — CPR, MitID, податкова картка, запис до школи. Нагадування одразу в телефоні.",
+    tool_cal_arrival: "Ваша дата прибуття до Данії",
+    tool_cal_download: "⬇ Завантажити мій календар (.ics)",
+    tool_cal_note: "Працює з Apple Calendar, Google Calendar, Outlook і більшістю телефонів. Кожен термін має нагадування заздалегідь.",
+    cal_done: "Календар завантажено",
     footer_progress_label: "Міняєте пристрій або боїтеся втратити свій прогрес?",
     footer_progress_export: "⬇ Завантажити мій план",
     footer_progress_import: "⬆ Відновити з файлу",
@@ -872,6 +914,12 @@ const TRANSLATIONS = {
     footer_ask: "Zapytaj o wszystko",
     footer_doc: "Przetłumacz dokument",
     footer_form: "Pomoc z formularzem",
+    tool_cal_title: "Kalendarz duńskich terminów",
+    tool_cal_sub: "Pobierz wszystkie duńskie terminy jako plik kalendarza — CPR, MitID, karta podatkowa, zapisy do szkoły. Przypomnienia bezpośrednio w telefonie.",
+    tool_cal_arrival: "Twoja data przylotu do Danii",
+    tool_cal_download: "⬇ Pobierz mój kalendarz (.ics)",
+    tool_cal_note: "Działa z Apple Calendar, Google Calendar, Outlook i większością telefonów. Każdy termin zawiera przypomnienie z wyprzedzeniem.",
+    cal_done: "Kalendarz pobrany",
     footer_progress_label: "Zmieniasz urządzenie lub obawiasz się utraty postępów?",
     footer_progress_export: "⬇ Pobierz mój plan",
     footer_progress_import: "⬆ Przywróć z pliku",
@@ -986,6 +1034,12 @@ const TRANSLATIONS = {
     footer_ask: "کچھ بھی پوچھیں",
     footer_doc: "دستاویز ترجمہ کریں",
     footer_form: "فارم میں مدد",
+    tool_cal_title: "ڈنمارک ڈیڈ لائن کیلنڈر",
+    tool_cal_sub: "ہر ڈنمارکی ڈیڈ لائن کیلنڈر فائل کے طور پر حاصل کریں — CPR، MitID، ٹیکس کارڈ، اسکول میں رجسٹریشن۔ یاد دہانیاں براہ راست آپ کے فون پر۔",
+    tool_cal_arrival: "ڈنمارک میں آپ کی آمد کی تاریخ",
+    tool_cal_download: "⬇ میرا کیلنڈر ڈاؤن لوڈ کریں (.ics)",
+    tool_cal_note: "Apple Calendar، Google Calendar، Outlook اور زیادہ تر فونز کے ساتھ کام کرتا ہے۔ ہر ڈیڈ لائن میں پیشگی یاد دہانی شامل ہے۔",
+    cal_done: "کیلنڈر ڈاؤن لوڈ ہو گیا",
     footer_progress_label: "آلہ بدل رہے ہیں یا اپنی پیش رفت کھونے کی فکر ہے؟",
     footer_progress_export: "⬇ میرا منصوبہ محفوظ کریں",
     footer_progress_import: "⬆ فائل سے بحال کریں",
@@ -1100,6 +1154,12 @@ const TRANSLATIONS = {
     footer_ask: "هر چیزی بپرسید",
     footer_doc: "ترجمه سند",
     footer_form: "کمک با فرم",
+    tool_cal_title: "تقویم مهلت‌های دانمارک",
+    tool_cal_sub: "همهٔ مهلت‌های دانمارکی را به‌صورت فایل تقویم بگیرید — CPR، MitID، کارت مالیاتی، ثبت‌نام مدرسه. یادآوری‌ها مستقیم روی گوشی شما.",
+    tool_cal_arrival: "تاریخ ورود شما به دانمارک",
+    tool_cal_download: "⬇ تقویم من را دانلود کنید (.ics)",
+    tool_cal_note: "با Apple Calendar، Google Calendar، Outlook و بیشتر گوشی‌ها کار می‌کند. هر مهلت یک یادآوری از پیش دارد.",
+    cal_done: "تقویم دانلود شد",
     footer_progress_label: "دستگاه عوض می‌کنید یا نگرانید پیشرفتتان از دست برود؟",
     footer_progress_export: "⬇ ذخیرهٔ برنامهٔ من",
     footer_progress_import: "⬆ بازیابی از فایل",
@@ -1144,6 +1204,131 @@ const TRANSLATIONS = {
     tool_jobs_sub: "همزمان در تمام بورس‌های کاری بزرگ دانمارک جستجو کنید.",
   }
 };
+
+/* ══════════════════════════════════════════════════════
+   TIMELINE EVENTS — Danish deadlines anchored to arrival date
+   ──────────────────────────────────────────────────────
+   Used by the Denmark Deadline Calendar tool to generate an
+   .ics file the user can import into Google / Apple / Outlook.
+   Sources are official authorities listed per event.
+
+   `offsetDays` is days from arrival.
+   `durationDays` is how long the event spans on the calendar.
+   `urgent` events get a 24h-prior alarm; others get 1 week.
+══════════════════════════════════════════════════════ */
+const TIMELINE_EVENTS = [
+  // Tier 1 — first 14 days
+  {
+    id: 'cpr',
+    offsetDays: 5,
+    durationDays: 1,
+    urgent: true,
+    summary: { en: 'Register for CPR number', fr: "S'inscrire pour un numéro CPR", ar: 'سجّل للحصول على رقم CPR', es: 'Registrarse para el número CPR', da: 'Tilmeld dig CPR-nummer', de: 'Für CPR-Nummer registrieren', uk: 'Зареєструватися для номера CPR', pl: 'Zarejestrować się po numer CPR', ur: 'CPR نمبر کے لیے رجسٹر کریں', fa: 'برای شمارهٔ CPR ثبت‌نام کنید' },
+    description: 'Book an appointment at your local Borgerservice (kommune office). You typically need: passport, residence permit, lease contract, marriage/birth certificates if applicable. Source: lifeindenmark.borger.dk',
+    chapter: 1
+  },
+  {
+    id: 'address-registration',
+    offsetDays: 5,
+    durationDays: 1,
+    urgent: true,
+    summary: { en: 'Register your Danish address', fr: 'Enregistrer votre adresse danoise', ar: 'سجّل عنوانك الدنماركي', es: 'Registrar tu dirección danesa', da: 'Registrer din danske adresse', de: 'Dänische Adresse registrieren', uk: 'Зареєструвати вашу датську адресу', pl: 'Zarejestrować swój duński adres', ur: 'اپنا ڈنمارکی پتہ رجسٹر کریں', fa: 'آدرس دانمارکی خود را ثبت کنید' },
+    description: 'Required by law within 5 days of moving. Done at the same Borgerservice appointment as CPR registration. Source: borger.dk',
+    chapter: 1
+  },
+  {
+    id: 'mitid',
+    offsetDays: 10,
+    durationDays: 1,
+    urgent: true,
+    summary: { en: 'Get MitID (digital ID for everything)', fr: 'Obtenir MitID (identifiant numérique)', ar: 'احصل على MitID (الهوية الرقمية)', es: 'Conseguir MitID (ID digital)', da: 'Få MitID', de: 'MitID erhalten (digitale ID)', uk: 'Отримати MitID (цифровий ID)', pl: 'Uzyskać MitID (cyfrowy identyfikator)', ur: 'MitID حاصل کریں (ڈیجیٹل شناخت)', fa: 'MitID دریافت کنید (شناسهٔ دیجیتال)' },
+    description: 'You cannot do online banking, taxes, or government services without MitID. Apply at mitid.dk after CPR is issued. Source: mitid.dk',
+    chapter: 2
+  },
+  // Tier 2 — first month
+  {
+    id: 'bank',
+    offsetDays: 14,
+    durationDays: 1,
+    urgent: false,
+    summary: { en: 'Open a Danish bank account', fr: 'Ouvrir un compte bancaire danois', ar: 'افتح حساباً مصرفياً دنماركياً', es: 'Abrir una cuenta bancaria danesa', da: 'Åbn en dansk bankkonto', de: 'Dänisches Bankkonto eröffnen', uk: 'Відкрити данський банківський рахунок', pl: 'Otworzyć duńskie konto bankowe', ur: 'ڈنمارکی بینک اکاؤنٹ کھولیں', fa: 'حساب بانکی دانمارکی باز کنید' },
+    description: 'Required for receiving Danish salary. Bring CPR, MitID, passport. Compare Danske Bank, Nordea, Jyske Bank — fees vary widely.',
+    chapter: 4
+  },
+  {
+    id: 'nemkonto',
+    offsetDays: 16,
+    durationDays: 1,
+    urgent: false,
+    summary: { en: 'Set up NemKonto (your "easy account")', fr: 'Configurer NemKonto', ar: 'إعداد NemKonto', es: 'Configurar NemKonto', da: 'Opret NemKonto', de: 'NemKonto einrichten', uk: 'Налаштувати NemKonto', pl: 'Skonfigurować NemKonto', ur: 'NemKonto سیٹ اپ کریں', fa: 'NemKonto راه‌اندازی کنید' },
+    description: 'NemKonto is the bank account the Danish state uses to pay you (tax refunds, child benefits, salary if public sector). Designate it via your bank or nemkonto.dk',
+    chapter: 4
+  },
+  {
+    id: 'tax-card',
+    offsetDays: 21,
+    durationDays: 1,
+    urgent: false,
+    summary: { en: 'Get a Danish tax card (forskudsopgørelse)', fr: 'Obtenir une carte fiscale danoise', ar: 'احصل على بطاقة الضرائب الدنماركية', es: 'Obtener tarjeta fiscal danesa', da: 'Få et skattekort (forskudsopgørelse)', de: 'Dänische Steuerkarte beantragen', uk: 'Отримати датську податкову картку', pl: 'Uzyskać duńską kartę podatkową', ur: 'ڈنمارکی ٹیکس کارڈ حاصل کریں', fa: 'کارت مالیاتی دانمارکی دریافت کنید' },
+    description: 'Apply via skat.dk after CPR + MitID. Without it your employer must withhold 55% tax. Source: skat.dk',
+    chapter: 4
+  },
+  {
+    id: 'doctor',
+    offsetDays: 21,
+    durationDays: 1,
+    urgent: false,
+    summary: { en: 'Choose your læge (general practitioner)', fr: 'Choisir votre médecin (læge)', ar: 'اختر طبيبك العام (læge)', es: 'Elegir tu médico de cabecera (læge)', da: 'Vælg din læge', de: 'Hausarzt wählen (læge)', uk: 'Обрати свого сімейного лікаря (læge)', pl: 'Wybrać lekarza rodzinnego (læge)', ur: 'اپنا فیملی ڈاکٹر (læge) منتخب کریں', fa: 'پزشک خانوادگی (læge) خود را انتخاب کنید' },
+    description: 'You\'re assigned a doctor automatically with your yellow health card, but you can change to one near you at borger.dk. Free care covered by tax.',
+    chapter: 5
+  },
+  {
+    id: 'school-daycare',
+    offsetDays: 30,
+    durationDays: 1,
+    urgent: false,
+    summary: { en: 'Register kids for school or daycare', fr: 'Inscrire les enfants à l\'école ou crèche', ar: 'سجّل الأطفال في المدرسة أو الحضانة', es: 'Inscribir a los niños en la escuela o guardería', da: 'Tilmeld børn til skole eller dagtilbud', de: 'Kinder für Schule/Kita anmelden', uk: 'Записати дітей до школи або дитсадка', pl: 'Zapisać dzieci do szkoły lub przedszkola', ur: 'بچوں کو اسکول یا ڈے کیئر میں رجسٹر کریں', fa: 'فرزندان را برای مدرسه یا مهدکودک ثبت‌نام کنید' },
+    description: 'Skip if no children. Apply via your kommune\'s pladsanvisning (placement office). Waiting lists in Copenhagen can be 3–6 months — start immediately.',
+    chapter: 6
+  },
+  {
+    id: 'danish-class',
+    offsetDays: 60,
+    durationDays: 1,
+    urgent: false,
+    summary: { en: 'Sign up for free Danish classes', fr: 'S\'inscrire à des cours de danois gratuits', ar: 'سجّل في دروس دنماركية مجانية', es: 'Inscribirse en clases de danés gratis', da: 'Tilmeld dig gratis danskundervisning', de: 'Für kostenlose Dänischkurse anmelden', uk: 'Записатися на безкоштовні курси данської', pl: 'Zapisać się na bezpłatne kursy duńskiego', ur: 'مفت ڈنمارکی کلاسوں کے لیے سائن اپ کریں', fa: 'برای کلاس‌های رایگان دانمارکی ثبت‌نام کنید' },
+    description: 'Three years of free Danish lessons via your kommune\'s sprogcenter. Start within the first year — required for permanent residency.',
+    chapter: 11
+  },
+  {
+    id: 'a-kasse',
+    offsetDays: 90,
+    durationDays: 1,
+    urgent: false,
+    summary: { en: 'Decide on a-kasse (unemployment insurance)', fr: 'Décider de l\'a-kasse (assurance chômage)', ar: 'قرّر بشأن a-kasse (تأمين البطالة)', es: 'Decidir sobre el a-kasse (seguro de desempleo)', da: 'Beslut dig om a-kasse', de: 'Über a-kasse (Arbeitslosenversicherung) entscheiden', uk: 'Визначитися з a-kasse (страхування від безробіття)', pl: 'Zdecydować o a-kasse (ubezpieczeniu od bezrobocia)', ur: 'a-kasse (بے روزگاری بیمہ) کا فیصلہ کریں', fa: 'دربارهٔ a-kasse (بیمهٔ بیکاری) تصمیم بگیرید' },
+    description: 'Optional but strongly recommended for non-EU workers. Provides up to 90% of your salary if you lose your job. ~500 DKK/month. Compare options at akasser.dk',
+    chapter: 8
+  },
+  // Tier 3 — annual / recurring
+  {
+    id: 'forskuds-yearly',
+    offsetDays: 220,            // ~Nov–Dec of arrival year (rough)
+    durationDays: 1,
+    urgent: false,
+    summary: { en: 'Update next year\'s tax card (forskudsopgørelse)', fr: "Mettre à jour la carte fiscale de l'année suivante", ar: 'حدّث البطاقة الضريبية للعام القادم', es: 'Actualizar la tarjeta fiscal del próximo año', da: 'Opdater næste års forskudsopgørelse', de: 'Steuerkarte fürs nächste Jahr aktualisieren', uk: 'Оновити податкову картку на наступний рік', pl: 'Zaktualizować kartę podatkową na przyszły rok', ur: 'اگلے سال کا ٹیکس کارڈ اپ ڈیٹ کریں', fa: 'کارت مالیاتی سال آینده را به‌روزرسانی کنید' },
+    description: 'Each November SKAT publishes next year\'s preliminary tax assessment. Update it on skat.dk so deductions are right from January.',
+    chapter: 4
+  },
+  {
+    id: 'aarsopgoerelse',
+    offsetDays: 305,            // ~early March of year after
+    durationDays: 1,
+    urgent: false,
+    summary: { en: 'Annual tax statement (årsopgørelse) opens', fr: 'Déclaration annuelle (årsopgørelse) ouvre', ar: 'يُفتح كشف الضرائب السنوي (årsopgørelse)', es: 'Se abre la declaración anual (årsopgørelse)', da: 'Årsopgørelsen åbner', de: 'Jährliche Steuerabrechnung (årsopgørelse) öffnet', uk: 'Відкриття річної податкової звітності', pl: 'Otwiera się roczne rozliczenie podatkowe', ur: 'سالانہ ٹیکس بیان (årsopgørelse) کھلتا ہے', fa: 'اظهارنامهٔ مالیاتی سالانه (årsopgørelse) باز می‌شود' },
+    description: 'Around March 11 each year, SKAT publishes your annual tax statement on skat.dk. Check deductions, refunds typically arrive by April.',
+    chapter: 4
+  }
+];
 
 /* ── WIZARD QUESTIONS ──────────────────────────────── */
 const WIZARD_QUESTIONS = [
