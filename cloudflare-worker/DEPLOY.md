@@ -12,6 +12,10 @@ This proxies Björn's chat requests through a Cloudflare Worker so the Groq API 
 
 Go to https://dash.cloudflare.com/sign-up — email + password is enough. No payment info required for the Workers free tier.
 
+### 1b. Already done: origin allowlist updated to ankommer.org
+
+The Worker's `ALLOWED_ORIGINS` already includes `https://ankommer.org` and `https://www.ankommer.org` plus the legacy GitHub Pages URL. No edits needed before deploy.
+
 ### 2. Install the wrangler CLI on your computer
 
 You already have Node.js installed (you used `npx serve`). Run:

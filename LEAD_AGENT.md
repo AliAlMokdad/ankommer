@@ -6,7 +6,7 @@ This document is the **system prompt for any agent working on this codebase**. R
 
 ## What ANKOMMER is
 
-A static, multilingual PWA that helps immigrants build their life in Denmark. It runs at https://alialmokdad.github.io/ankommer/. No backend. No build step. Just HTML + CSS + vanilla JS + a service worker. Deployed via GitHub Pages on every push to `main`.
+A static, multilingual PWA that helps immigrants build their life in Denmark. It runs at https://ankommer.org/. No backend. No build step. Just HTML + CSS + vanilla JS + a service worker. Deployed via GitHub Pages on every push to `main`.
 
 Users are people in vulnerable situations — recently arrived, language barriers, navigating bureaucracy. **Anything that doesn't work hurts a real person trying to figure out their life.**
 

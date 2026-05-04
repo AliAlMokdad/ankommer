@@ -4,21 +4,22 @@
 
   <!-- Main page — all 10 languages selectable via ?lang= query param -->
   <url>
-    <loc>https://alialmokdad.github.io/ankommer/</loc>
+    <loc>https://ankommer.org/</loc>
     <lastmod>2026-05-04</lastmod>
+    <!-- ankommer.org went live 2026-05-04 -->
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://alialmokdad.github.io/ankommer/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://alialmokdad.github.io/ankommer/?lang=fr"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://alialmokdad.github.io/ankommer/?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://alialmokdad.github.io/ankommer/?lang=es"/>
-    <xhtml:link rel="alternate" hreflang="da" href="https://alialmokdad.github.io/ankommer/?lang=da"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://alialmokdad.github.io/ankommer/?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://alialmokdad.github.io/ankommer/?lang=uk"/>
-    <xhtml:link rel="alternate" hreflang="pl" href="https://alialmokdad.github.io/ankommer/?lang=pl"/>
-    <xhtml:link rel="alternate" hreflang="ur" href="https://alialmokdad.github.io/ankommer/?lang=ur"/>
-    <xhtml:link rel="alternate" hreflang="fa" href="https://alialmokdad.github.io/ankommer/?lang=fa"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alialmokdad.github.io/ankommer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ankommer.org/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ankommer.org/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://ankommer.org/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ankommer.org/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="da" href="https://ankommer.org/?lang=da"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ankommer.org/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://ankommer.org/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://ankommer.org/?lang=pl"/>
+    <xhtml:link rel="alternate" hreflang="ur" href="https://ankommer.org/?lang=ur"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://ankommer.org/?lang=fa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ankommer.org/"/>
   </url>
 
 </urlset>

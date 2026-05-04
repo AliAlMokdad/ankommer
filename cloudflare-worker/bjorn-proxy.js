@@ -16,7 +16,9 @@
  */
 
 const ALLOWED_ORIGINS = [
-  'https://alialmokdad.github.io',
+  'https://ankommer.org',            // production
+  'https://www.ankommer.org',        // www → apex (kept just in case)
+  'https://alialmokdad.github.io',   // legacy GH Pages URL (still works)
   'http://localhost:3456',           // local dev
   'http://localhost:8080',
   'http://127.0.0.1:3456'

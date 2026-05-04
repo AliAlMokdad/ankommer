@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alialmokdad.github.io/ankommer/sitemap.xml
+Sitemap: https://ankommer.org/sitemap.xml
