@@ -16,6 +16,28 @@ const APIs = (() => {
     return ctrl.signal;
   };
 
+  // Show a friendly error in the right result panel instead of failing silently.
+  // Users were seeing "nothing happened" when DAWA / weather / journey / jobs
+  // hit a 5xx or timeout.
+  const showError = (resultElId, message, retryFn) => {
+    const el = document.getElementById(resultElId);
+    if (!el) return;
+    const retryAttr = retryFn ? `data-retry="1"` : '';
+    el.classList.remove('hidden');
+    el.innerHTML = `
+      <div style="padding:14px 16px;border-radius:10px;background:rgba(198,12,48,0.08);border:1px solid rgba(198,12,48,0.25);color:var(--text);">
+        <div style="font-size:0.9rem;font-weight:600;margin-bottom:4px;">⚠️ ${esc(message)}</div>
+        <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:${retryFn ? '10px' : '0'};">
+          The service may be temporarily unavailable. Check your connection and try again.
+        </div>
+        ${retryFn ? `<button class="btn-secondary" ${retryAttr} style="font-size:0.85rem;padding:6px 14px;">Retry</button>` : ''}
+      </div>
+    `;
+    if (retryFn) {
+      el.querySelector('button[data-retry]')?.addEventListener('click', retryFn, { once: true });
+    }
+  };
+
   // Local XSS guard — app.js loads after apis.js so we can't share the one from there
   const esc = (s) => String(s)
     .replace(/&/g, '&amp;')
@@ -181,7 +203,11 @@ const APIs = (() => {
 
   const fetchDAWASuggestions = async (query, suggestionsEl, inputEl, onSelect) => {
     try {
-      const res = await fetch(`https://api.dataforsyningen.dk/adresser/autocomplete?q=${encodeURIComponent(query)}&per_side=7&srid=4326`);
+      const res = await fetch(
+        `https://api.dataforsyningen.dk/adresser/autocomplete?q=${encodeURIComponent(query)}&per_side=7&srid=4326`,
+        { signal: timeoutSignal(5000) }
+      );
+      if (!res.ok) throw new Error(`DAWA HTTP ${res.status}`);
       const data = await res.json();
 
       if (!data.length) {
@@ -220,6 +246,14 @@ const APIs = (() => {
       suggestionsEl.classList.remove('hidden');
     } catch (e) {
       console.warn('DAWA fetch failed:', e);
+      // Show user feedback inside the suggestion dropdown — silent failure
+      // looks like nothing happened, which feels worse than a real error.
+      suggestionsEl.innerHTML = `
+        <div class="dawa-no-results" style="color:var(--brand-red);">
+          ⚠️ Address service is temporarily unavailable. Please try again in a moment.
+        </div>
+      `;
+      suggestionsEl.classList.remove('hidden');
     }
   };
 

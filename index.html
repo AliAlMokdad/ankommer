@@ -753,10 +753,10 @@
     <div class="footer-links">
       <div class="footer-col">
         <h4 data-i18n="footer_chapters">Chapters</h4>
-        <a href="#" onclick="openChapter(0)">Before You Land</a>
-        <a href="#" onclick="openChapter(1)">First 72 Hours</a>
-        <a href="#" onclick="openChapter(2)">Papers &amp; Legal</a>
-        <a href="#" onclick="openChapter(3)">Housing</a>
+        <a href="#chapter-0" onclick="event.preventDefault(); openChapter(0);">Before You Land</a>
+        <a href="#chapter-1" onclick="event.preventDefault(); openChapter(1);">First 72 Hours</a>
+        <a href="#chapter-2" onclick="event.preventDefault(); openChapter(2);">Papers &amp; Legal</a>
+        <a href="#chapter-3" onclick="event.preventDefault(); openChapter(3);">Housing</a>
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer_tools">Tools</h4>
@@ -767,9 +767,9 @@
       </div>
       <div class="footer-col">
         <h4 data-i18n="footer_bjorn">Björn</h4>
-        <a href="#" onclick="openBjorn()" data-i18n="footer_ask">Ask anything</a>
-        <a href="#" onclick="openBjorn()" data-i18n="footer_doc">Translate a document</a>
-        <a href="#" onclick="openBjorn()" data-i18n="footer_form">Navigate a form</a>
+        <a href="#bjorn" onclick="event.preventDefault(); openBjorn();" data-i18n="footer_ask">Ask anything</a>
+        <a href="#bjorn" onclick="event.preventDefault(); openBjorn();" data-i18n="footer_doc">Translate a document</a>
+        <a href="#bjorn" onclick="event.preventDefault(); openBjorn();" data-i18n="footer_form">Navigate a form</a>
       </div>
     </div>
     <div class="footer-bottom">
