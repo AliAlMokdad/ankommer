@@ -1154,8 +1154,28 @@ const APIs = (() => {
       const resultEl = document.getElementById('rent-result');
       if (!resultEl) return;
 
-      if (!size || size < 10 || !monthly || monthly < 500) {
-        window.App?.showToast?.('Please enter a valid size (m²) and monthly rent', 'warning');
+      // Sane bounds — Danish rentals realistically span 15–500 m² and
+      // 2,000–80,000 DKK/month. Outside this range the verdict is meaningless
+      // (e.g. 1 m² @ 1 DKK silently produced no output, 99,999 m² showed
+      // "Great Deal"). Show an inline error in the result panel so the
+      // failure isn't silent.
+      const showRentError = (msg) => {
+        resultEl.classList.remove('hidden');
+        resultEl.innerHTML = `
+          <div style="padding:14px 16px;border-radius:10px;background:rgba(198,12,48,0.08);
+                      border:1px solid rgba(198,12,48,0.25);color:var(--text);font-size:0.9rem;">
+            <strong>⚠️ ${msg}</strong>
+            <div style="font-size:0.82rem;color:var(--text-muted);margin-top:6px;">
+              Typical Danish rentals: 15–500 m², 2,000–80,000 DKK/month.
+            </div>
+          </div>`;
+      };
+      if (!size || size < 15 || size > 500) {
+        showRentError('Enter a realistic apartment size (15–500 m²)');
+        return;
+      }
+      if (!monthly || monthly < 2000 || monthly > 80000) {
+        showRentError('Enter a realistic monthly rent (2,000–80,000 DKK)');
         return;
       }
 

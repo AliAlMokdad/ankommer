@@ -518,19 +518,38 @@ const Calculators = (() => {
         }
       ];
 
-      const yearsDisplay = yearsHere < 1
-        ? `${Math.round(yearsHere * 12)} months`
-        : `${yearsHere.toFixed(1)} years`;
+      // Handle planners (future arrival): show "you arrive in N months"
+      // instead of "you've been in Denmark for -3 years" which was confusing.
+      // The arrival milestone's `reached` flag still uses the real date check
+      // so the timeline below renders correctly either way.
+      const isFutureArrival = arrival > now;
+      const monthsUntilArrival = Math.round((arrival - now) / (1000 * 60 * 60 * 24 * 30.44));
+      let intro;
+      if (isFutureArrival) {
+        // Update the first milestone for accuracy when planning
+        if (milestones[0]) milestones[0].reached = false;
+        const arrivalIn = monthsUntilArrival < 1
+          ? 'less than a month'
+          : monthsUntilArrival < 12
+            ? `${monthsUntilArrival} ${monthsUntilArrival === 1 ? 'month' : 'months'}`
+            : `${(monthsUntilArrival / 12).toFixed(1)} years`;
+        intro = `📋 Planning ahead — you arrive in <strong>${arrivalIn}</strong>. Here's your residency roadmap from that date.`;
+      } else {
+        const yearsDisplay = yearsHere < 1
+          ? `${Math.round(yearsHere * 12)} months`
+          : `${yearsHere.toFixed(1)} years`;
+        intro = `You've been in Denmark for <strong>${yearsDisplay}</strong>.`;
+      }
 
       const nextMilestone = milestones.find(m => !m.reached);
       const yearsToNext   = nextMilestone
-        ? ((nextMilestone.date - now) / (1000 * 60 * 60 * 24 * 365.25)).toFixed(1)
+        ? Math.max(0, (nextMilestone.date - now) / (1000 * 60 * 60 * 24 * 365.25)).toFixed(1)
         : null;
 
       resultDiv.innerHTML = `
         <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px">
-          You've been in Denmark for <strong>${yearsDisplay}</strong>.
-          ${nextMilestone ? `Next milestone in <strong>${yearsToNext} years</strong> (${nextMilestone.date.toLocaleDateString('en-GB', {month:'long', year:'numeric'})}).` : 'You\'ve reached all major milestones! 🎉'}
+          ${intro}
+          ${nextMilestone ? ` Next milestone in <strong>${yearsToNext} years</strong> (${nextMilestone.date.toLocaleDateString('en-GB', {month:'long', year:'numeric'})}).` : 'You\'ve reached all major milestones! 🎉'}
         </div>
         ${rules.note ? `<div style="font-size:0.8rem;color:var(--amber);margin-bottom:12px;padding:8px 12px;background:rgba(232,160,32,0.1);border-radius:8px">ℹ️ ${rules.note}</div>` : ''}
         <div class="res-timeline">
@@ -641,18 +660,43 @@ const Calculators = (() => {
   const initDeadlineCalendar = () => {
     const btn = document.getElementById('cal-download-btn');
     if (!btn) return;
+
+    // Show feedback inline next to the button — never silently fail
+    const showCalMsg = (msg, kind = 'error') => {
+      const wrap = btn.parentElement;
+      let msgEl = wrap.querySelector('.cal-inline-msg');
+      if (!msgEl) {
+        msgEl = document.createElement('div');
+        msgEl.className = 'cal-inline-msg';
+        msgEl.style.cssText = 'margin-top:10px;padding:10px 12px;border-radius:8px;font-size:0.85rem;';
+        btn.insertAdjacentElement('afterend', msgEl);
+      }
+      msgEl.style.background = kind === 'error' ? 'rgba(198,12,48,0.1)' : 'rgba(46,109,164,0.1)';
+      msgEl.style.color      = kind === 'error' ? 'var(--brand-red)'    : 'var(--nordic-blue)';
+      msgEl.textContent = msg;
+      setTimeout(() => msgEl.remove(), 4000);
+    };
+
     btn.addEventListener('click', () => {
       const dateInput = document.getElementById('cal-arrival-date');
       const v = dateInput?.value;
       if (!v) {
-        window.App?.showToast?.('Please enter your arrival date', 'warning');
-        // Fallback if no toast component — focus the field
+        showCalMsg('Please enter your arrival date first.');
         dateInput?.focus();
         return;
       }
       const arrival = new Date(v + 'T00:00:00');
       if (isNaN(arrival.getTime())) {
-        alert('Please enter a valid date.');
+        showCalMsg('That date doesn\'t look valid. Please pick again.');
+        dateInput?.focus();
+        return;
+      }
+      // Sane bounds — within ~50 years of now
+      const now = new Date();
+      const fiftyYearsMs = 50 * 365 * 24 * 60 * 60 * 1000;
+      if (Math.abs(arrival - now) > fiftyYearsMs) {
+        showCalMsg('Please pick a date within the next 50 years.');
+        dateInput?.focus();
         return;
       }
       const lang = window.currentLang || 'en';
