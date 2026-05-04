@@ -1436,10 +1436,10 @@ const CHAPTERS = [
       {
         icon: "🛂",
         title: { en:"Which Visa Do You Actually Need?", fr:"Quel Visa Avez-Vous Réellement Besoin ?", ar:"أي تأشيرة تحتاج فعلاً؟", es:"¿Qué Visa Necesitas Realmente?", da:"Hvilket visum har du faktisk brug for?" },
-        content: { en:`<p><strong>EU/EEA/Nordic citizens:</strong> You do not need a visa or work permit. You have the right to live and work in Denmark freely. You just need to register your address within 3 months.</p>
+        content: { en:`<p><strong>EU/EEA/Nordic citizens:</strong> You do not need a visa or work permit. You have the right to live and work in Denmark freely. <strong>Two separate registrations apply:</strong> (1) Your <strong>folkeregister address</strong> must be registered <strong>within 5 days of moving</strong> (CPR Act §12 — this is a fineable offence if you miss it). (2) Your <strong>EU residence document</strong> from SIRI must be obtained if you intend to stay more than 3 months.</p>
 <p><strong>Non-EU citizens</strong> need one of these:</p>
 <ul>
-  <li><strong>Work permit</strong> — requires a job offer from a Danish employer. Most common types: Positive List (for high-demand professions), Pay Limit Scheme (if salary > DKK 465,000/year), Fast-track Scheme (for certified companies).</li>
+  <li><strong>Work permit</strong> — requires a job offer from a Danish employer. Most common types: Positive List (for high-demand professions), Pay Limit Scheme (if salary &gt; DKK 514,000/year in 2025, rising to DKK 552,000 in 2026), Fast-track Scheme (for certified companies).</li>
   <li><strong>Student visa</strong> — if enrolled at a Danish university or educational institution. Apply at newtodenmark.dk at least 2 months before.</li>
   <li><strong>Family reunification</strong> — to join a Danish citizen or permanent resident. Requirements are strict: the Danish sponsor must meet income and housing requirements.</li>
   <li><strong>Startup Denmark visa</strong> — for entrepreneurs with an approved business plan.</li>
@@ -1532,6 +1532,7 @@ const CHAPTERS = [
         icon: "📍",
         title: { en:"Step 1: Register Your Address (Folkeregister)", fr:"Étape 1 : Enregistrez votre adresse", ar:"الخطوة 1: سجّل عنوانك", es:"Paso 1: Registra tu Dirección", da:"Trin 1: Registrér din adresse" },
         content: { en:`<p>This is <strong>the very first thing</strong>. Everything else — your CPR number, your MitID, your doctor, your bank account, your tax card — all of it depends on having a registered address.</p>
+<p class="callout-warning">⏰ <strong>Legal deadline: within 5 days of moving</strong> (CPR Act §12). Late registration is a fineable offence. Book your Borgerservice appointment as soon as you have keys.</p>
 <p><strong>How to do it:</strong></p>
 <ol class="step-list">
   <li><span class="step-num">1</span> Go to <a href="https://www.borger.dk" target="_blank" rel="noopener">borger.dk</a> and search "Flytning til Danmark" OR visit your local Borgerservice (Citizens Service) office in person.</li>
@@ -1641,7 +1642,7 @@ const CHAPTERS = [
   <tr><th>Permit Type</th><th>For</th><th>Work rights</th><th>Duration</th></tr>
   <tr><td><strong>EU Registration</strong></td><td>EU/EEA citizens</td><td>Unlimited</td><td>5 years (then permanent)</td></tr>
   <tr><td><strong>Positive List</strong></td><td>High-demand professions</td><td>Full</td><td>Up to 4 years</td></tr>
-  <tr><td><strong>Pay Limit Scheme</strong></td><td>Salary > DKK 465,000/yr</td><td>Full</td><td>Up to 4 years</td></tr>
+  <tr><td><strong>Pay Limit Scheme</strong></td><td>Salary &gt; DKK 514,000/yr (2025) · DKK 552,000/yr from 2026</td><td>Full</td><td>Up to 4 years</td></tr>
   <tr><td><strong>Student Permit</strong></td><td>Enrolled students</td><td>15 hrs/week</td><td>Duration of study</td></tr>
   <tr><td><strong>Family Reunification</strong></td><td>Joining family member</td><td>Full (usually)</td><td>2 years initially</td></tr>
   <tr><td><strong>Refugee Status</strong></td><td>Asylum seekers</td><td>Varies</td><td>Varies</td></tr>
@@ -1653,7 +1654,7 @@ const CHAPTERS = [
 <ul>
   <li><strong>4 years</strong> if you pass a special active contribution assessment (points-based)</li>
   <li><strong>5 years</strong> for EU citizens with continuous residence</li>
-  <li>You must also: have had full-time employment for 3.5 of the last 4 years, pass a Danish language test (A1 minimum, B1 recommended), have no criminal record, be self-supporting.</li>
+  <li>You must also: have had full-time employment for at least 2.5 of the last 3 years (current rule), pass a Danish language test (Prøve i Dansk 2 / A2 level), have no criminal record, be self-supporting (no public assistance in the last 4 years).</li>
 </ul>
 <p>The points system scores you on: Danish language level, employment history, income, community involvement, children's school performance, and citizenship exam score.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit" target="_blank" rel="noopener">→ Official permanent residency information</a>` }
@@ -1664,7 +1665,10 @@ const CHAPTERS = [
 <ul>
   <li>Must have lived in Denmark for <strong>9 years</strong> (or less with accelerators)</li>
   <li>Pass the <strong>Indfødsretsprøven</strong> (citizenship test) — Danish history, culture, society</li>
-  <li>Pass <strong>Danish language test at level B1 or higher</strong></li>
+  <li>Pass <strong>Prøve i Dansk 3 (PD3, ≈ B2 level)</strong> — the citizenship-track language test</li>
+  <li>Pass the <strong>indfødsretsprøven</strong> (citizenship knowledge test, ~40 questions on Danish history, society, and democracy)</li>
+  <li>Have lived in Denmark for at least <strong>9 of the last 10 years</strong> with permanent residency</li>
+  <li>Be <strong>self-supporting</strong> with no public-assistance benefits in the last 4 years</li>
   <li>Have been self-supporting for the last 4.5 of 5 years</li>
   <li>No criminal convictions</li>
   <li>No outstanding debt to public authorities</li>
@@ -1677,9 +1681,9 @@ const CHAPTERS = [
 <ul>
   <li><strong>AM-bidrag (Labour Market Contribution):</strong> 8% off the top of your gross salary. No deductions against this.</li>
   <li><strong>Municipal tax (kommuneskat):</strong> Varies by municipality, average ~25%. You pay this on income above your personal allowance.</li>
-  <li><strong>State tax (bundskat):</strong> 12.06% on income above the personal allowance (49,700 DKK/year).</li>
+  <li><strong>State tax (bundskat):</strong> 12.01% (2025) on income above the personal allowance (51,600 DKK/year).</li>
   <li><strong>Top tax (topskat):</strong> 15% additional on annual income above ~588,900 DKK (~49,000/month gross).</li>
-  <li><strong>Personal allowance (personfradrag):</strong> 49,700 DKK/year you pay no tax on.</li>
+  <li><strong>Personal allowance (personfradrag):</strong> 51,600 DKK/year (2025) — applied as a tax credit, effectively making this slice tax-free.</li>
 </ul>
 <p>What do you get for it? Free healthcare. Free university. 52 weeks parental leave. 5 weeks vacation. Free school. Unemployment benefits if you lose your job. The math is very different from what most people expect.</p>
 <a href="https://skat.dk/en-us" target="_blank" rel="noopener">→ SKAT — Danish Tax Authority</a>` }
@@ -1711,6 +1715,21 @@ const CHAPTERS = [
     intro: { en:"The Danish housing market is brutally competitive — especially Copenhagen. But with the right strategy, you'll find your home.", fr:"Le marché immobilier danois est brutalement compétitif. Avec la bonne stratégie, vous trouverez votre maison.", ar:"سوق الإسكان الدنماركي تنافسي بشكل قاسٍ. لكن بالاستراتيجية الصحيحة، ستجد منزلك.", es:"El mercado inmobiliario danés es brutalmente competitivo. Con la estrategia correcta, encontrarás tu hogar.", da:"Det danske boligmarked er brutalt konkurrencepræget. Med den rette strategi finder du dit hjem." },
     readTime: "15 min",
     sections: [
+      {
+        icon:"🚨", title:{ en:"Read this first — Avoiding rental scams", da:"Læs dette først — Undgå svindel" },
+        content:{ en:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ Housing scams are the #1 financial threat to newcomers in Denmark.</strong> Fake listings on Facebook Marketplace, fake landlords claiming to be abroad, and demands for deposit "to hold the apartment" before viewing have cost newcomers <strong>10,000 to 50,000 DKK</strong> each.</p>
+
+<p><strong>Hard rules — never break them:</strong></p>
+<ul>
+  <li><strong>Never wire money before</strong> (a) you have signed a lease (Typeformular A) and (b) physically viewed the apartment with the actual landlord present. No exceptions.</li>
+  <li><strong>Verify the landlord owns the property</strong> via <a href="https://www.ois.dk" target="_blank" rel="noopener">ois.dk</a> (Danish public property register — free) or <a href="https://www.tinglysning.dk" target="_blank" rel="noopener">tinglysning.dk</a> (deed registry).</li>
+  <li><strong>The CPR-registered owner</strong> on the lease should match what ois.dk shows. If the "landlord" is "abroad and can't meet" — it's a scam.</li>
+  <li><strong>Pay only via bank transfer to a Danish account in the landlord's name</strong> — never Western Union, MoneyGram, crypto, gift cards, or "deposit to a friend's account."</li>
+  <li><strong>Reverse-image-search the listing photos</strong> (Google Images / TinEye). Scammers reuse photos.</li>
+  <li><strong>Maximum legal upfront</strong>: 3 months deposit (depositum) + 3 months prepaid rent (forudbetalt leje) = 6 months. Anything more is illegal under Lejeloven §34. Many honest leases ask for less.</li>
+</ul>
+<p><strong>If something feels off, it is.</strong> Walk away — there is always another listing. Report scams to <a href="https://politi.dk" target="_blank" rel="noopener">politi.dk</a> and warn other newcomers in expat groups.</p>` }
+      },
       {
         icon:"🏘️", title:{ en:"Types of Housing in Denmark", da:"Boligtyper i Danmark" },
         content:{ en:`<p>Denmark has four main types of housing tenure:</p>
@@ -1803,7 +1822,7 @@ const CHAPTERS = [
 </ol>
 <p><strong>Two types of tax card:</strong></p>
 <ul>
-  <li><strong>Frikort</strong> — if your total annual income will be below DKK 49,700 (2025). You pay zero tax up to this amount.</li>
+  <li><strong>Frikort</strong> — if your total annual income will be below DKK 51,600 (2025 personfradrag). You pay zero tax up to this amount.</li>
   <li><strong>Bikort</strong> — for a second job. Your main employer uses your main card; secondary employer uses the bikort (40% flat rate with no allowance).</li>
 </ul>
 <p class="callout-warning">Update your preliminary income assessment (forskudsopgørelse) if your circumstances change — new job, pay rise, starting a company, earning rental income. Getting it wrong means either a large bill or a refund at year end. SKAT does not penalise you for adjusting proactively.</p>
@@ -2008,16 +2027,18 @@ const CHAPTERS = [
       {
         icon: "🍼",
         title: { en:"Parental Leave (Barsel) — 52 Weeks, Paid", da:"Barselsorlov — 52 uger, betalt" },
-        content: { en:`<p>Denmark's parental leave system is one of the most generous in the world. Since August 2022, both parents have equal and individual rights.</p>
-<p><strong>How the 52 weeks are divided (2025):</strong></p>
+        content: { en:`<p>Denmark's parental leave system is one of the most generous in the world. The Barselslov was reformed on <strong>2 August 2022</strong> to give both parents equal and individual rights, with further updates in 2024.</p>
+<p><strong>How leave is divided under the post-2022 model (per parent):</strong></p>
 <table class="info-table">
-  <tr><th>Leave type</th><th>Who</th><th>Duration</th><th>Can be transferred?</th></tr>
-  <tr><td>Maternity leave (barselsorlov)</td><td>Mother</td><td>4 weeks before birth + 10 weeks after</td><td>No — mother only</td></tr>
-  <tr><td>Paternity leave (fædreorlov)</td><td>Father/co-parent</td><td>2 weeks within first 10 weeks</td><td>No — parent 2 only</td></tr>
-  <tr><td>Parental leave (forældreorlev)</td><td>Both parents</td><td>9 weeks each (non-transferable) + 5 weeks flexible</td><td>5 weeks can be shared</td></tr>
+  <tr><th>Block</th><th>Who</th><th>Duration</th><th>Transferable?</th></tr>
+  <tr><td>Pregnancy leave</td><td>Birthing parent</td><td>4 weeks before birth</td><td>No</td></tr>
+  <tr><td>Maternity leave</td><td>Birthing parent</td><td>2 weeks immediately after birth (mandatory)</td><td>No</td></tr>
+  <tr><td>Paternity / co-parent leave</td><td>Other parent</td><td>2 weeks within the first 10 weeks</td><td>No</td></tr>
+  <tr><td>Earmarked parental leave (øremærket)</td><td>Each parent</td><td><strong>11 weeks each</strong> — use them or lose them</td><td>No</td></tr>
+  <tr><td>Transferable parental leave</td><td>Each parent</td><td><strong>13 weeks each</strong> — flexible</td><td>Yes — between parents</td></tr>
 </table>
-<p><strong>Payment:</strong> Dagpenge (daily allowance) at a maximum rate of <strong>DKK 4,460 per week</strong> (2025) from the state. Many employers top this up to full salary — check your employment contract or collective agreement.</p>
-<p><strong>Both parents must be employed or eligible for dagpenge</strong> to receive payments. Self-employed parents are also eligible under certain conditions.</p>
+<p><strong>Payment:</strong> barselsdagpenge at a maximum rate of <strong>DKK 4,865 per week</strong> (2025) from Udbetaling Danmark. Many employers top this up to full salary — check your employment contract or collective agreement.</p>
+<p><strong>Eligibility — the gotcha for newcomers:</strong> to receive barselsdagpenge from the state, you must have worked <strong>at least 160 hours in Denmark in the 4 months</strong> immediately before your leave starts. Newcomers who just arrived may not qualify yet — check with your kommune and Udbetaling Danmark before assuming.</p>
 <p>Apply for barsel via your employer and through <a href="https://www.borger.dk/familie-og-boern/graviditet-og-foedsel/barsel" target="_blank" rel="noopener">borger.dk</a> at least 8 weeks before the expected birth.</p>
 <a href="https://www.borger.dk/familie-og-boern/graviditet-og-foedsel/barsel" target="_blank" rel="noopener">→ Full parental leave guide (borger.dk official)</a>` }
       },
@@ -2145,7 +2166,7 @@ const CHAPTERS = [
 </ul>
 <p><strong>Duration:</strong> Up to 3 years (you have 5 years from when you first became eligible to use the right).</p>
 <p><strong>How to start:</strong> Contact your municipality's integration department (integrationsafdelingen) or apply directly at a language school (sprogcenter) in your area.</p>
-<p><strong>Test levels that matter for residency and citizenship:</strong> Permanent residency requires minimum A1. Citizenship requires minimum B1 (Studieprøven or PD3).</p>
+<p><strong>Test levels that matter for residency and citizenship:</strong> Permanent residency requires <strong>Prøve i Dansk 2 (PD2 ≈ A2)</strong>. Citizenship requires <strong>Prøve i Dansk 3 (PD3 ≈ B2)</strong>. University admission to Danish-language programmes typically requires <strong>Studieprøven (≈ C1)</strong>.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement" target="_blank" rel="noopener">→ Language requirements for residency (nyidanmark.dk)</a>` }
       },
       {
@@ -2178,6 +2199,21 @@ const CHAPTERS = [
     readTime: "18 min",
     lastUpdated: "2025-01",
     sections: [
+      {
+        icon: "🛂",
+        title: { en:"For non-EU readers — Which work-permit scheme applies to you?", da:"For ikke-EU-læsere — Hvilken arbejdstilladelse?" },
+        content: { en:`<p>If you're a non-EU/EEA citizen, you can only work in Denmark with a residence-and-work permit. The five main routes:</p>
+<table class="info-table">
+  <tr><th>Scheme</th><th>Eligibility</th><th>Apply via</th></tr>
+  <tr><td><strong>Pay Limit Scheme (Beløbsordningen)</strong></td><td>Job offer with salary above DKK <strong>514,000/yr (2025)</strong> · DKK 552,000/yr from 2026. Most flexible. Allows job-switching after 6 months.</td><td>Your employer applies via SIRI</td></tr>
+  <tr><td><strong>Supplementary Pay Limit Scheme</strong></td><td>Lower threshold (DKK 415,000/yr in 2025; DKK 446,000 from 2026) but only for nationals of selected high-income countries with a labour-market need.</td><td>SIRI</td></tr>
+  <tr><td><strong>Positive List (high education / labour shortage)</strong></td><td>Your profession appears on the <a href="https://www.nyidanmark.dk/en-GB/Words-and-concepts/SIRI/Positive-Lists/Positive-List-for-People-with-a-Higher-Education" target="_blank" rel="noopener">Positive List</a> (engineers, doctors, certain IT, nurses, etc.). No salary threshold beyond market wage.</td><td>SIRI</td></tr>
+  <tr><td><strong>Fast-track Scheme</strong></td><td>Your employer is a SIRI-certified company. Approval in ~1 month vs 1–4 months. 4 sub-tracks: Pay Limit, Educational, Researcher, Short-term.</td><td>Certified employer applies</td></tr>
+  <tr><td><strong>Researcher / Establishment Card</strong></td><td>For researchers and recent graduates from approved Danish universities seeking work after studies.</td><td>SIRI / your university</td></tr>
+</table>
+<p><strong>The single most useful site:</strong> <a href="https://www.workindenmark.dk" target="_blank" rel="noopener">workindenmark.dk</a> — Denmark's official portal for foreign job seekers, with vacancies, scheme details, and CV templates aligned to Danish norms.</p>
+<p><strong>Watch out for authorisation-required roles.</strong> Several professions require Danish authorisation/registration before you can work in them legally — these include nurses (DR-godkendelse), doctors (Sundhedsstyrelsen), psychologists, social workers (socialrådgiver), kindergarten teachers (pædagog), schoolteachers, and some legal roles. Check with your professional body before applying for jobs.</p>` }
+      },
       {
         icon: "🏢",
         title: { en:"Danish Work Culture — What No One Tells You", da:"Dansk arbejdskultur — hvad ingen fortæller dig" },
@@ -2230,7 +2266,7 @@ const CHAPTERS = [
         content: { en:`<p><strong>A-kasse</strong> (arbejdsløshedskasse) is Denmark's unemployment insurance system. It is <strong>voluntary, not automatic</strong> — you must join and pay contributions to receive benefits if you lose your job.</p>
 <p><strong>Key facts (2025):</strong></p>
 <ul>
-  <li><strong>Maximum benefit:</strong> DKK 19,728/month (90% of previous salary, up to this ceiling)</li>
+  <li><strong>Maximum benefit:</strong> DKK 21,091/month (2025) — that's the cap. The "90% of salary" rule only applies up to this ceiling, so most full-time earners receive 50–60% of their previous pay, not 90%.</li>
   <li><strong>Duration:</strong> Up to 2 years of benefits within a 3-year period</li>
   <li><strong>Membership cost:</strong> Typically DKK 400–600/month depending on the a-kasse</li>
   <li><strong>Waiting period:</strong> You must be a member for at least 12 months AND have worked at least 1,924 hours in the last 3 years before you can claim</li>
@@ -2296,11 +2332,11 @@ const CHAPTERS = [
 <table class="info-table">
   <tr><th>Structure</th><th>Danish name</th><th>Min. capital</th><th>Liability</th><th>Best for</th></tr>
   <tr><td><strong>Sole proprietorship</strong></td><td>Enkeltmandsvirksomhed</td><td>None</td><td>Personal (unlimited)</td><td>Freelancers, consultants, sole traders</td></tr>
-  <tr><td><strong>Private limited company</strong></td><td>Anpartsselskab (ApS)</td><td>DKK 40,000</td><td>Limited to capital</td><td>Small companies, startups</td></tr>
+  <tr><td><strong>Private limited company</strong></td><td>Anpartsselskab (ApS)</td><td>DKK 20,000 (since 27 Feb 2025)</td><td>Limited to capital</td><td>Small companies, startups</td></tr>
   <tr><td><strong>Public limited company</strong></td><td>Aktieselskab (A/S)</td><td>DKK 400,000</td><td>Limited to capital</td><td>Larger companies, external investment</td></tr>
   <tr><td><strong>Partnership</strong></td><td>Interessentskab (I/S)</td><td>None</td><td>Joint personal</td><td>Two+ people, simple structures</td></tr>
 </table>
-<p>For most newcomers starting a business: an <strong>Enkeltmandsvirksomhed</strong> is free to register and can be set up in 10 minutes. An <strong>ApS</strong> gives liability protection but requires DKK 40,000 capital and costs ~DKK 670 to register.</p>` }
+<p>For most newcomers starting a business: an <strong>Enkeltmandsvirksomhed</strong> is free to register and can be set up in 10 minutes. An <strong>ApS</strong> gives liability protection and now requires only DKK 20,000 capital (reduced from DKK 40,000 on 27 Feb 2025) plus ~DKK 670 to register.</p>` }
       },
       {
         icon: "📋",
@@ -2325,7 +2361,7 @@ const CHAPTERS = [
 <p><strong>Key taxes for self-employed (2025):</strong></p>
 <ul>
   <li><strong>AM-bidrag:</strong> 8% on gross business income (deducted before income tax)</li>
-  <li><strong>Income tax:</strong> Same rates as employees — personal allowance of DKK 49,700, then municipal + state tax</li>
+  <li><strong>Income tax:</strong> Same rates as employees — personal allowance of DKK 51,600 (2025), then municipal + state tax</li>
   <li><strong>B-skat:</strong> Self-employed people pay tax in advance via <strong>B-skat</strong> — 10 monthly instalments through the year. Update your forskudsopgørelse at skat.dk to set the right amount.</li>
   <li><strong>Moms (VAT):</strong> 25% on all sales above DKK 50,000/year. File and pay quarterly via virk.dk.</li>
 </ul>
@@ -2629,7 +2665,7 @@ const CHAPTERS = [
   <tr><td><strong>November</strong></td><td>Mortensaften (Nov 10)</td><td>Feast of Saint Martin. Danes eat roast duck. One of Denmark's most beloved unofficial food holidays.</td></tr>
   <tr><td><strong>December</strong></td><td>Jul (Christmas)</td><td>Celebrated on December 24 (Juleaften), not the 25th. Families hold hands and walk around the Christmas tree. Æbleskiver, gløgg, risalamande with hidden almond.</td></tr>
 </table>
-<p><strong>Public holidays (helligdage) where everything closes:</strong> New Year's Day, Maundy Thursday, Good Friday, Easter Monday, Prayer Day (Store Bededag — moved in 2024), Ascension Day, Whit Monday, Constitution Day (June 5, partial), Christmas Dec 24 (early close), Dec 25 and Dec 26.</p>` }
+<p><strong>Public holidays (helligdage) where everything closes:</strong> New Year's Day, Maundy Thursday, Good Friday, Easter Monday, Ascension Day, Whit Monday, Constitution Day (June 5, partial), Christmas Dec 24 (early close), Dec 25 and Dec 26. Note: <strong>Store Bededag (Great Prayer Day) was abolished on 1 January 2024</strong> — it is no longer a public holiday. Workers received a small annual salary increase as compensation.</p>` }
       },
       {
         icon: "🍞",
@@ -2649,7 +2685,7 @@ const CHAPTERS = [
   <li><strong>Æbleskiver</strong> — small spherical pancake-balls eaten with powdered sugar and jam, Christmas season.</li>
   <li><strong>Wienerbrød</strong> — what the rest of the world calls a "Danish pastry." Get one from a local baker, not a supermarket.</li>
 </ul>
-<p><strong>Supermarkets:</strong> Netto and Rema 1000 are the cheapest. Lidl and Aldi are also very good value. Irma and Meny are mid-range with better quality produce. <strong>Discount tip:</strong> Use the <strong>Too Good To Go</strong> app (widely used in Denmark) to buy surplus food from bakeries and restaurants at 60–70% discount.</p>` }
+<p><strong>Supermarkets:</strong> Netto and Rema 1000 are the cheapest. Lidl and Aldi are also very good value. Meny is mid-range with better quality produce. (Note: Irma, the historic premium chain, was discontinued by Coop in 2024 — its stores rebranded mostly to Brugsen.) <strong>Discount tip:</strong> Use the <strong>Too Good To Go</strong> app (widely used in Denmark) to buy surplus food from bakeries and restaurants at 60–70% discount.</p>` }
       }
     ],
     checklist: [
@@ -2699,7 +2735,7 @@ const CHAPTERS = [
   <li><strong>You must be able to support your partner financially</strong> — specifically, you must not have received certain social benefits in the 3 years before the application</li>
   <li><strong>You must have an attachment to Denmark</strong> that is at least as strong as your combined attachment to any other country (the "tilknytningskrav" — attachment requirement). This is assessed holistically.</li>
   <li><strong>You must have accommodation</strong> of at least 20m² per person living in the dwelling</li>
-  <li><strong>You must post a financial guarantee (depositum)</strong> of DKK 113,981 (2025) — returned if your partner does not use social benefits</li>
+  <li><strong>You must post a financial guarantee (sikkerhedsstillelse)</strong> of approx. DKK 57,000 (2025) — halved by the July 2024 reform from the previous DKK ~113,000. Released in stages if your partner does not draw on certain public benefits. <a href="https://www.nyidanmark.dk/en-GB/Words-and-concepts/US/Familie/Collateral-guarantee---Reduction-and-release" target="_blank" rel="noopener">Source: nyidanmark.dk →</a></li>
 </ul>
 <p><strong>EU/EEA citizens:</strong> If you are an EU citizen exercising treaty rights in Denmark (working, studying, or being self-employed), you have the right to bring your partner under EU free movement rules. The process is simpler — apply for an EU residence document at <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a>.</p>
 <p><strong>Processing time:</strong> Typically 6–12 months from application. Your partner can apply for permission to work while the application is being processed.</p>
@@ -2814,8 +2850,11 @@ const CHAPTERS = [
   <li>Refer you to a psychologist with a blue referral card (<strong>psykologhenvisning</strong>), which entitles you to subsidised sessions</li>
   <li>Refer you to the psychiatric outpatient system (psykiatrisk ambulatorium) for more complex needs</li>
 </ul>
-<p><strong>Subsidised psychologist sessions (ydernummer):</strong></p>
+<p><strong>If you're 18–24: free psychologist sessions (no co-pay).</strong></p>
+<p>Since 1 July 2021, all Danes and residents <strong>aged 18–24</strong> can get up to <strong>12 free psychologist sessions per referral</strong> for mild to moderate anxiety or depression — with no out-of-pocket cost. Get a GP referral, then book through any psykolog with an ydernummer. This is one of the best free mental-health programmes in Europe; many young newcomers don't know it exists.</p>
+<p><strong>If you're 25 or older: subsidised psychologist sessions (ydernummer):</strong></p>
 <p>With a GP referral, you pay approximately <strong>DKK 385–530 per session</strong> (you pay ~50% of the full fee, the state covers the rest). This applies to a limited set of conditions including mild to moderate depression, anxiety, post-traumatic stress, and adjustment disorders — which covers most immigration-related mental health challenges.</p>
+<p><strong>Reality check on waiting times:</strong> public psychiatric care can have waits of 6–18 months. For urgent needs, private (paid) sessions through Mindler, Kry, or Doctolib-listed psychologists are typically available within a few days.</p>
 <p><strong>Crisis lines (available 24/7):</strong></p>
 <ul>
   <li><strong>Livslinjen:</strong> 70 201 201 — Danish-language crisis support line, anonymous and free</li>
@@ -2851,7 +2890,7 @@ const CHAPTERS = [
         content: { en:`<p>Denmark's work culture is designed to protect wellbeing — but burnout is still a significant problem, particularly among high-achieving immigrants trying to prove themselves.</p>
 <p><strong>Your rights when work affects your health:</strong></p>
 <ul>
-  <li><strong>Sick leave (sygedagpenge):</strong> If work stress makes you clinically unwell, you can take sick leave. Your employer pays full salary for the first 30 days. The state (via your municipality) pays sygedagpenge thereafter (up to DKK 4,715/week, 2025).</li>
+  <li><strong>Sick leave (sygedagpenge):</strong> If work stress makes you clinically unwell, you can take sick leave. Your employer pays full salary for the first 30 days. The state (via your municipality) pays sygedagpenge thereafter (up to DKK 4,865/week, 2025).</li>
   <li><strong>Arbejdstilsynet (the Danish Working Environment Authority):</strong> If your workplace creates an unhealthy environment — excessive pressure, harassment, lack of breaks — you can file a complaint. Anonymous reports are accepted. They conduct inspections and have authority to fine employers. <a href="https://at.dk" target="_blank" rel="noopener">at.dk</a></li>
   <li><strong>Occupational psychology support:</strong> Some larger employers have an employee assistance programme (EAP) with free counselling sessions. Check with your HR department.</li>
 </ul>
@@ -3101,15 +3140,15 @@ const VISA_TREE = {
           question: "What is your expected annual salary?",
           options: [
             {
-              label: "Above DKK 465,000/year (~38,750/month)",
+              label: "Above DKK 514,000/year (~42,800/month) — 2025 threshold; DKK 552,000 from 2026",
               result: true,
               title: "Pay Limit Scheme Work Permit",
-              description: "You qualify for the Pay Limit Scheme — the fastest and most flexible work permit. Your employer applies on your behalf. Processing: 1–4 months.",
+              description: "You qualify for the Pay Limit Scheme — the fastest and most flexible work permit. Your employer applies on your behalf. Processing: 1–4 months. Note: the 2026 threshold rises to DKK 552,000/year.",
               link: "https://www.nyidanmark.dk/en-GB/You-want-to-apply/Work/Pay-limit-scheme",
               linkText: "Pay Limit Scheme →"
             },
             {
-              label: "Below DKK 465,000/year",
+              label: "Below DKK 514,000/year",
               result: true,
               title: "Positive List Work Permit",
               description: "Check if your profession is on the Positive List (professions in high demand in Denmark). If yes, your employer applies for a work permit. If not, check the Fast-track Scheme or other schemes.",
