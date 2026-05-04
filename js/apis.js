@@ -5,6 +5,17 @@
 
 const APIs = (() => {
 
+  // AbortSignal.timeout polyfill — Safari < 16.4, Chrome < 103, Firefox < 100
+  // throw TypeError without this. Falls back to AbortController + setTimeout.
+  const timeoutSignal = (ms) => {
+    if (typeof AbortSignal !== 'undefined' && typeof AbortSignal.timeout === 'function') {
+      return AbortSignal.timeout(ms);
+    }
+    const ctrl = new AbortController();
+    setTimeout(() => ctrl.abort(new DOMException('TimeoutError', 'TimeoutError')), ms);
+    return ctrl.signal;
+  };
+
   // Local XSS guard — app.js loads after apis.js so we can't share the one from there
   const esc = (s) => String(s)
     .replace(/&/g, '&amp;')
@@ -498,7 +509,7 @@ const APIs = (() => {
           ].join(','),
           timezone: 'Europe/Copenhagen',
         });
-        const res  = await fetch(`${base}?${params}`, { signal: AbortSignal.timeout(6000) });
+        const res  = await fetch(`${base}?${params}`, { signal: timeoutSignal(6000) });
         const json = await res.json();
         if (json.daily?.temperature_2m_max?.[0] != null) {
           apiData = {
@@ -720,7 +731,7 @@ const APIs = (() => {
         // Try Rejseplanen via CORS proxy
         try {
           const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent('https://xmlopen.rejseplanen.dk/bin/rest.exe/location.name/?input=' + encodeURIComponent(q) + '&type=S&format=json')}`;
-          const res  = await fetch(proxyUrl, { signal: AbortSignal.timeout(4000) });
+          const res  = await fetch(proxyUrl, { signal: timeoutSignal(4000) });
           const data = await res.json();
           const stops = data?.LocationList?.StopLocation || [];
           const arr   = Array.isArray(stops) ? stops : [stops];
@@ -1013,7 +1024,7 @@ const APIs = (() => {
       const res = await fetch(
         'https://api.open-meteo.com/v1/forecast?latitude=55.68&longitude=12.57' +
         '&current=temperature_2m,weathercode,windspeed_10m,precipitation&timezone=Europe%2FCopenhagen',
-        { signal: AbortSignal.timeout(5000) }
+        { signal: timeoutSignal(5000) }
       );
       const data = await res.json();
       const c    = data.current;

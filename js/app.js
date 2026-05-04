@@ -4,10 +4,23 @@
 ═══════════════════════════════════════════════════════ */
 
 /* ── GLOBAL LANG ───────────────────────────────────── */
-// Auto-detect from browser locale on first visit; fall back to English
+// Auto-detect from browser locale on first visit; fall back to English.
+// localStorage is wrapped in try/catch — Safari private mode and some
+// privacy-locked browsers throw `SecurityError` on any access, which
+// would otherwise crash the entire boot.
 const _SUPPORTED_LANGS = ['en','fr','ar','es','da','de','uk','pl','ur','fa'];
 const _detectedLang = navigator.language?.slice(0,2).toLowerCase();
-window.currentLang = localStorage.getItem('ankommer_lang')
+let _savedLang = null;
+try { _savedLang = localStorage.getItem('ankommer_lang'); } catch (_) { /* private mode */ }
+// `?lang=xx` overrides everything else — supports deep-links from hreflang
+// alternates and shareable URLs like /ankommer/?lang=ar
+const _urlLang = (() => {
+  try {
+    const v = new URLSearchParams(location.search).get('lang')?.toLowerCase();
+    return v && _SUPPORTED_LANGS.includes(v) ? v : null;
+  } catch (_) { return null; }
+})();
+window.currentLang = _urlLang || _savedLang
   || (_SUPPORTED_LANGS.includes(_detectedLang) ? _detectedLang : 'en');
 
 // Sync <html lang/dir> immediately so screen readers + RTL work from first paint
@@ -73,19 +86,25 @@ const safeParseJSON = (str, fallback) => {
   try { const r = JSON.parse(str); return r ?? fallback; } catch (e) { return fallback; }
 };
 const safeGetJSON = (key, fallback) =>
-  safeParseJSON(localStorage.getItem(key), fallback);
+  safeParseJSON(safeGetItem(key), fallback);
 
 // Guards against localStorage quota exceeded errors
 const safeSetItem = (key, value) => {
   try { localStorage.setItem(key, value); } catch (e) { /* quota exceeded — silently skip */ }
 };
 
+// Safari private mode + disabled-storage browsers throw on read too —
+// every direct localStorage read in this file goes through this helper now
+const safeGetItem = (key, fallback = null) => {
+  try { return localStorage.getItem(key) ?? fallback; } catch (e) { return fallback; }
+};
+
 /* ── APP STATE ─────────────────────────────────────── */
 const AppState = {
-  xp: parseInt(localStorage.getItem('ankommer_xp') || '0'),
+  xp: parseInt(safeGetItem('ankommer_xp', '0')),
   completedTasks: safeGetJSON('ankommer_tasks', {}),
   currentChapter: null,
-  wizardDone: !!localStorage.getItem('ankommer_wizard'),
+  wizardDone: !!safeGetItem('ankommer_wizard'),
   profile: safeGetJSON('ankommer_profile', {}),
 };
 
@@ -293,7 +312,7 @@ const Atmosphere = {
 ══════════════════════════════════════════════════════ */
 const ThemeManager = {
   init: () => {
-    const saved = localStorage.getItem('ankommer_theme') ||
+    const saved = safeGetItem('ankommer_theme') ||
       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     ThemeManager.set(saved);
 
@@ -1086,7 +1105,7 @@ const PWAInstall = (() => {
   };
 
   const showBanner = () => {
-    if (localStorage.getItem('ankommer_pwa_dismissed') === 'true') return;
+    if (safeGetItem('ankommer_pwa_dismissed') === 'true') return;
     if (!deferredPrompt) return;
     const banner = document.getElementById('pwa-install-banner');
     if (banner) banner.classList.remove('hidden');
@@ -1422,7 +1441,7 @@ const StatsTracker = (() => {
   };
 
   /* Read from localStorage cache (no network call needed for reads) */
-  const localGet  = (key) => parseInt(localStorage.getItem(`ankommer_cnt_${key}`)) || 0;
+  const localGet  = (key) => parseInt(safeGetItem(`ankommer_cnt_${key}`)) || 0;
   const localHit  = (key) => {
     const v = localGet(key) + 1;
     safeSetItem(`ankommer_cnt_${key}`, v);
@@ -1842,7 +1861,7 @@ const RoadmapStrip = (() => {
   };
 
   const show = (profile, lang) => {
-    if (localStorage.getItem(DISMISS_KEY) === 'true') return;
+    if (safeGetItem(DISMISS_KEY) === 'true') return;
     const strip = document.getElementById('my-roadmap-strip');
     if (!strip) return;
 
@@ -1880,8 +1899,8 @@ const RoadmapStrip = (() => {
 
   // Re-render with current language (called on lang switch)
   const refresh = () => {
-    if (localStorage.getItem(DISMISS_KEY) === 'true') return;
-    const saved = localStorage.getItem(STORAGE_KEY);
+    if (safeGetItem(DISMISS_KEY) === 'true') return;
+    const saved = safeGetItem(STORAGE_KEY);
     if (saved) {
       try { show(JSON.parse(saved), window.currentLang); } catch(e) {}
     }
@@ -1890,12 +1909,12 @@ const RoadmapStrip = (() => {
   const init = () => {
     document.getElementById('roadmap-dismiss-btn')?.addEventListener('click', hide);
     document.getElementById('roadmap-edit-btn')?.addEventListener('click', () => {
-      localStorage.removeItem(DISMISS_KEY);
+      try { localStorage.removeItem(DISMISS_KEY); } catch(_){}
       Wizard.open();
     });
 
     // Show if wizard already completed in a previous session
-    const saved = localStorage.getItem(STORAGE_KEY);
+    const saved = safeGetItem(STORAGE_KEY);
     if (saved) {
       try { show(JSON.parse(saved)); } catch(e) {}
     }
@@ -2146,7 +2165,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Re-entry prompt: welcome back returning users ──
   const _VISIT_KEY  = 'ankommer_last_visit';
   const _VISIT_NOW  = Date.now();
-  const _lastVisit  = parseInt(localStorage.getItem(_VISIT_KEY) || '0', 10);
+  const _lastVisit  = parseInt(safeGetItem(_VISIT_KEY, '0'), 10);
   safeSetItem(_VISIT_KEY, _VISIT_NOW);
 
   // Show nudge if: returning after 2+ days AND has started the journey

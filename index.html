@@ -8,10 +8,10 @@
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://movingtodenmark.org/" />
+  <meta property="og:url"         content="https://alialmokdad.github.io/ankommer/" />
   <meta property="og:title"       content="Moving to Denmark — The Complete Guide | ANKOMMER" />
   <meta property="og:description" content="Everything you need to move to Denmark — CPR number, housing, banking, healthcare, work permits and more. Free chapter-by-chapter guide in 10 languages." />
-  <meta property="og:image"       content="https://movingtodenmark.org/og-image.png" />
+  <meta property="og:image"       content="https://alialmokdad.github.io/ankommer/og-image.png" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:type"   content="image/png" />
@@ -20,15 +20,28 @@
 
   <!-- Twitter / X -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:url"         content="https://movingtodenmark.org/" />
+  <meta name="twitter:url"         content="https://alialmokdad.github.io/ankommer/" />
   <meta name="twitter:title"       content="Moving to Denmark — The Complete Guide | ANKOMMER" />
   <meta name="twitter:description" content="Everything you need to move to Denmark. CPR, housing, banking, healthcare, jobs, culture — 15 deep chapters, 10 languages, free." />
-  <meta name="twitter:image"       content="https://movingtodenmark.org/og-image.png" />
+  <meta name="twitter:image"       content="https://alialmokdad.github.io/ankommer/og-image.png" />
 
   <!-- Additional SEO -->
   <meta name="keywords" content="moving to Denmark, living in Denmark, Denmark expat guide, CPR number Denmark, work in Denmark, Denmark immigration, Denmark visa, NemKonto, MitID, Danish life, relocate Denmark" />
   <meta name="robots"   content="index, follow" />
-  <link rel="canonical" href="https://movingtodenmark.org/" />
+  <link rel="canonical" href="https://alialmokdad.github.io/ankommer/" />
+
+  <!-- All 10 supported languages — same URL, language picked client-side -->
+  <link rel="alternate" hreflang="en" href="https://alialmokdad.github.io/ankommer/" />
+  <link rel="alternate" hreflang="fr" href="https://alialmokdad.github.io/ankommer/?lang=fr" />
+  <link rel="alternate" hreflang="ar" href="https://alialmokdad.github.io/ankommer/?lang=ar" />
+  <link rel="alternate" hreflang="es" href="https://alialmokdad.github.io/ankommer/?lang=es" />
+  <link rel="alternate" hreflang="da" href="https://alialmokdad.github.io/ankommer/?lang=da" />
+  <link rel="alternate" hreflang="de" href="https://alialmokdad.github.io/ankommer/?lang=de" />
+  <link rel="alternate" hreflang="uk" href="https://alialmokdad.github.io/ankommer/?lang=uk" />
+  <link rel="alternate" hreflang="pl" href="https://alialmokdad.github.io/ankommer/?lang=pl" />
+  <link rel="alternate" hreflang="ur" href="https://alialmokdad.github.io/ankommer/?lang=ur" />
+  <link rel="alternate" hreflang="fa" href="https://alialmokdad.github.io/ankommer/?lang=fa" />
+  <link rel="alternate" hreflang="x-default" href="https://alialmokdad.github.io/ankommer/" />
 
   <!-- PWA -->
   <link rel="manifest" href="manifest.json" />
@@ -38,9 +51,35 @@
   <meta name="apple-mobile-web-app-title" content="ANKOMMER" />
   <meta name="theme-color" content="#C60C30" />
   <script>
+    // Register service worker and prompt user when a new version is ready.
+    // Avoids the silent v→v+1 swap that can leave a tab running stale JS
+    // while the SW already controls newer fetch responses.
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').catch(() => {});
+        navigator.serviceWorker.register('/sw.js').then(reg => {
+          // A waiting worker means a new version downloaded but didn't activate
+          const promptUpdate = (waiting) => {
+            if (!waiting) return;
+            // Reload once the new SW takes control to swap to fresh assets
+            let reloaded = false;
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+              if (reloaded) return;
+              reloaded = true;
+              window.location.reload();
+            });
+            waiting.postMessage({ type: 'SKIP_WAITING' });
+          };
+          if (reg.waiting) promptUpdate(reg.waiting);
+          reg.addEventListener('updatefound', () => {
+            const sw = reg.installing;
+            if (!sw) return;
+            sw.addEventListener('statechange', () => {
+              if (sw.state === 'installed' && navigator.serviceWorker.controller) {
+                promptUpdate(sw);
+              }
+            });
+          });
+        }).catch(() => {});
       });
     }
   </script>
@@ -52,12 +91,12 @@
     "@type": "WebSite",
     "name": "ANKOMMER",
     "alternateName": "Moving to Denmark Guide",
-    "url": "https://movingtodenmark.org/",
+    "url": "https://alialmokdad.github.io/ankommer/",
     "description": "The world's most complete guide for internationals moving to Denmark. 15 chapters covering CPR, housing, banking, healthcare, employment, culture and more.",
     "inLanguage": ["en", "fr", "ar", "es", "da", "de", "uk", "pl", "ur", "fa"],
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://movingtodenmark.org/#search?q={search_term_string}",
+      "target": "https://alialmokdad.github.io/ankommer/#search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
@@ -865,11 +904,12 @@
 </div>
 
 <!-- ═══════════════════════════════════ SCRIPTS ═══════════════════════════════════ -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="js/data.js"></script>
-<script src="js/bjorn.js"></script>
-<script src="js/calculators.js"></script>
-<script src="js/apis.js"></script>
-<script src="js/app.js"></script>
+<!-- All scripts use defer: parsed in parallel with HTML, executed in order -->
+<!-- after DOMContentLoaded. Eliminates parser-blocking and reduces TTI. -->
+<script defer src="js/data.js"></script>
+<script defer src="js/bjorn.js"></script>
+<script defer src="js/calculators.js"></script>
+<script defer src="js/apis.js"></script>
+<script defer src="js/app.js"></script>
 </body>
 </html>

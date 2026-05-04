@@ -6,30 +6,50 @@
 const Calculators = (() => {
 
   /* ══════════════════════════════════════════════════════
-     1. SALARY CALCULATOR — Real Danish Tax Logic
+     1. SALARY CALCULATOR — Real Danish Tax Logic (2025 rates)
+     ──────────────────────────────────────────────────────
+     Source: Skattestyrelsen 2025 satser
+     - AM-bidrag 8% (deducted first from gross)
+     - Bundskat 12.01% (down from 12.06% in 2024)
+     - Topskat 15% above 611,800 DKK/yr personal income (after AM)
+     - Personfradrag 51,600 DKK/yr — applied as a TAX CREDIT against
+       (bundskat + kommuneskat), NOT as a base deduction
+     - Skatteloft (combined cap, excl AM/church): 52.07%
   ══════════════════════════════════════════════════════ */
   const calcSalary = (gross, kommuneSkatPct) => {
     const grossM = parseFloat(gross);
     if (!grossM || grossM <= 0) return null;
 
-    // ── Tax logic (2025 rates) ──
+    // 1) AM-bidrag (labour-market contribution) comes off the top
     const amBidrag        = grossM * 0.08;
-    const afterAM         = grossM - amBidrag;
-    const personfradragM  = 49700 / 12;          // Monthly personal allowance
-    const taxableBase     = Math.max(0, afterAM - personfradragM);
+    const afterAM         = grossM - amBidrag;     // "personlig indkomst"
 
-    // Municipal + state (bundskat) combined
-    const bundskat        = 0.1206;
+    // 2) Base tax = (bundskat + kommuneskat) × afterAM,
+    //    minus the personfradrag tax credit at the same rate.
+    //    Personfradrag is a CREDIT, not a base deduction — it doesn't
+    //    reduce the topskat-eligible base.
+    const bundskat        = 0.1201;                // 2025 bundskat rate
     const kommuneSkat     = parseFloat(kommuneSkatPct) / 100;
     const baseTaxRate     = bundskat + kommuneSkat;
-    const baseTax         = taxableBase * baseTaxRate;
+    const personfradragM  = 51600 / 12;            // 2025 monthly personal allowance
+    const personfradragCredit = personfradragM * baseTaxRate;
+    const baseTaxGross    = afterAM * baseTaxRate;
+    const baseTax         = Math.max(0, baseTaxGross - personfradragCredit);
 
-    // Top tax: 15% on afterAM above 49,075 DKK/month (~588,900/yr)
-    const topTaxThreshold = 588900 / 12;
+    // 3) Topskat: 15% on the slice of afterAM above the 2025 threshold
+    //    (611,800 DKK/yr ÷ 12 ≈ 50,983/mo). Topskat ignores personfradrag.
+    const topTaxThreshold = 611800 / 12;
     const topTax          = Math.max(0, afterAM - topTaxThreshold) * 0.15;
 
-    // Church tax (optional, avg 0.7%) — included in kommuneskat above
-    const totalTax        = amBidrag + baseTax + topTax;
+    // 4) Skatteloft (tax ceiling) — combined marginal rate (excl. AM and
+    //    church tax) is capped at 52.07% in 2025. If kommuneskat is high,
+    //    cap topskat so total marginal stays <= 52.07%.
+    const SKATTELOFT      = 0.5207;
+    const marginalCap     = afterAM * SKATTELOFT;
+    const cappedBaseTax   = Math.min(baseTax, marginalCap);
+    const cappedTopTax    = Math.min(topTax, Math.max(0, marginalCap - cappedBaseTax));
+
+    const totalTax        = amBidrag + cappedBaseTax + cappedTopTax;
     const netMonthly      = grossM - totalTax;
 
     // Annual
@@ -41,8 +61,8 @@ const Calculators = (() => {
       gross:          Math.round(grossM),
       amBidrag:       Math.round(amBidrag),
       afterAM:        Math.round(afterAM),
-      baseTax:        Math.round(baseTax),
-      topTax:         Math.round(topTax),
+      baseTax:        Math.round(cappedBaseTax),
+      topTax:         Math.round(cappedTopTax),
       totalTax:       Math.round(totalTax),
       net:            Math.round(netMonthly),
       netAnnual:      Math.round(netAnnual),
@@ -237,7 +257,10 @@ const Calculators = (() => {
     full:    '🎧 All subscriptions'
   };
 
-  const FIXED_EXTRAS = 700; // utilities estimate (electricity, heating — varies if not in rent)
+  // Realistic 2025 monthly utilities for a single person in DK:
+  // electricity ~600, district heat ~700, water ~150, internet ~250 ≈ 1700.
+  // Old default of 700 understated the total budget by ~1000 DKK/mo.
+  const FIXED_EXTRAS = 1700;
 
   const initCostOfLiving = () => {
     let selectedCity = 'cph';
@@ -429,6 +452,16 @@ const Calculators = (() => {
     refugee:          { permRes: 5,  citizenship: 9,  permLabel:'Permanent Residence Permit', note:'Refugee and protection status holders may have a faster path to permanent residence.' },
   };
 
+  // Leap-year safe: arrival 2020-02-29 + 5 years should produce 2025-02-28,
+  // not 2025-03-01 (which native setFullYear rolls over to).
+  const addYears = (date, years) => {
+    const d = new Date(date);
+    const targetMonth = d.getMonth();
+    d.setFullYear(d.getFullYear() + years);
+    if (d.getMonth() !== targetMonth) d.setDate(0); // last day of prev month
+    return d;
+  };
+
   const initResidencyCalc = () => {
     const btn = document.getElementById('res-calc-btn');
     if (!btn) return;
@@ -443,20 +476,17 @@ const Calculators = (() => {
         return;
       }
 
-      const arrival  = new Date(dateInput.value);
+      // Parse YYYY-MM-DD as local-midnight (not UTC), so users in negative-UTC
+      // timezones don't see their arrival shift to the previous calendar day.
+      const arrival  = new Date(dateInput.value + 'T00:00:00');
       const now      = new Date();
       const permit   = permitSel?.value || 'work_permit';
       const rules    = RESIDENCY_RULES[permit] || RESIDENCY_RULES.work_permit;
       const yearsHere = (now - arrival) / (1000 * 60 * 60 * 24 * 365.25);
 
-      const permResDate   = new Date(arrival);
-      permResDate.setFullYear(permResDate.getFullYear() + rules.permRes);
-
-      const citizenDate   = new Date(arrival);
-      citizenDate.setFullYear(citizenDate.getFullYear() + rules.citizenship);
-
-      const fastTrackDate = rules.fastTrack ? new Date(arrival) : null;
-      if (fastTrackDate) fastTrackDate.setFullYear(fastTrackDate.getFullYear() + rules.fastTrack);
+      const permResDate   = addYears(arrival, rules.permRes);
+      const citizenDate   = addYears(arrival, rules.citizenship);
+      const fastTrackDate = rules.fastTrack ? addYears(arrival, rules.fastTrack) : null;
 
       const milestones = [
         {
@@ -484,7 +514,7 @@ const Calculators = (() => {
           date: citizenDate,
           reached: now >= citizenDate,
           icon: '🇩🇰',
-          note: `Requires language test (B1), citizenship test, and self-sufficiency`
+          note: `Requires Prøve i Dansk 3 (≈B2), citizenship test, self-sufficiency, and continuous residence (8 of last 9 years)`
         }
       ];
 
