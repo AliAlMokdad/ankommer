@@ -772,6 +772,12 @@
         <a href="#bjorn" onclick="event.preventDefault(); openBjorn();" data-i18n="footer_form">Navigate a form</a>
       </div>
     </div>
+    <div class="footer-progress-row" role="region" aria-label="Save your progress">
+      <span class="footer-progress-label" data-i18n="footer_progress_label">Switching device or worried about losing your progress?</span>
+      <button type="button" class="footer-progress-btn" id="progress-export-btn" data-i18n="footer_progress_export">⬇ Download my plan</button>
+      <button type="button" class="footer-progress-btn" id="progress-import-btn" data-i18n="footer_progress_import">⬆ Restore from file</button>
+      <input type="file" id="progress-import-file" accept="application/json,.json" hidden />
+    </div>
     <div class="footer-bottom">
       <p data-i18n="footer_made">Made with ❤️ for everyone who ever arrived somewhere new.</p>
       <p class="footer-legal" data-i18n="footer_legal">ANKOMMER is an independent guide. Always verify with official Danish authorities.</p>

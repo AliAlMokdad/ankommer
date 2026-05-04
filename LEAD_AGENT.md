@@ -171,4 +171,12 @@ Don't move on without all six.
 
 ---
 
-*Maintained by the lead agent for the lead agent. Updated 2026-05-04 (round 4).*
+## Strategic backlog
+
+The next 6–10 high-impact moves for the site live in **VISION.md** in this folder. That doc was produced by a multi-perspective summit (newcomer, product, engineering, local Dane, lead agent) and ranks ideas by impact × cost. Every idea there is verified `$0 cost` per the no-money rule.
+
+When a session starts and the user asks "what's next?" — read VISION.md, pick the highest-ranked unshipped item, scope it to the available time, write a TodoWrite plan, and execute under the priority order above.
+
+---
+
+*Maintained by the lead agent for the lead agent. Updated 2026-05-04 (round 5).*

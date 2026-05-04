@@ -99,6 +99,133 @@ const safeGetItem = (key, fallback = null) => {
   try { return localStorage.getItem(key) ?? fallback; } catch (e) { return fallback; }
 };
 
+/* ══════════════════════════════════════════════════════
+   PROGRESS EXPORT / IMPORT
+   ──────────────────────────────────────────────────────
+   localStorage gets wiped when users clear their browser, switch
+   devices, or use private mode. This lets them download a JSON
+   file ("ankommer-plan.json") and re-import it elsewhere.
+   No backend, no account, no cost.
+══════════════════════════════════════════════════════ */
+const PROGRESS_KEYS = [
+  'ankommer_lang', 'ankommer_theme', 'ankommer_xp',
+  'ankommer_tasks', 'ankommer_wizard', 'ankommer_profile',
+  'ankommer_roadmap_profile', 'ankommer_roadmap_dismissed',
+  'ankommer_pwa_dismissed', 'ankommer_last_visit'
+];
+
+const ProgressIO = {
+  // Build a portable snapshot of every ankommer_* localStorage entry
+  exportAll: () => {
+    const data = {};
+    PROGRESS_KEYS.forEach(k => {
+      const v = safeGetItem(k);
+      if (v !== null && v !== undefined) data[k] = v;
+    });
+    return {
+      ankommer_export: 1,                       // file format version
+      exportedAt: new Date().toISOString(),
+      lang: window.currentLang || 'en',
+      data
+    };
+  },
+
+  // Trigger a browser download of the snapshot
+  download: () => {
+    const payload = ProgressIO.exportAll();
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href     = url;
+    a.download = `ankommer-plan-${new Date().toISOString().slice(0,10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  },
+
+  // Read a user-supplied file and merge it into localStorage.
+  // Keys that already have a non-empty value are NOT overwritten unless
+  // `overwrite` is true — protects users from accidental data loss when
+  // they upload an older export onto a more recent state.
+  importFile: (file, { overwrite = false } = {}) => new Promise((resolve, reject) => {
+    if (!file) return reject(new Error('No file provided'));
+    if (file.size > 1_000_000) return reject(new Error('File too large (max 1 MB)'));
+    const reader = new FileReader();
+    reader.onerror = () => reject(new Error('Could not read file'));
+    reader.onload = () => {
+      try {
+        const json = JSON.parse(reader.result);
+        if (!json || json.ankommer_export !== 1 || !json.data) {
+          return reject(new Error('Not a valid ANKOMMER export'));
+        }
+        let restored = 0, skipped = 0;
+        Object.entries(json.data).forEach(([k, v]) => {
+          if (!PROGRESS_KEYS.includes(k)) return;            // ignore unknown keys
+          if (typeof v !== 'string') return;                  // safety: must be string
+          const existing = safeGetItem(k);
+          if (existing && !overwrite) { skipped++; return; }
+          safeSetItem(k, v);
+          restored++;
+        });
+        resolve({ restored, skipped, exportedAt: json.exportedAt });
+      } catch (e) {
+        reject(new Error('File is not valid JSON'));
+      }
+    };
+    reader.readAsText(file);
+  })
+};
+
+// Expose for inline UI handlers and DevTools
+window.ProgressIO = ProgressIO;
+
+// UI wiring for the footer Save / Restore buttons
+const initProgressIO = () => {
+  const exportBtn = document.getElementById('progress-export-btn');
+  const importBtn = document.getElementById('progress-import-btn');
+  const fileInput = document.getElementById('progress-import-file');
+
+  exportBtn?.addEventListener('click', () => {
+    try {
+      ProgressIO.download();
+      // Cheap visible confirmation — no toast component needed
+      const orig = exportBtn.textContent;
+      exportBtn.textContent = '✓ ' + (i18n.t('footer_progress_done') || 'Saved');
+      setTimeout(() => { exportBtn.textContent = orig; }, 2000);
+    } catch (e) {
+      console.warn('Export failed:', e);
+      alert((i18n.t('footer_progress_export_err') || 'Could not save your plan') + ': ' + e.message);
+    }
+  });
+
+  importBtn?.addEventListener('click', () => fileInput?.click());
+
+  fileInput?.addEventListener('change', async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    try {
+      // Ask before overwriting an active session
+      const hasState = !!safeGetItem('ankommer_xp') || !!safeGetItem('ankommer_tasks');
+      const overwrite = hasState
+        ? confirm(i18n.t('footer_progress_confirm') ||
+                  'Restoring will overwrite your current plan. Continue?')
+        : true;
+      if (!overwrite) { e.target.value = ''; return; }
+
+      const result = await ProgressIO.importFile(file, { overwrite: true });
+      const msg = (i18n.t('footer_progress_restored') || 'Restored {n} items')
+                    .replace('{n}', result.restored);
+      alert(msg);
+      window.location.reload();
+    } catch (err) {
+      console.warn('Import failed:', err);
+      alert((i18n.t('footer_progress_import_err') || 'Could not read that file') + ': ' + err.message);
+      e.target.value = '';
+    }
+  });
+};
+
 /* ── APP STATE ─────────────────────────────────────── */
 const AppState = {
   xp: parseInt(safeGetItem('ankommer_xp', '0')),
@@ -2136,6 +2263,7 @@ document.addEventListener('DOMContentLoaded', () => {
   _try('initBeginBtn',     () => initBeginBtn());
   _try('initWizardClose',  () => initWizardClose());
   _try('initMobileSidebar',() => initMobileSidebar());
+  _try('initProgressIO',   () => initProgressIO());
 
   // Content
   _try('updateDailyFeed',       () => updateDailyFeed());
