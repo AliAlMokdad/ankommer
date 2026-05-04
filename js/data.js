@@ -2514,13 +2514,13 @@ const CHAPTERS = [
 <p>The programme is managed by your municipality. Contact the <strong>International Community</strong> (ICS) office or your municipality's integration department to enrol.</p>
 <p><strong>Language levels and what they unlock:</strong></p>
 <table class="info-table">
-  <tr><th>Level</th><th>Test</th><th>Required for</th></tr>
-  <tr><td>A1</td><td>PD1</td><td>Minimum for permanent residency application</td></tr>
-  <tr><td>A2</td><td>PD2</td><td>—</td></tr>
-  <tr><td>B1</td><td>PD3 / Studieprøven</td><td>Citizenship requirement</td></tr>
-  <tr><td>B2/C1</td><td>Studieprøven</td><td>University entry in Danish</td></tr>
+  <tr><th>CEFR level</th><th>Danish test</th><th>Required for</th></tr>
+  <tr><td>A1</td><td>PD1 (Prøve i Dansk 1)</td><td>—</td></tr>
+  <tr><td>A2</td><td>PD2 (Prøve i Dansk 2)</td><td>Permanent residency</td></tr>
+  <tr><td>B2</td><td>PD3 (Prøve i Dansk 3)</td><td>Citizenship + indfødsretsprøven</td></tr>
+  <tr><td>C1</td><td>Studieprøven</td><td>University admission to Danish-language programmes</td></tr>
 </table>
-<p>Timeline reality: with 2–3 hours of class per day, most people reach A2 in 6–9 months and B1 in 18–24 months. It requires regular study outside class — passive attendance is not enough.</p>` }
+<p>Timeline reality: with 2–3 hours of class per day, most people reach A2 in 6–9 months, B2 in 2–3 years. It requires regular study outside class — passive attendance is not enough.</p>` }
       },
       {
         icon: "🔊",
