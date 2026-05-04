@@ -920,6 +920,29 @@ const renderChapter = (index) => {
     </div>
   ` : '';
 
+  // Honest fallback notice: when content for the active language hasn't been
+  // translated yet, the chapter falls back to English. Tell the user instead
+  // of silently pretending it's their language. (Tier-2 fix: silent fallback.)
+  const T_NOTICE = {
+    fr: "Ce chapitre n'est pas encore traduit en français — affiché en anglais.",
+    ar: "لم يُترجم هذا الفصل إلى العربية بعد — يُعرض بالإنجليزية.",
+    es: "Este capítulo aún no está traducido al español — se muestra en inglés.",
+    da: "Dette kapitel er ikke oversat til dansk endnu — vist på engelsk.",
+    de: "Dieses Kapitel ist noch nicht ins Deutsche übersetzt — auf Englisch angezeigt.",
+    uk: "Цей розділ ще не перекладено українською — відображається англійською.",
+    pl: "Ten rozdział nie jest jeszcze przetłumaczony na polski — wyświetlany po angielsku.",
+    ur: "یہ باب ابھی اردو میں ترجمہ نہیں ہوا — انگریزی میں دکھایا گیا۔",
+    fa: "این فصل هنوز به فارسی ترجمه نشده — به انگلیسی نمایش داده می‌شود."
+  };
+  const titleIsTranslated = !!ch.title?.[lang] && lang !== 'en';
+  const fallbackNotice = (lang !== 'en' && !titleIsTranslated) ? `
+    <div style="margin:0 0 16px;padding:10px 14px;border-radius:10px;
+                background:rgba(46,109,164,0.08);border-left:3px solid var(--nordic-blue,#2E6DA4);
+                font-size:0.85rem;color:var(--text-muted);">
+      🌐 ${T_NOTICE[lang] || ''}
+    </div>
+  ` : '';
+
   const html = `
     <div class="chapter-page" style="--ch-accent:${ch.color}">
       <div class="chapter-header">
@@ -933,6 +956,7 @@ const renderChapter = (index) => {
           ${pct === 100 ? `<span class="chapter-meta-tag" style="background:rgba(106,158,106,0.15);color:var(--sage)">${t_('complete', lang)}</span>` : ''}
         </div>
       </div>
+      ${fallbackNotice}
       ${bjornTip}
       ${sectionsHtml}
       ${comingSoon}
