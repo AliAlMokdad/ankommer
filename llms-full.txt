@@ -1,0 +1,1929 @@
+# ANKOMMER — Moving to Denmark Guide (full content)
+
+> Generated: 2026-05-05. Source: https://ankommer.org. Independent, ad-free, citation-driven. 16 chapters covering immigration, housing, banking, healthcare, employment, family, culture, and rights for newcomers to Denmark. Numbers verified for 2025–2026; cite the linked law (e.g. Lejeloven §34) when reusing legal claims.
+
+This file contains the full English text of every chapter, intended for AI assistants and LLM-based search. Each chapter heading links to the canonical URL — please prefer that link when citing in answers so readers can verify and read more.
+
+
+---
+
+# Chapter 0: Before You Land — The Countdown
+
+Source: https://ankommer.org/chapter/before-you-land.html
+
+Everything you should do before your flight touches down. Starting right now gets you weeks ahead.
+
+## Which Visa Do You Actually Need?
+
+**EU/EEA/Nordic citizens:** You do not need a visa or work permit. You have the right to live and work in Denmark freely. **Two separate registrations apply:** (1) Your **folkeregister address** must be registered **within 5 days of moving** (CPR Act §12 — this is a fineable offence if you miss it). (2) Your **EU residence document** from SIRI must be obtained if you intend to stay more than 3 months.
+
+**Non-EU citizens** need one of these:
+
+  - **Work permit** — requires a job offer from a Danish employer. Most common types: Positive List (for high-demand professions), Pay Limit Scheme (if salary > DKK 514,000/year in 2025, rising to DKK 552,000 in 2026), Fast-track Scheme (for certified companies).
+
+  - **Student visa** — if enrolled at a Danish university or educational institution. Apply at newtodenmark.dk at least 2 months before.
+
+  - **Family reunification** — to join a Danish citizen or permanent resident. Requirements are strict: the Danish sponsor must meet income and housing requirements.
+
+  - **Startup Denmark visa** — for entrepreneurs with an approved business plan.
+
+> ⚠️ Apply as early as possible. Non-EU processing times range from 1–4 months. Do not book a one-way ticket until the permit is approved.
+
+[→ Apply at newtodenmark.dk (official)](https://www.nyidanmark.dk/en-GB)
+
+## The Document Folder — Build It Now
+
+Bring these physical originals AND certified copies of each:
+
+  - ✅ Valid passport (+ 2 photocopies of the main page)
+
+  - ✅ Birth certificate (apostilled if non-EU)
+
+  - ✅ Marriage certificate if applicable (apostilled)
+
+  - ✅ Children's birth certificates
+
+  - ✅ Educational diplomas / degree certificates
+
+  - ✅ Employment contract or university enrollment letter
+
+  - ✅ 2 passport-size photos
+
+  - ✅ Proof of accommodation (signed lease or letter from host)
+
+  - ✅ Health insurance documentation (for the gap before your yellow card)
+
+**Apostille** = an official stamp that makes foreign documents legally recognised internationally. Get it from your home country's designated authority before you leave.
+
+## Finding Housing Before You Arrive
+
+The Danish rental market is competitive — especially Copenhagen. Starting your search before you land gives you a critical advantage.
+
+**Best platforms:**
+
+  - [BoligPortal.dk](https://www.boligportal.dk) — largest private rental platform
+
+  - [Lejebolig.dk](https://www.lejebolig.dk) — good selection, English-friendly
+
+  - Facebook groups: "Housing in Copenhagen for Expats", "Aarhus Housing International"
+
+  - [DBA.dk](https://www.dba.dk) — used goods + private rentals
+
+**Red flags in listings:**
+
+  - 🚩 Landlord is abroad and can't meet in person
+
+  - 🚩 Price significantly below market (Copenhagen 1-bed avg: 8,500–12,000 DKK)
+
+  - 🚩 Asks for payment before signing a lease
+
+  - 🚩 No photos, or photos stolen from real estate sites
+
+> ⚠️ Deposit in Denmark is capped at 3 months' rent by law. Anyone asking for more is breaking the law.
+
+## Banking & Money Before You Land
+
+You can set up international accounts before arriving that will tide you over until you get a Danish bank account (which requires a CPR number).
+
+**Recommended pre-arrival accounts:**
+
+  - **Wise (formerly TransferWise)** — best for international transfers, multi-currency card, works immediately
+
+  - **Revolut** — excellent for spending abroad, free tier available
+
+  - **Lunar** — Danish digital bank that can sometimes be opened without a CPR number (check current eligibility)
+
+Bring enough cash or accessible funds for at least **2 months of expenses** while you get established. Budget at minimum DKK 30,000 as a buffer.
+
+## Start Learning Danish Now
+
+Danish pronunciation is genuinely one of the hardest for foreigners — the sooner you start, the better. The honest truth: everyone in Denmark speaks excellent English. But learning Danish opens social doors that stay closed to English speakers.
+
+**Best pre-arrival resources:**
+
+  - 🎧 **Glossika** — best for pronunciation, spaced repetition
+
+  - 📱 **Babbel** — structured lessons, better than Duolingo for Danish
+
+  - 🎬 **YouTube: "Learn Danish with DanishClass101"**
+
+  - 🎙️ **Podcast: "Slow Danish"** — real speech slowed down
+
+Learn these 10 words first: *tak (thank you), undskyld (sorry/excuse me), hej (hello), hejhej (goodbye), ja/nej (yes/no), tak for mad (thanks for the food), skål (cheers), hvad (what), og (and), er (is/are)*
+
+
+---
+
+# Chapter 1: First 72 Hours — The Critical Window
+
+Source: https://ankommer.org/chapter/first-72-hours.html
+
+These are the most important tasks of your entire life in Denmark. Do them in order. Do not skip any.
+
+## Step 1: Register Your Address (Folkeregister)
+
+This is **the very first thing**. Everything else — your CPR number, your MitID, your doctor, your bank account, your tax card — all of it depends on having a registered address.
+
+> ⚠️ ⏰ **Legal deadline: within 5 days of moving** (CPR Act §12). Late registration is a fineable offence. Book your Borgerservice appointment as soon as you have keys.
+
+**How to do it:**
+
+  - 1.  Go to [borger.dk](https://www.borger.dk) and search "Flytning til Danmark" OR visit your local Borgerservice (Citizens Service) office in person.
+
+  - 2.  You need: your passport + proof of where you're living (signed lease, sublease agreement, or a host letter).
+
+  - 3.  If staying with a friend temporarily: they must write and sign a letter confirming you're living there. Template available at borger.dk.
+
+> ⚠️ Do NOT skip this step thinking you'll do it "later." Without a registered address, you cannot get your CPR number.
+
+## Step 2: Get Your CPR Number
+
+Your CPR number (Civil Personal Registration number) is **the single most important number in your Danish life.** It is required for absolutely everything: doctor visits, tax registration, banking, library cards, gym membership, phone contracts — everything.
+
+**Format:** DDMMYY-XXXX (your birthdate + 4 digits)
+
+**EU citizens:** Register at International Citizen Service (ICS). Often same-day if you have all documents.
+
+**Non-EU citizens:** Usually issued automatically after your residence permit is approved. Can take 2–8 weeks.
+
+**ICS offices (main locations):**
+
+  - Copenhagen: Gyldenløvesgade 11, 1600 Copenhagen V
+
+  - Aarhus: Hack Kampmanns Plads 2
+
+  - Odense: Flakhaven 2
+
+  - Aalborg: Godthåbsgade 8
+
+[→ Book ICS appointment online](https://www.nyidanmark.dk/en-GB/You-want-to-apply/Residence-and-work/International-Citizen-Service)
+
+## Step 3: Activate MitID — Your Digital Identity
+
+MitID is Denmark's national digital identity system. Think of it as the master key to your entire digital life in Denmark. Without it, you cannot access: borger.dk, SKAT (tax), e-Boks (your official mail), your bank online, Sundhed.dk, and dozens more services.
+
+**Get MitID at:** [mitid.dk](https://www.mitid.dk) or in person at your bank or Borgerservice.
+
+The MitID app goes on your smartphone and generates 6-digit codes for login. Keep your phone safe — this IS your identity.
+
+## Step 4: Check e-Boks Every Week
+
+e-Boks is Denmark's official digital mailbox. Every letter from SKAT, Udbetaling Danmark, your municipality, your bank, and the government goes here. Not to your physical mailbox. Not to your email. Here.
+
+> ⚠️ **This is critical:** People have missed tax deadlines, permit renewal notices, and benefit payment confirmations because they didn't check e-Boks. Set a weekly calendar reminder right now.
+
+Download the e-Boks app. Enable push notifications. Set email forwarding in settings so you get an email when something new arrives.
+
+[→ e-Boks website](https://www.e-boks.com/dk/en/)
+
+## Step 5: Open a Danish Bank Account
+
+You need a Danish bank account for your NemKonto (the account the government sends you money — tax refunds, benefits, etc.). Most banks require a CPR number.
+
+
+**Bank** | **English?** | **Req. CPR?** | **Best for** |
+
+**Lunar** | ✅ 100% | Sometimes no | Newcomers, digital-first |
+
+**Nordea** | ✅ Good | Yes | International transfers |
+
+**Danske Bank** | ✅ Good | Yes | Full service |
+
+**Jyske Bank** | Partial | Yes | Regional, personal service |
+
+After opening, designate it as your **NemKonto** at [nemkonto.dk](https://www.nemkonto.dk). This is mandatory.
+
+## Step 6: The Essential Danish Apps
+
+💸MobilePayDenmark's payment app. You NEED this for splitting bills, paying at stalls, etc.🇬🇧 English
+  📬e-BoksYour official Danish mailbox. Check weekly.🇬🇧 English
+  🚌RejsekortPublic transport card app. Works across all of Denmark.🇬🇧 English
+  🚂DSBDanish national rail. Book train tickets, see schedules.🇬🇧 English
+  🏥Min LægeBook GP appointments, get prescriptions renewed.Limited EN
+  💊Sundhed.dkYour health records, hospital referrals, find a GP.🇬🇧 English
+  💰SkatDanish tax authority. View your tax card, see deductions.🇬🇧 English
+  🛒Too Good To GoSave money on unsold food. Danes love this app.🇬🇧 English
+
+## Emergency Numbers — Save These Now
+
+**Number** | **For** | **Note** |
+
+**112** | Police, Fire, Ambulance | Life-threatening emergencies ONLY |
+
+**1813** | Medical help (non-emergency) | Urgent but not life-threatening. 24/7. Copenhagen region. |
+
+**114** | Police non-emergency | For crimes, lost items, reports |
+
+**70 11 31 31** | Dental emergency | Out-of-hours dental pain |
+
+**80 19 13 99** | Poison Control | Free, 24/7 |
+
+**70 20 12 60** | Crisis Line (Livslinien) | Mental health crisis support |
+
+> ⚠️ **Key difference:** In Denmark, 1813 is the number to call for medical advice and non-emergency urgent care. Calling 112 for non-emergencies is frowned upon and may delay care for others.
+
+
+---
+
+# Chapter 2: Papers & Legal Identity — Making It Official
+
+Source: https://ankommer.org/chapter/papers-and-legal-identity.html
+
+Denmark's bureaucracy is thorough. Understanding the system turns weeks of confusion into days of clarity.
+
+## Residence Permit Types
+
+Your residence permit determines your rights in Denmark. Here's a clear overview:
+
+
+**Permit Type** | **For** | **Work rights** | **Duration** |
+
+**EU Registration** | EU/EEA citizens | Unlimited | 5 years (then permanent) |
+
+**Positive List** | High-demand professions | Full | Up to 4 years |
+
+**Pay Limit Scheme** | Salary > DKK 514,000/yr (2025) · DKK 552,000/yr from 2026 | Full | Up to 4 years |
+
+**Student Permit** | Enrolled students | 15 hrs/week | Duration of study |
+
+**Family Reunification** | Joining family member | Full (usually) | 2 years initially |
+
+**Refugee Status** | Asylum seekers | Varies | Varies |
+
+## Path to Permanent Residency
+
+The general rule: **8 years of continuous legal residence** in Denmark. However, there are fast-track options:
+
+  - **4 years** if you pass a special active contribution assessment (points-based)
+
+  - **5 years** for EU citizens with continuous residence
+
+  - You must also: have had full-time employment for at least **3.5 of the last 4 years** (or 4 of last 4.5 years for the 4-year fast-track route — Udlændingeloven §11), pass **Prøve i Dansk 2 (PD2 ≈ B1)**, have no criminal record, and be self-supporting (no public assistance in the last 4 years).
+
+The points system scores you on: Danish language level, employment history, income, community involvement, children's school performance, and citizenship exam score.
+
+[→ Official permanent residency information](https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit)
+
+## Path to Danish Citizenship
+
+One of the more demanding paths in Europe, but worth it:
+
+  - Must have lived in Denmark for **9 years** (or less with accelerators)
+
+  - Pass the **Indfødsretsprøven** (citizenship test) — Danish history, culture, society
+
+  - Pass **Prøve i Dansk 3 (PD3, ≈ B2 level)** — the citizenship-track language test
+
+  - Pass the **indfødsretsprøven** (citizenship knowledge test, ~40 questions on Danish history, society, and democracy)
+
+  - Have lived in Denmark for at least **9 of the last 10 years** with permanent residency
+
+  - Be **self-supporting** with no public-assistance benefits in the last 4 years
+
+  - Have been self-supporting for the last 4.5 of 5 years
+
+  - No criminal convictions
+
+  - No outstanding debt to public authorities
+
+Denmark allows **dual citizenship** since 2015. You do not have to give up your original nationality.
+
+## Danish Tax — How It Actually Works
+
+Yes, Danish taxes are high. Here's the honest picture of what you actually pay:
+
+  - **AM-bidrag (Labour Market Contribution):** 8% off the top of your gross salary. No deductions against this.
+
+  - **Municipal tax (kommuneskat):** Varies by municipality, average ~25%. You pay this on income above your personal allowance.
+
+  - **State tax (bundskat):** 12.01% (2025) on income above the personal allowance (51,600 DKK/year).
+
+  - **Top tax (topskat):** 15% additional on personal income above ~611,800 DKK/year in 2025 (~50,983/month after AM-bidrag). Combined cap (skatteloft) excluding AM and church tax is 52.07%.
+
+  - **Personal allowance (personfradrag):** 51,600 DKK/year (2025) — applied as a tax credit, effectively making this slice tax-free.
+
+What do you get for it? Free healthcare. Free university. 52 weeks parental leave. 5 weeks vacation. Free school. Unemployment benefits if you lose your job. The math is very different from what most people expect.
+
+[→ SKAT — Danish Tax Authority](https://skat.dk/en-us)
+
+## Driving Licence Conversion
+
+If you have an EU/EEA driving licence, you can use it indefinitely in Denmark. No conversion needed.
+
+For non-EU licences:
+
+  - Some countries have exchange agreements with Denmark (USA, Canada, Australia, Japan, South Korea, and others) — check at [sikkertrafik.dk](https://www.sikkertrafik.dk)
+
+  - If your country has an agreement: pay a fee (~350 DKK) and exchange at your local Borgerservice
+
+  - If no agreement: you must complete Danish driving lessons and pass both theory and practical tests. Budget DKK 10,000–20,000 and 6–12 months.
+
+
+---
+
+# Chapter 3: Housing — Where You'll Breathe
+
+Source: https://ankommer.org/chapter/housing.html
+
+The Danish housing market is brutally competitive — especially Copenhagen. But with the right strategy, you'll find your home.
+
+## Read this first — Avoiding rental scams
+
+> ⚠️ **⚠️ Housing scams are the #1 financial threat to newcomers in Denmark.** Fake listings on Facebook Marketplace, fake landlords claiming to be abroad, and demands for deposit "to hold the apartment" before viewing have cost newcomers **10,000 to 50,000 DKK** each.
+
+**Hard rules — never break them:**
+
+  - **Never wire money before** (a) you have signed a lease (Typeformular A) and (b) physically viewed the apartment with the actual landlord present. No exceptions.
+
+  - **Verify the landlord owns the property** via [ois.dk](https://www.ois.dk) (Danish public property register — free) or [tinglysning.dk](https://www.tinglysning.dk) (deed registry).
+
+  - **The CPR-registered owner** on the lease should match what ois.dk shows. If the "landlord" is "abroad and can't meet" — it's a scam.
+
+  - **Pay only via bank transfer to a Danish account in the landlord's name** — never Western Union, MoneyGram, crypto, gift cards, or "deposit to a friend's account."
+
+  - **Reverse-image-search the listing photos** (Google Images / TinEye). Scammers reuse photos.
+
+  - **Maximum legal upfront**: 3 months deposit (depositum) + 3 months prepaid rent (forudbetalt leje) = 6 months. Anything more is illegal under Lejeloven §34. Many honest leases ask for less.
+
+**If something feels off, it is.** Walk away — there is always another listing. Report scams to [politi.dk](https://politi.dk) and warn other newcomers in expat groups.
+
+## Types of Housing in Denmark
+
+Denmark has four main types of housing tenure:
+
+
+**Type** | **What is it** | **For newcomers** |
+
+**Private rental (lejebolig)** | Standard rented apartment/house from private landlord | ✅ Most accessible |
+
+**Social housing (almen bolig)** | Subsidised housing, income-linked rent | ⚠️ 5–15 year waitlist in CPH |
+
+**Andelsbolig** | Housing cooperative — buy a "share" in the building | ⚠️ Long waitlist, requires capital |
+
+**Ejerbolig** | Owned property (buying) | ✅ If you have savings and credit |
+
+**For most newcomers:** private rental is your starting point. Once you're established, the andelsbolig waitlist is worth joining early — it can save you significant money long-term.
+
+## Writing a Winning Danish Rental Application
+
+Danish landlords receive dozens of applications per listing. Here's what makes yours stand out:
+
+  - 1. **Write in Danish or offer Danish version.** Even basic Danish shows commitment.
+
+  - 2. **Include:** who you are, what you do, why this apartment, income proof, references from previous landlords.
+
+  - 3. **Be personal.** Danes respond to genuine, warm applications — not formal letters.
+
+  - 4. **Send fast.** Good listings in Copenhagen get 50+ applications in 24 hours. Apply within hours of the listing going up.
+
+  - 5. **Follow up.** A polite message 48 hours after applying is appropriate and expected.
+
+## Your Legal Rights as a Tenant
+
+Danish tenant protections are strong. Know these:
+
+  - **Deposit cap:** Maximum 3 months' rent. Prepaid rent: maximum 3 months. Total upfront: 6 months max.
+
+  - **Rent increases:** Regulated. Landlord cannot raise rent arbitrarily. Must follow net price index or be approved.
+
+  - **Notice period:** For unfurnished housing (the typical lease), the landlord must give you at least **1 year's notice** under Lejeloven §86 — only 3 months for furnished single rooms. Tenants have a 3-month notice obligation in most cases.
+
+  - **Deposit return:** The unused portion must be returned promptly, but the landlord typically has up to ~6 weeks (and in disputed cases up to 2 months) to settle the move-out report (flytteopgørelse) and repair costs. "Within 2 weeks" is a myth — disputes go to Huslejenævnet.
+
+  - **Heating/utilities:** Must be specified in lease. Cannot be changed without notice.
+
+If you have a dispute with your landlord, contact **Huslejenævnet** (Rent Tribunal) in your municipality — free and effective.
+
+[→ Find your local Huslejenævn](https://huslejenaevn.dk)
+
+## Copenhagen Neighbourhoods — Honest Guide
+
+**Area** | **Vibe** | **Avg 1-bed rent** | **Best for** |
+
+**Nørrebro** | Young, diverse, vibrant, left-leaning | ~8,500 DKK | Young professionals, internationals |
+
+**Vesterbro** | Hip, food scene, gentrifying | ~9,500 DKK | Foodies, creatives |
+
+**Østerbro** | Calm, family-oriented, affluent | ~10,500 DKK | Families, established professionals |
+
+**Frederiksberg** | Elegant, quiet, expensive | ~11,000 DKK | Families, professionals |
+
+**Amager / Islands Brygge** | Up-and-coming, waterfront, mixed | ~8,000 DKK | Budget-conscious, young people |
+
+**Valby** | Local, quiet, affordable, family | ~7,500 DKK | Families, longer-term residents |
+
+
+---
+
+# Chapter 4: Money & Banking — The Danish Wallet
+
+Source: https://ankommer.org/chapter/money-and-banking.html
+
+Understand how Danish money flows — from salary to pension to MobilePay — and make every krone work for you.
+
+## NemKonto — Your Mandatory Government Account
+
+**NemKonto** (literally "Easy Account") is not a separate bank account — it is the designation you give to an existing account so the Danish government knows where to send you money. Tax refunds, child benefits, pension payments, unemployment benefits — all go to your NemKonto.
+
+> ⚠️ **This is mandatory.** Every person with a CPR number must have a NemKonto. Without it, the government literally cannot pay you anything, and tax refunds can be delayed for months.
+
+**How to register your NemKonto:**
+
+  - 1. Open your Danish bank account (requires CPR number at most banks)
+
+  - 2. Go to [nemkonto.dk](https://www.nemkonto.dk) and log in with MitID
+
+  - 3. Select your account from the list and confirm
+
+You can also designate your NemKonto directly through your bank's app or website. Nordea, Danske Bank, and Lunar all allow this in-app.
+
+[→ Register or update your NemKonto (official)](https://www.nemkonto.dk)
+
+## Your Tax Card (Skattekort) — Get This Before Your First Paycheck
+
+Your **skattekort** (tax card) tells your employer exactly how much tax to deduct from your salary. Without it, your employer is legally required to deduct **55% (trækprocent på 55%)** — the maximum emergency rate. This is not a penalty; it is the Danish system's default when no card exists. But you will lose most of your first paycheck if you haven't sorted this.
+
+**Get your skattekort immediately after getting your CPR number:**
+
+  - 1. Go to [skat.dk](https://skat.dk/en-us) and log in with MitID
+
+  - 2. Click "Tax card and withholding tax" (Skattekort og trækprocent)
+
+  - 3. Review your preliminary income assessment (forskudsopgørelse) — this is SKAT's estimate of what you'll earn and owe
+
+  - 4. Your employer receives your tax card automatically — you do not need to send it manually
+
+**Two types of tax card:**
+
+  - **Frikort** — if your total annual income will be below DKK 51,600 (2025 personfradrag). You pay zero tax up to this amount.
+
+  - **Bikort** — for a second job. Your main employer uses your main card; secondary employer uses the bikort (40% flat rate with no allowance).
+
+> ⚠️ Update your preliminary income assessment (forskudsopgørelse) if your circumstances change — new job, pay rise, starting a company, earning rental income. Getting it wrong means either a large bill or a refund at year end. SKAT does not penalise you for adjusting proactively.
+
+[→ Tax card at skat.dk (official, English)](https://skat.dk/en-us/individuals/tax-card-and-withholding-tax/)
+
+## The Annual Tax Statement (Årsopgørelse)
+
+Every year in **March**, SKAT publishes your **årsopgørelse** — the final tax statement for the previous year. It compares what you actually earned and paid against your estimate, and calculates whether you owe money or get a refund.
+
+**The good news:** Most people get a refund. Danes receive an average refund of around DKK 5,000–8,000 per year.
+
+**Common reasons for a refund:**
+
+  - Transport deduction (befordringsfradrag) — if your commute is over 24 km each way, you can deduct the excess kilometres
+
+  - Interest on loans (rentefradrag)
+
+  - Union dues (fagforeningskontingent)
+
+  - Unemployment insurance / a-kasse contributions
+
+  - Charitable donations (up to DKK 17,200/year, 2025)
+
+**How to read your årsopgørelse:**
+
+  - Green number = refund (returned to NemKonto automatically in April)
+
+  - Red number = you owe SKAT money (deducted from NemKonto, or you can pay manually)
+
+You can also submit missing deductions manually at skat.dk up to 3 years retroactively. Many newcomers miss deductions in their first year and can claim them back.
+
+[→ Guide to årsopgørelsen (SKAT official)](https://skat.dk/en-us/individuals/the-annual-income-assessment/)
+
+## MobilePay — Denmark's Cashless Revolution
+
+**MobilePay** is used by approximately 4.4 million Danes — that's nearly 75% of the entire population. If you don't have it, you cannot split bills at restaurants, pay at market stalls, pay for parking in many cities, or send money to Danish friends. It is not optional.
+
+**How to get it:**
+
+  - 1. Download MobilePay from the App Store or Google Play
+
+  - 2. Link your Danish phone number and Danish bank account
+
+  - 3. Verify with MitID
+
+**Costs (2025):**
+
+  - Receiving money: free
+
+  - Sending money: free up to DKK 5,000/month; 1.75% above that (minimum DKK 1)
+
+  - Business payments: varies by merchant
+
+**You can also use MobilePay for:** splitting rent with housemates, paying your babysitter, buying from Facebook Marketplace, car parking (MobilePay Parking), and donating to charities.
+
+[→ MobilePay help (English available)](https://mobilepay.dk/hjaelp/mobilepay-bruger)
+
+## Danish Pension — Three Pillars You Need to Understand
+
+Danish pension is built on three distinct systems. Understanding all three affects your retirement significantly.
+
+
+**Pillar** | **What is it** | **Who pays** | **Amount (2025)** |
+
+**Folkepension** | State pension, from age 67 (rising to 68 in 2030) | The state (funded by taxes) | ~DKK 14,328/month (single, full) |
+
+**ATP** | Mandatory supplementary pension, deducted automatically | Employee + employer | ~DKK 94/month employee contribution |
+
+**Arbejdsmarkedspension** | Employer occupational pension — the big one | Employer (typically 2/3) + employee (1/3) | Typically 12–17% of gross salary total |
+
+> ⚠️ **Important for newcomers:** Your occupational pension belongs to you. If you leave Denmark, you can take it with you or leave it invested. But if you work here without joining a pension scheme (e.g. self-employed), you must arrange your own. Pension contributions are also tax-deductible.
+
+You can see all your pension savings in one place at [pensionsinfo.dk](https://www.pensionsinfo.dk).
+
+## Choosing a Danish Bank
+
+Most Danish banks require a CPR number to open a full account. Here's the honest comparison:
+
+
+**Bank** | **English support** | **Monthly fee** | **Best for** |
+
+**Lunar** | 100% English app | Free (basic) / 49 DKK (Plus) | Newcomers, digital-first, sometimes no CPR needed initially |
+
+**Nordea** | Good English | ~0–49 DKK | International transfers, established professionals |
+
+**Danske Bank** | Good English | ~0–79 DKK | Full service, widely accepted |
+
+**Arbejdernes Landsbank** | Limited English | ~40 DKK | Workers, union members |
+
+**Wise (international)** | Full English | Free + low fees | International transfers while waiting for Danish account |
+
+Open your account, then immediately go to [nemkonto.dk](https://www.nemkonto.dk) and register it as your NemKonto.
+
+
+---
+
+# Chapter 5: Healthcare — Your Body in Denmark
+
+Source: https://ankommer.org/chapter/healthcare.html
+
+Denmark has one of the best healthcare systems in the world. It's free. Here's how to use it.
+
+## The Yellow Card (Sundhedskort) — Your Healthcare Passport
+
+Your **sundhedskort** (health insurance card) is the yellow plastic card that proves you're entitled to free Danish healthcare. It comes automatically in the mail, typically 2–4 weeks after your CPR number is issued.
+
+It contains your CPR number, your name, and — critically — the name and address of **your assigned GP (praktiserende læge)**.
+
+> ⚠️ Until you receive your sundhedskort, you are **not covered** by the Danish public health system. If you need a doctor before it arrives: visit an out-of-hours clinic (lægevagten), call 1813 for guidance, or see a private doctor and claim the cost back later via SKAT. Also check if your home country insurance covers the gap period.
+
+If your card is lost or damaged: order a replacement at [sundhedskort.dk](https://sundhedskort.dk) using your MitID. A new one arrives within a week.
+
+[→ About the sundhedskort (sundhed.dk official)](https://www.sundhed.dk/borger/patienthaandbogen/sundhedssystemet/sygesikring/sygesikringsbevis/)
+
+## Registering with a GP (Din Praktiserende Læge)
+
+Your GP (general practitioner) is the **gatekeeper to the entire Danish health system**. You do not go straight to a specialist — you always go via your GP first. This is not bureaucracy; it's a well-designed system that ensures you get the right care without wasting time.
+
+**How to register with a GP:**
+
+  - 1. Go to [sundhed.dk](https://www.sundhed.dk) and click "Find a doctor"
+
+  - 2. Search by your postcode — you must register with a GP in your region
+
+  - 3. Check if the practice is accepting new patients (accepting = green "optaget" means full, "ledig" means available)
+
+  - 4. Contact the practice to register — either online or by phone
+
+**What your GP covers (all free with sundhedskort):** consultations, referrals to specialists, prescriptions, blood tests, basic minor surgery, mental health referrals, vaccinations, and preventive care.
+
+**Book appointments:** via **Min Læge app**, by phone, or online through the practice website. Many GPs offer telephone/video consultations first. Wait time for a routine appointment: typically same day to 3 days.
+
+If you can't find an available GP in your area, call your municipality's Borgerservice — they can help assign you to one.
+
+## Urgent Care — 1813 vs 112: Know the Difference
+
+This is one of the most important things to know in Denmark. The two numbers serve completely different purposes:
+
+
+**Number** | **For** | **Response** | **When** |
+
+**112** | Police, Fire Brigade, Ambulance | Immediate dispatch | Life-threatening emergencies ONLY |
+
+**1813** | Medical advice and urgent (non-emergency) care | Nurse or doctor by phone, then direction | Ill or injured but not life-threatening |
+
+**1813** is run by Region Hovedstaden (Copenhagen region). Outside of Copenhagen, call your local **lægevagt** (out-of-hours GP service). The number varies by region — check at [sundhed.dk](https://www.sundhed.dk).
+
+> ⚠️ Calling 112 for a non-emergency wastes emergency resources and is socially strongly disapproved of in Denmark. Call 1813 first for anything that isn't immediately life-threatening. They will send an ambulance if you need one.
+
+**Hospital emergency (skadestue):** You can also walk into a hospital emergency department, but 1813 will often redirect you to a faster option.
+
+## Dental Care — NOT Free (Plan and Budget for This)
+
+**This surprises almost every newcomer:** dental care in Denmark is NOT covered by the public health system for adults. You pay out of pocket, and Danish dental prices are high.
+
+**Typical costs (2025 estimates):**
+
+  - Routine checkup and cleaning: DKK 600–1,400
+
+  - Filling (composite): DKK 600–1,200 per tooth
+
+  - Root canal: DKK 3,000–7,000
+
+  - Crown: DKK 5,000–12,000
+
+  - Tooth extraction: DKK 600–1,500
+
+**What IS free:** Dental care for children up to age 18. School dental examinations and treatment are included.
+
+**How to reduce costs:**
+
+  - **Sygeforsikring "danmark"** (Group 1) refunds 40–60% of most dental costs — join at [sygeforsikring.dk](https://www.sygeforsikring.dk) for ~DKK 130–175/month
+
+  - Tandlægehøjskolen (dental schools) in Copenhagen and Aarhus offer treatments at ~50% of normal prices, performed by supervised students
+
+  - Some employer health insurance packages include dental
+
+Emergency dental pain: call **70 11 31 31** (out of hours)
+
+## Mental Health Services
+
+Moving countries is one of the most psychologically challenging things a person can do. Denmark takes mental health seriously. Here's how the system works:
+
+**Free via the public system:**
+
+  - **Your GP** is the first step — they can refer you to a psychologist (psykolog) if appropriate
+
+  - Subsidised psychology (ydernummer): with a GP referral for specified conditions, you pay ~DKK 400 per session; SKAT pays the rest
+
+  - Psychiatric treatment: fully free if referred by GP and severity warrants it
+
+**Crisis support (free, 24/7):**
+
+  - **Livslinien:** 70 201 201 — Danish-language mental health crisis line
+
+  - **Headspace Denmark:** free counselling for young people (12–25)
+
+  - **Expat Counselling Copenhagen:** English-language therapy, private, ~DKK 900–1,400/session
+
+Many expats find the adjustment to Danish social culture (reserved, indirect, hard to penetrate) genuinely difficult. This is normal, not a personal failure. Allow 1–2 years to build a real social network.
+
+[→ Mental health resources (sundhed.dk)](https://www.sundhed.dk/borger/patienthaandbogen/psyke/)
+
+## Sygeforsikring "denmark" — The One Insurance Worth Having
+
+**Sygeforsikring "denmark"** is a non-profit mutual insurance fund that more than 2.3 million Danes belong to. For a small monthly fee, it refunds a portion of expenses the public system doesn't cover.
+
+**What it covers (Group 1, ~DKK 130–175/month, 2025):**
+
+  - Dental treatment: 40–60% refund on most procedures
+
+  - Glasses and contact lenses: DKK 400–800/year contribution
+
+  - Physiotherapy: partial refund
+
+  - Chiropractic treatment: partial refund
+
+  - Psychology (without GP referral): partial refund
+
+  - Medical aids and orthopaedic devices
+
+> ⚠️ **Join within 6 months of arriving in Denmark** — there is a waiting period rule, and joining early gives maximum benefit. The longer you wait, the more dental bills you pay before you're covered.
+
+[→ Join Sygeforsikring "denmark" (English page)](https://www.sygeforsikring.dk/english)
+
+
+---
+
+# Chapter 6: Children & Family — Raising Little Vikings
+
+Source: https://ankommer.org/chapter/children-and-family.html
+
+Denmark is arguably the best country in the world to raise children. Here's everything you need to know.
+
+## Parental Leave (Barsel) — 52 Weeks, Paid
+
+Denmark's parental leave system is one of the most generous in the world. The Barselslov was reformed on **2 August 2022** to give both parents equal and individual rights, with further updates in 2024.
+
+**How leave is divided under the post-2022 model (per parent):**
+
+
+**Block** | **Who** | **Duration** | **Transferable?** |
+
+Pregnancy leave | Birthing parent | 4 weeks before birth | No |
+
+Maternity leave | Birthing parent | 2 weeks immediately after birth (mandatory) | No |
+
+Paternity / co-parent leave | Other parent | 2 weeks within the first 10 weeks | No |
+
+Earmarked parental leave (øremærket) | Each parent | **11 weeks each** — use them or lose them | No |
+
+Transferable parental leave | Each parent | **13 weeks each** — flexible | Yes — between parents |
+
+**Payment:** barselsdagpenge at a maximum rate of **DKK 4,865 per week** (2025) from Udbetaling Danmark. Many employers top this up to full salary — check your employment contract or collective agreement.
+
+**Eligibility — the gotcha for newcomers:** to receive barselsdagpenge from the state, you must have worked **at least 160 hours in Denmark in the 4 months** immediately before your leave starts. Newcomers who just arrived may not qualify yet — check with your kommune and Udbetaling Danmark before assuming.
+
+Apply for barsel via your employer and through [borger.dk](https://www.borger.dk/familie-og-boern/graviditet-og-foedsel/barsel) at least 8 weeks before the expected birth.
+
+[→ Full parental leave guide (borger.dk official)](https://www.borger.dk/familie-og-boern/graviditet-og-foedsel/barsel)
+
+## Childcare — Vuggestue, Børnehave & SFO
+
+Denmark's publicly subsidised childcare is world-class. The state covers the majority of costs — you pay a **maximum of 25% of the actual cost**.
+
+
+**Type** | **Age** | **Max parental fee (2025)** | **Hours** |
+
+**Vuggestue** (nursery) | 6 months – 3 years | ~DKK 3,756/month | Full day |
+
+**Børnehave** (kindergarten) | 3 – 6 years | ~DKK 2,226/month | Full day |
+
+**SFO** (after-school) | 6 – 10 years | ~DKK 1,400–2,200/month | After school + holidays |
+
+**Dagpleje** (childminder) | 0 – 3 years | Similar to vuggestue | Smaller setting, home-based |
+
+**Sibling discount:** 50% reduction on the cheapest child's fee when you have two or more children in public care.
+
+**Income-based reduction:** Low-income families pay less. The maximum fee is the ceiling — you may qualify for a significantly reduced rate.
+
+> ⚠️ Apply for childcare as soon as you have a CPR number — wait times in Copenhagen can be 3–9 months, particularly for vuggestue. Apply via your municipality's digital self-service portal.
+
+[→ Childcare information (borger.dk)](https://www.borger.dk/familie-og-boern/pasning-og-skole/pasning-og-lege-institutioner)
+
+## Børnecheck — Child Benefit (You Don't Have to Apply)
+
+**Børnecheck** (formally *børne- og ungeydelse*) is a tax-free payment from the state for every child under 18. The remarkable thing: **you don't apply for it**. It is paid automatically to your NemKonto once your child is registered with a CPR number — quarterly for under-15, monthly from 15.
+
+**Rates (2025), per Skatteministeriet:**
+
+
+**Child's age** | **Amount** | **Per year** | **Frequency** |
+
+0 – 2 years | DKK 5,292 | DKK 21,168 | Quarterly |
+
+3 – 6 years | DKK 4,191 | DKK 16,764 | Quarterly |
+
+7 – 14 years | DKK 3,297 | DKK 13,188 | Quarterly |
+
+15 – 17 years | DKK 1,099 | DKK 13,188 | Monthly |
+
+Quarterly payments arrive on the 20th of January, April, July, October. Monthly payments (15–17 yrs) arrive on the 20th of each month.
+
+> ⚠️ **⚠️ The 2-year rule that catches newcomers:** Full børnecheck requires **2 years of residence or employment in Denmark/EEA within the last 10 years**. New arrivals receive a phased percentage:
+
+
+**Time in DK/EEA** | **Payment %** |
+
+Less than 6 months | 0% |
+
+6 months – 1 year | 25% |
+
+1 – 1.5 years | 50% |
+
+1.5 – 2 years | 75% |
+
+2 years or more | 100% (full amount) |
+
+EU/EEA work counts towards this. Income from employment in Denmark also counts. Don't budget for the full amount until you've crossed the 2-year mark.
+
+Your NemKonto must be set up for this to arrive. If you're new and haven't received it within 3 months of your child registering, check with Udbetaling Danmark.
+
+[→ Child & Youth benefits (lifeindenmark.borger.dk)](https://lifeindenmark.borger.dk/family-and-children/family-benefits/child-and-youth-benefits)
+
+## The Folkeskole — Danish Public School System
+
+The **folkeskole** is Denmark's public school system. It is free, includes school materials, and runs from class 0 (børnehaveklasse, age 6) through class 9 (age 15/16), with an optional 10th grade.
+
+**Key facts about the folkeskole:**
+
+  - **English** is taught from 1st grade. Most children speak excellent English by class 5.
+
+  - **No uniforms.** Danish schools emphasise wellbeing, creativity, and independent thinking over academic competition.
+
+  - Food is **not provided** at most schools — children bring packed lunches (madpakke).
+
+  - **Grading** starts in class 8. Before that, learning is assessed through written feedback, not grades.
+
+  - **Class size:** average 22–24 students
+
+**Enrol your child:** Contact your local municipality's Børne- og Ungeforvaltning (Children and Youth Administration). EU children have the right to enrol in the local folkeskole. Enrolment is by address.
+
+Many international children integrate well even with no Danish — Danish children are generally welcoming, and schools provide language support (modtageklasse) for newcomer children.
+
+## International Schools in Denmark
+
+If you plan to leave Denmark within a few years, or prefer an English-curriculum education, international schools are a good option. They are private and fees apply.
+
+
+**School** | **City** | **Curriculum** | **Annual fee (approx.)** |
+
+**Copenhagen International School (CIS)** | Copenhagen | IB (International Baccalaureate) | DKK 105,000–135,000 |
+
+**Rygaards School** | Hellerup, CPH | British / IB | DKK 85,000–105,000 |
+
+**Skals Efterskole** | Skals | Danish + English | DKK 30,000–60,000 |
+
+**Aarhus International School** | Aarhus | IB/Danish bilingual | DKK 80,000–110,000 |
+
+Many employers with international staff offer school fee assistance as part of relocation packages — ask your HR department before assuming you must pay alone.
+
+
+---
+
+# Chapter 7: Education & University — The Life of the Mind
+
+Source: https://ankommer.org/chapter/education-and-university.html
+
+Danish universities are world-class, tuition-free for EU students, and culturally unlike anything you've experienced.
+
+## Danish Universities — Overview & Admission
+
+Denmark has eight public universities and dozens of specialised institutions. All are well-funded and consistently rank among Europe's best.
+
+
+**University** | **City** | **Known for** | **International ranking (approx.)** |
+
+**University of Copenhagen (KU)** | Copenhagen | Research, medicine, humanities, science | Top 100 globally |
+
+**DTU** | Kongens Lyngby | Engineering, technology, sustainability | Top 150 globally |
+
+**CBS** | Copenhagen | Business, management, economics | Top 50 in Europe for business |
+
+**Aarhus University (AU)** | Aarhus | Research university, broad programs | Top 150 globally |
+
+**SDU** | Odense (+ branches) | Health, engineering, humanities | Top 400 globally |
+
+**AAU** | Aalborg | Problem-based learning, engineering | Top 400 globally |
+
+**Apply via:** [optagelse.dk](https://www.optagelse.dk) (for Danish programmes) or directly to universities for English-language master's programmes. Main application deadline for autumn intake is typically **March 15 (coordinated)** or **May 15 (individual applications)**.
+
+## Tuition Fees & SU (State Education Support)
+
+**Tuition fees by citizenship:**
+
+  - **EU/EEA/Nordic citizens:** No tuition fees at public universities. All bachelor's and master's programmes are fully funded by the state.
+
+  - **Non-EU citizens:** Tuition fees apply, typically DKK 50,000–130,000 per year depending on the institution and programme.
+
+**SU — Statens Uddannelsesstøtte (State Education Grant):**
+
+SU is a monthly grant from the Danish state for students enrolled in recognised education. **No repayment required** (it's a grant, not a loan).
+
+
+**Situation** | **Monthly SU (2025)** |
+
+Under 20, living at home | DKK 822 |
+
+Under 20, living independently | DKK 2,936 |
+
+Over 20, living independently (most students) | DKK 6,321 |
+
+Students can also apply for an **SU loan** of up to DKK 4,204/month on top of the grant, at a low interest rate.
+
+> ⚠️ EU citizens working and paying taxes in Denmark are generally eligible for SU. Non-EU students are not eligible unless they have permanent residency or a special permit.
+
+[→ Apply for SU (official, English)](https://www.su.dk/english/)
+
+## Free Danish Language Classes (Danskuddannelse)
+
+Denmark offers free Danish language education to all residents with a CPR number who are not EU students (who must pay). This is a legal right — your employer or municipality must facilitate it.
+
+**Three tracks based on educational background:**
+
+  - **Danskuddannelse 1 (DU1):** For people with little formal education. Leads to Prøve i Dansk 1 (PD1)
+
+  - **Danskuddannelse 2 (DU2):** For people with some secondary education. Leads to PD2
+
+  - **Danskuddannelse 3 (DU3):** For people with higher education (most professionals). Leads to Studieprøven (university entry level)
+
+**Duration:** Up to 3 years (you have 5 years from when you first became eligible to use the right).
+
+**How to start:** Contact your municipality's integration department (integrationsafdelingen) or apply directly at a language school (sprogcenter) in your area.
+
+**Test levels that matter for residency and citizenship:** Permanent residency requires **Prøve i Dansk 2 (PD2 ≈ B1)**. Citizenship requires **Prøve i Dansk 3 (PD3 ≈ B2)**. University admission to Danish-language programmes typically requires **Studieprøven (≈ C1)**. (PD2 is officially mapped to B1 by the Ministry of Children and Education.)
+
+[→ Language requirements for residency (nyidanmark.dk)](https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement)
+
+## Student Life — What's Different in Denmark
+
+Danish university culture will feel different from most countries. Here's what to expect:
+
+  - **No lectures without dialogue.** Danish teaching culture is deeply Socratic. Professors expect questions, challenge, and debate. Sitting silently is odd — participation is part of the grade.
+
+  - **First-name basis.** You address professors by first name. This is not rude — it's the norm.
+
+  - **Group work is dominant.** Most courses involve substantial group projects. Danes are direct and constructive in groups.
+
+  - **Rustur / studenterhus:** Every university has a student house and an intro camp (rustur) — go to both. This is how you make friends in Denmark.
+
+  - **Studiekort** gives ~50% discount on all Danish public transport. Essential.
+
+  - **Kollegium (student housing):** Apply as early as possible. Waiting lists can be 6–12 months. Apply at [kollegierneskontor.dk](https://www.kollegierneskontor.dk)
+
+
+---
+
+# Chapter 8: Employment — The Danish Work World
+
+Source: https://ankommer.org/chapter/employment.html
+
+Danish work culture will surprise you. Flat hierarchy, 37-hour weeks, and a culture where leaving at 4pm is not just acceptable — it's expected.
+
+## For non-EU readers — Which work-permit scheme applies to you?
+
+If you're a non-EU/EEA citizen, you can only work in Denmark with a residence-and-work permit. The five main routes:
+
+
+**Scheme** | **Eligibility** | **Apply via** |
+
+**Pay Limit Scheme (Beløbsordningen)** | Job offer with salary above DKK **514,000/yr (2025)** · DKK 552,000/yr from 2026. Most flexible. Allows job-switching after 6 months. | Your employer applies via SIRI |
+
+**Supplementary Pay Limit Scheme** | Lower threshold (DKK 415,000/yr in 2025; DKK 446,000 from 2026) but only for nationals of selected high-income countries with a labour-market need. | SIRI |
+
+**Positive List (high education / labour shortage)** | Your profession appears on the [Positive List](https://www.nyidanmark.dk/en-GB/Words-and-concepts/SIRI/Positive-Lists/Positive-List-for-People-with-a-Higher-Education) (engineers, doctors, certain IT, nurses, etc.). No salary threshold beyond market wage. | SIRI |
+
+**Fast-track Scheme** | Your employer is a SIRI-certified company. Approval in ~1 month vs 1–4 months. 4 sub-tracks: Pay Limit, Educational, Researcher, Short-term. | Certified employer applies |
+
+**Researcher / Establishment Card** | For researchers and recent graduates from approved Danish universities seeking work after studies. | SIRI / your university |
+
+**The single most useful site:** [workindenmark.dk](https://www.workindenmark.dk) — Denmark's official portal for foreign job seekers, with vacancies, scheme details, and CV templates aligned to Danish norms.
+
+**Watch out for authorisation-required roles.** Several professions require Danish authorisation/registration before you can work in them legally — these include nurses (DR-godkendelse), doctors (Sundhedsstyrelsen), psychologists, social workers (socialrådgiver), kindergarten teachers (pædagog), schoolteachers, and some legal roles. Check with your professional body before applying for jobs.
+
+## Danish Work Culture — What No One Tells You
+
+Danish workplaces operate very differently from most cultures. Understanding these norms will make you effective from day one:
+
+  - **Flat hierarchy.** Everyone — including the CEO — goes by first name. Formal titles are almost never used in conversation.
+
+  - **4pm is the end of the day.** Danish work culture does not reward presenteeism. Leaving at 4pm (or earlier for parents) is normal and expected. Staying late to look dedicated is often viewed with suspicion — as if you're inefficient.
+
+  - **37-hour work week.** This is the standard working week in Denmark, enforced by collective agreements (overenskomster). Very few professional jobs routinely exceed this.
+
+  - **Feedback is direct.** Danes will tell you clearly what they think, including criticism. This is not aggression — it is respect. They assume you can handle honest feedback.
+
+  - **Consensus-based decisions.** Meetings take longer in Denmark because everyone's input is genuinely considered. Once a decision is made, it sticks — because everyone was involved.
+
+  - **Frokost (lunch) matters.** The shared lunch break at 12–1pm is a social institution. Eating alone at your desk is unusual and slightly antisocial.
+
+  - **Friday afternoons in summer:** Many offices quietly wind down around 2pm on Fridays between June–August. No one announces this formally — you're expected to pick it up.
+
+## Your Rights as an Employee — What the Law Guarantees
+
+Denmark has no statutory minimum wage — wages are instead set by **collective agreements (overenskomster)** between unions and employer organisations. These cover approximately 84% of the workforce and are legally binding.
+
+
+**Right** | **What you get** | **Source** |
+
+**Annual leave** | 25 days (5 weeks) paid holiday per year | Ferieloven (Holiday Act) |
+
+**Special days off (feriefridage)** | 5–6 extra paid days (many agreements) | Collective agreements |
+
+**Notice period** | 1–6 months depending on seniority | Funktionærloven (for salaried employees) |
+
+**Sick pay (sygedagpenge)** | Full pay during illness (employers pay first 30 days, state after) | Sygedagpengeloven |
+
+**Pension** | Employer contributes ~8–12%, you contribute ~4–6% | Collective agreement / contract |
+
+**Parental leave** | 52 weeks with dagpenge | Barselloven |
+
+If you have a dispute with your employer: contact your union (fagforening) first. If you're not in a union, contact **Arbejdstilsynet** (Danish Working Environment Authority) or a legal adviser.
+
+[→ Employment rights (borger.dk)](https://www.borger.dk/arbejde-dagpenge-og-orlov)
+
+## Understanding Your Danish Payslip (Lønseddel)
+
+Your Danish payslip can be confusing at first. Here's what every line means:
+
+
+**Line** | **What it is** |
+
+**Bruttoløn** | Your gross monthly salary — what you agreed in your contract |
+
+**AM-bidrag (8%)** | Labour market contribution — deducted from gross before income tax is calculated |
+
+**A-indkomst** | Gross after AM-bidrag — this is what income tax is calculated on |
+
+**A-skat** | The actual income tax deducted (based on your trækprocent from skattekort) |
+
+**Pension** | Your contribution to your occupational pension (typically 4–8% of gross) |
+
+**ATP** | Mandatory small pension contribution, ~DKK 94/month |
+
+**Nettoløn / Udbetalt** | What actually lands in your bank account |
+
+**Quick check:** On a DKK 40,000/month gross salary in Copenhagen, you should take home approximately DKK 26,000–28,000 net, depending on deductions. Use our **Salary Calculator tool** to model your exact situation.
+
+## A-kasse — Unemployment Insurance (Join Before You Need It)
+
+**A-kasse** (arbejdsløshedskasse) is Denmark's unemployment insurance system. It is **voluntary, not automatic** — you must join and pay contributions to receive benefits if you lose your job.
+
+**Key facts (2025):**
+
+  - **Maximum benefit:** DKK 21,091/month (2025) — that's the cap. The "90% of salary" rule only applies up to this ceiling, so most full-time earners receive 50–60% of their previous pay, not 90%.
+
+  - **Duration:** Up to 2 years of benefits within a 3-year period
+
+  - **Membership cost:** Typically DKK 400–600/month depending on the a-kasse
+
+  - **Waiting period:** You must be a member for at least 12 months AND have worked at least 1,924 hours in the last 3 years before you can claim
+
+  - **Tax deductible:** Yes — a-kasse contributions are fully deductible from your taxable income
+
+> ⚠️ **Join an a-kasse within your first month of employment.** The 12-month waiting period means joining late is costly — if you lose your job after 11 months without a-kasse, you receive nothing from the system.
+
+There are approximately 25 a-kasser. Most are sector-specific. Common ones for international professionals:
+
+  - **CA a-kasse** — for academics and graduates (ca.dk)
+
+  - **MA** — for engineers and IT professionals
+
+  - **Krifa** — non-sector-specific, English support
+
+  - **ASE** — for self-employed and flexible workers
+
+[→ ASE a-kasse (English)](https://www.ase.dk/en)
+
+## Unions (Fagforeninger) — Worth the Dues
+
+Denmark has one of the world's highest union membership rates at approximately 67% of the workforce. Unions here are not primarily about strikes — they are about contract security, legal protection, and professional development.
+
+**What a union gives you:**
+
+  - Review of your employment contract before you sign
+
+  - Legal advice if you have a dispute with your employer
+
+  - Representation in salary negotiations
+
+  - Professional development opportunities
+
+  - Network within your sector
+
+**Cost:** DKK 300–600/month (fully tax deductible)
+
+Note: An a-kasse and a union are **separate memberships**. You should ideally have both. Many unions have agreements with specific a-kasser but they are independent organisations.
+
+For international professionals: **IDA** (engineers/IT), **Djøf** (lawyers/economists/social scientists), **HK** (office workers), **3F** (unskilled workers) are the most common.
+
+## Can You Work Before Your CPR Number Arrives?
+
+This is one of the most common questions — and the answer depends on your citizenship:
+
+**EU/EEA citizens:** Yes. You have the right to work in Denmark immediately. You can start a job while your CPR registration is being processed. Your employer can file an emergency tax deduction. However, without a CPR number, your employer may default to the 55% emergency tax rate temporarily.
+
+**Non-EU citizens with a work permit:** You can work once your permit is approved and active. Some permit types allow work during processing — check your specific permit conditions at [nyidanmark.dk](https://www.nyidanmark.dk).
+
+**Students:** Student permit holders can work up to **15 hours per week** during term time, and full-time during June/July/August.
+
+> ⚠️ Working without the right to work in Denmark is a serious violation that can result in deportation and a ban on future entry. If you're unsure about your status, contact [nyidanmark.dk](https://www.nyidanmark.dk) before starting work.
+
+
+---
+
+# Chapter 9: Startups & Business — Building Something Here
+
+Source: https://ankommer.org/chapter/startups-and-business.html
+
+Denmark is secretly one of Europe's best places to start a company. Low bureaucracy, high trust, excellent talent.
+
+## Choosing Your Business Structure
+
+Denmark offers several business structures. The right choice depends on your liability tolerance and growth plans:
+
+
+**Structure** | **Danish name** | **Min. capital** | **Liability** | **Best for** |
+
+**Sole proprietorship** | Enkeltmandsvirksomhed | None | Personal (unlimited) | Freelancers, consultants, sole traders |
+
+**Private limited company** | Anpartsselskab (ApS) | DKK 20,000 (since 27 Feb 2025) | Limited to capital | Small companies, startups |
+
+**Public limited company** | Aktieselskab (A/S) | DKK 400,000 | Limited to capital | Larger companies, external investment |
+
+**Partnership** | Interessentskab (I/S) | None | Joint personal | Two+ people, simple structures |
+
+For most newcomers starting a business: an **Enkeltmandsvirksomhed** is free to register and can be set up in 10 minutes. An **ApS** gives liability protection and now requires only DKK 20,000 capital (reduced from DKK 40,000 on 27 Feb 2025) plus ~DKK 670 to register.
+
+## Registering Your Business — CVR Number
+
+Every business in Denmark is registered with a unique **CVR number** (Central Business Register). This is your business's identity number — equivalent to a personal CPR number.
+
+**Register at virk.dk (10 minutes, mostly free):**
+
+  - 1. Go to [virk.dk](https://www.virk.dk) and log in with MitID
+
+  - 2. Choose "Register ny virksomhed"
+
+  - 3. Select your business structure (enkeltmandsvirksomhed is free; ApS costs ~DKK 670)
+
+  - 4. Enter your business name, address, and industry code (branchekode)
+
+  - 5. Your CVR number is issued within 1–2 working days
+
+**VAT registration (momsregistrering):** Mandatory once your annual turnover exceeds **DKK 50,000**. Danish VAT (moms) is 25% — one of the highest in the world, but largely passed on to consumers. Register at virk.dk at the same time or when you cross the threshold.
+
+> ⚠️ You must be a legal resident in Denmark (have a CPR number and valid residence status) to register a Danish business. Non-EU founders on a tourist visa cannot legally operate a Danish company.
+
+[→ Register your business at virk.dk](https://virk.dk/myndigheder/erhvervsstyrelsen/selvbetjening)
+
+## Tax for Self-Employed & Freelancers
+
+As a self-employed person in Denmark, your tax situation is more complex than being an employee. Here's the essentials:
+
+**Key taxes for self-employed (2025):**
+
+  - **AM-bidrag:** 8% on gross business income (deducted before income tax)
+
+  - **Income tax:** Same rates as employees — personal allowance of DKK 51,600 (2025), then municipal + state tax
+
+  - **B-skat:** Self-employed people pay tax in advance via **B-skat** — 10 monthly instalments through the year. Update your forskudsopgørelse at skat.dk to set the right amount.
+
+  - **Moms (VAT):** 25% on all sales above DKK 50,000/year. File and pay quarterly via virk.dk.
+
+**Deductible business expenses:** Equipment, software, home office (if used primarily for business), professional development, accounting fees, business travel, and more. Keep receipts for everything.
+
+Consider using an accountant (revisor) for your first year — fees typically DKK 3,000–8,000/year but save you significantly in avoided mistakes and maximised deductions.
+
+[→ Starting a business — SKAT guide (English)](https://skat.dk/en-us/business/starting-a-business/)
+
+## Denmark's Startup Ecosystem
+
+Copenhagen has quietly become one of Europe's strongest startup hubs, consistently ranking in the top 10 European startup cities.
+
+**Key hubs and organisations:**
+
+  - **The Hub Copenhagen** — Denmark's largest tech startup community. Events, coworking, introductions. [thehub.dk](https://www.thehub.dk)
+
+  - **Copenhagen Fintech** — focus on financial technology
+
+  - **DTU Science Park** — deep tech, research-based startups near Copenhagen
+
+  - **Symbion** — Copenhagen startup incubator and coworking space
+
+  - **Accelerace** — leading Nordic accelerator programme
+
+  - **Innovation Fund Denmark** — public funding for R&D and innovation projects
+
+**Why Denmark is genuinely good for startups:**
+
+  - High trust between businesses and government
+
+  - Well-educated, English-speaking talent pool
+
+  - Strong IP protection and rule of law
+
+  - Reasonable corporate tax rate (22% corporation tax)
+
+  - EU market access
+
+  - Work-life balance makes it easier to attract talent vs. burnout cultures
+
+## Startup Denmark Visa (Non-EU Founders)
+
+The **Startup Denmark visa** allows non-EU/EEA citizens to come to Denmark specifically to start a company. It requires a business plan assessment by a panel of experts.
+
+**Requirements:**
+
+  - An approved, innovative, and scalable business idea
+
+  - Sufficient funds to support yourself (typically DKK 130,000+ for the first year)
+
+  - Business plan submitted to Danish Business Authority (Erhvervsstyrelsen)
+
+**Duration:** Initially 2 years, extendable.
+
+**Processing time:** Approximately 1–3 months after business plan approval.
+
+> ⚠️ The visa requires genuine innovation — applications for standard retail, restaurants, or service businesses are typically rejected. The panel looks for scalable, international-potential businesses.
+
+[→ Startup Denmark official programme](https://www.startupdenmark.info)
+
+
+---
+
+# Chapter 10: Transport — Cycling or Standing in Line
+
+Source: https://ankommer.org/chapter/transport.html
+
+Denmark runs on bicycles. Literally. Here's how to navigate a country where cycling is faster than driving.
+
+## Cycling — The Danish Way to Get Around
+
+Denmark has more bicycles than people (approximately 4.2 million bikes for 5.9 million people). In Copenhagen, **62% of residents cycle to work or education every day** — including in winter, including in rain. This is not a hobby. It is infrastructure.
+
+**Buying a bike:**
+
+  - **New bike (cykelbutik):** DKK 1,500–5,000 for a reliable commuter bike
+
+  - **Second-hand:** Facebook Marketplace, DBA.dk, Loppemarked (flea markets) — DKK 300–1,500. Inspect carefully; stolen bikes are common.
+
+  - **Bike shops:** Cykelexperten, Bike Brothers, Christiania Cykler for cargo bikes
+
+**Rules of the road (cyklister):**
+
+  - Always ride in the cycle lane (cykelsti) where available — riding on the pavement is illegal
+
+  - Signal your turns with your arm
+
+  - Lights are legally mandatory after dark
+
+  - A bell (ringeklokke) is legally required
+
+  - Helmet is NOT legally required (but recommended for children)
+
+Fine for cycling without lights: DKK 700. Danes take cycling rules seriously.
+
+## Public Transport — Rejsekort and Zones
+
+Danish public transport is excellent in cities and very good on intercity routes. It runs on a **zone system** — the more zones you cross, the more you pay.
+
+**Rejsekort (travel card) — essential:**
+
+  - Works on all buses, metro, S-tog (city trains), and regional trains
+
+  - Costs ~15–20% less per trip than buying single tickets
+
+  - Deposit: DKK 80 for the card + minimum DKK 70 to top up
+
+  - Buy at stations, 7-Eleven, or [rejsekort.dk](https://www.rejsekort.dk/en)
+
+  - Always check in AND check out — failure to check out causes an overcharge
+
+**Monthly passes:** If you commute the same route every day, a period card (periodekort) for specific zones is usually cheaper than using Rejsekort. Calculate at rejseplanen.dk.
+
+**Copenhagen Metro:** Runs 24/7, 365 days a year. Frequency: every 2–4 minutes in rush hour. Currently 4 lines (M1–M4).
+
+**DSB trains:** Intercity trains between Copenhagen, Odense, Aarhus, Aalborg. Book ahead online for significant savings, especially Offpeak tickets.
+
+## Cars and Driving in Denmark
+
+Denmark has some of the highest car purchase taxes in the world — **registreringsafgift** (registration tax) is up to 150% of the car's value. A car worth DKK 200,000 can easily cost DKK 400,000+ after tax. This is intentional policy to promote cycling and public transport.
+
+**If you bring your own car from abroad:**
+
+  - You must pay Danish registration tax if you become a permanent resident
+
+  - EU citizens: within 30 days of registering address
+
+  - Apply for registration at [motorst.dk](https://motorst.dk)
+
+**Alternatives to owning a car:**
+
+  - **GoMore** — car sharing community (like Airbnb for cars)
+
+  - **Hertz DriveNow / Flinkster** — minute-by-minute car rental in cities
+
+  - **DriveNow** — electric car sharing in Copenhagen
+
+Speed limits: 50 km/h in built-up areas, 80 km/h on rural roads, 110/130 km/h on motorways. Speed cameras are frequent.
+
+
+---
+
+# Chapter 11: Language — Danish Is Impossible. Do It Anyway.
+
+Source: https://ankommer.org/chapter/language.html
+
+Danish pronunciation is uniquely difficult. Every Dane speaks English. Neither of these facts changes that learning Danish will transform your life here.
+
+## Why Learning Danish Matters (Even Though Everyone Speaks English)
+
+The honest truth: you can live in Denmark for years speaking only English and be functionally fine. Most workplaces, especially in tech and international companies, operate in English. Doctors, banks, and government services often have English support.
+
+But here's what happens when you don't learn Danish:
+
+  - Danish colleagues switch to English for you — which subtly excludes you from casual conversation
+
+  - Social groups that form naturally (at frokost, after work, in sports clubs) stay partly closed
+
+  - You miss the quiet, important moments where belonging happens
+
+  - After 3–4 years, you may feel more like a visitor than a resident
+
+Learning Danish — even badly — signals something Danes deeply respect: that you're *trying* to become part of something. They will switch to English to help you, but they notice the effort and it opens doors nothing else does.
+
+## Free Danish Classes — Your Right as a Resident
+
+If you are a non-EU resident with a CPR number, you have the legal right to free Danish language education (Danskuddannelse) for up to 3 years. EU citizens can access it at a subsidised cost.
+
+The programme is managed by your municipality. Contact the **International Community** (ICS) office or your municipality's integration department to enrol.
+
+**Language levels and what they unlock:**
+
+
+**CEFR level** | **Danish test** | **Required for** |
+
+A1 | PD1 (Prøve i Dansk 1) | — |
+
+B1 | PD2 (Prøve i Dansk 2) | Permanent residency |
+
+B2 | PD3 (Prøve i Dansk 3) | Citizenship + indfødsretsprøven |
+
+C1 | Studieprøven | University admission to Danish-language programmes |
+
+Timeline reality: with 2–3 hours of class per day, most people reach A2 in 6–9 months, B2 in 2–3 years. It requires regular study outside class — passive attendance is not enough.
+
+## The Honest Guide to Danish Pronunciation
+
+Danish has earned its reputation for difficulty. Here's what makes it genuinely hard:
+
+  - **Stød (glottal stop):** A subtle throat-catch that changes word meaning. There's no equivalent in most languages. You can hear it; producing it takes months.
+
+  - **Swallowed syllables:** Danes drop the ends of many words in natural speech. "Hvad hedder du?" sounds approximately like "va hehh du?" to untrained ears.
+
+  - **Soft D (blødt D):** Sounds somewhere between an English "l" and "th" — like the sound in "the" but with your tongue further back. Completely foreign to most learners.
+
+  - **Long/short vowel distinction:** The same word spelt differently in length can mean completely different things.
+
+**Fastest path to real pronunciation:**
+
+  - Watch Danish TV with Danish subtitles (not English) — **DR.dk** and **TV2 Play** have free content
+
+  - **Podcast: Slow Danish** — real speech at learner speed
+
+  - Talk to Danes in Danish — they will correct you gently and help
+
+  - Sing along to Danish songs — the rhythm embeds pronunciation patterns
+
+## Best Apps and Resources for Learning Danish
+
+🎧GlossikaBest for pronunciation and sentence patterns. Spaced repetition. Worth paying for.Paid
+  📱BabbelStructured lessons, better than Duolingo for Danish grammar depth.Paid
+  🦉DuolingoGood for beginner vocabulary and building habits. Not sufficient alone.Free/Paid
+  📖OrdbogenBest Danish dictionary app. Also has phrases and grammar explanations.Free
+  🎬DR.dkFree Danish TV with Danish subtitles. Watch the news, watch dramas.Free
+  🎙️Slow Danish PodcastReal Danish slowed down. Transcripts included. Perfect for intermediates.Free
+
+
+---
+
+# Chapter 12: Culture & Social Life — Becoming Part of Something
+
+Source: https://ankommer.org/chapter/culture-and-social-life.html
+
+Hygge, Janteloven, the 4pm finish — Danish culture is full of invisible rules that make all the difference once you understand them.
+
+## Hygge — What It Actually Means (It's Not Just Candles)
+
+**Hygge** (pronounced roughly "hoo-ga") is a Danish concept with no direct English translation. It describes a quality of presence — a cosy, convivial atmosphere where people feel safe, relaxed, and connected. It is both a noun and an adjective: you can have hygge, or something can be hyggeligt.
+
+**What hygge looks like in practice:**
+
+  - A dinner party where phones stay on silent and no one rushes to leave
+
+  - Friday afternoon at the office with cake and coffee (fredagskage)
+
+  - A rainy Sunday with thick socks, candles lit, and nowhere to be
+
+  - Playing board games with neighbours you've known for three years
+
+**What hygge is not:**
+
+  - It is not performative. Danes will immediately notice if you are trying too hard to create it.
+
+  - It is not expensive. The Danes with the most hygge in their lives are often the ones doing the simplest things.
+
+  - It is not passive — it requires presence and genuine engagement with the people around you.
+
+> **For newcomers:** The fastest way to understand hygge is to be invited to a Danish home for dinner and arrive on time, put your phone away, and stay until the host signals the evening is ending. You will feel it.
+
+Denmark consistently ranks among the world's happiest countries (World Happiness Report). Researchers partly attribute this to the strong cultural emphasis on quality social time — hygge is infrastructure for wellbeing.
+
+## Janteloven — The Unwritten Law of Danish Equality
+
+**Janteloven** (the Law of Jante) is a cultural concept described by Danish-Norwegian author Aksel Sandemose in his 1933 novel. It describes a set of unwritten social norms that emphasise collective equality over individual achievement.
+
+**The ten rules of Janteloven (summarised):**
+
+  - You shall not think you are anything special.
+
+  - You shall not think you are as good as us.
+
+  - You shall not think you are smarter than us.
+
+  - You shall not convince yourself that you are better than us.
+
+  - You shall not think you know more than us.
+
+  - You shall not think you are greater than us.
+
+  - You shall not think you are good for anything.
+
+  - You shall not laugh at us.
+
+  - You shall not think that anyone cares about you.
+
+  - You shall not think that you can teach us anything.
+
+**In practice, this means:**
+
+  - Bragging about your salary, car, or achievements is considered very bad taste
+
+  - Danes rarely introduce themselves with their titles ("I'm a doctor / director / professor")
+
+  - Status displays (luxury goods, name-dropping) are met with quiet social disapproval
+
+  - This is also why Danes can seem reserved when you first meet them — effusive self-promotion is culturally uncomfortable
+
+> **For newcomers:** Don't confuse Janteloven with low confidence. Danes are assertive, direct, and proud — they just express it collectively rather than individually. Lead with curiosity about others, not your own CV.
+
+Younger Danes increasingly critique Janteloven as an obstacle to ambition and entrepreneurship. You'll find its influence varies significantly by age group and industry.
+
+## How to Make Danish Friends — The Real Guide
+
+Many expats in Denmark describe Danes as friendly but hard to befriend. This is accurate — and it has nothing to do with you personally.
+
+**Understanding Danish friendship dynamics:**
+
+  - **Danes already have their friends.** Most Danes have known their closest friends since school or university. Their social calendar is often full. This is not exclusion — it's just a different social structure.
+
+  - **Danes warm slowly, but deeply.** A Danish friendship that takes a year to form will last for decades. They are not interested in superficial connections.
+
+  - **Shared activity is the entry point.** Danes find it easier to befriend people through doing things together — sport, volunteering, course work — than through pure socialising.
+
+**Proven strategies for building a social life in Denmark:**
+
+  - **Join a forening (association).** Denmark has approximately 100,000 voluntary associations — sports clubs, music ensembles, debating societies, gardening clubs. This is the single most effective way to meet Danes as a peer. Find clubs at [dgi.dk](https://www.dgi.dk) or your municipality's website.
+
+  - **Take the free Danish classes.** You'll meet other newcomers AND start being able to interact with Danes on their own terms.
+
+  - **Attend frivillighedsmesser (volunteer fairs).** Volunteering is highly valued in Danish culture. Showing up to volunteer places you on equal social footing.
+
+  - **Accept every invitation for the first year.** Danes invite rarely but sincerely. Say yes to everything in the first 12 months — even if it sounds dull.
+
+  - **Bring food to the workplace.** Bringing home-baked goods or food from your culture to share at work is one of the fastest social shortcuts in Danish office culture.
+
+> **Internations.org and meetup.com** have active expat communities in Copenhagen, Aarhus, and Odense. These are excellent for immediate social connection while your Danish friendships develop.
+
+## Foreningsliv — Denmark's Hidden Social Infrastructure
+
+Denmark has approximately **100,000 voluntary associations (foreninger)** — more per capita than almost any country on earth. Sport clubs, choirs, political parties, parent associations, model train clubs, chess societies. If something can be done collectively in Denmark, there is almost certainly an association for it.
+
+**Why this matters to you:** The forening is how Danish society organises community life. It is also the primary social ladder for newcomers — joining one immediately gives you a structured reason to see the same people regularly, which is the foundation of Danish friendship.
+
+**Types of foreninger worth knowing:**
+
+  - **Idrætsforeninger** — sports clubs. Football, handball, swimming, running, cycling, badminton. Most are family-friendly and affordable (DKK 500–2,000/year membership). [Find clubs via DGI](https://www.dgi.dk)
+
+  - **Musikforeninger / Kor** — choirs and music groups. Extremely common. Singing together is one of Denmark's great social traditions.
+
+  - **Grundejerforeninger / Beboerforeninger** — homeowner and tenant associations. If you live in a neighbourhood, you may automatically be a member and have a voice in local decisions.
+
+  - **Frivilligforeninger** — volunteer organisations. The Red Cross Denmark ([rodekors.dk](https://www.rodekors.dk)) and many local organisations always need volunteers.
+
+**ForeningsPortalen:** Your municipality likely has a portal listing all local associations. Search "[municipality name] foreningsportal" to find yours.
+
+## Danish Holidays, Traditions & Cultural Calendar
+
+Understanding Danish cultural moments will help you participate — and avoid being the colleague who booked a meeting on a major holiday.
+
+
+**Date / Period** | **Holiday / Tradition** | **What actually happens** |
+
+**January** | Nytårsforsæt | New Year's resolutions taken seriously. Gyms peak. |
+
+**February/March** | Fastelavn | Danish carnival. Children dress up and beat a barrel (slå katten af tønden). Fastelavn buns (fastelavnsboller) everywhere. |
+
+**April** | Påske (Easter) | 4-day weekend (Thu–Mon). Danes go to summer houses. Chocolate eggs, daffodils, yellow decorations. |
+
+**May 4–5** | Liberation Day | Candles in windows at 10pm on May 4 — commemorating the end of WWII occupation in 1945. Deeply meaningful to Danes. |
+
+**June 5** | Grundlovsdag | Danish Constitution Day — public holiday. Political speeches in parks. |
+
+**June 23** | Sankt Hans Aften | Midsummer. Bonfires on beaches across Denmark. Effigy of a witch burned (witch goes to Bloksbjerg). One of the most beautiful Danish traditions. |
+
+**July–Aug** | Sommerferie | Denmark essentially pauses. Offices empty. Danes go to their sommerhus (summer house). Plan no important meetings in July. |
+
+**November** | Mortensaften (Nov 10) | Feast of Saint Martin. Danes eat roast duck. One of Denmark's most beloved unofficial food holidays. |
+
+**December** | Jul (Christmas) | Celebrated on December 24 (Juleaften), not the 25th. Families hold hands and walk around the Christmas tree. Æbleskiver, gløgg, risalamande with hidden almond. |
+
+**Public holidays (helligdage) where everything closes:** New Year's Day, Maundy Thursday, Good Friday, Easter Monday, Ascension Day, Whit Monday, Constitution Day (June 5, partial), Christmas Dec 24 (early close), Dec 25 and Dec 26. Note: **Store Bededag (Great Prayer Day) was abolished on 1 January 2024** — it is no longer a public holiday. Workers received a small annual salary increase as compensation.
+
+## Danish Food Culture — What to Know and What to Try
+
+Danish food culture has undergone a revolution since Noma put Copenhagen on the global culinary map. But everyday Danish food life is distinct from fine dining.
+
+**The daily food rhythm:**
+
+  - **Morgenmad (breakfast):** Typically light — rugbrød (dark rye bread) with cheese or leverpostej (liver pâté), or yogurt with müsli. Danes eat breakfast at home, rarely in cafes.
+
+  - **Frokost (lunch):** The main working-day meal. Often smørrebrød — open-faced rye bread with toppings (sild/herring, roast beef, egg, shrimp). Many workplaces have a shared lunch arrangement (kantineordning).
+
+  - **Aftensmad (dinner):** Usually 6–7pm. The main hot meal. Often involves potatoes (kartofler) — Danes consume more potatoes per capita than almost any EU country.
+
+**Things to try:**
+
+  - **Smørrebrød** — the open sandwich. Essential Danish cultural experience.
+
+  - **Rugbrød** — dense, dark, sour rye bread. Surprisingly filling and nutritious.
+
+  - **Flæskesteg** — roast pork with crackling. The national dish.
+
+  - **Æbleskiver** — small spherical pancake-balls eaten with powdered sugar and jam, Christmas season.
+
+  - **Wienerbrød** — what the rest of the world calls a "Danish pastry." Get one from a local baker, not a supermarket.
+
+**Supermarkets:** Netto and Rema 1000 are the cheapest. Lidl and Aldi are also very good value. Meny is mid-range with better quality produce. (Note: Irma, the historic premium chain, was discontinued by Coop in 2024 — its stores rebranded mostly to Brugsen.) **Discount tip:** Use the **Too Good To Go** app (widely used in Denmark) to buy surplus food from bakeries and restaurants at 60–70% discount.
+
+
+---
+
+# Chapter 13: Dating & Relationships — Love Under Northern Lights
+
+Source: https://ankommer.org/chapter/dating-and-relationships.html
+
+Dating in Denmark is direct, equal, and refreshingly honest. Here's the cultural roadmap.
+
+## How Dating Works in Denmark — The Cultural Code
+
+Dating in Denmark operates by norms that are distinctly different from most other cultures. Understanding them will save you significant confusion.
+
+**The big differences:**
+
+  - **Radical equality.** Danish dating is genuinely egalitarian. Anyone can ask anyone out. Paying for the other person is not expected — splitting the bill is standard from the first date. Don't read anything into who pays; it's neutral territory.
+
+  - **Directness over games.** Danes do not play hard-to-get in the way common in other cultures. If someone is interested, they will usually say so relatively quickly. If they're not interested, they'll say that too — or simply stop replying, which is also understood to mean no.
+
+  - **Alcohol as social lubricant.** Many Danes find it easier to make the first move after some drinks. Danish bar culture is a genuine dating environment, especially Thursday–Saturday evenings.
+
+  - **Slow escalation into exclusivity.** There is often no formal "defining the relationship" moment in Denmark. You may date someone for several months before either person brings up exclusivity. Don't interpret slow commitment as disinterest.
+
+  - **Gender roles are very flat.** Assumptions about who drives, who plans, who earns more — all irrelevant. Expect full equality in how dates are organised, paid, and planned.
+
+**Where Danes actually meet people:**
+
+  - Through existing social circles (friends of friends is the most common route)
+
+  - At work — workplace romances are more accepted in Denmark than in many countries
+
+  - Apps: **Tinder** and **Bumble** are the dominant apps in Denmark. Dating.dk is a popular Danish-language platform.
+
+  - At sports clubs, music events, and volunteer activities
+
+## Family Reunification — Bringing Your Partner to Denmark
+
+If you are in Denmark and want to bring a foreign partner or spouse, the process is called **familiesammenføring** (family reunification). The rules are strict and should be understood early.
+
+**Key requirements (2025):**
+
+  - **You must be at least 24 years old** (both you and your partner)
+
+  - **You must be able to support your partner financially** — specifically, you must not have received certain social benefits in the 3 years before the application
+
+  - **You must have an attachment to Denmark** that is at least as strong as your combined attachment to any other country (the "tilknytningskrav" — attachment requirement). This is assessed holistically.
+
+  - **You must have accommodation** of at least 20m² per person living in the dwelling
+
+  - **You must post a financial guarantee (sikkerhedsstillelse)** of approx. DKK 57,000 (2025) — halved by the July 2024 reform from the previous DKK ~113,000. Released in stages if your partner does not draw on certain public benefits. [Source: nyidanmark.dk →](https://www.nyidanmark.dk/en-GB/Words-and-concepts/US/Familie/Collateral-guarantee---Reduction-and-release)
+
+**EU/EEA citizens:** If you are an EU citizen exercising treaty rights in Denmark (working, studying, or being self-employed), you have the right to bring your partner under EU free movement rules. The process is simpler — apply for an EU residence document at [nyidanmark.dk](https://www.nyidanmark.dk).
+
+**Processing time:** Typically 6–12 months from application. Your partner can apply for permission to work while the application is being processed.
+
+[→ Family reunification guide (nyidanmark.dk, English)](https://www.nyidanmark.dk/en-GB/You-want-to-apply/Family/Spouse-or-cohabitant)
+
+## LGBTQ+ Life in Denmark — One of the World's Most Equal Countries
+
+Denmark was the first country in the world to legally recognise same-sex partnerships, in 1989. Same-sex marriage has been legal since 2012. Denmark consistently ranks among the world's top 3 countries for LGBTQ+ legal equality and social acceptance.
+
+**Legal protections:**
+
+  - Same-sex marriage is fully equal to heterosexual marriage in all legal respects
+
+  - Same-sex couples have full adoption rights
+
+  - Gender recognition is self-declared (since 2014 for adults, 2017 for minors with parental consent) — no surgical requirement, no psychiatric diagnosis needed
+
+  - Discrimination on the basis of sexual orientation or gender identity is illegal in employment, housing, and services
+
+  - Hate crimes based on sexual orientation are subject to enhanced penalties
+
+**Social landscape:**
+
+  - **Copenhagen Pride** is held annually in August and draws approximately 300,000 participants
+
+  - **LGBT+ Danmark** ([lgbt.dk](https://www.lgbt.dk)) is the main national organisation and a valuable resource for newcomers
+
+  - LGBT+ community spaces are concentrated in Copenhagen's Vesterbro and Nørrebro neighbourhoods, but acceptance is generally high across the country
+
+> While Denmark is highly accepting, individual experiences may vary by region and community. Rural areas and some religious communities may be more conservative. The legal framework, however, is among the strongest in the world.
+
+## Living Together — Cohabitation, Samlevende Status & Legal Rights
+
+Moving in together in Denmark has legal implications worth understanding — especially for unmarried couples.
+
+**Samlevende (cohabiting) status:**
+
+  - There is no automatic legal recognition of cohabiting relationships in Denmark — unlike marriage or registered partnership
+
+  - This means: if one partner dies without a will, the other has **no automatic inheritance rights** under Danish law
+
+  - This also means: if you separate, property you've purchased jointly may require legal intervention to divide
+
+**How to protect yourself as an unmarried couple:**
+
+  - **Samlevende-erklæring (cohabitation agreement):** A notarised document stating that you are life partners. Allows some tax benefits and rights similar to married couples in specific areas.
+
+  - **Testament (will):** Essential if you want your partner to inherit. Without it, your estate goes to blood relatives.
+
+  - **Udvidet samlevendepension:** Ask your pension provider to add your partner — most workplace pension schemes allow it for a small fee.
+
+**Registered partnership vs. marriage:** Registered partnership (registreret partnerskab) was the pre-2012 equivalent of marriage for same-sex couples. New registrations are rarely done now — marriage is fully open and equal for all couples.
+
+**Children in unmarried relationships:** The father must acknowledge paternity (faderskabserklæring) — this happens automatically at the hospital at birth if both parents are present. Both parents have full parental rights (forældremyndighed) regardless of marital status.
+
+## Divorce & Separation in Denmark — How It Works
+
+Denmark has one of the world's simplest and most civilised divorce processes.
+
+**The process:**
+
+  - **Immediate divorce (øjeblikkelig skilsmisse):** If both spouses agree and there are no children under 18, you can apply for immediate divorce online at [familieretshuset.dk](https://www.familieretshuset.dk). Processing takes a few weeks.
+
+  - **Separation first:** If you have children or can't agree on terms, you typically separate (separation) for 6 months before divorce is granted.
+
+  - **Property:** Denmark operates a joint property system by default (formuefællesskab). Assets acquired during marriage are split equally unless you have a prenuptial agreement (ægtepagt) or there were gifts/inheritances.
+
+  - **Children:** Denmark prioritises shared parental authority (fælles forældremyndighed). The default is shared custody.
+
+**Familieretshuset** is the Danish Family Law Agency — they handle divorce, separation, custody, and child support. Their website has English guidance.
+
+[→ Familieretshuset (English)](https://www.familieretshuset.dk/english)
+
+
+---
+
+# Chapter 14: Mental Health & Wellbeing — The Inner Journey
+
+Source: https://ankommer.org/chapter/mental-health-and-wellbeing.html
+
+Moving countries is one of the hardest things a human being can do. Your feelings are valid. Help is available.
+
+## The Immigrant Experience — What No One Warns You About
+
+Immigration is sold as adventure, opportunity, and new beginnings. All of those things are true. But it is also, consistently, one of the most psychologically demanding experiences a person can go through — and that part is rarely acknowledged.
+
+**The stages most immigrants experience:**
+
+  - **The honeymoon phase (0–3 months):** Everything is new and exciting. Denmark is charming, people seem friendly, you feel energised. This phase can mask underlying stress.
+
+  - **Culture shock (3–12 months):** The novelty fades. You realise you don't understand the social rules. You're lonely. Simple tasks feel exhausting. You miss home in ways you didn't expect — not just people, but sounds, smells, the feeling of being understood without effort.
+
+  - **Adjustment (1–2 years):** You start to develop routines, friendships, competence in the language. Life starts to feel normal again.
+
+  - **Integration (2+ years):** You begin to feel genuinely comfortable — but also sometimes caught between two cultures, not fully belonging anywhere.
+
+> **This is normal.** Researchers call it the U-curve of adjustment. The dip in the middle is expected and does not mean you made the wrong decision. It means you are doing something hard.
+
+**Signs you may need more support than normalising:** Persistent sleep problems, loss of appetite, inability to find pleasure in things you used to enjoy, frequent crying, thoughts of self-harm. These are signals to reach out for professional support — which Denmark makes genuinely accessible.
+
+## The Danish Winter — SAD, Darkness & How Danes Cope
+
+Denmark's winter is a genuine psychological challenge for most people who arrive from sunnier climates. Copenhagen receives only **1.7 hours of daylight on the winter solstice** — compared to 17+ hours in summer. By November, it's dark by 4pm.
+
+**Seasonal Affective Disorder (SAD):**
+
+SAD is a form of depression triggered by reduced light exposure. It affects an estimated 3–6% of the Danish population clinically, with many more experiencing sub-clinical "winter blues." Symptoms include low energy, increased sleep, carbohydrate cravings, difficulty concentrating, and low mood from October to March.
+
+**How Danes cope (evidence-based strategies):**
+
+  - **Light therapy (lysterapi):** A bright light lamp (lysbehandlingslampe) of 10,000 lux used for 20–30 minutes each morning is clinically proven to reduce SAD symptoms. Available at pharmacies (apotek) and online for DKK 500–1,500. This is genuinely one of the most effective interventions available.
+
+  - **Hygge as mental health tool:** The Danish emphasis on cosy social gatherings is partly a cultural adaptation to dark winters. Deliberately creating warm social environments counters isolation.
+
+  - **Exercise outdoors regardless of weather:** Danes cycle and walk in rain and cold. This is not stubbornness — it's a mental health strategy. Even 20 minutes of outdoor light during daylight hours improves mood.
+
+  - **Vitamin D supplementation:** Denmark's latitude means most people become Vitamin D deficient by October. The Danish Health Authority recommends Vitamin D supplements (10 micrograms/day) for all Danes from October to April. Widely available at pharmacies and supermarkets.
+
+> **Practical tip:** Buy a daylight lamp in September before you feel you need it. By the time SAD symptoms arrive, the research shows you've already been exposed to weeks of insufficient light.
+
+## Free Mental Health Support in Denmark — What's Available
+
+Denmark's healthcare system includes substantial mental health support, much of it free or heavily subsidised.
+
+**Your GP (praktiserende læge) is the entry point:**
+
+For most mental health concerns, you start with your GP. They can:
+
+  - Prescribe medication for depression, anxiety, and other conditions
+
+  - Refer you to a psychologist with a blue referral card (**psykologhenvisning**), which entitles you to subsidised sessions
+
+  - Refer you to the psychiatric outpatient system (psykiatrisk ambulatorium) for more complex needs
+
+**If you're 18–24: free psychologist sessions (no co-pay).**
+
+Since 1 July 2021, all Danes and residents **aged 18–24** can get up to **12 free psychologist sessions per referral** for mild to moderate anxiety or depression — with no out-of-pocket cost. Get a GP referral, then book through any psykolog with an ydernummer. This is one of the best free mental-health programmes in Europe; many young newcomers don't know it exists.
+
+**If you're 25 or older: subsidised psychologist sessions (ydernummer):**
+
+With a GP referral, you pay approximately **DKK 385–530 per session** (you pay ~50% of the full fee, the state covers the rest). This applies to a limited set of conditions including mild to moderate depression, anxiety, post-traumatic stress, and adjustment disorders — which covers most immigration-related mental health challenges.
+
+**Reality check on waiting times:** public psychiatric care can have waits of 6–18 months. For urgent needs, private (paid) sessions through Mindler, Kry, or Doctolib-listed psychologists are typically available within a few days.
+
+**Crisis lines (available 24/7):**
+
+  - **Livslinjen:** 70 201 201 — Danish-language crisis support line, anonymous and free
+
+  - **Snak om det:** 0045 9042 6555 — Danish mental health chat
+
+  - **The Emergency:** 112 (medical emergency) or go to the nearest akutmodtagelse (emergency department) if in immediate crisis
+
+**English-language therapy:**
+
+  - Many private psychologists in Copenhagen and other larger cities offer English sessions
+
+  - **Expat Mental Health Denmark** — specialist support for international residents
+
+  - Online therapy platforms (BetterHelp, Nuna) are available and widely used
+
+[→ Livslinjen — crisis support](https://www.livslinjen.dk)
+
+## Finding Your Community — The Loneliness Antidote
+
+Loneliness is one of the most common mental health challenges for newcomers to Denmark. It is not a personal failing — it is a structural consequence of leaving your existing social network behind and entering a society with a different social calendar.
+
+**Active strategies that work:**
+
+  - **International House Copenhagen** ([ihcph.kk.dk](https://ihcph.kk.dk)) runs free social events, counselling, and networking specifically for newcomers. If you're in Copenhagen, visit in your first month.
+
+  - **InterNations** ([internations.org](https://www.internations.org/denmark-expats)) has active communities in Copenhagen, Aarhus, and Odense. Paid membership unlocks all events, but free access to some is available.
+
+  - **Meetup.com** has active groups for hiking, language exchange, board games, tech, and more.
+
+  - **Reddit r/Denmark and r/Copenhagen** are surprisingly helpful communities — especially for "is this normal?" questions about Danish culture.
+
+  - **Facebook groups:** "Expats in Copenhagen", "Foreigners in Aarhus" and equivalent city groups are active and welcoming.
+
+**Volunteering as a loneliness solution:** Volunteering creates structured contact with consistent people over time — the precise formula for friendship formation. The Red Cross ([rodekors.dk](https://www.rodekors.dk/bliv-frivillig)) and FrivilligDanmark ([frivilligdanmark.dk](https://www.frivilligdanmark.dk)) have placement services.
+
+> **Set a 12-month expectation.** Research on immigrant social integration suggests it typically takes 12–18 months to build a genuine social network in a new country. If you're at month 3 and still lonely — that's not failure, that's schedule.
+
+## Work Stress, Burnout & Your Rights Under Danish Law
+
+Denmark's work culture is designed to protect wellbeing — but burnout is still a significant problem, particularly among high-achieving immigrants trying to prove themselves.
+
+**Your rights when work affects your health:**
+
+  - **Sick leave (sygedagpenge):** If work stress makes you clinically unwell, you can take sick leave. Your employer pays full salary for the first 30 days. The state (via your municipality) pays sygedagpenge thereafter (up to DKK 4,865/week, 2025).
+
+  - **Arbejdstilsynet (the Danish Working Environment Authority):** If your workplace creates an unhealthy environment — excessive pressure, harassment, lack of breaks — you can file a complaint. Anonymous reports are accepted. They conduct inspections and have authority to fine employers. [at.dk](https://at.dk)
+
+  - **Occupational psychology support:** Some larger employers have an employee assistance programme (EAP) with free counselling sessions. Check with your HR department.
+
+**Burnout is recognised medically in Denmark:** Unlike in some countries, Danish GPs take stress-related illness seriously. A burnout diagnosis typically leads to a structured sick-leave plan, a gradual return-to-work programme, and referral to a psychologist. You will not be judged for this.
+
+**If you're struggling with work:** Your union (if you're a member) has free legal and welfare support. Your local municipality has a "jobcenter" that can support you through periods of inability to work.
+
+
+---
+
+# Chapter 15: Rights & Advocacy — Know What You're Entitled To
+
+Source: https://ankommer.org/chapter/rights-and-advocacy.html
+
+Denmark has strong legal protections for everyone — regardless of nationality or permit type. Know your rights.
+
+## Anti-Discrimination Law in Denmark — What's Illegal
+
+Denmark has several overlapping laws that prohibit discrimination. Together, they cover most situations a newcomer might encounter.
+
+
+**Law** | **What it covers** | **Protected characteristics** |
+
+**Ligebehandlingsloven**
+(Equal Treatment Act) | Employment | Race, ethnicity, religion, belief, disability, age, sexual orientation |
+
+**Forskelsbehandlingsloven**
+(Anti-Discrimination Act) | Employment (broader) | Race, colour, religion, political opinion, sexual orientation, age, disability, national/social origin |
+
+**Straffeloven § 266b**
+(Penal Code) | Public statements | Criminalises public incitement to hatred based on race, colour, national origin, religion, sexual orientation |
+
+**Lov om etnisk ligebehandling** | Goods, services, housing, social protection | Race and ethnic origin |
+
+**If you face discrimination:**
+
+  - **Document everything** — save messages, emails, take notes with dates and witnesses
+
+  - **Contact Ligebehandlingsnævnet** (the Equal Treatment Board) — free, independent complaints body. You can file a complaint within 1 year of the incident.
+
+  - **Contact your union** if the discrimination is employment-related
+
+  - **Contact a legal aid office (retshjælp)** for advice before taking further action
+
+[→ Ligebehandlingsnævnet — Equal Treatment Board (English)](https://www.ligebehandlingsnaevnet.dk/english)
+
+## Tenant Rights — Your Housing is Protected by Law
+
+Denmark has some of Europe's strongest tenant protections. Understanding them can save you significant money and stress.
+
+**Key rights as a tenant:**
+
+  - **Rent control:** In most older properties (built before 1992), rent increases are regulated and must be approved by the local rent tribunal (huslejenævn). Your landlord cannot simply raise rent whenever they like.
+
+  - **Notice periods:** Your landlord must give you at least 3 months' notice to terminate a tenancy — often longer, depending on the type of property and how long you've lived there. Your notice to leave is typically 1 month.
+
+  - **Deposit (depositum) limits:** Landlords can charge a maximum of 3 months' rent as deposit, and maximum 3 months' advance rent. The total cannot exceed 6 months' combined rent.
+
+  - **Condition on move-in:** The landlord must provide a move-in report (indflytningsrapport) within 2 weeks of your move-in. If they don't, they cannot charge you for damages when you leave.
+
+  - **Maintenance:** The landlord is responsible for major maintenance. You are responsible for interior maintenance (painting, minor repairs) unless your contract says otherwise.
+
+**If you have a dispute with your landlord:**
+
+  - Contact **Huslejenævnet** (Rent Tribunal) in your municipality — free to use, legally binding decisions. This is the first step for any rent dispute.
+
+  - Contact **Lejerbo** or **Lejernes Landsorganisation (LLO)** — national tenant organisations that provide legal advice and representation.
+
+[→ Lejernes Landsorganisation — tenant advice (Danish)](https://www.lejernet.dk)
+
+## Your Rights When Dealing with Danish Police
+
+Denmark's police (Politiet) generally have a good reputation for professionalism and restraint. But knowing your rights matters regardless.
+
+**If you are stopped by police:**
+
+  - **You must identify yourself** — you are legally required to provide your name and address when asked by police. Carry your ID or residence permit.
+
+  - **You have the right to remain silent** beyond identification — you do not have to answer any other questions.
+
+  - **Police can search you** without specific cause in designated "search zones" (visitationszoner) in certain high-crime areas — a controversial Danish law. They must be polite and non-discriminatory in doing so.
+
+  - **If you are arrested:** You have the right to have a lawyer present within 24 hours. You have the right to notify your embassy or a family member. Ask explicitly for both.
+
+  - **If you do not speak Danish:** You have the right to an interpreter. Request one.
+
+**Complaints against police:** File with the **Den Uafhængige Politiklagemyndighed (DUP)** — the independent Police Complaints Authority. They are genuinely independent and investigate all complaints. [politiklagemyndigheden.dk](https://www.politiklagemyndigheden.dk/english)
+
+## The Danish Ombudsman — When Government Gets It Wrong
+
+The **Folketingets Ombudsmand** (Parliamentary Ombudsman) is an independent institution that investigates complaints about Danish public authorities — including immigration authorities, municipalities, hospitals, and police.
+
+**When to contact the Ombudsman:**
+
+  - A government authority has treated you unfairly or illegally
+
+  - A decision was made without proper process
+
+  - You have not received an answer within a reasonable time
+
+  - You believe a public employee behaved improperly
+
+**The process:**
+
+  - You must first have exhausted all internal complaint mechanisms (complained to the authority itself, then to any superior authority)
+
+  - Submit your complaint at [ombudsmanden.dk](https://www.ombudsmanden.dk) — there is an English section
+
+  - The Ombudsman investigates independently and can recommend that an authority reconsider its decision
+
+> The Ombudsman cannot overturn decisions — but authorities almost always follow the Ombudsman's recommendations in practice, because non-compliance is publicly reported to Parliament.
+
+## Free Legal Aid in Denmark — Getting Help You Can Afford
+
+Legal help in Denmark is accessible even if you have a limited income, through several routes.
+
+**Retshjælp (civil legal aid):**
+
+  - Denmark has a network of nonprofit legal aid offices (retshjælpskontorer) offering free or low-cost legal advice to people on low incomes
+
+  - Most provide advice on tenancy, employment, family law, and immigration
+
+  - Find your nearest office at [advokatsamfundet.dk](https://www.advokatsamfundet.dk) (Danish Bar Association)
+
+**Free legal advice from lawyers (advokatvagt):**
+
+Many municipalities and libraries host free "lawyer on duty" sessions (advokatvagt) where you can get 30–60 minutes of free legal advice from a qualified lawyer. Search "[your municipality] advokatvagt" for schedules.
+
+**Court-appointed lawyer (beskikket forsvarsadvokat):**
+
+If you are charged with a crime and cannot afford a lawyer, the court will appoint one for you at state expense. This is a constitutional right.
+
+**Specific organisations for immigrants:**
+
+  - **Refugees Welcome Denmark** — legal advice for refugees and asylum seekers
+
+  - **Dansk Flygtningehjælp (DRC — Danish Refugee Council):** [drc.ngo/denmark](https://www.drc.ngo/denmark) — provides legal counselling for people with protection status
+
+  - **Indvandrer Kvindecentret (LOKK):** Legal support for immigrant women in vulnerable situations
+
+[→ Find free legal aid (Advokatsamfundet)](https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp)
+
+## Permit Renewals, Appeals & Protecting Your Status
+
+Your right to stay in Denmark is the foundation of everything else. Protecting it proactively is essential.
+
+**Permit renewals — critical rules:**
+
+  - **Apply before your permit expires.** Apply at least 1 month before expiry. Your right to stay is maintained during processing if you applied in time. If you miss the deadline, you are technically in violation and your employer may need to stop paying you.
+
+  - **Notify changes promptly.** If you change employer, address, or civil status, notify the immigration authorities (Styrelsen for International Rekruttering og Integration — SIRI) within the required timeframe. Failure to do so can trigger permit problems.
+
+  - **Keep all documentation.** Tax returns, payslips, employment contracts, tenancy agreements — keep organised files of everything. You may need to prove continuous legal residence for permanent residency or citizenship.
+
+**If your application is rejected:**
+
+  - You have the right to appeal to the Immigration Appeals Board (Udlændingenævnet) within the specified deadline (usually stated in the decision letter)
+
+  - You may continue to stay in Denmark during the appeal process if you applied before your permit expired
+
+  - Seek legal advice immediately — the Danish Refugee Council and legal aid offices can advise on appeal prospects
+
+**SIRI — the Danish Agency for International Recruitment and Integration:** Your main immigration authority for work and family permits. Their website has English guidance. [siri.dk/en](https://www.siri.dk/en)
+
+**Udlændingenævnet — the Immigration Appeals Board:** Independent body for appeals on immigration decisions. [udlaendingenaevnet.dk/en](https://www.udlaendingenaevnet.dk/en)
+

@@ -28,3 +28,6 @@ User-agent: Applebot
 Allow: /
 
 Sitemap: https://ankommer.org/sitemap.xml
+
+# AI / LLM crawlers — see /llms.txt for a curated map and /llms-full.txt
+# for the complete chapter corpus as clean markdown

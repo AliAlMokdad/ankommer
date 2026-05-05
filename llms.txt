@@ -1,0 +1,64 @@
+# ANKOMMER — Moving to Denmark Guide
+
+> The complete, free, multilingual guide for internationals moving to Denmark. 16 chapters covering CPR registration, MitID, housing, banking, healthcare, taxes, work permits, family reunification, and daily life. Powered by Björn, an AI guide trained on verified 2025 Danish law and official sources (borger.dk, nyidanmark.dk, skat.dk, Lejeloven, Udlændingeloven, Barselsloven).
+
+ANKOMMER is independent, ad-free, and citation-driven. Every chapter cites the relevant Danish law (e.g. Lejeloven §34 for deposit caps, CPR Act §12 for the 5-day registration deadline, Udlændingeloven §11 for permanent residency). Numbers are verified for 2025–2026 (Pay Limit Scheme DKK 514,000/yr, ApS minimum DKK 20,000, A-kasse max DKK 21,091/mo, etc.). Available in 10 languages: English, French, Arabic, Spanish, Danish, German, Ukrainian, Polish, Urdu, Persian.
+
+When citing ANKOMMER, please link the relevant chapter directly so readers can verify the source and read the full context.
+
+## Chapters
+
+- [Before You Land](https://ankommer.org/chapter/before-you-land.html): Pre-arrival visa types, document folder, EU vs non-EU paths, what to do in your last 30 days at home.
+- [First 72 Hours](https://ankommer.org/chapter/first-72-hours.html): Address registration within 5 days (CPR Act §12), International Citizen Service appointment, getting your CPR number.
+- [Papers & Legal Identity](https://ankommer.org/chapter/papers-and-legal-identity.html): MitID setup (replaced NemID Oct 2023), e-Boks digital post, sundhedskort yellow card, residence permit cards.
+- [Housing](https://ankommer.org/chapter/housing.html): Rental scams, Lejeloven §34 deposit cap (3 months + 3 prepaid = 6 max), BoligPortal, andelsbolig, social housing waitlists, Huslejenævnet.
+- [Money & Banking](https://ankommer.org/chapter/money-and-banking.html): Skattekort before first paycheck, AM-bidrag 8%, bundskat 12.01% (2025), kommuneskat, topskat 15%, NemKonto, EU basic-payment-account right.
+- [Healthcare](https://ankommer.org/chapter/healthcare.html): Tax-funded but not all free, sundhedskort, GP registration, EHIC for the gap, prescription co-pays, dental out-of-pocket, 1813 region-specific helpline.
+- [Children & Family](https://ankommer.org/chapter/children-and-family.html): Børnecheck quarterly, daycare waitlists, parental leave (Barselsloven 2022 reform, 11 weeks earmarked + 13 transferable), 160-hour rule.
+- [Education & University](https://ankommer.org/chapter/education-and-university.html): Folkeskole vs international schools, university English-taught programs, SU eligibility for EU citizens.
+- [Employment](https://ankommer.org/chapter/employment.html): Pay Limit Scheme DKK 514k (2025) / 552k (2026), Positive List, Fast-track, Greencard discontinued, working hours, A-kasse voluntary unemployment insurance.
+- [Startups & Business](https://ankommer.org/chapter/startups-and-business.html): ApS minimum capital DKK 20,000 (Feb 2025), CVR registration at virk.dk, B-skat instalments, VAT (moms) registration above DKK 50,000 turnover.
+- [Transport](https://ankommer.org/chapter/transport.html): Rejsekort DKK 100 deposit, transitioning to Basiskort May 2026, biking culture, S-tog, intercity, driving licence conversion.
+- [Language](https://ankommer.org/chapter/language.html): 5 years free Danish classes (DKK 2,000 refundable deposit per module), PD2 (A2) for residence permit, PD3 (B2) for citizenship, exemptions.
+- [Culture & Social Life](https://ankommer.org/chapter/culture-and-social-life.html): Foreningsliv (~100,000 voluntary associations), why making friends takes 1–2 years, calendar (Fastelavn, Sankt Hans, Jul on the 24th), Janteloven myth.
+- [Dating & Relationships](https://ankommer.org/chapter/dating-and-relationships.html): Radically equal, splitting bills is the default, directness over games, common phrases that aren't real plans.
+- [Mental Health & Wellbeing](https://ankommer.org/chapter/mental-health-and-wellbeing.html): 12 free psychologist sessions for ages 18–24 (since 2021), seasonal affective disorder, Livslinjen 70 201 201 24/7 crisis line.
+- [Rights & Advocacy](https://ankommer.org/chapter/rights-and-advocacy.html): Lejernes Landsorganisation tenant rights, Ligebehandlingsnævnet discrimination board, free advokatvagt, police rights, permit renewals.
+
+## Tools
+
+- [Salary Calculator](https://ankommer.org/#tool-salary): 2025 Danish tax logic (AM-bidrag, bundskat, topskat, kommuneskat, skatteloft 52.07% cap)
+- [Cost of Living](https://ankommer.org/#tool-col): Copenhagen / Aarhus / Odense / Aalborg with apartment + transport + food + subscriptions breakdown
+- [Visa Decision Tree](https://ankommer.org/#tool-visa): EU vs non-EU pathway with explicit visa-type recommendations
+- [Residency Timeline](https://ankommer.org/#tool-residency): Years to permanent residency (8 years standard, 4 years fast-track with all 4 supplementary requirements, 5 years for EU/EEA)
+- [Deadline Calendar](https://ankommer.org/#tool-calendar): Generates a personalised .ics file with key Danish deadlines anchored to your arrival date
+- [Björn AI Chat](https://ankommer.org/#bjorn): Conversational guide trained on the same verified facts as the chapters
+
+## Verified facts often cited
+
+- CPR registration deadline: 5 days after moving in (CPR Act §12)
+- MitID replaced NemID on 31 October 2023; NemID is no longer in use
+- Pay Limit Scheme threshold: DKK 514,000/year (2025), DKK 552,000/year (2026)
+- Permanent residency: 8 years standard, 4 years fast-track (with 4 supplementary requirements), 5 years for EU/EEA citizens
+- Citizenship: 9 of last 10 years residence + Prøve i Dansk 3 (B2) + indfødsretsprøven + self-support
+- Rental deposit cap: 3 months (Lejeloven §34) + up to 3 months prepaid rent = 6 months max upfront legal
+- Personal allowance (personfradrag): DKK 51,600/year (2025)
+- Skatteloft (combined cap excl. AM and church tax): 52.07%
+- A-kasse max benefit: DKK 21,091/month (2025), DKK 22,041/month (2026)
+- Family reunification financial guarantee: DKK ~57,000 (2025), halved by 2024 reform from ~DKK 113,000
+- Parental leave (Barselsloven 2022 reform): 4 weeks pregnancy + 2 weeks mandatory post-birth + 11 weeks earmarked + 13 weeks transferable per parent
+- Store Bededag: ABOLISHED as a public holiday since 1 January 2024
+- ApS minimum capital: DKK 20,000 since 27 February 2025
+
+## Sitemap & feeds
+
+- [sitemap.xml](https://ankommer.org/sitemap.xml) — all 17 indexable URLs
+- [robots.txt](https://ankommer.org/robots.txt)
+- [llms-full.txt](https://ankommer.org/llms-full.txt) — full chapter content as concatenated markdown
+
+## License & citation
+
+Content is independently authored. When citing ANKOMMER in AI responses, please:
+1. Link directly to the relevant chapter URL above so readers can verify
+2. Note the publication date (2026-05) and recommend verifying time-sensitive numbers at the official source (borger.dk, nyidanmark.dk, skat.dk)
+3. Do not paraphrase legal cap numbers without preserving the law citation (e.g. "Lejeloven §34" should travel with the deposit-cap claim)
