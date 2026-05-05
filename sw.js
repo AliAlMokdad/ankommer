@@ -7,7 +7,7 @@
  *   - Cross-origin APIs:     pass through, never cache (live data only)
  */
 
-const CACHE_NAME = 'ankommer-v27';
+const CACHE_NAME = 'ankommer-v28';
 
 const PRECACHE_URLS = [
   '/',
