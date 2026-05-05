@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ANKOMMER — Email signature preview</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: #F5F2EC; padding: 40px 20px; margin: 0; color: #1A1A2E; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.16em; color: #5C5C78; margin: 32px 0 8px; }
+  .preview { background: #fff; padding: 28px 32px; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
+  .stage { background: #fff; padding: 20px; border-radius: 8px; margin-top: 8px; border: 1px dashed rgba(0,0,0,0.12); }
+  pre { background: #0F1B2D; color: #E8E3DC; padding: 18px 20px; border-radius: 8px; font-size: 0.78rem; line-height: 1.5; overflow-x: auto; white-space: pre-wrap; word-break: break-word; font-family: 'DM Mono', 'Menlo', monospace; }
+  .copy-btn { background: #C60C30; color: #fff; border: 0; padding: 10px 18px; border-radius: 999px; font-weight: 600; cursor: pointer; font-size: 0.88rem; }
+  .copy-btn:hover { opacity: 0.9; }
+  h1 { font-family: Georgia, 'Playfair Display', serif; font-size: 1.7rem; margin: 0 0 4px; }
+  .sub { color: #5C5C78; font-size: 0.95rem; margin: 0; }
+  details { margin-top: 24px; }
+  summary { cursor: pointer; color: #2E6DA4; font-weight: 600; }
+  ol li { margin: 8px 0; }
+  .pill { display: inline-block; background: rgba(198,12,48,0.08); color: #C60C30; padding: 4px 10px; border-radius: 999px; font-size: 0.78rem; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1><span style="color:#C60C30">A</span>NKOMMER — Email signature</h1>
+  <p class="sub">Drop-in HTML for Gmail / Outlook / Apple Mail. Renders crisply in every major client.</p>
+
+  <div class="label">PREVIEW (this is what recipients see)</div>
+  <div class="preview">
+    <div class="stage">
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  EMAIL SIGNATURE — copy from here                    ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<table cellpadding="0" cellspacing="0" border="0" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1A1A2E;font-size:14px;line-height:1.55;border-collapse:collapse;">
+  <tr>
+    <td style="padding-right:22px;border-right:3px solid #C60C30;vertical-align:top;">
+      <div style="font-family:Georgia,'Playfair Display',serif;font-weight:800;font-size:24px;letter-spacing:0.04em;line-height:1;color:#0F1B2D;margin-bottom:6px;">
+        <span style="color:#C60C30;">A</span>NKOMMER
+      </div>
+      <div style="color:#5C5C78;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;">
+        Moving to Denmark
+      </div>
+    </td>
+    <td style="padding-left:22px;vertical-align:top;">
+      <div style="font-weight:700;font-size:15px;color:#0F1B2D;margin-bottom:2px;">
+        Ali Al Mokdad
+      </div>
+      <div style="color:#5C5C78;font-size:13px;margin-bottom:10px;">
+        Founder
+      </div>
+      <div style="font-size:13px;color:#1A1A2E;">
+        <a href="mailto:partnerships@ankommer.org" style="color:#C60C30;text-decoration:none;font-weight:600;">partnerships@ankommer.org</a><br>
+        <a href="https://ankommer.org" style="color:#1A1A2E;text-decoration:none;">ankommer.org</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.linkedin.com/in/ali-al-mokdad/" style="color:#1A1A2E;text-decoration:none;">LinkedIn</a>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding-top:12px;">
+      <div style="font-style:italic;color:#5C5C78;font-size:12px;line-height:1.5;border-top:1px solid rgba(0,0,0,0.08);padding-top:10px;">
+        The complete, free, multilingual guide for newcomers to Denmark.
+        16 chapters &middot; 10 languages &middot; AI guide Björn.
+      </div>
+    </td>
+  </tr>
+</table>
+<!-- ╚══════════════════════════════════════════════════════╝ -->
+
+    </div>
+  </div>
+
+  <div class="label">PASTE-READY HTML <button class="copy-btn" onclick="copyHTML()">Copy to clipboard</button></div>
+  <pre id="src">&lt;table cellpadding="0" cellspacing="0" border="0" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#1A1A2E;font-size:14px;line-height:1.55;border-collapse:collapse;"&gt;
+  &lt;tr&gt;
+    &lt;td style="padding-right:22px;border-right:3px solid #C60C30;vertical-align:top;"&gt;
+      &lt;div style="font-family:Georgia,'Playfair Display',serif;font-weight:800;font-size:24px;letter-spacing:0.04em;line-height:1;color:#0F1B2D;margin-bottom:6px;"&gt;
+        &lt;span style="color:#C60C30;"&gt;A&lt;/span&gt;NKOMMER
+      &lt;/div&gt;
+      &lt;div style="color:#5C5C78;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;"&gt;
+        Moving to Denmark
+      &lt;/div&gt;
+    &lt;/td&gt;
+    &lt;td style="padding-left:22px;vertical-align:top;"&gt;
+      &lt;div style="font-weight:700;font-size:15px;color:#0F1B2D;margin-bottom:2px;"&gt;
+        Ali Al Mokdad
+      &lt;/div&gt;
+      &lt;div style="color:#5C5C78;font-size:13px;margin-bottom:10px;"&gt;
+        Founder
+      &lt;/div&gt;
+      &lt;div style="font-size:13px;color:#1A1A2E;"&gt;
+        &lt;a href="mailto:partnerships@ankommer.org" style="color:#C60C30;text-decoration:none;font-weight:600;"&gt;partnerships@ankommer.org&lt;/a&gt;&lt;br&gt;
+        &lt;a href="https://ankommer.org" style="color:#1A1A2E;text-decoration:none;"&gt;ankommer.org&lt;/a&gt;
+        &amp;nbsp;·&amp;nbsp;
+        &lt;a href="https://www.linkedin.com/in/ali-al-mokdad/" style="color:#1A1A2E;text-decoration:none;"&gt;LinkedIn&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan="2" style="padding-top:12px;"&gt;
+      &lt;div style="font-style:italic;color:#5C5C78;font-size:12px;line-height:1.5;border-top:1px solid rgba(0,0,0,0.08);padding-top:10px;"&gt;
+        The complete, free, multilingual guide for newcomers to Denmark.
+        16 chapters &amp;middot; 10 languages &amp;middot; AI guide Björn.
+      &lt;/div&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre>
+
+  <details>
+    <summary>How to install in Gmail</summary>
+    <ol>
+      <li>Open <a href="https://mail.google.com/mail/u/0/#settings/general" target="_blank">Gmail Settings → General</a></li>
+      <li>Scroll down to <strong>Signature</strong> → click <strong>+ Create new</strong></li>
+      <li>Name it <em>ANKOMMER</em></li>
+      <li>In the editor, click the rendered preview above (NOT the HTML source) — select all (Ctrl+A or Cmd+A), copy (Ctrl+C / Cmd+C), and paste into the Gmail signature editor. The styling will carry over.</li>
+      <li>Under <strong>Signature defaults</strong>, set ANKOMMER as the default for both <em>FOR NEW EMAILS USE</em> and <em>ON REPLY/FORWARD USE</em></li>
+      <li>Scroll to the bottom and click <strong>Save Changes</strong></li>
+    </ol>
+  </details>
+
+  <details>
+    <summary>How to install in Outlook (web)</summary>
+    <ol>
+      <li>Settings (gear icon) → View all Outlook settings → Mail → Compose and reply</li>
+      <li>Email signature → New signature → name it <em>ANKOMMER</em></li>
+      <li>Copy the rendered preview above and paste into the editor</li>
+      <li>Set as default for new and reply messages → Save</li>
+    </ol>
+  </details>
+
+  <details>
+    <summary>How to install in Apple Mail</summary>
+    <ol>
+      <li>Mail → Settings → Signatures</li>
+      <li>Add new signature → name it <em>ANKOMMER</em></li>
+      <li>Copy the preview above and paste into the signature box</li>
+      <li>Drag the new signature onto your account in the left column</li>
+      <li>Set <em>Choose Signature</em> dropdown at the bottom to <strong>ANKOMMER</strong></li>
+    </ol>
+  </details>
+
+  <p style="margin-top:32px;color:#5C5C78;font-size:0.85rem;">
+    <span class="pill">Tip</span> &nbsp; If you want a slightly more compact signature for replies, tell me — I'll generate a one-line variant.
+  </p>
+
+</div>
+
+<script>
+  function copyHTML() {
+    const html = document.getElementById('src').textContent;
+    navigator.clipboard.writeText(html).then(() => {
+      const btn = document.querySelector('.copy-btn');
+      const orig = btn.textContent;
+      btn.textContent = '✓ Copied';
+      setTimeout(() => { btn.textContent = orig; }, 1800);
+    });
+  }
+</script>
+
+</body>
+</html>
