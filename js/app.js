@@ -411,13 +411,15 @@ const Atmosphere = {
   // WMO weather code → simplified condition class. WMO codes are documented
   // at https://open-meteo.com/en/docs (search "Weather variable documentation").
   classifyWMO: (c) => {
-    if (c === 0) return 'clear';
-    if (c === 1 || c === 2) return 'cloudy';      // mainly clear / partly cloudy
-    if (c === 3) return 'cloudy';                 // overcast
+    // WMO: 0 clear, 1 mainly clear, 2 partly cloudy, 3 overcast.
+    // For the hero look we treat "mainly clear" the same as "clear" so a
+    // typical Danish "sunny but a few clouds" day shows the sun glow.
+    if (c === 0 || c === 1) return 'clear';
+    if (c === 2 || c === 3) return 'cloudy';
     if (c === 45 || c === 48) return 'fog';
     if ((c >= 51 && c <= 67) || (c >= 80 && c <= 82)) return 'rain';
     if ((c >= 71 && c <= 77) || c === 85 || c === 86) return 'snow';
-    if (c >= 95 && c <= 99) return 'rain';        // thunderstorms render as heavy rain
+    if (c >= 95 && c <= 99) return 'rain'; // thunderstorms render as heavy rain
     return 'cloudy';
   },
 
