@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Moving to Denmark — The Complete Guide | ANKOMMER</title>
-  <meta name="description" content="Everything you need to move to Denmark — CPR number, housing, banking, healthcare, work permits and more. Free chapter-by-chapter guide in 10 languages. Powered by Björn, your Viking AI guide." />
+  <title>Moving to Denmark in 2026 — The Complete Guide | ANKOMMER</title>
+  <meta name="description" content="The complete guide to moving to Denmark — CPR number, MitID, housing, banking, healthcare, taxes, work permits, family reunification. 16 chapters, 10 languages, free. Powered by Björn, your AI Viking guide." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://ankommer.org/" />
-  <meta property="og:title"       content="Moving to Denmark — The Complete Guide | ANKOMMER" />
-  <meta property="og:description" content="Everything you need to move to Denmark — CPR number, housing, banking, healthcare, work permits and more. Free chapter-by-chapter guide in 10 languages." />
+  <meta property="og:title"       content="Moving to Denmark in 2026 — The Complete Guide | ANKOMMER" />
+  <meta property="og:description" content="The complete guide to moving to Denmark — CPR, MitID, housing, banking, healthcare, taxes, work permits. 16 chapters, 10 languages, free. With AI guide Björn." />
   <meta property="og:image"       content="https://ankommer.org/og-image.png" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
@@ -21,12 +22,12 @@
   <!-- Twitter / X -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:url"         content="https://ankommer.org/" />
-  <meta name="twitter:title"       content="Moving to Denmark — The Complete Guide | ANKOMMER" />
-  <meta name="twitter:description" content="Everything you need to move to Denmark. CPR, housing, banking, healthcare, jobs, culture — 15 deep chapters, 10 languages, free." />
+  <meta name="twitter:title"       content="Moving to Denmark in 2026 — The Complete Guide | ANKOMMER" />
+  <meta name="twitter:description" content="The complete guide to moving to Denmark. CPR, MitID, housing, banking, healthcare, jobs, culture — 16 deep chapters, 10 languages, free." />
   <meta name="twitter:image"       content="https://ankommer.org/og-image.png" />
 
   <!-- Additional SEO -->
-  <meta name="keywords" content="moving to Denmark, living in Denmark, Denmark expat guide, CPR number Denmark, work in Denmark, Denmark immigration, Denmark visa, NemKonto, MitID, Danish life, relocate Denmark" />
+  <meta name="keywords" content="moving to Denmark, living in Denmark, Denmark expat guide, CPR number Denmark, work in Denmark, Denmark immigration, Denmark visa 2026, Pay Limit Scheme, family reunification Denmark, NemKonto, MitID, Danish housing, Lejeloven, deposit cap Denmark, healthcare Denmark, sundhedskort, work permit Denmark, Denmark guide" />
   <meta name="robots"   content="index, follow" />
   <link rel="canonical" href="https://ankommer.org/" />
 
@@ -84,21 +85,72 @@
     }
   </script>
 
-  <!-- Schema.org structured data -->
+  <!-- Schema.org structured data — WebSite + Organization + BreadcrumbList + FAQPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "ANKOMMER",
-    "alternateName": "Moving to Denmark Guide",
-    "url": "https://ankommer.org/",
-    "description": "The world's most complete guide for internationals moving to Denmark. 16 chapters covering CPR, housing, banking, healthcare, employment, culture and more.",
-    "inLanguage": ["en", "fr", "ar", "es", "da", "de", "uk", "pl", "ur", "fa"],
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://ankommer.org/#search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://ankommer.org/#website",
+        "name": "ANKOMMER",
+        "alternateName": "Moving to Denmark Guide",
+        "url": "https://ankommer.org/",
+        "description": "The complete guide for internationals moving to Denmark. 16 chapters covering CPR, MitID, housing, banking, healthcare, employment, family reunification, culture and more.",
+        "inLanguage": ["en", "fr", "ar", "es", "da", "de", "uk", "pl", "ur", "fa"],
+        "publisher": { "@id": "https://ankommer.org/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": { "@type": "EntryPoint", "urlTemplate": "https://ankommer.org/#search?q={search_term_string}" },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://ankommer.org/#organization",
+        "name": "ANKOMMER",
+        "url": "https://ankommer.org/",
+        "logo": { "@type": "ImageObject", "url": "https://ankommer.org/icons/icon-512.png", "width": 512, "height": 512 },
+        "founder": { "@type": "Person", "name": "Ali Al Mokdad", "sameAs": "https://www.linkedin.com/in/ali-al-mokdad/" },
+        "description": "Independent, ad-free guide for newcomers to Denmark."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ankommer.org/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How long do I have to register my address in Denmark after moving?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Five days. Under CPR Act §12, your folkeregister address must be registered within 5 days of moving in. Late registration is a fineable offence. The CPR number is then issued automatically once the address is registered." }
+          },
+          {
+            "@type": "Question",
+            "name": "How many years of residence do I need for permanent residency in Denmark?",
+            "acceptedAnswer": { "@type": "Answer", "text": "8 years on a regular work permit, student or family-reunification path (Udlændingeloven §11). EU/EEA citizens qualify after 5 years. The fast-track at 4 years is only available if you meet all 4 supplementary requirements (Danish at PD2/B1, 3.5 years employment, citizenship test, income threshold)." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the rent deposit cap in Denmark?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Three months' rent (Lejeloven §34), plus up to three months' prepaid rent — so up to six months upfront is legal. Anything above six months is illegal." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is MitID still NemID?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. MitID has fully replaced NemID since 31 October 2023. NemID is no longer in use for new logins." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Pay Limit Scheme threshold for Denmark in 2025?",
+            "acceptedAnswer": { "@type": "Answer", "text": "DKK 514,000 per year in 2025, rising to DKK 552,000 in 2026. The supplementary scheme is DKK 415,000 (2025) / DKK 446,000 (2026)." }
+          }
+        ]
+      }
+    ]
   }
   </script>
 
@@ -772,10 +824,12 @@
       <nav class="footer-links" aria-label="Footer navigation">
         <div class="footer-col">
           <h4 data-i18n="footer_chapters">Chapters</h4>
-          <a href="#chapter-0" onclick="event.preventDefault(); openChapter(0);">Before You Land</a>
-          <a href="#chapter-1" onclick="event.preventDefault(); openChapter(1);">First 72 Hours</a>
-          <a href="#chapter-2" onclick="event.preventDefault(); openChapter(2);">Papers &amp; Legal</a>
-          <a href="#chapter-3" onclick="event.preventDefault(); openChapter(3);">Housing</a>
+          <!-- href points to crawlable static pages; onclick opens the SPA for users -->
+          <a href="/chapter/before-you-land.html" onclick="event.preventDefault(); openChapter(0);">Before You Land</a>
+          <a href="/chapter/first-72-hours.html" onclick="event.preventDefault(); openChapter(1);">First 72 Hours</a>
+          <a href="/chapter/papers-and-legal-identity.html" onclick="event.preventDefault(); openChapter(2);">Papers &amp; Legal</a>
+          <a href="/chapter/housing.html" onclick="event.preventDefault(); openChapter(3);">Housing</a>
+          <a href="/chapter/" style="opacity:0.78">Browse all 16 chapters →</a>
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer_tools">Tools</h4>

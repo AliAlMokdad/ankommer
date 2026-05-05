@@ -1,4 +1,30 @@
 User-agent: *
 Allow: /
+# Note: /js/ is intentionally allowed — Googlebot needs JS to render the SPA correctly
+
+# Be friendly to AI crawlers — they're how a lot of newcomers find guides now
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
 
 Sitemap: https://ankommer.org/sitemap.xml
