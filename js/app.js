@@ -228,7 +228,7 @@ const initProgressIO = () => {
 
 /* ── APP STATE ─────────────────────────────────────── */
 const AppState = {
-  xp: parseInt(safeGetItem('ankommer_xp', '0')),
+  xp: (() => { const n = parseInt(safeGetItem('ankommer_xp', '0'), 10); return Number.isFinite(n) ? n : 0; })(),
   completedTasks: safeGetJSON('ankommer_tasks', {}),
   currentChapter: null,
   wizardDone: !!safeGetItem('ankommer_wizard'),
@@ -1061,8 +1061,14 @@ const renderChapter = (index) => {
     ur: "یہ باب ابھی اردو میں ترجمہ نہیں ہوا — انگریزی میں دکھایا گیا۔",
     fa: "این فصل هنوز به فارسی ترجمه نشده — به انگلیسی نمایش داده می‌شود."
   };
-  const titleIsTranslated = !!ch.title?.[lang] && lang !== 'en';
-  const fallbackNotice = (lang !== 'en' && !titleIsTranslated) ? `
+  // Round 2A/2B: don't trust the title alone — many chapters have translated
+  // titles but English-only section bodies. Check the first section's content
+  // too, so users get the honest "shown in English" notice when the body is.
+  const titleIsTranslated = !!ch.title?.[lang];
+  const firstSection = Array.isArray(ch.sections) ? ch.sections[0] : null;
+  const bodyIsTranslated = !!firstSection?.content?.[lang];
+  const fullyTranslated = titleIsTranslated && bodyIsTranslated;
+  const fallbackNotice = (lang !== 'en' && !fullyTranslated) ? `
     <div style="margin:0 0 16px;padding:10px 14px;border-radius:10px;
                 background:rgba(46,109,164,0.08);border-left:3px solid var(--nordic-blue,#2E6DA4);
                 font-size:0.85rem;color:var(--text-muted);">
@@ -1081,6 +1087,7 @@ const renderChapter = (index) => {
           <span class="chapter-meta-tag">${t_('readTime', lang, ch.readTime || '10 min')}</span>
           <span class="chapter-meta-tag">${allTasks.length} ${t_('tasks', lang)}</span>
           ${pct === 100 ? `<span class="chapter-meta-tag" style="background:rgba(106,158,106,0.15);color:var(--sage)">${t_('complete', lang)}</span>` : ''}
+          ${ch.lastUpdated ? `<span class="chapter-meta-tag chapter-meta-updated" title="Last reviewed">🛠 ${ch.lastUpdated}</span>` : ''}
         </div>
       </div>
       ${fallbackNotice}
@@ -1289,7 +1296,9 @@ window.toggleTask = (taskId, xp) => {
     safeSetItem('ankommer_xp', AppState.xp);
   } else {
     AppState.completedTasks[taskId] = true;
-    XPSystem.add(xp, '');
+    // Pass a non-empty label so the +XP toast actually shows on task completion (Round 2A bug).
+    const taskLabel = (typeof window.i18n?.t === 'function' && window.i18n.t('xpTaskDone')) || 'Task complete';
+    XPSystem.add(xp, taskLabel);
   }
   safeSetItem('ankommer_tasks', JSON.stringify(AppState.completedTasks));
 
@@ -2295,6 +2304,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // PWA install prompt
   _try('PWAInstall', () => PWAInstall.init());
+
+  // Round 2B: cross-tab sync. Without this, two open tabs each hold a stale
+  // copy of completedTasks/xp; the last writer wins and silently overwrites
+  // the other tab's progress. Listen for storage events and re-hydrate state.
+  _try('crossTabSync', () => {
+    window.addEventListener('storage', (e) => {
+      if (!e.key || !e.key.startsWith('ankommer_')) return;
+      if (e.key === 'ankommer_xp') {
+        const n = parseInt(e.newValue || '0', 10);
+        AppState.xp = Number.isFinite(n) ? n : 0;
+        XPSystem.updateUI();
+      } else if (e.key === 'ankommer_tasks') {
+        try { AppState.completedTasks = JSON.parse(e.newValue || '{}') || {}; } catch { /* keep current */ }
+        if (AppState.currentChapter !== null) renderChapter(AppState.currentChapter);
+      } else if (e.key === 'ankommer_profile') {
+        try { AppState.profile = JSON.parse(e.newValue || '{}') || {}; } catch { /* keep current */ }
+      }
+    });
+  });
 
   // Scroll animations (small delay for layout settle)
   _try('scrollAnimations', () => setTimeout(initScrollAnimations, 500));

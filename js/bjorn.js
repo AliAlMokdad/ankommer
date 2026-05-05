@@ -458,18 +458,18 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
   };
 
   /* ── GET OFFLINE RESPONSE ────────────────────────────── */
+  // Word-boundary regex matching so e.g. "parental" no longer matches "rent",
+  // and "current" no longer routes to housing. Each branch is anchored on
+  // \b…\b boundaries — substring matching was the Round 2A bug.
   const getOfflineResponse = (message) => {
     const msg = message.toLowerCase();
-    if (msg.includes('cpr') || msg.includes('registration number') || msg.includes('civil'))
-      return OFFLINE_RESPONSES.cpr;
-    if (msg.includes('mitid') || msg.includes('mit id') || msg.includes('digital identity') || msg.includes('nemid'))
-      return OFFLINE_RESPONSES.mitid;
-    if (msg.includes('tax') || msg.includes('skat') || msg.includes('skattekort') || msg.includes('income'))
-      return OFFLINE_RESPONSES.tax;
-    if (msg.includes('hous') || msg.includes('apartment') || msg.includes('flat') || msg.includes('rent') || msg.includes('lease') || msg.includes('bolig'))
+    const has = (re) => re.test(msg);
+    if (has(/\bcpr\b|\bregistration number\b|\bcivil registration\b/)) return OFFLINE_RESPONSES.cpr;
+    if (has(/\bmit ?id\b|\bnemid\b|\bdigital identity\b/)) return OFFLINE_RESPONSES.mitid;
+    if (has(/\btax(es)?\b|\bskat\b|\bskattekort\b|\bincome\b/)) return OFFLINE_RESPONSES.tax;
+    if (has(/\bhous(e|ing)\b|\bapartment\b|\bflat\b|\brent(al|ing)?\b|\blease\b|\bbolig\b|\blandlord\b|\bdeposit\b/))
       return OFFLINE_RESPONSES.housing;
-    if (msg.includes('a-kasse') || msg.includes('akasse') || msg.includes('unemployment') || msg.includes('benefits'))
-      return OFFLINE_RESPONSES.akasse;
+    if (has(/\ba[- ]?kasse\b|\bunemployment\b|\bdagpenge\b/)) return OFFLINE_RESPONSES.akasse;
     return OFFLINE_RESPONSES.default;
   };
 

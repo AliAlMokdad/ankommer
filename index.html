@@ -92,7 +92,7 @@
     "name": "ANKOMMER",
     "alternateName": "Moving to Denmark Guide",
     "url": "https://ankommer.org/",
-    "description": "The world's most complete guide for internationals moving to Denmark. 15 chapters covering CPR, housing, banking, healthcare, employment, culture and more.",
+    "description": "The world's most complete guide for internationals moving to Denmark. 16 chapters covering CPR, housing, banking, healthcare, employment, culture and more.",
     "inLanguage": ["en", "fr", "ar", "es", "da", "de", "uk", "pl", "ur", "fa"],
     "potentialAction": {
       "@type": "SearchAction",
@@ -422,7 +422,7 @@
           </select>
         </div>
         <button class="btn-primary" id="salary-calc-btn" data-i18n="tool_calc">Calculate</button>
-        <div class="tool-result hidden" id="salary-result">
+        <div class="tool-result hidden" id="salary-result" role="status" aria-live="polite">
           <div class="result-donut-wrap">
             <canvas id="salary-donut" width="180" height="180"></canvas>
             <div class="donut-center">
@@ -493,7 +493,7 @@
           </select>
         </div>
         <button class="btn-primary" id="col-calc-btn">Estimate My Monthly Budget</button>
-        <div class="tool-result hidden" id="col-result">
+        <div class="tool-result hidden" id="col-result" role="status" aria-live="polite">
           <div class="col-breakdown" id="col-breakdown"></div>
           <div class="col-total-bar" id="col-total-bar"></div>
           <div class="col-context" id="col-context"></div>
@@ -552,7 +552,7 @@
           <input type="number" id="rent-monthly" placeholder="e.g. 9500" min="500" max="100000" />
         </div>
         <button class="btn-primary" id="rent-check-btn">Check My Rent</button>
-        <div class="tool-result hidden" id="rent-result"></div>
+        <div class="tool-result hidden" id="rent-result" role="status" aria-live="polite"></div>
       </div>
     </div>
 
@@ -583,7 +583,7 @@
             <option value="aal">Aalborg</option>
           </select>
         </div>
-        <div id="weather-result"></div>
+        <div id="weather-result" role="status" aria-live="polite"></div>
       </div>
     </div>
 
@@ -600,7 +600,7 @@
             <div class="dawa-suggestions hidden" id="dawa-suggestions"></div>
           </div>
         </div>
-        <div class="tool-result hidden" id="dawa-result"></div>
+        <div class="tool-result hidden" id="dawa-result" role="status" aria-live="polite"></div>
       </div>
     </div>
 
@@ -629,7 +629,7 @@
           <input type="datetime-local" id="journey-when" />
         </div>
         <button class="btn-primary" id="journey-search-btn">Find Routes →</button>
-        <div class="tool-result hidden" id="journey-result"></div>
+        <div class="tool-result hidden" id="journey-result" role="status" aria-live="polite"></div>
       </div>
     </div>
 
@@ -667,7 +667,7 @@
           </div>
         </div>
         <button class="btn-primary" id="jobs-search-btn">Search Danish Jobs →</button>
-        <div class="tool-result hidden" id="jobs-result"></div>
+        <div class="tool-result hidden" id="jobs-result" role="status" aria-live="polite"></div>
       </div>
     </div>
 
@@ -702,7 +702,7 @@
           </select>
         </div>
         <button class="btn-primary" id="res-calc-btn" data-i18n="tool_calc">Calculate</button>
-        <div class="tool-result hidden" id="res-result"></div>
+        <div class="tool-result hidden" id="res-result" role="status" aria-live="polite"></div>
       </div>
     </div>
 
@@ -911,7 +911,7 @@
     </div>
 
     <!-- Chat messages -->
-    <div class="bjorn-messages" id="bjorn-messages"></div>
+    <div class="bjorn-messages" id="bjorn-messages" role="log" aria-live="polite" aria-relevant="additions"></div>
 
     <!-- Thinking indicator -->
     <div class="bjorn-thinking hidden" id="bjorn-thinking">
@@ -939,7 +939,7 @@
 </div>
 
 <!-- ═══════════════════════════════════ TOAST NOTIFICATIONS ═══════════════════════════════════ -->
-<div id="toast-container" class="toast-container"></div>
+<div id="toast-container" class="toast-container" role="status" aria-live="polite" aria-atomic="true"></div>
 
 <!-- ═══════════════════════════════════ PWA INSTALL BANNER ═══════════════════════════════════ -->
 <div id="pwa-install-banner" class="pwa-install-banner hidden" role="complementary" aria-label="Install app">

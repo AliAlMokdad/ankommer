@@ -12,6 +12,8 @@
   --ice:            #E8F4FD;
   --chalk:          #F5F2EC;
   --flag-red:       #C60C30;
+  --brand-red:      #C60C30; /* alias for --flag-red, used by mobile lang pill, founder hover, install BG, reading progress */
+  --nordic-red:     #C60C30; /* alias for --flag-red, used by reading progress + a few legacy rules */
   --amber:          #E8A020;
   --rye:            #C8A96E;
   --sage:           #6A9E6A;
@@ -4154,7 +4156,7 @@ h3 { letter-spacing: -0.012em; }
   opacity: 0.92;
 }
 .footer-col a {
-  color: rgba(255,255,255,0.62);
+  color: rgba(255,255,255,0.78); /* WCAG: ~4.7:1 on --danish-night */
   font-size: 0.88rem;
   transition: color 180ms ease, transform 180ms cubic-bezier(.16,1,.3,1);
   text-decoration: none;
@@ -4237,13 +4239,13 @@ h3 { letter-spacing: -0.012em; }
 .footer-bottom-right { flex-shrink: 0; }
 .footer-made {
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.72); /* WCAG: ~4.4:1 on --danish-night */
   margin: 0 0 6px;
   line-height: 1.5;
 }
 .footer-legal {
   font-size: 0.72rem !important;
-  color: rgba(255,255,255,0.32) !important;
+  color: rgba(255,255,255,0.7) !important; /* WCAG: ~4.3:1 — was 0.32 (1.9:1, severe fail) */
   margin: 0;
   line-height: 1.55;
 }
@@ -4344,3 +4346,27 @@ h3 { letter-spacing: -0.012em; }
 [lang="ur"] .footer-founder,
 [lang="fa"] .footer-founder { font-family: inherit; font-style: normal; }
 
+
+/* ── Round 2 a11y: Windows High Contrast / forced-colors mode ──
+   When the OS forces its own palette, custom colours collapse and
+   key UI can become invisible. Force visible borders on essentials. */
+@media (forced-colors: active) {
+  .btn-primary, .btn-secondary, .visa-opt-btn, .footer-progress-btn,
+  .ask-bjorn-btn, .col-city-tab, .lang-btn, .footer-founder-link {
+    border: 1px solid CanvasText !important;
+  }
+  .tool-result, .res-milestone, .col-item, .breakdown-row {
+    border: 1px solid CanvasText;
+  }
+  :focus-visible { outline: 2px solid Highlight !important; outline-offset: 2px; }
+  /* Donut: native drawing falls back to currentColor when forced */
+  #salary-donut { forced-color-adjust: none; }
+}
+
+/* Round 2A: chapter "Last reviewed" tag — small, dim, never shouts */
+.chapter-meta-updated {
+  background: rgba(106,158,106,0.08) !important;
+  color: var(--sage) !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}

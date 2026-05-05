@@ -7,7 +7,7 @@
  *   - Cross-origin APIs:     pass through, never cache (live data only)
  */
 
-const CACHE_NAME = 'ankommer-v17';
+const CACHE_NAME = 'ankommer-v18';
 
 const PRECACHE_URLS = [
   '/',
@@ -18,15 +18,21 @@ const PRECACHE_URLS = [
   '/js/bjorn.js',
   '/js/calculators.js',
   '/js/apis.js',
-  '/manifest.json'
+  '/manifest.json',
+  '/icons/icon-192.png',
+  '/icons/icon-512.png',
+  '/og-image.png'
 ];
 
 // ── Install ────────────────────────────────────────────────────────────────
+// Note: we deliberately do NOT call skipWaiting() here. The page (index.html)
+// shows an "update available" toast and posts SKIP_WAITING when the user
+// confirms — installing in the background and waiting preserves that flow.
+// On first install (no controller) the new SW activates immediately anyway.
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(PRECACHE_URLS))
   );
-  self.skipWaiting();
 });
 
 // ── Activate: clear old caches ─────────────────────────────────────────────

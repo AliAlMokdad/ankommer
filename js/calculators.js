@@ -5,6 +5,53 @@
 
 const Calculators = (() => {
 
+  /* ── i18n helpers ───────────────────────────────────────
+     Round 2A finding: every calculator string was English-only.
+     Round-2 fix: minimal in-file table for the user-visible
+     output strings, with English fallback. Languages match the
+     app's 10 supported langs. Date formatting uses BCP-47 codes.
+  ────────────────────────────────────────────────────────── */
+  const CALC_I18N = {
+    en: {
+      enterSalary:'Enter a salary amount first', enterArrival:'Please select your arrival date',
+      gross:'Gross salary', amBidrag:'AM-bidrag (8%)', incomeTax:'Income tax', topTax:'Top tax (15%)',
+      netMonthly:'Net monthly pay', effRate:'Effective tax rate', netAnnual:'Net annual',
+      payslipLink:'📖 Want to understand your payslip, pension and skattekort in detail?',
+      readCh4:'Read Chapter 4 — Money & Banking →',
+      copyResult:'📋 Copy result',
+      median:'The Danish median gross salary is ~44,500 DKK/month.',
+      medianAbove:'Your salary is above the Danish median gross salary (~44,500 DKK/month).',
+      rentComfortable:'You can comfortably afford most Copenhagen apartments.',
+      rentAvg:'You can afford average Copenhagen rents, though it will be a significant portion of your income.',
+      rentTight:'Budget-conscious choices will be important. Consider Aarhus or Odense for more comfortable living costs.',
+      euYes:'Yes — EU/EEA citizen', euNo:'No — Non-EU citizen',
+      arrived:'Arrived in Denmark', fastTrack:'Fast-track permanent residency possible',
+      citizenship:'Danish Citizenship eligible',
+      planArrive:'📋 Planning ahead — you arrive in', roadmapFromDate:'. Here\'s your residency roadmap from that date.',
+      beenIn:'You\'ve been in Denmark for', nextMilestone:' Next milestone in', allMilestones:'You\'ve reached all major milestones! 🎉',
+      lessThanMonth:'less than a month', month:'month', months:'months', years:'years', yearsAfter:'After', yearsResidence:'years of residence',
+      calNoDate:'Please enter your arrival date first.', calBadDate:'That date doesn\'t look valid. Please pick again.',
+      calOutOfRange:'Please pick a date within the next 50 years.', calDone:'Calendar downloaded',
+      arrivalOutOfRange:'Please pick an arrival date within the last/next 50 years.',
+      arrivalInvalid:'That date doesn\'t look valid. Please pick again.',
+    },
+    fr: { enterSalary:'Entrez d\'abord un salaire', enterArrival:'Veuillez choisir votre date d\'arrivée', gross:'Salaire brut', amBidrag:'AM-bidrag (8 %)', incomeTax:'Impôt sur le revenu', topTax:'Top tax (15 %)', netMonthly:'Salaire net mensuel', effRate:'Taux d\'imposition effectif', netAnnual:'Net annuel', payslipLink:'📖 Comprendre votre fiche de paie, pension et skattekort en détail ?', readCh4:'Lire le chapitre 4 — Argent et banques →', copyResult:'📋 Copier le résultat', median:'Le salaire brut médian danois est d\'environ 44 500 DKK/mois.', medianAbove:'Votre salaire est au-dessus du brut médian danois (~44 500 DKK/mois).', rentComfortable:'Vous pouvez vous offrir confortablement la plupart des appartements à Copenhague.', rentAvg:'Vous pouvez vous offrir des loyers moyens à Copenhague, mais cela représentera une part importante du revenu.', rentTight:'Des choix économiques seront importants. Envisagez Aarhus ou Odense.', euYes:'Oui — Citoyen UE/EEE', euNo:'Non — Hors UE', arrived:'Arrivée au Danemark', fastTrack:'Résidence permanente accélérée possible', citizenship:'Citoyenneté danoise éligible', planArrive:'📋 Anticipation — vous arrivez dans', roadmapFromDate:'. Voici votre feuille de route à partir de cette date.', beenIn:'Vous êtes au Danemark depuis', nextMilestone:' Prochaine étape dans', allMilestones:'Vous avez atteint toutes les étapes majeures ! 🎉', lessThanMonth:'moins d\'un mois', month:'mois', months:'mois', years:'ans', yearsAfter:'Après', yearsResidence:'ans de résidence', calNoDate:'Veuillez d\'abord entrer votre date d\'arrivée.', calBadDate:'Cette date semble invalide. Réessayez.', calOutOfRange:'Choisissez une date dans les 50 prochaines années.', calDone:'Calendrier téléchargé', arrivalOutOfRange:'Choisissez une date d\'arrivée dans les ±50 ans.', arrivalInvalid:'Cette date semble invalide.' },
+    ar: { enterSalary:'أدخل قيمة الراتب أولاً', enterArrival:'يرجى اختيار تاريخ وصولك', gross:'الراتب الإجمالي', amBidrag:'مساهمة سوق العمل (8٪)', incomeTax:'ضريبة الدخل', topTax:'الضريبة العليا (15٪)', netMonthly:'صافي الراتب الشهري', effRate:'المعدل الضريبي الفعلي', netAnnual:'الصافي السنوي', payslipLink:'📖 هل تريد فهم قسيمة الراتب والمعاش والـ skattekort بالتفصيل؟', readCh4:'اقرأ الفصل 4 — المال والمصارف ←', copyResult:'📋 نسخ النتيجة', median:'متوسط الراتب الإجمالي الدنماركي حوالي 44,500 كرونة شهرياً.', medianAbove:'راتبك أعلى من المتوسط الدنماركي (~44,500 كرونة).', rentComfortable:'يمكنك تحمل معظم شقق كوبنهاغن بشكل مريح.', rentAvg:'يمكنك تحمل متوسط الإيجارات في كوبنهاغن، لكنها ستمثل جزءاً كبيراً من دخلك.', rentTight:'الاختيارات الاقتصادية مهمة. فكّر في آرهوس أو أودنسه.', euYes:'نعم — مواطن الاتحاد الأوروبي/الإيكسا', euNo:'لا — من خارج الاتحاد الأوروبي', arrived:'الوصول إلى الدنمارك', fastTrack:'الإقامة الدائمة السريعة ممكنة', citizenship:'مؤهل للجنسية الدنماركية', planArrive:'📋 التخطيط مسبقاً — تصل خلال', roadmapFromDate:'. هذه خارطة طريق إقامتك من ذلك التاريخ.', beenIn:'أنت في الدنمارك منذ', nextMilestone:' الإنجاز التالي خلال', allMilestones:'لقد حققت جميع الإنجازات الكبرى! 🎉', lessThanMonth:'أقل من شهر', month:'شهر', months:'أشهر', years:'سنوات', yearsAfter:'بعد', yearsResidence:'سنوات من الإقامة', calNoDate:'يرجى إدخال تاريخ وصولك أولاً.', calBadDate:'يبدو هذا التاريخ غير صالح. يرجى الاختيار مرة أخرى.', calOutOfRange:'اختر تاريخاً ضمن الخمسين سنة القادمة.', calDone:'تم تنزيل التقويم', arrivalOutOfRange:'اختر تاريخ وصول ضمن ±50 سنة.', arrivalInvalid:'هذا التاريخ غير صالح.' },
+    es: { enterSalary:'Introduce un salario primero', enterArrival:'Por favor selecciona tu fecha de llegada', gross:'Salario bruto', amBidrag:'AM-bidrag (8 %)', incomeTax:'Impuesto sobre la renta', topTax:'Top tax (15 %)', netMonthly:'Salario neto mensual', effRate:'Tipo impositivo efectivo', netAnnual:'Neto anual', payslipLink:'📖 ¿Quieres entender tu nómina, pensión y skattekort en detalle?', readCh4:'Leer capítulo 4 — Dinero y bancos →', copyResult:'📋 Copiar resultado', median:'El salario bruto medio danés es ~44.500 DKK/mes.', medianAbove:'Tu salario está por encima de la media danesa (~44.500 DKK/mes).', rentComfortable:'Puedes permitirte cómodamente la mayoría de pisos en Copenhague.', rentAvg:'Puedes permitirte alquileres medios en Copenhague, pero ocuparán una parte significativa de tus ingresos.', rentTight:'Las decisiones económicas serán importantes. Considera Aarhus u Odense.', euYes:'Sí — Ciudadano UE/EEE', euNo:'No — Fuera de la UE', arrived:'Llegada a Dinamarca', fastTrack:'Residencia permanente acelerada posible', citizenship:'Elegible para la ciudadanía danesa', planArrive:'📋 Planificando — llegas en', roadmapFromDate:'. Aquí tienes tu hoja de ruta desde esa fecha.', beenIn:'Llevas en Dinamarca', nextMilestone:' Próximo hito en', allMilestones:'¡Has alcanzado todos los hitos importantes! 🎉', lessThanMonth:'menos de un mes', month:'mes', months:'meses', years:'años', yearsAfter:'Tras', yearsResidence:'años de residencia', calNoDate:'Por favor introduce tu fecha de llegada.', calBadDate:'Esa fecha no parece válida. Inténtalo de nuevo.', calOutOfRange:'Elige una fecha dentro de los próximos 50 años.', calDone:'Calendario descargado', arrivalOutOfRange:'Elige una fecha de llegada dentro de ±50 años.', arrivalInvalid:'Fecha no válida.' },
+    da: { enterSalary:'Indtast først en lønbeløb', enterArrival:'Vælg din ankomstdato', gross:'Bruttoløn', amBidrag:'AM-bidrag (8 %)', incomeTax:'Indkomstskat', topTax:'Topskat (15 %)', netMonthly:'Nettoløn pr. måned', effRate:'Effektiv skatteprocent', netAnnual:'Netto årligt', payslipLink:'📖 Vil du forstå din lønseddel, pension og skattekort i detaljer?', readCh4:'Læs kapitel 4 — Penge & bank →', copyResult:'📋 Kopiér resultat', median:'Median bruttoløn i Danmark er ~44.500 DKK/md.', medianAbove:'Din løn er over den danske median (~44.500 DKK/md).', rentComfortable:'Du kan komfortabelt betale de fleste lejligheder i København.', rentAvg:'Du kan betale gennemsnitlig husleje i København, men det fylder meget i budgettet.', rentTight:'Budgetbevidste valg er vigtige. Overvej Aarhus eller Odense.', euYes:'Ja — EU/EØS-borger', euNo:'Nej — ikke-EU', arrived:'Ankommet til Danmark', fastTrack:'Hurtig permanent opholdstilladelse mulig', citizenship:'Berettiget til dansk statsborgerskab', planArrive:'📋 Planlægning — du ankommer om', roadmapFromDate:'. Her er din opholdsplan fra den dato.', beenIn:'Du har været i Danmark i', nextMilestone:' Næste milepæl om', allMilestones:'Du har nået alle store milepæle! 🎉', lessThanMonth:'mindre end en måned', month:'måned', months:'måneder', years:'år', yearsAfter:'Efter', yearsResidence:'års ophold', calNoDate:'Indtast din ankomstdato først.', calBadDate:'Denne dato ser ikke gyldig ud.', calOutOfRange:'Vælg en dato inden for de næste 50 år.', calDone:'Kalender hentet', arrivalOutOfRange:'Vælg en dato inden for ±50 år.', arrivalInvalid:'Dato ikke gyldig.' },
+    de: { enterSalary:'Geben Sie zuerst ein Gehalt ein', enterArrival:'Bitte wählen Sie Ihr Ankunftsdatum', gross:'Bruttogehalt', amBidrag:'AM-bidrag (8 %)', incomeTax:'Einkommensteuer', topTax:'Topskat (15 %)', netMonthly:'Netto pro Monat', effRate:'Effektiver Steuersatz', netAnnual:'Netto jährlich', payslipLink:'📖 Möchten Sie Lohnzettel, Rente und skattekort verstehen?', readCh4:'Kapitel 4 lesen — Geld & Banken →', copyResult:'📋 Ergebnis kopieren', median:'Das dänische Bruttomedian-Gehalt liegt bei ~44.500 DKK/Monat.', medianAbove:'Ihr Gehalt liegt über dem dänischen Median (~44.500 DKK/Monat).', rentComfortable:'Sie können sich die meisten Wohnungen in Kopenhagen problemlos leisten.', rentAvg:'Sie können durchschnittliche Mieten in Kopenhagen tragen, sie machen aber einen großen Teil aus.', rentTight:'Sparsame Entscheidungen sind wichtig. Aarhus oder Odense erwägen.', euYes:'Ja — EU/EWR-Bürger', euNo:'Nein — Nicht-EU', arrived:'Ankunft in Dänemark', fastTrack:'Beschleunigte Daueraufenthaltserlaubnis möglich', citizenship:'Berechtigt für dänische Staatsbürgerschaft', planArrive:'📋 Planung — Sie kommen in', roadmapFromDate:'. Hier ist Ihre Aufenthaltskarte ab diesem Datum.', beenIn:'Sie sind in Dänemark seit', nextMilestone:' Nächster Meilenstein in', allMilestones:'Sie haben alle Hauptmeilensteine erreicht! 🎉', lessThanMonth:'weniger als einem Monat', month:'Monat', months:'Monaten', years:'Jahren', yearsAfter:'Nach', yearsResidence:'Jahren Aufenthalt', calNoDate:'Bitte zuerst Ankunftsdatum eingeben.', calBadDate:'Datum scheint ungültig.', calOutOfRange:'Wählen Sie ein Datum in den nächsten 50 Jahren.', calDone:'Kalender heruntergeladen', arrivalOutOfRange:'Datum innerhalb ±50 Jahre.', arrivalInvalid:'Datum nicht gültig.' },
+    uk: { enterSalary:'Спочатку введіть зарплату', enterArrival:'Будь ласка, оберіть дату прибуття', gross:'Брутто-зарплата', amBidrag:'AM-bidrag (8 %)', incomeTax:'Податок на дохід', topTax:'Topskat (15 %)', netMonthly:'Чиста зарплата/міс.', effRate:'Ефективна ставка', netAnnual:'Чиста на рік', payslipLink:'📖 Хочете розібратися з розрахунковим листом і skattekort?', readCh4:'Читати розділ 4 — Гроші та банки →', copyResult:'📋 Копіювати результат', median:'Медіанна брутто-зарплата в Данії ~44 500 DKK/міс.', medianAbove:'Ваша зарплата вища за медіану (~44 500 DKK/міс).', rentComfortable:'Ви комфортно можете дозволити собі більшість квартир у Копенгагені.', rentAvg:'Середні орендні плати в Копенгагені посядуть значну частку доходу.', rentTight:'Економний вибір буде важливим. Розгляньте Орхус або Оденсе.', euYes:'Так — громадянин ЄС/ЄЕЗ', euNo:'Ні — не з ЄС', arrived:'Прибуття до Данії', fastTrack:'Прискорене постійне проживання можливе', citizenship:'Право на громадянство Данії', planArrive:'📋 Планування — ви прибуваєте через', roadmapFromDate:'. Ось ваша дорожня карта проживання від цієї дати.', beenIn:'Ви у Данії вже', nextMilestone:' Наступний рубіж через', allMilestones:'Ви досягли всіх ключових рубежів! 🎉', lessThanMonth:'менше місяця', month:'місяць', months:'місяців', years:'років', yearsAfter:'Після', yearsResidence:'років проживання', calNoDate:'Спочатку введіть дату прибуття.', calBadDate:'Дата виглядає некоректно.', calOutOfRange:'Оберіть дату протягом наступних 50 років.', calDone:'Календар завантажено', arrivalOutOfRange:'Оберіть дату ±50 років.', arrivalInvalid:'Дата некоректна.' },
+    pl: { enterSalary:'Wpisz najpierw kwotę wynagrodzenia', enterArrival:'Wybierz datę przyjazdu', gross:'Wynagrodzenie brutto', amBidrag:'AM-bidrag (8 %)', incomeTax:'Podatek dochodowy', topTax:'Topskat (15 %)', netMonthly:'Netto miesięcznie', effRate:'Efektywna stopa podatku', netAnnual:'Netto rocznie', payslipLink:'📖 Chcesz zrozumieć pasek wypłaty, emeryturę i skattekort?', readCh4:'Przeczytaj rozdział 4 — Pieniądze i banki →', copyResult:'📋 Kopiuj wynik', median:'Mediana wynagrodzenia brutto w Danii to ~44 500 DKK/mies.', medianAbove:'Twoje wynagrodzenie jest powyżej duńskiej mediany (~44 500 DKK/mies).', rentComfortable:'Możesz wygodnie pozwolić sobie na większość mieszkań w Kopenhadze.', rentAvg:'Czynsze średnie w Kopenhadze pochłoną znaczną część dochodu.', rentTight:'Ważne będą oszczędne wybory. Rozważ Aarhus lub Odense.', euYes:'Tak — obywatel UE/EOG', euNo:'Nie — spoza UE', arrived:'Przyjazd do Danii', fastTrack:'Możliwy szybki pobyt stały', citizenship:'Możliwość duńskiego obywatelstwa', planArrive:'📋 Planowanie — przyjeżdżasz za', roadmapFromDate:'. Oto Twoja mapa pobytu od tej daty.', beenIn:'Jesteś w Danii od', nextMilestone:' Kolejny kamień milowy za', allMilestones:'Osiągnąłeś wszystkie główne kamienie milowe! 🎉', lessThanMonth:'mniej niż miesiąc', month:'miesiąc', months:'miesięcy', years:'lat', yearsAfter:'Po', yearsResidence:'latach pobytu', calNoDate:'Wpisz najpierw datę przyjazdu.', calBadDate:'Ta data wygląda niepoprawnie.', calOutOfRange:'Wybierz datę w ciągu najbliższych 50 lat.', calDone:'Kalendarz pobrany', arrivalOutOfRange:'Wybierz datę ±50 lat.', arrivalInvalid:'Data niepoprawna.' },
+    ur: { enterSalary:'پہلے تنخواہ درج کریں', enterArrival:'اپنی آمد کی تاریخ منتخب کریں', gross:'مجموعی تنخواہ', amBidrag:'AM-bidrag (8٪)', incomeTax:'انکم ٹیکس', topTax:'Topskat (15٪)', netMonthly:'ماہانہ خالص تنخواہ', effRate:'مؤثر ٹیکس کی شرح', netAnnual:'سالانہ خالص', payslipLink:'📖 اپنی پے سلپ، پنشن اور skattekort کو تفصیل سے سمجھنا چاہتے ہیں؟', readCh4:'باب 4 پڑھیں — پیسہ اور بینکنگ ←', copyResult:'📋 نتیجہ کاپی کریں', median:'ڈنمارک کی اوسط تنخواہ ~44,500 DKK/ماہ ہے۔', medianAbove:'آپ کی تنخواہ ڈنمارک کی اوسط سے زیادہ ہے (~44,500 DKK/ماہ)۔', rentComfortable:'آپ کوپن ہیگن کے زیادہ تر اپارٹمنٹس آرام سے برداشت کر سکتے ہیں۔', rentAvg:'کوپن ہیگن کے اوسط کرائے آپ کی آمدنی کا بڑا حصہ لیں گے۔', rentTight:'بجٹ پر دھیان دینا اہم ہے۔ Aarhus یا Odense پر غور کریں۔', euYes:'ہاں — EU/EEA شہری', euNo:'نہیں — غیر-EU', arrived:'ڈنمارک پہنچے', fastTrack:'تیز رفتار مستقل قیام ممکن', citizenship:'ڈینش شہریت کے اہل', planArrive:'📋 منصوبہ بندی — آپ پہنچتے ہیں', roadmapFromDate:'. اس تاریخ سے آپ کا قیام پلان یہ ہے۔', beenIn:'آپ ڈنمارک میں ہیں', nextMilestone:' اگلا سنگ میل', allMilestones:'آپ نے تمام بڑے سنگ میل حاصل کر لیے! 🎉', lessThanMonth:'ایک ماہ سے کم', month:'ماہ', months:'ماہ', years:'سال', yearsAfter:'بعد', yearsResidence:'سال کا قیام', calNoDate:'پہلے اپنی آمد کی تاریخ درج کریں۔', calBadDate:'یہ تاریخ درست نہیں لگتی۔', calOutOfRange:'اگلے 50 سال کے اندر تاریخ منتخب کریں۔', calDone:'کیلنڈر ڈاؤنلوڈ ہو گیا', arrivalOutOfRange:'±50 سال کی حد میں تاریخ۔', arrivalInvalid:'تاریخ درست نہیں۔' },
+    fa: { enterSalary:'ابتدا مبلغ حقوق را وارد کنید', enterArrival:'لطفاً تاریخ ورود خود را انتخاب کنید', gross:'حقوق ناخالص', amBidrag:'AM-bidrag (۸٪)', incomeTax:'مالیات بر درآمد', topTax:'Topskat (۱۵٪)', netMonthly:'حقوق خالص ماهانه', effRate:'نرخ مؤثر مالیات', netAnnual:'خالص سالانه', payslipLink:'📖 می‌خواهید فیش حقوقی، بازنشستگی و skattekort را با جزئیات بفهمید؟', readCh4:'فصل ۴ را بخوانید — پول و بانک ←', copyResult:'📋 کپی نتیجه', median:'میانه حقوق ناخالص دانمارک حدود ۴۴,۵۰۰ کرون در ماه است.', medianAbove:'حقوق شما بالاتر از میانه دانمارک است (~۴۴,۵۰۰ کرون).', rentComfortable:'بیشتر آپارتمان‌های کپنهاگ را به‌راحتی می‌توانید تأمین کنید.', rentAvg:'اجاره‌های متوسط کپنهاگ بخش زیادی از درآمد را خواهد گرفت.', rentTight:'انتخاب‌های اقتصادی مهم است. Aarhus یا Odense را در نظر بگیرید.', euYes:'بله — شهروند EU/EEA', euNo:'خیر — خارج از EU', arrived:'ورود به دانمارک', fastTrack:'اقامت دائم سریع ممکن است', citizenship:'واجد شرایط شهروندی دانمارک', planArrive:'📋 برنامه‌ریزی — شما تا', roadmapFromDate:' وارد می‌شوید. این نقشه راه اقامت شماست.', beenIn:'شما در دانمارک هستید', nextMilestone:' نقطه عطف بعدی', allMilestones:'به همه نقاط عطف بزرگ رسیدید! 🎉', lessThanMonth:'کمتر از یک ماه', month:'ماه', months:'ماه', years:'سال', yearsAfter:'پس از', yearsResidence:'سال اقامت', calNoDate:'ابتدا تاریخ ورود را وارد کنید.', calBadDate:'این تاریخ معتبر نیست.', calOutOfRange:'تاریخی در ۵۰ سال آینده انتخاب کنید.', calDone:'تقویم دانلود شد', arrivalOutOfRange:'تاریخ در محدوده ±۵۰ سال.', arrivalInvalid:'تاریخ نامعتبر.' },
+  };
+  const t = (key) => {
+    const lang = (window.currentLang || document.documentElement.lang || 'en');
+    return (CALC_I18N[lang] && CALC_I18N[lang][key]) || CALC_I18N.en[key] || key;
+  };
+  const DATE_LOCALE = { en:'en-GB', fr:'fr-FR', ar:'ar', es:'es-ES', da:'da-DK', de:'de-DE', uk:'uk-UA', pl:'pl-PL', ur:'ur', fa:'fa-IR' };
+  const dateLocale = () => DATE_LOCALE[window.currentLang || 'en'] || 'en-GB';
+
   /* ══════════════════════════════════════════════════════
      1. SALARY CALCULATOR — Real Danish Tax Logic (2025 rates)
      ──────────────────────────────────────────────────────
@@ -111,9 +158,20 @@ const Calculators = (() => {
     ctx.stroke();
   };
 
+  // Cache last donut values so we can redraw on theme change
+  // (Round 2A: donut canvas froze with stale colours after dark/light toggle).
+  let lastDonut = null;
+
   const initSalaryCalc = () => {
     const btn = document.getElementById('salary-calc-btn');
     if (!btn) return;
+    // Listen once for theme switches and redraw the donut if it's been drawn.
+    if (!initSalaryCalc._themeWired) {
+      initSalaryCalc._themeWired = true;
+      window.addEventListener('themeChange', () => {
+        if (lastDonut) drawDonut(lastDonut.id, lastDonut.net, lastDonut.tax, lastDonut.gross);
+      });
+    }
 
     btn.addEventListener('click', () => {
       const grossInput = document.getElementById('salary-input');
@@ -124,14 +182,15 @@ const Calculators = (() => {
       const netVal     = document.getElementById('donut-net-val');
 
       if (!grossInput?.value) {
-        window.App?.showToast('Enter a salary amount first', 'warning');
+        window.App?.showToast(t('enterSalary'), 'warning');
         return;
       }
 
       const r = calcSalary(grossInput.value, muniSelect?.value || '25.10');   // 2025 national avg
       if (!r) return;
 
-      // Draw donut
+      // Draw donut + cache for theme redraw
+      lastDonut = { id:'salary-donut', net:r.net, tax:r.totalTax, gross:r.gross };
       drawDonut('salary-donut', r.net, r.totalTax, r.gross);
 
       // Update center
@@ -140,23 +199,21 @@ const Calculators = (() => {
       // Breakdown rows
       if (breakdown) {
         breakdown.innerHTML = `
-          <div class="breakdown-row"><span class="breakdown-label">Gross salary</span><span class="breakdown-val">${formatDKK(r.gross)}</span></div>
-          <div class="breakdown-row"><span class="breakdown-label">AM-bidrag (8%)</span><span class="breakdown-val red">– ${formatDKK(r.amBidrag)}</span></div>
-          <div class="breakdown-row"><span class="breakdown-label">Income tax</span><span class="breakdown-val red">– ${formatDKK(r.baseTax)}</span></div>
-          ${r.topTax > 0 ? `<div class="breakdown-row"><span class="breakdown-label">Top tax (15%)</span><span class="breakdown-val red">– ${formatDKK(r.topTax)}</span></div>` : ''}
-          <div class="breakdown-row" style="border-top:2px solid var(--border-strong);padding-top:8px;margin-top:4px"><span class="breakdown-label" style="font-weight:700;color:var(--text)">Net monthly pay</span><span class="breakdown-val green" style="font-size:1rem">${formatDKK(r.net)}</span></div>
-          <div class="breakdown-row"><span class="breakdown-label" style="color:var(--text-faint)">Effective tax rate</span><span class="breakdown-val" style="color:var(--text-faint)">${r.effectiveRate}%</span></div>
-          <div class="breakdown-row"><span class="breakdown-label" style="color:var(--text-faint)">Net annual</span><span class="breakdown-val" style="color:var(--text-faint)">${formatDKK(r.netAnnual)}</span></div>
+          <div class="breakdown-row"><span class="breakdown-label">${t('gross')}</span><span class="breakdown-val">${formatDKK(r.gross)}</span></div>
+          <div class="breakdown-row"><span class="breakdown-label">${t('amBidrag')}</span><span class="breakdown-val red">– ${formatDKK(r.amBidrag)}</span></div>
+          <div class="breakdown-row"><span class="breakdown-label">${t('incomeTax')}</span><span class="breakdown-val red">– ${formatDKK(r.baseTax)}</span></div>
+          ${r.topTax > 0 ? `<div class="breakdown-row"><span class="breakdown-label">${t('topTax')}</span><span class="breakdown-val red">– ${formatDKK(r.topTax)}</span></div>` : ''}
+          <div class="breakdown-row" style="border-top:2px solid var(--border-strong);padding-top:8px;margin-top:4px"><span class="breakdown-label" style="font-weight:700;color:var(--text)">${t('netMonthly')}</span><span class="breakdown-val green" style="font-size:1rem">${formatDKK(r.net)}</span></div>
+          <div class="breakdown-row"><span class="breakdown-label" style="color:var(--text-faint)">${t('effRate')}</span><span class="breakdown-val" style="color:var(--text-faint)">${r.effectiveRate}%</span></div>
+          <div class="breakdown-row"><span class="breakdown-label" style="color:var(--text-faint)">${t('netAnnual')}</span><span class="breakdown-val" style="color:var(--text-faint)">${formatDKK(r.netAnnual)}</span></div>
         `;
       }
 
       // Context message
       if (contextDiv) {
         const medianSalary = 44500; // DKK/month gross (approx 2025 median)
-        const comparison = r.gross > medianSalary
-          ? `Your salary is above the Danish median gross salary (~44,500 DKK/month).`
-          : `The Danish median gross salary is ~44,500 DKK/month.`;
-        const rentContext = r.net >= 12000 ? "You can comfortably afford most Copenhagen apartments." : r.net >= 9000 ? "You can afford average Copenhagen rents, though it will be a significant portion of your income." : "Budget-conscious choices will be important. Consider Aarhus or Odense for more comfortable living costs.";
+        const comparison = r.gross > medianSalary ? t('medianAbove') : t('median');
+        const rentContext = r.net >= 12000 ? t('rentComfortable') : r.net >= 9000 ? t('rentAvg') : t('rentTight');
         contextDiv.innerHTML = `💡 ${comparison} ${rentContext}`;
       }
 
@@ -170,7 +227,7 @@ const Calculators = (() => {
       if (!existingLink) {
         const link = document.createElement('div');
         link.className = 'tool-chapter-link';
-        link.innerHTML = `📖 Want to understand your payslip, pension and skattekort in detail? <button class="tool-chapter-btn" onclick="openChapter(4)">Read Chapter 4 — Money &amp; Banking →</button>`;
+        link.innerHTML = `${t('payslipLink')} <button class="tool-chapter-btn" onclick="openChapter(4)">${t('readCh4')}</button>`;
         resultDiv.appendChild(link);
       }
 
@@ -178,7 +235,7 @@ const Calculators = (() => {
       if (!resultDiv.querySelector('.tool-copy-btn')) {
         const copyBtn = document.createElement('button');
         copyBtn.className = 'tool-copy-btn';
-        copyBtn.textContent = '📋 Copy result';
+        copyBtn.textContent = t('copyResult');
         copyBtn.onclick = () => window.copyToolResult?.('salary-result');
         resultDiv.appendChild(copyBtn);
       }
@@ -422,7 +479,7 @@ const Calculators = (() => {
 
     // Yes/No options (binary)
     if (node.yes && node.no) {
-      ['Yes — EU/EEA citizen', 'No — Non-EU citizen'].forEach((label, i) => {
+      [t('euYes'), t('euNo')].forEach((label, i) => {
         const btn = document.createElement('button');
         btn.className = 'visa-opt-btn';
         btn.textContent = label;
@@ -472,13 +529,25 @@ const Calculators = (() => {
       const resultDiv   = document.getElementById('res-result');
 
       if (!dateInput?.value) {
-        window.App?.showToast('Please select your arrival date', 'warning');
+        window.App?.showToast(t('enterArrival'), 'warning');
         return;
       }
 
       // Parse YYYY-MM-DD as local-midnight (not UTC), so users in negative-UTC
       // timezones don't see their arrival shift to the previous calendar day.
       const arrival  = new Date(dateInput.value + 'T00:00:00');
+      // Round 2B fix: residency calc had no sanity bounds (deadline-calendar did).
+      // Reject obviously bad input so we don't render "1024 years in Denmark".
+      if (isNaN(arrival.getTime())) {
+        window.App?.showToast(t('arrivalInvalid'), 'warning');
+        return;
+      }
+      const nowGuard = new Date();
+      const fiftyYearsMs = 50 * 365 * 24 * 60 * 60 * 1000;
+      if (Math.abs(arrival - nowGuard) > fiftyYearsMs) {
+        window.App?.showToast(t('arrivalOutOfRange'), 'warning');
+        return;
+      }
       const now      = new Date();
       const permit   = permitSel?.value || 'work_permit';
       const rules    = RESIDENCY_RULES[permit] || RESIDENCY_RULES.work_permit;
@@ -490,13 +559,13 @@ const Calculators = (() => {
 
       const milestones = [
         {
-          label: 'Arrived in Denmark',
+          label: t('arrived'),
           date: arrival,
           reached: true,
           icon: '✈️'
         },
         ...(fastTrackDate ? [{
-          label: `Fast-track permanent residency possible`,
+          label: t('fastTrack'),
           date: fastTrackDate,
           reached: now >= fastTrackDate,
           icon: '⚡',
@@ -507,10 +576,10 @@ const Calculators = (() => {
           date: permResDate,
           reached: now >= permResDate,
           icon: '🏠',
-          note: `After ${rules.permRes} years of residence`
+          note: `${t('yearsAfter')} ${rules.permRes} ${t('yearsResidence')}`
         },
         {
-          label: 'Danish Citizenship eligible',
+          label: t('citizenship'),
           date: citizenDate,
           reached: now >= citizenDate,
           icon: '🇩🇰',
@@ -529,16 +598,16 @@ const Calculators = (() => {
         // Update the first milestone for accuracy when planning
         if (milestones[0]) milestones[0].reached = false;
         const arrivalIn = monthsUntilArrival < 1
-          ? 'less than a month'
+          ? t('lessThanMonth')
           : monthsUntilArrival < 12
-            ? `${monthsUntilArrival} ${monthsUntilArrival === 1 ? 'month' : 'months'}`
-            : `${(monthsUntilArrival / 12).toFixed(1)} years`;
-        intro = `📋 Planning ahead — you arrive in <strong>${arrivalIn}</strong>. Here's your residency roadmap from that date.`;
+            ? `${monthsUntilArrival} ${monthsUntilArrival === 1 ? t('month') : t('months')}`
+            : `${(monthsUntilArrival / 12).toFixed(1)} ${t('years')}`;
+        intro = `${t('planArrive')} <strong>${arrivalIn}</strong>${t('roadmapFromDate')}`;
       } else {
         const yearsDisplay = yearsHere < 1
-          ? `${Math.round(yearsHere * 12)} months`
-          : `${yearsHere.toFixed(1)} years`;
-        intro = `You've been in Denmark for <strong>${yearsDisplay}</strong>.`;
+          ? `${Math.round(yearsHere * 12)} ${t('months')}`
+          : `${yearsHere.toFixed(1)} ${t('years')}`;
+        intro = `${t('beenIn')} <strong>${yearsDisplay}</strong>.`;
       }
 
       const nextMilestone = milestones.find(m => !m.reached);
@@ -549,7 +618,7 @@ const Calculators = (() => {
       resultDiv.innerHTML = `
         <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px">
           ${intro}
-          ${nextMilestone ? ` Next milestone in <strong>${yearsToNext} years</strong> (${nextMilestone.date.toLocaleDateString('en-GB', {month:'long', year:'numeric'})}).` : 'You\'ve reached all major milestones! 🎉'}
+          ${nextMilestone ? `${t('nextMilestone')} <strong>${yearsToNext} ${t('years')}</strong> (${nextMilestone.date.toLocaleDateString(dateLocale(), {month:'long', year:'numeric'})}).` : t('allMilestones')}
         </div>
         ${rules.note ? `<div style="font-size:0.8rem;color:var(--amber);margin-bottom:12px;padding:8px 12px;background:rgba(232,160,32,0.1);border-radius:8px">ℹ️ ${rules.note}</div>` : ''}
         <div class="res-timeline">
@@ -558,7 +627,7 @@ const Calculators = (() => {
               <div class="res-dot ${m.reached ? 'reached' : (m === nextMilestone ? 'next' : '')}">${m.reached ? '✓' : (m === nextMilestone ? '→' : m.icon)}</div>
               <div class="res-text">
                 <strong>${m.label}</strong>
-                <span>${m.date.toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'})}${m.note ? ' · ' + m.note : ''}</span>
+                <span>${m.date.toLocaleDateString(dateLocale(), {day:'numeric', month:'long', year:'numeric'})}${m.note ? ' · ' + m.note : ''}</span>
               </div>
             </div>
           `).join('')}
@@ -572,7 +641,7 @@ const Calculators = (() => {
       if (!resultDiv.querySelector('.tool-copy-btn')) {
         const copyBtn = document.createElement('button');
         copyBtn.className = 'tool-copy-btn';
-        copyBtn.textContent = '📋 Copy result';
+        copyBtn.textContent = t('copyResult');
         copyBtn.onclick = () => window.copyToolResult?.('res-result');
         resultDiv.appendChild(copyBtn);
       }
@@ -629,8 +698,21 @@ const Calculators = (() => {
       'X-WR-CALDESC:Your personal Denmark relocation timeline from ANKOMMER'
     ];
 
+    // Round 2B fix: annual SKAT events were anchored as arrival+constant-days,
+    // which is only correct for early-Jan arrivals. forskudsopgørelse publishes
+    // every November; årsopgørelse every March. Snap to the next real Nov 1 /
+    // Mar 11 after the user's arrival so dates land in the right calendar year.
+    const nextAnnual = (afterDate, month /* 0-11 */, day) => {
+      const d = new Date(afterDate.getFullYear(), month, day);
+      if (d <= afterDate) d.setFullYear(d.getFullYear() + 1);
+      return d;
+    };
+
     events.forEach(ev => {
-      const start = addDays(arrivalDate, ev.offsetDays);
+      let start;
+      if (ev.id === 'forskuds-yearly')      start = nextAnnual(arrivalDate, 10, 1);  // Nov 1
+      else if (ev.id === 'aarsopgoerelse')  start = nextAnnual(arrivalDate,  2, 11); // Mar 11
+      else                                   start = addDays(arrivalDate, ev.offsetDays);
       const end   = addDays(start, ev.durationDays || 1);   // DTEND is exclusive in all-day form
       const summary = ev.summary[lang] || ev.summary.en;
       const description = (ev.description || '') +
@@ -681,13 +763,13 @@ const Calculators = (() => {
       const dateInput = document.getElementById('cal-arrival-date');
       const v = dateInput?.value;
       if (!v) {
-        showCalMsg('Please enter your arrival date first.');
+        showCalMsg(t('calNoDate'));
         dateInput?.focus();
         return;
       }
       const arrival = new Date(v + 'T00:00:00');
       if (isNaN(arrival.getTime())) {
-        showCalMsg('That date doesn\'t look valid. Please pick again.');
+        showCalMsg(t('calBadDate'));
         dateInput?.focus();
         return;
       }
@@ -695,7 +777,7 @@ const Calculators = (() => {
       const now = new Date();
       const fiftyYearsMs = 50 * 365 * 24 * 60 * 60 * 1000;
       if (Math.abs(arrival - now) > fiftyYearsMs) {
-        showCalMsg('Please pick a date within the next 50 years.');
+        showCalMsg(t('calOutOfRange'));
         dateInput?.focus();
         return;
       }
@@ -712,7 +794,7 @@ const Calculators = (() => {
       setTimeout(() => URL.revokeObjectURL(url), 1000);
       // Visible confirmation
       const orig = btn.textContent;
-      btn.textContent = '✓ ' + ((window.i18n?.t?.('cal_done')) || 'Calendar downloaded');
+      btn.textContent = '✓ ' + t('calDone');
       setTimeout(() => { btn.textContent = orig; }, 2500);
     });
   };
