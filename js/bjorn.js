@@ -6,11 +6,14 @@
 const Bjorn = (() => {
 
   /* ── STATE ──────────────────────────────────────────── */
-  // NOTE: This is a free-tier Groq key (14,400 req/day limit).
-  // For production: proxy requests through a backend endpoint
-  // so the key is never exposed in client-side code.
-  // Segments are joined at runtime to reduce plain-text visibility in source scanners.
+  // After deploying cloudflare-worker/bjorn-proxy.js, set PROXY_URL to your
+  // Worker URL (e.g. 'https://ankommer-bjorn-proxy.YOURID.workers.dev').
+  // Once set, the key below is unused and can be removed; rotate the old key at console.groq.com/keys.
+  const PROXY_URL = '';
+
+  // Fallback direct key — used only when PROXY_URL is empty. Remove after Worker is live.
   const _k = ['gsk_yHEFAAEzAPNVFcQftwJa', 'WGdyb3FYUSnzqVYzlCvsmp', '7RgpjHiJzD'].join('');
+
   const HISTORY_KEY = 'ankommer_bjorn_history';
   let apiKey = _k;
   let conversationHistory = [];
@@ -538,14 +541,17 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
 
     let response;
     try {
-      response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      const useProxy = !!PROXY_URL;
+      const endpoint = useProxy
+        ? PROXY_URL
+        : 'https://api.groq.com/openai/v1/chat/completions';
+      const headers = {
+        'Content-Type': 'application/json; charset=utf-8',
+        ...(useProxy ? {} : { 'Authorization': `Bearer ${apiKey}` })
+      };
+      response = await fetch(endpoint, {
         method: 'POST',
-        headers: {
-          // Explicit charset prevents some intermediaries from re-encoding the body
-          // when users include Danish characters (æ ø å) or curly apostrophes.
-          'Content-Type': 'application/json; charset=utf-8',
-          'Authorization': `Bearer ${apiKey}`
-        },
+        headers,
         body: JSON.stringify({
           model: 'llama-3.3-70b-versatile',
           messages,

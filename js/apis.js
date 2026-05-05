@@ -283,9 +283,9 @@ const APIs = (() => {
           <div class="dawa-result-header">
             <div class="dawa-kommune-badge">
               <span class="dawa-flag">📍</span>
-              <span class="dawa-kommune-name">${kommune || 'Unknown'} Kommune</span>
+              <span class="dawa-kommune-name">${esc(kommune || 'Unknown')} Kommune</span>
             </div>
-            <div class="dawa-postnr-badge">${addr.postnr} ${addr.postnrnavn}</div>
+            <div class="dawa-postnr-badge">${esc(addr.postnr)} ${esc(addr.postnrnavn)}</div>
           </div>
 
           <div class="dawa-stats-grid">
@@ -310,7 +310,7 @@ const APIs = (() => {
 
           <div class="dawa-tip">💡 Lowest tax rates in Denmark: ${cheapest}</div>
 
-          <button class="dawa-use-rate-btn" data-rate="${taxRate}" data-kommune="${kommune}">
+          <button class="dawa-use-rate-btn" data-rate="${taxRate}" data-kommune="${esc(kommune)}">
             → Use ${taxRate}% in Salary Calculator
           </button>
         </div>
