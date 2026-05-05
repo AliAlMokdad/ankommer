@@ -1085,14 +1085,16 @@ const buildRailNav = () => {
       ? `<span class="rail-start-hint">Start here →</span>`
       : '';
 
-    return `<div class="rail-item ${isActive ? 'active' : ''} ${isComplete ? 'completed' : ''}"
+    return `<button class="rail-item ${isActive ? 'active' : ''} ${isComplete ? 'completed' : ''}"
       onclick="openChapter(${i})"
-      style="--ch-accent:${ch.color}">
-      <span class="rail-icon">${ch.icon}</span>
+      style="--ch-accent:${ch.color}"
+      aria-label="${ch.title[lang] || ch.title.en}"
+      aria-current="${isActive ? 'page' : 'false'}">
+      <span class="rail-icon" aria-hidden="true">${ch.icon}</span>
       <span>${ch.title[lang] || ch.title.en}</span>
       ${startHint}
-      <span class="rail-check">✓</span>
-    </div>`;
+      <span class="rail-check" aria-hidden="true">✓</span>
+    </button>`;
   }).join('');
 };
 

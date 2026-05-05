@@ -1024,6 +1024,12 @@ h4 { font-size: 1rem; font-weight: 600; }
   font-size: 0.85rem; font-weight: 500;
   transition: all var(--t-fast);
   border-left: 3px solid transparent;
+  border-top: none; border-right: none; border-bottom: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  line-height: inherit;
   position: relative;
 }
 .rail-item:hover { color: var(--text); background: var(--bg-secondary); }
