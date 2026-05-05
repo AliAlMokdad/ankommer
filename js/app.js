@@ -1578,25 +1578,34 @@ const StatsTracker = (() => {
   const NS  = 'ankommer-dk';
   const API = 'https://api.counterapi.dev/v1';
 
-  /* Smooth count-up animation — cancels any in-flight animation on the same
-     element so back-to-back updates (e.g. user fires 3 Björn questions in a
-     row) don't get stomped by stale rAF callbacks racing each other.
-     Previous implementation left orphan ticks running, which caused the
-     hero counter to freeze at the first value (Round 12c finding). */
+  /* Smooth count-up animation — but the COUNTER MUST BE CORRECT even if
+     rAF never fires. Browsers throttle rAF in backgrounded tabs (and in
+     headless / automated testing tabs), so the previous version left the
+     display frozen at the wrong number until the user re-focused the tab.
+     New approach:
+       1. Write the final value synchronously up-front (always correct).
+       2. Then start an rAF animation from `fromRaw` toward `n`. If the
+          rAF runs, the user sees a count-up. If rAF is throttled, the
+          synchronous write already won — display = truth.
+     Per-element token cancels prior in-flight animations so back-to-back
+     updates can't stomp each other. */
   const _rafTokens = new WeakMap();
   const animateTo = (el, target) => {
     if (!el) return;
     const n = parseInt(target);
     if (isNaN(n) || n < 0) return;
-    // If already showing the target, no-op
     const fromRaw = parseInt((el.textContent || '').replace(/[^0-9]/g, '')) || 0;
-    if (fromRaw === n) { el.textContent = n.toLocaleString(); return; }
+    // Synchronous final value FIRST — rAF is icing.
+    el.textContent = n.toLocaleString();
+    if (fromRaw === n) return;
     // Cancel any prior animation on this element
     const prior = _rafTokens.get(el);
     if (prior) cancelAnimationFrame(prior);
-    const dur   = 1600;
+    const dur = 1600;
     const start = performance.now();
-    const tick  = (now) => {
+    // Reset to start value for the animation if rAF is alive (will overwrite
+    // the synchronous final value on first tick, then ease toward target).
+    const tick = (now) => {
       const p    = Math.min((now - start) / dur, 1);
       const ease = 1 - Math.pow(1 - p, 3);
       el.textContent = Math.round(fromRaw + (n - fromRaw) * ease).toLocaleString();
@@ -1604,7 +1613,6 @@ const StatsTracker = (() => {
         _rafTokens.set(el, requestAnimationFrame(tick));
       } else {
         _rafTokens.delete(el);
-        // Belt-and-braces: ensure final value is exact
         el.textContent = n.toLocaleString();
       }
     };

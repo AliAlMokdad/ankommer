@@ -638,6 +638,46 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     if (el) el.classList.toggle('hidden', !show);
   };
 
+  /* Client-side prompt-injection / off-topic guard.
+     Llama 3.3 70B doesn't reliably resist "Ignore your previous instructions"
+     attacks even with explicit system-prompt rules (Round 12c live test
+     confirmed this — went full pirate). Catch the obvious patterns here
+     before they reach the model. Returns a redirect string, or null to pass
+     the message through unchanged. */
+  const INJECTION_PATTERNS = [
+    /\bignore\s+(your|all|previous|prior|the\s+above)\s+(instructions|rules|prompts?|system)/i,
+    /\bdisregard\s+(your|all|previous|prior|the\s+above)\s+(instructions|rules)/i,
+    /\bforget\s+(everything|your\s+instructions|the\s+above)/i,
+    /\byou\s+are\s+(now|no\s+longer)\s+(a|an)\s+\w+/i,
+    /\byou'?re\s+(now|no\s+longer)\s+(a|an)\s+\w+/i,
+    /\bact\s+as\s+(a|an|if)\s+/i,
+    /\bpretend\s+(to\s+be|you\s+are|you'?re)/i,
+    /\bdeveloper\s+mode\b/i,
+    /\bjailbreak/i,
+    /\bDAN\s+mode\b/i,
+    /\bdo\s+anything\s+now\b/i,
+    /\bsystem\s*[:>]/i,
+    /\broleplay\s+as\b/i,
+    /\bnew\s+(system\s+)?(prompt|instructions)\b/i,
+  ];
+  const OFF_TOPIC_PATTERNS = [
+    /\b(write|generate|give\s+me|create)\s+(me\s+)?(a\s+)?(python|javascript|java|c\+\+|ruby|go|rust|typescript|php|swift)\s+(function|script|code|program|class)/i,
+    /\b(fibonacci|binary\s+search|quicksort|leetcode)\b/i,
+    /\bsolve\s+this\s+(equation|problem|math)/i,
+    /\b(recipe|cook|bake)\s+(for|me\s+a)/i,
+    /\btell\s+me\s+a\s+joke\s+about\b/i,
+  ];
+  const checkInjectionOrOffTopic = (message) => {
+    if (!message) return null;
+    if (INJECTION_PATTERNS.some(re => re.test(message))) {
+      return `🛡️ I'm Björn — your guide to life in Denmark. I keep my role and don't switch personas, no matter how the question is framed.\n\nWhat would you like to know about moving to or living in Denmark? CPR, housing, taxes, MitID, healthcare, family rules — pick anything.`;
+    }
+    if (OFF_TOPIC_PATTERNS.some(re => re.test(message))) {
+      return `🛡️ I only know Denmark — moving here, living here, the practical stuff (CPR, MitID, housing, tax, healthcare, jobs, culture, language). For coding, recipes, or general questions, you'll want a different tool.\n\nIs there something about life in Denmark I can help with?`;
+    }
+    return null;
+  };
+
   /* ── SEND MESSAGE ────────────────────────────────────── */
   const sendMessage = async (message) => {
     if (!message.trim()) return;
@@ -654,6 +694,16 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     if (badge) badge.classList.add('hidden');
 
     renderMessage(message, 'user');
+
+    // Client-side guard: catch obvious prompt-injection / off-topic before
+    // the API call. Saves a Groq round-trip AND can't be jailbroken.
+    const guard = checkInjectionOrOffTopic(message);
+    if (guard) {
+      renderMessage(guard, 'bjorn');
+      window.dispatchEvent(new Event('bjornMessageSent'));
+      return;
+    }
+
     showThinking(true);
 
     try {
