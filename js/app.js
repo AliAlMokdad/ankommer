@@ -1136,8 +1136,13 @@ window.openChapter = (index) => {
   }
   // Also expose via global for any code that reads it before AppState is available
   window._currentChapterIdx = index;
-  // Close mobile sidebar
+  // Close mobile sidebar (rail + hamburger + aria-expanded sync)
   document.getElementById('chapter-rail')?.classList.remove('open');
+  const hb = document.getElementById('hamburger');
+  if (hb) {
+    hb.classList.remove('open');
+    hb.setAttribute('aria-expanded', 'false');
+  }
 };
 
 /* ══════════════════════════════════════════════════════

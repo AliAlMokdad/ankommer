@@ -3503,3 +3503,172 @@ h4 { font-size: 1rem; font-weight: 600; }
   .footer-progress-btn { width: 100%; min-height: 44px; }
 }
 
+/* ════════════════════════════════════════════════════════════════
+   MOBILE EXCELLENCE PASS (round 9)
+   ──────────────────────────────────────────────────────────────
+   Fixes from a 2-source audit (code review + dedicated agent).
+   Addresses: hero overflow, Arabic mobile margin bug, tools-grid
+   tablet overflow, weather card layout, hero stat dividers, Björn
+   panel 100vw bug, chapter padding on small phones, long-word
+   wrapping, lang dropdown, <360px (Galaxy Fold) coverage.
+══════════════════════════════════════════════════════════════ */
+
+/* Long compound words (Danish: forældreorlovsdagpenge) and long URLs
+   were causing horizontal scroll in chapter prose, info-tables, and
+   Björn replies. */
+body { overflow-wrap: break-word; }
+.info-table td, .info-table th,
+.section-body p, .section-body li, .section-body a,
+.bjorn-tip-body p,
+.breakdown-row, .breakdown-val,
+.dawa-stat-val, .check-label,
+.col-ctx-salary, .col-ctx-tip,
+.weather-source-note,
+.msg-bubble {
+  overflow-wrap: anywhere;
+}
+
+/* Footer columns: ensure long translated headings can shrink */
+.footer-col { min-width: 0; }
+
+/* Toast container: clear of Björn floating toggle (with safe-area) */
+.toast-container {
+  bottom: max(100px, calc(env(safe-area-inset-bottom) + 100px));
+}
+
+/* Tools-grid: switch to single column earlier (tablets too) so cards
+   don't get squeezed at 481-900px on landscape phones / small tablets. */
+@media (max-width: 900px) {
+  .tools-grid { grid-template-columns: 1fr; }
+  /* Weather card 2-column internal layout collapses earlier too */
+  #weather-tool { grid-column: span 1; }
+  #weather-tool .weather-card { display: block; }
+}
+
+/* Hero: the big "doesn't fit" complaint. iOS 100vh includes URL bar
+   so content gets clipped. Use 100svh + drop the 600px floor on
+   mobile — let content size naturally. */
+@media (max-width: 768px) {
+  #hero {
+    height: auto;
+    min-height: 100svh;
+    min-height: -webkit-fill-available;          /* iOS Safari fallback */
+  }
+  .hero-content { padding: calc(var(--nav-h) + 24px) 20px 40px; }
+}
+@media (max-height: 700px) and (max-width: 900px) {
+  #hero { min-height: auto; }
+  .scroll-indicator { display: none; }
+  .hero-content { padding: calc(var(--nav-h) + 12px) 20px 20px; }
+}
+
+/* Hero stats: orphan dividers wrap awkwardly between 481-600px.
+   Hide dividers below 600px and tighten the grid. */
+@media (max-width: 600px) {
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 20px;
+    padding: 14px 18px;
+  }
+  .hero-stat-divider { display: none; }
+  .hero-stat { padding: 4px; }
+}
+/* On smallest phones, stats are visible (don't hide them — they're useful) */
+@media (max-width: 480px) {
+  .hero-stats { display: grid; }                /* override the prior `display:none` */
+  .hero-stats { grid-template-columns: repeat(2, 1fr); padding: 12px 14px; }
+  .hero-stat-num { font-size: 1rem; }
+  .hero-stat span:last-child { font-size: 0.65rem; }
+}
+
+/* RTL bug: [lang=ar] .main-content has margin-right: var(--rail-w)
+   which becomes 100% on mobile, pushing all content off-screen.
+   The 768px override only neutralizes margin-left. Also affects
+   Urdu and Persian (RTL languages). */
+@media (max-width: 768px) {
+  [lang="ar"] .main-content,
+  [lang="ur"] .main-content,
+  [lang="fa"] .main-content {
+    margin-right: 0;
+  }
+}
+
+/* Björn panel: width:calc(100vw - 32px) on iOS includes the scrollbar
+   width, causing horizontal overflow. Use percentage instead. */
+@media (max-width: 768px) {
+  .bjorn-panel { width: calc(100% - 32px); right: 16px; left: auto; }
+}
+
+/* Chapter page: 40px horizontal padding on a 360px viewport leaves
+   only 280px for content. Tighten on small phones. */
+@media (max-width: 480px) {
+  .chapter-page { padding: 24px 14px 48px; }
+  .tool-card { padding: 18px; }
+  .section-toggle { padding: 12px 14px; font-size: 0.95rem; }
+  .daily-section { padding: 28px 14px; }
+}
+
+/* Wizard: result CTAs need to stack on tiny screens (each had min-width 150px,
+   two won't fit at 320px). */
+@media (max-width: 480px) {
+  .result-ctas { flex-direction: column; gap: 10px; padding: 12px 18px 24px; }
+  .result-ctas > * { flex: 1 1 100% !important; min-width: 0 !important; }
+  .result-hero { padding: 22px 18px 18px; }
+  .result-priorities-wrap, .result-chips, .result-xp-strip { padding-left: 18px; padding-right: 18px; }
+  .result-bjorn-card { margin: 14px 18px; }
+}
+
+/* Lang dropdown: expanded menu can overflow on Galaxy Fold (280px wide). */
+@media (max-width: 600px) {
+  .lang-selector.open {
+    max-width: calc(100vw - 24px);
+    width: 200px;
+  }
+  /* Hide search-modal Esc hint on mobile (no physical Esc key) */
+  .search-esc-hint { display: none; }
+  /* DAWA suggestions: don't extend past viewport */
+  .dawa-suggestions { max-height: min(240px, 35vh); }
+}
+
+/* Mobile chapter rail: not full-width on tiny phones */
+@media (max-width: 768px) {
+  .chapter-rail { width: min(280px, 90vw); }
+  /* Add a backdrop scrim when rail is open so user knows to tap-to-close */
+  .chapter-rail.open::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+    animation: fade-in 0.2s ease;
+  }
+}
+
+/* Galaxy Fold (280px when open inner) and other ultra-narrow screens */
+@media (max-width: 360px) {
+  :root { --nav-h: 56px; }
+  .chapter-page    { padding: 18px 10px 40px; }
+  .tool-card       { padding: 14px; }
+  .tools-grid      { padding: 0 10px; gap: 12px; }
+  .chapters-preview-grid { padding: 0 10px; gap: 8px; }
+  .daily-section   { padding: 22px 10px; }
+  .footer-inner    { padding: 24px 12px 20px; }
+  .btn-xl          { padding: 14px 22px; font-size: 1rem; }
+  .hero-title      { font-size: 1.55rem; }
+  .nav-logo        { font-size: 1.1rem; }
+  .info-table th, .info-table td { font-size: 0.75rem; padding: 6px 8px; }
+  .check-item      { padding: 10px 12px; }
+  .col-city-tab    { min-width: 60px; font-size: 0.72rem; padding: 6px 8px; }
+  .weather-grid    { grid-template-columns: 1fr 1fr; }
+  .jobs-boards-grid{ grid-template-columns: 1fr; }
+  .pwa-install-banner { padding: 10px 12px; gap: 8px; }
+  .hero-stats { padding: 10px 12px; }
+}
+
+/* Animation reuse for backdrop fade */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
