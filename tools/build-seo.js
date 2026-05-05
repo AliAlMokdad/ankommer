@@ -20,12 +20,13 @@ const ROOT       = path.resolve(__dirname, '..');
 const SITE_URL   = 'https://ankommer.org';
 const TODAY      = new Date().toISOString().slice(0, 10);
 
-/* ── 1. Load CHAPTERS from js/data.js ────────────────────────── */
+/* ── 1. Load CHAPTERS — concat data.js + data-chapters.js ────── */
 function loadChapters() {
-  const src = fs.readFileSync(path.join(ROOT, 'js', 'data.js'), 'utf8');
-  // data.js declares globals via `const NAME = ...`. Wrap in a function
-  // that returns the bindings we need so we don't pollute Node globals.
-  const wrapped = `${src}\nreturn { CHAPTERS, TIMELINE_EVENTS };`;
+  const dataSrc = fs.readFileSync(path.join(ROOT, 'js', 'data.js'), 'utf8');
+  const chapSrc = fs.readFileSync(path.join(ROOT, 'js', 'data-chapters.js'), 'utf8');
+  // Both files declare globals via `const NAME = ...`. Concat them and wrap
+  // in a function that returns the bindings — no pollution of Node globals.
+  const wrapped = `${dataSrc}\n${chapSrc}\nreturn { CHAPTERS, TIMELINE_EVENTS };`;
   return new Function(wrapped)();
 }
 
