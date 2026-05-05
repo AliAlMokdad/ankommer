@@ -3503,6 +3503,33 @@ h4 { font-size: 1rem; font-weight: 600; }
   .footer-progress-btn { width: 100%; min-height: 44px; }
 }
 
+/* ── Footer founder line (round 10) ────────────────────────────── */
+.footer-founder {
+  margin: 6px 0 4px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+}
+.footer-founder-link {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+.footer-founder-link:hover,
+.footer-founder-link:focus-visible {
+  color: var(--brand-red);
+  border-bottom-color: var(--brand-red);
+}
+
 /* ════════════════════════════════════════════════════════════════
    MOBILE EXCELLENCE PASS (round 9)
    ──────────────────────────────────────────────────────────────

@@ -380,63 +380,66 @@ The app goes on your smartphone and generates login codes. Keep your phone safe 
 
 *Pro tip from Björn:* Set up a backup method (hardware token or code key) in case you lose your phone.`,
 
-    tax: `Ah, Danish taxes. Let me give you the honest picture.
+    tax: `Ah, Danish taxes. Let me give you the honest picture (figures verified for 2025).
 
 **What you pay:**
 - **AM-bidrag:** 8% off the top. No exceptions.
-- **Municipal tax (kommuneskat):** ~25% (varies by kommune)
-- **State tax (bundskat):** ~12% on income above your personal allowance
-- **Personal allowance:** ~49,700 DKK/year you pay no tax on
+- **Municipal tax (kommuneskat):** ~22–27% (varies by kommune; CPH is 23.50% in 2025)
+- **State tax (bundskat):** 12.01% (2025) on income above your personal allowance
+- **Topskat:** 15% on personal income above ~611,800 DKK/yr (after AM-bidrag)
+- **Personal allowance (personfradrag):** 51,600 DKK/year (2025) — applied as a tax credit
 
-**Effective rate** for most earners: 35–42%
+**Effective rate** for most earners: 35–42%. The combined cap (skatteloft) is 52.07%.
 
-**What you get for it:** Free healthcare. Free university. 52 weeks parental leave (paid). 5 weeks mandatory vacation. Free schools. A functioning welfare state. The math is genuinely different from most countries.
+**What you get for it:** Tax-funded healthcare, free university for EU students, generous parental leave, 5 weeks mandatory vacation, public schools. Note: dental and glasses are mostly out-of-pocket.
 
 **Practical steps:**
-1. Get your **skattekort** (tax card) at skat.dk/en-us — do this your first week
-2. Check **e-Boks** every week for communications from SKAT
-3. In March each year, your **årsopgørelse** (annual tax settlement) arrives — most newcomers get a refund!
+1. Get your **skattekort** (tax card) at skat.dk/en-us in your first week. Without it, employer withholds 55% (refunded later, not lost — but uncomfortable).
+2. Check **e-Boks** weekly for SKAT communications.
+3. In March each year, your **årsopgørelse** arrives — most newcomers get a refund.
 
-Use the Salary Calculator on this page to see exactly what you'll take home.`,
+Use the Salary Calculator on this page for your exact take-home.`,
 
-    housing: `The Danish housing market — especially Copenhagen — is genuinely competitive. Let me be honest with you about that, and then tell you how to win.
+    housing: `The Danish housing market — especially Copenhagen — is genuinely competitive. Let me give you the honest legal picture before how to win.
 
 **Where to search:**
 - **BoligPortal.dk** — biggest private rental platform
 - **Lejebolig.dk** — good selection, English-friendly
 - **Facebook:** Search "Housing Copenhagen Expats" or "[City] Housing International"
-- **DBA.dk** — private listings, sometimes cheaper
 
-**Your legal rights (know these before signing anything):**
-- Deposit is capped at **3 months' rent** by law. Anyone asking for more is breaking the law.
-- Landlord must give you **3 months notice** minimum
-- Prepaid rent + deposit combined: max 6 months total upfront
+**🚨 Avoid scams:** never wire deposit before signing a lease and physically viewing the apartment. Verify the owner on **ois.dk** (Danish public property register). Pay only via bank transfer to a Danish account in the landlord's name.
 
-**Average rents:**
-- Copenhagen 1-bed: 8,500–12,000 DKK/month
-- Aarhus 1-bed: 6,500–9,000 DKK/month
-- Odense 1-bed: 5,500–7,500 DKK/month
+**Your legal rights under Lejeloven §34 (verified 2025):**
+- **Deposit (depositum):** maximum **3 months' rent**
+- **Prepaid rent (forudbetalt leje):** maximum **3 months**
+- **Total upfront combined:** max **6 months — this is LEGAL.** Anything ABOVE 6 months upfront is illegal.
+- **Landlord notice for unfurnished housing:** minimum **1 year** (Lejeloven §86), not 3 months.
+- **Move-in report:** must be issued within 14 days of move-in (Lejeloven §9) or landlord cannot charge for damages.
 
-**My top tip:** Apply within hours of listings going up. Good Copenhagen apartments get 50+ applications in the first day.`,
+**Approximate Copenhagen 1-bed rents (2025):** Nørrebro/Vesterbro 10–12k, Frederiksberg 12–14k, Amager 9–11k. Outside CPH: Aarhus 7–10k, Odense 6–8k.
 
-    akasse: `The a-kasse (arbejdsløshedskasse / unemployment insurance fund) is one of the most important things you can do on your first week in Denmark — and most newcomers don't know it exists until they need it.
+**Apply fast:** Good Copenhagen apartments get 50+ applications in the first hours.
 
-**What it is:** A voluntary unemployment insurance fund. If you lose your job, you receive ~90% of your previous salary (up to a cap of ~19,500 DKK/month) for up to 2 years.
+*Source: Lejeloven §§9, 34, 86 — see lifeindenmark.borger.dk → Renting a home.*`,
 
-**The catch:** You must be a member for a qualifying period **before** you need it. So join NOW, not when you've been let go.
+    akasse: `The a-kasse (arbejdsløshedskasse / unemployment insurance fund) is one of the most important things you can do early in Denmark — and most newcomers don't know it exists until they need it.
 
-**Cost:** ~500 DKK/month (deductible from your taxes)
+**What it is:** A voluntary unemployment insurance fund. If you lose your job, you receive **up to DKK 21,091/month (2025)** for up to 2 years — that's the cap, not a percentage of your salary. The "90%" rule only applies up to this ceiling, so most full-time earners actually receive 50–60% of their previous pay. From January 2026 the cap rises to DKK 22,041/month.
 
-**Which one to join?** Each a-kasse is typically profession-specific:
-- **Akademikernes a-kasse (AAK):** Academia, researchers
-- **IDA:** Engineers, IT professionals
-- **HK:** Office workers, admin
-- **3F:** Trades, manual workers
-- **CA:** Managers, business roles
+**The catch:** You must be a member for a qualifying period **before** you need it. Join NOW, not when you've been let go.
 
-Go to **aka.dk** to find which one fits you.
+**Cost:** roughly **DKK 480–550/month** (most a-kasser cluster around DKK 510–540 in 2025, fully tax-deductible).
 
-*This is Björn's most emphatic advice: join an a-kasse this week.*`,
+**Which one to join?** Each is profession-specific:
+- **Akademikernes a-kasse (AAK):** academia, researchers
+- **IDA:** engineers, IT
+- **HK:** office workers, admin
+- **3F:** trades, manual work
+- **CA:** managers, business
+
+Find your fit at **aka.dk**. This is Björn's most emphatic early-week advice.
+
+*Source: Min A-kasse 2025 dagpengesatser, star.dk.*`,
 
     default: `Hej! I'm Björn, your guide to life in Denmark. I've been here for about 1,200 years, so I know a few things — though the CPR system still surprises me sometimes.
 
@@ -449,7 +452,7 @@ I can help you with:
 - 💼 **Work** — contracts, culture, unions, job search
 - 🗣️ **Language & Culture** — Danish norms, hygge, Janteloven
 
-To unlock my full AI capabilities (so I can actually think and search and give you personalised answers), add your Claude API key in the settings panel above.
+I'm currently in offline / fallback mode (no internet, the AI service is unreachable, or rate-limited). Reconnect or wait a moment for my full reasoning capabilities — meanwhile, the answers above cover the most common newcomer questions.
 
 *Hvad kan jeg hjælpe dig med?* (What can I help you with?)`
   };

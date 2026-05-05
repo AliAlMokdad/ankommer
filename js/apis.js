@@ -105,16 +105,21 @@ const APIs = (() => {
      2. DAWA — Danmarks Adresser Web API (free, no key)
   ══════════════════════════════════════════════════════ */
 
-  // 2024 municipal tax rates
+  // 2025 municipal tax rates (kommuneskat). Source: Skatteministeriet
+  // satser 2025 + The Local DK 2025 announcement. Bumped from 2024 set
+  // — 8 kommuner raised, 5 cut. Notable: København 23.80 → 23.50,
+  // Gentofte 22.80 → 22.50, Frederikssund 25.30 → 25.20, Fredericia
+  // 25.50 → 25.40, Høje-Taastrup down. Helsingør, Rudersdal, Greve,
+  // Esbjerg, Randers, Lemvig, Vejen, Fanø raised. Most others held.
   const KOMMUNE_RATES = {
-    'København': 23.80, 'Frederiksberg': 23.40, 'Bornholm': 26.30,
-    'Gentofte': 22.80, 'Lyngby-Taarbæk': 22.50, 'Rudersdal': 22.80,
+    'København': 23.50, 'Frederiksberg': 23.40, 'Bornholm': 26.30,
+    'Gentofte': 22.50, 'Lyngby-Taarbæk': 22.50, 'Rudersdal': 22.90,
     'Aarhus': 24.52, 'Odense': 25.30, 'Aalborg': 25.30,
-    'Randers': 25.40, 'Kolding': 25.20, 'Vejle': 24.10,
+    'Randers': 25.50, 'Kolding': 25.20, 'Vejle': 24.10,
     'Horsens': 25.30, 'Silkeborg': 25.30, 'Herning': 25.20,
-    'Helsingør': 24.50, 'Hillerød': 24.90, 'Hørsholm': 22.40,
-    'Greve': 24.30, 'Roskilde': 24.10, 'Lejre': 25.70,
-    'Esbjerg': 25.60, 'Fredericia': 25.50, 'Viborg': 25.30,
+    'Helsingør': 24.60, 'Hillerød': 24.90, 'Hørsholm': 22.40,
+    'Greve': 24.40, 'Roskilde': 24.10, 'Lejre': 25.70,
+    'Esbjerg': 25.70, 'Fredericia': 25.40, 'Viborg': 25.30,
     'Svendborg': 25.30, 'Næstved': 25.90, 'Holbæk': 25.70,
     'Slagelse': 25.80, 'Ringsted': 25.80, 'Faxe': 25.80,
     'Køge': 24.70, 'Ishøj': 24.80, 'Brøndby': 25.00,
@@ -122,23 +127,24 @@ const APIs = (() => {
     'Ballerup': 25.40, 'Gladsaxe': 24.50, 'Herlev': 24.80,
     'Albertslund': 25.50, 'Taarnby': 24.70, 'Dragør': 24.50,
     'Furesø': 23.80, 'Allerød': 23.80, 'Fredensborg': 24.60,
-    'Gribskov': 25.00, 'Halsnæs': 26.10, 'Frederikssund': 25.30,
+    'Gribskov': 25.00, 'Halsnæs': 26.10, 'Frederikssund': 25.20,
     'Egedal': 25.00, 'Solrød': 24.30, 'Stevns': 25.80,
     'Vordingborg': 26.70, 'Lolland': 26.90, 'Guldborgsund': 26.40,
     'Odsherred': 26.40, 'Kalundborg': 26.40, 'Sorø': 25.80,
     'Middelfart': 25.00, 'Assens': 25.30, 'Faaborg-Midtfyn': 25.50,
     'Kerteminde': 25.70, 'Nyborg': 25.50, 'Nordfyns': 25.80,
     'Langeland': 27.00, 'Ærø': 27.20, 'Haderslev': 25.30,
-    'Billund': 24.30, 'Fanø': 24.00, 'Tønder': 26.00,
+    'Billund': 24.30, 'Fanø': 24.20, 'Tønder': 26.00,
     'Aabenraa': 25.10, 'Sønderborg': 25.20, 'Varde': 25.40,
-    'Vejen': 25.30, 'Frederikshavn': 27.00, 'Vesthimmerlands': 26.50,
+    'Vejen': 25.40, 'Frederikshavn': 27.00, 'Vesthimmerlands': 26.50,
     'Rebild': 25.30, 'Mariagerfjord': 26.10, 'Jammerbugt': 26.00,
     'Thisted': 26.80, 'Morsø': 27.00, 'Struer': 26.80,
-    'Holstebro': 25.90, 'Lemvig': 26.60, 'Skive': 26.60,
+    'Holstebro': 25.90, 'Lemvig': 26.70, 'Skive': 26.60,
     'Ringkøbing-Skjern': 25.80, 'Ikast-Brande': 25.80, 'Hedensted': 24.60,
     'Skanderborg': 24.00, 'Favrskov': 24.80, 'Norddjurs': 26.40,
     'Syddjurs': 25.70,
   };
+  const KOMMUNE_RATES_YEAR = 2025;     // single source of truth, used in UI labels
 
   const KOMMUNE_INFO = {
     'København':     { region: 'Capital Region',       hospital: 'Rigshospitalet / Bispebjerg',     borgerservice: 'Multiple offices — borger.dk' },
@@ -265,10 +271,10 @@ const APIs = (() => {
       if (!resultEl) return;
 
       const kommune = addr.kommune;
-      const taxRate = KOMMUNE_RATES[kommune] ?? 25.0;
+      const taxRate = KOMMUNE_RATES[kommune] ?? 25.1;       // 2025 national average fallback
       const info    = getKommuneInfo(kommune);
       const cheapest = Object.entries(KOMMUNE_RATES).sort((a,b) => a[1]-b[1]).slice(0,3).map(([k,r]) => `${k} (${r}%)`).join(', ');
-      const diff    = (taxRate - 23.80).toFixed(2);
+      const diff    = (taxRate - 23.50).toFixed(2);          // baseline = København 2025
       const vsLabel = parseFloat(diff) >= 0 ? `+${diff}%` : `${diff}%`;
       const vsColor = parseFloat(diff) > 0 ? '#e55' : '#5a5';
 

@@ -90,6 +90,8 @@ const TRANSLATIONS = {
     footer_progress_export_err: "Could not save your plan",
     footer_progress_import_err: "Could not read that file",
     footer_made: "Made with ❤️ for everyone who ever arrived somewhere new.",
+    footer_built_by: "Built by",
+    footer_built_by_suffix: "— say hi.",
     footer_legal: "ANKOMMER is an independent guide. Always verify important information with official Danish authorities.",
     bjorn_status: "Your Denmark guide since 836 AD",
     bjorn_api_info: "Björn is your AI guide to Denmark — powered by the latest language models and ready to answer anything.",
@@ -209,6 +211,8 @@ const TRANSLATIONS = {
     footer_progress_export_err: "Impossible d'enregistrer votre plan",
     footer_progress_import_err: "Impossible de lire ce fichier",
     footer_made: "Fait avec ❤️ pour tous ceux qui sont arrivés quelque part de nouveau.",
+    footer_built_by: "Créé par",
+    footer_built_by_suffix: "— dites bonjour.",
     footer_legal: "ANKOMMER est un guide indépendant. Vérifiez toujours auprès des autorités danoises officielles.",
     bjorn_status: "Votre guide au Danemark depuis 836 après J.-C.",
     bjorn_api_info: "Björn est votre guide IA pour le Danemark — propulsé par les derniers modèles de langage et prêt à tout répondre.",
@@ -328,6 +332,8 @@ const TRANSLATIONS = {
     footer_progress_export_err: "تعذّر حفظ خطّتك",
     footer_progress_import_err: "تعذّر قراءة هذا الملف",
     footer_made: "صُنع بـ ❤️ لكل من وصل يوماً إلى مكان جديد.",
+    footer_built_by: "من صُنع",
+    footer_built_by_suffix: "— ألقِ التحية.",
     footer_legal: "ANKOMMER دليل مستقل. تحقق دائماً من المعلومات الهامة مع السلطات الدنماركية الرسمية.",
     bjorn_status: "دليلك في الدنمارك منذ عام 836 ميلادي",
     bjorn_api_info: "بيورن هو دليلك الذكي في الدنمارك — مدعوم بأحدث نماذج الذكاء الاصطناعي وجاهز للإجابة على كل أسئلتك.",
@@ -447,6 +453,8 @@ const TRANSLATIONS = {
     footer_progress_export_err: "No se pudo guardar tu plan",
     footer_progress_import_err: "No se pudo leer ese archivo",
     footer_made: "Hecho con ❤️ para todos los que alguna vez llegaron a un lugar nuevo.",
+    footer_built_by: "Creado por",
+    footer_built_by_suffix: "— saluda.",
     footer_legal: "ANKOMMER es una guía independiente. Siempre verifica con las autoridades danesas oficiales.",
     bjorn_status: "Tu guía en Dinamarca desde el año 836",
     bjorn_api_info: "Björn es tu guía de IA para Dinamarca — impulsado por los últimos modelos de lenguaje y listo para responder cualquier cosa.",
@@ -566,6 +574,8 @@ const TRANSLATIONS = {
     footer_progress_export_err: "Kunne ikke gemme din plan",
     footer_progress_import_err: "Kunne ikke læse den fil",
     footer_made: "Lavet med ❤️ til alle der nogensinde er ankommet et nyt sted.",
+    footer_built_by: "Bygget af",
+    footer_built_by_suffix: "— sig hej.",
     footer_legal: "ANKOMMER er en uafhængig guide. Verificer altid vigtige oplysninger hos officielle danske myndigheder.",
     bjorn_status: "Din guide i Danmark siden 836 e.Kr.",
     bjorn_api_info: "Björn er din AI-guide til Danmark — drevet af de nyeste sprogmodeller og klar til at svare på alt.",
@@ -687,6 +697,8 @@ const TRANSLATIONS = {
     footer_progress_export_err: "Plan konnte nicht gespeichert werden",
     footer_progress_import_err: "Datei konnte nicht gelesen werden",
     footer_made: "Mit ❤️ für alle, die jemals irgendwo neu angekommen sind.",
+    footer_built_by: "Erstellt von",
+    footer_built_by_suffix: "— sag hallo.",
     footer_legal: "ANKOMMER ist ein unabhängiger Leitfaden. Überprüfe wichtige Informationen stets bei offiziellen dänischen Behörden.",
     bjorn_status: "Dein Dänemark-Guide seit 836 n. Chr.",
     bjorn_api_info: "Björn ist dein KI-Guide für Dänemark — bereit, alles zu beantworten.",
@@ -808,6 +820,8 @@ const TRANSLATIONS = {
     footer_progress_export_err: "Не вдалося зберегти ваш план",
     footer_progress_import_err: "Не вдалося прочитати цей файл",
     footer_made: "Зроблено з ❤️ для всіх, хто колись приїздив кудись вперше.",
+    footer_built_by: "Створено",
+    footer_built_by_suffix: "— скажіть «привіт».",
     footer_legal: "ANKOMMER — незалежний посібник. Завжди перевіряй важливу інформацію в офіційних данських органах.",
     bjorn_status: "Твій гід по Данії з 836 року н.е.",
     bjorn_api_info: "Бйорн — твій ШІ-гід по Данії, готовий відповісти на будь-яке запитання.",
@@ -929,6 +943,8 @@ const TRANSLATIONS = {
     footer_progress_export_err: "Nie udało się zapisać planu",
     footer_progress_import_err: "Nie udało się odczytać pliku",
     footer_made: "Zrobione z ❤️ dla wszystkich, którzy kiedyś przylecieli gdzieś po raz pierwszy.",
+    footer_built_by: "Stworzone przez",
+    footer_built_by_suffix: "— pozdrów.",
     footer_legal: "ANKOMMER jest niezależnym przewodnikiem. Zawsze weryfikuj ważne informacje u oficjalnych duńskich władz.",
     bjorn_status: "Twój przewodnik po Danii od 836 r. n.e.",
     bjorn_api_info: "Björn to Twój przewodnik AI po Danii — gotowy na wszystkie pytania.",
@@ -1049,6 +1065,8 @@ const TRANSLATIONS = {
     footer_progress_export_err: "آپ کا منصوبہ محفوظ نہیں ہو سکا",
     footer_progress_import_err: "وہ فائل پڑھی نہیں جا سکی",
     footer_made: "ہر اس شخص کے لیے ❤️ کے ساتھ بنایا گیا جو کبھی کہیں نئی جگہ آیا۔",
+    footer_built_by: "تیار کردہ",
+    footer_built_by_suffix: "— سلام کہیں۔",
     footer_legal: "ANKOMMER ایک آزاد رہنما ہے۔ اہم معلومات کی تصدیق ہمیشہ سرکاری ڈینش حکام سے کریں۔",
     bjorn_status: "836 عیسوی سے آپ کا ڈنمارک گائیڈ",
     bjorn_api_info: "بیورن ڈنمارک کا آپ کا AI گائیڈ ہے — ہر سوال کا جواب دینے کے لیے تیار۔",
@@ -1169,6 +1187,8 @@ const TRANSLATIONS = {
     footer_progress_export_err: "ذخیرهٔ برنامه ممکن نشد",
     footer_progress_import_err: "خواندن این فایل ممکن نشد",
     footer_made: "با ❤️ برای همه کسانی که تا به حال به جایی تازه رسیده‌اند.",
+    footer_built_by: "ساخت",
+    footer_built_by_suffix: "— سلام کنید.",
     footer_legal: "ANKOMMER یک راهنمای مستقل است. اطلاعات مهم را همیشه از مقامات رسمی دانمارک تأیید کنید.",
     bjorn_status: "راهنمای دانمارک شما از سال ۸۳۶ میلادی",
     bjorn_api_info: "بیورن راهنمای هوش مصنوعی شما در دانمارک است — آماده پاسخ به هر سوالی.",
@@ -1219,67 +1239,67 @@ const TRANSLATIONS = {
 const TIMELINE_EVENTS = [
   // Tier 1 — first 14 days
   {
-    id: 'cpr',
-    offsetDays: 5,
-    durationDays: 1,
-    urgent: true,
-    summary: { en: 'Register for CPR number', fr: "S'inscrire pour un numéro CPR", ar: 'سجّل للحصول على رقم CPR', es: 'Registrarse para el número CPR', da: 'Tilmeld dig CPR-nummer', de: 'Für CPR-Nummer registrieren', uk: 'Зареєструватися для номера CPR', pl: 'Zarejestrować się po numer CPR', ur: 'CPR نمبر کے لیے رجسٹر کریں', fa: 'برای شمارهٔ CPR ثبت‌نام کنید' },
-    description: 'Book an appointment at your local Borgerservice (kommune office). You typically need: passport, residence permit, lease contract, marriage/birth certificates if applicable. Source: lifeindenmark.borger.dk',
-    chapter: 1
-  },
-  {
     id: 'address-registration',
     offsetDays: 5,
     durationDays: 1,
     urgent: true,
-    summary: { en: 'Register your Danish address', fr: 'Enregistrer votre adresse danoise', ar: 'سجّل عنوانك الدنماركي', es: 'Registrar tu dirección danesa', da: 'Registrer din danske adresse', de: 'Dänische Adresse registrieren', uk: 'Зареєструвати вашу датську адресу', pl: 'Zarejestrować swój duński adres', ur: 'اپنا ڈنمارکی پتہ رجسٹر کریں', fa: 'آدرس دانمارکی خود را ثبت کنید' },
-    description: 'Required by law within 5 days of moving. Done at the same Borgerservice appointment as CPR registration. Source: borger.dk',
+    summary: { en: 'Register your Danish address (legal deadline)', fr: 'Enregistrer votre adresse danoise (délai légal)', ar: 'سجّل عنوانك الدنماركي (الموعد القانوني)', es: 'Registrar tu dirección danesa (plazo legal)', da: 'Registrer din danske adresse (lovmæssig frist)', de: 'Dänische Adresse registrieren (gesetzliche Frist)', uk: 'Зареєструвати вашу датську адресу (юридичний термін)', pl: 'Zarejestrować swój duński adres (termin ustawowy)', ur: 'اپنا ڈنمارکی پتہ رجسٹر کریں (قانونی آخری تاریخ)', fa: 'آدرس دانمارکی خود را ثبت کنید (مهلت قانونی)' },
+    description: 'Required by law within 5 days of moving (CPR Act §12). Done at Borgerservice. Bring passport, residence permit (non-EU), lease/host letter. Source: lifeindenmark.borger.dk',
+    chapter: 1
+  },
+  {
+    id: 'cpr',
+    offsetDays: 7,                                  // book your appointment by ~day 7. Issuance can take longer in Copenhagen.
+    durationDays: 1,
+    urgent: true,
+    summary: { en: 'Book your CPR appointment', fr: 'Réservez votre rendez-vous CPR', ar: 'احجز موعد CPR', es: 'Reserva tu cita de CPR', da: 'Book din CPR-tid', de: 'CPR-Termin buchen', uk: 'Записатися на отримання CPR', pl: 'Umówić się na CPR', ur: 'اپنا CPR اپوائنٹمنٹ بک کریں', fa: 'وقت ملاقات CPR را رزرو کنید' },
+    description: 'Book your CPR registration appointment at International Citizen Service (ICS) early — Copenhagen ICS bookings can fill 4–8 weeks ahead. Bring passport, residence permit (non-EU), proof of address. Source: icitizen.dk',
     chapter: 1
   },
   {
     id: 'mitid',
-    offsetDays: 10,
+    offsetDays: 35,                                  // Realistic: needs CPR card delivered, typically 2-3 weeks after appointment
     durationDays: 1,
     urgent: true,
     summary: { en: 'Get MitID (digital ID for everything)', fr: 'Obtenir MitID (identifiant numérique)', ar: 'احصل على MitID (الهوية الرقمية)', es: 'Conseguir MitID (ID digital)', da: 'Få MitID', de: 'MitID erhalten (digitale ID)', uk: 'Отримати MitID (цифровий ID)', pl: 'Uzyskać MitID (cyfrowy identyfikator)', ur: 'MitID حاصل کریں (ڈیجیٹل شناخت)', fa: 'MitID دریافت کنید (شناسهٔ دیجیتال)' },
-    description: 'You cannot do online banking, taxes, or government services without MitID. Apply at mitid.dk after CPR is issued. Source: mitid.dk',
+    description: 'After your CPR card arrives by post (typically 2–3 weeks after the appointment), apply for MitID at mitid.dk or via your bank. Required for all online banking, taxes, and government services. Source: mitid.dk',
     chapter: 2
   },
   // Tier 2 — first month
   {
     id: 'bank',
-    offsetDays: 14,
+    offsetDays: 40,                                  // Realistic: needs CPR + MitID first
     durationDays: 1,
     urgent: false,
     summary: { en: 'Open a Danish bank account', fr: 'Ouvrir un compte bancaire danois', ar: 'افتح حساباً مصرفياً دنماركياً', es: 'Abrir una cuenta bancaria danesa', da: 'Åbn en dansk bankkonto', de: 'Dänisches Bankkonto eröffnen', uk: 'Відкрити данський банківський рахунок', pl: 'Otworzyć duńskie konto bankowe', ur: 'ڈنمارکی بینک اکاؤنٹ کھولیں', fa: 'حساب بانکی دانمارکی باز کنید' },
-    description: 'Required for receiving Danish salary. Bring CPR, MitID, passport. Compare Danske Bank, Nordea, Jyske Bank — fees vary widely.',
+    description: 'After CPR + MitID arrive, open a Danish account. Bring CPR, MitID, passport. Use Wise/Revolut as a bridge in the meantime. Note: under EU PAD, you have a right to a basic payment account. Compare Danske Bank, Nordea, Jyske Bank, Lunar — fees vary widely.',
     chapter: 4
   },
   {
     id: 'nemkonto',
-    offsetDays: 16,
+    offsetDays: 42,
     durationDays: 1,
     urgent: false,
     summary: { en: 'Set up NemKonto (your "easy account")', fr: 'Configurer NemKonto', ar: 'إعداد NemKonto', es: 'Configurar NemKonto', da: 'Opret NemKonto', de: 'NemKonto einrichten', uk: 'Налаштувати NemKonto', pl: 'Skonfigurować NemKonto', ur: 'NemKonto سیٹ اپ کریں', fa: 'NemKonto راه‌اندازی کنید' },
-    description: 'NemKonto is the bank account the Danish state uses to pay you (tax refunds, child benefits, salary if public sector). Designate it via your bank or nemkonto.dk',
+    description: 'NemKonto is the bank account the Danish state uses to pay you (tax refunds, child benefits, salary if public sector). Designate it via your bank or nemkonto.dk after your bank account is open.',
     chapter: 4
   },
   {
     id: 'tax-card',
-    offsetDays: 21,
+    offsetDays: 45,
     durationDays: 1,
     urgent: false,
-    summary: { en: 'Get a Danish tax card (forskudsopgørelse)', fr: 'Obtenir une carte fiscale danoise', ar: 'احصل على بطاقة الضرائب الدنماركية', es: 'Obtener tarjeta fiscal danesa', da: 'Få et skattekort (forskudsopgørelse)', de: 'Dänische Steuerkarte beantragen', uk: 'Отримати датську податкову картку', pl: 'Uzyskać duńską kartę podatkową', ur: 'ڈنمارکی ٹیکس کارڈ حاصل کریں', fa: 'کارت مالیاتی دانمارکی دریافت کنید' },
-    description: 'Apply via skat.dk after CPR + MitID. Without it your employer must withhold 55% tax. Source: skat.dk',
+    summary: { en: 'Get a Danish tax card (forskudsopgørelse)', fr: 'Obtenir une carte fiscale danoise', ar: 'احصل على بطاقة الضرائب الدنماركية', es: 'Obtener tarjeta fiscal danesa', da: 'Få et skattekort (forskudsopgørelse)', de: 'Dänische Steuerkarte beantragen', uk: 'Отримати датську податкову картку', pl: 'Uzyskać duńську податкову картку', ur: 'ڈنمارکی ٹیکس کارڈ حاصل کریں', fa: 'کارت مالیاتی دانمارکی دریافت کنید' },
+    description: 'Apply via skat.dk once CPR + MitID are active, ideally before your first paycheck. Without a tax card your employer withholds 55% as a temporary deposit (refunded on årsopgørelse, not lost). Source: skat.dk',
     chapter: 4
   },
   {
     id: 'doctor',
-    offsetDays: 21,
+    offsetDays: 50,                              // After yellow card arrives by post
     durationDays: 1,
     urgent: false,
     summary: { en: 'Choose your læge (general practitioner)', fr: 'Choisir votre médecin (læge)', ar: 'اختر طبيبك العام (læge)', es: 'Elegir tu médico de cabecera (læge)', da: 'Vælg din læge', de: 'Hausarzt wählen (læge)', uk: 'Обрати свого сімейного лікаря (læge)', pl: 'Wybrać lekarza rodzinnego (læge)', ur: 'اپنا فیملی ڈاکٹر (læge) منتخب کریں', fa: 'پزشک خانوادگی (læge) خود را انتخاب کنید' },
-    description: 'You\'re assigned a doctor automatically with your yellow health card, but you can change to one near you at borger.dk. Free care covered by tax.',
+    description: 'After your yellow health card (sundhedskort) arrives by post, you can change GP via borger.dk. The default assignment may not be near you. Tax-funded but: prescriptions, dental, glasses, physio have co-pays.',
     chapter: 5
   },
   {
@@ -1297,7 +1317,7 @@ const TIMELINE_EVENTS = [
     durationDays: 1,
     urgent: false,
     summary: { en: 'Sign up for free Danish classes', fr: 'S\'inscrire à des cours de danois gratuits', ar: 'سجّل في دروس دنماركية مجانية', es: 'Inscribirse en clases de danés gratis', da: 'Tilmeld dig gratis danskundervisning', de: 'Für kostenlose Dänischkurse anmelden', uk: 'Записатися на безкоштовні курси данської', pl: 'Zapisać się na bezpłatne kursy duńskiego', ur: 'مفت ڈنمارکی کلاسوں کے لیے سائن اپ کریں', fa: 'برای کلاس‌های رایگان دانمارکی ثبت‌نام کنید' },
-    description: 'Three years of free Danish lessons via your kommune\'s sprogcenter. Start within the first year — required for permanent residency.',
+    description: 'Up to 5 years of free Danish lessons via your kommune\'s sprogcenter (post-2024 reform). Start within your first year — required for permanent residency. Note: a refundable DKK 2,000 deposit per module applies for non-EU/non-refugee learners. Source: studieskolen.dk',
     chapter: 11
   },
   {
@@ -1306,13 +1326,13 @@ const TIMELINE_EVENTS = [
     durationDays: 1,
     urgent: false,
     summary: { en: 'Decide on a-kasse (unemployment insurance)', fr: 'Décider de l\'a-kasse (assurance chômage)', ar: 'قرّر بشأن a-kasse (تأمين البطالة)', es: 'Decidir sobre el a-kasse (seguro de desempleo)', da: 'Beslut dig om a-kasse', de: 'Über a-kasse (Arbeitslosenversicherung) entscheiden', uk: 'Визначитися з a-kasse (страхування від безробіття)', pl: 'Zdecydować o a-kasse (ubezpieczeniu od bezrobocia)', ur: 'a-kasse (بے روزگاری بیمہ) کا فیصلہ کریں', fa: 'دربارهٔ a-kasse (بیمهٔ بیکاری) تصمیم بگیرید' },
-    description: 'Optional but strongly recommended for non-EU workers. Provides up to 90% of your salary if you lose your job. ~500 DKK/month. Compare options at akasser.dk',
+    description: 'Optional but strongly recommended. Cap is DKK 21,091/month (2025), rising to DKK 22,041 in 2026 — most full-time earners receive 50–60% of previous pay, NOT 90%. Cost ~DKK 480–550/month, fully tax-deductible. Compare options at akasser.dk',
     chapter: 8
   },
   // Tier 3 — annual / recurring
   {
     id: 'forskuds-yearly',
-    offsetDays: 220,            // ~Nov–Dec of arrival year (rough)
+    offsetDays: 320,            // ~Mid-November of arrival year
     durationDays: 1,
     urgent: false,
     summary: { en: 'Update next year\'s tax card (forskudsopgørelse)', fr: "Mettre à jour la carte fiscale de l'année suivante", ar: 'حدّث البطاقة الضريبية للعام القادم', es: 'Actualizar la tarjeta fiscal del próximo año', da: 'Opdater næste års forskudsopgørelse', de: 'Steuerkarte fürs nächste Jahr aktualisieren', uk: 'Оновити податкову картку на наступний рік', pl: 'Zaktualizować kartę podatkową na przyszły rok', ur: 'اگلے سال کا ٹیکس کارڈ اپ ڈیٹ کریں', fa: 'کارت مالیاتی سال آینده را به‌روزرسانی کنید' },
@@ -1321,7 +1341,7 @@ const TIMELINE_EVENTS = [
   },
   {
     id: 'aarsopgoerelse',
-    offsetDays: 305,            // ~early March of year after
+    offsetDays: 440,            // ~mid-March of the year AFTER arrival year (when årsopgørelse actually publishes)
     durationDays: 1,
     urgent: false,
     summary: { en: 'Annual tax statement (årsopgørelse) opens', fr: 'Déclaration annuelle (årsopgørelse) ouvre', ar: 'يُفتح كشف الضرائب السنوي (årsopgørelse)', es: 'Se abre la declaración anual (årsopgørelse)', da: 'Årsopgørelsen åbner', de: 'Jährliche Steuerabrechnung (årsopgørelse) öffnet', uk: 'Відкриття річної податкової звітності', pl: 'Otwiera się roczne rozliczenie podatkowe', ur: 'سالانہ ٹیکس بیان (årsopgørelse) کھلتا ہے', fa: 'اظهارنامهٔ مالیاتی سالانه (årsopgørelse) باز می‌شود' },
@@ -1654,7 +1674,7 @@ const CHAPTERS = [
 <ul>
   <li><strong>4 years</strong> if you pass a special active contribution assessment (points-based)</li>
   <li><strong>5 years</strong> for EU citizens with continuous residence</li>
-  <li>You must also: have had full-time employment for at least 2.5 of the last 3 years (current rule), pass a Danish language test (Prøve i Dansk 2 / A2 level), have no criminal record, be self-supporting (no public assistance in the last 4 years).</li>
+  <li>You must also: have had full-time employment for at least <strong>3.5 of the last 4 years</strong> (or 4 of last 4.5 years for the 4-year fast-track route — Udlændingeloven §11), pass <strong>Prøve i Dansk 2 (PD2 ≈ B1)</strong>, have no criminal record, and be self-supporting (no public assistance in the last 4 years).</li>
 </ul>
 <p>The points system scores you on: Danish language level, employment history, income, community involvement, children's school performance, and citizenship exam score.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit" target="_blank" rel="noopener">→ Official permanent residency information</a>` }
@@ -1682,7 +1702,7 @@ const CHAPTERS = [
   <li><strong>AM-bidrag (Labour Market Contribution):</strong> 8% off the top of your gross salary. No deductions against this.</li>
   <li><strong>Municipal tax (kommuneskat):</strong> Varies by municipality, average ~25%. You pay this on income above your personal allowance.</li>
   <li><strong>State tax (bundskat):</strong> 12.01% (2025) on income above the personal allowance (51,600 DKK/year).</li>
-  <li><strong>Top tax (topskat):</strong> 15% additional on annual income above ~588,900 DKK (~49,000/month gross).</li>
+  <li><strong>Top tax (topskat):</strong> 15% additional on personal income above ~611,800 DKK/year in 2025 (~50,983/month after AM-bidrag). Combined cap (skatteloft) excluding AM and church tax is 52.07%.</li>
   <li><strong>Personal allowance (personfradrag):</strong> 51,600 DKK/year (2025) — applied as a tax credit, effectively making this slice tax-free.</li>
 </ul>
 <p>What do you get for it? Free healthcare. Free university. 52 weeks parental leave. 5 weeks vacation. Free school. Unemployment benefits if you lose your job. The math is very different from what most people expect.</p>
@@ -1759,8 +1779,8 @@ const CHAPTERS = [
 <ul>
   <li><strong>Deposit cap:</strong> Maximum 3 months' rent. Prepaid rent: maximum 3 months. Total upfront: 6 months max.</li>
   <li><strong>Rent increases:</strong> Regulated. Landlord cannot raise rent arbitrarily. Must follow net price index or be approved.</li>
-  <li><strong>Notice period:</strong> Landlord must give you minimum 3 months notice (usually more, depending on situation).</li>
-  <li><strong>Deposit return:</strong> Must be returned within 2 weeks of move-out assessment, minus legitimate repair costs.</li>
+  <li><strong>Notice period:</strong> For unfurnished housing (the typical lease), the landlord must give you at least <strong>1 year's notice</strong> under Lejeloven §86 — only 3 months for furnished single rooms. Tenants have a 3-month notice obligation in most cases.</li>
+  <li><strong>Deposit return:</strong> The unused portion must be returned promptly, but the landlord typically has up to ~6 weeks (and in disputed cases up to 2 months) to settle the move-out report (flytteopgørelse) and repair costs. "Within 2 weeks" is a myth — disputes go to Huslejenævnet.</li>
   <li><strong>Heating/utilities:</strong> Must be specified in lease. Cannot be changed without notice.</li>
 </ul>
 <p>If you have a dispute with your landlord, contact <strong>Huslejenævnet</strong> (Rent Tribunal) in your municipality — free and effective.</p>
@@ -2061,18 +2081,28 @@ const CHAPTERS = [
       {
         icon: "💰",
         title: { en:"Børnecheck — Child Benefit (You Don't Have to Apply)", da:"Børnecheck — børnetilskud (du skal ikke søge)" },
-        content: { en:`<p><strong>Børnecheck</strong> is a tax-free quarterly payment from the state for every child under 18. The remarkable thing: <strong>you don't apply for it</strong>. It is paid automatically to your NemKonto once your child is registered with a CPR number.</p>
-<p><strong>Rates (2025, quarterly):</strong></p>
+        content: { en:`<p><strong>Børnecheck</strong> (formally <em>børne- og ungeydelse</em>) is a tax-free payment from the state for every child under 18. The remarkable thing: <strong>you don't apply for it</strong>. It is paid automatically to your NemKonto once your child is registered with a CPR number — quarterly for under-15, monthly from 15.</p>
+<p><strong>Rates (2025), per Skatteministeriet:</strong></p>
 <table class="info-table">
-  <tr><th>Child's age</th><th>Per quarter</th><th>Per year</th></tr>
-  <tr><td>0 – 2 years</td><td>DKK 1,904</td><td>DKK 7,616</td></tr>
-  <tr><td>3 – 6 years</td><td>DKK 1,508</td><td>DKK 6,032</td></tr>
-  <tr><td>7 – 14 years</td><td>DKK 1,184</td><td>DKK 4,736</td></tr>
-  <tr><td>15 – 17 years</td><td>DKK 924</td><td>DKK 3,696</td></tr>
+  <tr><th>Child's age</th><th>Amount</th><th>Per year</th><th>Frequency</th></tr>
+  <tr><td>0 – 2 years</td><td>DKK 5,292</td><td>DKK 21,168</td><td>Quarterly</td></tr>
+  <tr><td>3 – 6 years</td><td>DKK 4,191</td><td>DKK 16,764</td><td>Quarterly</td></tr>
+  <tr><td>7 – 14 years</td><td>DKK 3,297</td><td>DKK 13,188</td><td>Quarterly</td></tr>
+  <tr><td>15 – 17 years</td><td>DKK 1,099</td><td>DKK 13,188</td><td>Monthly</td></tr>
 </table>
-<p>Paid in: February, May, August, November.</p>
+<p>Quarterly payments arrive on the 20th of January, April, July, October. Monthly payments (15–17 yrs) arrive on the 20th of each month.</p>
+<p class="callout-warning" style="background:rgba(232,160,32,0.08);border-left:4px solid var(--amber);padding:12px 14px;border-radius:8px;margin:14px 0;"><strong>⚠️ The 2-year rule that catches newcomers:</strong> Full børnecheck requires <strong>2 years of residence or employment in Denmark/EEA within the last 10 years</strong>. New arrivals receive a phased percentage:</p>
+<table class="info-table">
+  <tr><th>Time in DK/EEA</th><th>Payment %</th></tr>
+  <tr><td>Less than 6 months</td><td>0%</td></tr>
+  <tr><td>6 months – 1 year</td><td>25%</td></tr>
+  <tr><td>1 – 1.5 years</td><td>50%</td></tr>
+  <tr><td>1.5 – 2 years</td><td>75%</td></tr>
+  <tr><td>2 years or more</td><td>100% (full amount)</td></tr>
+</table>
+<p>EU/EEA work counts towards this. Income from employment in Denmark also counts. Don't budget for the full amount until you've crossed the 2-year mark.</p>
 <p>Your NemKonto must be set up for this to arrive. If you're new and haven't received it within 3 months of your child registering, check with Udbetaling Danmark.</p>
-<a href="https://www.borger.dk/familie-og-boern/okonomisk-stoette-til-familier/bornefamilieydelse" target="_blank" rel="noopener">→ Børnecheck details (borger.dk)</a>` }
+<a href="https://lifeindenmark.borger.dk/family-and-children/family-benefits/child-and-youth-benefits" target="_blank" rel="noopener">→ Child &amp; Youth benefits (lifeindenmark.borger.dk)</a>` }
       },
       {
         icon: "🏫",
@@ -2166,7 +2196,7 @@ const CHAPTERS = [
 </ul>
 <p><strong>Duration:</strong> Up to 3 years (you have 5 years from when you first became eligible to use the right).</p>
 <p><strong>How to start:</strong> Contact your municipality's integration department (integrationsafdelingen) or apply directly at a language school (sprogcenter) in your area.</p>
-<p><strong>Test levels that matter for residency and citizenship:</strong> Permanent residency requires <strong>Prøve i Dansk 2 (PD2 ≈ A2)</strong>. Citizenship requires <strong>Prøve i Dansk 3 (PD3 ≈ B2)</strong>. University admission to Danish-language programmes typically requires <strong>Studieprøven (≈ C1)</strong>.</p>
+<p><strong>Test levels that matter for residency and citizenship:</strong> Permanent residency requires <strong>Prøve i Dansk 2 (PD2 ≈ B1)</strong>. Citizenship requires <strong>Prøve i Dansk 3 (PD3 ≈ B2)</strong>. University admission to Danish-language programmes typically requires <strong>Studieprøven (≈ C1)</strong>. (PD2 is officially mapped to B1 by the Ministry of Children and Education.)</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement" target="_blank" rel="noopener">→ Language requirements for residency (nyidanmark.dk)</a>` }
       },
       {
@@ -2516,7 +2546,7 @@ const CHAPTERS = [
 <table class="info-table">
   <tr><th>CEFR level</th><th>Danish test</th><th>Required for</th></tr>
   <tr><td>A1</td><td>PD1 (Prøve i Dansk 1)</td><td>—</td></tr>
-  <tr><td>A2</td><td>PD2 (Prøve i Dansk 2)</td><td>Permanent residency</td></tr>
+  <tr><td>B1</td><td>PD2 (Prøve i Dansk 2)</td><td>Permanent residency</td></tr>
   <tr><td>B2</td><td>PD3 (Prøve i Dansk 3)</td><td>Citizenship + indfødsretsprøven</td></tr>
   <tr><td>C1</td><td>Studieprøven</td><td>University admission to Danish-language programmes</td></tr>
 </table>
@@ -3150,10 +3180,10 @@ const VISA_TREE = {
             {
               label: "Below DKK 514,000/year",
               result: true,
-              title: "Positive List Work Permit",
-              description: "Check if your profession is on the Positive List (professions in high demand in Denmark). If yes, your employer applies for a work permit. If not, check the Fast-track Scheme or other schemes.",
-              link: "https://www.nyidanmark.dk/en-GB/You-want-to-apply/Work/Positive-list",
-              linkText: "Check Positive List →"
+              title: "Multiple routes — check each",
+              description: "Below the Pay Limit threshold, several routes may apply. Check them in this order: (1) <strong>Positive List</strong> for high-demand professions (engineers, doctors, certain IT, nurses, etc.) — see if your job is listed. (2) <strong>Supplementary Pay Limit Scheme</strong> — DKK 415,000/yr (2025) for nationals of selected high-income countries. (3) <strong>Fast-track Scheme</strong> — only if your employer is SIRI-certified, ~1 month processing. (4) <strong>Researcher / Establishment Card</strong> — for researchers and recent graduates. Workindenmark.dk lists current vacancies aligned to each scheme.",
+              link: "https://www.nyidanmark.dk/en-GB/You-want-to-apply/Work",
+              linkText: "All work-permit schemes →"
             }
           ]
         }

@@ -128,7 +128,7 @@ const Calculators = (() => {
         return;
       }
 
-      const r = calcSalary(grossInput.value, muniSelect?.value || '24.97');
+      const r = calcSalary(grossInput.value, muniSelect?.value || '25.10');   // 2025 national avg
       if (!r) return;
 
       // Draw donut
@@ -449,7 +449,7 @@ const Calculators = (() => {
     work_permit:      { permRes: 8,  citizenship: 9,  fastTrack: 4, permLabel:'Permanent Residence Permit' },
     student_visa:     { permRes: 8,  citizenship: 9,  permLabel:'Permanent Residence Permit', note:'Student years count towards residency if you transition to a work permit after.' },
     family_reunification: { permRes: 8, citizenship: 9, permLabel:'Permanent Residence Permit' },
-    refugee:          { permRes: 5,  citizenship: 9,  permLabel:'Permanent Residence Permit', note:'Refugee and protection status holders may have a faster path to permanent residence.' },
+    refugee:          { permRes: 8,  citizenship: 9,  permLabel:'Permanent Residence Permit', note:'Refugees and §7 protection holders follow the standard 8-year path under post-2015 rules. Some narrower fast-track exceptions may apply — check with your kommune or a refugee-aid org.' },
   };
 
   // Leap-year safe: arrival 2020-02-29 + 5 years should produce 2025-02-28,
@@ -500,7 +500,7 @@ const Calculators = (() => {
           date: fastTrackDate,
           reached: now >= fastTrackDate,
           icon: '⚡',
-          note: 'Requires points-based assessment'
+          note: 'Requires meeting all 4 supplementary requirements (Danish language at PD2/B1, 3.5 years employment, active citizenship test, and income threshold)'
         }] : []),
         {
           label: rules.permLabel,
