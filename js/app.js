@@ -345,12 +345,24 @@ const i18n = {
    ATMOSPHERE — Time of Day · Season · Rain
 ══════════════════════════════════════════════════════ */
 const Atmosphere = {
+  // Internal: live animation token so we can swap effects when weather changes
+  _rafToken: null,
+  _resizeBound: null,
+  _condition: 'cloudy',
+
   init: () => {
     Atmosphere.setTimeOfDay();
     Atmosphere.setSeason();
-    Atmosphere.startRain();
     Atmosphere.generateStars();
     setInterval(Atmosphere.setTimeOfDay, 60 * 1000);
+    // Kick off the weather-driven atmosphere. Show light rain immediately
+    // so there's something during the network round-trip; swap to the real
+    // condition once Copenhagen's weather is back.
+    Atmosphere.applyEffect('rain', 60); // small drop count while loading
+    Atmosphere.fetchWeather();
+    // Re-fetch every 30 minutes so a sunny morning becomes a wet afternoon
+    // without needing a reload.
+    setInterval(Atmosphere.fetchWeather, 30 * 60 * 1000);
   },
 
   setTimeOfDay: () => {
@@ -371,21 +383,90 @@ const Atmosphere = {
     document.documentElement.setAttribute('data-season', season);
   },
 
-  startRain: () => {
-    const canvas = document.getElementById('rain-canvas');
-    if (!canvas) return;
-    // Respect user's reduced-motion preference — skip animation entirely
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const ctx = canvas.getContext('2d');
+  // Open-Meteo current weather for Copenhagen — free, no key, supports CORS.
+  // Falls back to "cloudy" silently on any failure so we never hang the UI.
+  fetchWeather: async () => {
+    try {
+      const url = 'https://api.open-meteo.com/v1/forecast' +
+        '?latitude=55.6761&longitude=12.5683' +
+        '&current=weather_code,is_day,temperature_2m' +
+        '&timezone=Europe/Copenhagen';
+      const r = await fetch(url, { cache: 'no-store' });
+      if (!r.ok) throw new Error('http ' + r.status);
+      const j = await r.json();
+      const code  = j?.current?.weather_code;
+      const isDay = j?.current?.is_day === 1;
+      const cond  = Atmosphere.classifyWMO(code);
+      Atmosphere._condition = cond;
+      document.documentElement.setAttribute('data-weather', cond);
+      document.documentElement.setAttribute('data-daypart', isDay ? 'day' : 'night');
+      Atmosphere.applyEffect(cond);
+    } catch {
+      // Silent fallback: leave whatever's already running, mark cloudy.
+      document.documentElement.setAttribute('data-weather', 'cloudy');
+      Atmosphere.applyEffect('cloudy');
+    }
+  },
 
+  // WMO weather code → simplified condition class. WMO codes are documented
+  // at https://open-meteo.com/en/docs (search "Weather variable documentation").
+  classifyWMO: (c) => {
+    if (c === 0) return 'clear';
+    if (c === 1 || c === 2) return 'cloudy';      // mainly clear / partly cloudy
+    if (c === 3) return 'cloudy';                 // overcast
+    if (c === 45 || c === 48) return 'fog';
+    if ((c >= 51 && c <= 67) || (c >= 80 && c <= 82)) return 'rain';
+    if ((c >= 71 && c <= 77) || c === 85 || c === 86) return 'snow';
+    if (c >= 95 && c <= 99) return 'rain';        // thunderstorms render as heavy rain
+    return 'cloudy';
+  },
+
+  // Stop whatever's running, then start the new effect. Idempotent — safe to
+  // call repeatedly (e.g. on the 30-minute weather refresh).
+  applyEffect: (cond, drops = null) => {
+    Atmosphere.stopPrecip();
+    if (cond === 'rain') Atmosphere.startRain(drops || 120);
+    else if (cond === 'snow') Atmosphere.startSnow(drops || 90);
+    // 'clear', 'cloudy', 'fog' → nothing animated; CSS handles the look
+    // (see [data-weather="..."] selectors in main.css for sun rays / fog).
+  },
+
+  stopPrecip: () => {
+    if (Atmosphere._rafToken) {
+      cancelAnimationFrame(Atmosphere._rafToken);
+      Atmosphere._rafToken = null;
+    }
+    const canvas = document.getElementById('rain-canvas');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+  },
+
+  // Internal: shared canvas setup + resize wiring. Returns ctx + resize fn.
+  _setupCanvas: () => {
+    const canvas = document.getElementById('rain-canvas');
+    if (!canvas) return null;
+    const ctx = canvas.getContext('2d');
     const resize = () => {
       canvas.width  = window.innerWidth;
       canvas.height = window.innerHeight;
     };
     resize();
+    if (Atmosphere._resizeBound) window.removeEventListener('resize', Atmosphere._resizeBound);
+    Atmosphere._resizeBound = resize;
     window.addEventListener('resize', resize);
+    return { canvas, ctx };
+  },
 
-    const drops = Array.from({ length: 120 }, () => ({
+  startRain: (count = 120) => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const setup = Atmosphere._setupCanvas();
+    if (!setup) return;
+    const { canvas, ctx } = setup;
+    // Mobile gets fewer drops to save battery / CPU
+    const adjusted = window.innerWidth < 600 ? Math.round(count * 0.6) : count;
+    const drops = Array.from({ length: adjusted }, () => ({
       x:    Math.random() * window.innerWidth,
       y:    Math.random() * window.innerHeight,
       len:  Math.random() * 18 + 8,
@@ -393,7 +474,6 @@ const Atmosphere = {
       opac: Math.random() * 0.4 + 0.15,
       w:    Math.random() * 0.8 + 0.3,
     }));
-
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       drops.forEach(d => {
@@ -410,9 +490,44 @@ const Atmosphere = {
           d.x = Math.random() * canvas.width;
         }
       });
-      requestAnimationFrame(draw);
+      Atmosphere._rafToken = requestAnimationFrame(draw);
     };
-    draw();
+    Atmosphere._rafToken = requestAnimationFrame(draw);
+  },
+
+  startSnow: (count = 90) => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const setup = Atmosphere._setupCanvas();
+    if (!setup) return;
+    const { canvas, ctx } = setup;
+    const adjusted = window.innerWidth < 600 ? Math.round(count * 0.6) : count;
+    const flakes = Array.from({ length: adjusted }, () => ({
+      x:     Math.random() * window.innerWidth,
+      y:     Math.random() * window.innerHeight,
+      r:     Math.random() * 2 + 1,             // radius 1–3 px
+      spd:   Math.random() * 0.8 + 0.4,         // gentle fall
+      sway:  Math.random() * 0.6 + 0.3,         // horizontal drift
+      phase: Math.random() * Math.PI * 2,
+      opac:  Math.random() * 0.5 + 0.4,
+    }));
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      flakes.forEach(f => {
+        f.phase += 0.015;
+        f.y += f.spd;
+        f.x += Math.sin(f.phase) * f.sway;
+        if (f.y > canvas.height + 5) {
+          f.y = -5;
+          f.x = Math.random() * canvas.width;
+        }
+        ctx.beginPath();
+        ctx.arc(f.x, f.y, f.r, 0, 2 * Math.PI);
+        ctx.fillStyle = `rgba(255,255,255,${f.opac})`;
+        ctx.fill();
+      });
+      Atmosphere._rafToken = requestAnimationFrame(draw);
+    };
+    Atmosphere._rafToken = requestAnimationFrame(draw);
   },
 
   generateStars: () => {

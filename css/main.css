@@ -4370,3 +4370,61 @@ h3 { letter-spacing: -0.012em; }
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.02em;
 }
+
+/* ── Round 13: weather-driven hero atmosphere ──
+   The rain canvas runs only when weather='rain' or 'snow'. For clear/
+   cloudy/fog we use lightweight CSS overlays so the hero looks right
+   without burning a rAF loop. data-weather is set by Atmosphere.fetchWeather()
+   from Open-Meteo's current weather code for Copenhagen. */
+
+/* Sunny: warm sun-glow in the upper-right of the hero */
+:root[data-weather="clear"] .hero-skyline-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 80% 18%, rgba(255,224,150,0.28) 0%, rgba(255,224,150,0.10) 18%, transparent 36%),
+    radial-gradient(circle at 80% 18%, rgba(255,255,255,0.20) 0%, transparent 8%);
+  mix-blend-mode: screen;
+  z-index: 1;
+}
+
+/* Fog: low-contrast horizontal mist over the skyline */
+:root[data-weather="fog"] .hero-skyline-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(220,228,238,0.0) 30%,
+                            rgba(220,228,238,0.22) 55%, rgba(220,228,238,0.32) 80%,
+                            rgba(220,228,238,0.18) 100%);
+  z-index: 2;
+  filter: blur(0.4px);
+}
+
+/* Cloudy: subtle cool wash, reads as overcast vs the clear sunny gradient */
+:root[data-weather="cloudy"] .hero-skyline-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(180,200,220,0.10) 0%, transparent 60%);
+  z-index: 1;
+}
+
+/* Mobile: tone the gradients down a touch so they don't dominate small screens */
+@media (max-width: 600px) {
+  :root[data-weather="clear"] .hero-skyline-wrap::before,
+  :root[data-weather="cloudy"] .hero-skyline-wrap::before {
+    background-size: 100% 100%;
+    opacity: 0.85;
+  }
+  :root[data-weather="fog"] .hero-skyline-wrap::after { opacity: 0.85; }
+}
+
+/* Reduced-motion users get only the static look — no canvas animation */
+@media (prefers-reduced-motion: reduce) {
+  #rain-canvas { display: none !important; }
+}

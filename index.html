@@ -254,22 +254,37 @@
       <polygon points="258,172 276,150 294,172" class="sky-roof-blue"/>
       <polygon points="296,165 315,140 334,165" class="sky-roof-red"/>
       <polygon points="336,170 353,148 370,170" class="sky-roof-yellow"/>
-      <!-- Round Tower (Rundetårn) -->
-      <rect x="420" y="110" width="45" height="130" class="sky-building"/>
-      <ellipse cx="442" cy="110" rx="22" ry="12" class="sky-building-dark"/>
-      <rect x="437" y="90" width="10" height="22" class="sky-spire"/>
-      <!-- Church spire left -->
-      <rect x="520" y="140" width="55" height="100" class="sky-building"/>
-      <polygon points="520,140 547,60 575,140" class="sky-spire"/>
+      <!-- Round Tower (Rundetårn) — wider cylinder, domed observatory cap, banded -->
+      <rect x="408" y="120" width="68" height="120" rx="6" class="sky-building"/>
+      <rect x="408" y="200" width="68" height="6" class="sky-building-dark"/>
+      <rect x="408" y="170" width="68" height="4" class="sky-building-dark"/>
+      <rect x="402" y="112" width="80" height="10" rx="3" class="sky-building-dark"/>
+      <ellipse cx="442" cy="110" rx="34" ry="10" class="sky-building"/>
+      <path d="M 410 110 Q 442 86 474 110 Z" class="sky-building-dark"/>
+      <rect x="439" y="92" width="6" height="10" class="sky-building-dark"/>
+      <line x1="442" y1="92" x2="442" y2="80" stroke="var(--amber)" stroke-width="1.6"/>
+      <polygon points="442,80 452,84 442,88" fill="var(--amber)"/>
+      <!-- Cathedral (Vor Frue) — wider, twin gables, cross on top -->
+      <rect x="510" y="150" width="80" height="90" class="sky-building"/>
+      <polygon points="510,150 530,116 550,150" class="sky-building-dark"/>
+      <polygon points="550,150 570,116 590,150" class="sky-building-dark"/>
+      <rect x="544" y="96" width="12" height="20" class="sky-building"/>
+      <polygon points="544,96 550,72 556,96" class="sky-spire"/>
+      <line x1="550" y1="80" x2="550" y2="68" stroke="var(--amber)" stroke-width="1.6"/>
+      <line x1="546" y1="74" x2="554" y2="74" stroke="var(--amber)" stroke-width="1.6"/>
       <!-- Buildings center -->
       <rect x="600" y="150" width="90" height="90" class="sky-building"/>
       <rect x="615" y="130" width="60" height="22" class="sky-building-dark"/>
       <rect x="700" y="140" width="120" height="100" class="sky-building"/>
       <rect x="715" y="115" width="90" height="27" class="sky-building-dark"/>
-      <!-- Frelsers Kirke spire -->
-      <rect x="840" y="120" width="60" height="120" class="sky-building"/>
-      <polygon points="840,120 870,20 900,120" class="sky-spire"/>
-      <line x1="870" y1="20" x2="870" y2="5" stroke="var(--amber)" stroke-width="2"/>
+      <!-- Frelsers Kirke (Church of our Saviour) — wider base, helix spiral wraps around tapered spire -->
+      <rect x="838" y="140" width="64" height="100" class="sky-building"/>
+      <rect x="836" y="132" width="68" height="10" class="sky-building-dark"/>
+      <polygon points="848,132 870,76 892,132" class="sky-building"/>
+      <path d="M 854 124 L 884 124 M 858 112 L 880 112 M 862 100 L 876 100 M 866 90 L 872 90" stroke="var(--amber)" stroke-width="1.4" fill="none" opacity="0.85"/>
+      <rect x="867" y="60" width="6" height="18" class="sky-building-dark"/>
+      <line x1="870" y1="60" x2="870" y2="42" stroke="var(--amber)" stroke-width="1.6"/>
+      <circle cx="870" cy="40" r="3" fill="var(--amber)"/>
       <!-- Buildings right -->
       <rect x="920" y="160" width="80" height="80" class="sky-building"/>
       <rect x="1010" y="145" width="100" height="95" class="sky-building"/>
