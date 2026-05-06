@@ -1848,6 +1848,15 @@ const hideLoader = () => {
    LANGUAGE BUTTONS
 ══════════════════════════════════════════════════════ */
 const initLangButtons = () => {
+  // Sync active class on initial page load — handles ?lang= URL param and
+  // localStorage-saved language (HTML has class="active" hardcoded on EN button)
+  const lang = window.currentLang || 'en';
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    const active = b.dataset.lang === lang;
+    b.classList.toggle('active', active);
+    b.setAttribute('aria-pressed', active ? 'true' : 'false');
+  });
+
   // Tag the .lang-selector with the current code so the mobile dropdown
   // (CSS ::before content: attr(data-current-lang)) shows e.g. "EN" / "AR"
   const syncCurrentLang = () => {
