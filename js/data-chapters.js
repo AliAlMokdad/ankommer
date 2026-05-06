@@ -91,16 +91,7 @@ de:`<p><strong>EU/EWR/nordische Staatsangehoerige:</strong> Sie benoetigen kein 
 </ul>
 <p class="callout-warning">Składaj wniosek jak najwcześniej. Czas rozpatrzenia dla osób spoza UE wynosi 1–4 miesiące. Nie kupuj biletu w jedną stronę przed uzyskaniem zezwolenia.</p>
 <a href="https://www.nyidanmark.dk/en-GB" target="_blank" rel="noopener">→ Złóż wniosek na newtodenmark.dk (oficjalna strona)</a>`,
-          ur:`<p><strong>شهروندان اتحادیه اروپا/EEA/کشورهای نوردیک:</strong> شما نیازی به ویزا یا مجوز کار ندارید. حق دارید آزادانه در دانمارک زندگی و کار کنید. <strong>دو ثبت‌نام جداگانه لازم است:</strong> (1) <strong>آدرس شما در folkeregister</strong> (دفتر ثبت جمعیت دانمارک) باید <strong>ظرف ۵ روز از تاریخ اسکان</strong> ثبت شود (قانون CPR §۱۲ — تأخیر جریمه دارد). (2) <strong>مدرک اقامت اتحادیه اروپا</strong> از SIRI در صورت قصد اقامت بیش از ۳ ماه الزامی است.</p>
-<p><strong>شهروندان غیر اتحادیه اروپا</strong> به یکی از موارد زیر نیاز دارند:</p>
-<ul>
-  <li><strong>مجوز کار</strong> — مستلزم پیشنهاد شغلی از یک کارفرمای دانمارکی است. رایج‌ترین انواع: Positive List (برای مشاغل پرتقاضا)، Pay Limit Scheme (در صورتی که حقوق &gt; ۵۱۴٬۰۰۰ DKK/سال در ۲۰۲۵، که در ۲۰۲۶ به ۵۵۲٬۰۰۰ DKK افزایش می‌یابد)، Fast-track Scheme (برای شرکت‌های دارای گواهینامه).</li>
-  <li><strong>ویزای دانشجویی</strong> — در صورت ثبت‌نام در دانشگاه یا مؤسسه آموزشی دانمارکی. حداقل ۲ ماه قبل از طریق newtodenmark.dk درخواست دهید.</li>
-  <li><strong>اجتماع مجدد خانوادگی</strong> — برای پیوستن به شهروند دانمارکی یا مقیم دائم. شرایط سختگیرانه است: حامی دانمارکی باید الزامات درآمدی و مسکن را برآورده کند.</li>
-  <li><strong>ویزای Startup Denmark</strong> — برای کارآفرینان دارای طرح کسب‌وکار تأیید شده.</li>
-</ul>
-<p class="callout-warning">هرچه زودتر درخواست دهید. زمان پردازش برای غیر اتحادیه اروپا ۱ تا ۴ ماه است. قبل از تأیید مجوز، بلیط یک‌طرفه رزرو نکنید.</p>
-<a href="https://www.nyidanmark.dk/en-GB" target="_blank" rel="noopener">→ درخواست در newtodenmark.dk (رسمی)</a>` آپ کو ویزا یا ورک پرمٹ کی ضرورت نہیں۔ آپ کو ڈنمارک میں آزادانہ رہنے اور کام کرنے کا حق حاصل ہے۔ <strong>دو الگ الگ اندراجات ضروری ہیں:</strong> (1) آپ کا <strong>folkeregister پتہ</strong> (ڈنمارک کا قومی آبادی رجسٹر) <strong>منتقلی کے 5 دن کے اندر</strong> درج ہونا چاہیے (CPR قانون §12 — تاخیر پر جرمانہ ہو سکتا ہے)۔ (2) اگر آپ 3 ماہ سے زیادہ قیام کا ارادہ رکھتے ہیں تو SIRI سے <strong>EU رہائشی دستاویز</strong> حاصل کریں۔</p>
+          ur:`<p><strong>شہریانِ یورپی یونین/EEA/اسکنڈینیویا:</strong> آپ کو ویزا یا ورک پرمٹ کی ضرورت نہیں۔ آپ کو ڈنمارک میں آزادانہ رہنے اور کام کرنے کا حق حاصل ہے۔ <strong>دو الگ الگ اندراجات ضروری ہیں:</strong> (1) آپ کا <strong>folkeregister پتہ</strong> (ڈنمارک کا قومی آبادی رجسٹر) <strong>منتقلی کے 5 دن کے اندر</strong> درج ہونا چاہیے (CPR قانون §12 — تاخیر پر جرمانہ ہو سکتا ہے)۔ (2) اگر آپ 3 ماہ سے زیادہ قیام کا ارادہ رکھتے ہیں تو SIRI سے <strong>EU رہائشی دستاویز</strong> حاصل کریں۔</p>
 <p><strong>یورپی یونین سے باہر کے شہریوں</strong> کو درج ذیل میں سے ایک کی ضرورت ہے:</p>
 <ul>
   <li><strong>ورک پرمٹ</strong> — ڈنمارک کے کسی آجر کی جانب سے ملازمت کی پیشکش ضروری ہے۔ سب سے عام اقسام: Positive List (زیادہ طلب والے پیشوں کے لیے)، Pay Limit Scheme (اگر تنخواہ &gt; DKK 514,000/سال 2025 میں، 2026 میں DKK 552,000 تک بڑھے گی)، Fast-track Scheme (تصدیق شدہ کمپنیوں کے لیے)۔</li>
@@ -215,19 +206,7 @@ de:`<p>Bringen Sie diese physischen Originale UND beglaubigte Kopien von jedem m
   <li>✅ Dokumentacja ubezpieczenia zdrowotnego (na okres przed otrzymaniem żółtej karty zdrowia)</li>
 </ul>
 <p><strong>Apostille</strong> = oficjalna pieczęć potwierdzająca autentyczność dokumentów zagranicznych, uznawana międzynarodowo. Uzyskaj ją we właściwym organie swojego kraju przed wyjazdem.</p>`,
-          ur:`<p>این اسناد اصلی و کپی‌های تأیید شده هر یک را همراه بیاورید:</p>
-<ul>
-  <li>✅ پاسپورت معتبر (+ ۲ فتوکپی از صفحه اصلی)</li>
-  <li>✅ شناسنامه/گواهی تولد (در صورت غیر اتحادیه اروپا، با تأییدیه آپوستیل)</li>
-  <li>✅ سند ازدواج در صورت وجود (با آپوستیل)</li>
-  <li>✅ شناسنامه فرزندان</li>
-  <li>✅ مدارک تحصیلی / گواهینامه‌های دانشگاهی</li>
-  <li>✅ قرارداد کاری یا نامه پذیرش دانشگاه</li>
-  <li>✅ ۲ عکس پاسپورتی</li>
-  <li>✅ مدرک سکونت (قرارداد اجاره امضاشده یا نامه از میزبان)</li>
-  <li>✅ مدارک بیمه درمانی (برای دوره قبل از دریافت کارت زرد)</li>
-</ul>
-<p><strong>آپوستیل (Apostille)</strong> = مهر رسمی که اسناد خارجی را در سطح بین‌المللی به رسمیت می‌شناساند. قبل از خروج از کشور، از مرجع ذی‌صلاح کشورتان دریافت کنید.</p>`
+          ur:`<p>یہ اصل دستاویزات اور ہر ایک کی تصدیق شدہ نقلیں ساتھ لائیں:</p>
 <ul>
   <li>✅ درست پاسپورٹ (+ مرکزی صفحے کی 2 فوٹو کاپیاں)</li>
   <li>✅ پیدائشی سرٹیفکیٹ (یورپی یونین سے باہر ہونے پر Apostille کے ساتھ)</li>
@@ -240,6 +219,19 @@ de:`<p>Bringen Sie diese physischen Originale UND beglaubigte Kopien von jedem m
   <li>✅ صحت انشورنس دستاویزات (پیلی کارڈ ملنے سے پہلے کی مدت کے لیے)</li>
 </ul>
 <p><strong>Apostille</strong> = ایک سرکاری مہر جو غیر ملکی دستاویزات کو بین الاقوامی سطح پر قانونی طور پر تسلیم شدہ بناتی ہے۔ روانگی سے پہلے اپنے ملک کے مجاز ادارے سے حاصل کریں۔</p>`,
+          fa:`<p>این اسناد اصلی و کپی‌های تأیید شده هر یک را همراه بیاورید:</p>
+<ul>
+  <li>✅ پاسپورت معتبر (+ ۲ فتوکپی از صفحه اصلی)</li>
+  <li>✅ شناسنامه/گواهی تولد (در صورت غیر اتحادیه اروپا، با تأییدیه آپوستیل)</li>
+  <li>✅ سند ازدواج در صورت وجود (با آپوستیل)</li>
+  <li>✅ شناسنامه فرزندان</li>
+  <li>✅ مدارک تحصیلی / گواهینامه‌های دانشگاهی</li>
+  <li>✅ قرارداد کاری یا نامه پذیرش دانشگاه</li>
+  <li>✅ ۲ عکس پاسپورتی</li>
+  <li>✅ مدرک سکونت (قرارداد اجاره امضاشده یا نامه از میزبان)</li>
+  <li>✅ مدارک بیمه درمانی (برای دوره قبل از دریافت کارت زرد)</li>
+</ul>
+<p><strong>آپوستیل (Apostille)</strong> = مهر رسمی که اسناد خارجی را در سطح بین‌المللی به رسمیت می‌شناساند. قبل از خروج از کشور، از مرجع ذی‌صلاح کشورتان دریافت کنید.</p>`,
           da:`<p>Medbring disse fysiske originaler OG bekræftede kopier af hvert dokument:</p>
 <ul>
   <li>✅ Gyldigt pas (+ 2 fotokopier af hovedsiden)</li>
@@ -382,22 +374,7 @@ de:`<p>Der daenische Mietmarkt ist sehr wettbewerbsintensiv — besonders in Kop
   <li>🚩 Brak zdjęć lub zdjęcia skradzione z portali nieruchomości</li>
 </ul>
 <p class="callout-warning">Kaucja w Danii jest ograniczona ustawowo do 3 miesięcy czynszu. Kto żąda więcej — łamie prawo.</p>`,
-          ur:`<p>بازار اجاره دانمارک بسیار رقابتی است — به‌ویژه در کپنهاگ. شروع جستجو قبل از رسیدن، برتری مهمی به شما می‌دهد.</p>
-<p><strong>بهترین پلتفرم‌ها:</strong></p>
-<ul>
-  <li><a href="https://www.boligportal.dk" target="_blank" rel="noopener">BoligPortal.dk</a> — بزرگ‌ترین پلتفرم اجاره خصوصی</li>
-  <li><a href="https://www.lejebolig.dk" target="_blank" rel="noopener">Lejebolig.dk</a> — انتخاب خوب، مناسب انگلیسی‌زبانان</li>
-  <li>گروه‌های فیسبوک: "Housing in Copenhagen for Expats"، "Aarhus Housing International"</li>
-  <li><a href="https://www.dba.dk" target="_blank" rel="noopener">DBA.dk</a> — کالای دست‌دوم + اجاره خصوصی</li>
-</ul>
-<p><strong>نشانه‌های هشداردهنده در آگهی‌ها:</strong></p>
-<ul>
-  <li>🚩 موجر در خارج از کشور است و نمی‌تواند حضوری ملاقات کند</li>
-  <li>🚩 قیمت به‌طور قابل توجهی پایین‌تر از بازار است (میانگین کپنهاگ برای یک خوابه: ۸٬۵۰۰–۱۲٬۰۰۰ DKK)</li>
-  <li>🚩 قبل از امضای قرارداد اجاره درخواست پرداخت می‌کند</li>
-  <li>🚩 عکسی ندارد یا عکس‌ها از سایت‌های املاک دزدیده شده‌اند</li>
-</ul>
-<p class="callout-warning">ودیعه در دانمارک طبق قانون به ۳ ماه اجاره محدود است. هر کس بیشتر بخواهد، قانون را نقض می‌کند.</p>` — خاص طور پر کوپن ہیگن میں۔ پہنچنے سے پہلے تلاش شروع کرنا آپ کو اہم برتری دیتا ہے۔</p>
+          ur:`<p>ڈنمارک کا کرایہ بازار بہت مسابقتی ہے — خاص طور پر کوپن ہیگن میں۔ پہنچنے سے پہلے تلاش شروع کرنا آپ کو اہم برتری دیتا ہے۔</p>
 <p><strong>بہترین پلیٹ فارم:</strong></p>
 <ul>
   <li><a href="https://www.boligportal.dk" target="_blank" rel="noopener">BoligPortal.dk</a> — سب سے بڑا نجی کرایہ پلیٹ فارم</li>
@@ -505,14 +482,7 @@ de:`<p>Sie koennen internationale Konten eroffnen, bevor Sie ankommen, die Sie u
   <li><strong>Lunar</strong> — duński bank cyfrowy, który czasem można otworzyć bez numeru CPR (sprawdź aktualne warunki)</li>
 </ul>
 <p>Zabierz wystarczająco dużo gotówki lub dostępnych środków na co najmniej <strong>2 miesiące wydatków</strong> w trakcie urządzania się. Zaplanuj minimum 30 000 DKK jako poduszkę finansową.</p>`,
-          ur:`<p>می‌توانید قبل از رسیدن، حساب‌های بین‌المللی باز کنید که تا زمان دریافت حساب بانکی دانمارکی (که به شماره CPR نیاز دارد) کارآمد باشند.</p>
-<p><strong>حساب‌های توصیه‌شده پیش از ورود:</strong></p>
-<ul>
-  <li><strong>Wise (سابقاً TransferWise)</strong> — بهترین برای حواله‌های بین‌المللی، کارت چندارزی، فوری کار می‌کند</li>
-  <li><strong>Revolut</strong> — عالی برای خرج کردن در خارج، طرح رایگان موجود است</li>
-  <li><strong>Lunar</strong> — بانک دیجیتال دانمارکی که گاهی بدون شماره CPR قابل افتتاح است (شرایط فعلی را بررسی کنید)</li>
-</ul>
-<p>حداقل برای <strong>۲ ماه هزینه</strong> پول نقد یا وجوه قابل دسترس همراه بیاورید. حداقل ۳۰٬۰۰۰ DKK به‌عنوان ذخیره در نظر بگیرید.</p>` جو آپ کے ڈینش بینک اکاؤنٹ ملنے تک کام آئیں گے (جس کے لیے CPR نمبر ضروری ہے)۔</p>
+          ur:`<p>پہنچنے سے پہلے آپ بین الاقوامی اکاؤنٹس کھول سکتے ہیں جو آپ کے ڈینش بینک اکاؤنٹ ملنے تک کام آئیں گے (جس کے لیے CPR نمبر ضروری ہے)۔</p>
 <p><strong>پہنچنے سے پہلے تجویز کردہ اکاؤنٹس:</strong></p>
 <ul>
   <li><strong>Wise (سابقہ TransferWise)</strong> — بین الاقوامی ترسیلات کے لیے بہترین، ملٹی کرنسی کارڈ، فوری کام کرتا ہے</li>
@@ -603,15 +573,7 @@ de:`<p>Die daenische Aussprache ist wirklich eine der schwersten fuer Auslaender
   <li>🎙️ <strong>Podcast: "Slow Danish"</strong> — naturalna mowa w zwolnionym tempie</li>
 </ul>
 <p>Naucz się najpierw tych 10 słów: <em>tak (dziękuję), undskyld (przepraszam/pardon), hej (cześć), hejhej (pa pa), ja/nej (tak/nie), tak for mad (dziękuję za jedzenie), skål (na zdrowie!), hvad (co), og (i), er (jest/są)</em></p>`,
-          ur:`<p>تلفظ دانمارکی واقعاً یکی از سخت‌ترین زبان‌ها برای خارجی‌هاست — هرچه زودتر شروع کنید، بهتر است. حقیقت این است: در دانمارک همه انگلیسی عالی صحبت می‌کنند. اما یادگیری دانمارکی درهای اجتماعی را باز می‌کند که برای انگلیسی‌زبانان بسته می‌ماند.</p>
-<p><strong>بهترین منابع پیش از ورود:</strong></p>
-<ul>
-  <li>🎧 <strong>Glossika</strong> — بهترین برای تلفظ، سیستم تکرار فاصله‌دار</li>
-  <li>📱 <strong>Babbel</strong> — درس‌های ساختارمند، برای دانمارکی بهتر از Duolingo</li>
-  <li>🎬 <strong>YouTube: "Learn Danish with DanishClass101"</strong></li>
-  <li>🎙️ <strong>پادکست: "Slow Danish"</strong> — گفتار واقعی با سرعت کم</li>
-</ul>
-<p>ابتدا این ۱۰ کلمه را بیاموزید: <em>tak (متشکرم)، undskyld (ببخشید/معذرت)، hej (سلام)، hejhej (خداحافظ)، ja/nej (بله/نه)، tak for mad (ممنون از غذا)، skål (به سلامتی!)، hvad (چه)، og (و)، er (است/هستند)</em></p>` — جتنی جلدی شروع کریں اتنا بہتر ہے۔ سچ بات: ڈنمارک میں ہر کوئی بہترین انگریزی بولتا ہے۔ لیکن ڈینش سیکھنا وہ سماجی دروازے کھولتا ہے جو انگریزی بولنے والوں کے لیے بند رہتے ہیں۔</p>
+          ur:`<p>ڈینش تلفظ واقعی غیر ملکیوں کے لیے سب سے مشکل میں سے ایک ہے — جتنی جلدی شروع کریں اتنا بہتر ہے۔ سچ بات: ڈنمارک میں ہر کوئی بہترین انگریزی بولتا ہے۔ لیکن ڈینش سیکھنا وہ سماجی دروازے کھولتا ہے جو انگریزی بولنے والوں کے لیے بند رہتے ہیں۔</p>
 <p><strong>پہنچنے سے پہلے بہترین وسائل:</strong></p>
 <ul>
   <li>🎧 <strong>Glossika</strong> — تلفظ کے لیے بہترین، spaced repetition سسٹم</li>
@@ -619,7 +581,7 @@ de:`<p>Die daenische Aussprache ist wirklich eine der schwersten fuer Auslaender
   <li>🎬 <strong>YouTube: "Learn Danish with DanishClass101"</strong></li>
   <li>🎙️ <strong>پوڈکاسٹ: "Slow Danish"</strong> — حقیقی تقریر سست رفتار سے</li>
 </ul>
-<p>پہلے یہ 10 الفاظ سیکھیں: <em>tak (شکریہ)، undskyld (معذرت/معاف کریں)، hej (ہیلو)، hejhej (خدا حافظ)، ja/nej (ہاں/نہیں)، tak for mad (کھانے کا شکریہ)، skål (乾杯)، hvad (کیا)، og (اور)، er (ہے/ہیں)</em></p>`,
+<p>پہلے یہ 10 الفاظ سیکھیں: <em>tak (شکریہ)، undskyld (معذرت/معاف کریں)، hej (ہیلو)، hejhej (خدا حافظ)، ja/nej (ہاں/نہیں)، tak for mad (کھانے کا شکریہ)، skål (صحت کے لیے!)، hvad (کیا)، og (اور)، er (ہے/ہیں)</em></p>`,
           da:`<p>Dansk udtale er oprigtigt talt en af de sværeste for udlændinge — jo tidligere du starter, desto bedre. Den ærlige sandhed: alle i Danmark taler fremragende engelsk. Men at lære dansk åbner sociale døre, der forbliver lukkede for engelsktalende.</p>
 <p><strong>Bedste ressourcer inden ankomst:</strong></p>
 <ul>
@@ -733,15 +695,7 @@ de:`<p>Dies ist <strong>das Allererste, was Sie tun muessen</strong>. Alles ande
   <li><span class="step-num">3</span> Jeśli tymczasowo mieszkasz u znajomego: musi napisać i podpisać list potwierdzający twoje zamieszkanie. Szablon dostępny na borger.dk.</li>
 </ol>
 <p class="callout-warning">NIE odkładaj tego kroku na "później". Bez zarejestrowanego adresu nie możesz otrzymać numeru CPR.</p>`,
-          ur:`<p>این <strong>اولین کاری</strong> است که باید انجام دهید. همه چیز دیگر — شماره CPR (شناسه ملی دانمارک)، MitID (سیستم هویت دیجیتال دانمارک)، پزشک، حساب بانکی، کارت مالیاتی — همگی به داشتن آدرس ثبت‌شده بستگی دارد.</p>
-<p class="callout-warning">⏰ <strong>مهلت قانونی: ظرف ۵ روز از تاریخ اسکان</strong> (قانون CPR §۱۲). ثبت‌نام دیرهنگام جریمه دارد. همان لحظه که کلیدها را دریافت کردید، وقت Borgerservice را رزرو کنید.</p>
-<p><strong>چگونه این کار را انجام دهید:</strong></p>
-<ol class="step-list">
-  <li><span class="step-num">1</span> به <a href="https://www.borger.dk" target="_blank" rel="noopener">borger.dk</a> بروید و "Flytning til Danmark" را جستجو کنید یا شخصاً به دفتر Borgerservice (خدمات شهروندی) محلی مراجعه کنید.</li>
-  <li><span class="step-num">2</span> نیاز دارید به: پاسپورت + مدرک سکونت (قرارداد اجاره امضاشده، قرارداد اجاره فرعی، یا نامه میزبان).</li>
-  <li><span class="step-num">3</span> اگر موقتاً پیش دوست هستید: او باید نامه‌ای بنویسد و امضا کند که تأیید کند شما آنجا ساکن هستید. قالب آماده در borger.dk موجود است.</li>
-</ol>
-<p class="callout-warning">این مرحله را به "بعداً" موکول نکنید. بدون آدرس ثبت‌شده نمی‌توانید شماره CPR دریافت کنید.</p>` — آپ کا CPR (ڈنمارک کا قومی شناختی نمبر)، MitID (ڈنمارک کی ڈیجیٹل شناختی نظام)، ڈاکٹر، بینک اکاؤنٹ، ٹیکس کارڈ — سب کا انحصار رجسٹرڈ پتے پر ہے۔</p>
+          ur:`<p>یہ <strong>پہلی چیز ہے جو کرنی ہے</strong>۔ باقی سب — آپ کا CPR (ڈنمارک کا قومی شناختی نمبر)، MitID (ڈنمارک کی ڈیجیٹل شناختی نظام)، ڈاکٹر، بینک اکاؤنٹ، ٹیکس کارڈ — سب کا انحصار رجسٹرڈ پتے پر ہے۔</p>
 <p class="callout-warning">⏰ <strong>قانونی آخری تاریخ: منتقلی کے 5 دن کے اندر</strong> (CPR قانون §12)۔ تاخیر سے رجسٹریشن جرمانے کا موجب ہے۔ چابیاں ملتے ہی Borgerservice کا وقت بک کریں۔</p>
 <p><strong>یہ کیسے کریں:</strong></p>
 <ol class="step-list">
@@ -859,18 +813,7 @@ de:`<p>Ihre CPR-Nummer (Civil Personal Registration, Zivile Personenregistrierun
   <li>Aalborg: Godthåbsgade 8</li>
 </ul>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Residence-and-work/International-Citizen-Service" target="_blank" rel="noopener">→ Zarezerwuj wizytę ICS online</a>`,
-          ur:`<p>شماره CPR شما (Civil Personal Registration — شماره ثبت شخصی مدنی) <strong>مهم‌ترین عدد در زندگی دانمارکی شماست.</strong> برای همه چیز لازم است: ویزیت پزشک، ثبت مالیاتی، بانکداری، کارت کتابخانه، عضویت در باشگاه، قرارداد تلفن — همه چیز.</p>
-<p><strong>فرمت:</strong> DDMMYY-XXXX (تاریخ تولد + ۴ رقم)</p>
-<p><strong>شهروندان اتحادیه اروپا:</strong> در International Citizen Service (ICS) ثبت‌نام کنید. اغلب همان روز اگر همه مدارک را داشته باشید.</p>
-<p><strong>شهروندان غیر اتحادیه اروپا:</strong> معمولاً بعد از تأیید مجوز اقامت به‌صورت خودکار صادر می‌شود. ممکن است ۲ تا ۸ هفته طول بکشد.</p>
-<p><strong>دفاتر ICS (مکان‌های اصلی):</strong></p>
-<ul>
-  <li>کپنهاگ: Gyldenløvesgade 11, 1600 Copenhagen V</li>
-  <li>آرهوس: Hack Kampmanns Plads 2</li>
-  <li>اودنسه: Flakhaven 2</li>
-  <li>آلبورگ: Godthåbsgade 8</li>
-</ul>
-<a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Residence-and-work/International-Citizen-Service" target="_blank" rel="noopener">→ رزرو وقت ICS آنلاین</a>` یہ ہر چیز کے لیے ضروری ہے: ڈاکٹر کے دورے، ٹیکس اندراج، بینکنگ، لائبریری کارڈ، جم ممبرشپ، فون کنٹریکٹ — سب کچھ۔</p>
+          ur:`<p>آپ کا CPR نمبر (Civil Personal Registration number) <strong>آپ کی ڈینش زندگی کا سب سے اہم نمبر ہے۔</strong> یہ ہر چیز کے لیے ضروری ہے: ڈاکٹر کے دورے، ٹیکس اندراج، بینکنگ، لائبریری کارڈ، جم ممبرشپ، فون کنٹریکٹ — سب کچھ۔</p>
 <p><strong>فارمیٹ:</strong> DDMMYY-XXXX (آپ کی تاریخ پیدائش + 4 ہندسے)</p>
 <p><strong>یورپی یونین کے شہری:</strong> International Citizen Service (ICS) میں رجسٹر کریں۔ تمام دستاویزات ہوں تو اکثر اسی دن جاری ہوتا ہے۔</p>
 <p><strong>یورپی یونین سے باہر کے شہری:</strong> عام طور پر رہائشی پرمٹ منظور ہونے کے بعد خود بخود جاری ہوتا ہے۔ 2 سے 8 ہفتے لگ سکتے ہیں۔</p>
@@ -922,7 +865,7 @@ de:`<p>MitID ist Daenemarks nationales System fuer die digitale Identitaet. Betr
           pl:`<p>MitID to duński narodowy system cyfrowej tożsamości. Traktuj go jak klucz główny do całego twojego cyfrowego życia w Danii. Bez niego nie możesz korzystać z: borger.dk, SKAT (urząd skarbowy), e-Boks (oficjalna skrzynka pocztowa), bankowości internetowej, Sundhed.dk i dziesiątek innych usług.</p>
 <p><strong>Uzyskaj MitID na:</strong> <a href="https://www.mitid.dk" target="_blank" rel="noopener">mitid.dk</a> lub osobiście w swoim banku lub w Borgerservice.</p>
 <p>Aplikacja MitID instaluje się na smartfonie i generuje 6-cyfrowe kody do logowania. Dbaj o telefon — TO jest twoja tożsamość cyfrowa.</p>`,
-          ur:`<p>MitID (سیستم هویت دیجیتال دانمارک) سیستم هویت دیجیتال ملی دانمارک است. آن را به‌عنوان کلید اصلی تمام زندگی دیجیتال خود در دانمارک بدانید. بدون آن نمی‌توانید از اینها استفاده کنید: borger.dk، SKAT (اداره مالیات دانمارک)، e-Boks (نامه رسمی دولتی)، بانکداری آنلاین، Sundhed.dk، و ده‌ها سرویس دیگر.</p>`۔ اسے ڈنمارک میں اپنی پوری ڈیجیٹل زندگی کی ماسٹر چابی سمجھیں۔ اس کے بغیر آپ یہ استعمال نہیں کر سکتے: borger.dk، SKAT (ڈنمارک کا محکمہ ٹیکس)، e-Boks (سرکاری ڈاک)، آن لائن بینکنگ، Sundhed.dk، اور درجنوں دیگر خدمات۔</p>
+          ur:`<p>MitID (ڈنمارک کا ڈیجیٹل شناختی نظام) ڈنمارک کا قومی ڈیجیٹل شناختی نظام ہے۔ اسے ڈنمارک میں اپنی پوری ڈیجیٹل زندگی کی ماسٹر چابی سمجھیں۔ اس کے بغیر آپ یہ استعمال نہیں کر سکتے: borger.dk، SKAT (ڈنمارک کا محکمہ ٹیکس)، e-Boks (سرکاری ڈاک)، آن لائن بینکنگ، Sundhed.dk، اور درجنوں دیگر خدمات۔</p>
 <p><strong>MitID حاصل کریں:</strong> <a href="https://www.mitid.dk" target="_blank" rel="noopener">mitid.dk</a> پر یا ذاتی طور پر اپنے بینک یا Borgerservice میں۔</p>
 <p>MitID ایپ آپ کے اسمارٹ فون پر انسٹال ہوتی ہے اور لاگ ان کے لیے 6 ہندسوں کے کوڈ بناتی ہے۔ اپنا فون محفوظ رکھیں — یہی آپ کی شناخت ہے۔</p>`,
           fa:`<p>MitID (سیستم هویت دیجیتال دانمارک) سیستم هویت دیجیتال ملی دانمارک است. آن را به‌عنوان کلید اصلی تمام زندگی دیجیتال خود در دانمارک بدانید. بدون آن نمی‌توانید از اینها استفاده کنید: borger.dk، SKAT (اداره مالیات دانمارک)، e-Boks (نامه رسمی دولتی)، بانکداری آنلاین، Sundhed.dk، و ده‌ها سرویس دیگر.</p>` }
@@ -962,7 +905,7 @@ de:`<p>e-Boks ist Daenemarks offizieller digitaler Briefkasten. Jeder Brief von 
 <p class="callout-warning"><strong>To jest kluczowe:</strong> Ludzie przegapiali terminy podatkowe, powiadomienia o odnowieniu zezwoleń i potwierdzenia wypłat zasiłków, bo nie sprawdzali e-Boks. Ustaw teraz cotygodniowe przypomnienie w kalendarzu.</p>
 <p>Pobierz aplikację e-Boks. Włącz powiadomienia push. Skonfiguruj przekierowanie na e-mail w ustawieniach, aby dostawać powiadomienie o każdej nowej przesyłce.</p>
 <a href="https://www.e-boks.com/dk/en/" target="_blank" rel="noopener">→ Strona e-Boks</a>`,
-          ur:`<p>e-Boks صندوق پستی دیجیتال رسمی دانمارک است. همه نامه‌ها از SKAT (اداره مالیات دانمارک)، Udbetaling Danmark، شهرداری شما، بانک شما و هر نهاد دولتی اینجا می‌آید. نه در صندوق پستی فیزیکی شما. نه در ایمیلتان. اینجا.</p>`۔ SKAT (ڈنمارک کا محکمہ ٹیکس)، Udbetaling Danmark، آپ کی میونسپلٹی، آپ کے بینک اور حکومت کا ہر خط یہاں آتا ہے۔ نہ آپ کے فزیکل میل باکس میں۔ نہ آپ کی ای میل پر۔ یہاں۔</p>
+          ur:`<p>e-Boks ڈنمارک کا سرکاری ڈیجیٹل میل باکس ہے۔ SKAT (ڈنمارک کا محکمہ ٹیکس)، Udbetaling Danmark، آپ کی میونسپلٹی، آپ کے بینک اور حکومت کا ہر خط یہاں آتا ہے۔ نہ آپ کے فزیکل میل باکس میں۔ نہ آپ کی ای میل پر۔ یہاں۔</p>
 <p class="callout-warning"><strong>یہ انتہائی ضروری ہے:</strong> لوگ ٹیکس کی آخری تاریخیں، پرمٹ تجدید کے نوٹسز اور فوائد کی ادائیگی کی تصدیقیں چھوڑ چکے ہیں کیونکہ انہوں نے e-Boks چیک نہیں کی۔ ابھی ہفتہ وار کیلنڈر یاد دہانی سیٹ کریں۔</p>
 <p>e-Boks ایپ ڈاؤنلوڈ کریں۔ پش نوٹیفیکیشن فعال کریں۔ سیٹنگز میں ای میل فارورڈنگ ترتیب دیں تاکہ کوئی نئی چیز آنے پر ای میل ملے۔</p>
 <a href="https://www.e-boks.com/dk/en/" target="_blank" rel="noopener">→ e-Boks ویب سائٹ</a>`,
@@ -1043,7 +986,7 @@ de:`<p>Sie benoetigen ein daenisches Bankkonto fuer Ihre NemKonto (das Konto, au
   <tr><td><strong>Jyske Bank</strong></td><td>Częściowo</td><td>Tak</td><td>Regionalny, osobista obsługa</td></tr>
 </table>
 <p>Po otwarciu konta oznacz je jako swoje <strong>NemKonto</strong> na <a href="https://www.nemkonto.dk" target="_blank" rel="noopener">nemkonto.dk</a>. To obowiązkowe.</p>`,
-          ur:`<p>برای NemKonto (حساب بانکی اصلی برای پرداخت‌های دولتی — حسابی که دولت پول را به آن واریز می‌کند، از جمله استرداد مالیات و مزایا) به حساب بانکی دانمارکی نیاز دارید. اکثر بانک‌ها به شماره CPR نیاز دارند.</p>` (وہ اکاؤنٹ جہاں حکومت آپ کو پیسے بھیجتی ہے — ٹیکس ریفنڈ، مراعات وغیرہ)۔ زیادہ تر بینکوں کو CPR نمبر درکار ہے۔</p>
+          ur:`<p>آپ کو NemKonto کے لیے ڈینش بینک اکاؤنٹ کی ضرورت ہے (وہ اکاؤنٹ جہاں حکومت آپ کو پیسے بھیجتی ہے — ٹیکس ریفنڈ، مراعات وغیرہ)۔ زیادہ تر بینکوں کو CPR نمبر درکار ہے۔</p>
 <table class="info-table">
   <tr><th>بینک</th><th>انگریزی؟</th><th>CPR ضروری؟</th><th>بہترین برائے</th></tr>
   <tr><td><strong>Lunar</strong></td><td>✅ 100%</td><td>بعض اوقات نہیں</td><td>نئے آنے والے، مکمل ڈیجیٹل</td></tr>
@@ -1366,7 +1309,7 @@ de:`<p>Ihre Aufenthaltserlaubnis bestimmt Ihre Rechte in Daenemark. Hier eine kl
   <tr><td><strong>Łączenie rodzin</strong></td><td>Dołączenie do członka rodziny</td><td>Pełne (zazwyczaj)</td><td>Początkowo 2 lata</td></tr>
   <tr><td><strong>Status uchodźcy</strong></td><td>Osoby ubiegające się o azyl</td><td>Różnie</td><td>Różnie</td></tr>
 </table>`,
-          ur:`<p>نوع مجوز اقامت شما حقوق شما را در دانمارک تعیین می‌کند. در اینجا یک مرور واضح آمده است:</p>`۔ یہاں ایک واضح جائزہ ہے:</p>
+          ur:`<p>آپ کا رہائشی پرمٹ ڈنمارک میں آپ کے حقوق طے کرتا ہے۔ یہاں ایک واضح جائزہ ہے:</p>
 <table class="info-table">
   <tr><th>پرمٹ کی قسم</th><th>کے لیے</th><th>کام کا حق</th><th>مدت</th></tr>
   <tr><td><strong>EU رجسٹریشن</strong></td><td>EU/EEA شہری</td><td>غیر محدود</td><td>5 سال (پھر مستقل)</td></tr>
@@ -1444,7 +1387,7 @@ de:`<p>Die allgemeine Regelung: <strong>8 Jahre ununterbrochenen legalen Aufenth
 </ul>
 <p>System punktowy ocenia cię pod względem: poziomu języka duńskiego, historii zatrudnienia, dochodów, zaangażowania w życie społeczne, wyników szkolnych dzieci i wyniku egzaminu na obywatelstwo.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit" target="_blank" rel="noopener">→ Oficjalne informacje o stałym pobycie</a>`,
-          ur:`<p>قانون کلی: <strong>۸ سال اقامت قانونی مستمر</strong> در دانمارک. اما مسیرهای سریع‌تر هم وجود دارد:</p>`۔ تاہم فاسٹ ٹریک آپشنز بھی ہیں:</p>
+          ur:`<p>عمومی قاعدہ: ڈنمارک میں <strong>8 سال کا مسلسل قانونی قیام</strong>۔ تاہم فاسٹ ٹریک آپشنز بھی ہیں:</p>
 <ul>
   <li><strong>4 سال</strong> اگر آپ خصوصی فعال شراکت کا جائزہ پاس کریں (پوائنٹس کی بنیاد پر)</li>
   <li><strong>5 سال</strong> مسلسل قیام کے ساتھ EU شہریوں کے لیے</li>
@@ -1553,7 +1496,7 @@ de:`<p>Einer der anspruchsvollsten Wege in Europa, aber die Muehe wert:</p>
   <li>Brak zaległości wobec organów publicznych</li>
 </ul>
 <p>Dania zezwala na <strong>podwójne obywatelstwo</strong> od 2015 roku. Nie musisz rezygnować ze swojego pierwotnego obywatelstwa — jako Polak możesz zachować oba paszporty.</p>`,
-          ur:`<p>یکی از مسیرهای پرتقاضاتر اروپا، اما ارزشمند:</p>`:</p>
+          ur:`<p>یورپ میں مشکل ترین راستوں میں سے ایک، لیکن اس کی قدر ہے:</p>
 <ul>
   <li>ڈنمارک میں <strong>9 سال</strong> رہنا ضروری ہے (یا تیز ٹریک سے کم)</li>
   <li><strong>indfødsretsprøven</strong> (شہریت امتحان) پاس کریں — ڈینش تاریخ، ثقافت اور معاشرہ</li>
@@ -1649,7 +1592,7 @@ de:`<p>Ja, die daenischen Steuern sind hoch. Hier ist das ehrliche Bild dessen, 
 </ul>
 <p>Co dostajesz w zamian? Bezpłatna opieka zdrowotna. Bezpłatne studia. 52 tygodnie urlopu rodzicielskiego. 5 tygodni urlopu wypoczynkowego. Bezpłatna szkoła. Zasiłek dla bezrobotnych w razie utraty pracy. Rachunek wygląda zupełnie inaczej, niż większość się spodziewa.</p>
 <a href="https://skat.dk/en-us" target="_blank" rel="noopener">→ SKAT — Duński Urząd Skarbowy</a>`,
-          ur:`<p>بله، مالیات دانمارک بالا است. اینجا تصویری صادقانه از آنچه واقعاً می‌پردازید آمده است:</p>`۔ یہاں آپ جو واقعی ادا کرتے ہیں اس کی ایماندارانہ تصویر ہے:</p>
+          ur:`<p>ہاں، ڈینش ٹیکس زیادہ ہیں۔ یہاں آپ جو واقعی ادا کرتے ہیں اس کی ایماندارانہ تصویر ہے:</p>
 <ul>
   <li><strong>AM-bidrag (لیبر مارکیٹ کنٹریبیوشن):</strong> آپ کی مجموعی تنخواہ سے اوپر سے 8%۔ اس پر کوئی کٹوتی نہیں۔</li>
   <li><strong>میونسپل ٹیکس (kommuneskat):</strong> میونسپلٹی کے لحاظ سے مختلف، اوسطاً ~25%۔ آپ کی ذاتی الاؤنس سے زیادہ آمدنی پر۔</li>
@@ -1719,7 +1662,7 @@ de:`<p>Wenn Sie einen EU/EWR-Fuehrerschein haben, koennen Sie ihn unbegrenzt in 
   <li>Jeśli twój kraj ma umowę: zapłać opłatę (~350 DKK) i wymień w lokalnym Borgerservice</li>
   <li>Bez umowy: musisz odbyć duńskie kursy jazdy i zdać egzamin teoretyczny i praktyczny. Zaplanuj 10 000–20 000 DKK i 6–12 miesięcy.</li>
 </ul>`,
-          ur:`<p>اگر گواهینامه رانندگی اتحادیه اروپا/EEA دارید، می‌توانید آن را در دانمارک به‌صورت نامحدود استفاده کنید. تبدیل لازم نیست.</p>` تو آپ اسے ڈنمارک میں غیر معینہ مدت کے لیے استعمال کر سکتے ہیں۔ کوئی تبدیلی ضروری نہیں۔</p>
+          ur:`<p>اگر آپ کے پاس EU/EEA ڈرائیونگ لائسنس ہے تو آپ اسے ڈنمارک میں غیر معینہ مدت کے لیے استعمال کر سکتے ہیں۔ کوئی تبدیلی ضروری نہیں۔</p>
 <p>غیر EU لائسنس کے لیے:</p>
 <ul>
   <li>کچھ ممالک کے ڈنمارک کے ساتھ تبادلے کے معاہدے ہیں (USA، کینیڈا، آسٹریلیا، جاپان، جنوبی کوریا اور دیگر) — <a href="https://www.sikkertrafik.dk" target="_blank" rel="noopener">sikkertrafik.dk</a> پر چیک کریں</li>
@@ -1829,7 +1772,7 @@ de:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-lef
   <li><strong>Maksimum prawne z góry:</strong> 3 miesiące kaucji (depositum) + 3 miesiące czynszu z góry = 6 miesięcy. Więcej jest nielegalne na mocy Lejeloven §34.</li>
 </ul>
 <p><strong>Jeśli coś wzbudza podejrzenia — masz rację.</strong> Odpuść — zawsze pojawi się inne ogłoszenie. Zgłaszaj oszustwa na <a href="https://politi.dk" target="_blank" rel="noopener">politi.dk</a> i ostrzegaj innych nowo przybyłych w grupach dla ekspatów.</p>`,
-          ur:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ کلاهبرداری مسکن بزرگ‌ترین خطر مالی برای تازه‌واردان به دانمارک است.</strong> آگهی‌های جعلی در Facebook Marketplace، موجران دروغین که ادعا می‌کنند در خارج هستند، و درخواست ودیعه برای "رزرو آپارتمان" قبل از بازدید، تازه‌واردان را تا <strong>۱۰٬۰۰۰ تا ۵۰٬۰۰۰ DKK</strong> متضرر کرده است.</p>`;border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ رہائشی فراڈ ڈنمارک میں نئے آنے والوں کے لیے سب سے بڑا مالی خطرہ ہے۔</strong> Facebook Marketplace پر جھوٹے اشتہارات، بیرون ملک ہونے کا دعویٰ کرنے والے جھوٹے مکان مالکان، اور دیکھنے سے پہلے "اپارٹمنٹ محفوظ کرنے" کے لیے ضمانتی رقم کے مطالبوں نے نئے آنے والوں کو <strong>10,000 سے 50,000 DKK</strong> تک کا نقصان پہنچایا ہے۔</p>
+          ur:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ رہائشی فراڈ ڈنمارک میں نئے آنے والوں کے لیے سب سے بڑا مالی خطرہ ہے۔</strong> Facebook Marketplace پر جھوٹے اشتہارات، بیرون ملک ہونے کا دعویٰ کرنے والے جھوٹے مکان مالکان، اور دیکھنے سے پہلے "اپارٹمنٹ محفوظ کرنے" کے لیے ضمانتی رقم کے مطالبوں نے نئے آنے والوں کو <strong>10,000 سے 50,000 DKK</strong> تک کا نقصان پہنچایا ہے۔</p>
 
 <p><strong>سخت قوانین — کبھی نہ توڑیں:</strong></p>
 <ul>
@@ -1929,7 +1872,7 @@ de:`<p>Daenemark hat vier Haupttypen von Wohnverhaeltnissen:</p>
   <tr><td><strong>Ejerbolig</strong></td><td>Własność (zakup)</td><td>✅ Jeśli masz oszczędności i zdolność kredytową</td></tr>
 </table>
 <p><strong>Dla większości nowo przybyłych:</strong> najem prywatny to punkt wyjścia. Gdy już się urządzisz, warto wcześnie zapisać się na listę oczekujących na andelsbolig — długoterminowo może to zaoszczędzić sporo pieniędzy.</p>`,
-          ur:`<p>چهار نوع اصلی مسکن در دانمارک وجود دارد:</p>`:</p>
+          ur:`<p>ڈنمارک میں مسکن کی 4 اصل اقسام ہیں:</p>
 <table class="info-table">
   <tr><th>قسم</th><th>کیا ہے</th><th>نئے آنے والوں کے لیے</th></tr>
   <tr><td><strong>نجی کرایہ (lejebolig)</strong></td><td>نجی مالک سے معیاری اپارٹمنٹ/گھر</td><td>✅ سب سے آسان دستیابی</td></tr>
@@ -2006,7 +1949,7 @@ de:`<p>Daenische Vermieter erhalten Dutzende von Bewerbungen pro Inserat. So sti
   <li><span class="step-num">4</span><strong>Wysyłaj szybko.</strong> Dobre ogłoszenia w Kopenhadze dostają 50+ podań w ciągu 24 godzin. Aplikuj w ciągu kilku godzin od pojawienia się ogłoszenia.</li>
   <li><span class="step-num">5</span><strong>Zrób follow-up.</strong> Uprzejma wiadomość 48 godzin po złożeniu podania jest stosowna i oczekiwana.</li>
 </ol>`,
-          ur:`<p>موجران دانمارکی برای هر آگهی ده‌ها درخواست دریافت می‌کنند. اینجاست که درخواست شما متمایز می‌شود:</p>`۔ یہ ہے جو آپ کی درخواست کو نمایاں بناتا ہے:</p>
+          ur:`<p>ڈینش مکان مالکان ہر اشتہار کے لیے درجنوں درخواستیں وصول کرتے ہیں۔ یہ ہے جو آپ کی درخواست کو نمایاں بناتا ہے:</p>
 <ol class="step-list">
   <li><span class="step-num">1</span><strong>ڈینش میں لکھیں یا ڈینش ورژن پیش کریں۔</strong> بنیادی ڈینش بھی عزم ظاہر کرتی ہے۔</li>
   <li><span class="step-num">2</span><strong>شامل کریں:</strong> آپ کون ہیں، کیا کرتے ہیں، یہ اپارٹمنٹ کیوں، آمدنی کا ثبوت، پچھلے مکان مالکان کی سفارشات۔</li>
@@ -2098,7 +2041,7 @@ de:`<p>Der Mieterschutz in Daenemark ist stark. Kennen Sie diese Regeln:</p>
 </ul>
 <p>W przypadku sporu z właścicielem skontaktuj się z <strong>Huslejenævnet</strong> (Sąd Czynszowy) w swoim gminie — bezpłatny i skuteczny.</p>
 <a href="https://huslejenaevn.dk" target="_blank" rel="noopener">→ Znajdź lokalne Huslejenævn</a>`,
-          ur:`<p>در دانمارک حمایت از مستأجران قوی است. این حقوق را بشناسید:</p>`۔ یہ حقوق جانیں:</p>
+          ur:`<p>ڈنمارک میں کرایہ داروں کے تحفظ مضبوط ہیں۔ یہ حقوق جانیں:</p>
 <ul>
   <li><strong>ضمانتی رقم کی حد:</strong> زیادہ سے زیادہ 3 ماہ کا کرایہ۔ پیشگی کرایہ: زیادہ سے زیادہ 3 ماہ۔ کل پیشگی: 6 ماہ زیادہ سے زیادہ۔</li>
   <li><strong>کرایہ میں اضافہ:</strong> ریگولیٹڈ۔ مکان مالک من مانے طریقے سے کرایہ نہیں بڑھا سکتا۔ قیمت اشاریہ کے مطابق یا منظور شدہ ہونا ضروری ہے۔</li>
@@ -2303,7 +2246,7 @@ de:`<p><strong>NemKonto</strong> (woertlich "Einfach-Konto") ist kein separates 
 </ol>
 <p>Możesz też wyznaczyć NemKonto bezpośrednio przez aplikację lub stronę swojego banku. Nordea, Danske Bank i Lunar umożliwiają to w aplikacji.</p>
 <a href="https://www.nemkonto.dk" target="_blank" rel="noopener">→ Zarejestruj lub zaktualizuj NemKonto (oficjalne)</a>`,
-          ur:`<p><strong>NemKonto</strong> (حساب بانکی اصلی برای پرداخت‌های دولتی) یک حساب بانکی جداگانه نیست — این نامی است که به حساب موجود می‌دهید تا دولت دانمارک بداند پول را کجا ارسال کند. استرداد مالیاتی، کمک هزینه کودک، پرداخت‌های بازنشستگی، مزایای بیکاری — همه به NemKonto شما می‌روند.</p>` — یہ وہ نام ہے جو آپ موجودہ اکاؤنٹ کو دیتے ہیں تاکہ ڈینش حکومت جانے کہاں پیسے بھیجنے ہیں۔ ٹیکس ریفنڈ، بچوں کے مراعات، پنشن ادائیگیاں، بیروزگاری مراعات — سب آپ کے NemKonto میں جاتے ہیں۔</p>
+          ur:`<p><strong>NemKonto</strong> (سرکاری ادائیگیوں کا بنیادی بینک اکاؤنٹ) الگ اکاؤنٹ نہیں — یہ وہ نام ہے جو آپ موجودہ اکاؤنٹ کو دیتے ہیں تاکہ ڈینش حکومت جانے کہاں پیسے بھیجنے ہیں۔ ٹیکس ریفنڈ، بچوں کے مراعات، پنشن ادائیگیاں، بیروزگاری مراعات — سب آپ کے NemKonto میں جاتے ہیں۔</p>
 <p class="callout-warning"><strong>یہ لازمی ہے۔</strong> CPR نمبر والے ہر شخص کو NemKonto ہونا چاہیے۔ اس کے بغیر حکومت لفظی طور پر آپ کو کچھ بھی نہیں دے سکتی، اور ٹیکس ریفنڈ مہینوں تاخیر ہو سکتی ہے۔</p>
 <p><strong>NemKonto رجسٹر کرنے کا طریقہ:</strong></p>
 <ol class="step-list">
@@ -2439,7 +2382,7 @@ de:`<p>Ihr <strong>skattekort</strong> (Steuerkarte) teilt Ihrem Arbeitgeber gen
 </ul>
 <p class="callout-warning">Zaktualizuj forskudsopgørelse przy zmianie sytuacji — nowa praca, podwyżka, założenie firmy, dochód z najmu. Błąd oznacza duży rachunek lub zwrot na koniec roku. SKAT nie karze za proaktywne korekty.</p>
 <a href="https://skat.dk/en-us/individuals/tax-card-and-withholding-tax/" target="_blank" rel="noopener">→ Karta podatkowa na skat.dk (oficjalne, angielski)</a>`,
-          ur:`<p><strong>skattekort</strong> (کارت مالیاتی) به کارفرما می‌گوید چه مقدار از حقوق شما کسر شود. بدون آن، کارفرما طبق قانون ملزم به کسر <strong>۵۵٪</strong> است — بالاترین نرخ اضطراری. این جریمه نیست، بلکه پیش‌فرض سیستم در غیاب کارت است. اما اگر ترتیب آن را ندهید، بیشتر اولین حقوق از دست می‌رود.</p>` کہ آپ کی تنخواہ سے کتنا ٹیکس کاٹنا ہے۔ اس کے بغیر آجر قانونی طور پر <strong>55%</strong> کاٹنے کا پابند ہے — زیادہ سے زیادہ ایمرجنسی ریٹ۔ یہ سزا نہیں، بلکہ کارڈ کی غیر موجودگی میں نظام کی ڈیفالٹ ویلیو ہے۔ لیکن اگر یہ انتظام نہ کیا تو پہلی تنخواہ کا بیشتر حصہ چلا جائے گا۔</p>
+          ur:`<p>آپ کا <strong>skattekort</strong> (ٹیکس کارڈ) آجر کو بتاتا ہے کہ آپ کی تنخواہ سے کتنا ٹیکس کاٹنا ہے۔ اس کے بغیر آجر قانونی طور پر <strong>55%</strong> کاٹنے کا پابند ہے — زیادہ سے زیادہ ایمرجنسی ریٹ۔ یہ سزا نہیں، بلکہ کارڈ کی غیر موجودگی میں نظام کی ڈیفالٹ ویلیو ہے۔ لیکن اگر یہ انتظام نہ کیا تو پہلی تنخواہ کا بیشتر حصہ چلا جائے گا۔</p>
 <p><strong>ٹیکس کارڈ کیسے حاصل کریں:</strong></p>
 <ol class="step-list">
   <li><span class="step-num">1</span>MitID سے <a href="https://skat.dk/en-us" target="_blank" rel="noopener">skat.dk</a> پر لاگ ان کریں</li>
@@ -2594,7 +2537,7 @@ de:`<p>Jedes Jahr im <strong>Maerz</strong> veroef fentlicht SKAT Ihre <strong>a
 </ul>
 <p>Możesz ręcznie dodać pominięte odliczenia za ostatnie 3 lata na skat.dk.</p>
 <a href="https://skat.dk/en-us/individuals/the-annual-income-assessment/" target="_blank" rel="noopener">→ Przewodnik po årsopgørelse (SKAT oficjalne)</a>`,
-          ur:`<p>هر سال در <strong>مارس</strong>، SKAT (اداره مالیات دانمارک) <strong>årsopgørelse</strong> (اظهارنامه مالیاتی سالانه) شما را منتشر می‌کند. این میزان واقعی درآمد و مالیات پرداختی را با تخمین مقایسه می‌کند و محاسبه می‌کند که آیا بدهکارید یا مستحق استرداد هستید.</p>` (سالانہ ٹیکس بیان) شائع کرتا ہے۔ یہ آپ نے جو اصل میں کمایا اور ادا کیا اس کا آپ کے اندازے سے موازنہ کرتا ہے، اور حساب لگاتا ہے کہ آپ پیسے واجب الادا ہیں یا ریفنڈ ملے گا۔</p>
+          ur:`<p>ہر سال <strong>مارچ</strong> میں، SKAT (ڈنمارک کا محکمہ ٹیکس) آپ کی <strong>årsopgørelse</strong> (سالانہ ٹیکس بیان) شائع کرتا ہے۔ یہ آپ نے جو اصل میں کمایا اور ادا کیا اس کا آپ کے اندازے سے موازنہ کرتا ہے، اور حساب لگاتا ہے کہ آپ پیسے واجب الادا ہیں یا ریفنڈ ملے گا۔</p>
 <p><strong>اچھی خبر:</strong> زیادہ تر لوگوں کو ریفنڈ ملتا ہے۔ ڈینش لوگوں کو اوسطاً سالانہ تقریباً DKK 5,000–8,000 ریفنڈ ملتا ہے۔</p>
 <p><strong>ریفنڈ کی عام وجوہات:</strong></p>
 <ul>
@@ -2734,7 +2677,7 @@ de:`<p><strong>MobilePay</strong> wird von rund 4,4 Millionen Dänen genutzt —
   <li>Płatności u przedsiębiorców: zależnie od sklepu</li>
 </ul>
 <a href="https://mobilepay.dk/hjaelp/mobilepay-bruger" target="_blank" rel="noopener">→ Pomoc MobilePay (dostępna po angielsku)</a>`,
-          ur:`<p><strong>MobilePay</strong> را تقریباً ۴٫۴ میلیون نفر دانمارکی — حدود ۷۵٪ جمعیت — استفاده می‌کنند. بدون آن نمی‌توانید در رستوران‌ها قبض تقسیم کنید، در غرفه‌های بازار بپردازید، در بسیاری از شهرها پارک کنید یا به دوستان دانمارکی پول بفرستید. این اختیاری نیست.</p>` — یعنی پوری آبادی کا تقریباً 75%۔ اس کے بغیر آپ ریستورانوں میں بل تقسیم نہیں کر سکتے، بازار اسٹالز پر نہیں دے سکتے، بہت سے شہروں میں پارکنگ نہیں کر سکتے، یا ڈینش دوستوں کو پیسے نہیں بھیج سکتے۔ یہ اختیاری نہیں ہے۔</p>
+          ur:`<p><strong>MobilePay</strong> تقریباً 4.4 ملین ڈینش لوگ استعمال کرتے ہیں — یعنی پوری آبادی کا تقریباً 75%۔ اس کے بغیر آپ ریستورانوں میں بل تقسیم نہیں کر سکتے، بازار اسٹالز پر نہیں دے سکتے، بہت سے شہروں میں پارکنگ نہیں کر سکتے، یا ڈینش دوستوں کو پیسے نہیں بھیج سکتے۔ یہ اختیاری نہیں ہے۔</p>
 <p><strong>کیسے حاصل کریں:</strong></p>
 <ol class="step-list">
   <li><span class="step-num">1</span>App Store یا Google Play سے MobilePay ڈاؤنلوڈ کریں</li>
@@ -2823,7 +2766,7 @@ de:`<p>Das dänische Rentensystem basiert auf drei verschiedenen Säulen. Das Ve
   <li><strong>Privat pension</strong> — prywatna emerytura dobrowolna. Odliczalna podatkowo do określonego limitu.</li>
 </ul>
 <p><strong>Jako nowo przybyły:</strong> sprawdź, czy Twoja umowa o pracę zawiera emeryturę zakładową. Jeśli tak, jest ona automatycznie odprowadzana. Sprawdź swoje składki na <a href="https://www.pensionsinfo.dk" target="_blank" rel="noopener">pensionsinfo.dk</a>.</p>`,
-          ur:`<p>سیستم بازنشستگی دانمارک بر سه رکن جداگانه بنا شده است:</p>`:</p>
+          ur:`<p>ڈنمارک کا پنشن نظام تین الگ الگ ستونوں پر بنا ہے:</p>
 <ul>
   <li><strong>Folkepension</strong> — ریاستی پنشن، 67 سال کی عمر سے (2030 میں 68 ہو جائے گی)</li>
   <li><strong>ATP</strong> — لازمی اضافی پنشن، خود بخود کاٹی جاتی ہے</li>
@@ -2915,7 +2858,7 @@ de:`<p>Die meisten dänischen Banken verlangen eine CPR-Nummer, um ein vollstän
   <tr><td><strong>Nordea</strong></td><td>✅ Tak</td><td>Częściowo</td><td>~0–50 DKK/mies.</td><td>⚠️ Może wymagać wizyty</td></tr>
 </table>
 <p><strong>Wskazówka:</strong> Otwórz Lunar lub Revolut online natychmiast po otrzymaniu CPR, a następnie otwórz tradycyjne konto bankowe. Zarejestruj tradycyjne konto na <a href="https://www.nemkonto.dk" target="_blank" rel="noopener">nemkonto.dk</a> jako NemKonto.</p>`,
-          ur:`<p>اکثر بانک‌های دانمارکی برای افتتاح حساب کامل به شماره CPR نیاز دارند. اینجا مقایسه‌ای صادقانه آمده است:</p>`۔ یہاں ایمانداری سے موازنہ ہے:</p>
+          ur:`<p>ڈنمارک کے بیشتر بینکوں کو مکمل اکاؤنٹ کھولنے کے لیے CPR نمبر درکار ہے۔ یہاں ایمانداری سے موازنہ ہے:</p>
 <table class="info-table">
   <tr><th>بینک</th><th>انگریزی سپورٹ</th><th>ماہانہ فیس</th><th>بہترین برائے</th></tr>
   <tr><td><strong>Lunar</strong></td><td>100% انگریزی ایپ</td><td>مفت (بنیادی) / 49 DKK (Plus)</td><td>نئے آنے والے، ڈیجیٹل، بعض اوقات CPR کے بغیر بھی</td></tr>
@@ -2988,7 +2931,7 @@ de:`<p>Ihr <strong>sundhedskort</strong> (Krankenversicherungskarte) ist die gel
 <p><strong>Jak ją uzyskać:</strong> Zarejestruj adres w gminie — karta zostanie wysłana pocztą automatycznie. Możesz też pobrać cyfrową wersję przez sundhed.dk (MitID).</p>
 <p class="callout-warning">Bez sundhedskort płacisz pełne koszty za rutynowe wizyty. Zarejestruj się tak szybko, jak to możliwe.</p>
 <a href="https://www.sundhed.dk" target="_blank" rel="noopener">→ O sundhedskort (sundhed.dk oficjalne)</a>`,
-ur:`<p><strong>sundhedskort</strong> (کارت بیمه درمانی) شما کارت پلاستیکی زرد رنگی است که حق شما برای مراقبت‌های بهداشتی رایگان دانمارک را اثبات می‌کند. به‌طور خودکار با پست می‌آید، معمولاً ۲ تا ۴ هفته پس از صدور شماره CPR.</p>` وہ پیلا پلاسٹک کارڈ ہے جو ڈنمارک کی مفت صحت سہولیات تک آپ کے حق کو ثابت کرتا ہے۔ یہ خود بخود ڈاک سے آتا ہے، عام طور پر CPR نمبر جاری ہونے کے 2–4 ہفتے بعد۔</p>
+ur:`<p>آپ کی <strong>sundhedskort</strong> (ہیلتھ انشورنس کارڈ) وہ پیلا پلاسٹک کارڈ ہے جو ڈنمارک کی مفت صحت سہولیات تک آپ کے حق کو ثابت کرتا ہے۔ یہ خود بخود ڈاک سے آتا ہے، عام طور پر CPR نمبر جاری ہونے کے 2–4 ہفتے بعد۔</p>
 <p>اس میں آپ کا CPR نمبر، آپ کا نام، اور — سب سے اہم — <strong>آپ کے مقرر شدہ GP (praktiserende læge)</strong> کا نام اور پتہ درج ہوتا ہے۔</p>
 <p class="callout-warning">sundhedskort ملنے تک آپ ڈنمارک کے سرکاری صحت نظام سے <strong>مستفید نہیں ہیں</strong>۔ اگر کارڈ آنے سے پہلے ڈاکٹر کی ضرورت ہو تو: آؤٹ آف آورز کلینک (lægevagten) جائیں، رہنمائی کے لیے 1813 پر کال کریں، یا نجی ڈاکٹر سے ملیں اور بعد میں SKAT کے ذریعے خرچہ واپس لیں۔</p>
 <p>اگر کارڈ گم یا خراب ہو جائے: <a href="https://sundhedskort.dk" target="_blank" rel="noopener">sundhedskort.dk</a> پر MitID سے نئے کارڈ کی درخواست کریں۔ ایک ہفتے میں نیا کارڈ مل جائے گا۔</p>
@@ -3084,7 +3027,7 @@ de:`<p>Ihr Hausarzt (praktiserende læge) ist der <strong>Türhüter des gesamte
   <li><span class="step-num">4</span>Lekarz prześle Ci potwierdzenie pocztą</li>
 </ol>
 <p>Możesz zmienić lekarza raz na 3 miesiące. Jeśli nie możesz znaleźć lekarza przyjmującego nowych pacjentów, skontaktuj się z Borgerservice swojej gminy — pomogą Ci z przypisaniem.</p>`,
-ur:`<p>پزشک عمومی شما (praktiserende læge) <strong>دروازه ورودی کل سیستم بهداشتی دانمارک است.</strong> نمی‌توانید مستقیم به متخصص مراجعه کنید — همیشه ابتدا باید به پزشک عمومی بروید.</p>` <strong>پورے ڈنمارکی صحت نظام کا داخلی دروازہ</strong> ہے۔ آپ سیدھے کسی ماہر کے پاس نہیں جا سکتے — ہمیشہ پہلے GP کے پاس جانا پڑتا ہے۔</p>
+ur:`<p>آپ کا GP (praktiserende læge) <strong>پورے ڈنمارکی صحت نظام کا داخلی دروازہ</strong> ہے۔ آپ سیدھے کسی ماہر کے پاس نہیں جا سکتے — ہمیشہ پہلے GP کے پاس جانا پڑتا ہے۔</p>
 <p><strong>GP کے ساتھ رجسٹریشن کا طریقہ:</strong></p>
 <ol class="step-list">
   <li><span class="step-num">1</span><a href="https://www.sundhed.dk" target="_blank" rel="noopener">sundhed.dk</a> پر جائیں اور "Find a doctor" پر کلک کریں</li>
@@ -3170,7 +3113,7 @@ de:`<p>Das ist eines der wichtigsten Dinge, die Sie in Dänemark wissen müssen.
   <li><strong>Szpitalny oddział ratunkowy (skadestue)</strong> — urazy i nagłe przypadki. Udaj się bezpośrednio.</li>
 </ul>
 <p class="callout-warning">Dzwonienie pod 112 w sprawach niepilnych jest źle widziane i może opóźnić pomoc innym.</p>`,
-ur:`<p>این یکی از مهم‌ترین چیزهایی است که باید در دانمارک بدانید. هر دو شماره هدف کاملاً متفاوتی دارند:</p>`۔ دونوں نمبروں کا مقصد بالکل مختلف ہے:</p>
+ur:`<p>یہ ڈنمارک میں جاننے والی سب سے اہم باتوں میں سے ایک ہے۔ دونوں نمبروں کا مقصد بالکل مختلف ہے:</p>
 <table class="info-table">
   <tr><th>نمبر</th><th>کس لیے</th><th>کب استعمال کریں</th></tr>
   <tr><td><strong style="font-size:1.1rem">112</strong></td><td>پولیس، فائر بریگیڈ، ایمبولینس</td><td>صرف جان لیوا ہنگامی صورتحال</td></tr>
@@ -3313,7 +3256,7 @@ de:`<p><strong>Das überrascht fast alle Neuankömmlinge:</strong> Zahnbehandlun
 <p><strong>Jak znaleźć dentystę:</strong> Wyszukaj "tandlæge" na <a href="https://www.sundhed.dk" target="_blank" rel="noopener">sundhed.dk</a> lub w Google Maps. Wiele gabinetów przyjmuje nowych pacjentów — inaczej niż lekarze pierwszego kontaktu.</p>
 <p><strong>Sygeforsikring "denmark"</strong> — prywatne uzupełniające ubezpieczenie zdrowotne za ~130 DKK/miesiąc, które pokrywa znaczną część kosztów dentystycznych. Warto się zarejestrować wcześnie (lista oczekujących może trwać do 6 miesięcy).</p>
 <p>Dentysta dyżurny (tandlægevagt) dla nagłych bólów zębów: dzwoń <strong>70 11 31 31</strong> (poza godzinami pracy)</p>`,
-ur:`<p><strong>این تقریباً همه تازه‌واردان را شگفت‌زده می‌کند:</strong> مراقبت از دندان برای بزرگسالان در دانمارک در سیستم بهداشتی دولتی <strong>گنجانده نشده</strong> است. هزینه‌ها از جیب خودتان پرداخت می‌شود و هزینه‌های دندانپزشکی در دانمارک قابل توجه است.</p>` سرکاری صحت نظام میں شامل <strong>نہیں</strong> ہے۔ آپ خود جیب سے ادا کرتے ہیں اور ڈنمارکی دانتوں کے اخراجات کافی زیادہ ہیں۔</p>
+ur:`<p><strong>یہ تقریباً ہر نئے آنے والے کو حیران کرتا ہے:</strong> ڈنمارک میں بالغوں کے لیے دانتوں کی دیکھ بھال سرکاری صحت نظام میں شامل <strong>نہیں</strong> ہے۔ آپ خود جیب سے ادا کرتے ہیں اور ڈنمارکی دانتوں کے اخراجات کافی زیادہ ہیں۔</p>
 <p><strong>عام اخراجات (2025 کے اندازے):</strong></p>
 <ul>
   <li>معمول کا معائنہ اور صفائی: 600–1,400 DKK</li>
@@ -3452,7 +3395,7 @@ de:`<p>In ein anderes Land zu ziehen ist eine der psychologisch anspruchsvollste
   <li>Telefon zaufania (Livslinjen): <strong>70 201 201</strong> (24/7)</li>
 </ul>
 <a href="https://www.sundhed.dk/borger/patienthaandbogen/psykiatri-og-psykologi/" target="_blank" rel="noopener">→ Zasoby zdrowia psychicznego (sundhed.dk)</a>`,
-ur:`<p>نقل مکان به کشوری جدید از نظر روانی یکی از سخت‌ترین تجربیات است. دانمارک سلامت روان را جدی می‌گیرد. سیستم اینگونه کار می‌کند:</p>`۔ ڈنمارک ذہنی صحت کو سنجیدگی سے لیتا ہے۔ نظام اس طرح کام کرتا ہے:</p>
+ur:`<p>کسی نئے ملک میں منتقل ہونا ذہنی طور پر سب سے مشکل تجربات میں سے ایک ہے۔ ڈنمارک ذہنی صحت کو سنجیدگی سے لیتا ہے۔ نظام اس طرح کام کرتا ہے:</p>
 <p><strong>سرکاری نظام کے ذریعے مفت:</strong></p>
 <ul>
   <li><strong>آپ کا GP</strong> پہلا قدم ہے — وہ نفسیاتی ماہر (psykolog) کے پاس ریفرل دے سکتا ہے</li>
@@ -3566,7 +3509,7 @@ de:`<p><strong>Sygeforsikring "denmark"</strong> ist ein gemeinnütziger Versich
 </ul>
 <p class="callout-warning">Możesz dołączyć tylko w ciągu 6 miesięcy od zameldowania w Danii lub ukończenia 30 lat. Nie przegap tego okna!</p>
 <a href="https://www.sygeforsikring.dk/english" target="_blank" rel="noopener">→ Dołącz do Sygeforsikring "denmark" (strona po angielsku)</a>`,
-ur:`<p><strong>Sygeforsikring "denmark"</strong> یک صندوق بیمه متقابل غیرانتفاعی است که بیش از ۲٫۳ میلیون دانمارکی به آن پیوسته‌اند. در ازای حق عضویت ماهانه اندک، بخشی از هزینه‌هایی که سیستم دولتی پوشش نمی‌دهد را بازمی‌گرداند.</p>` جس کے ساتھ 23 لاکھ سے زیادہ ڈنمارکی جڑے ہوئے ہیں۔ معمولی ماہانہ فیس کے عوض یہ ان اخراجات کا ایک حصہ واپس کرتا ہے جو سرکاری نظام کور نہیں کرتا۔</p>
+ur:`<p><strong>Sygeforsikring "denmark"</strong> ایک غیر منافع بخش باہمی انشورنس فنڈ ہے جس کے ساتھ 23 لاکھ سے زیادہ ڈنمارکی جڑے ہوئے ہیں۔ معمولی ماہانہ فیس کے عوض یہ ان اخراجات کا ایک حصہ واپس کرتا ہے جو سرکاری نظام کور نہیں کرتا۔</p>
 <p><strong>یہ کیا کور کرتا ہے (گروپ 1، ~130–175 DKK/ماہ، 2025):</strong></p>
 <ul>
   <li>دانتوں کا علاج: زیادہ تر طریقہ کار پر 40–60% واپسی</li>
@@ -3709,7 +3652,7 @@ de:`<p>Das dänische Elternurlaubssystem ist eines der großzügigsten der Welt.
 <p><strong>Zasiłek (barselsdagpenge):</strong> maks. 4 765 DKK/tydz. (2025). Wiele umów zbiorowych uzupełnia do pełnej pensji.</p>
 <p class="callout-warning">Jako pracownik migrujący Twoje prawa mogą się różnić — sprawdź z Udbetaling Danmark i działem HR.</p>
 <a href="https://www.borger.dk/familie-og-boern/Barsel" target="_blank" rel="noopener">→ Pełny przewodnik po urlopie rodzicielskim (borger.dk oficjalne)</a>`,
-ur:`<p>سیستم مرخصی والدین در دانمارک (barsel) یکی از سخاوتمندانه‌ترین سیستم‌های جهان است. این سیستم در <strong>۲ اوت ۲۰۲۲</strong> اصلاح شد تا هر دو والدین از حقوق برابر و فردی برخوردار شوند.</p>`۔ اس نظام کو <strong>2 اگست 2022</strong> کو اصلاح کیا گیا تاکہ دونوں والدین کو برابر اور انفرادی حقوق ملیں۔</p>
+ur:`<p>ڈنمارک کا والدین کی چھٹی کا نظام (barsel) دنیا کے سب سے فیاضانہ نظاموں میں سے ایک ہے۔ اس نظام کو <strong>2 اگست 2022</strong> کو اصلاح کیا گیا تاکہ دونوں والدین کو برابر اور انفرادی حقوق ملیں۔</p>
 <p><strong>چھٹی کی تقسیم (فی والدین):</strong></p>
 <table class="info-table">
   <tr><th>بلاک</th><th>کون</th><th>مدت</th><th>منتقل ہو سکتی ہے؟</th></tr>
@@ -3821,7 +3764,7 @@ de:`<p>Dänemarks öffentlich subventionierte Kinderbetreuung ist weltklasse. De
 <p><strong>Koszty:</strong> Maks. 25% rzeczywistych kosztów — reszta pokrywana przez rząd. Ulgi dochodowe mogą zmniejszyć kwotę do 0 DKK.</p>
 <p><strong>Jak się zapisać:</strong> Przez stronę gminy lub bezpośrednio. W Kopenhadze listy oczekujących bywają długie — zapisz się już w ciąży.</p>
 <a href="https://www.borger.dk/familie-og-boern/pasning-af-boern" target="_blank" rel="noopener">→ Informacje o opiece nad dziećmi (borger.dk)</a>`,
-ur:`<p>مراقبت از کودک یارانه‌ای دانمارک در سطح جهانی است. دولت بخش اعظم هزینه واقعی را می‌پردازد — شما <strong>حداکثر ۲۵٪ هزینه واقعی</strong> را پرداخت می‌کنید.</p>`۔ ریاست اصل لاگت کا بڑا حصہ برداشت کرتی ہے — آپ <strong>زیادہ سے زیادہ اصل لاگت کا 25%</strong> ادا کرتے ہیں۔</p>
+ur:`<p>ڈنمارک کی سرکاری سبسڈی والی چائلڈ کیئر عالمی معیار کی ہے۔ ریاست اصل لاگت کا بڑا حصہ برداشت کرتی ہے — آپ <strong>زیادہ سے زیادہ اصل لاگت کا 25%</strong> ادا کرتے ہیں۔</p>
 <table class="info-table">
   <tr><th>قسم</th><th>عمر</th><th>زیادہ سے زیادہ والدین کی فیس (2025)</th></tr>
   <tr><td><strong>Vuggestue</strong> (نرسری)</td><td>6 ماہ – 3 سال</td><td>~3,756 DKK/ماہ</td></tr>
@@ -3993,7 +3936,7 @@ de:`<p>Der <strong>børnecheck</strong> (offiziell <em>børne- og ungeydelse</em
 </ul>
 <p>Świadczenia wypłacane automatycznie na NemKonto po rejestracji dziecka z numerem CPR.</p>
 <a href="https://www.borger.dk/familie-og-boern/bornefamilieydelse" target="_blank" rel="noopener">→ Świadczenia na dzieci (lifeindenmark.borger.dk)</a>`,
-ur:`<p><strong>Børnecheck</strong> (نام رسمی: børne- og ungeydelse — børnetilskud یا کمک هزینه کودک) پرداخت معاف از مالیات دولتی برای هر کودک زیر ۱۸ سال است. نکته قابل توجه: <strong>نیازی به درخواست ندارید.</strong> به‌طور خودکار به NemKonto شما واریز می‌شود وقتی فرزندتان با شماره CPR ثبت شود.</p>` ریاست کی طرف سے ہر 18 سال سے کم عمر بچے کے لیے ٹیکس سے پاک ادائیگی ہے۔ قابل ذکر بات: <strong>آپ کو درخواست نہیں دینی ہوتی۔</strong> یہ آپ کے NemKonto میں خود بخود ادا ہو جاتا ہے جب آپ کا بچہ CPR نمبر کے ساتھ رجسٹر ہو۔</p>
+ur:`<p><strong>Børnecheck</strong> (سرکاری نام: børne- og ungeydelse) ریاست کی طرف سے ہر 18 سال سے کم عمر بچے کے لیے ٹیکس سے پاک ادائیگی ہے۔ قابل ذکر بات: <strong>آپ کو درخواست نہیں دینی ہوتی۔</strong> یہ آپ کے NemKonto میں خود بخود ادا ہو جاتا ہے جب آپ کا بچہ CPR نمبر کے ساتھ رجسٹر ہو۔</p>
 <p><strong>شرحیں (2025):</strong></p>
 <table class="info-table">
   <tr><th>بچے کی عمر</th><th>رقم</th><th>فی سال</th></tr>
@@ -4095,7 +4038,7 @@ de:`<p>Die <strong>folkeskole</strong> ist das öffentliche Schulsystem Dänemar
 </table>
 <p><strong>Dla nowo przybyłych dzieci:</strong> Skontaktuj się z lokalną gminą — mają obowiązek zapewnić dziecku miejsce w szkole. Szkoły oferują klasy recepcyjne (modtageklasse) dla dzieci nieznających duńskiego.</p>
 <p><strong>Szkoły prywatne i alternatywne:</strong> Dania ma wiele szkół prywatnych i friskoler (wolne szkoły) — częściowo dotowane przez państwo. Czesne to zazwyczaj 1 000–2 500 DKK/mies.</p>`,
-ur:`<p><strong>folkeskole</strong> (مدرسه دولتی دانمارک) سیستم مدرسه دولتی دانمارک است. رایگان است، شامل کتاب‌ها می‌شود، و از کلاس ۰ (سن ۶ سال) تا کلاس ۹ (سن ۱۵/۱۶ سال) با یک کلاس دهم اختیاری ادامه دارد.</p>`۔ یہ مفت ہے، کتابیں بھی شامل ہیں، اور کلاس 0 (عمر 6) سے کلاس 9 (عمر 15/16) تک چلتا ہے، اختیاری 10ویں جماعت کے ساتھ۔</p>
+ur:`<p><strong>folkeskole</strong> ڈنمارک کا سرکاری اسکول نظام ہے۔ یہ مفت ہے، کتابیں بھی شامل ہیں، اور کلاس 0 (عمر 6) سے کلاس 9 (عمر 15/16) تک چلتا ہے، اختیاری 10ویں جماعت کے ساتھ۔</p>
 <p><strong>folkeskole کی اہم باتیں:</strong></p>
 <ul>
   <li><strong>انگریزی</strong> پہلی جماعت سے پڑھائی جاتی ہے۔ زیادہ تر بچے 5ویں جماعت تک بہترین انگریزی بولتے ہیں۔</li>
@@ -4179,7 +4122,7 @@ de:`<p>Wenn Sie planen, Dänemark in einigen Jahren zu verlassen, oder eine engl
   <li><span class="step-num">3</span>Zarejestruj się przez MitID po przyjęciu</li>
 </ol>
 <p><strong>SU — duńskie stypendium studenckie:</strong> Studenci zarejestrowani w Danii mogą ubiegać się o SU (Statens Uddannelsesstøtte) — ok. 6 321 DKK/mies. (2025) dla samodzielnych studentów. Dostępne dla obywateli UE pracujących w Danii. Sprawdź swój dział kadr zanim założysz, że musisz płacić sam.</p>`,
-ur:`<p>اگر قصد دارید در عرض چند سال دانمارک را ترک کنید، یا آموزش با برنامه درسی انگلیسی را ترجیح می‌دهید، مدارس بین‌المللی گزینه خوبی هستند. این مدارس خصوصی هستند و شهریه دارند.</p>`، یا انگریزی نصاب کی تعلیم پسند کرتے ہیں، تو بین الاقوامی اسکول ایک اچھا آپشن ہے۔ یہ نجی ہیں اور فیس لی جاتی ہے۔</p>
+ur:`<p>اگر آپ چند سالوں میں ڈنمارک چھوڑنے کا ارادہ رکھتے ہیں، یا انگریزی نصاب کی تعلیم پسند کرتے ہیں، تو بین الاقوامی اسکول ایک اچھا آپشن ہے۔ یہ نجی ہیں اور فیس لی جاتی ہے۔</p>
 <table class="info-table">
   <tr><th>اسکول</th><th>شہر</th><th>سالانہ فیس (تخمینہ)</th></tr>
   <tr><td><strong>Copenhagen International School (CIS)</strong></td><td>کوپن ہیگن</td><td>105,000–135,000 DKK</td></tr>
@@ -4297,7 +4240,7 @@ de:`<p>Dänemark verfügt über acht öffentliche Universitäten und Dutzende sp
   <tr><td><strong>AAU</strong></td><td>Aalborg</td><td>Nauka oparta na problemach, inżynieria</td><td>Top 400 na świecie</td></tr>
 </table>
 <p><strong>Aplikacje przez:</strong> <a href="https://www.optagelse.dk" target="_blank" rel="noopener">optagelse.dk</a> (programy po duńsku) lub bezpośrednio do uczelni dla programów magisterskich po angielsku. Główny termin składania: <strong>15 marca (skoordynowany)</strong> lub <strong>15 maja (indywidualne)</strong>.</p>`,
-ur:`<p>دانمارک هشت دانشگاه دولتی و ده‌ها مؤسسه تخصصی دارد، همگی به‌خوبی تأمین مالی شده و به‌طور مداوم در صدر دانشگاه‌های برتر اروپا قرار دارند.</p>`، سب اچھی طرح مالی اعانت یافتہ اور مستقل طور پر یورپ کی بہترین یونیورسٹیوں میں شمار ہوتے ہیں۔</p>
+ur:`<p>ڈنمارک کے آٹھ سرکاری یونیورسٹیاں اور درجنوں خصوصی ادارے ہیں، سب اچھی طرح مالی اعانت یافتہ اور مستقل طور پر یورپ کی بہترین یونیورسٹیوں میں شمار ہوتے ہیں۔</p>
 <table class="info-table">
   <tr><th>یونیورسٹی</th><th>شہر</th><th>معروف بذریعہ</th><th>عالمی رینکنگ</th></tr>
   <tr><td><strong>یونیورسٹی آف کوپن ہیگن (KU)</strong></td><td>کوپن ہیگن</td><td>تحقیق، طب، علوم انسانی، سائنس</td><td>عالمی سطح پر Top 100</td></tr>
@@ -4439,20 +4382,38 @@ de:`<p><strong>Studiengebühren nach Staatsangehörigkeit:</strong></p>
 <p>Studenci mogą też ubiegać się o <strong>pożyczkę SU</strong> do 4 204 DKK/mies. ponad dotację, przy niskim oprocentowaniu.</p>
 <p class="callout-warning">Obywatele UE pracujący i płacący podatki w Danii są generalnie uprawnieni do SU. Studenci spoza UE nie są uprawnieni, chyba że mają stały pobyt lub specjalne zezwolenie.</p>
 <a href="https://www.su.dk/english/" target="_blank" rel="noopener">→ Złóż wniosek o SU (oficjalnie, po angielsku)</a>`,
-ur:`<p><strong>شهریه بر اساس تابعیت:</strong></p>`
+ur:`<p><strong>ٹیوشن فیس بلحاظِ شہریت:</strong></p>
 <ul>
-  <li><strong>EU/EEA/نارڈک شہری:</strong> سرکاری یونیورسٹیوں میں کوئی ٹیوشن فیس نہیں۔</li>
-  <li><strong>غیر EU شہری:</strong> ٹیوشن فیس لاگو، عموماً 50,000–130,000 DKK/سال۔</li>
+  <li><strong>EU/EEA/نارڈک شہری:</strong> سرکاری یونیورسٹیوں میں کوئی ٹیوشن فیس نہیں۔ تمام بیچلر اور ماسٹر پروگرام مکمل طور پر ریاستی مالی اعانت سے چلتے ہیں۔</li>
+  <li><strong>غیر EU شہری:</strong> ٹیوشن فیس لاگو — عموماً 50,000–130,000 DKK/سال یونیورسٹی اور پروگرام کے مطابق۔</li>
 </ul>
-<p><strong>SU — Statens Uddannelsesstøtte (ریاستی تعلیمی گرانٹ):</strong> ڈنمارکی ریاست کی طرف سے منظور شدہ تعلیم میں داخل طلبہ کے لیے ماہانہ گرانٹ۔ <strong>واپسی ضروری نہیں۔</strong></p>
+<p><strong>SU — Statens Uddannelsesstøtte (ریاستی تعلیمی گرانٹ):</strong></p>
+<p>SU ڈنمارکی ریاست کی طرف سے منظور شدہ تعلیم میں داخل طلبہ کے لیے ماہانہ گرانٹ ہے۔ <strong>واپسی ضروری نہیں — یہ گرانٹ ہے، قرض نہیں۔</strong></p>
 <table class="info-table">
   <tr><th>صورتحال</th><th>ماہانہ SU (2025)</th></tr>
   <tr><td>20 سال سے کم، گھر پر</td><td>822 DKK</td></tr>
   <tr><td>20 سال سے کم، آزادانہ</td><td>2,936 DKK</td></tr>
   <tr><td>20 سال سے زیادہ، آزادانہ (زیادہ تر طلبہ)</td><td>6,321 DKK</td></tr>
 </table>
+<p>طلبہ <strong>SU قرض</strong> بھی لے سکتے ہیں — گرانٹ کے علاوہ 4,204 DKK/ماہ تک، کم سود پر۔</p>
+<p class="callout-warning">EU شہری جو ڈنمارک میں کام کرتے اور ٹیکس دیتے ہیں وہ عموماً SU کے اہل ہیں۔ غیر EU طلبہ اہل نہیں جب تک کہ انہیں مستقل رہائش یا خصوصی اجازت نہ ہو۔</p>
 <a href="https://www.su.dk/english/" target="_blank" rel="noopener">→ SU کے لیے درخواست دیں (سرکاری، انگریزی)</a>`,
-          fa:`<p><strong>شهریه بر اساس تابعیت:</strong></p>` }
+          fa:`<p><strong>شهریه بر اساس تابعیت:</strong></p>
+<ul>
+  <li><strong>شهروندان اتحادیه اروپا/EEA/اسکاندیناوی:</strong> در دانشگاه‌های دولتی شهریه‌ای وجود ندارد. تمام برنامه‌های کارشناسی و کارشناسی ارشد به‌طور کامل تأمین مالی دولتی دارند.</li>
+  <li><strong>شهروندان غیر اتحادیه اروپا:</strong> شهریه اعمال می‌شود — معمولاً ۵۰٬۰۰۰ تا ۱۳۰٬۰۰۰ DKK در سال بسته به دانشگاه و رشته.</li>
+</ul>
+<p><strong>SU — Statens Uddannelsesstøtte (کمک هزینه تحصیلی دولتی):</strong></p>
+<p>SU یک کمک هزینه ماهانه از دولت دانمارک برای دانشجویان ثبت‌نام‌شده در مؤسسات تأیید شده است. <strong>نیاز به بازپرداخت ندارد.</strong></p>
+<table class="info-table">
+  <tr><th>وضعیت</th><th>SU ماهانه (۲۰۲۵)</th></tr>
+  <tr><td>زیر ۲۰ سال، با والدین</td><td>۸۲۲ DKK</td></tr>
+  <tr><td>زیر ۲۰ سال، مستقل</td><td>۲٬۹۳۶ DKK</td></tr>
+  <tr><td>بالای ۲۰ سال، مستقل (اکثر دانشجویان)</td><td>۶٬۳۲۱ DKK</td></tr>
+</table>
+<p>دانشجویان همچنین می‌توانند <strong>وام SU</strong> تا ۴٬۲۰۴ DKK/ماه علاوه بر کمک هزینه، با نرخ بهره پایین دریافت کنند.</p>
+<p class="callout-warning">شهروندان اتحادیه اروپا که در دانمارک کار می‌کنند و مالیات می‌پردازند، معمولاً واجد شرایط SU هستند. دانشجویان غیر اتحادیه اروپا واجد شرایط نیستند، مگر اینکه اقامت دائمی یا مجوز خاص داشته باشند.</p>
+<a href="https://www.su.dk/english/" target="_blank" rel="noopener">→ درخواست SU (رسمی، به انگلیسی)</a>` }
       },
       {
         icon: "🗣️",
@@ -4545,7 +4506,7 @@ de:`<p>Dänemark bietet allen Einwohnern mit einer CPR-Nummer, die keine EU-Stud
 <p><strong>Jak zacząć:</strong> Zgłoś się do działu integracji gminy (integrationsafdelingen) lub zapisz bezpośrednio do centrum językowego (sprogcenter) w swoim rejonie.</p>
 <p><strong>Poziomy egzaminów ważne dla pobytu i obywatelstwa:</strong> Stały pobyt wymaga <strong>PD2 (≈ B1)</strong>. Obywatelstwo wymaga <strong>PD3 (≈ B2)</strong>. Studia na programach po duńsku zazwyczaj wymagają <strong>Studieprøven (≈ C1)</strong>.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement" target="_blank" rel="noopener">→ Wymagania językowe dla pobytu (nyidanmark.dk)</a>`,
-ur:`<p>دانمارک برای همه ساکنان دارای شماره CPR آموزش رایگان زبان دانمارکی فراهم می‌کند. این یک حق قانونی است — کارفرما یا شهرداری موظف به تضمین آن است.</p>`۔ یہ ایک قانونی حق ہے — آپ کا آجر یا میونسپلٹی اسے یقینی بنانے کی پابند ہے۔</p>
+ur:`<p>ڈنمارک تمام CPR نمبر رکھنے والے باشندوں کو مفت ڈینش زبان کی تعلیم فراہم کرتا ہے۔ یہ ایک قانونی حق ہے — آپ کا آجر یا میونسپلٹی اسے یقینی بنانے کی پابند ہے۔</p>
 <p><strong>تعلیمی پس منظر کے مطابق تین ٹریک:</strong></p>
 <ul>
   <li><strong>Danskuddannelse 1 (DU1):</strong> کم رسمی تعلیم والے افراد کے لیے۔ Prøve i Dansk 1 (PD1) تک لے جاتا ہے</li>
@@ -4629,7 +4590,7 @@ de:`<p>Das dänische Unileben wird sich von den meisten Ländern unterscheiden. 
   <li>Zawody nieregulowane (IT, marketing, finanse itp.): kwalifikacje są uznawane przez pracodawców na zasadzie rynkowej — nie wymagają formalnego zatwierdzenia</li>
   <li>Dyplomy zagraniczne możesz porównać z duńskimi poziomami na <a href="https://www.ufm.dk" target="_blank" rel="noopener">ufm.dk</a></li>
 </ul>`,
-ur:`<p>فرهنگ دانشگاهی دانمارک با اکثر کشورها متفاوت خواهد بود. انتظار داشته باشید:</p>`۔ کیا توقع رکھیں:</p>
+ur:`<p>ڈنمارکی یونیورسٹی کی ثقافت زیادہ تر ممالک سے مختلف محسوس ہوگی۔ کیا توقع رکھیں:</p>
 <ul>
   <li><strong>مکالمے کے بغیر لیکچر نہیں۔</strong> ڈنمارکی تدریسی ثقافت سقراطی ہے — پروفیسرز سوالات، چیلنج اور بحث کی توقع رکھتے ہیں۔</li>
   <li><strong>پہلے نام سے خطاب۔</strong> آپ پروفیسرز کو ان کے پہلے نام سے پکارتے ہیں — یہ بے ادبی نہیں، یہ معمول ہے۔</li>
@@ -4746,7 +4707,7 @@ de:`<p>Wenn Sie Staatsangehöriger eines Nicht-EU/EWR-Landes sind, können Sie i
   <li><strong>Konsensus:</strong> Decyzje często podejmowane są przez zespół, nie narzucane z góry.</li>
 </ul>
 <p class="callout-warning">Jeśli potrzebujesz pozwolenia na pracę, skonsultuj się ze swoją organizacją zawodową przed rozpoczęciem poszukiwań.</p>`,
-ur:`<p>اگر شهروند غیر اتحادیه اروپا/EEA هستید، برای کار کردن به مجوز اقامت و کار نیاز دارید. پنج مسیر اصلی:</p>`۔ پانچ اہم ذرائع:</p>
+ur:`<p>اگر آپ EU/EEA کے شہری نہیں ہیں تو کام کرنے کے لیے رہائش اور کام کا پرمٹ ضروری ہے۔ پانچ اہم ذرائع:</p>
 <table class="info-table">
   <tr><th>اسکیم</th><th>اہلیت</th><th>درخواست</th></tr>
   <tr><td><strong>تنخواہ کی حد (Beløbsordningen)</strong></td><td><strong>514,000 DKK/سال (2025)</strong> سے زیادہ تنخواہ والی نوکری۔ سب سے لچکدار۔</td><td>آپ کا آجر SIRI کے ذریعے</td></tr>
@@ -4839,7 +4800,7 @@ de:`<p>Dänische Arbeitsplätze funktionieren sehr anders als in den meisten Kul
   <li><strong>Obiad (frokost) się liczy.</strong> Wspólna przerwa obiadowa 12–13 to instytucja społeczna. Jedzenie samemu przy biurku jest niezwykłe i lekko antyspołeczne.</li>
   <li><strong>Piątkowe popołudnia latem:</strong> Wiele biur cichnie ok. 14:00 w piątki od czerwca do sierpnia. Nikt tego oficjalnie nie ogłasza — sam to wyczujesz.</li>
 </ul>`,
-ur:`<p>محیط کار دانمارکی به روشی کاملاً متفاوت از اکثر فرهنگ‌ها عمل می‌کند. درک این اصول از همان روز اول شما را مؤثر می‌کند:</p>`۔ یہ اصول سمجھنا آپ کو پہلے دن سے موثر بنائے گا:</p>
+ur:`<p>ڈنمارکی کام کی جگہ زیادہ تر ثقافتوں سے بالکل مختلف طریقے سے چلتی ہے۔ یہ اصول سمجھنا آپ کو پہلے دن سے موثر بنائے گا:</p>
 <ul>
   <li><strong>سپاٹ درجہ بندی۔</strong> ہر کوئی — بشمول CEO — پہلے نام سے پکارتے ہیں۔ باضابطہ خطاب شاذ و نادر ہی استعمال ہوتے ہیں۔</li>
   <li><strong>شام 4 بجے دن کا اختتام ہے۔</strong> 4 بجے (یا والدین کے لیے پہلے) جانا معمول اور متوقع ہے۔ دیر تک رکنا اکثر شکوک پیدا کرتا ہے۔</li>
@@ -4947,7 +4908,7 @@ de:`<p>Dänemark hat keinen gesetzlichen Mindestlohn — Löhne werden stattdess
   <li><strong>Składki emerytalne:</strong> Zazwyczaj 12–17% wynagrodzenia brutto</li>
 </ul>
 <a href="https://www.borger.dk/arbejde-dagpenge-og-orlov" target="_blank" rel="noopener">→ Prawa pracownicze (borger.dk)</a>`,
-ur:`<p>در دانمارک حداقل دستمزد قانونی وجود ندارد — دستمزدها از طریق <strong>قراردادهای جمعی (overenskomster)</strong> تعیین می‌شود.</p>` — اجرتیں <strong>اجتماعی معاہدوں (overenskomster)</strong> کے ذریعے طے ہوتی ہیں۔</p>
+ur:`<p>ڈنمارک میں کوئی قانونی کم از کم اجرت نہیں ہے — اجرتیں <strong>اجتماعی معاہدوں (overenskomster)</strong> کے ذریعے طے ہوتی ہیں۔</p>
 <table class="info-table">
   <tr><th>حق</th><th>آپ کو کیا ملتا ہے</th></tr>
   <tr><td><strong>سالانہ چھٹی</strong></td><td>25 دن (5 ہفتے) ادا شدہ چھٹی فی سال</td></tr>
@@ -5056,7 +5017,7 @@ de:`<p>Ihre dänische Gehaltsabrechnung (lønseddel) kann zunächst verwirrend w
 </ul>
 <p>Przeciętna duńska pensja: ok. 45 000 DKK brutto/mies. Netto po podatkach: ok. 28 000–32 000 DKK.</p>
 <p>Skorzystaj z naszego <strong>kalkulatora pensji</strong>, by obliczyć dokładną kwotę.</p>`,
-ur:`<p>فیش حقوق دانمارکی شما (lønseddel) در ابتدا ممکن است گیج‌کننده باشد. معنای هر ردیف:</p>`۔ ہر سطر کا مطلب:</p>
+ur:`<p>آپ کی ڈینش تنخواہ کی پرچی (lønseddel) پہلے گیج کر سکتی ہے۔ ہر سطر کا مطلب:</p>
 <table class="info-table">
   <tr><th>سطر</th><th>کیا ہے</th></tr>
   <tr><td><strong>Bruttoløn</strong></td><td>آپ کی ماہانہ مجموعی تنخواہ — جو آپ نے معاہدے میں طے کی</td></tr>
@@ -5206,7 +5167,7 @@ de:`<p>Die <strong>A-kasse</strong> (arbejdsløshedskasse) ist das dänische Arb
 </ul>
 <p class="callout-warning">Zapisz się od razu po przyjeździe — okres oczekiwania wynosi 1 rok. Większość nowo przybyłych czeka zbyt długo.</p>
 <a href="https://www.ase.dk/en" target="_blank" rel="noopener">→ ASE A-kasse (angielski)</a>`,
-ur:`<p><strong>A-kasse</strong> (صندوق بیمه بیکاری) سیستم بیمه بیکاری دانمارک است. <strong>داوطلبانه است، نه خودکار</strong> — باید عضو شوید و حق عضویت بپردازید.</p>`۔ یہ <strong>رضاکارانہ، خودکار نہیں</strong> — آپ کو شامل ہونا اور ادائیگی کرنی ہوگی۔</p>
+ur:`<p><strong>A-kasse</strong> (بے روزگاری انشورنس فنڈ) ڈنمارک کا بے روزگاری بیمہ نظام ہے۔ یہ <strong>رضاکارانہ، خودکار نہیں</strong> — آپ کو شامل ہونا اور ادائیگی کرنی ہوگی۔</p>
 <p><strong>اہم حقائق (2025):</strong></p>
 <ul>
   <li><strong>زیادہ سے زیادہ فائدہ:</strong> 21,091 DKK/ماہ (2025)</li>
@@ -5321,7 +5282,7 @@ de:`<p>Dänemark hat eine der höchsten Gewerkschaftsquoten weltweit — rund 67
   <li><strong>DM</strong> — magistrowie różnych kierunków</li>
   <li><strong>3F</strong> — pracownicy bez kwalifikacji i produkcja</li>
 </ul>`,
-ur:`<p>نرخ عضویت اتحادیه در دانمارک از بالاترین‌های جهان است — حدود ۶۷٪. اینجا اتحادیه‌ها کمتر درباره اعتصاب و بیشتر درباره امنیت قرارداد و حمایت قانونی هستند.</p>` — تقریباً 67%۔ یہاں یونینیں ہڑتالوں کے بارے میں کم اور معاہدے کی سلامتی اور قانونی تحفظ کے بارے میں زیادہ ہیں۔</p>
+ur:`<p>ڈنمارک میں یونین رکنیت کی شرح دنیا کی سب سے زیادہ ہے — تقریباً 67%۔ یہاں یونینیں ہڑتالوں کے بارے میں کم اور معاہدے کی سلامتی اور قانونی تحفظ کے بارے میں زیادہ ہیں۔</p>
 <p><strong>یونین آپ کو کیا دیتی ہے:</strong></p>
 <ul>
   <li>دستخط سے پہلے ملازمت کے معاہدے کا جائزہ</li>
@@ -5379,7 +5340,7 @@ de:`<p>Dies ist eine der häufigsten Fragen — und die Antwort hängt von Ihrer
   <li><strong>Researcher</strong>: dla naukowców i akademików</li>
 </ul>
 <p>Złóż wniosek przez <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a> przed rozpoczęciem pracy.</p>`,
-ur:`<p>این یکی از رایج‌ترین سؤالات است — و پاسخ به تابعیت شما بستگی دارد:</p>`:</p>
+ur:`<p>یہ سب سے عام سوالات میں سے ایک ہے — اور جواب آپ کی شہریت پر منحصر ہے:</p>
 <p><strong>EU/EEA شہری:</strong> ہاں۔ آپ کو فوری طور پر ڈنمارک میں کام کرنے کا حق ہے۔ آپ CPR رجسٹریشن کی پروسیسنگ کے دوران نوکری شروع کر سکتے ہیں۔</p>
 <p><strong>غیر EU شہری ورک پرمٹ کے ساتھ:</strong> آپ پرمٹ منظور اور فعال ہونے کے بعد کام کر سکتے ہیں۔</p>
 <p><strong>طلبہ:</strong> سٹوڈنٹ پرمٹ ہولڈر سیمسٹر کے دوران <strong>15 گھنٹے/ہفتہ</strong> کام کر سکتے ہیں، جون/جولائی/اگست میں پوری بنیاد پر۔</p>
@@ -5479,7 +5440,7 @@ de:`<p>Dänemark bietet verschiedene Unternehmensformen an. Die richtige Wahl h�
   <tr><td><strong>I/S</strong></td><td>Spółka jawna</td><td>Brak min. kapitału; wspólnicy odpowiadają solidarnie</td></tr>
 </table>
 <p>Dla większości startupów: ApS to najlepsza opcja — ograniczona odpowiedzialność przy rozsądnym koszcie startu.</p>`,
-ur:`<p>دانمارک چندین ساختار حقوقی برای کسب‌وکار ارائه می‌دهد. انتخاب درست به تحمل ریسک و برنامه‌های رشد شما بستگی دارد:</p>`۔ صحیح انتخاب آپ کی خطرے کی برداشت اور ترقی کے منصوبوں پر منحصر ہے:</p>
+ur:`<p>ڈنمارک کاروبار کے لیے کئی قانونی ڈھانچے پیش کرتا ہے۔ صحیح انتخاب آپ کی خطرے کی برداشت اور ترقی کے منصوبوں پر منحصر ہے:</p>
 <table class="info-table">
   <tr><th>ڈھانچہ</th><th>ڈینش نام</th><th>کم از کم سرمایہ</th><th>ذمہ داری</th><th>بہترین کے لیے</th></tr>
   <tr><td><strong>انفرادی ملکیت</strong></td><td>Enkeltmandsvirksomhed</td><td>کوئی نہیں</td><td>ذاتی (لامحدود)</td><td>فری لانسر، مشیر، سولو تاجر</td></tr>
@@ -5587,7 +5548,7 @@ de:`<p>Jedes Unternehmen in Dänemark wird mit einer eindeutigen <strong>CVR-Num
   <li><span class="step-num">5</span>Zarejestruj VAT (moms) przy przekroczeniu 50 000 DKK obrotu rocznie</li>
 </ol>
 <a href="https://virk.dk" target="_blank" rel="noopener">→ Zarejestruj firmę na virk.dk</a>`,
-ur:`<p>هر کسب‌وکاری در دانمارک با یک <strong>شماره CVR</strong> منحصربه‌فرد (Centralt Virksomhedsregister — ثبت مرکزی شرکت‌ها) ثبت می‌شود. این شناسه کسب‌وکار شماست — معادل شماره CPR شخصی.</p>` (Centralt Virksomhedsregister) کے ساتھ رجسٹر ہوتا ہے۔ یہ آپ کے کاروبار کا شناختی نمبر ہے — ذاتی CPR نمبر کے مترادف۔</p>
+ur:`<p>ڈنمارک کا ہر کاروبار منفرد <strong>CVR نمبر</strong> (Centralt Virksomhedsregister) کے ساتھ رجسٹر ہوتا ہے۔ یہ آپ کے کاروبار کا شناختی نمبر ہے — ذاتی CPR نمبر کے مترادف۔</p>
 <p><strong>virk.dk پر رجسٹر کریں (10 منٹ، زیادہ تر مفت):</strong></p>
 <ol class="step-list">
   <li><span class="step-num">1</span><a href="https://www.virk.dk" target="_blank" rel="noopener">virk.dk</a> پر جائیں اور MitID سے لاگ ان کریں</li>
@@ -5690,7 +5651,7 @@ de:`<p>Als Selbstständiger in Dänemark ist Ihre Steuersituation komplexer als 
 </ul>
 <p>Jako właściciel ApS: Twoja osobista pensja jako dyrektor jest opodatkowana jak wynagrodzenie pracownicze. Zyski firmy opodatkowane stawką 22%.</p>
 <a href="https://skat.dk/en-us/business/starting-a-business/" target="_blank" rel="noopener">→ Zakładanie firmy — przewodnik SKAT (angielski)</a>`,
-ur:`<p>به‌عنوان خوداشتغال در دانمارک، وضعیت مالیاتی شما پیچیده‌تر از یک کارمند است. اینجا موارد ضروری آمده است:</p>`۔ یہاں ضروری باتیں ہیں:</p>
+ur:`<p>ڈنمارک میں خود روزگار ہونے کی صورت میں آپ کی ٹیکس کی صورتحال ملازم سے زیادہ پیچیدہ ہے۔ یہاں ضروری باتیں ہیں:</p>
 <p><strong>خود روزگار افراد کے لیے اہم ٹیکس (2025):</strong></p>
 <ul>
   <li><strong>AM-bidrag:</strong> کاروباری آمدنی پر 8% (انکم ٹیکس سے پہلے کاٹا جاتا ہے)</li>
@@ -5856,7 +5817,7 @@ de:`<p>Kopenhagen hat sich still und leise zu einem der stärksten Startup-Zentr
   <li>Dostęp do rynku UE</li>
   <li>Work-life balance ułatwia rekrutację talentów</li>
 </ul>`,
-ur:`<p>کپنهاگ آرام‌آرام به یکی از قوی‌ترین مراکز استارتاپی اروپا تبدیل شده و به‌طور مداوم در ۱۰ شهر برتر استارتاپی اروپا قرار دارد.</p>` اور مستقل طور پر یورپ کے اعلیٰ 10 اسٹارٹ اپ شہروں میں شامل ہے۔</p>
+ur:`<p>کوپن ہیگن آہستہ آہستہ یورپ کے مضبوط ترین اسٹارٹ اپ مراکز میں سے ایک بن گیا ہے اور مستقل طور پر یورپ کے اعلیٰ 10 اسٹارٹ اپ شہروں میں شامل ہے۔</p>
 <p><strong>اہم مراکز اور تنظیمیں:</strong></p>
 <ul>
   <li><strong>The Hub Copenhagen</strong> — ڈنمارک کی سب سے بڑی ٹیک اسٹارٹ اپ کمیونٹی۔ تقریبات، کو-ورکنگ، تعارف۔ <a href="https://www.thehub.dk" target="_blank" rel="noopener">thehub.dk</a></li>
@@ -5966,7 +5927,7 @@ de:`<p>Das <strong>Startup Denmark Visum</strong> ermöglicht es Nicht-EU/EWR-B�
 </ul>
 <p><strong>Ekosystem Kopenhagi:</strong> top 20 europejskich ekosystemów startupowych. Mocne sektory: cleantech, healthtech, foodtech, fintech, gaming.</p>
 <a href="https://www.startupdenmark.info" target="_blank" rel="noopener">→ Oficjalny program Startup Denmark</a>`,
-ur:`<p><strong>ویزای Startup Denmark</strong> به شهروندان غیر اتحادیه اروپا/EEA اجازه می‌دهد به دانمارک بیایند تا به‌طور خاص شرکت تأسیس کنند. این مستلزم ارزیابی طرح کسب‌وکار توسط هیئتی از کارشناسان است.</p>`۔ اس کے لیے ماہرین کے پینل کی طرف سے کاروباری منصوبے کی جانچ ضروری ہے۔</p>
+ur:`<p><strong>Startup Denmark ویزا</strong> غیر EU/EEA شہریوں کو کمپنی قائم کرنے کے خصوصی مقصد سے ڈنمارک آنے کی اجازت دیتا ہے۔ اس کے لیے ماہرین کے پینل کی طرف سے کاروباری منصوبے کی جانچ ضروری ہے۔</p>
 <p><strong>ضروریات:</strong></p>
 <ul>
   <li>منظور شدہ، اختراعی اور قابل توسیع کاروباری خیال</li>
@@ -6122,7 +6083,7 @@ de:`<p>Dänemark hat mehr Fahrräder als Einwohner (ca. 4,2 Millionen Fahrräder
 </ul>
 <p><strong>Zakup roweru:</strong> Dobry używany rower kosztuje 500–2 000 DKK (Den Blå Avis, Facebook Marketplace). Nowy: 1 500–8 000 DKK. Rowery elektryczne: od 8 000 DKK.</p>
 <p><strong>Mandaty za wykroczenia rowerowe:</strong> Korzystanie z telefonu podczas jazdy: 700 DKK. Duńczycy poważnie traktują przepisy ruchu rowerowego.</p>`,
-ur:`<p>دانمارک دوچرخه بیشتر از انسان دارد (حدود ۴٫۲ میلیون دوچرخه برای ۵٫۹ میلیون نفر). در کپنهاگ <strong>۶۲٪ ساکنان روزانه برای کار یا تحصیل دوچرخه می‌رانند</strong> — حتی در زمستان، حتی در باران. این سرگرمی نیست، بلکه زیرساخت است.</p>` (5.9 ملین لوگوں کے لیے تقریباً 4.2 ملین سائیکلیں)۔ کوپن ہیگن میں <strong>62% باشندے روزانہ کام یا تعلیم کے لیے سائیکل چلاتے ہیں</strong> — سردیوں میں بھی، بارش میں بھی۔ یہ شوق نہیں بلکہ بنیادی ڈھانچہ ہے۔</p>
+ur:`<p>ڈنمارک میں انسانوں سے زیادہ سائیکلیں ہیں (5.9 ملین لوگوں کے لیے تقریباً 4.2 ملین سائیکلیں)۔ کوپن ہیگن میں <strong>62% باشندے روزانہ کام یا تعلیم کے لیے سائیکل چلاتے ہیں</strong> — سردیوں میں بھی، بارش میں بھی۔ یہ شوق نہیں بلکہ بنیادی ڈھانچہ ہے۔</p>
 <p><strong>سائیکل خریدنا:</strong></p>
 <ul>
   <li><strong>نئی سائیکل (cykelbutik):</strong> قابل اعتماد کمیوٹر سائیکل کے لیے 1,500–5,000 DKK</li>
@@ -6235,7 +6196,7 @@ de:`<p>Der dänische öffentliche Nahverkehr ist in den Städten ausgezeichnet u
   <li><strong>Rejseplan.dk</strong>: oficjalny planer podróży publicznym transportem</li>
 </ul>
 <p>Kupuj z wyprzedzeniem online, by zaoszczędzić — szczególnie bilety Offpeak.</p>`,
-ur:`<p>حمل‌ونقل عمومی دانمارکی در شهرها عالی و بین شهرها بسیار خوب است. بر اساس <strong>سیستم منطقه‌ای</strong> کار می‌کند — هرچه مناطق بیشتری رد کنید، بیشتر می‌پردازید.</p>`۔ یہ <strong>زون سسٹم</strong> پر کام کرتا ہے — جتنے زیادہ زون عبور کریں گے، اتنا زیادہ ادا کریں گے۔</p>
+ur:`<p>ڈنمارکی پبلک ٹرانسپورٹ شہروں میں بہترین اور بین الشہری راستوں پر بہت اچھا ہے۔ یہ <strong>زون سسٹم</strong> پر کام کرتا ہے — جتنے زیادہ زون عبور کریں گے، اتنا زیادہ ادا کریں گے۔</p>
 <p><strong>Rejsekort (سفری کارڈ) — ضروری:</strong></p>
 <ul>
   <li>تمام بسوں، میٹرو، S-tog (شہری ٹرینیں)، اور علاقائی ٹرینوں پر کام کرتا ہے</li>
@@ -6362,7 +6323,7 @@ de:`<p>Dänemark hat einige der höchsten Kfz-Kaufsteuern der Welt — die <stro
   <li>Obowiązkowe ubezpieczenie OC</li>
 </ul>
 <p><strong>Ograniczenia prędkości:</strong> 50 km/h w terenie zabudowanym, 80 km/h poza nim, 110/130 km/h na autostradach. Fotoradary spotykane są często.</p>`,
-ur:`<p>مالیات خرید خودرو در دانمارک از بالاترین‌های جهان است — <strong>registreringsafgift</strong> (مالیات ثبت) می‌تواند تا ۱۵۰٪ قیمت خودرو برسد. این سیاستی عمدی برای ترویج دوچرخه‌سواری و حمل‌ونقل عمومی است.</p>` — <strong>registreringsafgift</strong> (رجسٹریشن ٹیکس) کار کی قیمت کا 150% تک ہو سکتا ہے۔ یہ جان بوجھ کر سائیکل سواری اور پبلک ٹرانسپورٹ کو فروغ دینے کی پالیسی ہے۔</p>
+ur:`<p>ڈنمارک میں کار کی خریداری کا ٹیکس دنیا کے سب سے زیادہ ہے — <strong>registreringsafgift</strong> (رجسٹریشن ٹیکس) کار کی قیمت کا 150% تک ہو سکتا ہے۔ یہ جان بوجھ کر سائیکل سواری اور پبلک ٹرانسپورٹ کو فروغ دینے کی پالیسی ہے۔</p>
 <p><strong>ڈرائیونگ لائسنس:</strong></p>
 <ul>
   <li>EU/EEA شہری: پورے قیام کے دوران اپنا لائسنس استعمال کر سکتے ہیں، لیکن مستقل رہائشی رجسٹریشن کے بعد تبدیل کروانا ضروری ہے</li>
@@ -6466,7 +6427,7 @@ de:`<p>Die ehrliche Wahrheit: Sie können jahrelang in Dänemark leben, nur Engl
   <li>Codzienne życie: listy urzędowe, etykiety produktów, ogłoszenia — wszystko po duńsku</li>
   <li>Szacunek: Duńczycy nie powiedzą Ci tego wprost, ale docenią Twój wysiłek i to otworzy drzwi, których nic innego nie otworzy</li>
 </ul>`,
-ur:`<p>تقریباً هر شهروند دانمارکی انگلیسی صحبت می‌کند — پس چرا دانمارکی یاد بگیریم؟</p>`؟</p>
+ur:`<p>تقریباً ہر ڈینش شہری انگریزی بولتا ہے — تو پھر ڈینش کیوں سیکھیں؟</p>
 <ul>
   <li>جاب مارکیٹ: بہت سی نوکریاں ڈینش زبان مانگتی ہیں، خاص طور پر سرکاری شعبے میں</li>
   <li>سماجی انضمام: ڈینش شہریوں کے ساتھ گہرے تعلقات ان کی زبان مانگتے ہیں</li>
@@ -6568,7 +6529,7 @@ de:`<p>Wenn Sie Nicht-EU-Einwohner mit CPR-Nummer sind, haben Sie das gesetzlich
   <li>Online: Duolingo (podstawy), Babbel (pośredni), Dreaming Spanish metodą dla duńskiego</li>
 </ul>
 <p>Pamiętaj: nauka wymaga regularnej pracy poza lekcjami — bierna obecność na zajęciach nie wystarczy.</p>`,
-ur:`<p>اگر مقیم غیر اتحادیه اروپا با شماره CPR هستید، تا ۳ سال حق قانونی برای آموزش رایگان زبان دانمارکی (Danskuddannelse) دارید. شهروندان اتحادیه اروپا می‌توانند با قیمت یارانه‌ای دسترسی داشته باشند.</p>`، تو آپ کو 3 سال تک مفت ڈینش زبان کی تعلیم (Danskuddannelse) کا قانونی حق حاصل ہے۔ EU شہری سبسڈی شدہ قیمت پر رسائی حاصل کر سکتے ہیں۔</p>
+ur:`<p>اگر آپ CPR نمبر والے غیر EU مقیم ہیں، تو آپ کو 3 سال تک مفت ڈینش زبان کی تعلیم (Danskuddannelse) کا قانونی حق حاصل ہے۔ EU شہری سبسڈی شدہ قیمت پر رسائی حاصل کر سکتے ہیں۔</p>
 <p>یہ پروگرام آپ کے میونسپلٹی کے ذریعے چلایا جاتا ہے۔ داخلے کے لیے <strong>International Community</strong> (ICS) دفتر یا اپنے میونسپلٹی کے انٹیگریشن ڈیپارٹمنٹ سے رابطہ کریں۔</p>
 <p><strong>زبانی درجات اور یہ کیا کھولتے ہیں:</strong></p>
 <table class="info-table">
@@ -6696,7 +6657,7 @@ de:`<p>Dänisch hat seinen Ruf als schwierige Sprache zu Recht erworben. Das mac
   <li>Rozmawiaj z Duńczykami po duńsku — delikatnie poprawią i pomogą</li>
   <li>Śpiewaj duńskie piosenki — rytm utrwala wzorce wymowy</li>
 </ul>`,
-ur:`<p>زبان دانمارکی شهرت دشواری خود را به‌حق کسب کرده است. اینجاست که واقعاً سخت می‌شود:</p>`۔ یہاں ہے جو اسے واقعی مشکل بناتا ہے:</p>
+ur:`<p>ڈینش زبان نے اپنی مشکل کی شہرت جائز طور پر کمائی ہے۔ یہاں ہے جو اسے واقعی مشکل بناتا ہے:</p>
 <ul>
   <li><strong>Stød (گلوٹل اسٹاپ):</strong> گلے میں ایک لطیف رکاوٹ جو لفظ کا معنی بدل دیتی ہے۔ زیادہ تر زبانوں میں اس کا کوئی مترادف نہیں۔ آپ اسے سن سکتے ہیں؛ پیدا کرنا مہینوں لیتا ہے۔</li>
   <li><strong>نگلے ہوئے حروف:</strong> ڈینش لوگ قدرتی تقریر میں کئی الفاظ کے آخری حروف گرا دیتے ہیں۔</li>
@@ -6938,7 +6899,7 @@ de:`<p><strong>Hygge</strong> (ausgesprochen ungefähr "hoo-ga") ist ein dänisc
 </ul>
 <p><strong>Janteloven</strong> to zbiór niepisanych zasad społecznych: nie wywyższaj się, nie uważaj się za lepszego od innych. Ma to wpływ na sposób, w jaki Duńczycy rozmawiają o sukcesie i statusie.</p>
 <p>Hygge nie jest marketingową koncepcją — to rzeczywista praktyka społeczna. Duńczycy inwestują czas w jakościowe chwile towarzyskie — hygge jest infrastrukturą dobrostanu.</p>`,
-ur:`<p><strong>هیگه (Hygge)</strong> (مفهوم دانمارکی آرامش و صمیمیت) (تلفظ: "هوگا") مفهومی دانمارکی است که هیچ معادل مستقیم فارسی ندارد. یک کیفیت حضور را توصیف می‌کند — فضایی آرام و دلپذیر که در آن افراد احساس امنیت، آرامش و پیوند می‌کنند.</p>` جس کا کوئی براہ راست اردو ترجمہ نہیں۔ یہ موجودگی کی ایک خاصیت بیان کرتا ہے — ایک آرام دہ، خوشگوار ماحول جہاں لوگ محفوظ، پرسکون اور جڑے ہوئے محسوس کرتے ہیں۔</p>
+ur:`<p><strong>Hygge</strong> (تلفظ: "ہوگا") ایک ڈینش تصور ہے جس کا کوئی براہ راست اردو ترجمہ نہیں۔ یہ موجودگی کی ایک خاصیت بیان کرتا ہے — ایک آرام دہ، خوشگوار ماحول جہاں لوگ محفوظ، پرسکون اور جڑے ہوئے محسوس کرتے ہیں۔</p>
 <p><strong>عملی زندگی میں hygge کیسا نظر آتا ہے:</strong></p>
 <ul>
   <li>ایک ڈنر پارٹی جہاں فون خاموش رہیں اور کوئی جلدی نہ جائے</li>
@@ -7128,7 +7089,7 @@ de:`<p><strong>Janteloven</strong> (das Gesetz von Jante) ist ein kulturelles Ko
   <li>Szef nie jest "ważniejszy" — wszyscy są traktowani jak równi</li>
 </ul>
 <p><strong>Efekt dla migrantów:</strong> Możesz zinterpretować duński brak entuzjazmu jako odrzucenie — ale to norma kulturowa. Duńczycy są powściągliwi, lecz szczerzy. Jednak wpływ Janteloven znacznie różni się w zależności od grupy wiekowej i branży.</p>`,
-ur:`<p><strong>Janteloven</strong> (قانون یانته — اصل فرهنگی برابری) مجموعه‌ای از اصول برابری‌طلبانه نانوشته است. از رمان Aksel Sandemose در سال ۱۹۳۳ ریشه می‌گیرد. اصل اساسی: خود را بهتر از دیگران ندانید.</p>`۔ یہ 1933 میں Aksel Sandemose کے ناول سے آتا ہے۔ بنیادی اصول: اپنے آپ کو دوسروں سے بہتر نہ سمجھیں۔</p>
+ur:`<p><strong>Janteloven</strong> (یانتے لوون) غیر تحریری مساواتی اصولوں کا مجموعہ ہے۔ یہ 1933 میں Aksel Sandemose کے ناول سے آتا ہے۔ بنیادی اصول: اپنے آپ کو دوسروں سے بہتر نہ سمجھیں۔</p>
 <p><strong>Janteloven روزمرہ زندگی کو کیسے متاثر کرتا ہے:</strong></p>
 <ul>
   <li>کامیابیوں اور دولت پر فخر کرنے سے گریز</li>
@@ -7262,7 +7223,7 @@ de:`<p>Viele Expats in Dänemark beschreiben Dänen als freundlich, aber schwer 
   <li><strong>Meetup.com:</strong> Liczne grupy angielskojęzyczne w Kopenhadze.</li>
 </ul>
 <p><strong>Ekspat-społeczności</strong> jako natychmiastowy kontakt społeczny, dopóki rozwijają się Twoje duńskie przyjaźnie.</p>`,
-ur:`<p>بسیاری از مهاجران می‌گویند دانمارکی‌ها دوستانه اما سخت برای دوستی هستند. این واقعی است — و هیچ ربطی به شخص شما ندارد.</p>`۔ یہ درست ہے — اور اس کا آپ سے ذاتی طور پر کوئی تعلق نہیں۔</p>
+ur:`<p>ڈنمارک میں بہت سے تارکین وطن کہتے ہیں کہ ڈینش لوگ دوستانہ ہیں لیکن دوستی کرنا مشکل ہے۔ یہ درست ہے — اور اس کا آپ سے ذاتی طور پر کوئی تعلق نہیں۔</p>
 <p><strong>ڈینش دوستی کی حرکیات کو سمجھنا:</strong></p>
 <ul>
   <li><strong>ڈینش لوگوں کے پاس پہلے سے دوست ہیں۔</strong> زیادہ تر ڈینش لوگ اپنے قریبی دوستوں کو اسکول یا یونیورسٹی سے جانتے ہیں۔</li>
@@ -7362,7 +7323,7 @@ de:`<p>Dänemark hat rund <strong>100.000 freiwillige Vereine (Foreninger)</stro
   <li>Wolontariackie: Røde Kors (Czerwony Krzyż), Kirkens Korshær itp.</li>
 </ul>
 <p>Znajdź stowarzyszenia przez wyszukiwanie "[nazwa gminy] foreningsportal".</p>`,
-ur:`<p><strong>Foreningsliv</strong> (زندگی انجمنی) در مرکز فرهنگ مدنی دانمارکی قرار دارد. دانمارک حدود ۱۰۰٬۰۰۰ انجمن ثبت‌شده برای ۶ میلیون ساکن دارد.</p>`۔ ڈنمارک میں 6 ملین باشندوں کے لیے تقریباً 100,000 رجسٹرڈ اجتمائیتیں ہیں۔</p>
+ur:`<p><strong>Foreningsliv</strong> (اجتمائی زندگی) ڈینش شہری ثقافت کے مرکز میں ہے۔ ڈنمارک میں 6 ملین باشندوں کے لیے تقریباً 100,000 رجسٹرڈ اجتمائیتیں ہیں۔</p>
 <p><strong>اجتمائیتوں کی اقسام:</strong></p>
 <ul>
   <li>کھیل: فٹ بال، بیڈمنٹن، تیراکی، سائیکلنگ — تمام سطحوں کے لیے</li>
@@ -7484,7 +7445,7 @@ de:`<p>Die dänischen Kulturmomente zu kennen hilft Ihnen dabei, teilzunehmen �
   <li><strong>Jul (Boże Narodzenie)</strong>: centralne święto — julefrokost (świąteczne lunche) w pracy od listopada</li>
   <li><strong>Nytårsaften (31 grudnia)</strong>: sylwester z fajerwerkami</li>
 </ul>`,
-ur:`<p>تعطیلات و تاریخ‌های مهم فرهنگی دانمارک:</p>`:</p>
+ur:`<p>ڈنمارک کی ثقافتی تعطیلات اور اہم تاریخیں:</p>
 <ul>
   <li><strong>Fastelavn</strong> (فروری): بچوں کا کارنوال — لباس اور مٹھائیاں</li>
   <li><strong>Påske (عید الفصح):</strong> اہم خاندانی تہوار؛ بہت سی دکانیں ہفتے بھر بند</li>
@@ -7619,7 +7580,7 @@ de:`<p>Die dänische Esskultur hat seit Noma Kopenhagen auf die globale kulinari
   <li><strong>Nowe duńskie gotowanie</strong>: Noma zrewolucjonizowała gastronomię — restauracje z gwiazdkami Michelin rozsiane po Kopenhadze</li>
 </ul>
 <p>Użyj aplikacji <strong>Too Good To Go</strong> (popularna w Danii), by kupować niesprzedaną żywność z piekarni i restauracji ze zniżką 60–70%.</p>`,
-ur:`<p>فرهنگ غذایی دانمارکی دستخوش انقلابی شده است. غذای روزمره دانمارکی:</p>`۔ روزمرہ ڈینش کھانا یہ ہے:</p>
+ur:`<p>ڈینش کھانے کی ثقافت نے ایک انقلاب دیکھا ہے۔ روزمرہ ڈینش کھانا یہ ہے:</p>
 <p><strong>روزانہ کھانے کی تال:</strong></p>
 <ul>
   <li><strong>Morgenmad (ناشتہ):</strong> عموماً ہلکا — rugbrød (سیاہ رائی روٹی) پنیر یا leverpostej کے ساتھ</li>
@@ -7777,7 +7738,7 @@ de:`<p>Dating in Dänemark funktioniert nach Normen, die sich deutlich von den m
   <li><strong>Aplikacje randkowe:</strong> Tinder, Bumble i Hinge są popularne w Kopenhadze.</li>
   <li><strong>Spotkania przez aktywności:</strong> W klubach sportowych, na wydarzeniach muzycznych i wolontariacie</li>
 </ul>`,
-ur:`<p>قرار ملاقات در دانمارک مستقیم و برابری‌طلب است. ویژگی‌های اصلی:</p>`۔ اہم خصوصیات:</p>
+ur:`<p>ڈنمارک میں ڈیٹنگ براہ راست اور مساواتی ہے۔ اہم خصوصیات:</p>
 <ul>
   <li><strong>براہ راستی:</strong> اگر کوئی دلچسپی رکھتا ہے تو واضح کہے گا۔ کوئی چھپا ہوا اشارہ نہیں۔</li>
   <li><strong>صنفی مساوات:</strong> بل تقسیم کرنا معمول ہے۔ کوئی بھی صنف نہیں سمجھتی کہ دوسرا ہمیشہ ادا کرے گا۔</li>
@@ -7883,7 +7844,7 @@ de:`<p>Wenn Sie in Dänemark sind und einen ausländischen Partner oder Ehepartn
 </ul>
 <p>Czas rozpatrzenia: 3–12 miesięcy. Aplikuj przez <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a>.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Family-reunification/Spouse-or-cohabitant" target="_blank" rel="noopener">→ Przewodnik po łączeniu rodzin (nyidanmark.dk, angielski)</a>`,
-ur:`<p>اگر در دانمارک هستید و می‌خواهید شریک زندگی خارجی خود را بیاورید، این فرآیند <strong>familiesammenføring</strong> (اجتماع خانوادگی) نامیده می‌شود. قوانین سختگیرانه هستند.</p>` تو یہ عمل <strong>familiesammenføring</strong> (خاندان کا اتحاد) کہلاتا ہے۔ قوانین سخت ہیں۔</p>
+ur:`<p>اگر آپ ڈنمارک میں ہیں اور کسی غیر ملکی پارٹنر کو لانا چاہتے ہیں، تو یہ عمل <strong>familiesammenføring</strong> (خاندان کا اتحاد) کہلاتا ہے۔ قوانین سخت ہیں۔</p>
 <p><strong>اہم تقاضے (2025):</strong></p>
 <ul>
   <li><strong>آپ کی عمر کم از کم 24 سال ہونی چاہیے</strong> (آپ اور آپ کا پارٹنر دونوں)</li>
@@ -8020,7 +7981,7 @@ de:`<p>Dänemark war 1989 das erste Land der Welt, das gleichgeschlechtliche Par
   <li>Ochrona przed dyskryminacją: silna, egzekwowana</li>
 </ul>
 <p>Kopenhaga ma tętniące życiem środowisko LGBTQ+, szczególnie w Vesterbro i Nørrebro. Copenhagen Pride odbywa się w sierpniu. Mniejsze miasta mogą być bardziej konserwatywne, ale ramy prawne należą do najsilniejszych na świecie.</p>`,
-ur:`<p>دانمارک یکی از دوست‌دارترین کشورهای جهان برای LGBTQ+ است. ازدواج همجنس از سال ۲۰۱۲ قانونی است — اولین در جهان (۱۹۸۹ — مشارکت).</p>`۔ ہم جنس شادی 2012 سے قانونی ہے — دنیا میں پہلی (1989 — شراکت داری)۔</p>
+ur:`<p>ڈنمارک LGBTQ+ کے لیے دنیا کے سب سے دوستانہ ممالک میں سے ایک ہے۔ ہم جنس شادی 2012 سے قانونی ہے — دنیا میں پہلی (1989 — شراکت داری)۔</p>
 <p><strong>قانونی ضمانتیں:</strong></p>
 <ul>
   <li>ہم جنس شادیاں: 2012 سے مکمل حقوق</li>
@@ -8148,7 +8109,7 @@ de:`<p>Zusammenziehen in Dänemark hat rechtliche Implikationen, die es wert sin
   <li><strong>Świadczenia na dzieci:</strong> Przysługują niezależnie od stanu cywilnego</li>
 </ul>
 <p>Oboje rodziców zachowuje pełne prawa rodzicielskie (forældremyndighed) niezależnie od stanu cywilnego.</p>`,
-ur:`<p>در دانمارک حقوق قوی برای والدین غیرمتأهل وجود دارد:</p>`:</p>
+ur:`<p>ڈنمارک میں غیر شادی شدہ والدین کے لیے مضبوط حقوق ہیں:</p>
 <ul>
   <li><strong>اکیلے والدین:</strong> مکمل قانونی تحفظ۔ Familieretshuset گزارہ بھتہ کنٹرول کرتا ہے۔</li>
   <li><strong>مشترکہ والدینی حق (forældremyndighed):</strong> جوڑوں کے لیے پہلے سے طے شدہ</li>
@@ -8242,7 +8203,7 @@ de:`<p>Dänemark hat eines der einfachsten und zivilisiertesten Scheidungsverfah
 </ul>
 <p>Pierwszym krokiem przy problemach rodzinnych jest zazwyczaj kontakt z Familieretshuset — nie sądem.</p>
 <a href="https://www.familieretshuset.dk/english" target="_blank" rel="noopener">→ Familieretshuset (angielski)</a>`,
-ur:`<p><strong>Familieretshuset</strong> آژانس دولتی دانمارکی است که امور خانوادگی را مدیریت می‌کند — طلاق، نفقه، حق ملاقات با فرزند و حضانت.</p>` — طلاق، گزارہ بھتہ، بچوں سے ملنے کا حق اور والدینی نگہداشت۔</p>
+ur:`<p><strong>Familieretshuset</strong> ڈنمارک کی سرکاری ایجنسی ہے جو خاندانی معاملات سنبھالتی ہے — طلاق، گزارہ بھتہ، بچوں سے ملنے کا حق اور والدینی نگہداشت۔</p>
 <p><strong>وہ کیا کرتے ہیں:</strong></p>
 <ul>
   <li>خاندانی تنازعات میں ثالثی</li>
@@ -8353,7 +8314,7 @@ de:`<p>Einwanderung wird als Abenteuer, Chance und Neuanfang verkauft. All das s
   <li>Niepewność statusu pobytowego</li>
 </ul>
 <p>Wiele z tych uczuć ustępuje po 6–12 miesiącach. Jeśli się nasilają — zwróć się po profesjonalne wsparcie, które Dania czyni naprawdę dostępnym.</p>`,
-ur:`<p>در دانمارک سلامت روان جدی گرفته می‌شود. استرس انطباق پس از نقل مکان طبیعی است — کمک خواستن نشانه ضعف نیست، بلکه نشانه قدرت است.</p>`۔ منتقلی کے بعد موافقت کا تناؤ معمول ہے — مدد مانگنا کمزوری نہیں بلکہ طاقت کی علامت ہے۔</p>
+ur:`<p>ڈنمارک میں ذہنی صحت کو سنجیدگی سے لیا جاتا ہے۔ منتقلی کے بعد موافقت کا تناؤ معمول ہے — مدد مانگنا کمزوری نہیں بلکہ طاقت کی علامت ہے۔</p>
 <p><strong>نقل مکانی کے عام چیلنجز:</strong></p>
 <ul>
   <li>ثقافتی جھٹکا اور اجنبیت (پہلے 3–6 ماہ)</li>
@@ -8458,7 +8419,7 @@ de:`<p>Dänemarks Winter ist für die meisten Menschen, die aus sonnenreicheren 
   <li>Regularne ćwiczenia na zewnątrz — nawet przy zachmurzeniu</li>
   <li>Witamina D: badania pokazują, że już po tygodniach brakuje Ci odpowiedniej ilości światła</li>
 </ul>`,
-ur:`<p>دانمارک در شمال قرار دارد — در زمستان روز در کپنهاگ فقط ۷ ساعت است. این روی خلق‌وخو و انرژی بسیاری از ساکنان تأثیر می‌گذارد.</p>`۔ یہ بہت سے باشندوں کے مزاج اور توانائی پر اثر ڈالتا ہے۔</p>
+ur:`<p>ڈنمارک شمال میں واقع ہے — سردیوں میں کوپن ہیگن میں صرف 7 گھنٹے روشنی ہوتی ہے۔ یہ بہت سے باشندوں کے مزاج اور توانائی پر اثر ڈالتا ہے۔</p>
 <p><strong>موسمی افسردگی (SAD):</strong></p>
 <ul>
   <li>اسکینڈینیویا میں تقریباً 10–20% آبادی کو متاثر کرتا ہے</li>
@@ -8671,7 +8632,7 @@ de:`<p>Das dänische Gesundheitssystem umfasst umfangreiche Unterstützung für 
   <li><a href="https://www.mindhelper.dk" target="_blank" rel="noopener">mindhelper.dk</a> — zasoby po angielsku i duńsku</li>
 </ul>
 <a href="https://www.livslinjen.dk" target="_blank" rel="noopener">→ Livslinjen — wsparcie kryzysowe</a>`,
-ur:`<p>اگر در بحران عاطفی هستید، کمک فوری در دسترس است:</p>`:</p>
+ur:`<p>اگر آپ جذباتی بحران میں ہیں، فوری مدد دستیاب ہے:</p>
 <ul>
   <li><strong>Livslinjen: 70 201 201</strong> — 24/7، ڈینش میں۔ بحران اور خودکشی سے بچاؤ کی لائن</li>
   <li><strong>Kirkens Korshær: 45 45 45 46</strong> — تنہاؤں اور مشکل میں لوگوں کے لیے مدد</li>
@@ -8778,7 +8739,7 @@ de:`<p>Einsamkeit ist eine der häufigsten psychischen Herausforderungen für Ne
   <li>Nie porównuj pierwszych miesięcy z dojrzałymi przyjaźniami w domu</li>
 </ul>
 <p>Jeśli po 3 miesiącach wciąż czujesz się samotny — to nie jest porażka, to harmonogram.</p>`,
-ur:`<p>تنهایی یکی از بزرگ‌ترین چالش‌ها برای تازه‌واردان به دانمارک است. دانمارکی‌ها دایره‌های اجتماعی از دوران مدرسه دارند.</p>`۔ ڈینش لوگوں کے پاس پہلے سے اسکول سے قائم سماجی حلقے ہیں۔</p>
+ur:`<p>تنہائی ڈنمارک میں نئے آنے والوں کے لیے سب سے بڑے چیلنجز میں سے ایک ہے۔ ڈینش لوگوں کے پاس پہلے سے اسکول سے قائم سماجی حلقے ہیں۔</p>
 <p><strong>تنہائی سے لڑنے کی حکمت عملیاں:</strong></p>
 <ul>
   <li>اپنی دلچسپی کے شعبے میں forening میں شامل ہوں</li>
@@ -8864,7 +8825,7 @@ de:`<p>Die dänische Arbeitskultur ist darauf ausgelegt, das Wohlbefinden zu sch
   <li><strong>Rådgivning (poradnictwo):</strong> Wiele organizacji wolontariackich oferuje bezpłatne porady — Red Barnet, Røde Kors itp.</li>
 </ul>
 <p>Gminna rada społeczna (socialudvalg) może wspierać Cię w okresach niezdolności do pracy.</p>`,
-ur:`<p>فرهنگ کاری دانمارک برای حفاظت از رفاه طراحی شده است — اما فرسودگی شغلی همچنان یک مسئله مهم است.</p>` — لیکن برن آؤٹ پھر بھی ایک اہم مسئلہ ہے۔</p>
+ur:`<p>ڈنمارک کی کام کی ثقافت بہبود کی حفاظت کے لیے ڈیزائن کی گئی ہے — لیکن برن آؤٹ پھر بھی ایک اہم مسئلہ ہے۔</p>
 <p><strong>آپ کے حقوق جب کام صحت کو متاثر کرے:</strong></p>
 <ul>
   <li><strong>بیمار رخصت (sygedagpenge):</strong> اگر کام کا تناؤ آپ کو بیمار کرے تو چھٹی لے سکتے ہیں۔ آجر پہلے 30 دنوں میں پوری تنخواہ ادا کرتا ہے</li>
@@ -9019,7 +8980,7 @@ de:`<p>Dänemark verfügt über mehrere einander ergänzende Gesetze, die Diskri
   <li>Rozważ pomoc prawną — organizacje migranckie i retshjælpskontorer mogą pomóc</li>
 </ol>
 <a href="https://www.ligebehandlingsnaevnet.dk/en" target="_blank" rel="noopener">→ Ligebehandlingsnævnet — Rada Równego Traktowania (angielski)</a>`,
-               ur:`<p>در دانمارک حمایت قانونی قوی در برابر تبعیض وجود دارد. حقوق اصلی:</p>`۔ اہم حقوق:</p>
+               ur:`<p>ڈنمارک میں امتیازی سلوک کے خلاف مضبوط قانونی تحفظ ہے۔ اہم حقوق:</p>
 <ul>
   <li>کام پر قومیت، جنس، مذہب، عمر، معذوری یا جنسی رجحان کی بنیاد پر امتیاز ممنوع ہے</li>
   <li>اشیاء اور خدمات تک رسائی میں امتیازی سلوک ممنوع ہے</li>
@@ -9151,7 +9112,7 @@ de:`<p>Dänemark verfügt über einige der stärksten Mieterschutzgesetze Europa
   <li>Podwyżka czynszu musi być uzasadniona i przestrzegać przepisów Lejeloven</li>
 </ul>
 <a href="https://www.lejerne.dk" target="_blank" rel="noopener">→ Lejernes Landsorganisation — porady dla najemców (duński)</a>`,
-               ur:`<p>در دانمارک حمایت قوی از حقوق مستأجران وجود دارد. اصول اصلی:</p>`۔ اہم اصول:</p>
+               ur:`<p>ڈنمارک میں کرایہ داروں کے حقوق کا مضبوط تحفظ ہے۔ اہم اصول:</p>
 <ul>
   <li><strong>Huslejenævnet</strong>: ہر کمیونٹی میں مفت کرایہ ٹریبیونل — کرایہ، ضمانت اور رہائش کی حالت کے تنازعات حل کرتا ہے</li>
   <li><strong>Lejernes Landsorganisation (LLO)</strong>: قومی کرایہ داروں کی تنظیم — رکنیت کے عوض قانونی مشورہ</li>
@@ -9246,7 +9207,7 @@ de:`<p>Die dänische Polizei (Politiet) hat generell einen guten Ruf für Profes
   <li>Masz prawo do tłumacza</li>
   <li>Masz prawo do adwokata — w przypadku zatrzymania</li>
 </ul>`,
-               ur:`<p>در دانمارک یک نهاد مستقل برای شکایات از پلیس وجود دارد:</p>`:</p>
+               ur:`<p>ڈنمارک میں پولیس کی شکایات کے لیے ایک آزاد ادارہ ہے:</p>
 <ul>
   <li><strong>Den Uafhængige Politiklagemyndighed</strong> (آزاد پولیس شکایت اتھارٹی): پولیس افسران کے رویے کی شکایات کی تحقیق کرتا ہے</li>
   <li>اگر آپ سمجھتے ہیں کہ پولیس نے آپ کے حقوق کی خلاف ورزی کی ہے تو آپ شکایت درج کروا سکتے ہیں — رہائشی حیثیت سے قطع نظر</li>
@@ -9376,7 +9337,7 @@ de:`<p>Der <strong>Folketingets Ombudsmand</strong> (Parlamentarischer Ombudsman
   <li>Nie uzyskałeś odpowiedzi od organu w rozsądnym terminie</li>
 </ul>
 <p>Skarga jest bezpłatna. Musisz najpierw wyczerpać inne środki odwoławcze (np. odwołanie wewnętrzne). Organy publiczne na ogół stosują się do zaleceń Ombudsmana — bo niewykonanie jest publicznie zgłaszane do Parlamentu.</p>`,
-               ur:`<p><strong>Ombudsmanden</strong> (بازرس پارلمانی) نظارت می‌کند که آیا نهادهای دولتی مطابق قانون و عدالت عمل می‌کنند.</p>` نگرانی کرتا ہے کہ سرکاری ادارے قانون اور انصاف کے مطابق کام کریں۔</p>
+               ur:`<p><strong>Ombudsmanden</strong> (پارلیمانی محتسب) نگرانی کرتا ہے کہ سرکاری ادارے قانون اور انصاف کے مطابق کام کریں۔</p>
 <p><strong>Ombudsmanden سے کب رابطہ کریں:</strong></p>
 <ul>
   <li>آپ سمجھتے ہیں کہ کسی سرکاری ادارے (دفتر، اسکول، اسپتال) نے آپ کے حقوق کی خلاف ورزی کی</li>
@@ -9530,7 +9491,7 @@ de:`<p>Rechtliche Hilfe ist in Dänemark auch bei begrenztem Einkommen auf versc
   <li><strong>Dansk Flygtningehjælp (DRC)</strong>: <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — porady dla osób z ochroną</li>
 </ul>
 <a href="https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp" target="_blank" rel="noopener">→ Znajdź bezpłatną pomoc prawną (Advokatsamfundet)</a>`,
-               ur:`<p>در دانمارک کمک حقوقی حتی با درآمد محدود هم در دسترس است.</p>`۔</p>
+               ur:`<p>ڈنمارک میں قانونی مدد محدود آمدنی کے باوجود بھی کئی طریقوں سے دستیاب ہے۔</p>
 <p><strong>Retshjælp (دیوانی قانونی امداد):</strong></p>
 <ul>
   <li>غیر منافع بخش قانونی امداد دفاتر (retshjælpskontorer) کا نیٹ ورک — کم آمدنی والوں کے لیے مفت یا کم قیمت مشورہ</li>
@@ -9670,7 +9631,7 @@ de:`<p>Ihr Aufenthaltsrecht in Dänemark ist die Grundlage für alles andere. Es
 </ol>
 <p><strong>SIRI</strong> (<a href="https://www.siri.dk/en" target="_blank" rel="noopener">siri.dk/en</a>): Twój główny organ imigracyjny dla pozwoleń na pracę i pobyt rodzinny.</p>
 <p><strong>Udlændingenævnet</strong>: Niezależny organ odwoławczy. <a href="https://www.udlaendingenaevnet.dk/en" target="_blank" rel="noopener">udlaendingenaevnet.dk/en</a></p>`,
-               ur:`<p>حق اقامت شما در دانمارک اساسی‌ترین چیز است. آن را به‌صورت فعالانه حفاظت کنید.</p>`۔ اسے فعال طور پر محفوظ رکھیں۔</p>
+               ur:`<p>ڈنمارک میں آپ کا اقامت حق سب سے اہم چیز ہے۔ اسے فعال طور پر محفوظ رکھیں۔</p>
 <p><strong>اجازت نامہ تجدید — اہم قوانین:</strong></p>
 <ul>
   <li><strong>میعاد ختم ہونے سے پہلے درخواست دیں۔</strong> کم از کم 1 ماہ پہلے۔ بروقت درخواست پر کارروائی کے دوران آپ کا قیام جاری رہتا ہے۔</li>
