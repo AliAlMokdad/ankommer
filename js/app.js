@@ -76,6 +76,11 @@ const UI_T = {
   searchTypeTask:   { en:'Task', fr:'Tâche', ar:'مهمة', es:'Tarea', da:'Opgave', ur:'کام', fa:'وظیفه' },
   tlUrgent:         { en:'Urgent', fr:'Urgent', ar:'عاجل', es:'Urgente', da:'Haster', de:'Dringend', uk:'Терміново', pl:'Pilne', ur:'فوری', fa:'فوری' },
   tlDone:           { en:(d,t)=>`${d}/${t} done`, fr:(d,t)=>`${d}/${t} effectué`, ar:(d,t)=>`${d}/${t} منجز`, es:(d,t)=>`${d}/${t} listo`, da:(d,t)=>`${d}/${t} klaret`, de:(d,t)=>`${d}/${t} erledigt`, uk:(d,t)=>`${d}/${t} виконано`, pl:(d,t)=>`${d}/${t} wykonano`, ur:(d,t)=>`${d}/${t} مکمل`, fa:(d,t)=>`${d}/${t} انجام شد` },
+  tl_tab_week1:     { en:'Week 1',  fr:'Semaine 1', ar:'الأسبوع 1', es:'Semana 1',  da:'Uge 1',    de:'Woche 1',  uk:'Тиждень 1', pl:'Tydzień 1', ur:'ہفتہ 1',  fa:'هفته ۱' },
+  tl_tab_month1:    { en:'Month 1', fr:'Mois 1',    ar:'الشهر 1',   es:'Mes 1',     da:'Måned 1',  de:'Monat 1',  uk:'Місяць 1',  pl:'Miesiąc 1', ur:'مہینہ 1', fa:'ماه ۱'  },
+  tl_tab_month3:    { en:'Month 3', fr:'Mois 3',    ar:'الشهر 3',   es:'Mes 3',     da:'Måned 3',  de:'Monat 3',  uk:'Місяць 3',  pl:'Miesiąc 3', ur:'مہینہ 3', fa:'ماه ۳'  },
+  tl_tab_month6:    { en:'Month 6', fr:'Mois 6',    ar:'الشهر 6',   es:'Mes 6',     da:'Måned 6',  de:'Monat 6',  uk:'Місяць 6',  pl:'Miesiąc 6', ur:'مہینہ 6', fa:'ماه ۶'  },
+  tl_tab_year1:     { en:'Year 1',  fr:'An 1',      ar:'السنة 1',   es:'Año 1',     da:'År 1',     de:'Jahr 1',   uk:'Рік 1',     pl:'Rok 1',     ur:'سال 1',   fa:'سال ۱'  },
 };
 const t_ = (key, lang, ...args) => {
   const val = UI_T[key]?.[lang] || UI_T[key]?.en;
