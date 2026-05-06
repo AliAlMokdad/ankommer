@@ -3,9 +3,9 @@ const CHAPTERS = [
   {
     id: 0, icon: "✈️",
     color: "#2E6DA4",
-    title: { en:"Before You Land", fr:"Avant d'Atterrir", ar:"قبل وصولك", es:"Antes de Llegar", da:"Før du Lander" },
-    subtitle: { en:"The Countdown", fr:"Le Compte à Rebours", ar:"العد التنازلي", es:"La Cuenta Regresiva", da:"Nedtællingen" },
-    intro: { en:"Everything you should do before your flight touches down. Starting right now gets you weeks ahead.", fr:"Tout ce que vous devriez faire avant que votre avion atterrisse.", ar:"كل ما يجب عليك فعله قبل أن تصل طائرتك. البداية الآن تضعك أسابيع أمام الآخرين.", es:"Todo lo que deberías hacer antes de que aterrice tu avión.", da:"Alt hvad du bør gøre, inden dit fly lander. At starte nu sætter dig uger foran." },
+    title: { en:"Before You Land", fr:"Avant d'Atterrir", ar:"قبل وصولك", es:"Antes de Llegar", da:"Før du Lander", de:"Vor der Landung" },
+    subtitle: { en:"The Countdown", fr:"Le Compte à Rebours", ar:"العد التنازلي", es:"La Cuenta Regresiva", da:"Nedtællingen", de:"Der Countdown" },
+    intro: { en:"Everything you should do before your flight touches down. Starting right now gets you weeks ahead.", fr:"Tout ce que vous devriez faire avant que votre avion atterrisse.", ar:"كل ما يجب عليك فعله قبل أن تصل طائرتك. البداية الآن تضعك أسابيع أمام الآخرين.", es:"Todo lo que deberías hacer antes de que aterrice tu avión.", da:"Alt hvad du bør gøre, inden dit fly lander. At starte nu sætter dig uger foran.", de:"Alles, was Sie tun sollten, bevor Ihr Flugzeug landet. Jetzt zu beginnen bringt Sie Wochen voraus." },
     readTime: "12 min",
     sections: [
       {
@@ -60,7 +60,17 @@ es:`<p><strong>Ciudadanos de la UE/EEE/países nórdicos:</strong> No necesitas 
   <li><strong>Visa Startup Denmark</strong> — para emprendedores con un plan de negocio aprobado.</li>
 </ul>
 <p class="callout-warning">Solicita lo antes posible. Los tiempos de tramitación para no comunitarios van de 1 a 4 meses. No reserves un boleto de ida hasta que el permiso esté aprobado.</p>
-<a href="https://www.nyidanmark.dk/en-GB" target="_blank" rel="noopener">→ Solicita en newtodenmark.dk (oficial)</a>` }
+<a href="https://www.nyidanmark.dk/en-GB" target="_blank" rel="noopener">→ Solicita en newtodenmark.dk (oficial)</a>`,
+de:`<p><strong>EU/EWR/nordische Staatsangehoerige:</strong> Sie benoetigen kein Visum und keine Arbeitserlaubnis. Sie haben das Recht, frei in Daenemark zu leben und zu arbeiten. <strong>Es gelten zwei separate Anmeldungen:</strong> (1) Ihre <strong>Meldeadresse (folkeregister)</strong> muss <strong>innerhalb von 5 Tagen nach dem Einzug</strong> registriert werden (CPR-Gesetz §12 — bei Versaeumnis droht ein Bussgeld). (2) Ihr <strong>EU-Aufenthaltsdokument</strong> von SIRI ist erforderlich, wenn Sie beabsichtigen, laenger als 3 Monate zu bleiben.</p>
+<p><strong>Nicht-EU-Staatsangehoerige</strong> benoetigen eines der folgenden Dokumente:</p>
+<ul>
+  <li><strong>Arbeitserlaubnis</strong> — erfordert ein Stellenangebot von einem daenischen Arbeitgeber. Haeufigste Typen: Positivliste (fuer gefragte Berufe), Gehaltsgrenzregelung (bei Gehalt &gt; 514.000 DKK/Jahr in 2025, steigend auf 552.000 DKK in 2026), Fast-track-Regelung (fuer zertifizierte Unternehmen).</li>
+  <li><strong>Studentenvisum</strong> — bei Einschreibung an einer daenischen Universitaet oder Bildungseinrichtung. Beantragen Sie es auf newtodenmark.dk mindestens 2 Monate im Voraus.</li>
+  <li><strong>Familienzusammenfuehrung</strong> — um zu einem daenischen Staatsangehoerigen oder dauerhaften Einwohner zu ziehen. Die Anforderungen sind streng: der daenische Sponsor muss Einkommens- und Wohnanforderungen erfuellen.</li>
+  <li><strong>Startup Denmark Visum</strong> — fuer Unternehmer mit einem genehmigten Geschaeftsplan.</li>
+</ul>
+<p class="callout-warning">Stellen Sie den Antrag so frueh wie moeglich. Die Bearbeitungszeiten fuer Nicht-EU-Buerger liegen zwischen 1 und 4 Monaten. Buchen Sie kein Einzelticket, bevor die Genehmigung erteilt wurde.</p>
+<a href="https://www.nyidanmark.dk/en-GB" target="_blank" rel="noopener">→ Antrag stellen auf newtodenmark.dk (offiziell)</a>` }
       },
       {
         icon: "📁",
@@ -117,6 +127,19 @@ es:`<p>Trae estos originales físicos Y copias certificadas de cada uno:</p>
   <li>✅ Documentación del seguro de salud (para el período antes de obtener tu tarjeta amarilla)</li>
 </ul>
 <p><strong>Apostilla</strong> = un sello oficial que hace que los documentos extranjeros sean reconocidos legalmente a nivel internacional. Obténla de la autoridad designada en tu país antes de salir.</p>`,
+de:`<p>Bringen Sie diese physischen Originale UND beglaubigte Kopien von jedem mit:</p>
+<ul>
+  <li>✅ Gueltiger Reisepass (+ 2 Fotokopien der Hauptseite)</li>
+  <li>✅ Geburtsurkunde (apostilliert, falls Nicht-EU)</li>
+  <li>✅ Heiratsurkunde, falls zutreffend (apostilliert)</li>
+  <li>✅ Geburtsurkunden der Kinder</li>
+  <li>✅ Bildungsabschluesse / Zeugnisse</li>
+  <li>✅ Arbeitsvertrag oder Immatrikulationsbescheinigung der Universitaet</li>
+  <li>✅ 2 Passfotos</li>
+  <li>✅ Nachweis der Unterkunft (unterzeichneter Mietvertrag oder Schreiben des Gastgebers)</li>
+  <li>✅ Krankenversicherungsnachweis (fuer die Zeit vor Erhalt Ihrer gelben Gesundheitskarte)</li>
+</ul>
+<p><strong>Apostille</strong> = ein offizieller Stempel, der auslaendische Dokumente international rechtlich anerkannt macht. Holen Sie ihn vor Ihrer Abreise bei der zustaendigen Behoerde Ihres Heimatlandes ein.</p>`,
           da:`<p>Medbring disse fysiske originaler OG bekræftede kopier af hvert dokument:</p>
 <ul>
   <li>✅ Gyldigt pas (+ 2 fotokopier af hovedsiden)</li>
@@ -198,6 +221,22 @@ es:`<p>El mercado de alquiler danés es muy competitivo — especialmente en Cop
   <li>🚩 Sin fotos, o fotos robadas de sitios inmobiliarios</li>
 </ul>
 <p class="callout-warning">El depósito en Dinamarca está limitado por ley a 3 meses de alquiler. Quien pida más está infringiendo la ley.</p>`,
+de:`<p>Der daenische Mietmarkt ist sehr wettbewerbsintensiv — besonders in Kopenhagen. Wenn Sie Ihre Suche vor der Ankunft beginnen, verschaffen Sie sich einen entscheidenden Vorteil.</p>
+<p><strong>Beste Plattformen:</strong></p>
+<ul>
+  <li><a href="https://www.boligportal.dk" target="_blank" rel="noopener">BoligPortal.dk</a> — groesste private Mietplattform</li>
+  <li><a href="https://www.lejebolig.dk" target="_blank" rel="noopener">Lejebolig.dk</a> — gute Auswahl, englischfreundlich</li>
+  <li>Facebook-Gruppen: "Housing in Copenhagen for Expats", "Aarhus Housing International"</li>
+  <li><a href="https://www.dba.dk" target="_blank" rel="noopener">DBA.dk</a> — Gebrauchtwaren + private Vermietungen</li>
+</ul>
+<p><strong>Warnzeichen in Inseraten:</strong></p>
+<ul>
+  <li>🚩 Vermieter ist im Ausland und kann sich nicht persoenlich treffen</li>
+  <li>🚩 Preis deutlich unter Marktniveau (Kopenhagener Durchschnitt fuer 1 Zimmer: 8.500–12.000 DKK)</li>
+  <li>🚩 Verlangt Zahlung vor Unterzeichnung des Mietvertrags</li>
+  <li>🚩 Keine Fotos, oder Fotos von Immobilienwebseiten gestohlen</li>
+</ul>
+<p class="callout-warning">Die Kaution in Daenemark ist gesetzlich auf 3 Monatsmieten begrenzt. Wer mehr verlangt, verst oesst gegen das Gesetz.</p>`,
           da:`<p>Det danske lejeboligmarked er konkurrencepræget — særligt i København. At starte din søgning inden du lander giver dig en afgørende fordel.</p>
 <p><strong>Bedste platforme:</strong></p>
 <ul>
@@ -250,6 +289,14 @@ es:`<p>Puedes abrir cuentas internacionales antes de llegar que te ayuden mientr
   <li><strong>Lunar</strong> — banco digital danés que a veces se puede abrir sin número CPR (verifica la elegibilidad actual)</li>
 </ul>
 <p>Trae suficiente dinero en efectivo o fondos accesibles para cubrir al menos <strong>2 meses de gastos</strong> mientras te estableces. Presupuesta un mínimo de 30.000 DKK como colchón.</p>`,
+de:`<p>Sie koennen internationale Konten eroffnen, bevor Sie ankommen, die Sie ueberbr ucken, bis Sie ein daenisches Bankkonto erhalten (das eine CPR-Nummer erfordert).</p>
+<p><strong>Empfohlene Konten vor der Ankunft:</strong></p>
+<ul>
+  <li><strong>Wise (frueherer Name: TransferWise)</strong> — am besten fuer internationale Ueberweisungen, Mehrwaehrungskarte, sofort einsatzbereit</li>
+  <li><strong>Revolut</strong> — ausgezeichnet fuer Ausgaben im Ausland, kostenlose Stufe verfuegbar</li>
+  <li><strong>Lunar</strong> — daenische Digitalbank, die manchmal ohne CPR-Nummer eroeffnet werden kann (aktuelle Berechtigung pruefen)</li>
+</ul>
+<p>Bringen Sie genuegend Bargeld oder verfuegbare Mittel fuer mindestens <strong>2 Monate Lebenshaltungskosten</strong> mit, waehrend Sie sich einrichten. Planen Sie mindestens 30.000 DKK als Puffer ein.</p>`,
           da:`<p>Du kan oprette internationale konti, inden du ankommer, som hjælper dig, til du får en dansk bankkonto (som kræver et CPR-nummer).</p>
 <p><strong>Anbefalede konti inden ankomst:</strong></p>
 <ul>
@@ -298,6 +345,15 @@ es:`<p>La pronunciación del danés es genuinamente una de las más difíciles p
   <li>🎙️ <strong>Podcast: "Slow Danish"</strong> — habla real a velocidad reducida</li>
 </ul>
 <p>Aprende estas 10 palabras primero: <em>tak (gracias), undskyld (perdón/disculpa), hej (hola), hejhej (adiós), ja/nej (sí/no), tak for mad (gracias por la comida), skål (salud), hvad (qué), og (y), er (es/son)</em></p>`,
+de:`<p>Die daenische Aussprache ist wirklich eine der schwersten fuer Auslaender — je fruehzeitiger Sie beginnen, desto besser. Die ehrliche Wahrheit: Alle in Daenemark sprechen ausgezeichnetes Englisch. Aber Daenisch zu lernen oeffnet soziale Tueren, die fuer Englischsprachige geschlossen bleiben.</p>
+<p><strong>Beste Ressourcen vor der Ankunft:</strong></p>
+<ul>
+  <li>🎧 <strong>Glossika</strong> — am besten fuer die Aussprache, Spaced Repetition</li>
+  <li>📱 <strong>Babbel</strong> — strukturierte Lektionen, besser als Duolingo fuer Daenisch</li>
+  <li>🎬 <strong>YouTube: "Learn Danish with DanishClass101"</strong></li>
+  <li>🎙️ <strong>Podcast: "Slow Danish"</strong> — echte Sprache in verlangsamtem Tempo</li>
+</ul>
+<p>Lernen Sie zuerst diese 10 Woerter: <em>tak (danke), undskyld (Entschuldigung/Verzeihung), hej (hallo), hejhej (auf Wiedersehen), ja/nej (ja/nein), tak for mad (danke fuer das Essen), skaal (Prost), hvad (was), og (und), er (ist/sind)</em></p>`,
           da:`<p>Dansk udtale er oprigtigt talt en af de sværeste for udlændinge — jo tidligere du starter, desto bedre. Den ærlige sandhed: alle i Danmark taler fremragende engelsk. Men at lære dansk åbner sociale døre, der forbliver lukkede for engelsktalende.</p>
 <p><strong>Bedste ressourcer inden ankomst:</strong></p>
 <ul>
@@ -374,7 +430,16 @@ es:`<p>Esto es <strong>lo primero que debes hacer</strong>. Todo lo demás — t
   <li><span class="step-num">2</span> Necesitas: tu pasaporte + prueba de dónde vives (contrato firmado, subarrendamiento o carta del anfitrión).</li>
   <li><span class="step-num">3</span> Si te quedas temporalmente con un amigo: debe escribir y firmar una carta confirmando que vives allí. Plantilla disponible en borger.dk.</li>
 </ol>
-<p class="callout-warning">NO omitas este paso pensando que lo harás "después". Sin dirección registrada no puedes obtener tu número CPR.</p>` }
+<p class="callout-warning">NO omitas este paso pensando que lo harás "después". Sin dirección registrada no puedes obtener tu número CPR.</p>`,
+de:`<p>Dies ist <strong>das Allererste, was Sie tun muessen</strong>. Alles andere — Ihre CPR-Nummer, Ihre MitID, Ihr Arzt, Ihr Bankkonto, Ihre Steuerkarte — haengt alles davon ab, dass Sie eine registrierte Adresse haben.</p>
+<p class="callout-warning">⏰ <strong>Gesetzliche Frist: innerhalb von 5 Tagen nach dem Einzug</strong> (CPR-Gesetz §12). Spaetregistrierung ist ein bussgeldpflichtiger Verstoss. Buchen Sie Ihren Borgerservice-Termin, sobald Sie die Schluessel haben.</p>
+<p><strong>Vorgehensweise:</strong></p>
+<ol class="step-list">
+  <li><span class="step-num">1</span> Gehen Sie zu <a href="https://www.borger.dk" target="_blank" rel="noopener">borger.dk</a> und suchen Sie nach "Flytning til Danmark" ODER besuchen Sie Ihr lokales Borgerservice (Buergerservice) perso enlich.</li>
+  <li><span class="step-num">2</span> Sie benoetigen: Ihren Reisepass + Nachweis Ihrer Unterkunft (unterzeichneter Mietvertrag, Untermietvertrag oder ein Schreiben des Gastgebers).</li>
+  <li><span class="step-num">3</span> Wenn Sie voruebe rgehend bei einem Freund wohnen: dieser muss einen Brief schreiben und unterzeichnen, der bestaetigt, dass Sie dort wohnen. Vorlage auf borger.dk verfuegbar.</li>
+</ol>
+<p class="callout-warning">Ueberspringen Sie NICHT diesen Schritt in der Annahme, dass Sie ihn "spaeter" erledigen. Ohne registrierte Adresse koennen Sie keine CPR-Nummer erhalten.</p>` }
       },
       {
         icon: "🆔",
@@ -438,7 +503,19 @@ es:`<p>Tu número CPR (número de Registro Personal Civil) es <strong>el número
   <li>Odense: Flakhaven 2</li>
   <li>Aalborg: Godthåbsgade 8</li>
 </ul>
-<a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Residence-and-work/International-Citizen-Service" target="_blank" rel="noopener">→ Reserva cita ICS en línea</a>` }
+<a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Residence-and-work/International-Citizen-Service" target="_blank" rel="noopener">→ Reserva cita ICS en línea</a>`,
+de:`<p>Ihre CPR-Nummer (Civil Personal Registration, Zivile Personenregistrierungsnummer) ist <strong>die bei weitem wichtigste Nummer in Ihrem daenischen Leben.</strong> Sie ist fuer absolut alles erforderlich: Arztbesuche, Steueranmeldung, Banking, Bibliotheksausweis, Fitnessstudio-Mitgliedschaft, Telefonvertraege — alles.</p>
+<p><strong>Format:</strong> TTMMJJ-XXXX (Ihr Geburtsdatum + 4 Ziffern)</p>
+<p><strong>EU-Buerger:</strong> Melden Sie sich beim International Citizen Service (ICS) an. Haeufig noch am selben Tag, wenn alle Dokumente vorliegen.</p>
+<p><strong>Nicht-EU-Buerger:</strong> Wird in der Regel automatisch nach Genehmigung der Aufenthaltsgenehmigung ausgestellt. Kann 2–8 Wochen dauern.</p>
+<p><strong>ICS-Bueros (Hauptstandorte):</strong></p>
+<ul>
+  <li>Kopenhagen: Gyldenloevsgade 11, 1600 Copenhagen V</li>
+  <li>Aarhus: Hack Kampmanns Plads 2</li>
+  <li>Odense: Flakhaven 2</li>
+  <li>Aalborg: Godthobsgade 8</li>
+</ul>
+<a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Residence-and-work/International-Citizen-Service" target="_blank" rel="noopener">→ ICS-Termin online buchen</a>` }
       },
       {
         icon: "🔐",
@@ -457,7 +534,10 @@ ar:`<p>MitID هو النظام الوطني الدنماركي للهوية ال
 <p>يُثبَّت تطبيق MitID على هاتفك الذكي ويُولّد رموزاً مكونة من 6 أرقام لتسجيل الدخول. احتفظ بهاتفك في أمان — هذا هو هويّتك الرقمية.</p>`,
 es:`<p>MitID es el sistema nacional de identidad digital de Dinamarca. Piénsalo como la llave maestra de toda tu vida digital en Dinamarca. Sin él no puedes acceder a: borger.dk, SKAT (impuestos), e-Boks (tu correo oficial), tu banco en línea, Sundhed.dk, y docenas de servicios más.</p>
 <p><strong>Obtén MitID en:</strong> <a href="https://www.mitid.dk" target="_blank" rel="noopener">mitid.dk</a> o en persona en tu banco o en Borgerservice.</p>
-<p>La app de MitID se instala en tu smartphone y genera códigos de 6 dígitos para iniciar sesión. Cuida tu teléfono — ESA es tu identidad.</p>` }
+<p>La app de MitID se instala en tu smartphone y genera códigos de 6 dígitos para iniciar sesión. Cuida tu teléfono — ESA es tu identidad.</p>`,
+de:`<p>MitID ist Daenemarks nationales System fuer die digitale Identitaet. Betrachten Sie es als den Hauptschluessel fuer Ihr gesamtes digitales Leben in Daenemark. Ohne MitID koennen Sie nicht auf Folgendes zugreifen: borger.dk, SKAT (Steuern), e-Boks (Ihre offizielle Post), Ihr Online-Banking, Sundhed.dk und Dutzende weiterer Dienste.</p>
+<p><strong>MitID erhalten Sie auf:</strong> <a href="https://www.mitid.dk" target="_blank" rel="noopener">mitid.dk</a> oder persoenlich in Ihrer Bank oder beim Borgerservice.</p>
+<p>Die MitID-App wird auf Ihrem Smartphone installiert und erzeugt 6-stellige Codes zum Einloggen. Schuetzen Sie Ihr Telefon — ES ist Ihre Identitaet.</p>` }
       },
       {
         icon: "📬",
@@ -481,7 +561,11 @@ ar:`<p>e-Boks هو صندوق البريد الرقمي الرسمي في الد
 es:`<p>e-Boks es el buzón digital oficial de Dinamarca. Cada carta de SKAT, Udbetaling Danmark, tu municipio, tu banco y el gobierno llega aquí. No a tu buzón físico. No a tu correo electrónico. Aquí.</p>
 <p class="callout-warning"><strong>Esto es crucial:</strong> Personas han perdido plazos fiscales, avisos de renovación de permisos y confirmaciones de pagos de prestaciones porque no revisaron e-Boks. Pon un recordatorio semanal en tu calendario ahora mismo.</p>
 <p>Descarga la app de e-Boks. Activa las notificaciones push. Configura el reenvío por correo en los ajustes para recibir un email cuando llegue algo nuevo.</p>
-<a href="https://www.e-boks.com/dk/en/" target="_blank" rel="noopener">→ Sitio web de e-Boks</a>` }
+<a href="https://www.e-boks.com/dk/en/" target="_blank" rel="noopener">→ Sitio web de e-Boks</a>`,
+de:`<p>e-Boks ist Daenemarks offizieller digitaler Briefkasten. Jeder Brief von SKAT, Udbetaling Danmark, Ihrer Gemeinde, Ihrer Bank und der Regierung geht hierhin. Nicht in Ihren physischen Briefkasten. Nicht in Ihre E-Mail. Hierhin.</p>
+<p class="callout-warning"><strong>Das ist entscheidend:</strong> Menschen haben Steuerfristen, Hinweise zur Verlaengerung von Aufenthaltsgenehmigungen und Leistungsbestaeti gungen verpasst, weil sie e-Boks nicht geprueft haben. Richten Sie jetzt eine woechentliche Kalendererinnerung ein.</p>
+<p>Laden Sie die e-Boks-App herunter. Aktivieren Sie Push-Benachrichtigungen. Stellen Sie die E-Mail-Weiterleitung in den Einstellungen ein, damit Sie eine E-Mail erhalten, wenn etwas Neues ankommt.</p>
+<a href="https://www.e-boks.com/dk/en/" target="_blank" rel="noopener">→ e-Boks Webseite</a>` }
       },
       {
         icon: "🏦",
@@ -530,7 +614,16 @@ es:`<p>Necesitas una cuenta bancaria danesa para tu NemKonto (la cuenta a la que
   <tr><td><strong>Danske Bank</strong></td><td>✅ Bueno</td><td>Sí</td><td>Servicio completo</td></tr>
   <tr><td><strong>Jyske Bank</strong></td><td>Parcial</td><td>Sí</td><td>Regional, servicio personal</td></tr>
 </table>
-<p>Tras abrir la cuenta, designa tu <strong>NemKonto</strong> en <a href="https://www.nemkonto.dk" target="_blank" rel="noopener">nemkonto.dk</a>. Es obligatorio.</p>` }
+<p>Tras abrir la cuenta, designa tu <strong>NemKonto</strong> en <a href="https://www.nemkonto.dk" target="_blank" rel="noopener">nemkonto.dk</a>. Es obligatorio.</p>`,
+de:`<p>Sie benoetigen ein daenisches Bankkonto fuer Ihre NemKonto (das Konto, auf das die Regierung Ihnen Geld ueberweist — Steuererstattungen, Leistungen usw.). Die meisten Banken verlangen eine CPR-Nummer.</p>
+<table class="info-table">
+  <tr><th>Bank</th><th>Englisch?</th><th>CPR erforderlich?</th><th>Am besten fuer</th></tr>
+  <tr><td><strong>Lunar</strong></td><td>✅ 100%</td><td>Manchmal nein</td><td>Neuankoemmlinge, digital-first</td></tr>
+  <tr><td><strong>Nordea</strong></td><td>✅ Gut</td><td>Ja</td><td>Internationale Ueberweisungen</td></tr>
+  <tr><td><strong>Danske Bank</strong></td><td>✅ Gut</td><td>Ja</td><td>Vollservice</td></tr>
+  <tr><td><strong>Jyske Bank</strong></td><td>Teilweise</td><td>Ja</td><td>Regional, persoenlicher Service</td></tr>
+</table>
+<p>Nach der Kontoeroe ffnung designieren Sie es als Ihre <strong>NemKonto</strong> (woertlich: "Einfach-Konto") auf <a href="https://www.nemkonto.dk" target="_blank" rel="noopener">nemkonto.dk</a>. Dies ist Pflicht.</p>` }
       },
       {
         icon: "📱",
@@ -584,6 +677,16 @@ es:`<div class="app-grid">
   <div class="app-card"><div class="app-card-icon">💊</div><div class="app-card-name">Sundhed.dk</div><div class="app-card-desc">Tu historial médico, derivaciones hospitalarias, busca médico de cabecera.</div><div class="app-card-lang">🇬🇧 English</div></div>
   <div class="app-card"><div class="app-card-icon">💰</div><div class="app-card-name">Skat</div><div class="app-card-desc">Agencia tributaria danesa. Consulta tu tarjeta fiscal y deducciones.</div><div class="app-card-lang">🇬🇧 English</div></div>
   <div class="app-card"><div class="app-card-icon">🛒</div><div class="app-card-name">Too Good To Go</div><div class="app-card-desc">Ahorra dinero en comida no vendida. Los daneses adoran esta app.</div><div class="app-card-lang">🇬🇧 English</div></div>
+</div>`,
+de:`<div class="app-grid">
+  <div class="app-card"><div class="app-card-icon">💸</div><div class="app-card-name">MobilePay</div><div class="app-card-desc">Daenemarks Bezahl-App. Sie BENOETIGEN diese zum Aufteilen von Rechnungen, Bezahlen an Staenden usw.</div><div class="app-card-lang">🇬🇧 Englisch</div></div>
+  <div class="app-card"><div class="app-card-icon">📬</div><div class="app-card-name">e-Boks</div><div class="app-card-desc">Ihr offizieller daenischer Briefkasten. Woechentlich pruefen.</div><div class="app-card-lang">🇬🇧 Englisch</div></div>
+  <div class="app-card"><div class="app-card-icon">🚌</div><div class="app-card-name">Rejsekort</div><div class="app-card-desc">App fuer die oeffentliche Verkehrskarte (Rejsekort). Gilt in ganz Daenemark.</div><div class="app-card-lang">🇬🇧 Englisch</div></div>
+  <div class="app-card"><div class="app-card-icon">🚂</div><div class="app-card-name">DSB</div><div class="app-card-desc">Daenische Staatsbahn. Zugtickets buchen, Fahrplaene einsehen.</div><div class="app-card-lang">🇬🇧 Englisch</div></div>
+  <div class="app-card"><div class="app-card-icon">🏥</div><div class="app-card-name">Min Laege</div><div class="app-card-desc">GP-Termine buchen, Rezepte erneuern.</div><div class="app-card-lang">Begrenztes EN</div></div>
+  <div class="app-card"><div class="app-card-icon">💊</div><div class="app-card-name">Sundhed.dk</div><div class="app-card-desc">Ihre Gesundheitsakte, Krankenhausueberweisungen, GP finden.</div><div class="app-card-lang">🇬🇧 Englisch</div></div>
+  <div class="app-card"><div class="app-card-icon">💰</div><div class="app-card-name">Skat</div><div class="app-card-desc">Daenische Steuerbeh oerde. Steuerkarte einsehen, Abzuege pruefen.</div><div class="app-card-lang">🇬🇧 Englisch</div></div>
+  <div class="app-card"><div class="app-card-icon">🛒</div><div class="app-card-name">Too Good To Go</div><div class="app-card-desc">Geld sparen mit unverkauften Lebensmitteln. Daenen lieben diese App.</div><div class="app-card-lang">🇬🇧 Englisch</div></div>
 </div>` }
       },
       {
@@ -638,7 +741,17 @@ es:`<table class="info-table">
   <tr><td><strong>80 19 13 99</strong></td><td>Control de intoxicaciones</td><td>Gratuito, 24/7</td></tr>
   <tr><td><strong>70 20 12 60</strong></td><td>Línea de crisis (Livslinien)</td><td>Apoyo en crisis de salud mental</td></tr>
 </table>
-<p class="callout-warning"><strong>Diferencia clave:</strong> En Dinamarca, el 1813 es el número para solicitar orientación médica y atención urgente no crítica. Llamar al 112 para no emergencias está mal visto y puede retrasar la atención de otros.</p>` }
+<p class="callout-warning"><strong>Diferencia clave:</strong> En Dinamarca, el 1813 es el número para solicitar orientación médica y atención urgente no crítica. Llamar al 112 para no emergencias está mal visto y puede retrasar la atención de otros.</p>`,
+de:`<table class="info-table">
+  <tr><th>Nummer</th><th>Fuer</th><th>Hinweis</th></tr>
+  <tr><td><strong>112</strong></td><td>Polizei, Feuerwehr, Krankenwagen</td><td>NUR lebensbedrohliche Notfaelle</td></tr>
+  <tr><td><strong>1813</strong></td><td>Medizinische Hilfe (nicht dringend)</td><td>Dringend, aber nicht lebensbedrohlich. 24/7. Region Kopenhagen.</td></tr>
+  <tr><td><strong>114</strong></td><td>Polizei (keine Notfaelle)</td><td>Fuer Verbrechen, verlorene Gegenstaende, Anzeigen</td></tr>
+  <tr><td><strong>70 11 31 31</strong></td><td>Zahnnotfall</td><td>Zahnschmerzen ausserhalb der Sprechzeiten</td></tr>
+  <tr><td><strong>80 19 13 99</strong></td><td>Giftnotruf</td><td>Kostenlos, 24/7</td></tr>
+  <tr><td><strong>70 20 12 60</strong></td><td>Krisentelefon (Livslinien)</td><td>Unterstuetzung bei psychischen Krisen</td></tr>
+</table>
+<p class="callout-warning"><strong>Wichtiger Unterschied:</strong> In Daenemark ist die 1813 die Nummer fuer medizinischen Rat und nicht lebensbedrohliche dringende Versorgung. Die 112 fuer Nicht-Notfaelle anzurufen wird missbilligt und kann die Versorgung anderer verzoegern.</p>` }
       }
     ],
     checklist: [
@@ -713,6 +826,16 @@ es:`<p>Tu permiso de residencia determina tus derechos en Dinamarca. Un resumen 
   <tr><td><strong>Permiso de estudiante</strong></td><td>Estudiantes matriculados</td><td>15 h/semana</td><td>Duración de los estudios</td></tr>
   <tr><td><strong>Reagrupación familiar</strong></td><td>Reunirse con un familiar</td><td>Completo (generalmente)</td><td>2 años inicialmente</td></tr>
   <tr><td><strong>Estatus de refugiado</strong></td><td>Solicitantes de asilo</td><td>Variable</td><td>Variable</td></tr>
+</table>`,
+de:`<p>Ihre Aufenthaltserlaubnis bestimmt Ihre Rechte in Daenemark. Hier eine klare Uebersicht:</p>
+<table class="info-table">
+  <tr><th>Erlaubnistyp</th><th>Fuer</th><th>Arbeitsrecht</th><th>Dauer</th></tr>
+  <tr><td><strong>EU-Registrierung</strong></td><td>EU/EWR-Staatsangehoerige</td><td>Unbegrenzt</td><td>5 Jahre (dann dauerhaft)</td></tr>
+  <tr><td><strong>Positivliste</strong></td><td>Gefragte Berufe</td><td>Vollstaendig</td><td>Bis zu 4 Jahre</td></tr>
+  <tr><td><strong>Gehaltsgrenzregelung</strong></td><td>Gehalt &gt; 514.000 DKK/Jahr (2025) · 552.000 DKK/Jahr ab 2026</td><td>Vollstaendig</td><td>Bis zu 4 Jahre</td></tr>
+  <tr><td><strong>Studentenerlaubnis</strong></td><td>Eingeschriebene Studenten</td><td>15 Std./Woche</td><td>Studiendauer</td></tr>
+  <tr><td><strong>Familienzusammenfuehrung</strong></td><td>Familienmitglied beitreten</td><td>Vollstaendig (in der Regel)</td><td>Anfaenglich 2 Jahre</td></tr>
+  <tr><td><strong>Fluechtlingsstatus</strong></td><td>Asylbewerber</td><td>Variiert</td><td>Variiert</td></tr>
 </table>` }
       },
       {
@@ -756,7 +879,15 @@ es:`<p>La regla general: <strong>8 años de residencia legal continua</strong> e
   <li>También debes: haber trabajado a tiempo completo durante al menos <strong>3,5 de los últimos 4 años</strong>, superar el <strong>Prøve i Dansk 2 (PD2 ≈ B1)</strong>, no tener antecedentes penales, y ser autosuficiente (sin ayudas públicas en los últimos 4 años).</li>
 </ul>
 <p>El sistema de puntos te evalúa en: nivel de danés, historial laboral, ingresos, participación comunitaria, rendimiento escolar de los hijos y puntuación del examen de ciudadanía.</p>
-<a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit" target="_blank" rel="noopener">→ Información oficial sobre residencia permanente</a>` }
+<a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit" target="_blank" rel="noopener">→ Información oficial sobre residencia permanente</a>`,
+de:`<p>Die allgemeine Regelung: <strong>8 Jahre ununterbrochenen legalen Aufenthalts</strong> in Daenemark. Es gibt jedoch Schnellverfahren:</p>
+<ul>
+  <li><strong>4 Jahre</strong>, wenn Sie eine spezielle Bewertung des aktiven Beitrags bestehen (punktebasiert)</li>
+  <li><strong>5 Jahre</strong> fuer EU-Buerger mit ununterbrochener Aufenthaltszeit</li>
+  <li>Sie muessen ausserdem: mindestens <strong>3,5 der letzten 4 Jahre</strong> in Vollzeit beschaeftigt gewesen sein, den <strong>Prove i Dansk 2 (PD2 ≈ B1)</strong> bestehen, ein einwandfreies Fuehrungszeugnis haben und selbstversorgend sein (keine oeffentliche Unterstuetzung in den letzten 4 Jahren).</li>
+</ul>
+<p>Das Punktesystem bewertet Sie in: Daenischkenntnissen, Beschaeftigungshistorie, Einkommen, gesellschaftlichem Engagement, Schulleistungen der Kinder und Ergebnis der Staatsbuergerschaftspruefung.</p>
+<a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit" target="_blank" rel="noopener">→ Offizielle Informationen zur dauerhaften Aufenthaltsgenehmigung</a>` }
       },
       {
         icon:"🏛️", title:{ en:"Path to Danish Citizenship", da:"Vejen til dansk statsborgerskab" },
@@ -820,7 +951,19 @@ es:`<p>Uno de los caminos más exigentes de Europa, pero vale la pena:</p>
   <li>Sin condenas penales</li>
   <li>Sin deudas pendientes con las autoridades públicas</li>
 </ul>
-<p>Dinamarca permite la <strong>doble nacionalidad</strong> desde 2015. No tienes que renunciar a tu nacionalidad original.</p>` }
+<p>Dinamarca permite la <strong>doble nacionalidad</strong> desde 2015. No tienes que renunciar a tu nacionalidad original.</p>`,
+de:`<p>Einer der anspruchsvollsten Wege in Europa, aber die Muehe wert:</p>
+<ul>
+  <li>Mindestens <strong>9 Jahre</strong> in Daenemark gelebt haben (oder weniger mit Beschleunigern)</li>
+  <li>Den <strong>indfodsretspro ven</strong> (Staatsbuergerschaftstest) bestehen — daenische Geschichte, Kultur und Gesellschaft</li>
+  <li>Den <strong>Prove i Dansk 3 (PD3, ≈ B2-Niveau)</strong> bestehen — den Sprachtest fuer den Staatsbuergerschaftsweg</li>
+  <li>Mindestens <strong>9 der letzten 10 Jahre</strong> mit dauerhafter Aufenthaltserlaubnis in Daenemark gelebt haben</li>
+  <li><strong>Selbstversorgend</strong> sein — keine oeffentlichen Leistungen in den letzten 4 Jahren</li>
+  <li>In 4,5 der letzten 5 Jahre selbstversorgend gewesen sein</li>
+  <li>Keine strafrechtlichen Verurteilungen</li>
+  <li>Keine ausstehenden Schulden gegenueber Behoerden</li>
+</ul>
+<p>Daenemark erlaubt seit 2015 die <strong>doppelte Staatsbueergerschaft</strong>. Sie muessen Ihre urspruengliche Staatsangehoerig keit nicht aufgeben.</p>` }
       },
       {
         icon:"💶", title:{ en:"Danish Tax — How It Actually Works", da:"Dansk skat — sådan fungerer det" },
@@ -873,7 +1016,17 @@ es:`<p>Sí, los impuestos daneses son altos. Aquí está el panorama real de lo 
   <li><strong>Deducción personal (personfradrag):</strong> 51.600 DKK/año (2025) — se aplica como crédito fiscal, haciendo efectivamente libre de impuestos esta franja.</li>
 </ul>
 <p>¿Qué obtienes a cambio? Sanidad gratuita. Universidad gratuita. 52 semanas de permiso parental. 5 semanas de vacaciones. Escuela gratuita. Prestaciones por desempleo si pierdes el trabajo. El cálculo es muy distinto de lo que espera la mayoría.</p>
-<a href="https://skat.dk/en-us" target="_blank" rel="noopener">→ SKAT — Agencia Tributaria danesa</a>` }
+<a href="https://skat.dk/en-us" target="_blank" rel="noopener">→ SKAT — Agencia Tributaria danesa</a>`,
+de:`<p>Ja, die daenischen Steuern sind hoch. Hier ist das ehrliche Bild dessen, was Sie tatsaechlich zahlen:</p>
+<ul>
+  <li><strong>AM-bidrag (Arbeitsmarktbeitrag):</strong> 8% direkt von Ihrem Bruttogehalt. Keine Abzuege dagegen.</li>
+  <li><strong>Gemeindesteuer (kommuneskat):</strong> Variiert je nach Gemeinde, Durchschnitt ~25%. Sie zahlen dies auf Einkommen ueber Ihrem persoenlichen Freibetrag.</li>
+  <li><strong>Staatssteuer (bundskat):</strong> 12,01% (2025) auf Einkommen ueber dem persoenlichen Freibetrag (51.600 DKK/Jahr).</li>
+  <li><strong>Spitzensteuersatz (topskat):</strong> Zusaetzliche 15% auf persoenliches Einkommen ueber ~611.800 DKK/Jahr in 2025. Kombinierter Hoechstsatz (skatteloft) ohne AM und Kirchensteuer betraegt 52,07%.</li>
+  <li><strong>Persoenlicher Freibetrag (personfradrag):</strong> 51.600 DKK/Jahr (2025) — wird als Steuergutschrift angerechnet, wodurch dieser Einkommensanteil effektiv steuerfrei ist.</li>
+</ul>
+<p>Was bekommen Sie dafuer? Kostenlose Gesundheitsversorgung. Kostenlose Universitaet. 52 Wochen Elternzeit. 5 Wochen Urlaub. Kostenlose Schule. Arbeitslosengeld bei Jobverlust. Die Rechnung sieht ganz anders aus, als die meisten Menschen erwarten.</p>
+<a href="https://skat.dk/en-us" target="_blank" rel="noopener">→ SKAT — Daenische Steuerbehoerde</a>` }
       },
       {
         icon:"🚗", title:{ en:"Driving Licence Conversion", da:"Konvertering af kørekort" },
@@ -911,6 +1064,13 @@ es:`<p>Si tienes un permiso de conducir de la UE/EEE, puedes usarlo indefinidame
   <li>Algunos países tienen acuerdos de canje con Dinamarca (EE. UU., Canadá, Australia, Japón, Corea del Sur y otros) — consulta en <a href="https://www.sikkertrafik.dk" target="_blank" rel="noopener">sikkertrafik.dk</a></li>
   <li>Si tu país tiene un acuerdo: paga una tasa (~350 DKK) y canjea en tu Borgerservice local</li>
   <li>Sin acuerdo: debes completar clases de conducir danesas y superar los exámenes teórico y práctico. Presupuesta 10.000–20.000 DKK y 6–12 meses.</li>
+</ul>`,
+de:`<p>Wenn Sie einen EU/EWR-Fuehrerschein haben, koennen Sie ihn unbegrenzt in Daenemark verwenden. Keine Umschreibung erforderlich.</p>
+<p>Fuer Fuehrerscheine aus Nicht-EU-Laendern:</p>
+<ul>
+  <li>Einige Laender haben Austauschabkommen mit Daenemark (USA, Kanada, Australien, Japan, Suedkorea und andere) — pruefen Sie auf <a href="https://www.sikkertrafik.dk" target="_blank" rel="noopener">sikkertrafik.dk</a></li>
+  <li>Wenn Ihr Land ein Abkommen hat: zahlen Sie eine Gebuehr (~350 DKK) und tauschen Sie bei Ihrem lokalen Borgerservice um</li>
+  <li>Ohne Abkommen: Sie muessen daenische Fahrstunden absolvieren und sowohl die Theorie- als auch die Prakt ikumspr ufung bestehen. Planen Sie 10.000–20.000 DKK und 6–12 Monate ein.</li>
 </ul>` }
       }
     ],
@@ -978,6 +1138,18 @@ es:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-lef
   <li><strong>Máximo legal por adelantado:</strong> 3 meses de depósito (depositum) + 3 meses de alquiler prepagado = 6 meses. Cualquier cantidad mayor es ilegal según Lejeloven §34.</li>
 </ul>
 <p><strong>Si algo no te cuadra, es porque no cuadra.</strong> Sigue adelante — siempre hay otro anuncio. Denuncia estafas en <a href="https://politi.dk" target="_blank" rel="noopener">politi.dk</a> y avisa a otros recién llegados en los grupos de expatriados.</p>`,
+de:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ Wohnungsbetrug ist die groesste finanzielle Bedrohung fuer Neuankoemmlinge in Daenemark.</strong> Gefaelschte Inserate auf Facebook Marketplace, falsche Vermieter, die behaupten im Ausland zu sein, und Forderungen nach einer Kaution "um die Wohnung zu reservieren" vor der Besichtigung haben Neuankoemmlingen je zwischen <strong>10.000 und 50.000 DKK</strong> gekostet.</p>
+
+<p><strong>Unverletzliche Regeln:</strong></p>
+<ul>
+  <li><strong>Ueberweisen Sie niemals Geld, bevor</strong> (a) Sie einen Mietvertrag (Typeformular A) unterzeichnet haben und (b) die Wohnung mit dem tatsaechlichen Vermieter persoenlich besichtigt haben. Keine Ausnahmen.</li>
+  <li><strong>Verifizieren Sie, dass der Vermieter das Objekt besitzt</strong> ueber <a href="https://www.ois.dk" target="_blank" rel="noopener">ois.dk</a> (daenisches oeffentliches Grundbuch — kostenlos) oder <a href="https://www.tinglysning.dk" target="_blank" rel="noopener">tinglysning.dk</a> (Urkundenregister).</li>
+  <li><strong>Der im Vertrag CPR-registrierte Eigentuemer</strong> muss mit dem uebereinstimmen, was ois.dk zeigt. Wenn der "Vermieter" "im Ausland ist und sich nicht treffen kann" — das ist Betrug.</li>
+  <li><strong>Zahlen Sie nur per Bankueberweisung auf ein daenisches Konto im Namen des Vermieters</strong> — niemals Western Union, MoneyGram, Kryptowaeehrung, Geschenkkarten oder "Einzahlung auf das Konto eines Freundes".</li>
+  <li><strong>Fuehren Sie eine umgekehrte Bildersuche</strong> der Insertionsfotos durch (Google Bilder / TinEye). Betrueger verwenden Fotos erneut.</li>
+  <li><strong>Gesetzliches Maximum im Voraus:</strong> 3 Monate Kaution (depositum) + 3 Monate vorausbezahlte Miete (forudbetalt leje) = 6 Monate. Alles darueber hinaus ist gemaess Lejeloven §34 illegal.</li>
+</ul>
+<p><strong>Wenn etwas seltsam wirkt, ist es das auch.</strong> Gehen Sie weiter — es gibt immer ein anderes Inserat. Melden Sie Betrug auf <a href="https://politi.dk" target="_blank" rel="noopener">politi.dk</a> und warnen Sie andere Neuankoemmlinge in Expat-Gruppen.</p>`,
 da:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ Boligsvindel er den største finansielle trussel mod nyankomne i Danmark.</strong> Falske opslag på Facebook Marketplace, falske udlejere der hævder at befinde sig i udlandet, og krav om depositum "for at reservere lejligheden" inden fremvisning har kostet nyankomne <strong>10.000 til 50.000 kr.</strong> hver.</p>
 
 <p><strong>Ufravigelige regler:</strong></p>
@@ -1037,7 +1209,16 @@ es:`<p>Dinamarca tiene cuatro tipos principales de tenencia:</p>
   <tr><td><strong>Andelsbolig</strong></td><td>Cooperativa de vivienda — compras una "participación" en el edificio</td><td>⚠️ Larga lista de espera, requiere capital</td></tr>
   <tr><td><strong>Ejerbolig</strong></td><td>Propiedad en compra</td><td>✅ Si tienes ahorros y crédito</td></tr>
 </table>
-<p><strong>Para la mayoría de los recién llegados:</strong> el alquiler privado es el punto de partida. Una vez establecido, vale la pena apuntarse pronto a la lista de espera de andelsbolig — puede ahorrarte mucho dinero a largo plazo.</p>` }
+<p><strong>Para la mayoría de los recién llegados:</strong> el alquiler privado es el punto de partida. Una vez establecido, vale la pena apuntarse pronto a la lista de espera de andelsbolig — puede ahorrarte mucho dinero a largo plazo.</p>`,
+de:`<p>Daenemark hat vier Haupttypen von Wohnverhaeltnissen:</p>
+<table class="info-table">
+  <tr><th>Typ</th><th>Was ist es</th><th>Fuer Neuankoemmlinge</th></tr>
+  <tr><td><strong>Privat mieten (lejebolig)</strong></td><td>Standard-Mietwohnung/-haus von privatem Vermieter</td><td>✅ Am zugaenglichsten</td></tr>
+  <tr><td><strong>Sozialwohnung (almen bolig)</strong></td><td>Gefoerderter Wohnraum, einkommensabhaengige Miete</td><td>⚠️ 5–15 Jahre Warteliste in KBH</td></tr>
+  <tr><td><strong>Andelsbolig</strong></td><td>Wohnungsbaugenossenschaft — Sie kaufen einen "Anteil" am Gebaeude</td><td>⚠️ Lange Warteliste, erfordert Kapital</td></tr>
+  <tr><td><strong>Ejerbolig</strong></td><td>Eigentumswohnung (Kauf)</td><td>✅ Wenn Sie Ersparnisse und Kreditwuerdigkeit haben</td></tr>
+</table>
+<p><strong>Fuer die meisten Neuankoemmlinge:</strong> Privatmiete ist der Ausgangspunkt. Sobald Sie sich eingerichtet haben, lohnt es sich, sich fruehzeitig auf die Andelsbolig-Warteliste einzutragen — langfristig kann das erheblich Geld sparen.</p>` }
       },
       {
         icon:"✍️", title:{ en:"Writing a Winning Danish Rental Application", da:"Skriv en vindende lejeansøgning" },
@@ -1080,6 +1261,14 @@ es:`<p>Los propietarios daneses reciben decenas de solicitudes por anuncio. Esto
   <li><span class="step-num">3</span><strong>Sé personal.</strong> Los daneses responden a solicitudes genuinas y cálidas — no a cartas formales.</li>
   <li><span class="step-num">4</span><strong>Envía rápido.</strong> Los buenos anuncios en Copenhague reciben más de 50 solicitudes en 24 horas. Solicita a las pocas horas de publicarse.</li>
   <li><span class="step-num">5</span><strong>Haz seguimiento.</strong> Un mensaje cortés 48 horas después de solicitar es apropiado y esperado.</li>
+</ol>`,
+de:`<p>Daenische Vermieter erhalten Dutzende von Bewerbungen pro Inserat. So sticht Ihre heraus:</p>
+<ol class="step-list">
+  <li><span class="step-num">1</span><strong>Schreiben Sie auf Daenisch oder bieten Sie eine daenische Version an.</strong> Selbst einfaches Daenisch zeigt Engagement.</li>
+  <li><span class="step-num">2</span><strong>Nennen Sie:</strong> wer Sie sind, was Sie beruflich machen, warum diese Wohnung, Einkommensnachweis, Referenzen von frueheren Vermietern.</li>
+  <li><span class="step-num">3</span><strong>Seien Sie persoenlich.</strong> Daenen reagieren auf echte, herzliche Bewerbungen — nicht auf formelle Briefe.</li>
+  <li><span class="step-num">4</span><strong>Senden Sie schnell.</strong> Gute Inserate in Kopenhagen erhalten innerhalb von 24 Stunden 50+ Bewerbungen. Bewerben Sie sich innerhalb weniger Stunden nach dem Erscheinen des Inserats.</li>
+  <li><span class="step-num">5</span><strong>Followen Sie auf.</strong> Eine hoefliche Nachricht 48 Stunden nach der Bewerbung ist angemessen und erwartet.</li>
 </ol>` }
       },
       {
@@ -1133,7 +1322,17 @@ es:`<p>Las protecciones al inquilino en Dinamarca son sólidas. Conoce estas reg
   <li><strong>Calefacción/suministros:</strong> Deben especificarse en el contrato. No pueden cambiarse sin preaviso.</li>
 </ul>
 <p>Si tienes una disputa con tu propietario, contacta con el <strong>Huslejenævnet</strong> (Tribunal de Alquileres) de tu municipio — gratuito y eficaz.</p>
-<a href="https://huslejenaevn.dk" target="_blank" rel="noopener">→ Encuentra tu Huslejenævn local</a>` }
+<a href="https://huslejenaevn.dk" target="_blank" rel="noopener">→ Encuentra tu Huslejenævn local</a>`,
+de:`<p>Der Mieterschutz in Daenemark ist stark. Kennen Sie diese Regeln:</p>
+<ul>
+  <li><strong>Kautionsobergrenze:</strong> Hoechstens 3 Monatsmieten. Vorausbezahlte Miete: hoechstens 3 Monate. Gesamt im Voraus: maximal 6 Monate.</li>
+  <li><strong>Mieterhoehungen:</strong> Reguliert. Der Vermieter kann die Miete nicht willkuerlich erhoehen. Muss dem Nettopre isindex folgen oder genehmigt werden.</li>
+  <li><strong>Kuendigungsfrist:</strong> Fuer unmoeblierten Wohnraum (der typische Mietvertrag) muss der Vermieter Ihnen mindestens <strong>1 Jahr Kuendigungsfrist</strong> gemaess Lejeloven §86 geben — nur 3 Monate fuer moeblie rte Einzelzimmer. Mieter haben in den meisten Faellen eine 3-monatige Kuendigungspflicht.</li>
+  <li><strong>Kautionsrueckgabe:</strong> Der nicht verbrauchte Teil muss zurueckgegeben werden, aber der Vermieter hat typischerweise bis zu ~6 Wochen (und in Streitfaellen bis zu 2 Monate) fuer den Auszugsbericht (flytteopgorelse) und Reparaturkosten. Streitigkeiten gehen an den Huslejenaevnet.</li>
+  <li><strong>Heizung/Nebenkosten:</strong> Muss im Mietvertrag angegeben werden. Kann nicht ohne Vorankuendigung geaendert werden.</li>
+</ul>
+<p>Bei einem Streit mit Ihrem Vermieter wenden Sie sich an das <strong>Huslejenaevnet</strong> (Mietgericht) Ihrer Gemeinde — kostenlos und effektiv.</p>
+<a href="https://huslejenaevn.dk" target="_blank" rel="noopener">→ Finden Sie Ihr lokales Huslejenaevn</a>` }
       },
       {
         icon:"🗺️", title:{ en:"Copenhagen Neighbourhoods — Honest Guide", da:"Københavns kvarterer — ærlig guide" },
@@ -1181,6 +1380,15 @@ es:`<table class="info-table">
   <tr><td><strong>Frederiksberg</strong></td><td>Elegante, tranquilo, caro</td><td>~11.000 DKK</td><td>Familias, profesionales</td></tr>
   <tr><td><strong>Amager / Islands Brygge</strong></td><td>En auge, frente al mar, variado</td><td>~8.000 DKK</td><td>Presupuesto ajustado, jóvenes</td></tr>
   <tr><td><strong>Valby</strong></td><td>Local, tranquilo, asequible, familiar</td><td>~7.500 DKK</td><td>Familias, residentes a largo plazo</td></tr>
+</table>`,
+de:`<table class="info-table">
+  <tr><th>Stadtteil</th><th>Flair</th><th>Durchschn. Miete 1-Zi.</th><th>Ideal fuer</th></tr>
+  <tr><td><strong>Noerrebro</strong></td><td>Jung, bunt, lebendig, linksorientiert</td><td>~8.500 DKK</td><td>Junge Berufstaet ige, Internationale</td></tr>
+  <tr><td><strong>Vesterbro</strong></td><td>Trendig, Foodszene, gentrifying</td><td>~9.500 DKK</td><td>Foodliebhaber, Kreative</td></tr>
+  <tr><td><strong>Oesterbro</strong></td><td>Ruhig, familienorientiert, wohlhabend</td><td>~10.500 DKK</td><td>Familien, etablierte Berufstaet ige</td></tr>
+  <tr><td><strong>Frederiksberg</strong></td><td>Elegant, still, teuer</td><td>~11.000 DKK</td><td>Familien, Berufstaet ige</td></tr>
+  <tr><td><strong>Amager / Islands Brygge</strong></td><td>Aufstrebend, Wasserlage, gemischt</td><td>~8.000 DKK</td><td>Budgetbewusste, junge Leute</td></tr>
+  <tr><td><strong>Valby</strong></td><td>Lokales Flair, ruhig, erschwinglich, familienfreundlich</td><td>~7.500 DKK</td><td>Familien, Langzeiteinwohner</td></tr>
 </table>` }
       }
     ],
@@ -1194,9 +1402,9 @@ es:`<table class="info-table">
   },
   {
     id: 4, icon: "💰", color: "#B87333",
-    title: { en:"Money & Banking", fr:"Argent et Banque", ar:"المال والبنوك", es:"Dinero y Banca", da:"Penge og Bank" },
-    subtitle: { en:"The Danish Wallet", fr:"Le Portefeuille Danois", ar:"المحفظة الدنماركية", es:"La Cartera Danesa", da:"Den Danske Tegnebog" },
-    intro: { en:"Understand how Danish money flows — from salary to pension to MobilePay — and make every krone work for you.", fr:"Comprendre comment l'argent circule au Danemark.", ar:"افهم كيف يتدفق المال الدنماركي.", es:"Entiende cómo fluye el dinero danés.", da:"Forstå hvordan dansk økonomi fungerer." },
+    title: { en:"Money & Banking", fr:"Argent et Banque", ar:"المال والبنوك", es:"Dinero y Banca", da:"Penge og Bank", de:"Geld und Banken" },
+    subtitle: { en:"The Danish Wallet", fr:"Le Portefeuille Danois", ar:"المحفظة الدنماركية", es:"La Cartera Danesa", da:"Den Danske Tegnebog", de:"Die dänische Geldbörse" },
+    intro: { en:"Understand how Danish money flows — from salary to pension to MobilePay — and make every krone work for you.", fr:"Comprendre comment l'argent circule au Danemark.", ar:"افهم كيف يتدفق المال الدنماركي.", es:"Entiende cómo fluye el dinero danés.", da:"Forstå hvordan dansk økonomi fungerer.", de:"Verstehen Sie, wie das dänische Geld fließt — vom Gehalt über die Rente bis zu MobilePay — und lassen Sie jede Krone für sich arbeiten." },
     readTime: "14 min",
     lastUpdated: "2025-01",
     sections: [
@@ -1252,7 +1460,17 @@ es:`<p><strong>NemKonto</strong> (literalmente "cuenta fácil") no es una cuenta
   <li><span class="step-num">3</span>Selecciona tu cuenta de la lista y confirma</li>
 </ol>
 <p>También puedes designar tu NemKonto directamente a través de la app o el sitio web de tu banco. Nordea, Danske Bank y Lunar lo permiten desde la app.</p>
-<a href="https://www.nemkonto.dk" target="_blank" rel="noopener">→ Registra o actualiza tu NemKonto (oficial)</a>` }
+<a href="https://www.nemkonto.dk" target="_blank" rel="noopener">→ Registra o actualiza tu NemKonto (oficial)</a>`,
+de:`<p><strong>NemKonto</strong> (woertlich "Einfach-Konto") ist kein separates Bankkonto — es ist die Bezeichnung, die Sie einem bestehenden Konto geben, damit die daenische Regierung weiss, wohin sie Ihnen Geld senden soll. Steuererstattungen, Kindergeld, Rentenzahlungen, Arbeitslosengeld — alles geht auf Ihre NemKonto.</p>
+<p class="callout-warning"><strong>Dies ist Pflicht.</strong> Jede Person mit einer CPR-Nummer muss eine NemKonto haben. Ohne sie kann die Regierung Ihnen buchstaeblich nichts zahlen, und Steuererstattungen koennen sich monatelang verzoegern.</p>
+<p><strong>So registrieren Sie Ihre NemKonto:</strong></p>
+<ol class="step-list">
+  <li><span class="step-num">1</span>Eroeffnen Sie Ihr daenisches Bankkonto (erfordert bei den meisten Banken eine CPR-Nummer)</li>
+  <li><span class="step-num">2</span>Gehen Sie zu <a href="https://www.nemkonto.dk" target="_blank" rel="noopener">nemkonto.dk</a> und melden Sie sich mit MitID an</li>
+  <li><span class="step-num">3</span>Waehlen Sie Ihr Konto aus der Liste und bestaetigen Sie</li>
+</ol>
+<p>Sie koennen Ihre NemKonto auch direkt ueber die App oder Website Ihrer Bank festlegen. Nordea, Danske Bank und Lunar ermoeglichen dies alle in der App.</p>
+<a href="https://www.nemkonto.dk" target="_blank" rel="noopener">→ NemKonto registrieren oder aktualisieren (offiziell)</a>` }
       },
       {
         icon: "📊",
@@ -1318,6 +1536,7 @@ ar:`<p><strong>skattekort</strong> (بطاقة الضريبة) يُخبر صاح
 <p class="callout-warning">حدّث forskudsopgørelse عند تغيّر ظروفك — وظيفة جديدة، زيادة راتب، بدء شركة، دخل إيجار. الخطأ يعني إما فاتورة كبيرة أو استرداد في نهاية العام. لا يُعاقبك SKAT على التعديل الاستباقي.</p>
 <a href="https://skat.dk/en-us/individuals/tax-card-and-withholding-tax/" target="_blank" rel="noopener">← بطاقة الضريبة على skat.dk (رسمي، إنجليزي)</a>`,
 es:`<p>Tu <strong>skattekort</strong> (tarjeta fiscal) le indica a tu empleador exactamente cuánto impuesto deducir de tu salario. Sin ella, tu empleador está legalmente obligado a deducir el <strong>55%</strong> — la tasa máxima de emergencia. No es una penalización; es el valor por defecto del sistema cuando no existe tarjeta. Pero perderás la mayor parte de tu primer sueldo si no lo has resuelto.</p>
+
 <p><strong>Obtén tu skattekort inmediatamente después de recibir tu número CPR:</strong></p>
 <ol class="step-list">
   <li><span class="step-num">1</span>Ve a <a href="https://skat.dk/en-us" target="_blank" rel="noopener">skat.dk</a> e inicia sesión con MitID</li>
@@ -1331,7 +1550,22 @@ es:`<p>Tu <strong>skattekort</strong> (tarjeta fiscal) le indica a tu empleador 
   <li><strong>Bikort</strong> — para un segundo empleo. Tu empleador principal usa tu tarjeta principal; el empleador secundario usa el bikort (tipo fijo del 40% sin deducción).</li>
 </ul>
 <p class="callout-warning">Actualiza tu forskudsopgørelse si cambian tus circunstancias — nuevo trabajo, aumento de sueldo, inicio de empresa, ingresos por alquiler. Equivocarse significa una gran factura o una devolución a fin de año. SKAT no te penaliza por ajustar proactivamente.</p>
-<a href="https://skat.dk/en-us/individuals/tax-card-and-withholding-tax/" target="_blank" rel="noopener">→ Tarjeta fiscal en skat.dk (oficial, inglés)</a>` }
+<a href="https://skat.dk/en-us/individuals/tax-card-and-withholding-tax/" target="_blank" rel="noopener">→ Tarjeta fiscal en skat.dk (oficial, inglés)</a>`,
+de:`<p>Ihr <strong>skattekort</strong> (Steuerkarte) teilt Ihrem Arbeitgeber genau mit, wie viel Steuer von Ihrem Gehalt einzubehalten ist. Ohne sie ist Ihr Arbeitgeber gesetzlich verpflichtet, <strong>55%</strong> einzubehalten — der maximale Notfall-Steuersatz. Das ist keine Strafe; es ist der Systemstandard, wenn keine Karte vorhanden ist. Aber Sie verlieren den groessten Teil Ihres ersten Gehalts, wenn Sie das nicht geregelt haben.</p>
+<p><strong>Holen Sie sich Ihre skattekort sofort nach Erhalt Ihrer CPR-Nummer:</strong></p>
+<ol class="step-list">
+  <li><span class="step-num">1</span>Gehen Sie zu <a href="https://skat.dk/en-us" target="_blank" rel="noopener">skat.dk</a> und melden Sie sich mit MitID an</li>
+  <li><span class="step-num">2</span>Klicken Sie auf "Tax card and withholding tax" (Skattekort og traekprocent)</li>
+  <li><span class="step-num">3</span>Pruefen Sie Ihre vorlaeufige Einkommensscha etzung (forskudsopgorelse) — SKATs Schaetzung dessen, was Sie verdienen und schulden werden</li>
+  <li><span class="step-num">4</span>Ihr Arbeitgeber erhaelt Ihre Steuerkarte automatisch — Sie muessen sie nicht manuell senden</li>
+</ol>
+<p><strong>Zwei Arten von Steuerkarten:</strong></p>
+<ul>
+  <li><strong>Frikort</strong> — wenn Ihr Gesamtjahreseinkommen unter 51.600 DKK liegt (personfradrag 2025). Sie zahlen bis zu diesem Betrag null Steuer.</li>
+  <li><strong>Bikort</strong> — fuer eine Nebenstelle. Ihr Hauptarbeitgeber verwendet Ihre Hauptkarte; der Nebenarbeitgeber verwendet den bikort (Pauschalsatz 40% ohne Freibetrag).</li>
+</ul>
+<p class="callout-warning">Aktualisieren Sie Ihre forskudsopgorelse, wenn sich Ihre Umstaende aendern — neuer Job, Gehaltserhoe hung, Unternehmensgruendung, Mieteinnahmen. Fehler bedeuten entweder eine grosse Rechnung oder eine Erstattung am Jahresende. SKAT bestraft Sie nicht fuer proaktive Anpassungen.</p>
+<a href="https://skat.dk/en-us/individuals/tax-card-and-withholding-tax/" target="_blank" rel="noopener">→ Steuerkarte auf skat.dk (offiziell, Englisch)</a>` }
       },
       {
         icon: "📋",
@@ -1420,7 +1654,24 @@ es:`<p>Cada año en <strong>marzo</strong>, SKAT publica tu <strong>årsopgørel
   <li>Número rojo = debes dinero a SKAT (se deduce de NemKonto, o puedes pagar manualmente)</li>
 </ul>
 <p>También puedes presentar deducciones que faltaron manualmente en skat.dk con hasta 3 años de retroactividad. Muchos recién llegados pierden deducciones en su primer año y pueden reclamarlas después.</p>
-<a href="https://skat.dk/en-us/individuals/the-annual-income-assessment/" target="_blank" rel="noopener">→ Guía de årsopgørelse (SKAT oficial)</a>` }
+<a href="https://skat.dk/en-us/individuals/the-annual-income-assessment/" target="_blank" rel="noopener">→ Guía de årsopgørelse (SKAT oficial)</a>`,
+de:`<p>Jedes Jahr im <strong>Maerz</strong> veroef fentlicht SKAT Ihre <strong>aarsopgoerelse</strong> (Jahressteuerbescheid) — die endgueltige Steuerklaerung fuer das vergangene Jahr. Sie vergleicht, was Sie tatsaechlich verdient und gezahlt haben, mit Ihrer Schaetzung, und berechnet, ob Sie Geld schulden oder eine Erstattung erhalten.</p>
+<p><strong>Die gute Nachricht:</strong> Die meisten Menschen erhalten eine Erstattung. Daenen erhalten durchschnittlich etwa 5.000–8.000 DKK pro Jahr zurueck.</p>
+<p><strong>Haeufige Gruende fuer eine Erstattung:</strong></p>
+<ul>
+  <li>Fahrtkostenabzug (befordringsfradrag) — wenn Ihr Arbeitsweg ueber 24 km in eine Richtung betraegt, koennen Sie die ueberschuessigen Kilometer abziehen</li>
+  <li>Zinsen auf Darlehen (rentefradrag)</li>
+  <li>Gewerkschaftsbeitraege (fagforeningskontingent)</li>
+  <li>A-kasse-Beitraege (Arbeitslosenversicherung)</li>
+  <li>Spendenabzuege (bis zu 17.200 DKK/Jahr, 2025)</li>
+</ul>
+<p><strong>So lesen Sie Ihre aarsopgoerelse:</strong></p>
+<ul>
+  <li>Gruene Zahl = Erstattung (wird im April automatisch auf NemKonto ueberwiesen)</li>
+  <li>Rote Zahl = Sie schulden SKAT Geld (wird von NemKonto abgezogen, oder Sie zahlen manuell)</li>
+</ul>
+<p>Sie koennen fehlende Abzuege auch manuell auf skat.dk bis zu 3 Jahre rueckwirkend einreichen. Viele Neuankoemmlinge versaeumen Abzuege in ihrem ersten Jahr und koennen diese nachfordern.</p>
+<a href="https://skat.dk/en-us/individuals/the-annual-income-assessment/" target="_blank" rel="noopener">→ Anleitung zur aarsopgoerelse (SKAT offiziell)</a>` }
       },
       {
         icon: "📱",
@@ -1499,7 +1750,22 @@ es:`<p><strong>MobilePay</strong> lo usan aproximadamente 4,4 millones de danese
   <li>Pagos a negocios: varía según el comercio</li>
 </ul>
 <p><strong>También puedes usar MobilePay para:</strong> dividir el alquiler con compañeros de piso, pagar a la canguro, comprar en Facebook Marketplace, aparcamiento (MobilePay Parking), y donar a organizaciones benéficas.</p>
-<a href="https://mobilepay.dk/hjaelp/mobilepay-bruger" target="_blank" rel="noopener">→ Ayuda de MobilePay (disponible en inglés)</a>` }
+<a href="https://mobilepay.dk/hjaelp/mobilepay-bruger" target="_blank" rel="noopener">→ Ayuda de MobilePay (disponible en inglés)</a>`,
+de:`<p><strong>MobilePay</strong> wird von rund 4,4 Millionen Dänen genutzt — fast 75 % der gesamten Bevölkerung. Ohne MobilePay können Sie keine Rechnungen im Restaurant aufteilen, nicht auf Märkten bezahlen, in vielen Städten nicht parken und kein Geld an dänische Freunde senden. Es ist keine Option, sondern eine Notwendigkeit.</p>
+<p><strong>So erhalten Sie MobilePay:</strong></p>
+<ol class="step-list">
+  <li><span class="step-num">1</span>Laden Sie MobilePay aus dem App Store oder von Google Play herunter</li>
+  <li><span class="step-num">2</span>Verknüpfen Sie Ihre dänische Telefonnummer und Ihr dänisches Bankkonto</li>
+  <li><span class="step-num">3</span>Verifizieren Sie sich mit MitID</li>
+</ol>
+<p><strong>Kosten (2025):</strong></p>
+<ul>
+  <li>Geld empfangen: kostenlos</li>
+  <li>Geld senden: kostenlos bis 5.000 DKK/Monat; 1,75 % darüber hinaus (Mindestgebühr 1 DKK)</li>
+  <li>Zahlungen an Unternehmen: variiert je nach Händler</li>
+</ul>
+<p><strong>MobilePay können Sie auch nutzen für:</strong> das Aufteilen der Miete mit Mitbewohnern, die Bezahlung von Babysittern, Einkäufe über Facebook Marketplace, Parkgebühren (MobilePay Parking) und Spenden an gemeinnützige Organisationen.</p>
+<a href="https://mobilepay.dk/hjaelp/mobilepay-bruger" target="_blank" rel="noopener">→ MobilePay-Hilfe (Englisch verfügbar)</a>` }
       },
       {
         icon: "🏛️",
@@ -1548,7 +1814,16 @@ es:`<p>El sistema de pensiones danés se basa en tres pilares distintos. Entende
   <tr><td><strong>Arbejdsmarkedspension</strong></td><td>Pensión laboral del empleador — la más importante</td><td>Empleador (normalmente 2/3) + empleado (1/3)</td><td>Normalmente el 12–17% del salario bruto total</td></tr>
 </table>
 <p class="callout-warning"><strong>Importante para los recién llegados:</strong> Tu pensión laboral te pertenece. Si te vas de Dinamarca, puedes llevártela o dejarla invertida. Pero si trabajas aquí sin unirte a un plan de pensiones (por ejemplo, como autónomo), debes gestionarlo tú mismo. Las aportaciones a la pensión también son deducibles fiscalmente.</p>
-<p>Puedes ver todos tus ahorros de pensión en un solo lugar en <a href="https://www.pensionsinfo.dk" target="_blank" rel="noopener">pensionsinfo.dk</a>.</p>` }
+<p>Puedes ver todos tus ahorros de pensión en un solo lugar en <a href="https://www.pensionsinfo.dk" target="_blank" rel="noopener">pensionsinfo.dk</a>.</p>`,
+de:`<p>Das dänische Rentensystem basiert auf drei verschiedenen Säulen. Das Verständnis aller drei hat erhebliche Auswirkungen auf Ihre Altersvorsorge.</p>
+<table class="info-table">
+  <tr><th>Säule</th><th>Was ist das</th><th>Wer zahlt</th><th>Betrag (2025)</th></tr>
+  <tr><td><strong>Folkepension</strong></td><td>Staatliche Rente, ab 67 Jahren (steigt 2030 auf 68)</td><td>Der Staat (steuerfinanziert)</td><td>~14.328 DKK/Monat (alleinstehend, voll)</td></tr>
+  <tr><td><strong>ATP</strong></td><td>Obligatorische Zusatzrente, wird automatisch abgezogen</td><td>Arbeitnehmer + Arbeitgeber</td><td>~94 DKK/Monat (Arbeitnehmerbeitrag)</td></tr>
+  <tr><td><strong>Arbejdsmarkedspension</strong></td><td>Betriebliche Altersvorsorge des Arbeitgebers — die wichtigste Säule</td><td>Arbeitgeber (in der Regel 2/3) + Arbeitnehmer (1/3)</td><td>Typischerweise 12–17 % des Bruttogehalts insgesamt</td></tr>
+</table>
+<p class="callout-warning"><strong>Wichtig für Neuankömmlinge:</strong> Ihre betriebliche Altersvorsorge gehört Ihnen. Wenn Sie Dänemark verlassen, können Sie sie mitnehmen oder investiert lassen. Wenn Sie hier jedoch ohne Mitgliedschaft in einem Pensionsplan arbeiten (z. B. als Selbstständige/r), müssen Sie selbst vorsorgen. Rentenbeiträge sind zudem steuerlich absetzbar.</p>
+<p>Alle Ihre Rentenersparnisse können Sie auf einen Blick einsehen auf <a href="https://www.pensionsinfo.dk" target="_blank" rel="noopener">pensionsinfo.dk</a>.</p>` }
       },
       {
         icon: "🏦",
@@ -1602,7 +1877,17 @@ es:`<p>La mayoría de los bancos daneses exigen un número CPR para abrir una cu
   <tr><td><strong>Arbejdernes Landsbank</strong></td><td>Inglés limitado</td><td>~40 DKK</td><td>Trabajadores, miembros de sindicatos</td></tr>
   <tr><td><strong>Wise (internacional)</strong></td><td>Inglés completo</td><td>Gratis + comisiones bajas</td><td>Transferencias internacionales mientras esperas tu cuenta danesa</td></tr>
 </table>
-<p>Abre tu cuenta y luego ve inmediatamente a <a href="https://www.nemkonto.dk" target="_blank" rel="noopener">nemkonto.dk</a> para registrarla como tu NemKonto.</p>` }
+<p>Abre tu cuenta y luego ve inmediatamente a <a href="https://www.nemkonto.dk" target="_blank" rel="noopener">nemkonto.dk</a> para registrarla como tu NemKonto.</p>`,
+de:`<p>Die meisten dänischen Banken verlangen eine CPR-Nummer, um ein vollständiges Konto zu eröffnen. Hier ist der ehrliche Vergleich:</p>
+<table class="info-table">
+  <tr><th>Bank</th><th>Englischer Support</th><th>Monatliche Gebühr</th><th>Am besten für</th></tr>
+  <tr><td><strong>Lunar</strong></td><td>100 % englische App</td><td>Kostenlos (Basis) / 49 DKK (Plus)</td><td>Neuankömmlinge, digitale Nutzung, anfangs teils ohne CPR möglich</td></tr>
+  <tr><td><strong>Nordea</strong></td><td>Gutes Englisch</td><td>~0–49 DKK</td><td>Internationale Überweisungen, etablierte Fachkräfte</td></tr>
+  <tr><td><strong>Danske Bank</strong></td><td>Gutes Englisch</td><td>~0–79 DKK</td><td>Vollservice, weit verbreitet akzeptiert</td></tr>
+  <tr><td><strong>Arbejdernes Landsbank</strong></td><td>Eingeschränktes Englisch</td><td>~40 DKK</td><td>Arbeitnehmer, Gewerkschaftsmitglieder</td></tr>
+  <tr><td><strong>Wise (international)</strong></td><td>Volles Englisch</td><td>Kostenlos + niedrige Gebühren</td><td>Internationale Überweisungen, solange das dänische Konto noch aussteht</td></tr>
+</table>
+<p>Eröffnen Sie Ihr Konto und gehen Sie anschließend sofort auf <a href="https://www.nemkonto.dk" target="_blank" rel="noopener">nemkonto.dk</a>, um es als Ihre NemKonto zu registrieren.</p>` }
       }
     ],
     checklist: [
@@ -1616,9 +1901,9 @@ es:`<p>La mayoría de los bancos daneses exigen un número CPR para abrir una cu
   },
   {
     id: 5, icon: "🏥", color: "#2E6DA4",
-    title: { en:"Healthcare", fr:"Santé", ar:"الرعاية الصحية", es:"Salud", da:"Sundhed" },
-    subtitle: { en:"Your Body in Denmark", fr:"Votre Corps au Danemark", ar:"جسدك في الدنمارك", es:"Tu Cuerpo en Dinamarca", da:"Din krop i Danmark" },
-    intro: { en:"Denmark has one of the best healthcare systems in the world. It's free. Here's how to use it.", fr:"Le Danemark possède l'un des meilleurs systèmes de santé au monde. Il est gratuit.", ar:"الدنمارك لديها أحد أفضل أنظمة الرعاية الصحية في العالم. إنها مجانية.", es:"Dinamarca tiene uno de los mejores sistemas de salud del mundo. Es gratuito.", da:"Danmark har et af verdens bedste sundhedssystemer. Det er gratis." },
+    title: { en:"Healthcare", fr:"Santé", ar:"الرعاية الصحية", es:"Salud", da:"Sundhed", de:"Gesundheitsversorgung" },
+    subtitle: { en:"Your Body in Denmark", fr:"Votre Corps au Danemark", ar:"جسدك في الدنمارك", es:"Tu Cuerpo en Dinamarca", da:"Din krop i Danmark", de:"Ihr Körper in Dänemark" },
+    intro: { en:"Denmark has one of the best healthcare systems in the world. It's free. Here's how to use it.", fr:"Le Danemark possède l'un des meilleurs systèmes de santé au monde. Il est gratuit.", ar:"الدنمارك لديها أحد أفضل أنظمة الرعاية الصحية في العالم. إنها مجانية.", es:"Dinamarca tiene uno de los mejores sistemas de salud del mundo. Es gratuito.", da:"Danmark har et af verdens bedste sundhedssystemer. Det er gratis.", de:"Dänemark verfügt über eines der besten Gesundheitssysteme der Welt. Es ist kostenlos. So nutzen Sie es." },
     readTime: "12 min",
     lastUpdated: "2025-01",
     sections: [
@@ -1649,7 +1934,12 @@ es:`<p>Tu <strong>sundhedskort</strong> (tarjeta del seguro médico) es la tarje
 <p>Contiene tu número CPR, tu nombre y, lo más importante, el nombre y la dirección de <strong>tu médico de cabecera asignado (praktiserende læge)</strong>.</p>
 <p class="callout-warning">Hasta que recibas tu sundhedskort, <strong>no estás cubierto</strong> por el sistema de salud público danés. Si necesitas un médico antes de que llegue: acude a una clínica de atención urgente (lægevagten), llama al 1813 para orientarte, o ve a un médico privado y solicita el reembolso más adelante a través de SKAT. Comprueba también si el seguro de tu país de origen cubre el período de transición.</p>
 <p>Si pierdes o dañas la tarjeta: pide un reemplazo en <a href="https://sundhedskort.dk" target="_blank" rel="noopener">sundhedskort.dk</a> con tu MitID. La nueva tarjeta llega en menos de una semana.</p>
-<a href="https://www.sundhed.dk/borger/patienthaandbogen/sundhedssystemet/sygesikring/sygesikringsbevis/" target="_blank" rel="noopener">→ Sobre el sundhedskort (sundhed.dk oficial)</a>` }
+<a href="https://www.sundhed.dk/borger/patienthaandbogen/sundhedssystemet/sygesikring/sygesikringsbevis/" target="_blank" rel="noopener">→ Sobre el sundhedskort (sundhed.dk oficial)</a>`,
+de:`<p>Ihr <strong>sundhedskort</strong> (Krankenversicherungskarte) ist die gelbe Plastikkarte, die Ihren Anspruch auf kostenlose dänische Gesundheitsversorgung belegt. Sie kommt automatisch per Post, in der Regel 2–4 Wochen nach Ausstellung Ihrer CPR-Nummer.</p>
+<p>Sie enthält Ihre CPR-Nummer, Ihren Namen und — besonders wichtig — Name und Adresse Ihres <strong>zugeteilten Hausarztes (praktiserende læge)</strong>.</p>
+<p class="callout-warning">Bis Sie Ihr sundhedskort erhalten, sind Sie <strong>nicht</strong> vom dänischen öffentlichen Gesundheitssystem abgedeckt. Falls Sie vorher einen Arzt benötigen: besuchen Sie eine Notaufnahme-Klinik (lægevagten), rufen Sie 1813 für Beratung an, oder konsultieren Sie einen Privatarzt und fordern Sie die Kosten später über SKAT zurück. Prüfen Sie außerdem, ob Ihre Krankenversicherung aus dem Heimatland die Übergangszeit abdeckt.</p>
+<p>Bei Verlust oder Beschädigung der Karte: Bestellen Sie auf <a href="https://sundhedskort.dk" target="_blank" rel="noopener">sundhedskort.dk</a> mit MitID einen Ersatz. Die neue Karte kommt innerhalb einer Woche an.</p>
+<a href="https://www.sundhed.dk/borger/patienthaandbogen/sundhedssystemet/sygesikring/sygesikringsbevis/" target="_blank" rel="noopener">→ Über das sundhedskort (sundhed.dk offiziell)</a>` }
       },
       {
         icon: "👨‍⚕️",
@@ -1708,7 +1998,18 @@ es:`<p>Tu médico de cabecera (GP) es el <strong>guardián de todo el sistema sa
 </ol>
 <p><strong>Qué cubre tu médico (todo gratis con el sundhedskort):</strong> consultas, derivaciones a especialistas, recetas, análisis de sangre, cirugía menor básica, derivaciones de salud mental, vacunas y atención preventiva.</p>
 <p><strong>Reservar citas:</strong> a través de la app <strong>Min Læge</strong>, por teléfono o por internet en el sitio web del consultorio. Muchos médicos ofrecen primero consultas por teléfono o videollamada. Tiempo de espera para una cita rutinaria: normalmente el mismo día o hasta 3 días.</p>
-<p>Si no encuentras médico disponible en tu zona, llama al Borgerservice de tu municipio — pueden ayudarte a asignarte uno.</p>` }
+<p>Si no encuentras médico disponible en tu zona, llama al Borgerservice de tu municipio — pueden ayudarte a asignarte uno.</p>`,
+de:`<p>Ihr Hausarzt (praktiserende læge) ist der <strong>Türhüter des gesamten dänischen Gesundheitssystems</strong>. Sie gehen nicht direkt zu einem Facharzt — Sie gehen immer zuerst über Ihren Hausarzt. Das ist keine Bürokratie; es ist ein gut durchdachtes System, das sicherstellt, dass Sie die richtige Versorgung ohne Zeitverlust erhalten.</p>
+<p><strong>So registrieren Sie sich bei einem Hausarzt:</strong></p>
+<ol class="step-list">
+  <li><span class="step-num">1</span>Gehen Sie auf <a href="https://www.sundhed.dk" target="_blank" rel="noopener">sundhed.dk</a> und klicken Sie auf "Find a doctor"</li>
+  <li><span class="step-num">2</span>Suchen Sie nach Ihrer Postleitzahl — Sie müssen sich bei einem Arzt in Ihrer Region registrieren</li>
+  <li><span class="step-num">3</span>Prüfen Sie, ob die Praxis neue Patienten aufnimmt ("optaget" = voll belegt, "ledig" = verfügbar)</li>
+  <li><span class="step-num">4</span>Kontaktieren Sie die Praxis zur Anmeldung — online oder telefonisch</li>
+</ol>
+<p><strong>Was Ihr Hausarzt abdeckt (alles kostenlos mit dem sundhedskort):</strong> Konsultationen, Überweisungen zu Fachärzten, Rezepte, Blutuntersuchungen, kleine Eingriffe, Überweisungen für psychische Gesundheit, Impfungen und Vorsorgeuntersuchungen.</p>
+<p><strong>Termine buchen:</strong> über die App <strong>Min Læge</strong>, telefonisch oder online über die Praxis-Website. Viele Hausärzte bieten zunächst Telefon- oder Videokonsultationen an. Wartezeit für einen Routinetermin: in der Regel am gleichen Tag bis 3 Tage.</p>
+<p>Wenn Sie in Ihrer Gegend keinen freien Hausarzt finden, wenden Sie sich an den Borgerservice (Bürgerservice) Ihrer Gemeinde — sie können Ihnen bei der Zuweisung helfen.</p>` }
       },
       {
         icon: "🚨",
@@ -1757,7 +2058,16 @@ es:`<p>Esto es una de las cosas más importantes que debes saber en Dinamarca. L
 </table>
 <p><strong>1813</strong> lo gestiona Region Hovedstaden (región de Copenhague). Fuera de Copenhague, llama a tu <strong>lægevagt</strong> local (servicio médico fuera de horario). El número varía según la región — consulta en <a href="https://www.sundhed.dk" target="_blank" rel="noopener">sundhed.dk</a>.</p>
 <p class="callout-warning">Llamar al 112 por una no-emergencia desperdicia recursos de emergencia y está muy mal visto socialmente en Dinamarca. Llama primero al 1813 para todo lo que no suponga un riesgo vital inmediato. Ellos enviarán una ambulancia si la necesitas.</p>
-<p><strong>Urgencias hospitalarias (skadestue):</strong> También puedes ir directamente a urgencias de un hospital, pero el 1813 suele derivarte a una opción más rápida.</p>` }
+<p><strong>Urgencias hospitalarias (skadestue):</strong> También puedes ir directamente a urgencias de un hospital, pero el 1813 suele derivarte a una opción más rápida.</p>`,
+de:`<p>Das ist eines der wichtigsten Dinge, die Sie in Dänemark wissen müssen. Die beiden Nummern dienen völlig unterschiedlichen Zwecken:</p>
+<table class="info-table">
+  <tr><th>Nummer</th><th>Für</th><th>Reaktion</th><th>Wann</th></tr>
+  <tr><td><strong style="font-size:1.1rem">112</strong></td><td>Polizei, Feuerwehr, Krankenwagen</td><td>Sofortiger Einsatz</td><td>NUR lebensbedrohliche Notfälle</td></tr>
+  <tr><td><strong style="font-size:1.1rem">1813</strong></td><td>Medizinische Beratung und dringende (nicht lebensbedrohliche) Versorgung</td><td>Krankenschwester oder Arzt telefonisch, dann Weiterleitung</td><td>Krank oder verletzt, aber nicht lebensbedrohlich</td></tr>
+</table>
+<p><strong>1813</strong> wird von der Region Hauptstadt (Region Hoofdstaden, Kopenhagener Region) betrieben. Außerhalb Kopenhagens rufen Sie Ihren lokalen <strong>lægevagt</strong> (ärztlicher Bereitschaftsdienst) an. Die Nummer variiert je nach Region — prüfen Sie auf <a href="https://www.sundhed.dk" target="_blank" rel="noopener">sundhed.dk</a>.</p>
+<p class="callout-warning">Den Notruf 112 für Nicht-Notfälle anzurufen verschwendet Einsatzressourcen und gilt in Dänemark als sozial sehr unangemessen. Rufen Sie für alles, was nicht unmittelbar lebensbedrohlich ist, zuerst 1813 an. Die Leitstelle schickt einen Krankenwagen, wenn nötig.</p>
+<p><strong>Krankenhaus-Notaufnahme (skadestue):</strong> Sie können auch direkt in eine Notaufnahme gehen, aber 1813 wird Sie oft an eine schnellere Option weiterleiten.</p>` }
       },
       {
         icon: "🦷",
@@ -1846,7 +2156,24 @@ es:`<p><strong>Esto sorprende a casi todos los recién llegados:</strong> la ate
   <li>Tandlægehøjskolen (escuelas de odontología) en Copenhague y Aarhus ofrecen tratamientos a ~50% del precio normal, realizados por estudiantes supervisados</li>
   <li>Algunos paquetes de seguro médico de empresa incluyen odontología</li>
 </ul>
-<p>Urgencia dental: llama al <strong>70 11 31 31</strong> (fuera de horario)</p>` }
+<p>Urgencia dental: llama al <strong>70 11 31 31</strong> (fuera de horario)</p>`,
+de:`<p><strong>Das überrascht fast alle Neuankömmlinge:</strong> Zahnbehandlungen in Dänemark sind für Erwachsene NICHT durch das öffentliche Gesundheitssystem abgedeckt. Sie zahlen aus eigener Tasche, und die Preise bei dänischen Zahnärzten sind hoch.</p>
+<p><strong>Typische Kosten (Schätzungen 2025):</strong></p>
+<ul>
+  <li>Routine-Kontrolluntersuchung und Reinigung: 600–1.400 DKK</li>
+  <li>Füllung (Komposit): 600–1.200 DKK pro Zahn</li>
+  <li>Wurzelbehandlung: 3.000–7.000 DKK</li>
+  <li>Krone: 5.000–12.000 DKK</li>
+  <li>Zahnextraktion: 600–1.500 DKK</li>
+</ul>
+<p><strong>Was kostenlos IST:</strong> Zahnversorgung für Kinder bis 18 Jahre. Schulzahnuntersuchungen und -behandlungen sind inbegriffen.</p>
+<p><strong>So senken Sie die Kosten:</strong></p>
+<ul>
+  <li><strong>Sygeforsikring "denmark"</strong> (Gruppe 1) erstattet 40–60 % der meisten Zahnkosten — treten Sie auf <a href="https://www.sygeforsikring.dk" target="_blank" rel="noopener">sygeforsikring.dk</a> für ~130–175 DKK/Monat bei</li>
+  <li>Tandlægehøjskolen (Zahnmedizinische Hochschulen) in Kopenhagen und Aarhus bieten Behandlungen zu ~50 % des normalen Preises an, durchgeführt von Studierenden unter Aufsicht</li>
+  <li>Manche betrieblichen Krankenversicherungen schließen Zahnbehandlungen ein</li>
+</ul>
+<p>Zahnärztlicher Notfall: Rufen Sie <strong>70 11 31 31</strong> an (außerhalb der Öffnungszeiten)</p>` }
       },
       {
         icon: "🧠",
@@ -1925,7 +2252,22 @@ es:`<p>Mudarse a otro país es una de las experiencias psicológicamente más ex
   <li><strong>Expat Counselling Copenhagen:</strong> terapia en inglés, privada, ~900–1.400 DKK/sesión</li>
 </ul>
 <p>Muchos expatriados encuentran genuinamente difícil adaptarse a la cultura social danesa (reservada, indirecta, difícil de penetrar). Esto es normal, no un fracaso personal. Espera entre 1 y 2 años para construir una red social de verdad.</p>
-<a href="https://www.sundhed.dk/borger/patienthaandbogen/psyke/" target="_blank" rel="noopener">→ Recursos de salud mental (sundhed.dk)</a>` }
+<a href="https://www.sundhed.dk/borger/patienthaandbogen/psyke/" target="_blank" rel="noopener">→ Recursos de salud mental (sundhed.dk)</a>`,
+de:`<p>In ein anderes Land zu ziehen ist eine der psychologisch anspruchsvollsten Erfahrungen, die ein Mensch machen kann. Dänemark nimmt psychische Gesundheit ernst. So funktioniert das System:</p>
+<p><strong>Kostenlos über das öffentliche System:</strong></p>
+<ul>
+  <li><strong>Ihr Hausarzt</strong> ist der erste Anlaufpunkt — er kann Sie bei Bedarf an einen Psychologen (psykolog) überweisen</li>
+  <li>Bezuschusste Psychologie (ydernummer): Mit einer Hausarztüberweisung für bestimmte Erkrankungen zahlen Sie ~400 DKK pro Sitzung; SKAT übernimmt den Rest</li>
+  <li>Psychiatrische Behandlung: vollständig kostenlos bei Überweisung durch den Hausarzt, wenn die Schwere es erfordert</li>
+</ul>
+<p><strong>Krisenunterstützung (kostenlos, 24/7):</strong></p>
+<ul>
+  <li><strong>Livslinien:</strong> 70 201 201 — dänischsprachige Krisenhotline für psychische Gesundheit</li>
+  <li><strong>Headspace Denmark:</strong> kostenlose Beratung für junge Menschen (12–25)</li>
+  <li><strong>Expat Counselling Copenhagen:</strong> englischsprachige Therapie, privat, ~900–1.400 DKK/Sitzung</li>
+</ul>
+<p>Viele Expats empfinden die Anpassung an die dänische Sozialkultur (reserviert, indirekt, schwer zugänglich) als echte Herausforderung. Das ist normal und kein persönliches Versagen. Rechnen Sie mit 1–2 Jahren, um ein echtes soziales Netzwerk aufzubauen.</p>
+<a href="https://www.sundhed.dk/borger/patienthaandbogen/psyke/" target="_blank" rel="noopener">→ Ressourcen für psychische Gesundheit (sundhed.dk)</a>` }
       },
       {
         icon: "🛡️",
@@ -1989,7 +2331,19 @@ es:`<p><strong>Sygeforsikring "denmark"</strong> es un fondo de seguro mutuo sin
   <li>Ayudas médicas y dispositivos ortopédicos</li>
 </ul>
 <p class="callout-warning"><strong>Únete en los primeros 6 meses tras tu llegada a Dinamarca</strong> — existe un período de carencia, y unirte pronto te da el máximo beneficio. Cuanto más esperes, más facturas dentales pagarás de tu bolsillo.</p>
-<a href="https://www.sygeforsikring.dk/english" target="_blank" rel="noopener">→ Únete a Sygeforsikring "denmark" (página en inglés)</a>` }
+<a href="https://www.sygeforsikring.dk/english" target="_blank" rel="noopener">→ Únete a Sygeforsikring "denmark" (página en inglés)</a>`,
+de:`<p><strong>Sygeforsikring "denmark"</strong> ist ein gemeinnütziger Versicherungsverein auf Gegenseitigkeit, dem mehr als 2,3 Millionen Dänen angehören. Für einen kleinen monatlichen Beitrag erstattet er einen Teil der Ausgaben, die das öffentliche System nicht übernimmt.</p>
+<p><strong>Was abgedeckt ist (Gruppe 1, ~130–175 DKK/Monat, 2025):</strong></p>
+<ul>
+  <li>Zahnbehandlung: 40–60 % Erstattung bei den meisten Behandlungen</li>
+  <li>Brillen und Kontaktlinsen: Beitrag von 400–800 DKK/Jahr</li>
+  <li>Physiotherapie: Teilerstattung</li>
+  <li>Chiropraktische Behandlung: Teilerstattung</li>
+  <li>Psychologie (ohne Hausarztüberweisung): Teilerstattung</li>
+  <li>Medizinische Hilfsmittel und orthopädische Geräte</li>
+</ul>
+<p class="callout-warning"><strong>Treten Sie innerhalb von 6 Monaten nach Ihrer Ankunft in Dänemark bei</strong> — es gilt eine Wartezeit-Regelung, und ein früher Beitritt bringt den maximalen Vorteil. Je länger Sie warten, desto mehr Zahnarztkosten zahlen Sie vor der Deckung selbst.</p>
+<a href="https://www.sygeforsikring.dk/english" target="_blank" rel="noopener">→ Sygeforsikring "denmark" beitreten (Seite auf Englisch)</a>` }
       }
     ],
     checklist: [
@@ -2003,9 +2357,9 @@ es:`<p><strong>Sygeforsikring "denmark"</strong> es un fondo de seguro mutuo sin
   },
   {
     id: 6, icon: "👧", color: "#6A9E6A",
-    title: { en:"Children & Family", fr:"Enfants et Famille", ar:"الأطفال والعائلة", es:"Niños y Familia", da:"Børn og Familie" },
-    subtitle: { en:"Raising Little Vikings", fr:"Élever de Petits Vikings", ar:"تربية فايكنج صغار", es:"Criando Pequeños Vikingos", da:"At opdrage små vikinger" },
-    intro: { en:"Denmark is arguably the best country in the world to raise children. Here's everything you need to know.", fr:"Le Danemark est sans doute le meilleur pays du monde pour élever des enfants.", ar:"الدنمارك هي على الأرجح أفضل دولة في العالم لتربية الأطفال.", es:"Dinamarca es posiblemente el mejor país del mundo para criar niños.", da:"Danmark er sandsynligvis verdens bedste land at opdrage børn i." },
+    title: { en:"Children & Family", fr:"Enfants et Famille", ar:"الأطفال والعائلة", es:"Niños y Familia", da:"Børn og Familie", de:"Kinder und Familie" },
+    subtitle: { en:"Raising Little Vikings", fr:"Élever de Petits Vikings", ar:"تربية فايكنج صغار", es:"Criando Pequeños Vikingos", da:"At opdrage små vikinger", de:"Kleine Wikinger großziehen" },
+    intro: { en:"Denmark is arguably the best country in the world to raise children. Here's everything you need to know.", fr:"Le Danemark est sans doute le meilleur pays du monde pour élever des enfants.", ar:"الدنمارك هي على الأرجح أفضل دولة في العالم لتربية الأطفال.", es:"Dinamarca es posiblemente el mejor país del mundo para criar niños.", da:"Danmark er sandsynligvis verdens bedste land at opdrage børn i.", de:"Dänemark gilt als eines der besten Länder der Welt für die Kindererziehung. Hier ist alles, was Sie wissen müssen." },
     readTime: "16 min",
     lastUpdated: "2025-01",
     sections: [
@@ -2081,7 +2435,21 @@ es:`<p>El sistema de baja parental de Dinamarca es uno de los más generosos del
 <p><strong>Pago:</strong> barselsdagpenge con un tipo máximo de <strong>4.865 DKK por semana</strong> (2025) de Udbetaling Danmark. Muchos empleadores completan la diferencia hasta el salario completo — revisa tu contrato laboral o el convenio colectivo.</p>
 <p><strong>Requisitos — la trampa para los recién llegados:</strong> para recibir barselsdagpenge del Estado, debes haber trabajado <strong>al menos 160 horas en Dinamarca en los 4 meses</strong> inmediatamente anteriores al inicio de tu baja. Los recién llegados puede que aún no cumplan el requisito — consulta con tu municipio y Udbetaling Danmark antes de dar nada por sentado.</p>
 <p>Solicita la baja a través de tu empleador y en <a href="https://www.borger.dk/familie-og-boern/graviditet-og-foedsel/barsel" target="_blank" rel="noopener">borger.dk</a> al menos 8 semanas antes de la fecha prevista del parto.</p>
-<a href="https://www.borger.dk/familie-og-boern/graviditet-og-foedsel/barsel" target="_blank" rel="noopener">→ Guía completa de la baja parental (borger.dk oficial)</a>` }
+<a href="https://www.borger.dk/familie-og-boern/graviditet-og-foedsel/barsel" target="_blank" rel="noopener">→ Guía completa de la baja parental (borger.dk oficial)</a>`,
+de:`<p>Das dänische Elternurlaubssystem ist eines der großzügigsten der Welt. Das Barselslov (Elternurlaubsgesetz) wurde am <strong>2. August 2022</strong> reformiert, um beiden Elternteilen gleiche und individuelle Rechte zu geben, mit weiteren Aktualisierungen im Jahr 2024.</p>
+<p><strong>Aufteilung des Urlaubs nach dem Modell ab 2022 (pro Elternteil):</strong></p>
+<table class="info-table">
+  <tr><th>Block</th><th>Wer</th><th>Dauer</th><th>Übertragbar?</th></tr>
+  <tr><td>Schwangerschaftsurlaub</td><td>Gebärendes Elternteil</td><td>4 Wochen vor der Geburt</td><td>Nein</td></tr>
+  <tr><td>Mutterschaftsurlaub</td><td>Gebärendes Elternteil</td><td>2 Wochen unmittelbar nach der Geburt (Pflicht)</td><td>Nein</td></tr>
+  <tr><td>Vaterschafts- / Miteltternurlaub</td><td>Das andere Elternteil</td><td>2 Wochen innerhalb der ersten 10 Wochen</td><td>Nein</td></tr>
+  <tr><td>Reservierter Elternurlaub (øremærket)</td><td>Jedes Elternteil</td><td><strong>11 Wochen jeweils</strong> — nutzen oder verlieren</td><td>Nein</td></tr>
+  <tr><td>Übertragbarer Elternurlaub</td><td>Jedes Elternteil</td><td><strong>13 Wochen jeweils</strong> — flexibel</td><td>Ja — zwischen den Elternteilen</td></tr>
+</table>
+<p><strong>Vergütung:</strong> barselsdagpenge (Elterngeld) mit einem Höchstsatz von <strong>4.865 DKK pro Woche</strong> (2025) von Udbetaling Danmark. Viele Arbeitgeber stocken auf das volle Gehalt auf — prüfen Sie Ihren Arbeitsvertrag oder den Tarifvertrag.</p>
+<p><strong>Anspruchsvoraussetzungen — die Falle für Neuankömmlinge:</strong> Um barselsdagpenge vom Staat zu erhalten, müssen Sie <strong>mindestens 160 Stunden in Dänemark in den 4 Monaten</strong> unmittelbar vor Urlaubsbeginn gearbeitet haben. Neu Angekommene erfüllen diese Voraussetzung möglicherweise noch nicht — erkundigen Sie sich vorher bei Ihrer Gemeinde und bei Udbetaling Danmark.</p>
+<p>Beantragen Sie den Elternurlaub über Ihren Arbeitgeber und über <a href="https://www.borger.dk/familie-og-boern/graviditet-og-foedsel/barsel" target="_blank" rel="noopener">borger.dk</a> mindestens 8 Wochen vor dem erwarteten Geburtstermin.</p>
+<a href="https://www.borger.dk/familie-og-boern/graviditet-og-foedsel/barsel" target="_blank" rel="noopener">→ Vollständiger Leitfaden zum Elternurlaub (borger.dk offiziell)</a>` }
       },
       {
         icon: "🏫",
@@ -2145,7 +2513,19 @@ es:`<p>Las guarderías y centros de cuidado infantil subvencionados públicament
 <p><strong>Descuento por hermanos:</strong> 50% de reducción en la cuota del hijo más barato cuando tienes dos o más niños en centros públicos.</p>
 <p><strong>Reducción según ingresos:</strong> Las familias con ingresos bajos pagan menos. La cuota máxima es el techo — puede que te corresponda una tarifa considerablemente reducida.</p>
 <p class="callout-warning">Solicita el cuidado infantil en cuanto tengas un número CPR — los tiempos de espera en Copenhague pueden ser de 3 a 9 meses, especialmente para la vuggestue. Solicítalo a través del portal de autoservicio digital de tu municipio.</p>
-<a href="https://www.borger.dk/familie-og-boern/pasning-og-skole/pasning-og-lege-institutioner" target="_blank" rel="noopener">→ Información sobre cuidado infantil (borger.dk)</a>` }
+<a href="https://www.borger.dk/familie-og-boern/pasning-og-skole/pasning-og-lege-institutioner" target="_blank" rel="noopener">→ Información sobre cuidado infantil (borger.dk)</a>`,
+de:`<p>Dänemarks öffentlich subventionierte Kinderbetreuung ist weltklasse. Der Staat übernimmt den Großteil der Kosten — Sie zahlen <strong>maximal 25 % der tatsächlichen Kosten</strong>.</p>
+<table class="info-table">
+  <tr><th>Typ</th><th>Alter</th><th>Maximaler Elternbeitrag (2025)</th><th>Stunden</th></tr>
+  <tr><td><strong>Vuggestue</strong> (Krippe)</td><td>6 Monate – 3 Jahre</td><td>~3.756 DKK/Monat</td><td>Ganztags</td></tr>
+  <tr><td><strong>Børnehave</strong> (Kindergarten)</td><td>3 – 6 Jahre</td><td>~2.226 DKK/Monat</td><td>Ganztags</td></tr>
+  <tr><td><strong>SFO</strong> (Nachmittagsbetreuung)</td><td>6 – 10 Jahre</td><td>~1.400–2.200 DKK/Monat</td><td>Nach der Schule + Ferien</td></tr>
+  <tr><td><strong>Dagpleje</strong> (Tagesmutter)</td><td>0 – 3 Jahre</td><td>Ähnlich wie Vuggestue</td><td>Kleingruppe, hausbasiert</td></tr>
+</table>
+<p><strong>Geschwisterrabatt:</strong> 50 % Ermäßigung auf den günstigeren Elternbeitrag, wenn Sie zwei oder mehr Kinder in öffentlicher Betreuung haben.</p>
+<p><strong>Einkommensbasierte Ermäßigung:</strong> Familien mit niedrigem Einkommen zahlen weniger. Der Höchstbetrag ist die Obergrenze — möglicherweise haben Sie Anspruch auf einen deutlich reduzierten Beitrag.</p>
+<p class="callout-warning">Beantragen Sie einen Betreuungsplatz, sobald Sie eine CPR-Nummer haben — in Kopenhagen können die Wartezeiten 3–9 Monate betragen, insbesondere für die Vuggestue. Stellen Sie den Antrag über das digitale Selbstbedienungsportal Ihrer Gemeinde.</p>
+<a href="https://www.borger.dk/familie-og-boern/pasning-og-skole/pasning-og-lege-institutioner" target="_blank" rel="noopener">→ Informationen zur Kinderbetreuung (borger.dk)</a>` }
       },
       {
         icon: "💰",
@@ -2255,7 +2635,28 @@ es:`<p>El <strong>børnecheck</strong> (formalmente <em>børne- og ungeydelse</e
   <tr><td>2 años o más</td><td>100% (importe completo)</td></tr>
 </table>
 <p>El trabajo en la UE/EEE cuenta para este cómputo. Tu NemKonto debe estar configurado para que lleguen los pagos. Si eres nuevo y no lo has recibido en los 3 meses siguientes al registro de tu hijo, consulta con Udbetaling Danmark.</p>
-<a href="https://lifeindenmark.borger.dk/family-and-children/family-benefits/child-and-youth-benefits" target="_blank" rel="noopener">→ Prestaciones por hijo y juventud (lifeindenmark.borger.dk)</a>` }
+<a href="https://lifeindenmark.borger.dk/family-and-children/family-benefits/child-and-youth-benefits" target="_blank" rel="noopener">→ Prestaciones por hijo y juventud (lifeindenmark.borger.dk)</a>`,
+de:`<p>Der <strong>børnecheck</strong> (offiziell <em>børne- og ungeydelse</em>) ist eine steuerfreie Zahlung des Staates für jedes Kind unter 18 Jahren. Das Besondere: <strong>Sie müssen ihn nicht beantragen</strong>. Er wird automatisch auf Ihre NemKonto überwiesen, sobald Ihr Kind mit einer CPR-Nummer registriert ist — vierteljährlich für unter 15-Jährige, monatlich ab 15 Jahren.</p>
+<p><strong>Beträge (2025), laut Skatteministeriet:</strong></p>
+<table class="info-table">
+  <tr><th>Alter des Kindes</th><th>Betrag</th><th>Pro Jahr</th><th>Häufigkeit</th></tr>
+  <tr><td>0 – 2 Jahre</td><td>5.292 DKK</td><td>21.168 DKK</td><td>Vierteljährlich</td></tr>
+  <tr><td>3 – 6 Jahre</td><td>4.191 DKK</td><td>16.764 DKK</td><td>Vierteljährlich</td></tr>
+  <tr><td>7 – 14 Jahre</td><td>3.297 DKK</td><td>13.188 DKK</td><td>Vierteljährlich</td></tr>
+  <tr><td>15 – 17 Jahre</td><td>1.099 DKK</td><td>13.188 DKK</td><td>Monatlich</td></tr>
+</table>
+<p>Vierteljährliche Zahlungen kommen am 20. Januar, April, Juli und Oktober an. Monatliche Zahlungen (15–17 Jahre) kommen am 20. jedes Monats an.</p>
+<p class="callout-warning" style="background:rgba(232,160,32,0.08);border-left:4px solid var(--amber);padding:12px 14px;border-radius:8px;margin:14px 0;"><strong>⚠️ Die 2-Jahres-Regel, die Neuankömmlinge überrascht:</strong> Der volle børnecheck erfordert <strong>2 Jahre Aufenthalt oder Beschäftigung in Dänemark/EWR innerhalb der letzten 10 Jahre</strong>. Neuankömmlinge erhalten einen gestaffelten Prozentsatz:</p>
+<table class="info-table">
+  <tr><th>Zeit in DK/EWR</th><th>Auszahlung %</th></tr>
+  <tr><td>Weniger als 6 Monate</td><td>0%</td></tr>
+  <tr><td>6 Monate – 1 Jahr</td><td>25%</td></tr>
+  <tr><td>1 – 1,5 Jahre</td><td>50%</td></tr>
+  <tr><td>1,5 – 2 Jahre</td><td>75%</td></tr>
+  <tr><td>2 Jahre oder mehr</td><td>100% (voller Betrag)</td></tr>
+</table>
+<p>Arbeit in der EU/dem EWR wird angerechnet. Ihre NemKonto muss eingerichtet sein. Wenn Sie neu sind und den Betrag nicht innerhalb von 3 Monaten nach der Registrierung Ihres Kindes erhalten haben, wenden Sie sich an Udbetaling Danmark.</p>
+<a href="https://lifeindenmark.borger.dk/family-and-children/family-benefits/child-and-youth-benefits" target="_blank" rel="noopener">→ Kinder- und Jugendhilfe (lifeindenmark.borger.dk)</a>` }
       },
       {
         icon: "🏫",
@@ -2314,7 +2715,18 @@ es:`<p>La <strong>folkeskole</strong> es el sistema de escuela pública de Dinam
   <li><strong>Tamaño de la clase:</strong> media de 22–24 alumnos</li>
 </ul>
 <p><strong>Matricula a tu hijo:</strong> Contacta con el Børne- og Ungeforvaltning (Administración de Infancia y Juventud) de tu municipio. Los niños de la UE tienen derecho a matricularse en la folkeskole local. La matrícula es por domicilio.</p>
-<p>Muchos niños internacionales se integran bien aunque no hablen danés — los niños daneses son generalmente acogedores, y las escuelas ofrecen apoyo lingüístico (modtageklasse) para los recién llegados.</p>` }
+<p>Muchos niños internacionales se integran bien aunque no hablen danés — los niños daneses son generalmente acogedores, y las escuelas ofrecen apoyo lingüístico (modtageklasse) para los recién llegados.</p>`,
+de:`<p>Die <strong>folkeskole</strong> ist das öffentliche Schulsystem Dänemarks. Es ist kostenlos, umfasst Unterrichtsmaterialien und reicht von Klasse 0 (børnehaveklasse, Alter 6) bis Klasse 9 (Alter 15/16), mit einem optionalen 10. Schuljahr.</p>
+<p><strong>Wichtige Fakten über die folkeskole:</strong></p>
+<ul>
+  <li><strong>Englisch</strong> wird ab der 1. Klasse unterrichtet. Die meisten Kinder sprechen bis Klasse 5 hervorragendes Englisch.</li>
+  <li><strong>Keine Schuluniformen.</strong> Dänische Schulen betonen Wohlbefinden, Kreativität und eigenständiges Denken statt akademischen Wettbewerb.</li>
+  <li>In den meisten Schulen wird <strong>kein Essen</strong> ausgegeben — die Kinder bringen ihr Mittagessen mit (madpakke).</li>
+  <li><strong>Noten</strong> beginnen ab Klasse 8. Davor wird der Lernfortschritt durch schriftliches Feedback bewertet, nicht durch Noten.</li>
+  <li><strong>Klassengröße:</strong> durchschnittlich 22–24 Schüler</li>
+</ul>
+<p><strong>Melden Sie Ihr Kind an:</strong> Wenden Sie sich an das Børne- og Ungeforvaltning (Kinder- und Jugendbehörde) Ihrer Gemeinde. Kinder aus EU-Ländern haben das Recht, sich an der lokalen folkeskole anzumelden. Die Anmeldung erfolgt nach Wohnadresse.</p>
+<p>Viele internationale Kinder integrieren sich gut, auch ohne Dänischkenntnisse — dänische Kinder sind in der Regel aufgeschlossen, und die Schulen bieten Sprachunterstützung (modtageklasse, Aufnahmeklasse) für Neuankömmlinge an.</p>` }
       },
       {
         icon: "🌍",
@@ -2363,7 +2775,16 @@ es:`<p>Si planeas dejar Dinamarca en unos pocos años, o prefieres una educació
   <tr><td><strong>Skals Efterskole</strong></td><td>Skals</td><td>Danés + inglés</td><td>30.000–60.000 DKK</td></tr>
   <tr><td><strong>Aarhus International School</strong></td><td>Aarhus</td><td>IB / bilingüe danés</td><td>80.000–110.000 DKK</td></tr>
 </table>
-<p>Muchos empleadores con personal internacional ofrecen ayuda con las cuotas escolares como parte del paquete de reubicación — pregunta a tu departamento de RRHH antes de asumir que tendrás que pagar solo.</p>` }
+<p>Muchos empleadores con personal internacional ofrecen ayuda con las cuotas escolares como parte del paquete de reubicación — pregunta a tu departamento de RRHH antes de asumir que tendrás que pagar solo.</p>`,
+de:`<p>Wenn Sie planen, Dänemark in einigen Jahren zu verlassen, oder eine englischsprachige Ausbildung bevorzugen, sind internationale Schulen eine gute Option. Sie sind privat und erheben Schulgebühren.</p>
+<table class="info-table">
+  <tr><th>Schule</th><th>Stadt</th><th>Lehrplan</th><th>Jahresgebühr (ca.)</th></tr>
+  <tr><td><strong>Copenhagen International School (CIS)</strong></td><td>Kopenhagen</td><td>IB (International Baccalaureate)</td><td>105.000–135.000 DKK</td></tr>
+  <tr><td><strong>Rygaards School</strong></td><td>Hellerup, KBH</td><td>Britisch / IB</td><td>85.000–105.000 DKK</td></tr>
+  <tr><td><strong>Skals Efterskole</strong></td><td>Skals</td><td>Dänisch + Englisch</td><td>30.000–60.000 DKK</td></tr>
+  <tr><td><strong>Aarhus International School</strong></td><td>Aarhus</td><td>IB / dänisch-bilingual</td><td>80.000–110.000 DKK</td></tr>
+</table>
+<p>Viele Arbeitgeber mit internationalem Personal bieten Schulgebührenzuschüsse als Teil von Relocation-Paketen an — fragen Sie Ihre HR-Abteilung, bevor Sie davon ausgehen, dass Sie alles selbst bezahlen müssen.</p>` }
       }
     ],
     checklist: [
@@ -2376,9 +2797,9 @@ es:`<p>Si planeas dejar Dinamarca en unos pocos años, o prefieres una educació
   },
   {
     id: 7, icon: "🎓", color: "#2E6DA4",
-    title: { en:"Education & University", fr:"Éducation et Université", ar:"التعليم والجامعة", es:"Educación y Universidad", da:"Uddannelse og Universitet" },
-    subtitle: { en:"The Life of the Mind", fr:"La Vie de l'Esprit", ar:"حياة العقل", es:"La Vida Intelectual", da:"Åndens liv" },
-    intro: { en:"Danish universities are world-class, tuition-free for EU students, and culturally unlike anything you've experienced.", fr:"Les universités danoises sont de classe mondiale et gratuites pour les étudiants UE.", ar:"الجامعات الدنماركية ذات مستوى عالمي ومجانية لطلاب الاتحاد الأوروبي.", es:"Las universidades danesas son de clase mundial y gratuitas para estudiantes UE.", da:"Danske universiteter er verdensklasse og gratis for EU-studerende." },
+    title: { en:"Education & University", fr:"Éducation et Université", ar:"التعليم والجامعة", es:"Educación y Universidad", da:"Uddannelse og Universitet", de:"Bildung und Universität" },
+    subtitle: { en:"The Life of the Mind", fr:"La Vie de l'Esprit", ar:"حياة العقل", es:"La Vida Intelectual", da:"Åndens liv", de:"Das Leben des Geistes" },
+    intro: { en:"Danish universities are world-class, tuition-free for EU students, and culturally unlike anything you've experienced.", fr:"Les universités danoises sont de classe mondiale et gratuites pour les étudiants UE.", ar:"الجامعات الدنماركية ذات مستوى عالمي ومجانية لطلاب الاتحاد الأوروبي.", es:"Las universidades danesas son de clase mundial y gratuitas para estudiantes UE.", da:"Danske universiteter er verdensklasse og gratis for EU-studerende.", de:"Dänische Universitäten sind weltklasse, für EU-Studierende gebührenfrei und kulturell einzigartig." },
     readTime: "14 min",
     lastUpdated: "2025-01",
     sections: [
@@ -2439,7 +2860,18 @@ es:`<p>Dinamarca tiene ocho universidades públicas y decenas de instituciones e
   <tr><td><strong>SDU</strong></td><td>Odense (+ sedes)</td><td>Salud, ingeniería, humanidades</td><td>Top 400 mundial</td></tr>
   <tr><td><strong>AAU</strong></td><td>Aalborg</td><td>Aprendizaje basado en problemas, ingeniería</td><td>Top 400 mundial</td></tr>
 </table>
-<p><strong>Solicitar a través de:</strong> <a href="https://www.optagelse.dk" target="_blank" rel="noopener">optagelse.dk</a> (para programas en danés) o directamente a las universidades para másteres en inglés. La fecha límite principal para el inicio de otoño es normalmente el <strong>15 de marzo (coordinado)</strong> o el <strong>15 de mayo (solicitudes individuales)</strong>.</p>` }
+<p><strong>Solicitar a través de:</strong> <a href="https://www.optagelse.dk" target="_blank" rel="noopener">optagelse.dk</a> (para programas en danés) o directamente a las universidades para másteres en inglés. La fecha límite principal para el inicio de otoño es normalmente el <strong>15 de marzo (coordinado)</strong> o el <strong>15 de mayo (solicitudes individuales)</strong>.</p>`,
+de:`<p>Dänemark verfügt über acht öffentliche Universitäten und Dutzende spezialisierter Einrichtungen. Alle sind gut finanziert und rangieren beständig unter Europas besten.</p>
+<table class="info-table">
+  <tr><th>Universität</th><th>Stadt</th><th>Bekannt für</th><th>Internationales Ranking (ca.)</th></tr>
+  <tr><td><strong>Universität Kopenhagen (KU)</strong></td><td>Kopenhagen</td><td>Forschung, Medizin, Geisteswissenschaften, Naturwissenschaften</td><td>Top 100 weltweit</td></tr>
+  <tr><td><strong>DTU</strong></td><td>Kongens Lyngby</td><td>Ingenieurwesen, Technologie, Nachhaltigkeit</td><td>Top 150 weltweit</td></tr>
+  <tr><td><strong>CBS</strong></td><td>Kopenhagen</td><td>Business, Management, Wirtschaft</td><td>Top 50 in Europa für Business</td></tr>
+  <tr><td><strong>Universität Aarhus (AU)</strong></td><td>Aarhus</td><td>Forschungsuniversität, breites Programmangebot</td><td>Top 150 weltweit</td></tr>
+  <tr><td><strong>SDU</strong></td><td>Odense (+ Zweigstellen)</td><td>Gesundheit, Ingenieurwesen, Geisteswissenschaften</td><td>Top 400 weltweit</td></tr>
+  <tr><td><strong>AAU</strong></td><td>Aalborg</td><td>Problembasiertes Lernen, Ingenieurwesen</td><td>Top 400 weltweit</td></tr>
+</table>
+<p><strong>Bewerbung über:</strong> <a href="https://www.optagelse.dk" target="_blank" rel="noopener">optagelse.dk</a> (für dänischsprachige Programme) oder direkt bei den Universitäten für englischsprachige Masterstudiengänge. Die Hauptbewerbungsfrist für das Herbstsemester ist in der Regel der <strong>15. März (koordiniert)</strong> oder der <strong>15. Mai (individuelle Bewerbungen)</strong>.</p>` }
       },
       {
         icon: "💵",
@@ -2523,7 +2955,23 @@ es:`<p><strong>Tasas de matrícula según la nacionalidad:</strong></p>
 </table>
 <p>Los estudiantes también pueden solicitar un <strong>préstamo SU</strong> de hasta 4.204 DKK/mes adicional a la beca, con un tipo de interés bajo.</p>
 <p class="callout-warning">Los ciudadanos de la UE que trabajan y pagan impuestos en Dinamarca son generalmente elegibles para el SU. Los estudiantes no pertenecientes a la UE no son elegibles a menos que tengan residencia permanente o un permiso especial.</p>
-<a href="https://www.su.dk/english/" target="_blank" rel="noopener">→ Solicitar el SU (oficial, en inglés)</a>` }
+<a href="https://www.su.dk/english/" target="_blank" rel="noopener">→ Solicitar el SU (oficial, en inglés)</a>`,
+de:`<p><strong>Studiengebühren nach Staatsangehörigkeit:</strong></p>
+<ul>
+  <li><strong>EU/EWR/nordische Staatsangehörige:</strong> Keine Studiengebühren an öffentlichen Universitäten. Alle Bachelor- und Masterstudiengänge werden vollständig vom Staat finanziert.</li>
+  <li><strong>Nicht-EU-Staatsangehörige:</strong> Es fallen Studiengebühren an, in der Regel 50.000–130.000 DKK pro Jahr, je nach Hochschule und Studiengang.</li>
+</ul>
+<p><strong>SU — Statens Uddannelsesstøtte (Staatliche Bildungsbeihilfe):</strong></p>
+<p>Das SU ist ein monatlicher Zuschuss des dänischen Staates für Studierende, die in einer anerkannten Ausbildung eingeschrieben sind. <strong>Keine Rückzahlung erforderlich</strong> (es ist ein Zuschuss, kein Darlehen).</p>
+<table class="info-table">
+  <tr><th>Situation</th><th>Monatliches SU (2025)</th></tr>
+  <tr><td>Unter 20 Jahre, wohnhaft bei den Eltern</td><td>822 DKK</td></tr>
+  <tr><td>Unter 20 Jahre, eigenständig wohnend</td><td>2.936 DKK</td></tr>
+  <tr><td>Über 20 Jahre, eigenständig wohnend (die meisten Studierenden)</td><td>6.321 DKK</td></tr>
+</table>
+<p>Studierende können zusätzlich zum Zuschuss ein <strong>SU-Darlehen</strong> von bis zu 4.204 DKK/Monat zu einem niedrigen Zinssatz beantragen.</p>
+<p class="callout-warning">EU-Bürger, die in Dänemark arbeiten und Steuern zahlen, haben in der Regel Anspruch auf SU. Nicht-EU-Studierende haben keinen Anspruch, sofern sie keine dauerhafte Aufenthaltserlaubnis oder eine besondere Genehmigung haben.</p>
+<a href="https://www.su.dk/english/" target="_blank" rel="noopener">→ SU beantragen (offiziell, Englisch)</a>` }
       },
       {
         icon: "🗣️",
@@ -2582,7 +3030,18 @@ es:`<p>Dinamarca ofrece clases de idioma danés gratuitas a todos los residentes
 <p><strong>Duración:</strong> Hasta 3 años (tienes 5 años desde que te convertiste en elegible para usar este derecho).</p>
 <p><strong>Cómo empezar:</strong> Contacta con el departamento de integración de tu municipio (integrationsafdelingen) o apúntate directamente en una escuela de idiomas (sprogcenter) de tu zona.</p>
 <p><strong>Niveles de examen que importan para la residencia y la ciudadanía:</strong> La residencia permanente requiere <strong>Prøve i Dansk 2 (PD2 ≈ B1)</strong>. La ciudadanía requiere <strong>Prøve i Dansk 3 (PD3 ≈ B2)</strong>. La admisión universitaria a programas en danés suele requerir la <strong>Studieprøven (≈ C1)</strong>.</p>
-<a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement" target="_blank" rel="noopener">→ Requisitos de idioma para la residencia (nyidanmark.dk)</a>` }
+<a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement" target="_blank" rel="noopener">→ Requisitos de idioma para la residencia (nyidanmark.dk)</a>`,
+de:`<p>Dänemark bietet allen Einwohnern mit einer CPR-Nummer, die keine EU-Studierenden sind (die zahlen müssen), kostenlose Dänischkurse an. Dies ist ein gesetzliches Recht — Ihr Arbeitgeber oder Ihre Gemeinde muss es ermöglichen.</p>
+<p><strong>Drei Kursschienen je nach Bildungsstand:</strong></p>
+<ul>
+  <li><strong>Danskuddannelse 1 (DU1):</strong> Für Personen mit wenig formaler Bildung. Führt zu Prøve i Dansk 1 (PD1)</li>
+  <li><strong>Danskuddannelse 2 (DU2):</strong> Für Personen mit teilweiser Sekundarbildung. Führt zu PD2</li>
+  <li><strong>Danskuddannelse 3 (DU3):</strong> Für Personen mit Hochschulbildung (die meisten Fachkräfte). Führt zur Studieprøven (Universitätszulassungsniveau)</li>
+</ul>
+<p><strong>Dauer:</strong> Bis zu 3 Jahre (Sie haben 5 Jahre ab dem Zeitpunkt, an dem Sie erstmals anspruchsberechtigt wurden, um dieses Recht zu nutzen).</p>
+<p><strong>So beginnen Sie:</strong> Wenden Sie sich an das Integrationsamt Ihrer Gemeinde (integrationsafdelingen) oder melden Sie sich direkt an einer Sprachschule (sprogcenter) in Ihrer Nähe an.</p>
+<p><strong>Prüfungsniveaus, die für Aufenthalt und Staatsbürgerschaft wichtig sind:</strong> Die dauerhafte Aufenthaltserlaubnis erfordert <strong>Prøve i Dansk 2 (PD2 ≈ B1)</strong>. Die Staatsbürgerschaft erfordert <strong>Prøve i Dansk 3 (PD3 ≈ B2)</strong>. Die Universitätszulassung für dänischsprachige Programme erfordert in der Regel die <strong>Studieprøven (≈ C1)</strong>.</p>
+<a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement" target="_blank" rel="noopener">→ Sprachanforderungen für die Aufenthaltserlaubnis (nyidanmark.dk)</a>` }
       },
       {
         icon: "🎒",
@@ -2631,6 +3090,15 @@ es:`<p>La vida universitaria danesa te resultará diferente a la de la mayoría 
   <li><strong>Rustur / studenterhus:</strong> Cada universidad tiene una casa del estudiante y un campamento de bienvenida (rustur) — ve a los dos. Así es como haces amigos en Dinamarca.</li>
   <li><strong>El studiekort</strong> da un descuento de ~50% en todo el transporte público danés. Imprescindible.</li>
   <li><strong>Kollegium (residencia universitaria):</strong> Solicítalo lo antes posible. Las listas de espera pueden ser de 6 a 12 meses. Solicita en <a href="https://www.kollegierneskontor.dk" target="_blank" rel="noopener">kollegierneskontor.dk</a></li>
+</ul>`,
+de:`<p>Das dänische Unileben wird sich von den meisten Ländern unterscheiden. Das können Sie erwarten:</p>
+<ul>
+  <li><strong>Keine Vorlesungen ohne Dialog.</strong> Die dänische Lehrkultur ist zutiefst sokratisch. Professoren erwarten Fragen, Herausforderungen und Debatten. Still zu sitzen ist ungewöhnlich — Beteiligung ist Teil der Note.</li>
+  <li><strong>Vornamen-Basis.</strong> Sie sprechen Professoren mit dem Vornamen an. Das ist nicht unhöflich — es ist die Norm.</li>
+  <li><strong>Gruppenarbeit dominiert.</strong> Die meisten Kurse beinhalten umfangreiche Gruppenarbeiten. Dänen sind direkt und konstruktiv in Gruppen.</li>
+  <li><strong>Rustur / studenterhus:</strong> Jede Universität hat ein Studentenhaus und ein Einführungscamp (rustur) — gehen Sie zu beidem. So knüpft man in Dänemark Freundschaften.</li>
+  <li><strong>Das studiekort</strong> gibt ~50 % Rabatt auf alle öffentlichen Verkehrsmittel in Dänemark. Unverzichtbar.</li>
+  <li><strong>Kollegium (Studentenwohnheim):</strong> Bewerben Sie sich so früh wie möglich. Wartelisten können 6–12 Monate betragen. Bewerben Sie sich auf <a href="https://www.kollegierneskontor.dk" target="_blank" rel="noopener">kollegierneskontor.dk</a></li>
 </ul>` }
       }
     ],
@@ -2644,9 +3112,9 @@ es:`<p>La vida universitaria danesa te resultará diferente a la de la mayoría 
   },
   {
     id: 8, icon: "💼", color: "#C60C30",
-    title: { en:"Employment", fr:"Emploi", ar:"التوظيف", es:"Empleo", da:"Beskæftigelse" },
-    subtitle: { en:"The Danish Work World", fr:"Le Monde du Travail Danois", ar:"عالم العمل الدنماركي", es:"El Mundo Laboral Danés", da:"Den Danske Arbejdsverden" },
-    intro: { en:"Danish work culture will surprise you. Flat hierarchy, 37-hour weeks, and a culture where leaving at 4pm is not just acceptable — it's expected.", fr:"La culture de travail danoise vous surprendra.", ar:"ثقافة العمل الدنماركية ستفاجئك.", es:"La cultura de trabajo danesa te sorprenderá.", da:"Dansk arbejdskultur vil overraske dig." },
+    title: { en:"Employment", fr:"Emploi", ar:"التوظيف", es:"Empleo", da:"Beskæftigelse", de:"Beschäftigung" },
+    subtitle: { en:"The Danish Work World", fr:"Le Monde du Travail Danois", ar:"عالم العمل الدنماركي", es:"El Mundo Laboral Danés", da:"Den Danske Arbejdsverden", de:"Die dänische Arbeitswelt" },
+    intro: { en:"Danish work culture will surprise you. Flat hierarchy, 37-hour weeks, and a culture where leaving at 4pm is not just acceptable — it's expected.", fr:"La culture de travail danoise vous surprendra.", ar:"ثقافة العمل الدنماركية ستفاجئك.", es:"La cultura de trabajo danesa te sorprenderá.", da:"Dansk arbejdskultur vil overraske dig.", de:"Die dänische Arbeitskultur wird Sie überraschen. Flache Hierarchien, 37-Stunden-Wochen und eine Kultur, in der das Büro um 16 Uhr zu verlassen nicht nur akzeptabel ist — sondern erwartet wird." },
     readTime: "18 min",
     lastUpdated: "2025-01",
     sections: [
@@ -2707,7 +3175,18 @@ es:`<p>Si eres ciudadano de fuera de la UE/EEE, solo puedes trabajar en Dinamarc
   <tr><td><strong>Tarjeta de Investigador / Establecimiento</strong></td><td>Para investigadores y recién graduados de universidades danesas aprobadas que buscan trabajo después de sus estudios.</td><td>SIRI / tu universidad</td></tr>
 </table>
 <p><strong>El sitio más útil:</strong> <a href="https://www.workindenmark.dk" target="_blank" rel="noopener">workindenmark.dk</a> — el portal oficial danés para candidatos extranjeros, con vacantes, detalles de los esquemas y plantillas de CV adaptadas a las normas danesas.</p>
-<p><strong>Atención a las profesiones que requieren autorización.</strong> Varias profesiones requieren autorización/registro danés antes de poder ejercerlas legalmente — entre ellas enfermeros, médicos, psicólogos, trabajadores sociales, educadores de jardín de infancia, maestros y algunos roles jurídicos. Consulta con tu organismo profesional antes de solicitar empleos.</p>` }
+<p><strong>Atención a las profesiones que requieren autorización.</strong> Varias profesiones requieren autorización/registro danés antes de poder ejercerlas legalmente — entre ellas enfermeros, médicos, psicólogos, trabajadores sociales, educadores de jardín de infancia, maestros y algunos roles jurídicos. Consulta con tu organismo profesional antes de solicitar empleos.</p>`,
+de:`<p>Wenn Sie Staatsangehöriger eines Nicht-EU/EWR-Landes sind, können Sie in Dänemark nur mit einer Aufenthalts- und Arbeitserlaubnis arbeiten. Die fünf Hauptwege:</p>
+<table class="info-table">
+  <tr><th>Regelung</th><th>Voraussetzungen</th><th>Beantragen über</th></tr>
+  <tr><td><strong>Gehaltsgrenzregelung (Beløbsordningen)</strong></td><td>Jobangebot mit Gehalt über <strong>514.000 DKK/Jahr (2025)</strong> · 552.000 DKK/Jahr ab 2026. Am flexibelsten. Erlaubt Jobwechsel nach 6 Monaten.</td><td>Ihr Arbeitgeber beantragt über SIRI</td></tr>
+  <tr><td><strong>Ergänzende Gehaltsgrenzregelung</strong></td><td>Niedrigere Schwelle (415.000 DKK/Jahr in 2025; 446.000 DKK ab 2026), aber nur für Staatsangehörige bestimmter einkommensstarker Länder mit Arbeitskräftebedarf.</td><td>SIRI</td></tr>
+  <tr><td><strong>Positivliste (Hochschulbildung / Fachkräftemangel)</strong></td><td>Ihr Beruf erscheint auf der <a href="https://www.nyidanmark.dk/en-GB/Words-and-concepts/SIRI/Positive-Lists/Positive-List-for-People-with-a-Higher-Education" target="_blank" rel="noopener">Positivliste</a> (Ingenieure, Ärzte, bestimmte IT-Profile, Krankenpfleger usw.). Keine Gehaltsschwelle über dem Marktlohn.</td><td>SIRI</td></tr>
+  <tr><td><strong>Fast-Track-Regelung</strong></td><td>Ihr Arbeitgeber ist ein SIRI-zertifiziertes Unternehmen. Genehmigung in ~1 Monat statt 1–4 Monate. 4 Unterrouten: Gehaltsgrenze, Bildung, Forscher, Kurzfristig.</td><td>Zertifizierter Arbeitgeber beantragt</td></tr>
+  <tr><td><strong>Forscher- / Gründerkarte</strong></td><td>Für Forscher und Absolventen anerkannter dänischer Universitäten, die nach dem Studium Arbeit suchen.</td><td>SIRI / Ihre Universität</td></tr>
+</table>
+<p><strong>Die nützlichste Website:</strong> <a href="https://www.workindenmark.dk" target="_blank" rel="noopener">workindenmark.dk</a> — Dänemarks offizielles Portal für ausländische Jobsuchende, mit Stellenangeboten, Regelungsdetails und Lebenslaufvorlagen nach dänischen Normen.</p>
+<p><strong>Achtung bei Berufen mit Zulassungspflicht.</strong> Mehrere Berufe erfordern eine dänische Zulassung/Registrierung, bevor Sie legal arbeiten dürfen — darunter Krankenpfleger, Ärzte, Psychologen, Sozialarbeiter, Kindergärtner, Lehrer und bestimmte Rechtspositionen. Erkundigen Sie sich bei Ihrer Berufsorganisation, bevor Sie sich auf Stellen bewerben.</p>` }
       },
       {
         icon: "🏢",
@@ -2761,6 +3240,16 @@ es:`<p>Los lugares de trabajo daneses funcionan de manera muy diferente a la may
   <li><strong>Decisiones por consenso.</strong> Las reuniones toman más tiempo en Dinamarca porque la opinión de todos se toma genuinamente en cuenta. Una vez tomada la decisión, se mantiene — porque todos participaron.</li>
   <li><strong>El almuerzo (frokost) importa.</strong> La pausa del almuerzo compartida de 12 a 1 pm es una institución social. Comer solo en tu escritorio es inusual y algo antisocial.</li>
   <li><strong>Tarde de los viernes en verano:</strong> Muchas oficinas reducen silenciosamente la actividad alrededor de las 2 pm los viernes entre junio y agosto. Nadie lo anuncia formalmente — se espera que lo percibas.</li>
+</ul>`,
+de:`<p>Dänische Arbeitsplätze funktionieren sehr anders als in den meisten Kulturen. Das Verständnis dieser Normen macht Sie vom ersten Tag an effektiv:</p>
+<ul>
+  <li><strong>Flache Hierarchie.</strong> Alle — einschließlich des Geschäftsführers — werden mit dem Vornamen angesprochen. Formelle Titel werden in Gesprächen fast nie verwendet.</li>
+  <li><strong>16 Uhr ist das Ende des Arbeitstages.</strong> Die dänische Arbeitskultur belohnt kein Präsentismus. Um 16 Uhr (oder früher für Eltern) das Büro zu verlassen ist normal und erwartet. Lange zu bleiben, um Einsatz zu demonstrieren, wird oft mit Argwohn betrachtet — als wären Sie ineffizient.</li>
+  <li><strong>37-Stunden-Arbeitswoche.</strong> Das ist die Standardarbeitswoche in Dänemark, durch Tarifverträge (overenskomster) gesichert. Sehr wenige Berufe überschreiten dies regelmäßig.</li>
+  <li><strong>Feedback ist direkt.</strong> Dänen sagen Ihnen klar, was sie denken, einschließlich Kritik. Das ist keine Aggression — es ist Respekt. Sie gehen davon aus, dass Sie ehrliches Feedback verarbeiten können.</li>
+  <li><strong>Konsensbasierte Entscheidungen.</strong> Meetings dauern in Dänemark länger, weil der Beitrag aller echte Berücksichtigung findet. Ist eine Entscheidung einmal getroffen, hält sie — weil alle einbezogen waren.</li>
+  <li><strong>Das Mittagessen (frokost) zählt.</strong> Die gemeinsame Mittagspause von 12–13 Uhr ist eine soziale Institution. Allein am Schreibtisch zu essen ist ungewöhnlich und leicht antisozial.</li>
+  <li><strong>Freitagnachmittage im Sommer:</strong> Viele Büros fahren freitags zwischen Juni und August still gegen 14 Uhr herunter. Niemand kündigt das formell an — Sie sollen es aufgreifen.</li>
 </ul>` }
       },
       {
@@ -2825,7 +3314,19 @@ es:`<p>Dinamarca no tiene salario mínimo legal — los salarios se fijan median
   <tr><td><strong>Baja parental</strong></td><td>52 semanas con dagpenge</td><td>Barselsloven</td></tr>
 </table>
 <p>Si tienes una disputa con tu empleador: contacta primero a tu sindicato (fagforening). Si no estás en un sindicato, contacta a <strong>Arbejdstilsynet</strong> (Autoridad Danesa del Entorno Laboral) o a un asesor legal.</p>
-<a href="https://www.borger.dk/arbejde-dagpenge-og-orlov" target="_blank" rel="noopener">→ Derechos laborales (borger.dk)</a>` }
+<a href="https://www.borger.dk/arbejde-dagpenge-og-orlov" target="_blank" rel="noopener">→ Derechos laborales (borger.dk)</a>`,
+de:`<p>Dänemark hat keinen gesetzlichen Mindestlohn — Löhne werden stattdessen durch <strong>Tarifverträge (overenskomster)</strong> zwischen Gewerkschaften und Arbeitgeberverbänden festgelegt. Diese decken rund 84 % der Arbeitnehmer ab und sind rechtlich bindend.</p>
+<table class="info-table">
+  <tr><th>Recht</th><th>Was Sie erhalten</th><th>Quelle</th></tr>
+  <tr><td><strong>Jahresurlaub</strong></td><td>25 Tage (5 Wochen) bezahlter Urlaub pro Jahr</td><td>Ferieloven (Urlaubsgesetz)</td></tr>
+  <tr><td><strong>Sonderurlaubstage (feriefridage)</strong></td><td>5–6 zusätzliche bezahlte Tage (viele Tarifverträge)</td><td>Tarifverträge</td></tr>
+  <tr><td><strong>Kündigungsfrist</strong></td><td>1–6 Monate je nach Betriebszugehörigkeit</td><td>Funktionærloven (für Angestellte)</td></tr>
+  <tr><td><strong>Krankengeld (sygedagpenge)</strong></td><td>Volles Gehalt bei Krankheit (Arbeitgeber zahlt erste 30 Tage, danach der Staat)</td><td>Sygedagpengeloven</td></tr>
+  <tr><td><strong>Betriebsrente</strong></td><td>Arbeitgeber zahlt ~8–12 %, Sie zahlen ~4–6 %</td><td>Tarifvertrag / Arbeitsvertrag</td></tr>
+  <tr><td><strong>Elternurlaub</strong></td><td>52 Wochen mit Elterngeld (barselsdagpenge)</td><td>Barselsloven</td></tr>
+</table>
+<p>Bei einem Streit mit Ihrem Arbeitgeber: Wenden Sie sich zuerst an Ihre Gewerkschaft (fagforening). Wenn Sie kein Gewerkschaftsmitglied sind, kontaktieren Sie <strong>Arbejdstilsynet</strong> (Dänische Behörde für Arbeitsumwelt) oder einen Rechtsberater.</p>
+<a href="https://www.borger.dk/arbejde-dagpenge-og-orlov" target="_blank" rel="noopener">→ Arbeitnehmerrechte (borger.dk)</a>` }
       },
       {
         icon: "💸",
@@ -2889,7 +3390,19 @@ es:`<p>Tu nómina danesa (lønseddel) puede resultar confusa al principio. Aquí
   <tr><td><strong>ATP</strong></td><td>Contribución obligatoria pequeña a la pensión, ~94 DKK/mes</td></tr>
   <tr><td><strong>Nettoløn / Udbetalt</strong></td><td>Lo que realmente llega a tu cuenta bancaria</td></tr>
 </table>
-<p><strong>Comprobación rápida:</strong> Con un salario bruto de 40.000 DKK/mes en Copenhague, deberías llevarte aproximadamente 26.000–28.000 DKK netos, según las deducciones. Usa nuestra <strong>Calculadora de Salario</strong> para calcular tu situación exacta.</p>` }
+<p><strong>Comprobación rápida:</strong> Con un salario bruto de 40.000 DKK/mes en Copenhague, deberías llevarte aproximadamente 26.000–28.000 DKK netos, según las deducciones. Usa nuestra <strong>Calculadora de Salario</strong> para calcular tu situación exacta.</p>`,
+de:`<p>Ihre dänische Gehaltsabrechnung (lønseddel) kann zunächst verwirrend wirken. Hier ist, was jede Zeile bedeutet:</p>
+<table class="info-table">
+  <tr><th>Zeile</th><th>Was es ist</th></tr>
+  <tr><td><strong>Bruttoløn</strong></td><td>Ihr monatliches Bruttogehalt — was Sie in Ihrem Vertrag vereinbart haben</td></tr>
+  <tr><td><strong>AM-bidrag (8%)</strong></td><td>Arbeitsmarktbeitrag — wird vom Brutto abgezogen, bevor die Einkommensteuer berechnet wird</td></tr>
+  <tr><td><strong>A-indkomst</strong></td><td>Brutto nach AM-bidrag — darauf wird die Einkommensteuer berechnet</td></tr>
+  <tr><td><strong>A-skat</strong></td><td>Die tatsächlich einbehaltene Einkommensteuer (basierend auf Ihrem trækprocent vom skattekort)</td></tr>
+  <tr><td><strong>Pension</strong></td><td>Ihr Beitrag zur betrieblichen Altersvorsorge (in der Regel 4–8 % des Brutto)</td></tr>
+  <tr><td><strong>ATP</strong></td><td>Obligatorischer kleiner Rentenbeitrag, ~94 DKK/Monat</td></tr>
+  <tr><td><strong>Nettoløn / Udbetalt</strong></td><td>Was tatsächlich auf Ihrem Bankkonto landet</td></tr>
+</table>
+<p><strong>Schnellcheck:</strong> Bei einem Bruttogehalt von 40.000 DKK/Monat in Kopenhagen sollten Sie je nach Abzügen netto ca. 26.000–28.000 DKK erhalten. Nutzen Sie unseren <strong>Gehaltsrechner</strong>, um Ihre genaue Situation zu berechnen.</p>` }
       },
       {
         icon: "🛡️",
@@ -2983,7 +3496,25 @@ es:`<p>La <strong>A-kasse</strong> (arbejdsløshedskasse) es el sistema de segur
   <li><strong>Krifa</strong> — no específica de sector, apoyo en inglés</li>
   <li><strong>ASE</strong> — para trabajadores independientes y flexibles</li>
 </ul>
-<a href="https://www.ase.dk/en" target="_blank" rel="noopener">→ ASE a-kasse (inglés)</a>` }
+<a href="https://www.ase.dk/en" target="_blank" rel="noopener">→ ASE a-kasse (inglés)</a>`,
+de:`<p>Die <strong>A-kasse</strong> (arbejdsløshedskasse) ist das dänische Arbeitslosenversicherungssystem. Es ist <strong>freiwillig, nicht automatisch</strong> — Sie müssen beitreten und Beiträge zahlen, um Leistungen zu erhalten, wenn Sie Ihren Job verlieren.</p>
+<p><strong>Wichtige Fakten (2025):</strong></p>
+<ul>
+  <li><strong>Höchstleistung:</strong> 21.091 DKK/Monat (2025) — das ist die Obergrenze. Die "90%-des-Gehalts"-Regel gilt nur bis zu dieser Obergrenze, sodass die meisten Vollzeitbeschäftigten 50–60 % ihres früheren Lohns erhalten, nicht 90 %.</li>
+  <li><strong>Dauer:</strong> Bis zu 2 Jahre Leistungen innerhalb eines Zeitraums von 3 Jahren</li>
+  <li><strong>Mitgliedschaftskosten:</strong> In der Regel 400–600 DKK/Monat je nach A-kasse</li>
+  <li><strong>Wartezeit:</strong> Sie müssen mindestens 12 Monate Mitglied sein UND in den letzten 3 Jahren mindestens 1.924 Stunden gearbeitet haben, bevor Sie Leistungen beantragen können</li>
+  <li><strong>Steuerlich absetzbar:</strong> Ja — A-kasse-Beiträge sind vollständig von Ihrem steuerpflichtigen Einkommen absetzbar</li>
+</ul>
+<p class="callout-warning"><strong>Treten Sie einer A-kasse innerhalb Ihres ersten Beschäftigungsmonats bei.</strong> Die 12-monatige Wartezeit bedeutet, dass ein später Beitritt teuer ist — verlieren Sie Ihren Job nach 11 Monaten ohne A-kasse, erhalten Sie nichts aus dem System.</p>
+<p>Es gibt rund 25 A-kasser. Die meisten sind branchenspezifisch. Häufige Optionen für internationale Fachkräfte:</p>
+<ul>
+  <li><strong>CA a-kasse</strong> — für Akademiker und Hochschulabsolventen (ca.dk)</li>
+  <li><strong>MA</strong> — für Ingenieure und IT-Fachkräfte</li>
+  <li><strong>Krifa</strong> — nicht branchenspezifisch, englischer Support</li>
+  <li><strong>ASE</strong> — für Selbstständige und flexible Arbeitnehmer</li>
+</ul>
+<a href="https://www.ase.dk/en" target="_blank" rel="noopener">→ ASE a-kasse (Englisch)</a>` }
       },
       {
         icon: "🤝",
@@ -3047,7 +3578,19 @@ es:`<p>Dinamarca tiene una de las tasas de sindicalización más altas del mundo
 </ul>
 <p><strong>Costo:</strong> 300–600 DKK/mes (totalmente deducible de impuestos)</p>
 <p>Nota: Una a-kasse y un sindicato (fagforening) son <strong>membresías separadas</strong>. Lo ideal es tener ambas. Muchos sindicatos tienen acuerdos con a-kasser específicas, pero son organizaciones independientes.</p>
-<p>Para profesionales internacionales: <strong>IDA</strong> (ingeniería/TI), <strong>Djøf</strong> (abogados/economistas/ciencias sociales), <strong>HK</strong> (empleados de oficina), <strong>3F</strong> (trabajadores no calificados) son los más comunes.</p>` }
+<p>Para profesionales internacionales: <strong>IDA</strong> (ingeniería/TI), <strong>Djøf</strong> (abogados/economistas/ciencias sociales), <strong>HK</strong> (empleados de oficina), <strong>3F</strong> (trabajadores no calificados) son los más comunes.</p>`,
+de:`<p>Dänemark hat eine der höchsten Gewerkschaftsquoten weltweit — rund 67 % der Arbeitnehmer sind Mitglied. Dänische Gewerkschaften (Fagforeninger) konzentrieren sich nicht vorrangig auf Streiks, sondern auf Vertragssicherheit, rechtlichen Schutz und berufliche Weiterentwicklung.</p>
+<p><strong>Was eine Gewerkschaft Ihnen bietet:</strong></p>
+<ul>
+  <li>Überprüfung Ihres Arbeitsvertrags vor der Unterzeichnung</li>
+  <li>Rechtsberatung bei Konflikten mit dem Arbeitgeber</li>
+  <li>Vertretung bei Gehaltsverhandlungen</li>
+  <li>Möglichkeiten zur beruflichen Weiterentwicklung</li>
+  <li>Netzwerkkontakte in Ihrer Branche</li>
+</ul>
+<p><strong>Kosten:</strong> 300–600 DKK/Monat (vollständig steuerlich absetzbar)</p>
+<p>Hinweis: A-kasse und Gewerkschaft (Fagforening) sind <strong>getrennte Mitgliedschaften</strong>. Idealerweise sind Sie in beiden. Viele Gewerkschaften haben Vereinbarungen mit bestimmten A-kasser, sind aber unabhängige Organisationen.</p>
+<p>Für internationale Fachkräfte: <strong>IDA</strong> (Ingenieure/IT), <strong>Djøf</strong> (Juristen/Ökonomen/Sozialwissenschaftler), <strong>HK</strong> (Büroangestellte), <strong>3F</strong> (Hilfsarbeiter) sind die gängigsten.</p>` }
       },
       {
         icon: "🔍",
@@ -3076,7 +3619,12 @@ es:`<p>Esta es una de las preguntas más frecuentes — y la respuesta depende d
 <p><strong>Ciudadanos de la UE/EEE:</strong> Sí. Tienes derecho a trabajar en Dinamarca de inmediato. Puedes comenzar un trabajo mientras se procesa tu registro de CPR. Tu empleador puede solicitar una deducción de emergencia. Sin embargo, sin número de CPR, tu empleador puede aplicar temporalmente la tasa de emergencia del 55%.</p>
 <p><strong>Ciudadanos no pertenecientes a la UE con permiso de trabajo:</strong> Puedes trabajar una vez que tu permiso haya sido aprobado y esté activo. Algunos tipos de permiso permiten trabajar durante el procesamiento — verifica las condiciones específicas de tu permiso en <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a>.</p>
 <p><strong>Estudiantes:</strong> Los titulares de permiso de estudiante pueden trabajar hasta <strong>15 horas por semana</strong> durante el curso académico, y a tiempo completo en junio/julio/agosto.</p>
-<p class="callout-warning">Trabajar sin derecho a trabajar en Dinamarca es una infracción grave que puede resultar en deportación y prohibición de entrada futura. Si no estás seguro de tu situación, contacta <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a> antes de comenzar a trabajar.</p>` }
+<p class="callout-warning">Trabajar sin derecho a trabajar en Dinamarca es una infracción grave que puede resultar en deportación y prohibición de entrada futura. Si no estás seguro de tu situación, contacta <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a> antes de comenzar a trabajar.</p>`,
+de:`<p>Dies ist eine der häufigsten Fragen — und die Antwort hängt von Ihrer Staatsbürgerschaft ab:</p>
+<p><strong>EU/EWR-Bürger:</strong> Ja. Sie haben das Recht, sofort in Dänemark zu arbeiten. Sie können eine Stelle antreten, während Ihre CPR-Registrierung bearbeitet wird. Ihr Arbeitgeber kann eine Notsteuerregelung beantragen. Ohne CPR-Nummer kann Ihr Arbeitgeber vorübergehend den Notfallsteuersatz von 55 % anwenden.</p>
+<p><strong>Nicht-EU-Bürger mit Arbeitserlaubnis:</strong> Sie können arbeiten, sobald Ihre Erlaubnis genehmigt und aktiv ist. Einige Erlaubnisarten erlauben die Arbeit während der Bearbeitung — prüfen Sie Ihre spezifischen Bedingungen auf <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a>.</p>
+<p><strong>Studierende:</strong> Inhaber einer Studienerlaubnis dürfen während des Semesters bis zu <strong>15 Stunden pro Woche</strong> arbeiten, in den Monaten Juni/Juli/August in Vollzeit.</p>
+<p class="callout-warning">Ohne Arbeitsberechtigung in Dänemark zu arbeiten ist ein schwerwiegender Verstoß, der zur Ausweisung und einem künftigen Einreiseverbot führen kann. Wenn Sie sich über Ihren Status unsicher sind, wenden Sie sich vor Arbeitsbeginn an <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a>.</p>` }
       }
     ],
     checklist: [
@@ -3090,9 +3638,9 @@ es:`<p>Esta es una de las preguntas más frecuentes — y la respuesta depende d
   },
   {
     id: 9, icon: "🚀", color: "#E8A020",
-    title: { en:"Startups & Business", fr:"Startups et Affaires", ar:"الشركات الناشئة والأعمال", es:"Startups y Negocios", da:"Startups og Erhverv" },
-    subtitle: { en:"Building Something Here", fr:"Construire Quelque Chose Ici", ar:"بناء شيء هنا", es:"Construyendo Algo Aquí", da:"At bygge noget her" },
-    intro: { en:"Denmark is secretly one of Europe's best places to start a company. Low bureaucracy, high trust, excellent talent.", fr:"Le Danemark est l'un des meilleurs endroits en Europe pour créer une entreprise.", ar:"الدنمارك سراً من أفضل الأماكن في أوروبا لبدء شركة.", es:"Dinamarca es en secreto uno de los mejores lugares de Europa para emprender.", da:"Danmark er hemmeligt et af Europas bedste steder at starte virksomhed." },
+    title: { en:"Startups & Business", fr:"Startups et Affaires", ar:"الشركات الناشئة والأعمال", es:"Startups y Negocios", da:"Startups og Erhverv", de:"Startups und Unternehmen" },
+    subtitle: { en:"Building Something Here", fr:"Construire Quelque Chose Ici", ar:"بناء شيء هنا", es:"Construyendo Algo Aquí", da:"At bygge noget her", de:"Hier etwas aufbauen" },
+    intro: { en:"Denmark is secretly one of Europe's best places to start a company. Low bureaucracy, high trust, excellent talent.", fr:"Le Danemark est l'un des meilleurs endroits en Europe pour créer une entreprise.", ar:"الدنمارك سراً من أفضل الأماكن في أوروبا لبدء شركة.", es:"Dinamarca es en secreto uno de los mejores lugares de Europa para emprender.", da:"Danmark er hemmeligt et af Europas bedste steder at starte virksomhed.", de:"Dänemark ist im Verborgenen eines der besten Länder Europas für Unternehmensgründungen. Wenig Bürokratie, hohes Vertrauen, exzellente Talente." },
     readTime: "15 min",
     lastUpdated: "2025-01",
     sections: [
@@ -3143,7 +3691,16 @@ es:`<p>Dinamarca ofrece varias estructuras empresariales. La elección correcta 
   <tr><td><strong>Sociedad anónima</strong></td><td>Aktieselskab (A/S)</td><td>400.000 DKK</td><td>Limitada al capital</td><td>Empresas grandes, inversión externa</td></tr>
   <tr><td><strong>Sociedad colectiva</strong></td><td>Interessentskab (I/S)</td><td>Ninguno</td><td>Personal conjunta</td><td>Dos o más personas, estructuras simples</td></tr>
 </table>
-<p>Para la mayoría de los recién llegados que inician un negocio: una <strong>Enkeltmandsvirksomhed</strong> es gratuita de registrar y puede configurarse en 10 minutos. Una <strong>ApS</strong> ofrece protección de responsabilidad y ahora requiere solo 20.000 DKK de capital (reducido de 40.000 DKK el 27 feb. 2025) más ~670 DKK para registrarse.</p>` }
+<p>Para la mayoría de los recién llegados que inician un negocio: una <strong>Enkeltmandsvirksomhed</strong> es gratuita de registrar y puede configurarse en 10 minutos. Una <strong>ApS</strong> ofrece protección de responsabilidad y ahora requiere solo 20.000 DKK de capital (reducido de 40.000 DKK el 27 feb. 2025) más ~670 DKK para registrarse.</p>`,
+de:`<p>Dänemark bietet verschiedene Unternehmensformen an. Die richtige Wahl hängt von Ihrer Risikobereitschaft und Ihren Wachstumsplänen ab:</p>
+<table class="info-table">
+  <tr><th>Form</th><th>Dänischer Name</th><th>Mindestkapital</th><th>Haftung</th><th>Geeignet für</th></tr>
+  <tr><td><strong>Einzelunternehmen</strong></td><td>Enkeltmandsvirksomhed</td><td>Keines</td><td>Persönlich (unbegrenzt)</td><td>Freiberufler, Berater, Einzelhändler</td></tr>
+  <tr><td><strong>GmbH (Privatgesellschaft)</strong></td><td>Anpartsselskab (ApS)</td><td>20.000 DKK (seit 27. Feb. 2025)</td><td>Auf Kapital begrenzt</td><td>Kleine Unternehmen, Startups</td></tr>
+  <tr><td><strong>Aktiengesellschaft</strong></td><td>Aktieselskab (A/S)</td><td>400.000 DKK</td><td>Auf Kapital begrenzt</td><td>Größere Unternehmen, externe Investitionen</td></tr>
+  <tr><td><strong>Personengesellschaft</strong></td><td>Interessentskab (I/S)</td><td>Keines</td><td>Gesamtschuldnerisch persönlich</td><td>Zwei oder mehr Personen, einfache Strukturen</td></tr>
+</table>
+<p>Für die meisten Neuankömmlinge, die ein Unternehmen gründen: Eine <strong>Enkeltmandsvirksomhed</strong> ist kostenlos zu registrieren und in 10 Minuten eingerichtet. Eine <strong>ApS</strong> bietet Haftungsbeschränkung und erfordert nun nur noch 20.000 DKK Kapital (reduziert von 40.000 DKK ab 27. Feb. 2025) plus ~670 DKK für die Registrierung.</p>` }
       },
       {
         icon: "📋",
@@ -3207,7 +3764,19 @@ es:`<p>Cada empresa en Dinamarca está registrada con un único <strong>número 
 </ol>
 <p><strong>Registro del IVA (momsregistrering):</strong> Obligatorio una vez que tu facturación anual supere los <strong>50.000 DKK</strong>. El IVA danés (moms) es del 25% — uno de los más altos del mundo, pero en gran medida se traslada a los consumidores. Regístrate en virk.dk al mismo tiempo o cuando superes el umbral.</p>
 <p class="callout-warning">Debes ser residente legal en Dinamarca (tener un número CPR y estado de residencia válido) para registrar una empresa danesa. Los fundadores no pertenecientes a la UE con visa de turista no pueden operar legalmente una empresa danesa.</p>
-<a href="https://virk.dk/myndigheder/erhvervsstyrelsen/selvbetjening" target="_blank" rel="noopener">→ Registra tu empresa en virk.dk</a>` }
+<a href="https://virk.dk/myndigheder/erhvervsstyrelsen/selvbetjening" target="_blank" rel="noopener">→ Registra tu empresa en virk.dk</a>`,
+de:`<p>Jedes Unternehmen in Dänemark wird mit einer eindeutigen <strong>CVR-Nummer</strong> (Centralt Virksomhedsregister) registriert. Dies ist die Identifikationsnummer Ihres Unternehmens — vergleichbar mit der persönlichen CPR-Nummer.</p>
+<p><strong>Registrierung auf virk.dk (10 Minuten, größtenteils kostenlos):</strong></p>
+<ol class="step-list">
+  <li><span class="step-num">1</span>Gehen Sie auf <a href="https://www.virk.dk" target="_blank" rel="noopener">virk.dk</a> und melden Sie sich mit MitID an</li>
+  <li><span class="step-num">2</span>Wählen Sie "Registrer ny virksomhed"</li>
+  <li><span class="step-num">3</span>Wählen Sie Ihre Unternehmensform (Enkeltmandsvirksomhed ist kostenlos; ApS kostet ~670 DKK)</li>
+  <li><span class="step-num">4</span>Geben Sie Firmennamen, Adresse und Branchencode (branchekode) ein</li>
+  <li><span class="step-num">5</span>Ihre CVR-Nummer wird innerhalb von 1–2 Werktagen ausgestellt</li>
+</ol>
+<p><strong>Mehrwertsteuerregistrierung (momsregistrering):</strong> Pflicht, sobald Ihr Jahresumsatz <strong>50.000 DKK</strong> übersteigt. Die dänische Mehrwertsteuer (moms) beträgt 25 % — eine der höchsten weltweit, wird aber weitgehend an die Verbraucher weitergegeben. Registrieren Sie sich gleichzeitig auf virk.dk oder wenn Sie die Schwelle überschreiten.</p>
+<p class="callout-warning">Sie müssen legaler Einwohner Dänemarks sein (CPR-Nummer und gültiger Aufenthaltsstatus), um ein dänisches Unternehmen zu registrieren. Nicht-EU-Gründer mit Touristenvisum können keine dänische Gesellschaft legal betreiben.</p>
+<a href="https://virk.dk/myndigheder/erhvervsstyrelsen/selvbetjening" target="_blank" rel="noopener">→ Registrieren Sie Ihr Unternehmen auf virk.dk</a>` }
       },
       {
         icon: "💰",
@@ -3266,7 +3835,18 @@ es:`<p>Como trabajador independiente en Dinamarca, tu situación fiscal es más 
 </ul>
 <p><strong>Gastos empresariales deducibles:</strong> Equipos, software, oficina en casa (si se usa principalmente para el negocio), desarrollo profesional, honorarios contables, viajes de negocios y más. Guarda los recibos de todo.</p>
 <p>Considera contratar un contable (revisor) para tu primer año — los honorarios suelen ser 3.000–8.000 DKK/año, pero te ahorran significativos errores y maximizan las deducciones.</p>
-<a href="https://skat.dk/en-us/business/starting-a-business/" target="_blank" rel="noopener">→ Iniciar un negocio — guía de SKAT (inglés)</a>` }
+<a href="https://skat.dk/en-us/business/starting-a-business/" target="_blank" rel="noopener">→ Iniciar un negocio — guía de SKAT (inglés)</a>`,
+de:`<p>Als Selbstständiger in Dänemark ist Ihre Steuersituation komplexer als als Angestellter. Hier sind die wesentlichen Punkte:</p>
+<p><strong>Wichtigste Steuern für Selbstständige (2025):</strong></p>
+<ul>
+  <li><strong>AM-bidrag:</strong> 8 % auf das Bruttobetriebseinkommen (wird vor der Einkommensteuer abgezogen)</li>
+  <li><strong>Einkommensteuer:</strong> Gleiche Sätze wie Angestellte — persönlicher Freibetrag von 51.600 DKK (2025), dann Gemeinde- + Staatssteuer</li>
+  <li><strong>B-skat:</strong> Selbstständige zahlen die Steuer im Voraus über den <strong>B-skat</strong> — 10 monatliche Raten über das Jahr. Aktualisieren Sie Ihre Forskudsopgørelse auf skat.dk, um den richtigen Betrag festzulegen.</li>
+  <li><strong>Moms (MwSt.):</strong> 25 % auf alle Umsätze über 50.000 DKK/Jahr. Vierteljährlich über virk.dk melden und zahlen.</li>
+</ul>
+<p><strong>Abzugsfähige Betriebsausgaben:</strong> Ausrüstung, Software, Homeoffice (sofern überwiegend betrieblich genutzt), berufliche Weiterbildung, Buchhaltungsgebühren, Geschäftsreisen und mehr. Heben Sie alle Belege auf.</p>
+<p>Erwägen Sie, im ersten Jahr einen Buchhalter (revisor) hinzuzuziehen — Kosten typischerweise 3.000–8.000 DKK/Jahr, aber es erspart Ihnen erhebliche Fehler und maximiert Ihre Abzüge.</p>
+<a href="https://skat.dk/en-us/business/starting-a-business/" target="_blank" rel="noopener">→ Unternehmen gründen — SKAT-Leitfaden (Englisch)</a>` }
       },
       {
         icon: "🌐",
@@ -3365,6 +3945,25 @@ es:`<p>Copenhague se ha convertido silenciosamente en uno de los polos de startu
   <li>Tasa de impuesto de sociedades razonable (22% de impuesto corporativo)</li>
   <li>Acceso al mercado de la UE</li>
   <li>El equilibrio trabajo-vida facilita atraer talento frente a culturas del agotamiento</li>
+</ul>`,
+de:`<p>Kopenhagen hat sich still und leise zu einem der stärksten Startup-Zentren Europas entwickelt und zählt beständig zu den Top-10-europäischen Startup-Städten.</p>
+<p><strong>Wichtige Hubs und Organisationen:</strong></p>
+<ul>
+  <li><strong>The Hub Copenhagen</strong> — Dänemarks größte Tech-Startup-Community. Veranstaltungen, Coworking, Vernetzung. <a href="https://www.thehub.dk" target="_blank" rel="noopener">thehub.dk</a></li>
+  <li><strong>Copenhagen Fintech</strong> — Fokus auf Finanztechnologie</li>
+  <li><strong>DTU Science Park</strong> — Deep Tech und forschungsbasierte Startups in der Nähe von Kopenhagen</li>
+  <li><strong>Symbion</strong> — Startup-Inkubator und Coworking-Space in Kopenhagen</li>
+  <li><strong>Accelerace</strong> — führendes nordisches Accelerator-Programm</li>
+  <li><strong>Innovation Fund Denmark</strong> — öffentliche Förderung für F&E- und Innovationsprojekte</li>
+</ul>
+<p><strong>Warum Dänemark wirklich gut für Startups ist:</strong></p>
+<ul>
+  <li>Hohes Vertrauen zwischen Unternehmen und Behörden</li>
+  <li>Gut ausgebildeter, englischsprachiger Talentpool</li>
+  <li>Starker IP-Schutz und Rechtstaatlichkeit</li>
+  <li>Vernünftiger Körperschaftsteuersatz (22 % Unternehmenssteuer)</li>
+  <li>Zugang zum EU-Markt</li>
+  <li>Work-Life-Balance erleichtert die Talentgewinnung gegenüber Burnout-Kulturen</li>
 </ul>` }
       },
       {
@@ -3424,7 +4023,18 @@ es:`<p>El <strong>visado Startup Denmark</strong> permite a ciudadanos no perten
 <p><strong>Duración:</strong> Inicialmente 2 años, prorrogable.</p>
 <p><strong>Tiempo de procesamiento:</strong> Aproximadamente 1–3 meses después de la aprobación del plan de negocio.</p>
 <p class="callout-warning">El visado exige innovación genuina — las solicitudes para negocios estándar (comercio minorista, restaurantes, servicios) generalmente son rechazadas. El panel busca negocios escalables con potencial internacional.</p>
-<a href="https://www.startupdenmark.info" target="_blank" rel="noopener">→ Programa oficial Startup Denmark</a>` }
+<a href="https://www.startupdenmark.info" target="_blank" rel="noopener">→ Programa oficial Startup Denmark</a>`,
+de:`<p>Das <strong>Startup Denmark Visum</strong> ermöglicht es Nicht-EU/EWR-Bürgern, speziell zur Unternehmensgründung nach Dänemark zu kommen. Es erfordert die Bewertung eines Businessplans durch ein Expertengremium.</p>
+<p><strong>Voraussetzungen:</strong></p>
+<ul>
+  <li>Eine genehmigte, innovative und skalierbare Geschäftsidee</li>
+  <li>Ausreichende Mittel zur Selbstversorgung (in der Regel 130.000+ DKK für das erste Jahr)</li>
+  <li>Businessplan, der bei der Dänischen Wirtschaftsbehörde (Erhvervsstyrelsen) eingereicht wurde</li>
+</ul>
+<p><strong>Laufzeit:</strong> Zunächst 2 Jahre, verlängerbar.</p>
+<p><strong>Bearbeitungszeit:</strong> Ca. 1–3 Monate nach Genehmigung des Businessplans.</p>
+<p class="callout-warning">Das Visum erfordert echte Innovation — Anträge für Standard-Einzelhandel, Restaurants oder Dienstleistungsunternehmen werden in der Regel abgelehnt. Das Gremium sucht nach skalierbaren Unternehmen mit internationalem Potenzial.</p>
+<a href="https://www.startupdenmark.info" target="_blank" rel="noopener">→ Offizielles Startup Denmark Programm</a>` }
       }
     ],
     checklist: [
@@ -3437,9 +4047,9 @@ es:`<p>El <strong>visado Startup Denmark</strong> permite a ciudadanos no perten
   },
   {
     id: 10, icon: "🚲", color: "#6A9E6A",
-    title: { en:"Transport", fr:"Transport", ar:"المواصلات", es:"Transporte", da:"Transport" },
-    subtitle: { en:"Cycling or Standing in Line", fr:"Vélo ou File d'Attente", ar:"ركوب الدراجة أو الانتظار", es:"Bicicleta o Cola", da:"Cyklende eller i kø" },
-    intro: { en:"Denmark runs on bicycles. Literally. Here's how to navigate a country where cycling is faster than driving.", fr:"Le Danemark fonctionne à vélo.", ar:"الدنمارك تعمل بالدراجات الهوائية.", es:"Dinamarca funciona en bicicleta.", da:"Danmark kører på cykel." },
+    title: { en:"Transport", fr:"Transport", ar:"المواصلات", es:"Transporte", da:"Transport", de:"Verkehr und Transport" },
+    subtitle: { en:"Cycling or Standing in Line", fr:"Vélo ou File d'Attente", ar:"ركوب الدراجة أو الانتظار", es:"Bicicleta o Cola", da:"Cyklende eller i kø", de:"Fahrrad oder Warteschlange" },
+    intro: { en:"Denmark runs on bicycles. Literally. Here's how to navigate a country where cycling is faster than driving.", fr:"Le Danemark fonctionne à vélo.", ar:"الدنمارك تعمل بالدراجات الهوائية.", es:"Dinamarca funciona en bicicleta.", da:"Danmark kører på cykel.", de:"Dänemark läuft mit Fahrrädern. Buchstäblich. So navigieren Sie in einem Land, in dem das Fahrrad schneller ist als das Auto." },
     readTime: "10 min",
     lastUpdated: "2025-01",
     sections: [
@@ -3525,7 +4135,23 @@ es:`<p>Dinamarca tiene más bicicletas que habitantes (aproximadamente 4,2 millo
   <li>Un timbre (ringeklokke) es legalmente obligatorio</li>
   <li>El casco NO es obligatorio legalmente (pero se recomienda para niños)</li>
 </ul>
-<p>Multa por circular sin luces: 700 DKK. Los daneses se toman en serio las normas ciclistas.</p>` }
+<p>Multa por circular sin luces: 700 DKK. Los daneses se toman en serio las normas ciclistas.</p>`,
+de:`<p>Dänemark hat mehr Fahrräder als Einwohner (ca. 4,2 Millionen Fahrräder für 5,9 Millionen Menschen). In Kopenhagen <strong>fahren 62 % der Einwohner täglich mit dem Fahrrad zur Arbeit oder zur Schule</strong> — auch im Winter, auch im Regen. Es ist kein Hobby. Es ist Infrastruktur.</p>
+<p><strong>Fahrrad kaufen:</strong></p>
+<ul>
+  <li><strong>Neues Fahrrad (cykelbutik):</strong> 1.500–5.000 DKK für ein zuverlässiges Pendlerfahrrad</li>
+  <li><strong>Gebraucht:</strong> Facebook Marketplace, DBA.dk, Flohmärkte (Loppemarked) — 300–1.500 DKK. Sorgfältig prüfen; gestohlene Fahrräder sind häufig.</li>
+  <li><strong>Fahrradläden:</strong> Cykelexperten, Bike Brothers, Christiania Cykler für Lastenräder</li>
+</ul>
+<p><strong>Verkehrsregeln für Radfahrer:</strong></p>
+<ul>
+  <li>Fahren Sie immer im Radweg (cykelsti), wo vorhanden — auf dem Bürgersteig zu fahren ist illegal</li>
+  <li>Geben Sie Abbiegesignale mit dem Arm</li>
+  <li>Beleuchtung ist nach Einbruch der Dunkelheit gesetzlich vorgeschrieben</li>
+  <li>Eine Klingel (ringeklokke) ist gesetzlich vorgeschrieben</li>
+  <li>Ein Helm ist gesetzlich NICHT vorgeschrieben (aber für Kinder empfohlen)</li>
+</ul>
+<p>Bußgeld für Fahren ohne Beleuchtung: 700 DKK. Dänen nehmen Fahrradregeln ernst.</p>` }
       },
       {
         icon: "🚌",
@@ -3589,7 +4215,19 @@ es:`<p>El transporte público danés es excelente en las ciudades y muy bueno en
 </ul>
 <p><strong>Abonos mensuales:</strong> Si haces el mismo trayecto a diario, un abono de periodo (periodekort) para zonas específicas suele ser más económico que usar el Rejsekort. Calcula en rejseplanen.dk.</p>
 <p><strong>Metro de Copenhague:</strong> Funciona 24/7, 365 días al año. Frecuencia: cada 2–4 minutos en hora punta. Actualmente 4 líneas (M1–M4).</p>
-<p><strong>Trenes DSB:</strong> Trenes interurbanos entre Copenhague, Odense, Aarhus y Aalborg. Reserva con anticipación en línea para ahorros significativos, especialmente los billetes Offpeak.</p>` }
+<p><strong>Trenes DSB:</strong> Trenes interurbanos entre Copenhague, Odense, Aarhus y Aalborg. Reserva con anticipación en línea para ahorros significativos, especialmente los billetes Offpeak.</p>`,
+de:`<p>Der dänische öffentliche Nahverkehr ist in den Städten ausgezeichnet und auf Fernstrecken sehr gut. Er funktioniert nach einem <strong>Zonensystem</strong> — je mehr Zonen Sie überqueren, desto mehr zahlen Sie.</p>
+<p><strong>Rejsekort (Fahrkarte) — unverzichtbar:</strong></p>
+<ul>
+  <li>Funktioniert in allen Bussen, der Metro, den S-Bahnen (S-tog) und Regionalzügen</li>
+  <li>Kostet ca. 15–20 % weniger pro Fahrt als Einzeltickets</li>
+  <li>Kaution: 80 DKK für die Karte + mindestens 70 DKK Aufladeguthaben</li>
+  <li>Kaufen Sie sie an Bahnhöfen, im 7-Eleven oder auf <a href="https://www.rejsekort.dk/en" target="_blank" rel="noopener">rejsekort.dk</a></li>
+  <li>Immer ein- UND auschecken — vergessenes Auschecken führt zu Überbelastung</li>
+</ul>
+<p><strong>Zeitkarten:</strong> Wenn Sie täglich dieselbe Strecke pendeln, ist eine Zeitkarte (Periodekort) für bestimmte Zonen meist günstiger als das Rejsekort. Berechnen Sie dies auf rejseplanen.dk.</p>
+<p><strong>Kopenhagener Metro:</strong> Fährt 24/7, 365 Tage im Jahr. Taktfolge: alle 2–4 Minuten zur Stoßzeit. Derzeit 4 Linien (M1–M4).</p>
+<p><strong>DSB-Züge:</strong> Fernzüge zwischen Kopenhagen, Odense, Aarhus und Aalborg. Frühzeitig online buchen für erhebliche Ersparnisse, insbesondere bei Offpeak-Tickets.</p>` }
       },
       {
         icon: "🚗",
@@ -3663,7 +4301,21 @@ es:`<p>Dinamarca tiene algunos de los impuestos de compra de automóviles más a
   <li><strong>Hertz DriveNow / Flinkster</strong> — alquiler de coches por minutos en las ciudades</li>
   <li><strong>DriveNow</strong> — compartición de coches eléctricos en Copenhague</li>
 </ul>
-<p>Límites de velocidad: 50 km/h en zonas urbanas, 80 km/h en carreteras rurales, 110/130 km/h en autopistas. Los radares de velocidad son frecuentes.</p>` }
+<p>Límites de velocidad: 50 km/h en zonas urbanas, 80 km/h en carreteras rurales, 110/130 km/h en autopistas. Los radares de velocidad son frecuentes.</p>`,
+de:`<p>Dänemark hat einige der höchsten Kfz-Kaufsteuern der Welt — die <strong>Registreringsafgift</strong> (Zulassungssteuer) beträgt bis zu 150 % des Fahrzeugwerts. Ein Auto im Wert von 200.000 DKK kann nach Steuern leicht 400.000 DKK+ kosten. Dies ist bewusste Politik, um das Fahrradfahren und den öffentlichen Nahverkehr zu fördern.</p>
+<p><strong>Wenn Sie Ihr eigenes Auto aus dem Ausland mitbringen:</strong></p>
+<ul>
+  <li>Sie müssen die dänische Zulassungssteuer zahlen, wenn Sie dauerhafter Einwohner werden</li>
+  <li>EU-Bürger: innerhalb von 30 Tagen nach Adressanmeldung</li>
+  <li>Zulassung beantragen auf <a href="https://motorst.dk" target="_blank" rel="noopener">motorst.dk</a></li>
+</ul>
+<p><strong>Alternativen zum Autobesitz:</strong></p>
+<ul>
+  <li><strong>GoMore</strong> — Auto-Sharing-Community (wie Airbnb für Autos)</li>
+  <li><strong>Hertz DriveNow / Flinkster</strong> — minutenweise Automiete in Städten</li>
+  <li><strong>DriveNow</strong> — Elektroauto-Sharing in Kopenhagen</li>
+</ul>
+<p>Geschwindigkeitsbegrenzungen: 50 km/h in Ortschaften, 80 km/h auf Landstraßen, 110/130 km/h auf Autobahnen. Blitzer sind häufig.</p>` }
       }
     ],
     checklist: [
@@ -3675,9 +4327,9 @@ es:`<p>Dinamarca tiene algunos de los impuestos de compra de automóviles más a
   },
   {
     id: 11, icon: "🗣️", color: "#B87333",
-    title: { en:"Language", fr:"Langue", ar:"اللغة", es:"Idioma", da:"Sprog" },
-    subtitle: { en:"Danish Is Impossible. Do It Anyway.", fr:"Le Danois Est Impossible. Faites-le Quand Même.", ar:"الدنماركية مستحيلة. افعلها على أي حال.", es:"El Danés Es Imposible. Hazlo de Todos Modos.", da:"Dansk er umuligt. Gør det alligevel." },
-    intro: { en:"Danish pronunciation is uniquely difficult. Every Dane speaks English. Neither of these facts changes that learning Danish will transform your life here.", fr:"La prononciation danoise est particulièrement difficile. Chaque Danois parle anglais.", ar:"النطق الدنماركي صعب بشكل فريد. كل دنماركي يتكلم الإنجليزية.", es:"La pronunciación danesa es excepcionalmente difícil. Cada danés habla inglés.", da:"Dansk udtale er unikt svær. Alle danskere taler engelsk." },
+    title: { en:"Language", fr:"Langue", ar:"اللغة", es:"Idioma", da:"Sprog", de:"Sprache" },
+    subtitle: { en:"Danish Is Impossible. Do It Anyway.", fr:"Le Danois Est Impossible. Faites-le Quand Même.", ar:"الدنماركية مستحيلة. افعلها على أي حال.", es:"El Danés Es Imposible. Hazlo de Todos Modos.", da:"Dansk er umuligt. Gør det alligevel.", de:"Dänisch ist unmöglich. Trotzdem lernen." },
+    intro: { en:"Danish pronunciation is uniquely difficult. Every Dane speaks English. Neither of these facts changes that learning Danish will transform your life here.", fr:"La prononciation danoise est particulièrement difficile. Chaque Danois parle anglais.", ar:"النطق الدنماركي صعب بشكل فريد. كل دنماركي يتكلم الإنجليزية.", es:"La pronunciación danesa es excepcionalmente difícil. Cada danés habla inglés.", da:"Dansk udtale er unikt svær. Alle danskere taler engelsk.", de:"Die dänische Aussprache ist einzigartig schwierig. Jeder Däne spricht Englisch. Keiner dieser Umstände ändert etwas daran, dass das Erlernen von Dänisch Ihr Leben hier grundlegend verändern wird." },
     readTime: "12 min",
     lastUpdated: "2025-01",
     sections: [
@@ -3728,7 +4380,16 @@ es:`<p>La verdad honesta: puedes vivir en Dinamarca durante años hablando solo 
   <li>Te pierdes los momentos tranquilos e importantes donde ocurre la pertenencia</li>
   <li>Después de 3–4 años, puedes sentirte más como visitante que como residente</li>
 </ul>
-<p>Aprender danés — aunque sea mal — envía una señal que los daneses respetan profundamente: que estás <em>intentando</em> formar parte de algo. Cambiarán al inglés para ayudarte, pero notan el esfuerzo y eso abre puertas que nada más puede abrir.</p>` }
+<p>Aprender danés — aunque sea mal — envía una señal que los daneses respetan profundamente: que estás <em>intentando</em> formar parte de algo. Cambiarán al inglés para ayudarte, pero notan el esfuerzo y eso abre puertas que nada más puede abrir.</p>`,
+de:`<p>Die ehrliche Wahrheit: Sie können jahrelang in Dänemark leben, nur Englisch sprechen und problemlos funktionieren. Die meisten Arbeitsplätze — besonders in Tech- und internationalen Unternehmen — arbeiten auf Englisch. Ärzte, Banken und Behörden bieten oft englischsprachige Unterstützung an.</p>
+<p>Aber das passiert, wenn Sie kein Dänisch lernen:</p>
+<ul>
+  <li>Dänische Kollegen wechseln für Sie ins Englische — was Sie still aus dem Alltagsgespräch ausschließt</li>
+  <li>Soziale Gruppen, die sich natürlich bilden (beim Frokost, nach der Arbeit, im Sportverein), bleiben teilweise geschlossen</li>
+  <li>Sie verpassen die stillen, wichtigen Momente, in denen Zugehörigkeit entsteht</li>
+  <li>Nach 3–4 Jahren können Sie sich eher als Besucher denn als Einwohner fühlen</li>
+</ul>
+<p>Dänisch zu lernen — auch schlecht — signalisiert etwas, das Dänen zutiefst respektieren: dass Sie <em>versuchen</em>, Teil von etwas zu werden. Sie werden für Sie ins Englische wechseln, um zu helfen, aber sie bemerken die Mühe und es öffnet Türen, die nichts anderes öffnet.</p>` }
       },
       {
         icon: "📚",
@@ -3787,7 +4448,18 @@ es:`<p>Si eres residente no perteneciente a la UE con número CPR, tienes el der
   <tr><td>B2</td><td>PD3 (Prøve i Dansk 3)</td><td>Ciudadanía + indfødsretsprøven</td></tr>
   <tr><td>C1</td><td>Studieprøven</td><td>Admisión universitaria a programas en danés</td></tr>
 </table>
-<p>Realidad del cronograma: con 2–3 horas de clase por día, la mayoría de las personas alcanza A2 en 6–9 meses, y B2 en 2–3 años. Requiere estudio regular fuera de clase — la asistencia pasiva no es suficiente.</p>` }
+<p>Realidad del cronograma: con 2–3 horas de clase por día, la mayoría de las personas alcanza A2 en 6–9 meses, y B2 en 2–3 años. Requiere estudio regular fuera de clase — la asistencia pasiva no es suficiente.</p>`,
+de:`<p>Wenn Sie Nicht-EU-Einwohner mit CPR-Nummer sind, haben Sie das gesetzliche Recht auf kostenlose Dänischkurse (Danskuddannelse) für bis zu 3 Jahre. EU-Bürger können zu einem subventionierten Preis teilnehmen.</p>
+<p>Das Programm wird von Ihrer Gemeinde verwaltet. Wenden Sie sich an das <strong>International Community</strong> (ICS) Büro oder die Integrationsabteilung Ihrer Gemeinde zur Anmeldung.</p>
+<p><strong>Sprachniveaus und was sie ermöglichen:</strong></p>
+<table class="info-table">
+  <tr><th>GER-Niveau</th><th>Dänischprüfung</th><th>Erforderlich für</th></tr>
+  <tr><td>A1</td><td>PD1 (Prøve i Dansk 1)</td><td>—</td></tr>
+  <tr><td>B1</td><td>PD2 (Prøve i Dansk 2)</td><td>Daueraufenthalt</td></tr>
+  <tr><td>B2</td><td>PD3 (Prøve i Dansk 3)</td><td>Staatsbürgerschaft + Indfødsretsprøven</td></tr>
+  <tr><td>C1</td><td>Studieprøven</td><td>Universitätszulassung für dänischsprachige Programme</td></tr>
+</table>
+<p>Realistischer Zeitrahmen: Mit 2–3 Stunden Unterricht täglich erreichen die meisten Menschen A2 in 6–9 Monaten, B2 in 2–3 Jahren. Es erfordert regelmäßiges Lernen außerhalb des Unterrichts — passives Erscheinen reicht nicht.</p>` }
       },
       {
         icon: "🔊",
@@ -3861,6 +4533,20 @@ es:`<p>El danés se ha ganado su reputación de dificultad. Esto es lo que lo ha
   <li><strong>Podcast: Slow Danish</strong> — habla real a velocidad de aprendiz</li>
   <li>Habla con daneses en danés — te corregirán con amabilidad y te ayudarán</li>
   <li>Canta canciones danesas — el ritmo fija los patrones de pronunciación</li>
+</ul>`,
+de:`<p>Dänisch hat seinen Ruf als schwierige Sprache zu Recht erworben. Das macht es wirklich schwer:</p>
+<ul>
+  <li><strong>Stød (Glottisschlag):</strong> Ein subtiler Kehlkopf-Stopp, der die Wortbedeutung verändert. In den meisten Sprachen gibt es kein Äquivalent. Man kann ihn hören; ihn zu produzieren dauert Monate.</li>
+  <li><strong>Verschluckte Silben:</strong> Dänen verschlucken im natürlichen Sprechen viele Wortendungen. "Hvad hedder du?" klingt für untrainierte Ohren ungefähr wie "va hehh du?"</li>
+  <li><strong>Das weiche D (blødt D):</strong> Klingt irgendwo zwischen einem englischen "l" und "th" — wie der Laut in "the", aber mit der Zunge weiter hinten. Für die meisten Lernenden völlig fremd.</li>
+  <li><strong>Lang-/Kurzvokaldistinktion:</strong> Dasselbe Wort mit unterschiedlicher Vokallänge kann völlig verschiedene Bedeutungen haben.</li>
+</ul>
+<p><strong>Schnellster Weg zur echten Aussprache:</strong></p>
+<ul>
+  <li>Schauen Sie dänisches TV mit dänischen Untertiteln (nicht englischen) — <strong>DR.dk</strong> und <strong>TV2 Play</strong> haben kostenlosen Inhalt</li>
+  <li><strong>Podcast: Slow Danish</strong> — echte Sprache in Lernertempo</li>
+  <li>Sprechen Sie mit Dänen auf Dänisch — sie korrigieren Sie sanft und helfen</li>
+  <li>Singen Sie dänische Lieder mit — der Rhythmus verankert Aussprache-Muster</li>
 </ul>` }
       },
       {
@@ -3905,6 +4591,14 @@ es:`<div class="app-grid">
   <div class="app-card"><div class="app-card-icon">📖</div><div class="app-card-name">Ordbogen</div><div class="app-card-desc">La mejor app de diccionario danés. También tiene frases y explicaciones gramaticales.</div><div class="app-card-lang">Gratis</div></div>
   <div class="app-card"><div class="app-card-icon">🎬</div><div class="app-card-name">DR.dk</div><div class="app-card-desc">TV danesa gratuita con subtítulos en danés. Ve las noticias, ve series dramáticas.</div><div class="app-card-lang">Gratis</div></div>
   <div class="app-card"><div class="app-card-icon">🎙️</div><div class="app-card-name">Slow Danish Podcast</div><div class="app-card-desc">Danés real a menor velocidad. Incluye transcripciones. Perfecto para niveles intermedios.</div><div class="app-card-lang">Gratis</div></div>
+</div>`,
+de:`<div class="app-grid">
+  <div class="app-card"><div class="app-card-icon">🎧</div><div class="app-card-name">Glossika</div><div class="app-card-desc">Beste App für Aussprache und Satzmuster. Spaced Repetition. Den Preis wert.</div><div class="app-card-lang">Kostenpflichtig</div></div>
+  <div class="app-card"><div class="app-card-icon">📱</div><div class="app-card-name">Babbel</div><div class="app-card-desc">Strukturierte Lektionen, besser als Duolingo für dänische Grammatiktiefe.</div><div class="app-card-lang">Kostenpflichtig</div></div>
+  <div class="app-card"><div class="app-card-icon">🦉</div><div class="app-card-name">Duolingo</div><div class="app-card-desc">Gut für Anfängervokabular und Gewohnheitsbildung. Alleine nicht ausreichend.</div><div class="app-card-lang">Kostenlos/Kostenpflichtig</div></div>
+  <div class="app-card"><div class="app-card-icon">📖</div><div class="app-card-name">Ordbogen</div><div class="app-card-desc">Beste dänische Wörterbuch-App. Enthält auch Phrasen und Grammatikerklärungen.</div><div class="app-card-lang">Kostenlos</div></div>
+  <div class="app-card"><div class="app-card-icon">🎬</div><div class="app-card-name">DR.dk</div><div class="app-card-desc">Kostenloses dänisches TV mit dänischen Untertiteln. Nachrichten und Serien schauen.</div><div class="app-card-lang">Kostenlos</div></div>
+  <div class="app-card"><div class="app-card-icon">🎙️</div><div class="app-card-name">Slow Danish Podcast</div><div class="app-card-desc">Echtes Dänisch verlangsamt. Mit Transkripten. Ideal für Fortgeschrittene Anfänger.</div><div class="app-card-lang">Kostenlos</div></div>
 </div>` }
       }
     ],
@@ -3917,9 +4611,9 @@ es:`<div class="app-grid">
   },
   {
     id: 12, icon: "🧊", color: "#2E6DA4",
-    title: { en:"Culture & Social Life", fr:"Culture et Vie Sociale", ar:"الثقافة والحياة الاجتماعية", es:"Cultura y Vida Social", da:"Kultur og Socialt Liv" },
-    subtitle: { en:"Becoming Part of Something", fr:"Devenir Partie de Quelque Chose", ar:"أن تصبح جزءاً من شيء ما", es:"Ser Parte de Algo", da:"At blive en del af noget" },
-    intro: { en:"Hygge, Janteloven, the 4pm finish — Danish culture is full of invisible rules that make all the difference once you understand them.", fr:"Hygge, Janteloven, la fin à 16h — la culture danoise est pleine de règles invisibles.", ar:"هيغا وقانون يانتيلوفن ونهاية العمل الساعة 4 — الثقافة الدنماركية مليئة بقواعد غير مرئية تحدث فرقاً كبيراً.", es:"Hygge, Janteloven, el fin a las 4pm — la cultura danesa está llena de reglas invisibles que marcan la diferencia.", da:"Hygge, Janteloven, fyraften kl. 16 — dansk kultur er fuld af usynlige regler, der gør hele forskellen." },
+    title: { en:"Culture & Social Life", fr:"Culture et Vie Sociale", ar:"الثقافة والحياة الاجتماعية", es:"Cultura y Vida Social", da:"Kultur og Socialt Liv", de:"Kultur und Sozialleben" },
+    subtitle: { en:"Becoming Part of Something", fr:"Devenir Partie de Quelque Chose", ar:"أن تصبح جزءاً من شيء ما", es:"Ser Parte de Algo", da:"At blive en del af noget", de:"Teil von etwas werden" },
+    intro: { en:"Hygge, Janteloven, the 4pm finish — Danish culture is full of invisible rules that make all the difference once you understand them.", fr:"Hygge, Janteloven, la fin à 16h — la culture danoise est pleine de règles invisibles.", ar:"هيغا وقانون يانتيلوفن ونهاية العمل الساعة 4 — الثقافة الدنماركية مليئة بقواعد غير مرئية تحدث فرقاً كبيراً.", es:"Hygge, Janteloven, el fin a las 4pm — la cultura danesa está llena de reglas invisibles que marcan la diferencia.", da:"Hygge, Janteloven, fyraften kl. 16 — dansk kultur er fuld af usynlige regler, der gør hele forskellen.", de:"Hygge, Janteloven, Feierabend um 16 Uhr — die dänische Kultur ist voller unsichtbarer Regeln, die alles verändern, sobald man sie versteht." },
     readTime: "16 min",
     lastUpdated: "2025-01",
     sections: [
@@ -4005,7 +4699,23 @@ es:`<p><strong>Hygge</strong> (se pronuncia aproximadamente "hoo-ga") es un conc
   <li>No es pasivo — requiere presencia y compromiso genuino con las personas que te rodean.</li>
 </ul>
 <p class="callout-info"><strong>Para los recién llegados:</strong> La manera más rápida de entender el hygge es que te inviten a cenar en un hogar danés: llega a tiempo, guarda el teléfono y quédate hasta que el anfitrión indique que la velada está terminando. Lo sentirás.</p>
-<p>Dinamarca se clasifica consistentemente entre los países más felices del mundo (Informe Mundial de Felicidad). Los investigadores atribuyen esto en parte al fuerte énfasis cultural en la calidad del tiempo social — el hygge es infraestructura para el bienestar.</p>` }
+<p>Dinamarca se clasifica consistentemente entre los países más felices del mundo (Informe Mundial de Felicidad). Los investigadores atribuyen esto en parte al fuerte énfasis cultural en la calidad del tiempo social — el hygge es infraestructura para el bienestar.</p>`,
+de:`<p><strong>Hygge</strong> (ausgesprochen ungefähr "hoo-ga") ist ein dänisches Konzept ohne direkte deutsche Übersetzung. Es beschreibt eine Qualität der Anwesenheit — eine gemütliche, gesellige Atmosphäre, in der sich Menschen sicher, entspannt und verbunden fühlen. Es ist sowohl Substantiv als auch Adjektiv: man kann Hygge haben, oder etwas kann hyggeligt sein.</p>
+<p><strong>Wie Hygge in der Praxis aussieht:</strong></p>
+<ul>
+  <li>Ein Abendessen, bei dem Handys auf lautlos bleiben und niemand es eilig hat zu gehen</li>
+  <li>Freitagsnachmittag im Büro mit Kuchen und Kaffee (Fredagskage)</li>
+  <li>Ein verregneter Sonntag mit dicken Socken, brennenden Kerzen und keinen Verpflichtungen</li>
+  <li>Brettspiele spielen mit Nachbarn, die man seit drei Jahren kennt</li>
+</ul>
+<p><strong>Was Hygge nicht ist:</strong></p>
+<ul>
+  <li>Es ist nicht performativ. Dänen merken sofort, wenn man es zu sehr erzwingen will.</li>
+  <li>Es ist nicht teuer. Die Menschen mit dem meisten Hygge machen oft die einfachsten Dinge.</li>
+  <li>Es ist nicht passiv — es erfordert Präsenz und echtes Engagement mit den Menschen um einen herum.</li>
+</ul>
+<p class="callout-info"><strong>Für Neuankömmlinge:</strong> Der schnellste Weg, Hygge zu verstehen, ist, zu einem dänischen Abendessen eingeladen zu werden: kommen Sie pünktlich, legen Sie das Handy weg und bleiben Sie, bis der Gastgeber signalisiert, dass der Abend zu Ende geht. Sie werden es spüren.</p>
+<p>Dänemark zählt beständig zu den glücklichsten Ländern der Welt (World Happiness Report). Forscher führen dies teilweise auf die starke kulturelle Betonung von qualitativ hochwertigem Sozialleben zurück — Hygge ist Infrastruktur für Wohlbefinden.</p>` }
       },
       {
         icon: "⚖️",
@@ -4124,7 +4834,30 @@ es:`<p><strong>Janteloven</strong> (la Ley de Jante) es un concepto cultural des
   <li>Es también por eso que los daneses pueden parecer reservados cuando los conoces por primera vez — la autopromosión efusiva es culturalmente incómoda</li>
 </ul>
 <p class="callout-info"><strong>Para los recién llegados:</strong> No confundas Janteloven con falta de confianza. Los daneses son asertivos, directos y orgullosos — simplemente lo expresan colectivamente en lugar de individualmente. Muestra curiosidad por los demás, no tu propio currículum.</p>
-<p>Los daneses más jóvenes critican cada vez más Janteloven como un obstáculo para la ambición y el emprendimiento. Encontrarás que su influencia varía significativamente según el grupo de edad y el sector.</p>` }
+<p>Los daneses más jóvenes critican cada vez más Janteloven como un obstáculo para la ambición y el emprendimiento. Encontrarás que su influencia varía significativamente según el grupo de edad y el sector.</p>`,
+de:`<p><strong>Janteloven</strong> (das Gesetz von Jante) ist ein kulturelles Konzept, das vom dänisch-norwegischen Autor Aksel Sandemose in seinem Roman von 1933 beschrieben wurde. Es beschreibt eine Reihe ungeschriebener sozialer Normen, die kollektive Gleichheit über individuelle Leistung stellen.</p>
+<p><strong>Die zehn Regeln des Janteloven (zusammengefasst):</strong></p>
+<ol>
+  <li>Du sollst nicht glauben, dass du etwas Besonderes bist.</li>
+  <li>Du sollst nicht glauben, dass du so viel wert bist wie wir.</li>
+  <li>Du sollst nicht glauben, dass du klüger bist als wir.</li>
+  <li>Du sollst dir nicht einbilden, dass du besser bist als wir.</li>
+  <li>Du sollst nicht glauben, dass du mehr weißt als wir.</li>
+  <li>Du sollst nicht glauben, dass du größer bist als wir.</li>
+  <li>Du sollst nicht glauben, dass du zu etwas taugst.</li>
+  <li>Du sollst nicht über uns lachen.</li>
+  <li>Du sollst nicht glauben, dass sich jemand um dich kümmert.</li>
+  <li>Du sollst nicht glauben, dass du uns etwas beibringen kannst.</li>
+</ol>
+<p><strong>In der Praxis bedeutet das:</strong></p>
+<ul>
+  <li>Mit Gehalt, Auto oder Leistungen zu prahlen gilt als sehr schlechter Stil</li>
+  <li>Dänen stellen sich selten mit Titeln vor ("Ich bin Arzt / Direktor / Professor")</li>
+  <li>Statussignale (Luxusgüter, Namedropping) werden mit stiller sozialer Missbilligung begegnet</li>
+  <li>Das ist auch der Grund, warum Dänen beim ersten Kennenlernen reserviert wirken können — effusive Selbstvermarktung ist kulturell unangenehm</li>
+</ul>
+<p class="callout-info"><strong>Für Neuankömmlinge:</strong> Verwechseln Sie Janteloven nicht mit mangelndem Selbstbewusstsein. Dänen sind durchsetzungsfähig, direkt und stolz — sie drücken es nur kollektiv statt individuell aus. Zeigen Sie Neugier für andere, nicht Ihren eigenen Lebenslauf.</p>
+<p>Jüngere Dänen kritisieren Janteloven zunehmend als Hindernis für Ehrgeiz und Unternehmertum. Sie werden feststellen, dass sein Einfluss je nach Altersgruppe und Branche stark variiert.</p>` }
       },
       {
         icon: "🏡",
@@ -4208,7 +4941,23 @@ es:`<p>Muchos expatriados en Dinamarca describen a los daneses como amigables pe
   <li><strong>Acepta cada invitación durante el primer año.</strong> Los daneses invitan raramente pero con sinceridad. Di sí a todo en los primeros 12 meses — aunque suene aburrido.</li>
   <li><strong>Lleva comida al lugar de trabajo.</strong> Llevar dulces caseros o comida de tu cultura para compartir en el trabajo es uno de los atajos sociales más rápidos en la cultura de oficina danesa.</li>
 </ul>
-<p class="callout-info"><strong>Internations.org y meetup.com</strong> tienen comunidades activas de expatriados en Copenhague, Aarhus y Odense. Son excelentes para la conexión social inmediata mientras tus amistades danesas se desarrollan.</p>` }
+<p class="callout-info"><strong>Internations.org y meetup.com</strong> tienen comunidades activas de expatriados en Copenhague, Aarhus y Odense. Son excelentes para la conexión social inmediata mientras tus amistades danesas se desarrollan.</p>`,
+de:`<p>Viele Expats in Dänemark beschreiben Dänen als freundlich, aber schwer zu befreunden. Das stimmt — und es hat nichts mit Ihnen persönlich zu tun.</p>
+<p><strong>Die Dynamik dänischer Freundschaften verstehen:</strong></p>
+<ul>
+  <li><strong>Dänen haben bereits ihre Freunde.</strong> Die meisten Dänen kennen ihre engsten Freunde seit der Schule oder dem Studium. Ihr sozialer Kalender ist oft voll. Das ist keine Ausgrenzung — es ist einfach eine andere Sozialstruktur.</li>
+  <li><strong>Dänen wärmen sich langsam, aber tief.</strong> Eine dänische Freundschaft, die ein Jahr braucht, um sich zu bilden, wird Jahrzehnte halten. Sie sind nicht an oberflächlichen Verbindungen interessiert.</li>
+  <li><strong>Gemeinsame Aktivität ist der Einstiegspunkt.</strong> Dänen freunden sich leichter mit Menschen an, wenn sie gemeinsam etwas tun — Sport, Ehrenamt, Kurse — als durch reine Geselligkeit.</li>
+</ul>
+<p><strong>Bewährte Strategien für ein Sozialleben in Dänemark:</strong></p>
+<ul>
+  <li><strong>Treten Sie einem Verein (forening) bei.</strong> Dänemark hat rund 100.000 freiwillige Vereine — Sportklubs, Musikensembles, Debattiergesellschaften, Gartenvereine. Das ist der einzig wirksamste Weg, Dänen als Gleichgestellte kennenzulernen. Finden Sie Klubs auf <a href="https://www.dgi.dk" target="_blank" rel="noopener">dgi.dk</a> oder der Website Ihrer Gemeinde.</li>
+  <li><strong>Nehmen Sie die kostenlosen Dänischkurse.</strong> Sie werden andere Neuankömmlinge treffen UND beginnen, mit Dänen zu ihren eigenen Bedingungen zu interagieren.</li>
+  <li><strong>Besuchen Sie Frivillighedsmesser (Ehrenamtsmessen).</strong> Ehrenamt ist in der dänischen Kultur sehr geschätzt. Sich als Freiwilliger zu engagieren stellt Sie auf soziale Augenhöhe.</li>
+  <li><strong>Nehmen Sie im ersten Jahr jede Einladung an.</strong> Dänen laden selten ein, aber aufrichtig. Sagen Sie im ersten Jahr zu allem Ja — auch wenn es langweilig klingt.</li>
+  <li><strong>Bringen Sie Essen an den Arbeitsplatz.</strong> Hausgemachtes Gebäck oder Essen aus Ihrer Kultur mitzubringen und zu teilen ist eine der schnellsten sozialen Abkürzungen in der dänischen Bürokultur.</li>
+</ul>
+<p class="callout-info"><strong>Internations.org und meetup.com</strong> haben aktive Expat-Communities in Kopenhagen, Aarhus und Odense. Sie eignen sich hervorragend für unmittelbaren sozialen Anschluss, während Ihre dänischen Freundschaften wachsen.</p>` }
       },
       {
         icon: "🎪",
@@ -4262,7 +5011,17 @@ es:`<p>Dinamarca tiene aproximadamente <strong>100.000 asociaciones voluntarias 
   <li><strong>Grundejerforeninger / Beboerforeninger</strong> — asociaciones de propietarios e inquilinos. Si vives en un barrio, puedes ser automáticamente miembro y tener voz en las decisiones locales.</li>
   <li><strong>Frivilligforeninger</strong> — organizaciones de voluntarios. La Cruz Roja danesa (<a href="https://www.rodekors.dk" target="_blank" rel="noopener">rodekors.dk</a>) y muchas organizaciones locales siempre necesitan voluntarios.</li>
 </ul>
-<p><strong>ForeningsPortalen:</strong> Tu municipio probablemente tiene un portal que lista todas las asociaciones locales. Busca "[nombre del municipio] foreningsportal" para encontrar el tuyo.</p>` }
+<p><strong>ForeningsPortalen:</strong> Tu municipio probablemente tiene un portal que lista todas las asociaciones locales. Busca "[nombre del municipio] foreningsportal" para encontrar el tuyo.</p>`,
+de:`<p>Dänemark hat rund <strong>100.000 freiwillige Vereine (Foreninger)</strong> — mehr pro Kopf als fast jedes andere Land der Welt. Sportklubs, Chöre, politische Parteien, Elternvereine, Modelleisenbahnklubs, Schachgesellschaften. Wenn etwas in Dänemark kollektiv getan werden kann, gibt es dafür fast sicher einen Verein.</p>
+<p><strong>Warum das für Sie wichtig ist:</strong> Der Verein (Forening) ist die Art, wie die dänische Gesellschaft das Gemeinschaftsleben organisiert. Er ist auch die wichtigste soziale Leiter für Neuankömmlinge — der Beitritt gibt Ihnen sofort einen strukturierten Grund, dieselben Menschen regelmäßig zu treffen, was die Grundlage dänischer Freundschaft ist.</p>
+<p><strong>Arten von Foreninger, die es zu kennen lohnt:</strong></p>
+<ul>
+  <li><strong>Idrætsforeninger</strong> — Sportklubs. Fußball, Handball, Schwimmen, Laufen, Radfahren, Badminton. Die meisten sind familienfreundlich und erschwinglich (500–2.000 DKK/Jahr). <a href="https://www.dgi.dk" target="_blank" rel="noopener">Klubs über DGI finden</a></li>
+  <li><strong>Musikforeninger / Kor</strong> — Chöre und Musikgruppen. Extrem verbreitet. Gemeinsames Singen ist eine der großen sozialen Traditionen Dänemarks.</li>
+  <li><strong>Grundejerforeninger / Beboerforeninger</strong> — Hauseigentümer- und Mieterverbände. Wenn Sie in einem Viertel wohnen, können Sie automatisch Mitglied sein und bei lokalen Entscheidungen mitbestimmen.</li>
+  <li><strong>Frivilligforeninger</strong> — Freiwilligenorganisationen. Das Rote Kreuz Dänemark (<a href="https://www.rodekors.dk" target="_blank" rel="noopener">rodekors.dk</a>) und viele lokale Organisationen suchen immer Freiwillige.</li>
+</ul>
+<p><strong>ForeningsPortalen:</strong> Ihre Gemeinde hat wahrscheinlich ein Portal, das alle lokalen Vereine auflistet. Suchen Sie nach "[Gemeindenamen] foreningsportal", um Ihres zu finden.</p>` }
       },
       {
         icon: "🎉",
@@ -4336,7 +5095,21 @@ es:`<p>Entender los momentos culturales daneses te ayudará a participar — y a
   <tr><td><strong>Noviembre</strong></td><td>Mortensaften (10 nov.)</td><td>Fiesta de San Martín. Los daneses comen pato asado. Una de las festividades gastronómicas no oficiales más queridas de Dinamarca.</td></tr>
   <tr><td><strong>Diciembre</strong></td><td>Jul (Navidad)</td><td>Se celebra el 24 de diciembre (Juleaften), no el 25. Las familias se toman de las manos y dan vueltas alrededor del árbol de Navidad. Æbleskiver, gløgg, risalamande con la almendra escondida.</td></tr>
 </table>
-<p><strong>Festivos oficiales (helligdage) en los que todo cierra:</strong> Año Nuevo, Jueves Santo, Viernes Santo, Lunes de Pascua, Ascensión, Lunes de Pentecostés, Día de la Constitución (5 jun., parcial), Nochebuena el 24 dic. (cierre temprano), 25 y 26 de diciembre. Nota: <strong>Store Bededag (Gran Día de Oración) fue abolido el 1 de enero de 2024</strong> — ya no es festivo. Los trabajadores recibieron un pequeño aumento salarial anual como compensación.</p>` }
+<p><strong>Festivos oficiales (helligdage) en los que todo cierra:</strong> Año Nuevo, Jueves Santo, Viernes Santo, Lunes de Pascua, Ascensión, Lunes de Pentecostés, Día de la Constitución (5 jun., parcial), Nochebuena el 24 dic. (cierre temprano), 25 y 26 de diciembre. Nota: <strong>Store Bededag (Gran Día de Oración) fue abolido el 1 de enero de 2024</strong> — ya no es festivo. Los trabajadores recibieron un pequeño aumento salarial anual como compensación.</p>`,
+de:`<p>Die dänischen Kulturmomente zu kennen hilft Ihnen dabei, teilzunehmen — und zu vermeiden, der Kollege zu sein, der ein Meeting an einem wichtigen Feiertag gebucht hat.</p>
+<table class="info-table">
+  <tr><th>Datum / Zeitraum</th><th>Feiertag / Tradition</th><th>Was tatsächlich passiert</th></tr>
+  <tr><td><strong>Januar</strong></td><td>Nytårsforsæt</td><td>Neujahrsvorsätze werden ernst genommen. Fitnessstudios überfüllt.</td></tr>
+  <tr><td><strong>Februar/März</strong></td><td>Fastelavn</td><td>Dänischer Karneval. Kinder verkleiden sich und schlagen ein Fass (slå katten af tønden). Fastelavn-Brötchen (Fastelavnsboller) überall.</td></tr>
+  <tr><td><strong>April</strong></td><td>Påske (Ostern)</td><td>4-tägiges Wochenende (Do–Mo). Dänen fahren ins Sommerhaus. Schokoladeneier, Narzissen, gelbe Dekorationen.</td></tr>
+  <tr><td><strong>4.–5. Mai</strong></td><td>Befreiungstag</td><td>Kerzen in Fenstern um 22 Uhr am 4. Mai — zum Gedenken an das Ende der Besatzung im WWII 1945. Tief bedeutsam für Dänen.</td></tr>
+  <tr><td><strong>5. Juni</strong></td><td>Grundlovsdag</td><td>Dänischer Verfassungstag — gesetzlicher Feiertag. Politische Reden in Parks.</td></tr>
+  <tr><td><strong>23. Juni</strong></td><td>Sankt Hans Aften</td><td>Mittsommer. Lagerfeuer an Stränden in ganz Dänemark. Hexenstrohpuppe wird verbrannt (Hexe fliegt nach Bloksbjerg). Eine der schönsten dänischen Traditionen.</td></tr>
+  <tr><td><strong>Juli–Aug.</strong></td><td>Sommerferie</td><td>Dänemark macht im Wesentlichen Pause. Büros werden leer. Dänen fahren ins Sommerhus. Planen Sie keine wichtigen Meetings im Juli.</td></tr>
+  <tr><td><strong>November</strong></td><td>Mortensaften (10. Nov.)</td><td>Martinsfest. Dänen essen Entenbraten. Einer der beliebtesten inoffiziellen Gastronomiefeiertage Dänemarks.</td></tr>
+  <tr><td><strong>Dezember</strong></td><td>Jul (Weihnachten)</td><td>Wird am 24. Dezember (Juleaften), nicht am 25. gefeiert. Familien fassen sich an den Händen und gehen um den Weihnachtsbaum. Æbleskiver, Gløgg, Risalamande mit der versteckten Mandel.</td></tr>
+</table>
+<p><strong>Offizielle Feiertage (Helligdage), an denen alles schließt:</strong> Neujahr, Gründonnerstag, Karfreitag, Ostermontag, Himmelfahrt, Pfingstmontag, Grundlovsdag (5. Juni, teilweise), Heiligabend 24. Dez. (frühe Schließung), 1. und 2. Weihnachtstag. Hinweis: <strong>Store Bededag (Großer Bußtag) wurde am 1. Januar 2024 abgeschafft</strong> — er ist kein Feiertag mehr. Arbeitnehmer erhielten als Ausgleich eine leichte Gehaltserhöhung.</p>` }
       },
       {
         icon: "🍞",
@@ -4420,7 +5193,23 @@ es:`<p>La cultura gastronómica danesa ha experimentado una revolución desde qu
   <li><strong>Æbleskiver</strong> — pequeñas bolas esféricas de tortita que se comen con azúcar glass y mermelada, en temporada navideña.</li>
   <li><strong>Wienerbrød</strong> — lo que el resto del mundo llama "Danish pastry". Cómpralo en una panadería local, no en un supermercado.</li>
 </ul>
-<p><strong>Supermercados:</strong> Netto y Rema 1000 son los más baratos. Lidl y Aldi también ofrecen muy buena relación calidad-precio. Meny es de gama media con productos de mejor calidad. (Nota: Irma, la histórica cadena premium, fue clausurada por Coop en 2024 — sus tiendas fueron rebautizadas principalmente como Brugsen.) <strong>Consejo de ahorro:</strong> Usa la app <strong>Too Good To Go</strong> (muy utilizada en Dinamarca) para comprar comida sobrante de panaderías y restaurantes con un 60–70% de descuento.</p>` }
+<p><strong>Supermercados:</strong> Netto y Rema 1000 son los más baratos. Lidl y Aldi también ofrecen muy buena relación calidad-precio. Meny es de gama media con productos de mejor calidad. (Nota: Irma, la histórica cadena premium, fue clausurada por Coop en 2024 — sus tiendas fueron rebautizadas principalmente como Brugsen.) <strong>Consejo de ahorro:</strong> Usa la app <strong>Too Good To Go</strong> (muy utilizada en Dinamarca) para comprar comida sobrante de panaderías y restaurantes con un 60–70% de descuento.</p>`,
+de:`<p>Die dänische Esskultur hat seit Noma Kopenhagen auf die globale kulinarische Landkarte gebracht eine Revolution erlebt. Der dänische Essalltag unterscheidet sich jedoch deutlich von der Spitzengastronomie.</p>
+<p><strong>Der tägliche Mahlzeiten-Rhythmus:</strong></p>
+<ul>
+  <li><strong>Morgenmad (Frühstück):</strong> Typischerweise leicht — Rugbrød (dunkles Roggenbrot) mit Käse oder Leverpostej (Leberpastete), oder Joghurt mit Müsli. Dänen frühstücken zu Hause, selten im Café.</li>
+  <li><strong>Frokost (Mittagessen):</strong> Die Hauptmahlzeit des Arbeitstages. Oft Smørrebrød — offene Roggenbrote mit Belägen (Sild/Hering, Roastbeef, Ei, Garnelen). Viele Arbeitsplätze haben eine gemeinsame Mittagsverpflegung (Kantineordning).</li>
+  <li><strong>Aftensmad (Abendessen):</strong> Meist 18–19 Uhr. Die warme Hauptmahlzeit. Enthält oft Kartoffeln (Kartofler) — Dänen verbrauchen pro Kopf mehr Kartoffeln als fast jedes andere EU-Land.</li>
+</ul>
+<p><strong>Was Sie probieren sollten:</strong></p>
+<ul>
+  <li><strong>Smørrebrød</strong> — das offene Sandwich. Unverzichtbare dänische Kulturerfahrung.</li>
+  <li><strong>Rugbrød</strong> — dichtes, dunkles, saures Roggenbrot. Überraschend sättigend und nahrhaft.</li>
+  <li><strong>Flæskesteg</strong> — Schweinebraten mit knuspriger Schwarte. Das Nationalgericht.</li>
+  <li><strong>Æbleskiver</strong> — kleine kugelförmige Pfannkuchenbällchen mit Puderzucker und Marmelade, in der Weihnachtszeit.</li>
+  <li><strong>Wienerbrød</strong> — was der Rest der Welt als "Danish pastry" bezeichnet. Kaufen Sie es beim lokalen Bäcker, nicht im Supermarkt.</li>
+</ul>
+<p><strong>Supermärkte:</strong> Netto und Rema 1000 sind die günstigsten. Lidl und Aldi sind ebenfalls sehr preiswert. Meny ist Mittelklasse mit besserer Produktqualität. (Hinweis: Irma, die historische Premiumkette, wurde 2024 von Coop eingestellt — ihre Filialen wurden hauptsächlich zu Brugsen.) <strong>Spartipp:</strong> Nutzen Sie die App <strong>Too Good To Go</strong> (in Dänemark weit verbreitet), um überschüssige Lebensmittel von Bäckereien und Restaurants mit 60–70 % Rabatt zu kaufen.</p>` }
       }
     ],
     checklist: [
@@ -4434,9 +5223,9 @@ es:`<p>La cultura gastronómica danesa ha experimentado una revolución desde qu
   },
   {
     id: 13, icon: "💕", color: "#C60C30",
-    title: { en:"Dating & Relationships", fr:"Rencontres et Relations", ar:"المواعدة والعلاقات", es:"Citas y Relaciones", da:"Dating og Forhold" },
-    subtitle: { en:"Love Under Northern Lights", fr:"L'Amour Sous les Lumières du Nord", ar:"الحب تحت أضواء الشمال", es:"Amor Bajo las Auroras Boreales", da:"Kærlighed under nordlyset" },
-    intro: { en:"Dating in Denmark is direct, equal, and refreshingly honest. Here's the cultural roadmap.", fr:"Les rencontres au Danemark sont directes, égales et sincères.", ar:"المواعدة في الدنمارك مباشرة ومتساوية وصادقة بشكل منعش.", es:"Las citas en Dinamarca son directas, igualitarias y honestas.", da:"Dating i Danmark er direkte, ligeværdigt og opfriskende ærligt." },
+    title: { en:"Dating & Relationships", fr:"Rencontres et Relations", ar:"المواعدة والعلاقات", es:"Citas y Relaciones", da:"Dating og Forhold", de:"Dating und Beziehungen" },
+    subtitle: { en:"Love Under Northern Lights", fr:"L'Amour Sous les Lumières du Nord", ar:"الحب تحت أضواء الشمال", es:"Amor Bajo las Auroras Boreales", da:"Kærlighed under nordlyset", de:"Liebe unter Nordlichtern" },
+    intro: { en:"Dating in Denmark is direct, equal, and refreshingly honest. Here's the cultural roadmap.", fr:"Les rencontres au Danemark sont directes, égales et sincères.", ar:"المواعدة في الدنمارك مباشرة ومتساوية وصادقة بشكل منعش.", es:"Las citas en Dinamarca son directas, igualitarias y honestas.", da:"Dating i Danmark er direkte, ligeværdigt og opfriskende ærligt.", de:"Dating in Dänemark ist direkt, gleichberechtigt und erfrischend ehrlich. Hier ist die kulturelle Roadmap." },
     readTime: "12 min",
     lastUpdated: "2025-01",
     sections: [
@@ -4522,6 +5311,22 @@ es:`<p>Las citas en Dinamarca operan según normas claramente diferentes a la ma
   <li>En el trabajo — los romances en el lugar de trabajo son más aceptados en Dinamarca que en muchos países</li>
   <li>Apps: <strong>Tinder</strong> y <strong>Bumble</strong> son las apps dominantes en Dinamarca. Dating.dk es una plataforma popular en danés.</li>
   <li>En clubes deportivos, eventos musicales y actividades de voluntariado</li>
+</ul>`,
+de:`<p>Dating in Dänemark funktioniert nach Normen, die sich deutlich von den meisten anderen Kulturen unterscheiden. Sie zu verstehen wird Ihnen viel Verwirrung ersparen.</p>
+<p><strong>Die großen Unterschiede:</strong></p>
+<ul>
+  <li><strong>Radikale Gleichheit.</strong> Dänisches Dating ist aufrichtig egalitär. Jeder kann jeden einladen. Es wird nicht erwartet, dass einer für den anderen zahlt — die Rechnung teilen ist ab dem ersten Date Standard. Interpretieren Sie nichts in das Wer-zahlt hinein; es ist neutrales Territorium.</li>
+  <li><strong>Direktheit statt Spielchen.</strong> Dänen spielen nicht "schwer zu haben" wie in anderen Kulturen üblich. Wenn jemand interessiert ist, sagt er es in der Regel relativ schnell. Wenn nicht, sagt er das auch — oder hört einfach auf zu antworten, was ebenfalls als Nein verstanden wird.</li>
+  <li><strong>Alkohol als sozialer Schmierstoff.</strong> Viele Dänen finden es einfacher, nach einigen Getränken den ersten Schritt zu machen. Die dänische Barkultur ist ein echtes Dating-Umfeld, besonders donnerstags bis samstags.</li>
+  <li><strong>Langsame Eskalation zur Exklusivität.</strong> Es gibt oft keinen formellen "Die Beziehung definieren"-Moment in Dänemark. Man kann jemanden monatelang daten, bevor einer die Exklusivität anspricht. Interpretieren Sie langsames Commitment nicht als Desinteresse.</li>
+  <li><strong>Geschlechterrollen sind sehr flach.</strong> Annahmen darüber, wer fährt, wer plant, wer mehr verdient — alles irrelevant. Erwarten Sie vollständige Gleichheit bei der Organisation, Bezahlung und Planung von Dates.</li>
+</ul>
+<p><strong>Wo Dänen tatsächlich Menschen treffen:</strong></p>
+<ul>
+  <li>Durch bestehende soziale Kreise (Freunde von Freunden ist die häufigste Route)</li>
+  <li>Bei der Arbeit — Arbeitsplatzromanzen sind in Dänemark akzeptierter als in vielen Ländern</li>
+  <li>Apps: <strong>Tinder</strong> und <strong>Bumble</strong> sind die dominanten Apps in Dänemark. Dating.dk ist eine beliebte dänischsprachige Plattform.</li>
+  <li>In Sportvereinen, Musikveranstaltungen und Freiwilligenaktivitäten</li>
 </ul>` }
       },
       {
@@ -4586,7 +5391,19 @@ es:`<p>Si estás en Dinamarca y quieres traer a un pareja o cónyuge extranjero,
 </ul>
 <p><strong>Ciudadanos de la UE/EEE:</strong> Si eres ciudadano de la UE ejerciendo derechos del tratado en Dinamarca (trabajando, estudiando o siendo autónomo), tienes derecho a traer a tu pareja bajo las normas de libre circulación de la UE. El proceso es más sencillo — solicita un documento de residencia de la UE en <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a>.</p>
 <p><strong>Tiempo de procesamiento:</strong> Generalmente 6–12 meses desde la solicitud. Tu pareja puede solicitar permiso para trabajar mientras se procesa la solicitud.</p>
-<a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Family/Spouse-or-cohabitant" target="_blank" rel="noopener">→ Guía de reagrupación familiar (nyidanmark.dk, inglés)</a>` }
+<a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Family/Spouse-or-cohabitant" target="_blank" rel="noopener">→ Guía de reagrupación familiar (nyidanmark.dk, inglés)</a>`,
+de:`<p>Wenn Sie in Dänemark sind und einen ausländischen Partner oder Ehepartner nachziehen möchten, heißt der Prozess <strong>Familiesammenføring</strong> (Familienzusammenführung). Die Regeln sind streng und sollten frühzeitig verstanden werden.</p>
+<p><strong>Wesentliche Voraussetzungen (2025):</strong></p>
+<ul>
+  <li><strong>Sie müssen mindestens 24 Jahre alt sein</strong> (Sie und Ihr Partner)</li>
+  <li><strong>Sie müssen Ihren Partner finanziell unterstützen können</strong> — konkret dürfen Sie in den 3 Jahren vor dem Antrag bestimmte Sozialleistungen nicht erhalten haben</li>
+  <li><strong>Sie müssen eine Bindung an Dänemark haben</strong>, die mindestens genauso stark ist wie Ihre gemeinsame Bindung an ein anderes Land (das "Tilknytningskrav" — Bindungserfordernis). Es wird ganzheitlich bewertet.</li>
+  <li><strong>Sie müssen eine Unterkunft haben</strong> mit mindestens 20 m² pro Person im Haushalt</li>
+  <li><strong>Sie müssen eine Finanzbürgschaft (Sikkerhedsstillelse)</strong> von ca. 57.000 DKK (2025) leisten — durch die Reform von Juli 2024 auf die Hälfte reduziert von zuvor ~113.000 DKK. Wird stufenweise freigegeben, wenn Ihr Partner keine bestimmten öffentlichen Leistungen in Anspruch nimmt. <a href="https://www.nyidanmark.dk/en-GB/Words-and-concepts/US/Familie/Collateral-guarantee---Reduction-and-release" target="_blank" rel="noopener">Quelle: nyidanmark.dk →</a></li>
+</ul>
+<p><strong>EU/EWR-Bürger:</strong> Wenn Sie EU-Bürger sind und in Dänemark Vertragsrechte ausüben (arbeiten, studieren oder selbstständig sind), haben Sie das Recht, Ihren Partner nach EU-Freizügigkeitsregeln mitzubringen. Der Prozess ist einfacher — beantragen Sie ein EU-Aufenthaltsdokument auf <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a>.</p>
+<p><strong>Bearbeitungszeit:</strong> In der Regel 6–12 Monate ab Antragstellung. Ihr Partner kann während der Bearbeitung eine Arbeitserlaubnis beantragen.</p>
+<a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Family/Spouse-or-cohabitant" target="_blank" rel="noopener">→ Leitfaden zur Familienzusammenführung (nyidanmark.dk, Englisch)</a>` }
       },
       {
         icon: "🌈",
@@ -4670,7 +5487,23 @@ es:`<p>Dinamarca fue el primer país del mundo en reconocer legalmente las union
   <li><strong>LGBT+ Danmark</strong> (<a href="https://www.lgbt.dk" target="_blank" rel="noopener">lgbt.dk</a>) es la principal organización nacional y un recurso valioso para los recién llegados</li>
   <li>Los espacios comunitarios LGBT+ se concentran en los barrios de Vesterbro y Nørrebro de Copenhague, pero la aceptación es generalmente alta en todo el país</li>
 </ul>
-<p class="callout-info">Aunque Dinamarca es muy acogedora, las experiencias individuales pueden variar según la región y la comunidad. Las zonas rurales y algunas comunidades religiosas pueden ser más conservadoras. Sin embargo, el marco legal es de los más fuertes del mundo.</p>` }
+<p class="callout-info">Aunque Dinamarca es muy acogedora, las experiencias individuales pueden variar según la región y la comunidad. Las zonas rurales y algunas comunidades religiosas pueden ser más conservadoras. Sin embargo, el marco legal es de los más fuertes del mundo.</p>`,
+de:`<p>Dänemark war 1989 das erste Land der Welt, das gleichgeschlechtliche Partnerschaften rechtlich anerkannte. Die gleichgeschlechtliche Ehe ist seit 2012 legal. Dänemark zählt beständig zu den Top-3-Ländern weltweit in rechtlicher LGBTQ+-Gleichstellung und gesellschaftlicher Akzeptanz.</p>
+<p><strong>Rechtliche Schutzmaßnahmen:</strong></p>
+<ul>
+  <li>Gleichgeschlechtliche Ehe ist der heterosexuellen Ehe in allen rechtlichen Aspekten vollständig gleichgestellt</li>
+  <li>Gleichgeschlechtliche Paare haben vollständige Adoptionsrechte</li>
+  <li>Geschlechtsanerkennung ist selbst erklärt (seit 2014 für Erwachsene, 2017 für Minderjährige mit elterlicher Zustimmung) — keine chirurgischen Anforderungen, keine psychiatrische Diagnose erforderlich</li>
+  <li>Diskriminierung aufgrund der sexuellen Orientierung oder Geschlechtsidentität ist in Beschäftigung, Wohnen und Dienstleistungen illegal</li>
+  <li>Hassverbrechen aufgrund der sexuellen Orientierung sind mit verschärften Strafen belegt</li>
+</ul>
+<p><strong>Soziale Landschaft:</strong></p>
+<ul>
+  <li><strong>Copenhagen Pride</strong> findet jährlich im August statt und zieht rund 300.000 Teilnehmer an</li>
+  <li><strong>LGBT+ Danmark</strong> (<a href="https://www.lgbt.dk" target="_blank" rel="noopener">lgbt.dk</a>) ist die wichtigste nationale Organisation und eine wertvolle Ressource für Neuankömmlinge</li>
+  <li>LGBT+-Community-Räume konzentrieren sich in den Kopenhagener Vierteln Vesterbro und Nørrebro, aber die Akzeptanz ist im ganzen Land generell hoch</li>
+</ul>
+<p class="callout-info">Obwohl Dänemark sehr aufgeschlossen ist, können individuelle Erfahrungen je nach Region und Gemeinschaft variieren. Ländliche Gebiete und einige religiöse Gemeinschaften können konservativer sein. Der rechtliche Rahmen gehört jedoch zu den stärksten der Welt.</p>` }
       },
       {
         icon: "📋",
@@ -4749,7 +5582,22 @@ es:`<p>Mudarse juntos en Dinamarca tiene implicaciones legales que vale la pena 
   <li><strong>Udvidet samlevendepension:</strong> Pide a tu proveedor de pensiones que añada a tu pareja — la mayoría de los planes de pensiones laborales lo permiten por una pequeña tarifa.</li>
 </ul>
 <p><strong>Unión registrada vs. matrimonio:</strong> La unión registrada (registreret partnerskab) era el equivalente previo a 2012 del matrimonio para las parejas del mismo sexo. Los nuevos registros son raros ahora — el matrimonio es plenamente abierto e igual para todas las parejas.</p>
-<p><strong>Hijos en relaciones no matrimoniales:</strong> El padre debe reconocer la paternidad (faderskabserklæring) — esto ocurre automáticamente en el hospital al nacer si ambos padres están presentes. Ambos padres tienen plenos derechos parentales (forældremyndighed) independientemente del estado civil.</p>` }
+<p><strong>Hijos en relaciones no matrimoniales:</strong> El padre debe reconocer la paternidad (faderskabserklæring) — esto ocurre automáticamente en el hospital al nacer si ambos padres están presentes. Ambos padres tienen plenos derechos parentales (forældremyndighed) independientemente del estado civil.</p>`,
+de:`<p>Zusammenziehen in Dänemark hat rechtliche Implikationen, die es wert sind, verstanden zu werden — besonders für unverheiratete Paare.</p>
+<p><strong>Samlevende (Lebensgemeinschaft) Status:</strong></p>
+<ul>
+  <li>Es gibt keine automatische rechtliche Anerkennung von Lebensgemeinschaften in Dänemark — anders als bei Ehe oder eingetragener Partnerschaft</li>
+  <li>Das bedeutet: Stirbt ein Partner ohne Testament, hat der andere <strong>kein automatisches Erbrecht</strong> nach dänischem Recht</li>
+  <li>Das bedeutet auch: Bei Trennung können gemeinsam erworbene Güter einer rechtlichen Intervention bedürfen</li>
+</ul>
+<p><strong>So schützen Sie sich als unverheiratetes Paar:</strong></p>
+<ul>
+  <li><strong>Samlevende-erklæring (Zusammenlebenerklärung):</strong> Ein notariell beglaubigtes Dokument, das Sie als Lebenspartner ausweist. Bietet in bestimmten Bereichen steuerliche Vorteile und Rechte ähnlich wie Verheiratete.</li>
+  <li><strong>Testament:</strong> Unverzichtbar, wenn Ihr Partner erben soll. Ohne es geht das Erbe an Blutsverwandte.</li>
+  <li><strong>Udvidet samlevendepension:</strong> Bitten Sie Ihren Rentenanbieter, Ihren Partner hinzuzufügen — die meisten betrieblichen Rentensysteme erlauben dies gegen eine geringe Gebühr.</li>
+</ul>
+<p><strong>Eingetragene Partnerschaft vs. Ehe:</strong> Die eingetragene Partnerschaft (Registreret partnerskab) war das Vor-2012-Äquivalent der Ehe für gleichgeschlechtliche Paare. Neue Registrierungen sind heute selten — die Ehe ist für alle Paare vollständig offen und gleichgestellt.</p>
+<p><strong>Kinder in nichtehelichen Beziehungen:</strong> Der Vater muss die Vaterschaft anerkennen (Faderskabserklæring) — dies geschieht automatisch im Krankenhaus bei der Geburt, wenn beide Elternteile anwesend sind. Beide Elternteile haben unabhängig vom Familienstand vollständige Elternrechte (Forældremyndighed).</p>` }
       },
       {
         icon: "🏠",
@@ -4803,7 +5651,17 @@ es:`<p>Dinamarca tiene uno de los procesos de divorcio más simples y civilizado
   <li><strong>Hijos:</strong> Dinamarca prioriza la custodia parental compartida (fælles forældremyndighed). La custodia compartida es la opción predeterminada.</li>
 </ul>
 <p><strong>Familieretshuset</strong> es la Agencia Danesa de Derecho de Familia — gestiona divorcios, separaciones, custodia y pensión alimenticia. Su sitio web tiene orientación en inglés.</p>
-<a href="https://www.familieretshuset.dk/english" target="_blank" rel="noopener">→ Familieretshuset (inglés)</a>` }
+<a href="https://www.familieretshuset.dk/english" target="_blank" rel="noopener">→ Familieretshuset (inglés)</a>`,
+de:`<p>Dänemark hat eines der einfachsten und zivilisiertesten Scheidungsverfahren der Welt.</p>
+<p><strong>Das Verfahren:</strong></p>
+<ul>
+  <li><strong>Sofortige Scheidung (øjeblikkelig skilsmisse):</strong> Wenn beide Ehegatten einverstanden sind und keine Kinder unter 18 Jahren vorhanden sind, können Sie die Scheidung online auf <a href="https://www.familieretshuset.dk" target="_blank" rel="noopener">familieretshuset.dk</a> beantragen. Die Bearbeitung dauert einige Wochen.</li>
+  <li><strong>Trennung zuerst:</strong> Wenn Kinder vorhanden sind oder keine Einigung über die Bedingungen erzielt werden kann, trennt man sich in der Regel (Separation) für 6 Monate, bevor die Scheidung gewährt wird.</li>
+  <li><strong>Vermögen:</strong> Dänemark funktioniert standardmäßig mit einem Gemeinschaftsvermögenssystem (Formuefællesskab). Während der Ehe erworbenes Vermögen wird gleichmäßig aufgeteilt, es sei denn, es gibt einen Ehevertrag (Ægtepagt) oder Schenkungen/Erbschaften.</li>
+  <li><strong>Kinder:</strong> Dänemark priorisiert gemeinsame elterliche Sorge (Fælles forældremyndighed). Gemeinsames Sorgerecht ist die Standardoption.</li>
+</ul>
+<p><strong>Familieretshuset</strong> ist die dänische Familienrechtsbehörde — sie bearbeitet Scheidungen, Trennungen, Sorgerecht und Unterhalt. Ihre Website bietet Orientierung auf Englisch.</p>
+<a href="https://www.familieretshuset.dk/english" target="_blank" rel="noopener">→ Familieretshuset (Englisch)</a>` }
       }
     ],
     checklist: [
@@ -4815,9 +5673,9 @@ es:`<p>Dinamarca tiene uno de los procesos de divorcio más simples y civilizado
   },
   {
     id: 14, icon: "🧠", color: "#6A9E6A",
-    title: { en:"Mental Health & Wellbeing", fr:"Santé Mentale et Bien-être", ar:"الصحة النفسية والرفاهية", es:"Salud Mental y Bienestar", da:"Mental Sundhed og Velvære" },
-    subtitle: { en:"The Inner Journey", fr:"Le Voyage Intérieur", ar:"الرحلة الداخلية", es:"El Viaje Interior", da:"Den Indre Rejse" },
-    intro: { en:"Moving countries is one of the hardest things a human being can do. Your feelings are valid. Help is available.", fr:"Déménager dans un autre pays est l'une des choses les plus difficiles qu'un être humain puisse faire.", ar:"الانتقال إلى بلد آخر هو أحد أصعب الأشياء التي يمكن للإنسان أن يفعلها. مشاعرك صحيحة. المساعدة متاحة.", es:"Mudarse a otro país es una de las cosas más difíciles que puede hacer un ser humano.", da:"At flytte til et nyt land er noget af det sværeste, et menneske kan gøre. Dine følelser er gyldige. Hjælp er tilgængelig." },
+    title: { en:"Mental Health & Wellbeing", fr:"Santé Mentale et Bien-être", ar:"الصحة النفسية والرفاهية", es:"Salud Mental y Bienestar", da:"Mental Sundhed og Velvære", de:"Psychische Gesundheit und Wohlbefinden" },
+    subtitle: { en:"The Inner Journey", fr:"Le Voyage Intérieur", ar:"الرحلة الداخلية", es:"El Viaje Interior", da:"Den Indre Rejse", de:"Die innere Reise" },
+    intro: { en:"Moving countries is one of the hardest things a human being can do. Your feelings are valid. Help is available.", fr:"Déménager dans un autre pays est l'une des choses les plus difficiles qu'un être humain puisse faire.", ar:"الانتقال إلى بلد آخر هو أحد أصعب الأشياء التي يمكن للإنسان أن يفعلها. مشاعرك صحيحة. المساعدة متاحة.", es:"Mudarse a otro país es una de las cosas más difíciles que puede hacer un ser humano.", da:"At flytte til et nyt land er noget af det sværeste, et menneske kan gøre. Dine følelser er gyldige. Hjælp er tilgængelig.", de:"In ein anderes Land zu ziehen ist eines der schwierigsten Dinge, die ein Mensch tun kann. Ihre Gefühle sind berechtigt. Hilfe ist verfügbar." },
     readTime: "14 min",
     lastUpdated: "2025-01",
     sections: [
@@ -4873,7 +5731,17 @@ es:`<p>La inmigración se vende como aventura, oportunidad y nuevos comienzos. T
   <li><strong>Integración (2+ años):</strong> Comienzas a sentirte genuinamente cómodo — pero a veces también atrapado entre dos culturas, sin pertenecer del todo a ninguna.</li>
 </ul>
 <p class="callout-info"><strong>Esto es normal.</strong> Los investigadores lo llaman la curva en U de adaptación. El descenso en el medio es esperado y no significa que tomaste la decisión equivocada. Significa que estás haciendo algo difícil.</p>
-<p><strong>Señales de que puede que necesites más apoyo que solo normalizar:</strong> Problemas persistentes de sueño, pérdida de apetito, incapacidad para encontrar placer en cosas que antes disfrutabas, llanto frecuente, pensamientos de autolesión. Estas son señales para buscar apoyo profesional — que Dinamarca hace genuinamente accesible.</p>` }
+<p><strong>Señales de que puede que necesites más apoyo que solo normalizar:</strong> Problemas persistentes de sueño, pérdida de apetito, incapacidad para encontrar placer en cosas que antes disfrutabas, llanto frecuente, pensamientos de autolesión. Estas son señales para buscar apoyo profesional — que Dinamarca hace genuinamente accesible.</p>`,
+de:`<p>Einwanderung wird als Abenteuer, Chance und Neuanfang verkauft. All das stimmt. Aber es ist auch beständig eine der psychologisch anspruchsvollsten Erfahrungen, die ein Mensch durchmachen kann — und dieser Teil wird selten anerkannt.</p>
+<p><strong>Die Phasen, die die meisten Einwanderer durchlaufen:</strong></p>
+<ul>
+  <li><strong>Die Honeymoon-Phase (0–3 Monate):</strong> Alles ist neu und aufregend. Dänemark ist charmant, die Menschen wirken freundlich, Sie fühlen sich energiegeladen. Diese Phase kann zugrundeliegenden Stress maskieren.</li>
+  <li><strong>Kulturschock (3–12 Monate):</strong> Die Neuheit verfliegt. Sie merken, dass Sie die sozialen Regeln nicht verstehen. Sie sind einsam. Einfache Aufgaben fühlen sich erschöpfend an. Sie vermissen zu Hause auf unerwartete Weise — nicht nur Menschen, sondern Geräusche, Gerüche, das Gefühl, ohne Anstrengung verstanden zu werden.</li>
+  <li><strong>Anpassung (1–2 Jahre):</strong> Sie beginnen, Routinen, Freundschaften und Sprachkompetenz zu entwickeln. Das Leben fühlt sich wieder normal an.</li>
+  <li><strong>Integration (2+ Jahre):</strong> Sie beginnen, sich wirklich wohl zu fühlen — aber fühlen sich manchmal auch zwischen zwei Kulturen gefangen, ohne vollständig irgendwo dazuzugehören.</li>
+</ul>
+<p class="callout-info"><strong>Das ist normal.</strong> Forscher nennen es die U-Kurve der Anpassung. Der Einbruch in der Mitte ist erwartet und bedeutet nicht, dass Sie die falsche Entscheidung getroffen haben. Es bedeutet, dass Sie etwas Schwieriges tun.</p>
+<p><strong>Zeichen, dass Sie möglicherweise mehr als nur Normalisierung brauchen:</strong> Anhaltende Schlafprobleme, Appetitverlust, Unfähigkeit, Freude an Dingen zu finden, die Sie früher genossen haben, häufiges Weinen, Gedanken an Selbstverletzung. Das sind Signale, professionelle Unterstützung zu suchen — die Dänemark wirklich zugänglich macht.</p>` }
       },
       {
         icon: "☀️",
@@ -4932,7 +5800,18 @@ es:`<p>El invierno danés es un desafío psicológico genuino para la mayoría d
   <li><strong>Ejercicio al aire libre independientemente del tiempo:</strong> Los daneses van en bicicleta y caminan bajo la lluvia y el frío. No es terquedad — es una estrategia de salud mental. Incluso 20 minutos de luz exterior durante las horas de luz mejoran el estado de ánimo.</li>
   <li><strong>Suplementación de Vitamina D:</strong> La latitud de Dinamarca significa que la mayoría de las personas se vuelven deficientes en Vitamina D para octubre. La Autoridad Sanitaria Danesa recomienda suplementos de Vitamina D (10 microgramos/día) para todos los daneses de octubre a abril. Disponible ampliamente en farmacias y supermercados.</li>
 </ul>
-<p class="callout-info"><strong>Consejo práctico:</strong> Compra una lámpara de luz diurna en septiembre antes de sentir que la necesitas. Cuando llegan los síntomas del TAE, la investigación muestra que ya has estado expuesto durante semanas a luz insuficiente.</p>` }
+<p class="callout-info"><strong>Consejo práctico:</strong> Compra una lámpara de luz diurna en septiembre antes de sentir que la necesitas. Cuando llegan los síntomas del TAE, la investigación muestra que ya has estado expuesto durante semanas a luz insuficiente.</p>`,
+de:`<p>Dänemarks Winter ist für die meisten Menschen, die aus sonnenreicheren Klimaten kommen, eine echte psychologische Herausforderung. Kopenhagen erhält am Wintersonnenwende nur <strong>1,7 Stunden Tageslicht</strong> — im Vergleich zu 17+ Stunden im Sommer. Im November wird es bereits um 16 Uhr dunkel.</p>
+<p><strong>Saisonale Affektive Störung (SAD):</strong></p>
+<p>SAD ist eine Form der Depression, die durch reduzierte Lichtexposition ausgelöst wird. Sie betrifft klinisch schätzungsweise 3–6 % der dänischen Bevölkerung; viele weitere erleben ein subklinisches "Wintertief". Symptome sind geringe Energie, erhöhter Schlafbedarf, Kohlenhydratheißhunger, Konzentrationsschwäche und gedrückte Stimmung von Oktober bis März.</p>
+<p><strong>Wie Dänen damit umgehen (evidenzbasierte Strategien):</strong></p>
+<ul>
+  <li><strong>Lichttherapie (lysterapi):</strong> Eine Tageslichtlampe (lysbehandlingslampe) mit 10.000 Lux, die morgens 20–30 Minuten verwendet wird, ist klinisch erwiesen wirksam gegen SAD-Symptome. In Apotheken (apotek) und online für 500–1.500 DKK erhältlich. Dies ist eine der wirkungsvollsten verfügbaren Maßnahmen.</li>
+  <li><strong>Hygge als Werkzeug für psychische Gesundheit:</strong> Die dänische Betonung gemütlicher sozialer Zusammenkünfte ist zum Teil eine kulturelle Anpassung an dunkle Winter. Bewusst warme soziale Umgebungen zu schaffen wirkt Isolation entgegen.</li>
+  <li><strong>Bewegung im Freien unabhängig vom Wetter:</strong> Dänen fahren Fahrrad und gehen zu Fuß bei Regen und Kälte. Das ist keine Sturheit — es ist eine Strategie für psychische Gesundheit. Schon 20 Minuten Außenlicht während des Tages verbessern die Stimmung.</li>
+  <li><strong>Vitamin-D-Ergänzung:</strong> Durch Dänemarks Breitengrad werden die meisten Menschen bis Oktober Vitamin-D-mangelhaft. Die dänische Gesundheitsbehörde empfiehlt Vitamin-D-Präparate (10 Mikrogramm/Tag) für alle Dänen von Oktober bis April. Weit verbreitet in Apotheken und Supermärkten erhältlich.</li>
+</ul>
+<p class="callout-info"><strong>Praktischer Tipp:</strong> Kaufen Sie eine Tageslichtlampe im September, bevor Sie das Bedürfnis danach spüren. Wenn SAD-Symptome auftreten, zeigt die Forschung, dass Sie bereits wochenlang unzureichendem Licht ausgesetzt waren.</p>` }
       },
       {
         icon: "🏥",
@@ -5066,7 +5945,33 @@ es:`<p>El sistema de salud de Dinamarca incluye un apoyo sustancial en salud men
   <li><strong>Expat Mental Health Denmark</strong> — apoyo especializado para residentes internacionales</li>
   <li>Plataformas de terapia en línea (BetterHelp, Nuna) están disponibles y son ampliamente utilizadas</li>
 </ul>
-<a href="https://www.livslinjen.dk" target="_blank" rel="noopener">→ Livslinjen — apoyo en crisis</a>` }
+<a href="https://www.livslinjen.dk" target="_blank" rel="noopener">→ Livslinjen — apoyo en crisis</a>`,
+de:`<p>Das dänische Gesundheitssystem umfasst umfangreiche Unterstützung für die psychische Gesundheit, vieles davon kostenlos oder stark subventioniert.</p>
+<p><strong>Ihr Hausarzt (praktiserende læge) ist der Einstiegspunkt:</strong></p>
+<p>Bei den meisten psychischen Problemen beginnen Sie beim Hausarzt. Er kann:</p>
+<ul>
+  <li>Medikamente gegen Depression, Angst und andere Erkrankungen verschreiben</li>
+  <li>Sie mit einer blauen Überweisung (<strong>psykologhenvisning</strong>) zu einem Psychologen überweisen, die Ihnen subventionierte Sitzungen ermöglicht</li>
+  <li>Sie bei komplexeren Bedürfnissen an die psychiatrische Ambulanz (psykiatrisk ambulatorium) überweisen</li>
+</ul>
+<p><strong>Wenn Sie 18–24 Jahre alt sind: kostenlose Psychologen-Sitzungen (kein Eigenanteil).</strong></p>
+<p>Seit dem 1. Juli 2021 können alle Dänen und Einwohner <strong>im Alter von 18–24</strong> bis zu <strong>12 kostenlose Psychologen-Sitzungen je Überweisung</strong> bei leichter bis mittelschwerer Angst oder Depression erhalten — ohne Eigenkosten. Holen Sie eine Überweisung beim Hausarzt ein und buchen Sie dann bei einem Psychologen mit Ydernummer. Dies ist eines der besten kostenlosen Programme für psychische Gesundheit in Europa; viele junge Neuankömmlinge wissen nicht, dass es existiert.</p>
+<p><strong>Wenn Sie 25 Jahre oder älter sind: subventionierte Psychologen-Sitzungen (ydernummer):</strong></p>
+<p>Mit einer Hausarzt-Überweisung zahlen Sie ca. <strong>385–530 DKK pro Sitzung</strong> (Sie zahlen ~50 % des vollen Honorars, der Staat übernimmt den Rest). Dies gilt für eine begrenzte Gruppe von Erkrankungen, darunter leichte bis mittelschwere Depression, Angst, posttraumatische Belastungsstörung und Anpassungsstörungen — womit die meisten einwanderungsbedingten psychischen Herausforderungen abgedeckt sind.</p>
+<p><strong>Realität der Wartezeiten:</strong> Psychiatrische Versorgung durch die öffentliche Hand kann Wartezeiten von 6–18 Monaten haben. Für dringende Bedürfnisse sind private (kostenpflichtige) Sitzungen über Mindler, Kry oder auf Doctolib gelistete Psychologen in der Regel innerhalb weniger Tage verfügbar.</p>
+<p><strong>Krisentelefone (24/7 erreichbar):</strong></p>
+<ul>
+  <li><strong>Livslinjen:</strong> 70 201 201 — Dänischsprachige Krisenbegleitung, anonym und kostenlos</li>
+  <li><strong>Snak om det:</strong> 0045 9042 6555 — Dänischer Chat für psychische Gesundheit</li>
+  <li><strong>Notruf:</strong> 112 (medizinischer Notfall) oder die nächste Notaufnahme (akutmodtagelse) bei unmittelbarer Krise aufsuchen</li>
+</ul>
+<p><strong>Therapie auf Englisch:</strong></p>
+<ul>
+  <li>Viele Privatpsychologen in Kopenhagen und anderen größeren Städten bieten englischsprachige Sitzungen an</li>
+  <li><strong>Expat Mental Health Denmark</strong> — spezialisierte Unterstützung für internationale Einwohner</li>
+  <li>Online-Therapieplattformen (BetterHelp, Nuna) sind verfügbar und weit verbreitet</li>
+</ul>
+<a href="https://www.livslinjen.dk" target="_blank" rel="noopener">→ Livslinjen — Krisenbegleitung</a>` }
       },
       {
         icon: "🤝",
@@ -5125,7 +6030,18 @@ es:`<p>La soledad es uno de los desafíos de salud mental más comunes para los 
   <li><strong>Grupos de Facebook:</strong> "Expats in Copenhagen", "Foreigners in Aarhus" y grupos equivalentes de ciudades son activos y acogedores.</li>
 </ul>
 <p><strong>El voluntariado como solución a la soledad:</strong> El voluntariado crea contacto estructurado con personas consistentes a lo largo del tiempo — la fórmula precisa para la formación de amistades. La Cruz Roja (<a href="https://www.rodekors.dk/bliv-frivillig" target="_blank" rel="noopener">rodekors.dk</a>) y FrivilligDanmark (<a href="https://www.frivilligdanmark.dk" target="_blank" rel="noopener">frivilligdanmark.dk</a>) tienen servicios de colocación.</p>
-<p class="callout-info"><strong>Establece una expectativa de 12 meses.</strong> La investigación sobre la integración social de inmigrantes sugiere que generalmente se necesitan 12–18 meses para construir una red social genuina en un nuevo país. Si estás en el mes 3 y todavía te sientes solo — no es un fracaso, es el calendario previsto.</p>` }
+<p class="callout-info"><strong>Establece una expectativa de 12 meses.</strong> La investigación sobre la integración social de inmigrantes sugiere que generalmente se necesitan 12–18 meses para construir una red social genuina en un nuevo país. Si estás en el mes 3 y todavía te sientes solo — no es un fracaso, es el calendario previsto.</p>`,
+de:`<p>Einsamkeit ist eine der häufigsten psychischen Herausforderungen für Neuankömmlinge in Dänemark. Sie ist kein persönliches Versagen — sie ist eine strukturelle Konsequenz davon, sein bestehendes soziales Netzwerk zurückzulassen und in eine Gesellschaft mit einem anderen sozialen Kalender einzutreten.</p>
+<p><strong>Aktive Strategien, die funktionieren:</strong></p>
+<ul>
+  <li><strong>International House Copenhagen</strong> (<a href="https://ihcph.kk.dk" target="_blank" rel="noopener">ihcph.kk.dk</a>) veranstaltet kostenlose Sozialveranstaltungen, Beratung und Vernetzung speziell für Neuankömmlinge. Wenn Sie in Kopenhagen sind, besuchen Sie es in Ihrem ersten Monat.</li>
+  <li><strong>InterNations</strong> (<a href="https://www.internations.org/denmark-expats" target="_blank" rel="noopener">internations.org</a>) hat aktive Communities in Kopenhagen, Aarhus und Odense. Mit einer kostenpflichtigen Mitgliedschaft erhalten Sie Zugang zu allen Veranstaltungen; kostenloser Zugang zu einigen ist möglich.</li>
+  <li><strong>Meetup.com</strong> hat aktive Gruppen für Wandern, Sprachaustausch, Brettspiele, Tech und mehr.</li>
+  <li><strong>Reddit r/Denmark und r/Copenhagen</strong> sind überraschend hilfreiche Communities — besonders für "Ist das normal?"-Fragen zur dänischen Kultur.</li>
+  <li><strong>Facebook-Gruppen:</strong> "Expats in Copenhagen", "Foreigners in Aarhus" und entsprechende Stadtgruppen sind aktiv und offen.</li>
+</ul>
+<p><strong>Ehrenamt als Lösung gegen Einsamkeit:</strong> Ehrenamtliches Engagement schafft strukturierten Kontakt mit denselben Menschen über einen längeren Zeitraum — genau die Formel für Freundschaftsbildung. Das Rote Kreuz (<a href="https://www.rodekors.dk/bliv-frivillig" target="_blank" rel="noopener">rodekors.dk</a>) und FrivilligDanmark (<a href="https://www.frivilligdanmark.dk" target="_blank" rel="noopener">frivilligdanmark.dk</a>) haben Vermittlungsservices.</p>
+<p class="callout-info"><strong>Setzen Sie sich einen 12-Monats-Horizont.</strong> Forschung zur sozialen Integration von Einwanderern zeigt, dass es typischerweise 12–18 Monate dauert, in einem neuen Land ein echtes soziales Netzwerk aufzubauen. Wenn Sie im dritten Monat sind und sich noch einsam fühlen — das ist kein Scheitern, das ist der Zeitplan.</p>` }
       },
       {
         icon: "💼",
@@ -5174,7 +6090,16 @@ es:`<p>La cultura laboral danesa está diseñada para proteger el bienestar — 
   <li><strong>Apoyo de psicología ocupacional:</strong> Algunos empleadores grandes tienen un programa de asistencia al empleado (EAP) con sesiones de asesoramiento gratuitas. Consulta con tu departamento de recursos humanos.</li>
 </ul>
 <p><strong>El burnout está reconocido médicamente en Dinamarca:</strong> A diferencia de algunos países, los médicos de cabecera daneses toman en serio las enfermedades relacionadas con el estrés. Un diagnóstico de burnout normalmente lleva a un plan de baja por enfermedad estructurado, un programa de reincorporación gradual al trabajo y una derivación a un psicólogo. No serás juzgado por ello.</p>
-<p><strong>Si estás teniendo dificultades en el trabajo:</strong> Tu sindicato (si eres miembro) tiene apoyo legal y social gratuito. El jobcenter (centro de empleo) de tu municipio puede apoyarte durante períodos de incapacidad laboral.</p>` }
+<p><strong>Si estás teniendo dificultades en el trabajo:</strong> Tu sindicato (si eres miembro) tiene apoyo legal y social gratuito. El jobcenter (centro de empleo) de tu municipio puede apoyarte durante períodos de incapacidad laboral.</p>`,
+de:`<p>Die dänische Arbeitskultur ist darauf ausgelegt, das Wohlbefinden zu schützen — aber Burnout ist nach wie vor ein erhebliches Problem, insbesondere bei leistungsorientierten Einwanderern, die sich beweisen wollen.</p>
+<p><strong>Ihre Rechte, wenn die Arbeit Ihre Gesundheit beeinträchtigt:</strong></p>
+<ul>
+  <li><strong>Krankschreibung (sygedagpenge):</strong> Wenn Arbeitsstress Sie klinisch krank macht, können Sie Krankenurlaub nehmen. Ihr Arbeitgeber zahlt das volle Gehalt für die ersten 30 Tage. Danach zahlt der Staat (über Ihre Gemeinde) sygedagpenge (bis zu 4.865 DKK/Woche, 2025).</li>
+  <li><strong>Arbejdstilsynet (Dänische Arbeitsbehörde für Arbeitsumgebung):</strong> Wenn Ihr Arbeitsplatz eine ungesunde Umgebung schafft — übermäßiger Druck, Belästigung, fehlende Pausen — können Sie eine Beschwerde einreichen. Anonyme Meldungen werden akzeptiert. Sie führen Inspektionen durch und haben die Befugnis, Arbeitgeber zu bestrafen. <a href="https://at.dk" target="_blank" rel="noopener">at.dk</a></li>
+  <li><strong>Betriebspsychologische Unterstützung:</strong> Einige größere Arbeitgeber haben ein Mitarbeiter-Hilfsprogramm (EAP) mit kostenlosen Beratungssitzungen. Erkundigen Sie sich bei Ihrer Personalabteilung.</li>
+</ul>
+<p><strong>Burnout ist in Dänemark medizinisch anerkannt:</strong> Anders als in einigen Ländern nehmen dänische Hausärzte stressbedingte Erkrankungen ernst. Eine Burnout-Diagnose führt typischerweise zu einem strukturierten Krankschreibungsplan, einem schrittweisen Wiedereinstiegsprogramm und einer Überweisung zu einem Psychologen. Sie werden dafür nicht verurteilt.</p>
+<p><strong>Wenn Sie am Arbeitsplatz kämpfen:</strong> Ihre Gewerkschaft (falls Sie Mitglied sind) bietet kostenlose rechtliche und soziale Unterstützung. Das jobcenter Ihrer lokalen Gemeinde kann Sie in Zeiten der Arbeitsunfähigkeit unterstützen.</p>` }
       }
     ],
     checklist: [
@@ -5275,7 +6200,23 @@ es:`<p>Dinamarca cuenta con varias leyes superpuestas que prohíben la discrimin
   <li><strong>Contacta a tu sindicato</strong> si la discriminación está relacionada con el empleo</li>
   <li><strong>Contacta una oficina de asistencia jurídica (retshjælp)</strong> para obtener asesoramiento antes de tomar medidas adicionales</li>
 </ol>
-<a href="https://www.ligebehandlingsnaevnet.dk/english" target="_blank" rel="noopener">→ Ligebehandlingsnævnet — Consejo de Igualdad de Trato (inglés)</a>` }
+<a href="https://www.ligebehandlingsnaevnet.dk/english" target="_blank" rel="noopener">→ Ligebehandlingsnævnet — Consejo de Igualdad de Trato (inglés)</a>`,
+de:`<p>Dänemark verfügt über mehrere einander ergänzende Gesetze, die Diskriminierung verbieten. Zusammen decken sie die meisten Situationen ab, auf die ein Neuankömmling treffen kann.</p>
+<table class="info-table">
+  <tr><th>Gesetz</th><th>Was es abdeckt</th><th>Geschützte Merkmale</th></tr>
+  <tr><td><strong>Ligebehandlingsloven</strong><br>(Gleichbehandlungsgesetz)</td><td>Beschäftigung</td><td>Rasse, Ethnie, Religion, Weltanschauung, Behinderung, Alter, sexuelle Orientierung</td></tr>
+  <tr><td><strong>Forskelsbehandlingsloven</strong><br>(Antidiskriminierungsgesetz)</td><td>Beschäftigung (umfassender)</td><td>Rasse, Hautfarbe, Religion, politische Meinung, sexuelle Orientierung, Alter, Behinderung, nationale/soziale Herkunft</td></tr>
+  <tr><td><strong>Straffeloven § 266b</strong><br>(Strafgesetzbuch)</td><td>Öffentliche Äußerungen</td><td>Kriminalisiert öffentliche Aufstachelung zu Hass aufgrund von Rasse, Hautfarbe, nationaler Herkunft, Religion oder sexueller Orientierung</td></tr>
+  <tr><td><strong>Lov om etnisk ligebehandling</strong></td><td>Waren, Dienstleistungen, Wohnen, Sozialschutz</td><td>Rasse und ethnische Herkunft</td></tr>
+</table>
+<p><strong>Wenn Sie Diskriminierung erfahren:</strong></p>
+<ol>
+  <li><strong>Dokumentieren Sie alles</strong> — speichern Sie Nachrichten und E-Mails, machen Sie Notizen mit Datum und Zeugen</li>
+  <li><strong>Wenden Sie sich an Ligebehandlingsnævnet</strong> (die Gleichbehandlungskommission) — kostenlose, unabhängige Beschwerdestelle. Sie können innerhalb eines Jahres nach dem Vorfall eine Beschwerde einreichen.</li>
+  <li><strong>Kontaktieren Sie Ihre Gewerkschaft</strong>, wenn die Diskriminierung beschäftigungsbezogen ist</li>
+  <li><strong>Wenden Sie sich an eine Rechtsberatungsstelle (retshjælp)</strong> für Rat, bevor Sie weitere Schritte einleiten</li>
+</ol>
+<a href="https://www.ligebehandlingsnaevnet.dk/english" target="_blank" rel="noopener">→ Ligebehandlingsnævnet — Gleichbehandlungskommission (Englisch)</a>` }
       },
       {
         icon: "🏠",
@@ -5354,7 +6295,22 @@ es:`<p>Dinamarca tiene algunas de las protecciones para inquilinos más sólidas
   <li>Contacta el <strong>Huslejenævnet</strong> (Tribunal de Arrendamiento) de tu municipio — de uso gratuito con decisiones jurídicamente vinculantes. Es el primer paso para cualquier disputa de alquiler.</li>
   <li>Contacta <strong>Lejerbo</strong> o <strong>Lejernes Landsorganisation (LLO)</strong> — organizaciones nacionales de inquilinos que brindan asesoramiento legal y representación.</li>
 </ul>
-<a href="https://www.lejernet.dk" target="_blank" rel="noopener">→ Lejernes Landsorganisation — asesoramiento para inquilinos (danés)</a>` }
+<a href="https://www.lejernet.dk" target="_blank" rel="noopener">→ Lejernes Landsorganisation — asesoramiento para inquilinos (danés)</a>`,
+de:`<p>Dänemark verfügt über einige der stärksten Mieterschutzgesetze Europas. Sie zu kennen kann Ihnen erheblich Geld und Stress ersparen.</p>
+<p><strong>Wichtige Rechte als Mieter:</strong></p>
+<ul>
+  <li><strong>Mietpreiskontrolle:</strong> In den meisten älteren Immobilien (vor 1992 gebaut) sind Mieterhöhungen reguliert und müssen vom lokalen Mietgericht (huslejenævn) genehmigt werden. Ihr Vermieter kann die Miete nicht einfach nach Belieben erhöhen.</li>
+  <li><strong>Kündigungsfristen:</strong> Ihr Vermieter muss Ihnen mindestens 3 Monate Kündigungsfrist geben — oft länger, je nach Art der Immobilie und Wohndauer. Ihre Kündigungsfrist beträgt in der Regel 1 Monat.</li>
+  <li><strong>Kautionsgrenzen (depositum):</strong> Vermieter dürfen maximal 3 Monatsmieten als Kaution und maximal 3 Monatsmieten als Vorauszahlung verlangen. Die Gesamtsumme darf 6 kombinierte Monatsmieten nicht übersteigen.</li>
+  <li><strong>Zustand beim Einzug:</strong> Der Vermieter muss innerhalb von 2 Wochen nach Ihrem Einzug einen Einzugsbericht (indflytningsrapport) erstellen. Tut er das nicht, kann er Ihnen beim Auszug keine Schäden in Rechnung stellen.</li>
+  <li><strong>Instandhaltung:</strong> Der Vermieter ist für größere Instandhaltungsarbeiten verantwortlich. Sie sind für Innenreparaturen (Streichen, kleine Reparaturen) zuständig, sofern Ihr Vertrag nichts anderes vorsieht.</li>
+</ul>
+<p><strong>Bei einem Streit mit Ihrem Vermieter:</strong></p>
+<ul>
+  <li>Wenden Sie sich an das <strong>Huslejenævnet</strong> (Mietgericht) in Ihrer Gemeinde — kostenlos nutzbar, rechtlich bindende Entscheidungen. Das ist der erste Schritt bei jedem Mietstreit.</li>
+  <li>Kontaktieren Sie <strong>Lejerbo</strong> oder <strong>Lejernes Landsorganisation (LLO)</strong> — nationale Mieterorganisationen, die rechtliche Beratung und Vertretung anbieten.</li>
+</ul>
+<a href="https://www.lejernet.dk" target="_blank" rel="noopener">→ Lejernes Landsorganisation — Mieterberatung (Dänisch)</a>` }
       },
       {
         icon: "👮",
@@ -5408,7 +6364,17 @@ es:`<p>La policía danesa (Politiet) generalmente tiene buena reputación por pr
   <li><strong>Si eres arrestado:</strong> Tienes derecho a tener un abogado presente dentro de las 24 horas. Tienes derecho a notificar a tu embajada o a un familiar. Pide ambas cosas explícitamente.</li>
   <li><strong>Si no hablas danés:</strong> Tienes derecho a un intérprete. Solicítalo.</li>
 </ul>
-<p><strong>Quejas contra la policía:</strong> Preséntala ante <strong>Den Uafhængige Politiklagemyndighed (DUP)</strong> — la Autoridad Independiente de Quejas Policiales. Es genuinamente independiente e investiga todas las quejas. <a href="https://www.politiklagemyndigheden.dk/english" target="_blank" rel="noopener">politiklagemyndigheden.dk</a></p>` }
+<p><strong>Quejas contra la policía:</strong> Preséntala ante <strong>Den Uafhængige Politiklagemyndighed (DUP)</strong> — la Autoridad Independiente de Quejas Policiales. Es genuinamente independiente e investiga todas las quejas. <a href="https://www.politiklagemyndigheden.dk/english" target="_blank" rel="noopener">politiklagemyndigheden.dk</a></p>`,
+de:`<p>Die dänische Polizei (Politiet) hat generell einen guten Ruf für Professionalität und Zurückhaltung. Dennoch ist es wichtig, seine Rechte zu kennen.</p>
+<p><strong>Wenn Sie von der Polizei angehalten werden:</strong></p>
+<ul>
+  <li><strong>Sie müssen sich ausweisen</strong> — Sie sind gesetzlich verpflichtet, auf Verlangen der Polizei Ihren Namen und Ihre Adresse anzugeben. Führen Sie Ihren Ausweis oder Ihre Aufenthaltserlaubnis mit.</li>
+  <li><strong>Sie haben das Schweigerecht</strong> über die Identifizierung hinaus — Sie müssen keine weiteren Fragen beantworten.</li>
+  <li><strong>Die Polizei darf Sie durchsuchen</strong> ohne spezifischen Anlass in ausgewiesenen "Durchsuchungszonen" (visitationszoner) in bestimmten kriminalitätsbelasteten Gebieten — ein umstrittenes dänisches Gesetz. Sie müssen dabei höflich und nicht diskriminierend vorgehen.</li>
+  <li><strong>Bei einer Verhaftung:</strong> Sie haben das Recht auf einen Anwalt innerhalb von 24 Stunden. Sie haben das Recht, Ihre Botschaft oder ein Familienmitglied zu benachrichtigen. Fordern Sie beides ausdrücklich ein.</li>
+  <li><strong>Wenn Sie kein Dänisch sprechen:</strong> Sie haben das Recht auf einen Dolmetscher. Fordern Sie einen an.</li>
+</ul>
+<p><strong>Beschwerden gegen die Polizei:</strong> Reichen Sie sie beim <strong>Den Uafhængige Politiklagemyndighed (DUP)</strong> ein — der unabhängigen Polizeibeschwerdeinstanz. Diese ist wirklich unabhängig und untersucht alle Beschwerden. <a href="https://www.politiklagemyndigheden.dk/english" target="_blank" rel="noopener">politiklagemyndigheden.dk</a></p>` }
       },
       {
         icon: "📜",
@@ -5487,7 +6453,22 @@ es:`<p>El <strong>Folketingets Ombudsmand</strong> (Defensor del Pueblo del Parl
   <li>Presenta tu queja en <a href="https://www.ombudsmanden.dk" target="_blank" rel="noopener">ombudsmanden.dk</a> — hay una sección en inglés</li>
   <li>El Defensor del Pueblo investiga de forma independiente y puede recomendar que una autoridad reconsidere su decisión</li>
 </ol>
-<p class="callout-info">El Defensor del Pueblo no puede anular decisiones — pero en la práctica las autoridades casi siempre siguen sus recomendaciones, ya que el incumplimiento se comunica públicamente al Parlamento.</p>` }
+<p class="callout-info">El Defensor del Pueblo no puede anular decisiones — pero en la práctica las autoridades casi siempre siguen sus recomendaciones, ya que el incumplimiento se comunica públicamente al Parlamento.</p>`,
+de:`<p>Der <strong>Folketingets Ombudsmand</strong> (Parlamentarischer Ombudsmann) ist eine unabhängige Institution, die Beschwerden über dänische Behörden untersucht — darunter Ausländerbehörden, Kommunen, Krankenhäuser und Polizei.</p>
+<p><strong>Wann Sie den Ombudsmann kontaktieren sollten:</strong></p>
+<ul>
+  <li>Eine Behörde hat Sie ungerecht oder rechtswidrig behandelt</li>
+  <li>Eine Entscheidung wurde ohne ordnungsgemäßes Verfahren getroffen</li>
+  <li>Sie haben innerhalb einer angemessenen Zeit keine Antwort erhalten</li>
+  <li>Sie glauben, dass ein Beamter sich unangemessen verhalten hat</li>
+</ul>
+<p><strong>Das Verfahren:</strong></p>
+<ol>
+  <li>Sie müssen zunächst alle internen Beschwerdewege ausgeschöpft haben (Beschwerde bei der Behörde selbst, dann bei einer übergeordneten Behörde)</li>
+  <li>Reichen Sie Ihre Beschwerde auf <a href="https://www.ombudsmanden.dk" target="_blank" rel="noopener">ombudsmanden.dk</a> ein — es gibt einen englischen Bereich</li>
+  <li>Der Ombudsmann untersucht unabhängig und kann empfehlen, dass eine Behörde ihre Entscheidung überdenkt</li>
+</ol>
+<p class="callout-info">Der Ombudsmann kann Entscheidungen nicht aufheben — aber Behörden folgen seinen Empfehlungen in der Praxis fast immer, da Nichtbefolgung dem Parlament öffentlich gemeldet wird.</p>` }
       },
       {
         icon: "⚖️",
@@ -5581,7 +6562,25 @@ es:`<p>La asistencia jurídica en Dinamarca es accesible incluso si tienes ingre
   <li><strong>Dansk Flygtningehjælp (DRC — Consejo Danés para los Refugiados):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — proporciona asesoramiento legal a personas con estatus de protección</li>
   <li><strong>Indvandrer Kvindecentret (LOKK):</strong> Apoyo legal para mujeres inmigrantes en situaciones vulnerables</li>
 </ul>
-<a href="https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp" target="_blank" rel="noopener">→ Encuentra asistencia jurídica gratuita (Advokatsamfundet)</a>` }
+<a href="https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp" target="_blank" rel="noopener">→ Encuentra asistencia jurídica gratuita (Advokatsamfundet)</a>`,
+de:`<p>Rechtliche Hilfe ist in Dänemark auch bei begrenztem Einkommen auf verschiedenen Wegen zugänglich.</p>
+<p><strong>Retshjælp (Zivilrechtliche Prozesskostenhilfe):</strong></p>
+<ul>
+  <li>Dänemark verfügt über ein Netzwerk gemeinnütziger Rechtsberatungsstellen (retshjælpskontorer), die Menschen mit niedrigem Einkommen kostenlose oder günstige Rechtsberatung anbieten</li>
+  <li>Die meisten beraten zu Mietrecht, Arbeitsrecht, Familienrecht und Ausländerrecht</li>
+  <li>Finden Sie Ihre nächste Stelle auf <a href="https://www.advokatsamfundet.dk" target="_blank" rel="noopener">advokatsamfundet.dk</a> (Dänische Rechtsanwaltskammer)</li>
+</ul>
+<p><strong>Kostenlose Rechtsberatung durch Anwälte (advokatvagt):</strong></p>
+<p>Viele Kommunen und Bibliotheken veranstalten kostenlose "Anwalt vom Dienst"-Sitzungen (advokatvagt), bei denen Sie 30–60 Minuten kostenlose Rechtsberatung von einem qualifizierten Anwalt erhalten können. Suchen Sie nach "[Ihre Gemeinde] advokatvagt" für die Termine.</p>
+<p><strong>Pflichtverteidiger (beskikket forsvarsadvokat):</strong></p>
+<p>Wenn Sie einer Straftat angeklagt werden und sich keinen Anwalt leisten können, wird Ihnen das Gericht auf Staatskosten einen beistellen. Das ist ein verfassungsmäßiges Recht.</p>
+<p><strong>Spezifische Organisationen für Einwanderer:</strong></p>
+<ul>
+  <li><strong>Refugees Welcome Denmark</strong> — Rechtsberatung für Flüchtlinge und Asylsuchende</li>
+  <li><strong>Dansk Flygtningehjælp (DRC — Dänischer Flüchtlingsrat):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — bietet Rechtsberatung für Personen mit Schutzstatus</li>
+  <li><strong>Indvandrer Kvindecentret (LOKK):</strong> Rechtliche Unterstützung für eingewanderte Frauen in vulnerablen Situationen</li>
+</ul>
+<a href="https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp" target="_blank" rel="noopener">→ Kostenlose Rechtsberatung finden (Advokatsamfundet)</a>` }
       },
       {
         icon: "🌍",
@@ -5660,7 +6659,22 @@ es:`<p>Tu derecho a permanecer en Dinamarca es la base de todo lo demás. Proteg
   <li>Busca asesoramiento legal de inmediato — el Consejo Danés para los Refugiados y las oficinas de asistencia jurídica pueden asesorarte sobre las perspectivas de apelación</li>
 </ol>
 <p><strong>SIRI — la Agencia Danesa para el Reclutamiento e Integración Internacional:</strong> Tu principal autoridad de inmigración para permisos de trabajo y familiares. Su sitio web tiene orientación en inglés. <a href="https://www.siri.dk/en" target="_blank" rel="noopener">siri.dk/en</a></p>
-<p><strong>Udlændingenævnet — el Tribunal de Apelación de Inmigración:</strong> Organismo independiente para apelaciones sobre decisiones de inmigración. <a href="https://www.udlaendingenaevnet.dk/en" target="_blank" rel="noopener">udlaendingenaevnet.dk/en</a></p>` }
+<p><strong>Udlændingenævnet — el Tribunal de Apelación de Inmigración:</strong> Organismo independiente para apelaciones sobre decisiones de inmigración. <a href="https://www.udlaendingenaevnet.dk/en" target="_blank" rel="noopener">udlaendingenaevnet.dk/en</a></p>`,
+de:`<p>Ihr Aufenthaltsrecht in Dänemark ist die Grundlage für alles andere. Es proaktiv zu schützen ist unerlässlich.</p>
+<p><strong>Verlängerung der Aufenthaltserlaubnis — wichtige Regeln:</strong></p>
+<ul>
+  <li><strong>Stellen Sie den Antrag vor Ablauf Ihrer Erlaubnis.</strong> Beantragen Sie die Verlängerung mindestens 1 Monat vor Ablauf. Ihr Aufenthaltsrecht bleibt während der Bearbeitung erhalten, wenn Sie rechtzeitig beantragt haben. Versäumen Sie die Frist, sind Sie technisch gesehen im Verstoß und Ihr Arbeitgeber muss möglicherweise aufhören, Sie zu bezahlen.</li>
+  <li><strong>Melden Sie Änderungen umgehend.</strong> Wenn Sie den Arbeitgeber, die Adresse oder den Personenstand wechseln, benachrichtigen Sie die Ausländerbehörden (Styrelsen for International Rekruttering og Integration — SIRI) innerhalb der erforderlichen Frist. Unterlassen Sie dies, kann es zu Erlaubnisproblemen führen.</li>
+  <li><strong>Bewahren Sie alle Dokumente auf.</strong> Steuerbescheide, Gehaltsabrechnungen, Arbeitsverträge, Mietverträge — führen Sie geordnete Ablagen von allem. Sie müssen möglicherweise einen kontinuierlichen rechtmäßigen Aufenthalt für die Niederlassungserlaubnis oder die Staatsbürgerschaft nachweisen.</li>
+</ul>
+<p><strong>Wenn Ihr Antrag abgelehnt wird:</strong></p>
+<ol>
+  <li>Sie haben das Recht, beim Einwanderungsbeschwerderat (Udlændingenævnet) innerhalb der angegebenen Frist Widerspruch einzulegen (in der Regel im Ablehnungsschreiben angegeben)</li>
+  <li>Sie dürfen während des Beschwerdeverfahrens in Dänemark bleiben, wenn Sie vor Ablauf Ihrer Erlaubnis beantragt haben</li>
+  <li>Holen Sie sofort Rechtsberatung ein — der Dänische Flüchtlingsrat und Rechtsberatungsstellen können zu Beschwerdechancen beraten</li>
+</ol>
+<p><strong>SIRI — die Dänische Agentur für Internationale Rekrutierung und Integration:</strong> Ihre wichtigste Ausländerbehörde für Arbeits- und Familienerlaubnisse. Ihre Website bietet englischsprachige Anleitungen. <a href="https://www.siri.dk/en" target="_blank" rel="noopener">siri.dk/en</a></p>
+<p><strong>Udlændingenævnet — der Einwanderungsbeschwerderat:</strong> Unabhängiges Gremium für Beschwerden gegen Einwanderungsentscheidungen. <a href="https://www.udlaendingenaevnet.dk/en" target="_blank" rel="noopener">udlaendingenaevnet.dk/en</a></p>` }
       }
     ],
     checklist: [
