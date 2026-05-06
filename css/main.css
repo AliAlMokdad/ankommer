@@ -3362,6 +3362,10 @@ h4 { font-size: 1rem; font-weight: 600; }
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
 }
+/* Input bar must sit above the iPhone home-indicator swipe area */
+.bjorn-input-area {
+  padding-bottom: max(10px, env(safe-area-inset-bottom));
+}
 
 /* ── Touch :active feedback (replaces hover-only states) ──────── */
 @media (hover: none) {
@@ -3445,9 +3449,12 @@ h4 { font-size: 1rem; font-weight: 600; }
     position: fixed;
     right: 12px;
     left: 12px;
+    /* Clear the toggle FAB (64px) + its safe-area offset (≥16px) + 8px gap */
+    bottom: max(88px, calc(env(safe-area-inset-bottom) + 76px));
     width: auto;
     max-width: none;
-    max-height: min(600px, calc(100vh - 100px - env(safe-area-inset-top)));
+    /* 100dvh shrinks when the virtual keyboard opens (unlike 100vh) */
+    max-height: min(560px, calc(100dvh - env(safe-area-inset-bottom) - env(safe-area-inset-top) - 184px));
   }
 }
 

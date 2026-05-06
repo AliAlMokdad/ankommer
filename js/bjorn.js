@@ -826,6 +826,9 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     _focusTrap = null;
     const toggleBtn = document.getElementById('bjorn-toggle');
     if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+    // Reset any keyboard-adjusted inline styles (Visual Viewport API)
+    const panelEl = document.getElementById('bjorn-panel');
+    if (panelEl) { panelEl.style.bottom = ''; panelEl.style.maxHeight = ''; }
     // Animate panel out before hiding it
     widget.classList.add('closing');
     setTimeout(() => {
@@ -951,6 +954,36 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
         if (query) setTimeout(() => sendMessage(query), 400);
       }
     });
+
+    // ── Mobile: Visual Viewport API — keep panel above virtual keyboard ──────
+    // When the user taps the chat input, the soft keyboard opens and eats up
+    // 40–50% of the screen.  On iOS, window.innerHeight doesn't shrink, but
+    // window.visualViewport.height does.  We shift the panel up and trim its
+    // max-height so the input bar is always visible.
+    if (window.visualViewport) {
+      const onViewportResize = () => {
+        if (!isOpen) return;
+        const panel = document.getElementById('bjorn-panel');
+        if (!panel || window.innerWidth > 480) return;
+        const vv = window.visualViewport;
+        // keyboardH > 0 when the soft keyboard is open (layout viewport minus visual)
+        const keyboardH = Math.max(0, window.innerHeight - vv.height);
+        if (keyboardH > 50) {
+          // Float panel above keyboard — add a small 8px gap
+          panel.style.bottom = (keyboardH + 8) + 'px';
+          // Limit panel height to the remaining visible area (minus ~56px for status bar)
+          panel.style.maxHeight = Math.max(200, vv.height - 56) + 'px';
+        } else {
+          // Keyboard dismissed — let CSS handle positioning
+          panel.style.bottom = '';
+          panel.style.maxHeight = '';
+        }
+        // Always scroll messages to the latest reply
+        const msgs = document.getElementById('bjorn-messages');
+        if (msgs) requestAnimationFrame(() => { msgs.scrollTop = msgs.scrollHeight; });
+      };
+      window.visualViewport.addEventListener('resize', onViewportResize);
+    }
   };
 
   return { init, open, close, toggle, setProfile, sendMessage, clearHistory };
