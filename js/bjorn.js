@@ -575,16 +575,35 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       const msg = errBody.error?.message || `API error ${response.status}`;
 
       // Auto-retry on rate-limit (HTTP 429) — Groq free tier has a tight
-      // token-per-minute budget. Wait 15 s then try again silently so the
-      // user just sees Björn "thinking" rather than an error.
-      // Up to 2 retries (total wait up to 30 s before giving up).
+      // token-per-minute budget. Read the Retry-After header for the exact
+      // wait time; fall back to 22 s if missing. Up to 2 retries.
       const isRateLimit = response.status === 429 ||
         msg.toLowerCase().includes('rate limit') ||
         msg.toLowerCase().includes('rate_limit') ||
         msg.includes('tokens per min');
       if (isRateLimit && attempt < 2) {
-        await new Promise(r => setTimeout(r, 15000)); // wait 15 s
-        return callGroq(message, attempt + 1);        // retry (re-pushes user msg)
+        // Groq often sends x-ratelimit-reset-tokens or Retry-After
+        const retryAfter = parseInt(
+          response.headers.get('retry-after') ||
+          response.headers.get('x-ratelimit-reset-tokens') || '22', 10
+        );
+        const waitMs = Math.max(22000, (retryAfter + 2) * 1000); // min 22 s
+        // Show a subtle "still thinking" note so the user isn't confused
+        const thinkEl = document.getElementById('bjorn-thinking');
+        if (thinkEl) {
+          const hint = thinkEl.querySelector('.thinking-hint') || (() => {
+            const s = document.createElement('span');
+            s.className = 'thinking-hint';
+            s.style.cssText = 'font-size:0.72rem;color:var(--text-faint);margin-left:8px';
+            thinkEl.appendChild(s);
+            return s;
+          })();
+          hint.textContent = 'Still thinking…';
+        }
+        await new Promise(r => setTimeout(r, waitMs));
+        // Remove hint before retry
+        document.querySelector('.thinking-hint')?.remove();
+        return callGroq(message, attempt + 1); // retry (re-pushes user msg)
       }
 
       throw new Error(msg);
