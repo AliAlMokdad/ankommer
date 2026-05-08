@@ -18,6 +18,7 @@ const Bjorn = (() => {
   let apiKey = _k;
   let conversationHistory = [];
   let isOpen = false;
+  let isProcessing = false;   // ← prevents overlapping API calls
   let userProfile = {};
 
   /* ── HISTORY PERSISTENCE ────────────────────────────── */
@@ -685,8 +686,26 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
   };
 
   /* ── SEND MESSAGE ────────────────────────────────────── */
+  /* ── SET PROCESSING STATE (disables send button while waiting) ── */
+  const setProcessing = (state) => {
+    isProcessing = state;
+    const sendBtn = document.getElementById('bjorn-send');
+    const inputEl = document.getElementById('bjorn-input');
+    if (sendBtn) {
+      sendBtn.disabled = state;
+      sendBtn.style.opacity = state ? '0.45' : '';
+      sendBtn.style.cursor  = state ? 'not-allowed' : '';
+    }
+    if (inputEl) inputEl.disabled = state;
+  };
+
   const sendMessage = async (message) => {
     if (!message.trim()) return;
+    // Block overlapping calls — the root cause of the "goes off after 3-5 messages" bug.
+    // Parallel API calls corrupt conversation history AND hit Groq's token-rate limit.
+    if (isProcessing) return;
+
+    setProcessing(true);
 
     const input = document.getElementById('bjorn-input');
     if (input) { input.value = ''; input.style.height = 'auto'; }
@@ -707,6 +726,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     if (guard) {
       renderMessage(guard, 'bjorn');
       window.dispatchEvent(new Event('bjornMessageSent'));
+      setProcessing(false);
       return;
     }
 
@@ -736,20 +756,23 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
         // Request timed out — fall back gracefully
         const offline = getOfflineResponse(message);
         renderMessage(offline + '\n\n*Note: Björn took too long to respond. Showing a cached answer — try again if you need his full reasoning.*', 'bjorn');
-        return;
       } else if (err.message.includes('401') || err.message.includes('invalid_api_key')) {
         errorMsg += 'Björn is temporarily unavailable. Refresh the page to reconnect.';
+        renderMessage(errorMsg, 'bjorn');
       } else if (err.message.includes('429') || err.message.includes('rate_limit')) {
         errorMsg += 'Björn is taking a breather — too many questions at once. Wait a moment and try again.';
+        renderMessage(errorMsg, 'bjorn');
       } else if (err.message.includes('Failed to fetch') || !navigator.onLine) {
         // Network failure — fall back to offline
         const offline = getOfflineResponse(message);
         renderMessage(offline + '\n\n*Note: Showing an offline response — Björn couldn\'t connect right now. Check your internet and try again.*', 'bjorn');
-        return;
       } else {
         errorMsg += 'Something went wrong on our end. Try again in a moment.';
+        renderMessage(errorMsg, 'bjorn');
       }
-      renderMessage(errorMsg, 'bjorn');
+    } finally {
+      // Always re-enable input — even if the API call threw or timed out
+      setProcessing(false);
     }
   };
 
