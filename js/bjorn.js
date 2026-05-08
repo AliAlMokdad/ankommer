@@ -795,16 +795,14 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       } else if (err.message.includes('401') || err.message.includes('invalid_api_key')) {
         errorMsg += 'Björn is temporarily unavailable. Refresh the page to reconnect.';
         renderMessage(errorMsg, 'bjorn');
-      } else if (err.message.includes('429') || err.message.includes('rate_limit')) {
-        errorMsg += 'Björn is taking a breather — too many questions at once. Wait a moment and try again.';
-        renderMessage(errorMsg, 'bjorn');
+      } else if (err.message.includes('429') || err.message.toLowerCase().includes('rate limit') || err.message.includes('rate_limit') || err.message.includes('tokens per min')) {
+        renderMessage('🐾 *Åh nej!* Björn has been *very* chatty today and just hit the free message limit for this minute! 😅\n\nGive him ~30 seconds to catch his breath and he\'ll be right back — *Undskyld!* (Sorry about that! 🙏)', 'bjorn');
       } else if (err.message.includes('Failed to fetch') || !navigator.onLine) {
         // Network failure — fall back to offline
         const offline = getOfflineResponse(message);
         renderMessage(offline + '\n\n*Note: Showing an offline response — Björn couldn\'t connect right now. Check your internet and try again.*', 'bjorn');
       } else {
-        errorMsg += 'Something went wrong on our end. Try again in a moment.';
-        renderMessage(errorMsg, 'bjorn');
+        renderMessage('😅 *Hov!* Björn got a little overwhelmed there! He\'s hit his free message limit for the moment.\n\nJust wait about 30 seconds and try again — *Tak for tålmodigheden!* (Thanks for your patience! 💛)', 'bjorn');
       }
     } finally {
       // Always re-enable input — even if the API call threw or timed out
