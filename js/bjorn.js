@@ -520,8 +520,14 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
   };
 
   /* ── GROQ API CALL ───────────────────────────────────── */
-  // Uses Meta Llama 3.3 70B via Groq — free tier, 14,400 req/day
-  // attempt: internal retry counter (0 = first try, max 2 retries on rate-limit)
+  // Model cascade: attempt 0 = llama-3.3-70b (best quality, 6k TPM free)
+  //                attempt 1 = llama-3.1-8b-instant (immediate fallback — separate 20k TPM bucket)
+  //                attempt 2 = llama-3.1-8b-instant after waiting for rate limit reset
+  const MODELS = [
+    'llama-3.3-70b-versatile',  // attempt 0 — premium, 6k TPM
+    'llama-3.1-8b-instant',     // attempt 1 — instant fallback, 20k TPM (separate bucket)
+    'llama-3.1-8b-instant'      // attempt 2 — after waiting, if 8b also rate-limited
+  ];
   const callGroq = async (message, attempt = 0) => {
     // Push user message BEFORE the call, but roll back on failure so
     // a failed request doesn't leave an unanswered message in history.
@@ -557,7 +563,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
         method: 'POST',
         headers,
         body: JSON.stringify({
-          model: 'llama-3.3-70b-versatile',
+          model: MODELS[Math.min(attempt, MODELS.length - 1)],
           messages,
           max_tokens: 1024,
           temperature: 0.75,
@@ -574,23 +580,18 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       const errBody = await response.json().catch(() => ({}));
       const msg = errBody.error?.message || `API error ${response.status}`;
 
-      // Auto-retry on rate-limit (HTTP 429) — Groq free tier has a tight
-      // token-per-minute budget. Read the Retry-After header for the exact
-      // wait time; fall back to 22 s if missing. Up to 2 retries.
+      // Auto-retry on rate-limit (HTTP 429).
+      // attempt 0 → attempt 1: instantly switch to llama-3.1-8b-instant
+      //   (completely separate TPM bucket — no wait needed)
+      // attempt 1 → attempt 2: 8b is also rate-limited; wait for reset then retry
       const isRateLimit = response.status === 429 ||
         msg.toLowerCase().includes('rate limit') ||
         msg.toLowerCase().includes('rate_limit') ||
         msg.includes('tokens per min');
       if (isRateLimit && attempt < 2) {
-        // Groq often sends x-ratelimit-reset-tokens or Retry-After
-        const retryAfter = parseInt(
-          response.headers.get('retry-after') ||
-          response.headers.get('x-ratelimit-reset-tokens') || '22', 10
-        );
-        const waitMs = Math.max(22000, (retryAfter + 2) * 1000); // min 22 s
-        // Show a subtle "still thinking" note so the user isn't confused
         const thinkEl = document.getElementById('bjorn-thinking');
-        if (thinkEl) {
+        const showHint = (text) => {
+          if (!thinkEl) return;
           const hint = thinkEl.querySelector('.thinking-hint') || (() => {
             const s = document.createElement('span');
             s.className = 'thinking-hint';
@@ -598,12 +599,25 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
             thinkEl.appendChild(s);
             return s;
           })();
-          hint.textContent = 'Still thinking…';
+          hint.textContent = text;
+        };
+
+        if (attempt === 0) {
+          // Switch to faster 8b model instantly — no wait, different rate-limit bucket
+          showHint('Still thinking…');
+          return callGroq(message, 1);
+        } else {
+          // 8b is also rate-limited — wait for the 60s window to reset
+          const retryAfter = parseInt(
+            response.headers.get('retry-after') ||
+            response.headers.get('x-ratelimit-reset-tokens') || '60', 10
+          );
+          const waitMs = Math.max(62000, (retryAfter + 2) * 1000); // full 60s window
+          showHint('Still thinking…');
+          await new Promise(r => setTimeout(r, waitMs));
+          document.querySelector('.thinking-hint')?.remove();
+          return callGroq(message, 2);
         }
-        await new Promise(r => setTimeout(r, waitMs));
-        // Remove hint before retry
-        document.querySelector('.thinking-hint')?.remove();
-        return callGroq(message, attempt + 1); // retry (re-pushes user msg)
       }
 
       throw new Error(msg);
