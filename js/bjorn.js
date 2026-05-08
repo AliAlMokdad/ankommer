@@ -521,15 +521,18 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
 
   /* ── GROQ API CALL ───────────────────────────────────── */
   // Uses Meta Llama 3.3 70B via Groq — free tier, 14,400 req/day
-  const callGroq = async (message) => {
+  // attempt: internal retry counter (0 = first try, max 2 retries on rate-limit)
+  const callGroq = async (message, attempt = 0) => {
     // Push user message BEFORE the call, but roll back on failure so
     // a failed request doesn't leave an unanswered message in history.
     conversationHistory.push({ role: 'user', content: message });
 
-    // Build OpenAI-compatible messages array
+    // Build OpenAI-compatible messages array.
+    // Reduced from 12 → 6 to keep token count well under Groq free-tier
+    // TPM limit (system prompt alone is ~2 000 tokens).
     const messages = [
       { role: 'system', content: buildSystemPrompt() },
-      ...conversationHistory.slice(-12).map(m => ({
+      ...conversationHistory.slice(-6).map(m => ({
         role: m.role === 'assistant' ? 'assistant' : 'user',
         content: m.content
       }))
@@ -568,8 +571,22 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
 
     if (!response.ok) {
       conversationHistory.pop(); // rollback unanswered user message
-      const err = await response.json().catch(() => ({}));
-      const msg = err.error?.message || `API error ${response.status}`;
+      const errBody = await response.json().catch(() => ({}));
+      const msg = errBody.error?.message || `API error ${response.status}`;
+
+      // Auto-retry on rate-limit (HTTP 429) — Groq free tier has a tight
+      // token-per-minute budget. Wait 15 s then try again silently so the
+      // user just sees Björn "thinking" rather than an error.
+      // Up to 2 retries (total wait up to 30 s before giving up).
+      const isRateLimit = response.status === 429 ||
+        msg.toLowerCase().includes('rate limit') ||
+        msg.toLowerCase().includes('rate_limit') ||
+        msg.includes('tokens per min');
+      if (isRateLimit && attempt < 2) {
+        await new Promise(r => setTimeout(r, 15000)); // wait 15 s
+        return callGroq(message, attempt + 1);        // retry (re-pushes user msg)
+      }
+
       throw new Error(msg);
     }
 
