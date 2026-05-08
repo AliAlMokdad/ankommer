@@ -521,16 +521,16 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
 
   /* ── GROQ API CALL ───────────────────────────────────── */
   // Model cascade — each model has its OWN separate TPM bucket on Groq free tier:
-  //   attempt 0 = llama-3.3-70b-versatile  (6k TPM  — best quality)
-  //   attempt 1 = llama-3.1-8b-instant     (20k TPM — instant switch, separate bucket)
-  //   attempt 2 = gemma2-9b-it             (15k TPM — Google model family, separate bucket)
-  //   attempt 3 = llama-3.1-8b-instant     (after 62s wait — window has reset)
+  //   attempt 0 = llama-3.3-70b-versatile              (6k TPM  — best quality)
+  //   attempt 1 = llama-3.1-8b-instant                 (20k TPM — instant switch, separate bucket)
+  //   attempt 2 = llama-4-scout-17b-16e-instruct        (separate bucket — different model family)
+  //   attempt 3 = llama-3.1-8b-instant                 (after 62s wait — window has reset)
   // If ALL four fail → return a useful offline answer (never show a blank/error to user)
   const MODELS = [
-    'llama-3.3-70b-versatile',  // attempt 0 — premium, 6k TPM
-    'llama-3.1-8b-instant',     // attempt 1 — instant fallback, 20k TPM
-    'gemma2-9b-it',             // attempt 2 — Google family, 15k TPM (different bucket)
-    'llama-3.1-8b-instant'      // attempt 3 — after 62s wait, window reset
+    'llama-3.3-70b-versatile',                    // attempt 0 — premium quality
+    'llama-3.1-8b-instant',                       // attempt 1 — instant fallback, separate bucket
+    'meta-llama/llama-4-scout-17b-16e-instruct',  // attempt 2 — Llama 4, separate bucket
+    'llama-3.1-8b-instant'                        // attempt 3 — after 62s wait, window reset
   ];
   const callGroq = async (message, attempt = 0) => {
     // Push user message BEFORE the call, but roll back on failure so
