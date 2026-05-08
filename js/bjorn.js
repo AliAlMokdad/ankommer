@@ -520,13 +520,17 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
   };
 
   /* ── GROQ API CALL ───────────────────────────────────── */
-  // Model cascade: attempt 0 = llama-3.3-70b (best quality, 6k TPM free)
-  //                attempt 1 = llama-3.1-8b-instant (immediate fallback — separate 20k TPM bucket)
-  //                attempt 2 = llama-3.1-8b-instant after waiting for rate limit reset
+  // Model cascade — each model has its OWN separate TPM bucket on Groq free tier:
+  //   attempt 0 = llama-3.3-70b-versatile  (6k TPM  — best quality)
+  //   attempt 1 = llama-3.1-8b-instant     (20k TPM — instant switch, separate bucket)
+  //   attempt 2 = gemma2-9b-it             (15k TPM — Google model family, separate bucket)
+  //   attempt 3 = llama-3.1-8b-instant     (after 62s wait — window has reset)
+  // If ALL four fail → return a useful offline answer (never show a blank/error to user)
   const MODELS = [
     'llama-3.3-70b-versatile',  // attempt 0 — premium, 6k TPM
-    'llama-3.1-8b-instant',     // attempt 1 — instant fallback, 20k TPM (separate bucket)
-    'llama-3.1-8b-instant'      // attempt 2 — after waiting, if 8b also rate-limited
+    'llama-3.1-8b-instant',     // attempt 1 — instant fallback, 20k TPM
+    'gemma2-9b-it',             // attempt 2 — Google family, 15k TPM (different bucket)
+    'llama-3.1-8b-instant'      // attempt 3 — after 62s wait, window reset
   ];
   const callGroq = async (message, attempt = 0) => {
     // Push user message BEFORE the call, but roll back on failure so
@@ -588,7 +592,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
         msg.toLowerCase().includes('rate limit') ||
         msg.toLowerCase().includes('rate_limit') ||
         msg.includes('tokens per min');
-      if (isRateLimit && attempt < 2) {
+      if (isRateLimit && attempt < MODELS.length - 1) {
         const thinkEl = document.getElementById('bjorn-thinking');
         const showHint = (text) => {
           if (!thinkEl) return;
@@ -602,21 +606,20 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
           hint.textContent = text;
         };
 
-        if (attempt === 0) {
-          // Switch to faster 8b model instantly — no wait, different rate-limit bucket
+        if (attempt < 2) {
+          // Instantly switch to next model — completely separate TPM bucket, no wait needed
           showHint('Still thinking…');
-          return callGroq(message, 1);
+          return callGroq(message, attempt + 1);
         } else {
-          // 8b is also rate-limited — wait for the 60s window to reset
-          const retryAfter = parseInt(
-            response.headers.get('retry-after') ||
-            response.headers.get('x-ratelimit-reset-tokens') || '60', 10
-          );
-          const waitMs = Math.max(62000, (retryAfter + 2) * 1000); // full 60s window
-          showHint('Still thinking…');
+          // All instant fallbacks (70B, 8B, gemma2) exhausted — wait for the 60s window to reset
+          const retryAfterRaw = response.headers.get('retry-after') || '60';
+          // Groq's retry-after is in seconds (e.g. "30" or "60") — parseInt is safe
+          const retryAfter = Math.min(parseInt(retryAfterRaw, 10) || 60, 120);
+          const waitMs = Math.max(62000, (retryAfter + 2) * 1000);
+          showHint('One moment, switching servers…');
           await new Promise(r => setTimeout(r, waitMs));
           document.querySelector('.thinking-hint')?.remove();
-          return callGroq(message, 2);
+          return callGroq(message, attempt + 1);
         }
       }
 
@@ -810,13 +813,17 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
         errorMsg += 'Björn is temporarily unavailable. Refresh the page to reconnect.';
         renderMessage(errorMsg, 'bjorn');
       } else if (err.message.includes('429') || err.message.toLowerCase().includes('rate limit') || err.message.includes('rate_limit') || err.message.includes('tokens per min')) {
-        renderMessage('🐾 *Åh nej!* Björn has been *very* chatty today and just hit the free message limit for this minute! 😅\n\nGive him ~30 seconds to catch his breath and he\'ll be right back — *Undskyld!* (Sorry about that! 🙏)', 'bjorn');
+        // All models exhausted — give useful offline answer so user always gets something
+        const offline = getOfflineResponse(message);
+        renderMessage(offline + '\n\n*🐾 Björn is very popular right now! This is a cached answer — for his full live reasoning, try again in about 60 seconds. Undskyld! (Sorry!)*', 'bjorn');
       } else if (err.message.includes('Failed to fetch') || !navigator.onLine) {
         // Network failure — fall back to offline
         const offline = getOfflineResponse(message);
         renderMessage(offline + '\n\n*Note: Showing an offline response — Björn couldn\'t connect right now. Check your internet and try again.*', 'bjorn');
       } else {
-        renderMessage('😅 *Hov!* Björn got a little overwhelmed there! He\'s hit his free message limit for the moment.\n\nJust wait about 30 seconds and try again — *Tak for tålmodigheden!* (Thanks for your patience! 💛)', 'bjorn');
+        // Unknown error — still give offline answer rather than a blank/broken message
+        const offline = getOfflineResponse(message);
+        renderMessage(offline + '\n\n*Note: Björn hit a snag — showing a cached answer. Try again in a moment!*', 'bjorn');
       }
     } finally {
       // Always re-enable input — even if the API call threw or timed out
