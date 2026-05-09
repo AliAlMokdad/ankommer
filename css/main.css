@@ -456,6 +456,10 @@ h4 { font-size: 1rem; font-weight: 600; }
   height: 100vh; min-height: 600px;
   overflow: hidden;
   display: flex; align-items: center; justify-content: center;
+  /* Smooth collapse when user enters a chapter (hero shrinks to 64px),
+     and smooth re-expand when they tap Home / the logo. */
+  transition: height 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+              min-height 0.32s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .hero-sky {
@@ -1165,6 +1169,14 @@ h4 { font-size: 1rem; font-weight: 600; }
   border-radius: var(--r-lg);
   margin-bottom: 12px;
   overflow: hidden;
+  /* Fade-in when chapter content is rendered (initial open + rail switch) */
+  animation: chapter-section-in 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes chapter-section-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.chapter-section {
   transition: box-shadow var(--t-fast);
 }
 .chapter-section:hover { box-shadow: var(--shadow-sm); }
@@ -2608,8 +2620,16 @@ h4 { font-size: 1rem; font-weight: 600; }
   position: fixed; inset: 0; z-index: 9000;
   display: flex; align-items: flex-start; justify-content: center;
   padding-top: 10vh;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.18s ease, visibility 0s linear 0s;
 }
-.search-overlay.hidden { display: none; }
+.search-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.18s ease, visibility 0s linear 0.18s;
+}
 .search-backdrop {
   position: absolute; inset: 0;
   background: rgba(0,0,0,0.55); backdrop-filter: blur(4px);
@@ -3469,6 +3489,12 @@ h4 { font-size: 1rem; font-weight: 600; }
     flex-direction: column;
     display: flex !important;
     min-width: 180px;
+    transform-origin: top right;
+    animation: lang-drop-in 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes lang-drop-in {
+    from { opacity: 0; transform: translateY(-6px) scale(0.96); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
   }
   .lang-selector.open .lang-btn {
     display: flex;
