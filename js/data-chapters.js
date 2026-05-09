@@ -1,5 +1,5 @@
 /* ── CHAPTERS DATA ─────────────────────────────────── */
-const CHAPTERS = [
+window.CHAPTERS = [
   {
     id: 0, icon: "✈️",
     color: "#2E6DA4",

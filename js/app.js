@@ -1260,22 +1260,50 @@ const renderChapter = (index) => {
   buildRailNav();
 };
 
-window.openChapter = (index) => {
+let _chaptersFullLoaded = false;
+let _chaptersLoadPromise = null;
+
+const _loadFullChapters = () => {
+  if (_chaptersFullLoaded) return Promise.resolve();
+  if (_chaptersLoadPromise) return _chaptersLoadPromise;
+  _chaptersLoadPromise = new Promise((resolve) => {
+    const s = document.createElement('script');
+    s.src = 'js/data-chapters.js?v=29';
+    s.onload = () => { _chaptersFullLoaded = true; resolve(); };
+    s.onerror = () => resolve(); // fail gracefully — content just won't show
+    document.head.appendChild(s);
+  });
+  return _chaptersLoadPromise;
+};
+
+const _finishOpenChapter = (index) => {
   showAppLayout();
   renderChapter(index);
-  // Update URL hash so chapters are bookmarkable and shareable
   if (history.replaceState) {
     history.replaceState(null, '', '#chapter-' + index);
   }
-  // Also expose via global for any code that reads it before AppState is available
   window._currentChapterIdx = index;
-  // Close mobile sidebar (rail + hamburger + aria-expanded sync)
   document.getElementById('chapter-rail')?.classList.remove('open');
   const hb = document.getElementById('hamburger');
   if (hb) {
     hb.classList.remove('open');
     hb.setAttribute('aria-expanded', 'false');
   }
+};
+
+window.openChapter = (index) => {
+  const ch = (window.CHAPTERS || [])[index];
+  // If sections have no content yet (meta-only), lazy-load the full file first
+  const needsLoad = ch && ch.sections && ch.sections.length > 0 && !ch.sections[0].content;
+  if (needsLoad) {
+    // Show app layout immediately so the UI isn't frozen
+    showAppLayout();
+    const main = document.getElementById('main-content');
+    if (main) main.innerHTML = `<div style="padding:3rem;text-align:center;opacity:.6">Loading chapter…</div>`;
+    _loadFullChapters().then(() => _finishOpenChapter(index));
+    return;
+  }
+  _finishOpenChapter(index);
 };
 
 /* ══════════════════════════════════════════════════════
