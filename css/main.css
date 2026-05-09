@@ -3647,6 +3647,37 @@ body { overflow-wrap: break-word; }
   .scroll-indicator { display: none; }
 }
 
+/* ═══════════════════════════════════════════════════════════════════
+   SIMPLIFIED PHONE EXPERIENCE
+   On phones we strip all the marketing/scroll sections so the page is:
+     • Home          → top nav + hero + minimal footer
+     • Chapter view  → top nav + chapter content + minimal footer
+   Users navigate via the in-hero CTAs ("Start My Journey", "Ask Björn"),
+   the search icon in the nav, the Björn FAB, or the chapter-rail (which
+   slides in from the hamburger when in app mode). Desktop is untouched.
+═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+  #timeline-section,
+  #chapters-preview-section,
+  #tools-section,
+  #daily-section,
+  #stories-section,
+  #map-section,
+  .footer-top {
+    display: none !important;
+  }
+  /* Tighten the now-standalone footer so it doesn't look orphaned */
+  #main-footer .footer-inner {
+    padding-top: 24px;
+    gap: 20px;
+  }
+  .footer-progress-row {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+}
+
 /* Hero stats: orphan dividers wrap awkwardly between 481-600px.
    Hide dividers below 600px and tighten the grid. */
 @media (max-width: 600px) {
