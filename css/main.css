@@ -1305,6 +1305,11 @@ h4 { font-size: 1rem; font-weight: 600; }
 .section-body {
   display: none; padding: 0 20px 20px;
   border-top: 1px solid var(--border);
+  /* Match the header background so an opened section reads as a single
+     coherent card. Without this the body falls through to the cream
+     page background, making the opened section look two-toned (white
+     header / cream body). */
+  background: var(--bg-card);
 }
 .chapter-section.open .section-body {
   display: block;
