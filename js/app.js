@@ -831,8 +831,10 @@ const Wizard = {
       Wizard.renderStep(stepIndex - 1);
     });
     document.getElementById('wiz-skip')?.addEventListener('click', () => {
-      wizardState.direction = 'forward';
-      Wizard.nextStep();
+      // "Skip for now" = dismiss the whole wizard (matches user expectation
+      // from the label). Per-question skipping is already possible by not
+      // selecting an option and clicking the next-step control.
+      Wizard.close();
     });
   },
 
