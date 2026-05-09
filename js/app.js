@@ -29,51 +29,51 @@ document.documentElement.setAttribute('dir', ['ar','ur','fa'].includes(window.cu
 
 /* ── UI TRANSLATIONS ───────────────────────────────── */
 const UI_T = {
-  yourChecklist: { en:'Your Checklist', fr:'Votre Liste de Tâches', ar:'قائمة مهامك', es:'Tu Lista de Tareas', da:'Din Tjekliste', ur:'آپ کی چیک لسٹ', fa:'چک‌لیست شما' },
-  tasksComplete: { en:(d,t)=>`${d} of ${t} tasks complete`, fr:(d,t)=>`${d} sur ${t} tâches terminées`, ar:(d,t)=>`${d} من ${t} مهام مكتملة`, es:(d,t)=>`${d} de ${t} tareas completas`, da:(d,t)=>`${d} af ${t} opgaver fuldført`, ur:(d,t)=>`${t} میں سے ${d} کام مکمل`, fa:(d,t)=>`${d} از ${t} وظیفه انجام شد` },
-  complete:      { en:'✅ Complete!', fr:'✅ Terminé!', ar:'✅ مكتمل!', es:'✅ ¡Completo!', da:'✅ Færdig!', ur:'✅ مکمل!', fa:'✅ کامل شد!' },
-  readTime:      { en:(t)=>`⏱ ${t} read`, fr:(t)=>`⏱ ${t} de lecture`, ar:(t)=>`⏱ ${t} للقراءة`, es:(t)=>`⏱ ${t} de lectura`, da:(t)=>`⏱ ${t} læsning`, ur:(t)=>`⏱ ${t} مطالعہ`, fa:(t)=>`⏱ ${t} مطالعه` },
-  tasks:         { en:'tasks', fr:'tâches', ar:'مهام', es:'tareas', da:'opgaver', ur:'کام', fa:'وظایف' },
-  bjornSays:     { en:'Björn says:', fr:'Björn dit :', ar:'يقول بيورن:', es:'Björn dice:', da:'Björn siger:', ur:'بیورن کہتا ہے:', fa:'بیورن می‌گوید:' },
-  askBjorn:      { en:(t)=>`🛡️ Ask Björn about ${t}`, fr:(t)=>`🛡️ Demander à Björn sur ${t}`, ar:(t)=>`🛡️ اسأل بيورن عن ${t}`, es:(t)=>`🛡️ Preguntar a Björn sobre ${t}`, da:(t)=>`🛡️ Spørg Björn om ${t}`, ur:(t)=>`🛡️ ${t} کے بارے میں بیورن سے پوچھیں`, fa:(t)=>`🛡️ از بیورن درباره ${t} بپرسید` },
-  askBjornCh:    { en:'🛡️ Ask Björn about this chapter', fr:'🛡️ Demander à Björn sur ce chapitre', ar:'🛡️ اسأل بيورن عن هذا الفصل', es:'🛡️ Preguntar a Björn sobre este capítulo', da:'🛡️ Spørg Björn om dette kapitel', ur:'🛡️ اس باب کے بارے میں بیورن سے پوچھیں', fa:'🛡️ از بیورن درباره این فصل بپرسید' },
-  chapterWord:   { en:'Chapter', fr:'Chapitre', ar:'فصل', es:'Capítulo', da:'Kapitel', ur:'باب', fa:'فصل' },
-  comingSoonTitle:{ en:'Full content coming soon', fr:'Contenu complet bientôt disponible', ar:'المحتوى الكامل قريباً', es:'Contenido completo próximamente', da:'Fuldt indhold kommer snart', ur:'مکمل مواد جلد آ رہا ہے', fa:'محتوای کامل به زودی می‌آید' },
-  comingSoonBody: { en:'This chapter is being researched and written to our ultra-high standard. In the meantime, Björn can answer any questions about this topic.', fr:'Ce chapitre est en cours de recherche et de rédaction selon nos normes les plus élevées. En attendant, Björn peut répondre à vos questions sur ce sujet.', ar:'يتم حالياً البحث في هذا الفصل وكتابته وفق أعلى معاييرنا. في هذه الأثناء، يمكن لبيورن الإجابة على أي أسئلة حول هذا الموضوع.', es:'Este capítulo está siendo investigado y redactado según nuestros más altos estándares. Mientras tanto, Björn puede responder cualquier pregunta sobre este tema.', da:'Dette kapitel er ved at blive undersøgt og skrevet til vores højeste standard. I mellemtiden kan Björn besvare spørgsmål om dette emne.', ur:'اس باب پر ہمارے اعلیٰ معیار کے مطابق تحقیق اور تحریر جاری ہے۔ اس دوران، بیورن اس موضوع کے کسی بھی سوال کا جواب دے سکتا ہے۔', fa:'این فصل در حال تحقیق و نگارش با بالاترین استانداردهای ما است. در این میان، بیورن می‌تواند هر سوالی درباره این موضوع را پاسخ دهد.' },
+  yourChecklist: { en:'Your Checklist', fr:'Votre Liste de Tâches', ar:'قائمة مهامك', es:'Tu Lista de Tareas', da:'Din Tjekliste', ur:'آپ کی چیک لسٹ', de:"Deine Checkliste", uk:"Твій список", pl:"Twoja lista", fa:'چک‌لیست شما' },
+  tasksComplete: { en:(d,t)=>`${d} of ${t} tasks complete`, fr:(d,t)=>`${d} sur ${t} tâches terminées`, ar:(d,t)=>`${d} من ${t} مهام مكتملة`, es:(d,t)=>`${d} de ${t} tareas completas`, da:(d,t)=>`${d} af ${t} opgaver fuldført`, de:(d,t)=>`${d} von ${t} Aufgaben erledigt`, uk:(d,t)=>`${d} з ${t} завдань виконано`, pl:(d,t)=>`${d} z ${t} zadań ukończonych`, ur:(d,t)=>`${t} میں سے ${d} کام مکمل`, fa:(d,t)=>`${d} از ${t} وظیفه انجام شد` },
+  complete:      { en:'✅ Complete!', fr:'✅ Terminé!', ar:'✅ مكتمل!', es:'✅ ¡Completo!', da:'✅ Færdig!', ur:'✅ مکمل!', de:"✅ Erledigt!", uk:"✅ Готово!", pl:"✅ Ukończone!", fa:'✅ کامل شد!' },
+  readTime:      { en:(t)=>`⏱ ${t} read`, fr:(t)=>`⏱ ${t} de lecture`, ar:(t)=>`⏱ ${t} للقراءة`, es:(t)=>`⏱ ${t} de lectura`, da:(t)=>`⏱ ${t} læsning`, de:(t)=>`⏱ ${t} Lesezeit`, uk:(t)=>`⏱ ${t} читання`, pl:(t)=>`⏱ ${t} czytania`, ur:(t)=>`⏱ ${t} مطالعہ`, fa:(t)=>`⏱ ${t} مطالعه` },
+  tasks:         { en:'tasks', fr:'tâches', ar:'مهام', es:'tareas', da:'opgaver', ur:'کام', de:"Aufgaben", uk:"завдань", pl:"zadań", fa:'وظایف' },
+  bjornSays:     { en:'Björn says:', fr:'Björn dit :', ar:'يقول بيورن:', es:'Björn dice:', da:'Björn siger:', ur:'بیورن کہتا ہے:', de:"Björn sagt:", uk:"Бйорн каже:", pl:"Björn mówi:", fa:'بیورن می‌گوید:' },
+  askBjorn:      { en:(t)=>`🛡️ Ask Björn about ${t}`, fr:(t)=>`🛡️ Demander à Björn sur ${t}`, ar:(t)=>`🛡️ اسأل بيورن عن ${t}`, es:(t)=>`🛡️ Preguntar a Björn sobre ${t}`, da:(t)=>`🛡️ Spørg Björn om ${t}`, de:(t)=>`🛡️ Björn zu ${t} fragen`, uk:(t)=>`🛡️ Запитати Бйорна про ${t}`, pl:(t)=>`🛡️ Zapytaj Björna o ${t}`, ur:(t)=>`🛡️ ${t} کے بارے میں بیورن سے پوچھیں`, fa:(t)=>`🛡️ از بیورن درباره ${t} بپرسید` },
+  askBjornCh:    { en:'🛡️ Ask Björn about this chapter', fr:'🛡️ Demander à Björn sur ce chapitre', ar:'🛡️ اسأل بيورن عن هذا الفصل', es:'🛡️ Preguntar a Björn sobre este capítulo', da:'🛡️ Spørg Björn om dette kapitel', ur:'🛡️ اس باب کے بارے میں بیورن سے پوچھیں', de:"🛡️ Björn zu diesem Kapitel fragen", uk:"🛡️ Запитати Бйорна про цей розділ", pl:"🛡️ Zapytaj Björna o ten rozdział", fa:'🛡️ از بیورن درباره این فصل بپرسید' },
+  chapterWord:   { en:'Chapter', fr:'Chapitre', ar:'فصل', es:'Capítulo', da:'Kapitel', ur:'باب', de:"Kapitel", uk:"Розділ", pl:"Rozdział", fa:'فصل' },
+  comingSoonTitle:{ en:'Full content coming soon', fr:'Contenu complet bientôt disponible', ar:'المحتوى الكامل قريباً', es:'Contenido completo próximamente', da:'Fuldt indhold kommer snart', ur:'مکمل مواد جلد آ رہا ہے', de:"Vollständiger Inhalt kommt bald", uk:"Повний вміст незабаром", pl:"Pełna treść już wkrótce", fa:'محتوای کامل به زودی می‌آید' },
+  comingSoonBody: { en:'This chapter is being researched and written to our ultra-high standard. In the meantime, Björn can answer any questions about this topic.', fr:'Ce chapitre est en cours de recherche et de rédaction selon nos normes les plus élevées. En attendant, Björn peut répondre à vos questions sur ce sujet.', ar:'يتم حالياً البحث في هذا الفصل وكتابته وفق أعلى معاييرنا. في هذه الأثناء، يمكن لبيورن الإجابة على أي أسئلة حول هذا الموضوع.', es:'Este capítulo está siendo investigado y redactado según nuestros más altos estándares. Mientras tanto, Björn puede responder cualquier pregunta sobre este tema.', da:'Dette kapitel er ved at blive undersøgt og skrevet til vores højeste standard. I mellemtiden kan Björn besvare spørgsmål om dette emne.', ur:'اس باب پر ہمارے اعلیٰ معیار کے مطابق تحقیق اور تحریر جاری ہے۔ اس دوران، بیورن اس موضوع کے کسی بھی سوال کا جواب دے سکتا ہے۔', de:"Dieses Kapitel wird gerade nach unserem höchsten Standard recherchiert und geschrieben. In der Zwischenzeit kann Björn alle Fragen zu diesem Thema beantworten.", uk:"Цей розділ зараз досліджується та пишеться за найвищими стандартами. Тим часом Бйорн може відповісти на будь-які питання з цієї теми.", pl:"Ten rozdział jest obecnie badany i pisany według naszych najwyższych standardów. Tymczasem Björn może odpowiedzieć na każde pytanie na ten temat.", fa:'این فصل در حال تحقیق و نگارش با بالاترین استانداردهای ما است. در این میان، بیورن می‌تواند هر سوالی درباره این موضوع را پاسخ دهد.' },
   // Roadmap strip
-  roadmapTitle: { en:(c)=>`Your Denmark Roadmap — ${c}`, fr:(c)=>`Votre Feuille de Route — ${c}`, ar:(c)=>`خارطة طريقك — ${c}`, es:(c)=>`Tu Hoja de Ruta — ${c}`, da:(c)=>`Din Danmarksplan — ${c}`, ur:(c)=>`ڈنمارک کا آپ کا روڈ میپ — ${c}`, fa:(c)=>`نقشه راه دانمارک شما — ${c}` },
-  roadmapSub:   { en:(r)=>`Here for ${r} · Your top priorities`, fr:(r)=>`Ici pour ${r} · Vos priorités`, ar:(r)=>`هنا من أجل ${r} · أولوياتك`, es:(r)=>`Aquí para ${r} · Tus prioridades`, da:(r)=>`Her for ${r} · Dine prioriteter`, ur:(r)=>`${r} کے لیے یہاں · آپ کی اولین ترجیحات`, fa:(r)=>`اینجا برای ${r} · اولویت‌های شما` },
-  roadmapUpdate:{ en:'✏️ Update', fr:'✏️ Modifier', ar:'✏️ تعديل', es:'✏️ Actualizar', da:'✏️ Opdater', ur:'✏️ اپ ڈیٹ', fa:'✏️ به‌روزرسانی' },
+  roadmapTitle: { en:(c)=>`Your Denmark Roadmap — ${c}`, fr:(c)=>`Votre Feuille de Route — ${c}`, ar:(c)=>`خارطة طريقك — ${c}`, es:(c)=>`Tu Hoja de Ruta — ${c}`, da:(c)=>`Din Danmarksplan — ${c}`, ur:(c)=>`ڈنمارک کا آپ کا روڈ میپ — ${c}`, de:(c)=>`Dein Dänemark-Plan — ${c}`, uk:(c)=>`Ваш план Данії — ${c}`, pl:(c)=>`Twój plan Danii — ${c}`, fa:(c)=>`نقشه راه دانمارک شما — ${c}` },
+  roadmapSub:   { en:(r)=>`Here for ${r} · Your top priorities`, fr:(r)=>`Ici pour ${r} · Vos priorités`, ar:(r)=>`هنا من أجل ${r} · أولوياتك`, es:(r)=>`Aquí para ${r} · Tus prioridades`, da:(r)=>`Her for ${r} · Dine prioriteter`, ur:(r)=>`${r} کے لیے یہاں · آپ کی اولین ترجیحات`, de:(r)=>`Hier wegen ${r} · Deine Prioritäten`, uk:(r)=>`Тут заради ${r} · Ваші пріоритети`, pl:(r)=>`Tu dla ${r} · Twoje priorytety`, fa:(r)=>`اینجا برای ${r} · اولویت‌های شما` },
+  roadmapUpdate:{ en:'✏️ Update', fr:'✏️ Modifier', ar:'✏️ تعديل', es:'✏️ Actualizar', da:'✏️ Opdater', ur:'✏️ اپ ڈیٹ', de:"✏️ Aktualisieren", uk:"✏️ Оновити", pl:"✏️ Aktualizuj", fa:'✏️ به‌روزرسانی' },
   // Roadmap priority chip labels
-  prio_cpr:    { en:'Register address & get CPR', fr:'Adresse & CPR', ar:'التسجيل والـ CPR', es:'Dirección & CPR', da:'Adresse & CPR', ur:'پتہ رجسٹر کریں اور CPR حاصل کریں', fa:'ثبت آدرس و دریافت CPR' },
-  prio_tax:    { en:'Get skattekort & NemKonto', fr:'Skattekort & NemKonto', ar:'Skattekort و NemKonto', es:'Skattekort & NemKonto', da:'Skattekort & NemKonto', ur:'Skattekort اور NemKonto حاصل کریں', fa:'دریافت Skattekort و NemKonto' },
-  prio_akasse: { en:"Join a-kasse (don't wait!)", fr:"A-kasse (n'attendez pas!)", ar:"انضم لـ a-kasse الآن!", es:"Unirse a a-kasse (¡ya!)", da:"Tilmeld a-kasse (vent ikke!)", ur:"a-kasse میں شامل ہوں (انتظار نہ کریں!)", fa:"عضویت a-kasse (صبر نکنید!)" },
-  prio_su:     { en:'Apply for SU grant', fr:'Demander la bourse SU', ar:'التقدم لمنحة SU', es:'Solicitar beca SU', da:'Ansøg om SU', ur:'SU گرانٹ کے لیے درخواست دیں', fa:'درخواست بورسیه SU' },
-  prio_cvr:    { en:'Register CVR number', fr:'Numéro CVR', ar:'رقم CVR', es:'Número CVR', da:'CVR-nummer', ur:'CVR نمبر رجسٹر کریں', fa:'ثبت شماره CVR' },
-  prio_child:  { en:'Apply for childcare (waitlist!)', fr:'Crèche (liste d\'attente!)', ar:'الحضانة (قائمة انتظار!)', es:'Guardería (¡lista espera!)', da:'Daginstitution (venteliste!)', ur:'بچوں کی دیکھ بھال کے لیے درخواست دیں (ویٹ لسٹ!)', fa:'درخواست مراقبت از کودک (لیست انتظار!)' },
-  prio_health: { en:'Join Sygeforsikring "denmark"', fr:'Sygeforsikring "denmark"', ar:'Sygeforsikring "denmark"', es:'Sygeforsikring "denmark"', da:'Sygeforsikring "denmark"', ur:'Sygeforsikring "denmark" میں شامل ہوں', fa:'عضویت Sygeforsikring "denmark"' },
-  prio_housing:{ en:'Find your housing', fr:'Trouver votre logement', ar:'ابحث عن مسكنك', es:'Encontrar tu vivienda', da:'Find din bolig', ur:'اپنی رہائش تلاش کریں', fa:'یافتن مسکن' },
+  prio_cpr:    { en:'Register address & get CPR', fr:'Adresse & CPR', ar:'التسجيل والـ CPR', es:'Dirección & CPR', da:'Adresse & CPR', ur:'پتہ رجسٹر کریں اور CPR حاصل کریں', de:"Adresse & CPR", uk:"Адреса і CPR", pl:"Adres i CPR", fa:'ثبت آدرس و دریافت CPR' },
+  prio_tax:    { en:'Get skattekort & NemKonto', fr:'Skattekort & NemKonto', ar:'Skattekort و NemKonto', es:'Skattekort & NemKonto', da:'Skattekort & NemKonto', ur:'Skattekort اور NemKonto حاصل کریں', de:"Skattekort & NemKonto", uk:"Skattekort і NemKonto", pl:"Skattekort i NemKonto", fa:'دریافت Skattekort و NemKonto' },
+  prio_akasse: { en:"Join a-kasse (don't wait!)", fr:"A-kasse (n'attendez pas!)", ar:"انضم لـ a-kasse الآن!", es:"Unirse a a-kasse (¡ya!)", da:"Tilmeld a-kasse (vent ikke!)", ur:"a-kasse میں شامل ہوں (انتظار نہ کریں!)", de:"A-kasse beitreten (jetzt!)", uk:"Приєднатись до a-kasse (зараз!)", pl:"Dołącz do a-kasse (teraz!)", fa:"عضویت a-kasse (صبر نکنید!)" },
+  prio_su:     { en:'Apply for SU grant', fr:'Demander la bourse SU', ar:'التقدم لمنحة SU', es:'Solicitar beca SU', da:'Ansøg om SU', ur:'SU گرانٹ کے لیے درخواست دیں', de:"SU beantragen", uk:"Подати на SU", pl:"Złóż wniosek o SU", fa:'درخواست بورسیه SU' },
+  prio_cvr:    { en:'Register CVR number', fr:'Numéro CVR', ar:'رقم CVR', es:'Número CVR', da:'CVR-nummer', ur:'CVR نمبر رجسٹر کریں', de:"CVR-Nummer", uk:"Номер CVR", pl:"Numer CVR", fa:'ثبت شماره CVR' },
+  prio_child:  { en:'Apply for childcare (waitlist!)', fr:'Crèche (liste d\'attente!)', ar:'الحضانة (قائمة انتظار!)', es:'Guardería (¡lista espera!)', da:'Daginstitution (venteliste!)', ur:'بچوں کی دیکھ بھال کے لیے درخواست دیں (ویٹ لسٹ!)', de:"Kita (Warteliste!)", uk:"Дитсадок (черга!)", pl:"Żłobek (lista!)", fa:'درخواست مراقبت از کودک (لیست انتظار!)' },
+  prio_health: { en:'Join Sygeforsikring "denmark"', fr:'Sygeforsikring "denmark"', ar:'Sygeforsikring "denmark"', es:'Sygeforsikring "denmark"', da:'Sygeforsikring "denmark"', ur:'Sygeforsikring "denmark" میں شامل ہوں', de:"Sygeforsikring \"denmark\"", uk:"Sygeforsikring \"denmark\"", pl:"Sygeforsikring \"denmark\"", fa:'عضویت Sygeforsikring "denmark"' },
+  prio_housing:{ en:'Find your housing', fr:'Trouver votre logement', ar:'ابحث عن مسكنك', es:'Encontrar tu vivienda', da:'Find din bolig', ur:'اپنی رہائش تلاش کریں', de:"Wohnung finden", uk:"Знайти житло", pl:"Znajdź mieszkanie", fa:'یافتن مسکن' },
   // Roadmap reason labels
-  reason_work:   { en:'work', fr:'le travail', ar:'العمل', es:'trabajo', da:'arbejde', ur:'کام', fa:'کار' },
-  reason_study:  { en:'study', fr:'les études', ar:'الدراسة', es:'estudios', da:'studier', ur:'تعلیم', fa:'تحصیل' },
-  reason_love:   { en:'family', fr:'la famille', ar:'العائلة', es:'familia', da:'familie', ur:'خاندان', fa:'خانواده' },
-  reason_startup:{ en:'a startup', fr:'une startup', ar:'مشروعك', es:'un startup', da:'en startup', ur:'ایک اسٹارٹ اپ', fa:'یک استارتاپ' },
-  reason_nomad:  { en:'remote work', fr:'le télétravail', ar:'العمل عن بُعد', es:'trabajo remoto', da:'fjernarbejde', ur:'ریموٹ کام', fa:'کار از راه دور' },
-  reason_asylum: { en:'a new start', fr:'un nouveau départ', ar:'بداية جديدة', es:'un nuevo comienzo', da:'en ny start', ur:'ایک نئی شروعات', fa:'یک شروع تازه' },
-  continueJourney:    { en:'Continue My Journey →', fr:'Continuer mon parcours →', ar:'← متابعة رحلتي', es:'Continuar mi viaje →', da:'Fortsæt min rejse →', ur:'← میرا سفر جاری رکھیں', fa:'← ادامه سفرم' },
-  actionPlanHeading:  { en:'✦ Your personalised action plan', fr:'✦ Votre plan d\'action personnalisé', ar:'✦ خطتك الشخصية', es:'✦ Tu plan de acción personalizado', da:'✦ Din personlige handlingsplan', ur:'✦ آپ کا ذاتی ایکشن پلان', fa:'✦ برنامه عمل شخصی شما' },
-  openChapterLink:    { en:(c)=>`→ Open ${c}`, fr:(c)=>`→ Ouvrir ${c}`, ar:(c)=>`→ افتح ${c}`, es:(c)=>`→ Abrir ${c}`, da:(c)=>`→ Åbn ${c}`, ur:(c)=>`← ${c} کھولیں`, fa:(c)=>`← باز کردن ${c}` },
-  xpEarnedProfile:    { en:'✦ +100 Viking Points earned for completing your profile', fr:'✦ +100 Points Viking gagnés pour avoir complété votre profil', ar:'✦ +100 نقطة فايكنج للحصول عليها بإكمال ملفك الشخصي', es:'✦ +100 Puntos Vikingo ganados por completar tu perfil', da:'✦ +100 Vikingpoint optjent for at færdiggøre din profil', ur:'✦ پروفائل مکمل کرنے پر +100 وائیکنگ پوائنٹس', fa:'✦ +100 امتیاز وایکینگ برای تکمیل پروفایل' },
-  wizStep:            { en:(s,t)=>`Step ${s} of ${t}`, fr:(s,t)=>`Étape ${s} sur ${t}`, ar:(s,t)=>`خطوة ${s} من ${t}`, es:(s,t)=>`Paso ${s} de ${t}`, da:(s,t)=>`Trin ${s} af ${t}`, ur:(s,t)=>`${t} میں سے ${s} قدم`, fa:(s,t)=>`مرحله ${s} از ${t}` },
-  wizPct:             { en:(p)=>`${p}% complete`, fr:(p)=>`${p}% terminé`, ar:(p)=>`${p}% مكتمل`, es:(p)=>`${p}% completado`, da:(p)=>`${p}% fuldført`, ur:(p)=>`${p}% مکمل`, fa:(p)=>`${p}% کامل` },
-  wizNoneSelected:    { en:'None selected yet', fr:'Rien sélectionné', ar:'لم تُحدَّد خيارات بعد', es:'Ninguno seleccionado', da:'Intet valgt endnu', ur:'ابھی کچھ منتخب نہیں', fa:'هنوز چیزی انتخاب نشده' },
-  wizSelected:        { en:(n)=>`${n} selected`, fr:(n)=>`${n} sélectionné(s)`, ar:(n)=>`${n} محدد`, es:(n)=>`${n} seleccionado(s)`, da:(n)=>`${n} valgt`, ur:(n)=>`${n} منتخب`, fa:(n)=>`${n} انتخاب شد` },
-  wizContinue:        { en:(n)=>`Continue${n > 0 ? ` (${n})` : ''} →`, fr:(n)=>`Continuer${n > 0 ? ` (${n})` : ''} →`, ar:(n)=>`← متابعة${n > 0 ? ` (${n})` : ''}`, es:(n)=>`Continuar${n > 0 ? ` (${n})` : ''} →`, da:(n)=>`Fortsæt${n > 0 ? ` (${n})` : ''} →`, ur:(n)=>`← جاری رکھیں${n > 0 ? ` (${n})` : ''}`, fa:(n)=>`← ادامه${n > 0 ? ` (${n})` : ''}` },
-  searchHint:      { en:'Search chapters, topics, tasks — try "CPR", "a-kasse", "dental", "tax card"…', fr:'Rechercher chapitres, sujets, tâches — essayez « CPR », « a-kasse », « logement »…', ar:'ابحث في الفصول، الموضوعات، المهام — جرّب "CPR"، "a-kasse"، "سكن"…', es:'Busca capítulos, temas, tareas — prueba "CPR", "a-kasse", "vivienda"…', da:'Søg i kapitler, emner, opgaver — prøv "CPR", "a-kasse", "bolig"…', ur:'ابواب، موضوعات، کام تلاش کریں — "CPR"، "a-kasse"، "رہائش" آزمائیں…', fa:'جستجوی فصل‌ها، موضوعات، وظایف — "CPR"، "a-kasse"، "مسکن" را امتحان کنید…' },
-  searchNoResults: { en:(q)=>`No results for "${q}" — try different keywords`, fr:(q)=>`Aucun résultat pour « ${q} » — essayez d'autres mots-clés`, ar:(q)=>`لا نتائج لـ "${q}" — جرّب كلمات مختلفة`, es:(q)=>`Sin resultados para "${q}" — prueba otras palabras`, da:(q)=>`Ingen resultater for "${q}" — prøv andre søgeord`, ur:(q)=>`"${q}" کے لیے کوئی نتیجہ نہیں — مختلف الفاظ آزمائیں`, fa:(q)=>`نتیجه‌ای برای "${q}" پیدا نشد — کلمات دیگری امتحان کنید` },
-  searchTypeChapter:{ en:'Chapter', fr:'Chapitre', ar:'فصل', es:'Capítulo', da:'Kapitel', ur:'باب', fa:'فصل' },
-  searchTypeTopic:  { en:'Topic', fr:'Sujet', ar:'موضوع', es:'Tema', da:'Emne', ur:'موضوع', fa:'موضوع' },
-  searchTypeTask:   { en:'Task', fr:'Tâche', ar:'مهمة', es:'Tarea', da:'Opgave', ur:'کام', fa:'وظیفه' },
+  reason_work:   { en:'work', fr:'le travail', ar:'العمل', es:'trabajo', da:'arbejde', ur:'کام', de:"die Arbeit", uk:"роботу", pl:"pracy", fa:'کار' },
+  reason_study:  { en:'study', fr:'les études', ar:'الدراسة', es:'estudios', da:'studier', ur:'تعلیم', de:"das Studium", uk:"навчання", pl:"studiów", fa:'تحصیل' },
+  reason_love:   { en:'family', fr:'la famille', ar:'العائلة', es:'familia', da:'familie', ur:'خاندان', de:"die Familie", uk:"родину", pl:"rodziny", fa:'خانواده' },
+  reason_startup:{ en:'a startup', fr:'une startup', ar:'مشروعك', es:'un startup', da:'en startup', ur:'ایک اسٹارٹ اپ', de:"ein Startup", uk:"стартап", pl:"startupu", fa:'یک استارتاپ' },
+  reason_nomad:  { en:'remote work', fr:'le télétravail', ar:'العمل عن بُعد', es:'trabajo remoto', da:'fjernarbejde', ur:'ریموٹ کام', de:"Remote-Arbeit", uk:"віддалену роботу", pl:"pracy zdalnej", fa:'کار از راه دور' },
+  reason_asylum: { en:'a new start', fr:'un nouveau départ', ar:'بداية جديدة', es:'un nuevo comienzo', da:'en ny start', ur:'ایک نئی شروعات', de:"einen Neuanfang", uk:"новий початок", pl:"nowy początek", fa:'یک شروع تازه' },
+  continueJourney:    { en:'Continue My Journey →', fr:'Continuer mon parcours →', ar:'← متابعة رحلتي', es:'Continuar mi viaje →', da:'Fortsæt min rejse →', ur:'← میرا سفر جاری رکھیں', de:"Weiter →", uk:"Продовжити →", pl:"Kontynuuj →", fa:'← ادامه سفرم' },
+  actionPlanHeading:  { en:'✦ Your personalised action plan', fr:'✦ Votre plan d\'action personnalisé', ar:'✦ خطتك الشخصية', es:'✦ Tu plan de acción personalizado', da:'✦ Din personlige handlingsplan', ur:'✦ آپ کا ذاتی ایکشن پلان', de:"✦ Dein persönlicher Aktionsplan", uk:"✦ Ваш персональний план дій", pl:"✦ Twój spersonalizowany plan", fa:'✦ برنامه عمل شخصی شما' },
+  openChapterLink:    { en:(c)=>`→ Open ${c}`, fr:(c)=>`→ Ouvrir ${c}`, ar:(c)=>`→ افتح ${c}`, es:(c)=>`→ Abrir ${c}`, da:(c)=>`→ Åbn ${c}`, ur:(c)=>`← ${c} کھولیں`, de:(c)=>`→ ${c} öffnen`, uk:(c)=>`→ Відкрити ${c}`, pl:(c)=>`→ Otwórz ${c}`, fa:(c)=>`← باز کردن ${c}` },
+  xpEarnedProfile:    { en:'✦ +100 Viking Points earned for completing your profile', fr:'✦ +100 Points Viking gagnés pour avoir complété votre profil', ar:'✦ +100 نقطة فايكنج للحصول عليها بإكمال ملفك الشخصي', es:'✦ +100 Puntos Vikingo ganados por completar tu perfil', da:'✦ +100 Vikingpoint optjent for at færdiggøre din profil', ur:'✦ پروفائل مکمل کرنے پر +100 وائیکنگ پوائنٹس', de:"✦ +100 Wikingerpunkte für dein Profil", uk:"✦ +100 очок вікінга за профіль", pl:"✦ +100 punktów wikinga za profil", fa:'✦ +100 امتیاز وایکینگ برای تکمیل پروفایل' },
+  wizStep:            { en:(s,t)=>`Step ${s} of ${t}`, fr:(s,t)=>`Étape ${s} sur ${t}`, ar:(s,t)=>`خطوة ${s} من ${t}`, es:(s,t)=>`Paso ${s} de ${t}`, da:(s,t)=>`Trin ${s} af ${t}`, ur:(s,t)=>`${t} میں سے ${s} قدم`, de:(s,t)=>`Schritt ${s} von ${t}`, uk:(s,t)=>`Крок ${s} з ${t}`, pl:(s,t)=>`Krok ${s} z ${t}`, fa:(s,t)=>`مرحله ${s} از ${t}` },
+  wizPct:             { en:(p)=>`${p}% complete`, fr:(p)=>`${p}% terminé`, ar:(p)=>`${p}% مكتمل`, es:(p)=>`${p}% completado`, da:(p)=>`${p}% fuldført`, ur:(p)=>`${p}% مکمل`, de:(p)=>`${p}% erledigt`, uk:(p)=>`${p}% виконано`, pl:(p)=>`${p}% ukończono`, fa:(p)=>`${p}% کامل` },
+  wizNoneSelected:    { en:'None selected yet', fr:'Rien sélectionné', ar:'لم تُحدَّد خيارات بعد', es:'Ninguno seleccionado', da:'Intet valgt endnu', ur:'ابھی کچھ منتخب نہیں', de:"Noch nichts ausgewählt", uk:"Поки нічого не обрано", pl:"Nic jeszcze nie wybrano", fa:'هنوز چیزی انتخاب نشده' },
+  wizSelected:        { en:(n)=>`${n} selected`, fr:(n)=>`${n} sélectionné(s)`, ar:(n)=>`${n} محدد`, es:(n)=>`${n} seleccionado(s)`, da:(n)=>`${n} valgt`, ur:(n)=>`${n} منتخب`, de:(n)=>`${n} ausgewählt`, uk:(n)=>`${n} обрано`, pl:(n)=>`${n} wybrano`, fa:(n)=>`${n} انتخاب شد` },
+  wizContinue:        { en:(n)=>`Continue${n > 0 ? ` (${n})` : ''} →`, fr:(n)=>`Continuer${n > 0 ? ` (${n})` : ''} →`, ar:(n)=>`← متابعة${n > 0 ? ` (${n})` : ''}`, es:(n)=>`Continuar${n > 0 ? ` (${n})` : ''} →`, da:(n)=>`Fortsæt${n > 0 ? ` (${n})` : ''} →`, ur:(n)=>`← جاری رکھیں${n > 0 ? ` (${n})` : ''}`, de:(n)=>`Weiter${n > 0 ? ` (${n})` : ''} →`, uk:(n)=>`Продовжити${n > 0 ? ` (${n})` : ''} →`, pl:(n)=>`Kontynuuj${n > 0 ? ` (${n})` : ''} →`, fa:(n)=>`← ادامه${n > 0 ? ` (${n})` : ''}` },
+  searchHint:      { en:'Search chapters, topics, tasks — try "CPR", "a-kasse", "dental", "tax card"…', fr:'Rechercher chapitres, sujets, tâches — essayez « CPR », « a-kasse », « logement »…', ar:'ابحث في الفصول، الموضوعات، المهام — جرّب "CPR"، "a-kasse"، "سكن"…', es:'Busca capítulos, temas, tareas — prueba "CPR", "a-kasse", "vivienda"…', da:'Søg i kapitler, emner, opgaver — prøv "CPR", "a-kasse", "bolig"…', ur:'ابواب، موضوعات، کام تلاش کریں — "CPR"، "a-kasse"، "رہائش" آزمائیں…', de:"Suche Kapitel, Themen, Aufgaben — versuche \"CPR\", \"a-kasse\", \"Wohnung\"…", uk:"Шукайте розділи, теми, завдання — спробуйте \"CPR\", \"a-kasse\", \"житло\"…", pl:"Szukaj rozdziałów, tematów, zadań — spróbuj \"CPR\", \"a-kasse\", \"mieszkanie\"…", fa:'جستجوی فصل‌ها، موضوعات، وظایف — "CPR"، "a-kasse"، "مسکن" را امتحان کنید…' },
+  searchNoResults: { en:(q)=>`No results for "${q}" — try different keywords`, fr:(q)=>`Aucun résultat pour « ${q} » — essayez d'autres mots-clés`, ar:(q)=>`لا نتائج لـ "${q}" — جرّب كلمات مختلفة`, es:(q)=>`Sin resultados para "${q}" — prueba otras palabras`, da:(q)=>`Ingen resultater for "${q}" — prøv andre søgeord`, ur:(q)=>`"${q}" کے لیے کوئی نتیجہ نہیں — مختلف الفاظ آزمائیں`, de:(q)=>`Keine Ergebnisse für "${q}" — andere Suchwörter versuchen`, uk:(q)=>`Немає результатів для "${q}" — спробуйте інші слова`, pl:(q)=>`Brak wyników dla "${q}" — spróbuj innych słów`, fa:(q)=>`نتیجه‌ای برای "${q}" پیدا نشد — کلمات دیگری امتحان کنید` },
+  searchTypeChapter:{ en:'Chapter', fr:'Chapitre', ar:'فصل', es:'Capítulo', da:'Kapitel', ur:'باب', de:"Kapitel", uk:"Розділ", pl:"Rozdział", fa:'فصل' },
+  searchTypeTopic:  { en:'Topic', fr:'Sujet', ar:'موضوع', es:'Tema', da:'Emne', ur:'موضوع', de:"Thema", uk:"Тема", pl:"Temat", fa:'موضوع' },
+  searchTypeTask:   { en:'Task', fr:'Tâche', ar:'مهمة', es:'Tarea', da:'Opgave', ur:'کام', de:"Aufgabe", uk:"Завдання", pl:"Zadanie", fa:'وظیفه' },
   tlUrgent:         { en:'Urgent', fr:'Urgent', ar:'عاجل', es:'Urgente', da:'Haster', de:'Dringend', uk:'Терміново', pl:'Pilne', ur:'فوری', fa:'فوری' },
   tlDone:           { en:(d,t)=>`${d}/${t} done`, fr:(d,t)=>`${d}/${t} effectué`, ar:(d,t)=>`${d}/${t} منجز`, es:(d,t)=>`${d}/${t} listo`, da:(d,t)=>`${d}/${t} klaret`, de:(d,t)=>`${d}/${t} erledigt`, uk:(d,t)=>`${d}/${t} виконано`, pl:(d,t)=>`${d}/${t} wykonano`, ur:(d,t)=>`${d}/${t} مکمل`, fa:(d,t)=>`${d}/${t} انجام شد` },
   tl_tab_week1:     { en:'Week 1',  fr:'Semaine 1', ar:'الأسبوع 1', es:'Semana 1',  da:'Uge 1',    de:'Woche 1',  uk:'Тиждень 1', pl:'Tydzień 1', ur:'ہفتہ 1',  fa:'هفته ۱' },
@@ -1677,6 +1677,14 @@ window.scrollToTop = () => {
     hb.classList.remove('open');
     hb.setAttribute('aria-expanded', 'false');
   }
+  // Close Björn too — otherwise the chat panel stays open while the
+  // page scroll-lock is reset two lines below, letting the user scroll
+  // behind a still-floating panel.
+  if (typeof Bjorn !== 'undefined' && !document.getElementById('bjorn-widget')?.classList.contains('closed')) {
+    Bjorn.close();
+  }
+  // Close lang dropdown too
+  document.querySelector('.lang-selector')?.classList.remove('open');
   document.getElementById('mobile-overlay')?.classList.remove('visible');
   document.body.style.overflow = '';
   // Scroll to top
@@ -1721,7 +1729,27 @@ window.printChecklist = () => {
 
   lines.push(`<div class="meta">ANKOMMER · Your life in Denmark. Chapter by chapter.</div></body></html>`);
   const w = window.open('', '_blank');
-  if (w) { w.document.write(lines.join('')); w.document.close(); w.print(); }
+  if (w) {
+    w.document.write(lines.join(''));
+    w.document.close();
+    w.print();
+  } else {
+    // Popup blocked — silent fail leaves the user thinking the button is
+    // broken. Surface a toast so they can re-trigger after allowing popups.
+    const msg = {
+      en: 'Allow pop-ups to print your checklist',
+      fr: 'Autorisez les pop-ups pour imprimer votre liste',
+      ar: 'يرجى السماح بالنوافذ المنبثقة لطباعة قائمتك',
+      es: 'Permite las ventanas emergentes para imprimir tu lista',
+      da: 'Tillad pop op-vinduer for at printe din tjekliste',
+      de: 'Pop-ups erlauben, um die Checkliste zu drucken',
+      uk: 'Дозвольте спливаючі вікна, щоб роздрукувати список',
+      pl: 'Zezwól na wyskakujące okienka, aby wydrukować listę',
+      ur: 'پرنٹ کرنے کے لیے پاپ اپ کی اجازت دیں',
+      fa: 'برای چاپ، پنجره‌های بازشو را مجاز کنید'
+    }[lang] || 'Allow pop-ups to print your checklist';
+    if (typeof App !== 'undefined' && App.showToast) App.showToast(msg, 'warning');
+  }
 };
 
 /* ══════════════════════════════════════════════════════
@@ -2032,6 +2060,9 @@ const initLangButtons = () => {
   const _closeLang = () => {
     selector?.classList.remove('open');
     _overlay()?.classList.remove('visible');
+    // Always release the body lock — even if it wasn't us who set it,
+    // the close path is the safe place to clear it.
+    if (_isPhone()) document.body.style.overflow = '';
   };
   if (selector) {
     selector.addEventListener('click', (e) => {
@@ -2044,6 +2075,9 @@ const initLangButtons = () => {
         // small enough that an outside click is sufficient.
         if (_isPhone()) {
           _overlay()?.classList.toggle('visible', opening);
+          // Lock body scroll so the page doesn't scroll behind the dim
+          // (matches the rail / Björn / search behaviour on phone).
+          document.body.style.overflow = opening ? 'hidden' : '';
         }
       }
     });

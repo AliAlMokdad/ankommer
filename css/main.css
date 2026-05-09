@@ -1869,13 +1869,26 @@ h4 { font-size: 1rem; font-weight: 600; }
   display: flex; align-items: center; justify-content: center;
   cursor: pointer; border: none;
   position: relative;
-  transition: transform var(--t-fast), box-shadow var(--t-fast);
+  transition: transform var(--t-fast), box-shadow var(--t-fast), animation 0s;
   animation: bjorn-breathe 4s ease-in-out infinite;
 }
-.bjorn-toggle:hover {
+/* On hover/focus the declarative transform should take over from the
+   infinite breathe animation. CSS animations beat declarative
+   transforms — explicitly pause the keyframe so the hover lift fires.
+   Also pauses while the panel is open (no point breathing the closed-
+   state pulse when the chat is already open) and when tab is hidden
+   (battery on phones). */
+.bjorn-toggle:hover,
+.bjorn-toggle:focus-visible,
+.bjorn-widget:not(.closed) .bjorn-toggle {
+  animation-play-state: paused;
+}
+.bjorn-toggle:hover,
+.bjorn-toggle:focus-visible {
   transform: scale(1.08);
   box-shadow: 0 8px 28px rgba(46,109,164,0.45);
 }
+.bjorn-toggle:active { transform: scale(0.97); }
 @keyframes bjorn-breathe {
   0%,100% { transform: scale(1); }
   50%      { transform: scale(1.03); }
@@ -3597,12 +3610,19 @@ h4 { font-size: 1rem; font-weight: 600; }
   .result-donut-wrap { width: min(180px, 60vw); height: min(180px, 60vw); }
 }
 
-/* ── RTL chapter rail — slide in from right side ──────────────── */
-[dir="rtl"] .chapter-rail {
-  transform: translateX(100%);
-}
-[dir="rtl"] .chapter-rail.open {
-  transform: translateX(0);
+/* ── RTL chapter rail — slide in from right side ────────────────
+   IMPORTANT: only apply the off-screen translate on phones (where the
+   rail is a slide-in drawer). On tablets/desktops the rail is a
+   permanent sidebar — translating it 100% off the right would hide it
+   completely from AR/UR/FA users. Wrapping in the same breakpoint as
+   the LTR slide-in rule keeps both surfaces consistent. */
+@media (max-width: 768px) {
+  [dir="rtl"] .chapter-rail {
+    transform: translateX(100%);
+  }
+  [dir="rtl"] .chapter-rail.open {
+    transform: translateX(0);
+  }
 }
 
 /* ── Decorative skyline shouldn't steal screen reader attention ─ */
