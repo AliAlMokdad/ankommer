@@ -462,6 +462,23 @@ const APIs = (() => {
     return d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
   };
 
+  const WEATHER_I18N = {
+    en: { live_badge:'Live Forecast', actual_badge:'Actual Data', avg_badge:'Climate Average', note_forecast:'Real forecast via Open-Meteo. Updates every hour.', note_history:'Real measured weather for this date, via Open-Meteo archive.', note_normals:'Historical climate normals (1991–2020). Forecast not available beyond 16 days.', avg_temp:'Avg temp', monthly_avg:'Monthly avg', precipitation:'Precipitation', monthly_rain:'Monthly rain', rain_chance:'Rain chance', rain_days:'Rain days/mo', max_wind:'Max wind', sunshine:'Sunshine/day', uv_index:'UV index', daylight:'Daylight', snow_chance:'Snow chance', snow_yes:'Possible', snow_no:'None', what_to_pack:'What to pack', ch10_intro:'🚲 Planning life in Denmark year-round?', ch10_btn:'Read Chapter 10 — Transport & Getting Around →' },
+    fr: { live_badge:'Prévision en direct', actual_badge:'Données réelles', avg_badge:'Moyenne climatique', note_forecast:'Prévision réelle via Open-Meteo. Mise à jour toutes les heures.', note_history:'Météo réellement mesurée pour cette date, via les archives Open-Meteo.', note_normals:'Normales climatiques historiques (1991–2020). Prévision indisponible au-delà de 16 jours.', avg_temp:'Temp moy.', monthly_avg:'Moy. mensuelle', precipitation:'Précipitations', monthly_rain:'Pluie mensuelle', rain_chance:'Risque de pluie', rain_days:'Jours de pluie/mois', max_wind:'Vent max', sunshine:'Soleil/jour', uv_index:'Indice UV', daylight:'Durée du jour', snow_chance:'Risque de neige', snow_yes:'Possible', snow_no:'Aucune', what_to_pack:'Quoi emporter', ch10_intro:'🚲 Vous planifiez votre vie au Danemark toute l\'année ?', ch10_btn:'Lire le chapitre 10 — Transport & Déplacements →' },
+    ar: { live_badge:'توقعات مباشرة', actual_badge:'بيانات حقيقية', avg_badge:'متوسط المناخ', note_forecast:'توقعات حقيقية عبر Open-Meteo. تتحدث كل ساعة.', note_history:'طقس مقاس فعلاً لهذا التاريخ، عبر أرشيف Open-Meteo.', note_normals:'معدلات المناخ التاريخية (1991–2020). التوقعات غير متاحة لما بعد 16 يوماً.', avg_temp:'متوسط الحرارة', monthly_avg:'المتوسط الشهري', precipitation:'هطول الأمطار', monthly_rain:'مطر شهري', rain_chance:'احتمال المطر', rain_days:'أيام مطر/شهر', max_wind:'أقصى رياح', sunshine:'أشعة شمس/يوم', uv_index:'مؤشر UV', daylight:'ساعات النهار', snow_chance:'احتمال الثلج', snow_yes:'محتمل', snow_no:'لا يوجد', what_to_pack:'ماذا تحمل معك', ch10_intro:'🚲 تخطط للحياة في الدنمارك طوال العام؟', ch10_btn:'← اقرأ الفصل 10 — المواصلات والتنقل' },
+    es: { live_badge:'Pronóstico en vivo', actual_badge:'Datos reales', avg_badge:'Media climática', note_forecast:'Pronóstico real via Open-Meteo. Se actualiza cada hora.', note_history:'Tiempo realmente medido para esta fecha, via el archivo Open-Meteo.', note_normals:'Normales climáticas históricas (1991–2020). Pronóstico no disponible más allá de 16 días.', avg_temp:'Temp media', monthly_avg:'Media mensual', precipitation:'Precipitación', monthly_rain:'Lluvia mensual', rain_chance:'Prob. lluvia', rain_days:'Días lluvia/mes', max_wind:'Viento máx.', sunshine:'Sol/día', uv_index:'Índice UV', daylight:'Horas de luz', snow_chance:'Prob. nieve', snow_yes:'Posible', snow_no:'Ninguna', what_to_pack:'Qué llevar', ch10_intro:'🚲 ¿Planificando la vida en Dinamarca todo el año?', ch10_btn:'Leer capítulo 10 — Transporte & Movilidad →' },
+    da: { live_badge:'Live-prognose', actual_badge:'Faktiske data', avg_badge:'Klimagennemsnit', note_forecast:'Rigtig vejrudsigt via Open-Meteo. Opdateres hver time.', note_history:'Faktisk målt vejr for denne dato, via Open-Meteo-arkiv.', note_normals:'Historiske klimanormaler (1991–2020). Prognose ikke tilgængelig ud over 16 dage.', avg_temp:'Gns. temp.', monthly_avg:'Månedlig gns.', precipitation:'Nedbør', monthly_rain:'Månedlig regn', rain_chance:'Regnchance', rain_days:'Regndage/md', max_wind:'Maks. vind', sunshine:'Sol/dag', uv_index:'UV-indeks', daylight:'Dagslys', snow_chance:'Snechance', snow_yes:'Muligt', snow_no:'Ingen', what_to_pack:'Hvad skal du medtage', ch10_intro:'🚲 Planlægger du livet i Danmark hele året?', ch10_btn:'Læs kapitel 10 — Transport & Mobilitet →' },
+    de: { live_badge:'Live-Prognose', actual_badge:'Echte Daten', avg_badge:'Klimadurchschnitt', note_forecast:'Echte Prognose via Open-Meteo. Stündlich aktualisiert.', note_history:'Tatsächlich gemessenes Wetter für dieses Datum, via Open-Meteo-Archiv.', note_normals:'Historische Klimanormale (1991–2020). Prognose über 16 Tage nicht verfügbar.', avg_temp:'Ø Temperatur', monthly_avg:'Monatsdurchschnitt', precipitation:'Niederschlag', monthly_rain:'Monatl. Regen', rain_chance:'Regenwahrsch.', rain_days:'Regentage/Monat', max_wind:'Max. Wind', sunshine:'Sonne/Tag', uv_index:'UV-Index', daylight:'Tageslicht', snow_chance:'Schneechance', snow_yes:'Möglich', snow_no:'Keine', what_to_pack:'Was einpacken', ch10_intro:'🚲 Planen Sie das Leben in Dänemark das ganze Jahr?', ch10_btn:'Kapitel 10 lesen — Transport & Mobilität →' },
+    uk: { live_badge:'Прогноз наживо', actual_badge:'Реальні дані', avg_badge:'Кліматична норма', note_forecast:'Реальний прогноз від Open-Meteo. Оновлюється щогодини.', note_history:'Фактично виміряна погода для цієї дати, архів Open-Meteo.', note_normals:'Історичні кліматичні норми (1991–2020). Прогноз недоступний понад 16 днів.', avg_temp:'Сер. темп.', monthly_avg:'Місячна сер.', precipitation:'Опади', monthly_rain:'Дощ на місяць', rain_chance:'Шанс дощу', rain_days:'Дощових днів/міс', max_wind:'Макс. вітер', sunshine:'Сонце/день', uv_index:'УФ-індекс', daylight:'Тривалість дня', snow_chance:'Шанс снігу', snow_yes:'Можливо', snow_no:'Немає', what_to_pack:'Що взяти з собою', ch10_intro:'🚲 Плануєте жити в Данії цілий рік?', ch10_btn:'Читати розділ 10 — Транспорт та пересування →' },
+    pl: { live_badge:'Prognoza na żywo', actual_badge:'Rzeczywiste dane', avg_badge:'Średnia klimatyczna', note_forecast:'Prawdziwa prognoza od Open-Meteo. Aktualizacja co godzinę.', note_history:'Rzeczywiście zmierzona pogoda dla tej daty, archiwum Open-Meteo.', note_normals:'Historyczne normy klimatyczne (1991–2020). Prognoza niedostępna powyżej 16 dni.', avg_temp:'Śr. temp.', monthly_avg:'Śr. miesięczna', precipitation:'Opady', monthly_rain:'Deszcz/miesiąc', rain_chance:'Szansa deszczu', rain_days:'Dni deszczowych/mies.', max_wind:'Maks. wiatr', sunshine:'Słońce/dzień', uv_index:'Indeks UV', daylight:'Długość dnia', snow_chance:'Szansa śniegu', snow_yes:'Możliwy', snow_no:'Brak', what_to_pack:'Co spakować', ch10_intro:'🚲 Planujesz życie w Danii przez cały rok?', ch10_btn:'Czytaj rozdział 10 — Transport i mobilność →' },
+    ur: { live_badge:'لائیو پیشگوئی', actual_badge:'اصل ڈیٹا', avg_badge:'موسمی اوسط', note_forecast:'Open-Meteo کے ذریعے حقیقی پیشگوئی۔ ہر گھنٹے اپ ڈیٹ ہوتی ہے۔', note_history:'اس تاریخ کا اصل ماپا گیا موسم، Open-Meteo آرکائیو سے۔', note_normals:'تاریخی موسمی اوسط (1991–2020)۔ 16 دن سے آگے کی پیشگوئی دستیاب نہیں۔', avg_temp:'اوسط درجہ حرارت', monthly_avg:'ماہانہ اوسط', precipitation:'بارش', monthly_rain:'ماہانہ بارش', rain_chance:'بارش کا امکان', rain_days:'بارش کے دن/ماہ', max_wind:'زیادہ ہوا', sunshine:'دھوپ/دن', uv_index:'UV انڈیکس', daylight:'دن کی روشنی', snow_chance:'برف کا امکان', snow_yes:'ممکن', snow_no:'نہیں', what_to_pack:'کیا لے کر چلیں', ch10_intro:'🚲 سال بھر ڈنمارک میں زندگی کی منصوبہ بندی؟', ch10_btn:'← باب 10 پڑھیں — ٹرانسپورٹ اور آمدورفت' },
+    fa: { live_badge:'پیش‌بینی زنده', actual_badge:'داده‌های واقعی', avg_badge:'میانگین اقلیمی', note_forecast:'پیش‌بینی واقعی از Open-Meteo. هر ساعت به‌روز می‌شود.', note_history:'آب‌وهوای واقعاً اندازه‌گیری‌شده برای این تاریخ، از آرشیو Open-Meteo.', note_normals:'نرمال‌های تاریخی اقلیمی (۱۹۹۱–۲۰۲۰). پیش‌بینی بیش از ۱۶ روز در دسترس نیست.', avg_temp:'میانگین دما', monthly_avg:'میانگین ماهانه', precipitation:'بارندگی', monthly_rain:'باران ماهانه', rain_chance:'احتمال باران', rain_days:'روزهای بارانی/ماه', max_wind:'حداکثر باد', sunshine:'آفتاب/روز', uv_index:'شاخص UV', daylight:'روشنایی روز', snow_chance:'احتمال برف', snow_yes:'ممکن', snow_no:'هیچ', what_to_pack:'چه چیزی ببرید', ch10_intro:'🚲 برای زندگی در سراسر سال در دانمارک برنامه‌ریزی می‌کنید؟', ch10_btn:'← فصل ۱۰ را بخوانید — حمل‌ونقل و جابجایی' },
+  };
+  const tw = (key) => {
+    const lang = window.currentLang || 'en';
+    return (WEATHER_I18N[lang] && WEATHER_I18N[lang][key]) || WEATHER_I18N.en[key] || key;
+  };
+
   const initWeatherPlanner = () => {
     const dateInput = document.getElementById('weather-date');
     if (!dateInput) return;
@@ -589,11 +606,11 @@ const APIs = (() => {
       heroUV    = apiData.uvIndex;
 
       if (mode === 'forecast') {
-        badgeHtml = `<span class="weather-source-badge weather-badge-live">Live Forecast</span>`;
-        dataNote  = `Real forecast via Open-Meteo. Updates every hour.`;
+        badgeHtml = `<span class="weather-source-badge weather-badge-live">${tw('live_badge')}</span>`;
+        dataNote  = tw('note_forecast');
       } else {
-        badgeHtml = `<span class="weather-source-badge weather-badge-history">Actual Data</span>`;
-        dataNote  = `Real measured weather for this date, via Open-Meteo archive.`;
+        badgeHtml = `<span class="weather-source-badge weather-badge-history">${tw('actual_badge')}</span>`;
+        dataNote  = tw('note_history');
       }
     } else {
       // Climate normals
@@ -605,8 +622,8 @@ const APIs = (() => {
       heroCode  = null;
       heroPrecProb = null;
       heroUV    = null;
-      badgeHtml = `<span class="weather-source-badge weather-badge-normals">Climate Average</span>`;
-      dataNote  = `Historical climate normals (1991–2020). Forecast not available beyond 16 days.`;
+      badgeHtml = `<span class="weather-source-badge weather-badge-normals">${tw('avg_badge')}</span>`;
+      dataNote  = tw('note_normals');
     }
 
     const tempColor  = getTempColor(heroTemp);
@@ -629,66 +646,66 @@ const APIs = (() => {
           <div class="weather-metric">
             <div class="weather-metric-icon">🌡️</div>
             <div class="weather-metric-val">${heroTemp}°C</div>
-            <div class="weather-metric-lbl">${apiData ? 'Avg temp' : 'Monthly avg'}</div>
+            <div class="weather-metric-lbl">${apiData ? tw('avg_temp') : tw('monthly_avg')}</div>
           </div>
           <div class="weather-metric">
             <div class="weather-metric-icon">🌧️</div>
             <div class="weather-metric-val">${heroRain}${apiData ? 'mm' : 'mm/mo'}</div>
-            <div class="weather-metric-lbl">${apiData ? 'Precipitation' : 'Monthly rain'}</div>
+            <div class="weather-metric-lbl">${apiData ? tw('precipitation') : tw('monthly_rain')}</div>
           </div>
           ${heroPrecProb !== null ? `
           <div class="weather-metric">
             <div class="weather-metric-icon">☂️</div>
             <div class="weather-metric-val">${heroPrecProb}%</div>
-            <div class="weather-metric-lbl">Rain chance</div>
+            <div class="weather-metric-lbl">${tw('rain_chance')}</div>
           </div>` : `
           <div class="weather-metric">
             <div class="weather-metric-icon">🌧️</div>
             <div class="weather-metric-val">${norm.rainDays}</div>
-            <div class="weather-metric-lbl">Rain days/mo</div>
+            <div class="weather-metric-lbl">${tw('rain_days')}</div>
           </div>`}
           ${heroWind !== null ? `
           <div class="weather-metric">
             <div class="weather-metric-icon">💨</div>
             <div class="weather-metric-val">${heroWind} km/h</div>
-            <div class="weather-metric-lbl">Max wind</div>
+            <div class="weather-metric-lbl">${tw('max_wind')}</div>
           </div>` : `
           <div class="weather-metric">
             <div class="weather-metric-icon">☀️</div>
             <div class="weather-metric-val">${sun}h</div>
-            <div class="weather-metric-lbl">Sunshine/day</div>
+            <div class="weather-metric-lbl">${tw('sunshine')}</div>
           </div>`}
           ${heroUV !== null ? `
           <div class="weather-metric">
             <div class="weather-metric-icon">🔆</div>
             <div class="weather-metric-val">${heroUV}</div>
-            <div class="weather-metric-lbl">UV index</div>
+            <div class="weather-metric-lbl">${tw('uv_index')}</div>
           </div>` : `
           <div class="weather-metric">
             <div class="weather-metric-icon">☀️</div>
             <div class="weather-metric-val">${sun}h</div>
-            <div class="weather-metric-lbl">Sunshine/day</div>
+            <div class="weather-metric-lbl">${tw('sunshine')}</div>
           </div>`}
           <div class="weather-metric">
             <div class="weather-metric-icon">🌅</div>
             <div class="weather-metric-val">${daylight}h</div>
-            <div class="weather-metric-lbl">Daylight</div>
+            <div class="weather-metric-lbl">${tw('daylight')}</div>
           </div>
           <div class="weather-metric">
             <div class="weather-metric-icon">${norm.snow ? '❄️' : '🌿'}</div>
-            <div class="weather-metric-val">${norm.snow ? 'Possible' : 'None'}</div>
-            <div class="weather-metric-lbl">Snow chance</div>
+            <div class="weather-metric-val">${norm.snow ? tw('snow_yes') : tw('snow_no')}</div>
+            <div class="weather-metric-lbl">${tw('snow_chance')}</div>
           </div>
         </div>
 
         <div class="weather-bars">
           <div class="weather-bar-row">
-            <span>Daylight</span>
+            <span>${tw('daylight')}</span>
             <div class="weather-bar-track"><div class="weather-bar-fill weather-bar-daylight" style="width:${daylightPct}%"></div></div>
             <span>${daylight}h</span>
           </div>
           <div class="weather-bar-row">
-            <span>Sunshine</span>
+            <span>${tw('sunshine')}</span>
             <div class="weather-bar-track"><div class="weather-bar-fill weather-bar-sun" style="width:${sunPct}%"></div></div>
             <span>${sun}h/day</span>
           </div>
@@ -700,14 +717,14 @@ const APIs = (() => {
         </div>
 
         <div class="weather-packing-section">
-          <div class="weather-packing-title">What to pack</div>
+          <div class="weather-packing-title">${tw('what_to_pack')}</div>
           <div class="weather-packing-chips">
             ${packing.map(item => `<div class="weather-pack-chip">${item}</div>`).join('')}
           </div>
         </div>
 
         <div class="weather-source-note">${dataNote}</div>
-        <div class="tool-chapter-link">🚲 Planning life in Denmark year-round? <button class="tool-chapter-btn" onclick="openChapter(10)">Read Chapter 10 — Transport &amp; Getting Around →</button></div>
+        <div class="tool-chapter-link">${tw('ch10_intro')} <button class="tool-chapter-btn" onclick="openChapter(10)">${tw('ch10_btn')}</button></div>
       </div>
     `;
   };

@@ -569,40 +569,40 @@
         <div class="tool-field">
           <label for="col-apt" data-i18n="col_label_apt">Apartment</label>
           <select id="col-apt">
-            <option value="room">Room / flatshare</option>
-            <option value="studio">Studio apartment</option>
-            <option value="1bed" selected>1-bedroom apartment</option>
-            <option value="2bed">2-bedroom apartment</option>
-            <option value="3bed">3+ bedroom / family</option>
+            <option value="room" data-i18n="col_apt_room">Room / flatshare</option>
+            <option value="studio" data-i18n="col_apt_studio">Studio apartment</option>
+            <option value="1bed" selected data-i18n="col_apt_1bed">1-bedroom apartment</option>
+            <option value="2bed" data-i18n="col_apt_2bed">2-bedroom apartment</option>
+            <option value="3bed" data-i18n="col_apt_3bed">3+ bedroom / family</option>
           </select>
         </div>
         <!-- Transport -->
         <div class="tool-field">
           <label for="col-transport" data-i18n="col_label_transport">Getting around</label>
           <select id="col-transport">
-            <option value="bike">🚲 Bike only</option>
-            <option value="public" selected>🚌 Public transport</option>
-            <option value="car">🚗 Car owner</option>
+            <option value="bike" data-i18n="col_transport_bike">🚲 Bike only</option>
+            <option value="public" selected data-i18n="col_transport_public">🚌 Public transport</option>
+            <option value="car" data-i18n="col_transport_car">🚗 Car owner</option>
           </select>
         </div>
         <!-- Food -->
         <div class="tool-field">
           <label for="col-food" data-i18n="col_label_food">Food habits</label>
           <select id="col-food">
-            <option value="budget">🥦 Budget home cooking</option>
-            <option value="normal" selected>🍳 Regular home cooking</option>
-            <option value="mixed">🍝 Mix: cooking + dining out</option>
-            <option value="dine">🍽️ Mostly restaurants & takeaway</option>
+            <option value="budget" data-i18n="col_food_budget">🥦 Budget home cooking</option>
+            <option value="normal" selected data-i18n="col_food_normal">🍳 Regular home cooking</option>
+            <option value="mixed" data-i18n="col_food_mixed">🍝 Mix: cooking + dining out</option>
+            <option value="dine" data-i18n="col_food_dine">🍽️ Mostly restaurants & takeaway</option>
           </select>
         </div>
         <!-- Subscriptions -->
         <div class="tool-field">
           <label for="col-subs" data-i18n="col_label_subs">Subscriptions & lifestyle</label>
           <select id="col-subs">
-            <option value="minimal">📱 Just internet & phone</option>
-            <option value="normal" selected>🎬 Internet + streaming (Netflix/HBO)</option>
-            <option value="active">🏋️ + Gym membership</option>
-            <option value="full">🎧 + Gym + Spotify + extras</option>
+            <option value="minimal" data-i18n="col_subs_minimal">📱 Just internet & phone</option>
+            <option value="normal" selected data-i18n="col_subs_normal">🎬 Internet + streaming (Netflix/HBO)</option>
+            <option value="active" data-i18n="col_subs_active">🏋️ + Gym membership</option>
+            <option value="full" data-i18n="col_subs_full">🎧 + Gym + Spotify + extras</option>
           </select>
         </div>
         <button class="btn-primary" id="col-calc-btn" data-i18n="col_calc_btn">Estimate My Monthly Budget</button>
@@ -682,8 +682,8 @@
             <div class="weather-quick-btns">
               <button class="weather-quick-btn" data-offset="0" data-i18n="weather_btn_today">Today</button>
               <button class="weather-quick-btn" data-offset="1" data-i18n="weather_btn_tomorrow">Tomorrow</button>
-              <button class="weather-quick-btn" data-offset="7">+1 week</button>
-              <button class="weather-quick-btn" data-offset="14">+2 weeks</button>
+              <button class="weather-quick-btn" data-offset="7" data-i18n="weather_btn_plus1w">+1 week</button>
+              <button class="weather-quick-btn" data-offset="14" data-i18n="weather_btn_plus2w">+2 weeks</button>
             </div>
           </div>
         </div>
