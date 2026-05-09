@@ -1611,7 +1611,7 @@ window.printChecklist = () => {
     @media print{body{margin:20px}}
   </style></head><body>`);
   lines.push(`<h1>🇩🇰 My Denmark Checklist</h1>`);
-  lines.push(`<p style="color:#888;font-size:0.85rem">Printed from ANKOMMER · movingtodenmark.org · ${new Date().toLocaleDateString()}</p>`);
+  lines.push(`<p style="color:#888;font-size:0.85rem">Printed from ANKOMMER · ankommer.org · ${new Date().toLocaleDateString()}</p>`);
 
   CHAPTERS.forEach(ch => {
     const tasks = ch.checklist || [];
