@@ -392,29 +392,105 @@ h4 { font-size: 1rem; font-weight: 600; }
   flex-shrink: 0; margin-left: auto;
 }
 
-/* Language selector */
+/* ───────────────────────────────────────────────────────────────────
+   LANGUAGE SELECTOR — pill button that opens a dropdown menu.
+   Same pattern at all viewport sizes (was previously inline buttons on
+   desktop, dropdown on phone). The dropdown anchors below the pill on
+   desktop/tablet; on phone it anchors to the viewport corner.
+─────────────────────────────────────────────────────────────────── */
 .lang-selector {
-  display: flex; gap: 2px;
-  background: rgba(255,255,255,0.07);
-  border-radius: var(--r-lg);
-  padding: 3px;
-}
-[data-theme="light"] .lang-selector { background: var(--bg-secondary); }
-.lang-btn {
-  font-size: 0.72rem; font-weight: 600;
-  padding: 5px 9px;
-  border-radius: var(--r-md);
-  color: rgba(255,255,255,0.5);
-  transition: all var(--t-fast);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
-  background: none; border: none;
-  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
 }
-[data-theme="light"] .lang-btn { color: var(--text-muted); }
-.lang-btn:hover { color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.1); }
-.lang-btn.active {
+/* The visible pill — uses CSS attr() so it tracks data-current-lang */
+.lang-selector::before {
+  content: attr(data-current-lang);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--brand-red);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.lang-selector:hover::before,
+.lang-selector:focus-visible::before {
+  transform: scale(1.04);
+  box-shadow: 0 4px 14px rgba(198,12,48,0.32);
+}
+.lang-selector.open::before {
+  opacity: 0.7;  /* subtle dim — dropdown is the focus now */
+}
+
+.lang-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 200px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.22);
+  z-index: 1001;
+  animation: lang-drop-in 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform-origin: top right;
+}
+.lang-selector.open .lang-dropdown-menu { display: flex; }
+
+.lang-dropdown-menu .lang-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s ease;
+}
+.lang-dropdown-menu .lang-btn span {
+  display: inline;
+  font-weight: 500;
+}
+.lang-dropdown-menu .lang-btn:hover,
+.lang-dropdown-menu .lang-btn:focus-visible {
+  background: var(--bg-secondary);
+}
+.lang-dropdown-menu .lang-btn.active {
   background: var(--flag-red);
-  color: white;
+  color: #fff;
+}
+
+/* RTL: anchor dropdown to the left edge instead of right */
+[dir="rtl"] .lang-dropdown-menu {
+  right: auto;
+  left: 0;
+  transform-origin: top left;
+}
+
+@keyframes lang-drop-in {
+  from { opacity: 0; transform: translateY(-6px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 /* Björn nav button */
@@ -2087,9 +2163,8 @@ h4 { font-size: 1rem; font-weight: 600; }
   [lang="ar"] .main-content { margin-right: 0; }
   .hamburger { display: flex; }
   .nav-center { display: none; }
-  .lang-selector .lang-btn:not(.active) span { display: none; }
-  .lang-selector { gap: 1px; }
-  .lang-btn { padding: 5px 7px; font-size: 0.65rem; }
+  /* Lang selector is now a pill+dropdown at all sizes — no inline-chip
+     overrides needed below 768px. */
   .bjorn-nav-btn span { display: none; }
   .bjorn-panel { width: calc(100vw - 32px); right: 0; }
   .tools-grid { grid-template-columns: 1fr; padding: 0 16px; }
@@ -3479,62 +3554,22 @@ h4 { font-size: 1rem; font-weight: 600; }
   transition: opacity 0.2s ease, visibility 0s linear 0s;
 }
 
-/* ── Mobile lang dropdown — collapse 10 chips below 600px ─────── */
+/* ── Phone: anchor dropdown to viewport corner with backdrop ───── */
 @media (max-width: 600px) {
-  .lang-selector { position: relative; }
-  .lang-selector .lang-btn { display: none; }
-  .lang-selector::before {
-    content: attr(data-current-lang);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 44px;
-    min-height: 44px;
-    padding: 6px 12px;
-    border-radius: 999px;
-    background: var(--brand-red);
-    color: #fff;
-    font-weight: 600;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-  /* Hide the pill when dropdown is fully open (avoids duplicate "EN" entry) */
-  .lang-selector.open::before { display: none; }
-  /* When .lang-selector has class .open we expand into a vertical menu */
-  .lang-selector.open {
+  /* Hide the pill behind the open dropdown when it floats over the
+     viewport corner — they'd otherwise overlap visually. */
+  .lang-selector.open::before { display: none; opacity: 1; }
+  .lang-selector.open .lang-dropdown-menu {
     position: fixed;
     top: 64px;
     right: 12px;
-    background: var(--bg-card);
-    border-radius: 16px;
-    padding: 8px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.28);
-    z-index: 1000;
-    flex-direction: column;
-    display: flex !important;
+    max-width: calc(100vw - 24px);
     min-width: 180px;
-    transform-origin: top right;
-    animation: lang-drop-in 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
-  @keyframes lang-drop-in {
-    from { opacity: 0; transform: translateY(-6px) scale(0.96); }
-    to   { opacity: 1; transform: translateY(0) scale(1); }
+  [dir="rtl"] .lang-selector.open .lang-dropdown-menu {
+    left: 12px;
+    right: auto;
   }
-  .lang-selector.open .lang-btn {
-    display: flex;
-    width: 100%;
-    justify-content: flex-start;
-    padding: 10px 14px;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    gap: 8px;
-  }
-  /* Show the language code text (span) in the expanded list */
-  .lang-selector.open .lang-btn span { display: inline !important; }
-  .lang-selector.open .lang-btn:hover,
-  .lang-selector.open .lang-btn:active { background: var(--bg-secondary); }
-  .lang-selector.open .lang-btn.active { background: var(--flag-red); color: #fff; }
 }
 
 /* ── Björn panel — keep inside viewport on small phones ───────── */
@@ -3941,7 +3976,7 @@ body { overflow-wrap: break-word; }
 
 /* Lang dropdown: expanded menu can overflow on Galaxy Fold (280px wide). */
 @media (max-width: 600px) {
-  .lang-selector.open {
+  .lang-selector.open .lang-dropdown-menu {
     max-width: calc(100vw - 24px);
     min-width: min(180px, calc(100vw - 24px));
   }

@@ -203,7 +203,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=36" />
+  <link rel="stylesheet" href="css/main.css?v=37" />
 </head>
 <body>
 
@@ -233,16 +233,18 @@
   <div class="nav-right">
     <!-- Language selector -->
     <div class="lang-selector" id="lang-selector" data-current-lang="EN" role="group" aria-label="Language selection">
-      <button class="lang-btn active" data-lang="en" aria-label="English" aria-pressed="true">🇬🇧 <span>EN</span></button>
-      <button class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="false">🇫🇷 <span>FR</span></button>
-      <button class="lang-btn" data-lang="ar" aria-label="العربية" aria-pressed="false">🇸🇦 <span>AR</span></button>
-      <button class="lang-btn" data-lang="es" aria-label="Español" aria-pressed="false">🇪🇸 <span>ES</span></button>
-      <button class="lang-btn" data-lang="da" aria-label="Dansk" aria-pressed="false">🇩🇰 <span>DA</span></button>
-      <button class="lang-btn" data-lang="de" aria-label="Deutsch" aria-pressed="false">🇩🇪 <span>DE</span></button>
-      <button class="lang-btn" data-lang="uk" aria-label="Українська" aria-pressed="false">🇺🇦 <span>UK</span></button>
-      <button class="lang-btn" data-lang="pl" aria-label="Polski" aria-pressed="false">🇵🇱 <span>PL</span></button>
-      <button class="lang-btn" data-lang="ur" aria-label="اردو" aria-pressed="false">🇵🇰 <span>UR</span></button>
-      <button class="lang-btn" data-lang="fa" aria-label="فارسی" aria-pressed="false">🇮🇷 <span>FA</span></button>
+      <div class="lang-dropdown-menu" role="menu">
+        <button class="lang-btn active" data-lang="en" aria-label="English" aria-pressed="true">🇬🇧 <span>EN</span></button>
+        <button class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="false">🇫🇷 <span>FR</span></button>
+        <button class="lang-btn" data-lang="ar" aria-label="العربية" aria-pressed="false">🇸🇦 <span>AR</span></button>
+        <button class="lang-btn" data-lang="es" aria-label="Español" aria-pressed="false">🇪🇸 <span>ES</span></button>
+        <button class="lang-btn" data-lang="da" aria-label="Dansk" aria-pressed="false">🇩🇰 <span>DA</span></button>
+        <button class="lang-btn" data-lang="de" aria-label="Deutsch" aria-pressed="false">🇩🇪 <span>DE</span></button>
+        <button class="lang-btn" data-lang="uk" aria-label="Українська" aria-pressed="false">🇺🇦 <span>UK</span></button>
+        <button class="lang-btn" data-lang="pl" aria-label="Polski" aria-pressed="false">🇵🇱 <span>PL</span></button>
+        <button class="lang-btn" data-lang="ur" aria-label="اردو" aria-pressed="false">🇵🇰 <span>UR</span></button>
+        <button class="lang-btn" data-lang="fa" aria-label="فارسی" aria-pressed="false">🇮🇷 <span>FA</span></button>
+      </div>
     </div>
     <!-- Search -->
     <button class="icon-btn search-nav-btn" id="search-open-btn" title="Search (Ctrl+K)" aria-label="Search">
@@ -1085,7 +1087,7 @@
 <script defer src="js/bjorn.js?v=36"></script>
 <script defer src="js/calculators.js?v=28"></script>
 <script defer src="js/apis.js?v=28"></script>
-<script defer src="js/app.js?v=38"></script>
+<script defer src="js/app.js?v=39"></script>
 <!-- Shared backdrop for mobile modals (lang dropdown, Björn panel) -->
 <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 </body>

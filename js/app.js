@@ -2015,20 +2015,30 @@ const initLangButtons = () => {
   // Re-sync after every language switch
   window.addEventListener('langChange', syncCurrentLang);
 
-  // Mobile: tap the ::before pill to expand/collapse the dropdown
+  // Tap the EN pill to expand/collapse the lang dropdown — works on
+  // every viewport size now (was previously phone-only). On phones the
+  // dropdown anchors to the viewport corner and dims the page with the
+  // shared mobile-overlay; on desktop/tablet it floats below the pill
+  // without a backdrop (closing on outside-click is enough).
   const selector = document.querySelector('.lang-selector');
   const _overlay  = () => document.getElementById('mobile-overlay');
+  const _isPhone  = () => window.matchMedia('(max-width: 600px)').matches;
   const _closeLang = () => {
     selector?.classList.remove('open');
     _overlay()?.classList.remove('visible');
   };
   if (selector) {
     selector.addEventListener('click', (e) => {
-      // Toggle when click lands on the selector itself or its ::before (not a lang-btn)
-      if (window.matchMedia('(max-width: 600px)').matches && !e.target.closest('.lang-btn')) {
+      // Toggle when click lands on the selector itself or its ::before
+      // pill (not a lang-btn inside the dropdown menu).
+      if (!e.target.closest('.lang-btn')) {
         const opening = !selector.classList.contains('open');
         selector.classList.toggle('open', opening);
-        _overlay()?.classList.toggle('visible', opening);
+        // Only show the full-screen dim on phones — desktop dropdown is
+        // small enough that an outside click is sufficient.
+        if (_isPhone()) {
+          _overlay()?.classList.toggle('visible', opening);
+        }
       }
     });
     // Close after picking a language on mobile
@@ -2040,6 +2050,10 @@ const initLangButtons = () => {
       if (selector.classList.contains('open') && !selector.contains(e.target) && !e.target.closest('#mobile-overlay')) {
         _closeLang();
       }
+    });
+    // Close on Escape key for keyboard users
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && selector.classList.contains('open')) _closeLang();
     });
   }
 
