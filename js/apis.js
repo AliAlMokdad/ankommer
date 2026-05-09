@@ -457,9 +457,11 @@ const APIs = (() => {
   const getTempColor  = (t) => t < 2 ? '#6BA3D6' : t < 8 ? '#7BBCE2' : t < 15 ? '#6CAE75' : t < 20 ? '#F5A623' : '#E05D3A';
   const getTempEmoji  = (t) => t < 0 ? '🥶' : t < 4 ? '🧊' : t < 10 ? '🧥' : t < 16 ? '🌬️' : t < 20 ? '🌤️' : '☀️';
 
+  const DATE_LOCALE_MAP = { en:'en-GB', fr:'fr-FR', ar:'ar-EG', es:'es-ES', da:'da-DK', de:'de-DE', uk:'uk-UA', pl:'pl-PL', ur:'ur', fa:'fa-IR' };
   const formatDateLabel = (dateStr) => {
     const d = new Date(dateStr + 'T12:00:00');
-    return d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    const locale = DATE_LOCALE_MAP[window.currentLang || 'en'] || 'en-GB';
+    return d.toLocaleDateString(locale, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
   };
 
   const WEATHER_I18N = {
