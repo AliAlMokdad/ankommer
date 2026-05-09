@@ -2567,13 +2567,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ── URL hash deep-link: open chapter directly from URL ──
+  // Uses window.openChapter so the lazy-load path (data-chapters.js full file)
+  // is triggered if section content hasn't been fetched yet.
   const _openFromHash = (hash) => {
     const m = hash.match(/^#chapter-(\d+)$/);
     if (m) {
       const idx = parseInt(m[1], 10);
-      if (idx >= 0 && idx < CHAPTERS.length) {
-        showAppLayout();
-        renderChapter(idx);
+      if (idx >= 0 && idx < (window.CHAPTERS || []).length) {
+        window.openChapter(idx);
       }
     }
   };
