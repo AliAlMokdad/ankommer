@@ -537,6 +537,22 @@ h4 { font-size: 1rem; font-weight: 600; }
   transition: height 0.32s cubic-bezier(0.22, 1, 0.36, 1),
               min-height 0.32s cubic-bezier(0.22, 1, 0.36, 1);
 }
+/* When the user is in app/chapter mode, body.app-active is set by JS.
+   The hero collapses via CSS class (lets the transition fire cleanly,
+   without inline-style writes racing the chapter-content render). */
+body.app-active #hero {
+  height: var(--nav-h);
+  min-height: var(--nav-h);
+}
+/* Pause the perpetual hero animations once collapsed — they're behind
+   overflow:hidden anyway, so they're just GPU work for nothing,
+   noticeable on phone batteries. */
+body.app-active .hero-aurora,
+body.app-active .hero-sky,
+body.app-active .sky-water-shimmer,
+body.app-active .hero-skyline-wrap::before {
+  animation-play-state: paused;
+}
 
 .hero-sky {
   position: absolute; inset: 0;
@@ -3550,6 +3566,31 @@ h4 { font-size: 1rem; font-weight: 600; }
   .nav-logo { min-width: 0; padding: 0 8px; }
   /* Hamburger sits as a flex container of bars — keep child centring */
   .hamburger { padding: 12px; flex-direction: column; gap: 4px; }
+}
+
+/* ── Universal press feedback ──────────────────────────────────────
+   Subtle scale-down on :active for primary interactive elements. The
+   audit found these were missing tap feedback, making the phone feel
+   less responsive than the few buttons that already had it
+   (.btn-primary, .ch-end-btn, .ch-end-all, .hero-browse-btn).
+   Applied via a single rule so adding new buttons is one selector. */
+.section-toggle:active,
+.bjorn-nav-btn:active,
+.search-nav-btn:active,
+.icon-btn:active,
+.lang-selector:active::before,
+.print-chapter-btn:active,
+.rating-btn:active,
+.ask-bjorn-btn:active,
+.rail-item:active,
+.roadmap-prio-chip:active,
+.tl-chapter-btn:active,
+.footer-progress-btn:active,
+.wiz-opt:active,
+.wiz-back-btn:active,
+.wiz-next-btn:active,
+.wizard-skip:active {
+  transform: scale(0.97);
 }
 
 /* ── Shared mobile backdrop (lang dropdown + Björn panel) ─────── */

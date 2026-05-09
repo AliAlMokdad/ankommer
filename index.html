@@ -203,7 +203,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=39" />
+  <link rel="stylesheet" href="css/main.css?v=40" />
 </head>
 <body>
 
@@ -221,7 +221,7 @@
 <!-- ═══════════════════════════════════ NAVIGATION ═══════════════════════════════════ -->
 <nav id="main-nav" aria-label="Main navigation">
   <div class="nav-left">
-    <button class="nav-logo" onclick="scrollToTop()" aria-label="ANKOMMER — go to top">
+    <button class="nav-logo" onclick="scrollToTop()" aria-label="ANKOMMER — go to top" data-i18n-aria="nav_logo_label">
       <span class="logo-a">A</span>NKOMMER
     </button>
   </div>
@@ -232,7 +232,7 @@
   </div>
   <div class="nav-right">
     <!-- Language selector -->
-    <div class="lang-selector" id="lang-selector" data-current-lang="EN" role="group" aria-label="Language selection">
+    <div class="lang-selector" id="lang-selector" data-current-lang="EN" role="group" aria-label="Language selection" data-i18n-aria="nav_lang">
       <div class="lang-dropdown-menu" role="menu">
         <button class="lang-btn active" data-lang="en" aria-label="English" aria-pressed="true">🇬🇧 <span>EN</span></button>
         <button class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="false">🇫🇷 <span>FR</span></button>
@@ -247,21 +247,21 @@
       </div>
     </div>
     <!-- Search -->
-    <button class="icon-btn search-nav-btn" id="search-open-btn" title="Search (Ctrl+K)" aria-label="Search">
+    <button class="icon-btn search-nav-btn" id="search-open-btn" title="Search (Ctrl+K)" aria-label="Search" data-i18n-aria="nav_search" data-i18n-title="nav_search">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
     </button>
     <!-- Dark mode -->
-    <button class="icon-btn" id="theme-toggle" title="Toggle theme" aria-label="Toggle dark mode" aria-pressed="false">
+    <button class="icon-btn" id="theme-toggle" title="Toggle theme" aria-label="Toggle dark mode" aria-pressed="false" data-i18n-aria="nav_theme" data-i18n-title="nav_theme">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
     <!-- Björn toggle -->
-    <button class="bjorn-nav-btn" id="bjorn-open-btn" title="Ask Björn" aria-label="Open Björn">
+    <button class="bjorn-nav-btn" id="bjorn-open-btn" title="Ask Björn" aria-label="Open Björn" data-i18n-aria="nav_bjorn" data-i18n-title="nav_bjorn">
       <div class="bjorn-nav-face">🛡️</div>
       <span data-i18n="nav_bjorn">Ask Björn</span>
     </button>
   </div>
   <!-- Mobile hamburger -->
-  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="chapter-rail">
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="chapter-rail" data-i18n-aria="nav_menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -1081,13 +1081,13 @@
 <!-- v24: cache-busting query string forces a fresh fetch when we ship new JS,
      since /js/* historically had a 1-year immutable cache header. Bump the
      query string in lockstep with sw.js CACHE_NAME on every release. -->
-<script defer src="js/data.js?v=29"></script>
+<script defer src="js/data.js?v=30"></script>
 <script defer src="js/data-chapters-meta.js?v=29"></script>
 <link rel="prefetch" href="js/data-chapters.js?v=29" as="script">
 <script defer src="js/bjorn.js?v=36"></script>
 <script defer src="js/calculators.js?v=28"></script>
 <script defer src="js/apis.js?v=28"></script>
-<script defer src="js/app.js?v=41"></script>
+<script defer src="js/app.js?v=42"></script>
 <!-- Shared backdrop for mobile modals (lang dropdown, Björn panel) -->
 <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 </body>

@@ -67,6 +67,10 @@ const UI_T = {
   wizStep:            { en:(s,t)=>`Step ${s} of ${t}`, fr:(s,t)=>`Étape ${s} sur ${t}`, ar:(s,t)=>`خطوة ${s} من ${t}`, es:(s,t)=>`Paso ${s} de ${t}`, da:(s,t)=>`Trin ${s} af ${t}`, ur:(s,t)=>`${t} میں سے ${s} قدم`, de:(s,t)=>`Schritt ${s} von ${t}`, uk:(s,t)=>`Крок ${s} з ${t}`, pl:(s,t)=>`Krok ${s} z ${t}`, fa:(s,t)=>`مرحله ${s} از ${t}` },
   wizPct:             { en:(p)=>`${p}% complete`, fr:(p)=>`${p}% terminé`, ar:(p)=>`${p}% مكتمل`, es:(p)=>`${p}% completado`, da:(p)=>`${p}% fuldført`, ur:(p)=>`${p}% مکمل`, de:(p)=>`${p}% erledigt`, uk:(p)=>`${p}% виконано`, pl:(p)=>`${p}% ukończono`, fa:(p)=>`${p}% کامل` },
   wizNoneSelected:    { en:'None selected yet', fr:'Rien sélectionné', ar:'لم تُحدَّد خيارات بعد', es:'Ninguno seleccionado', da:'Intet valgt endnu', ur:'ابھی کچھ منتخب نہیں', de:"Noch nichts ausgewählt", uk:"Поки нічого не обрано", pl:"Nic jeszcze nie wybrano", fa:'هنوز چیزی انتخاب نشده' },
+  wizBack:            { en:'← Back', fr:'← Retour', ar:'→ السابق', es:'← Atrás', da:'← Tilbage', de:'← Zurück', uk:'← Назад', pl:'← Wstecz', ur:'→ پیچھے', fa:'→ بازگشت' },
+  wizSkipForNow:      { en:'Skip for now', fr:'Passer pour l\'instant', ar:'تخطَّ الآن', es:'Omitir por ahora', da:'Spring over', de:'Überspringen', uk:'Пропустити', pl:'Pomiń', ur:'ابھی چھوڑیں', fa:'فعلاً رد کن' },
+  wizChooseUpTo:      { en:(n)=>`— choose up to ${n}`, fr:(n)=>`— choisir jusqu'à ${n}`, ar:(n)=>`— اختر حتى ${n}`, es:(n)=>`— elige hasta ${n}`, da:(n)=>`— vælg op til ${n}`, de:(n)=>`— bis zu ${n} wählen`, uk:(n)=>`— виберіть до ${n}`, pl:(n)=>`— wybierz do ${n}`, ur:(n)=>`— زیادہ سے زیادہ ${n} منتخب کریں`, fa:(n)=>`— حداکثر ${n} انتخاب کنید` },
+  wizSelectUpTo:      { en:(n)=>`✦ Select up to ${n} that apply`, fr:(n)=>`✦ Sélectionnez jusqu'à ${n} pertinents`, ar:(n)=>`✦ اختر حتى ${n} ينطبق عليك`, es:(n)=>`✦ Selecciona hasta ${n} que apliquen`, da:(n)=>`✦ Vælg op til ${n} der passer`, de:(n)=>`✦ Bis zu ${n} passende auswählen`, uk:(n)=>`✦ Оберіть до ${n} відповідних`, pl:(n)=>`✦ Zaznacz do ${n} pasujących`, ur:(n)=>`✦ زیادہ سے زیادہ ${n} متعلقہ منتخب کریں`, fa:(n)=>`✦ تا ${n} مورد مرتبط انتخاب کنید` },
   wizSelected:        { en:(n)=>`${n} selected`, fr:(n)=>`${n} sélectionné(s)`, ar:(n)=>`${n} محدد`, es:(n)=>`${n} seleccionado(s)`, da:(n)=>`${n} valgt`, ur:(n)=>`${n} منتخب`, de:(n)=>`${n} ausgewählt`, uk:(n)=>`${n} обрано`, pl:(n)=>`${n} wybrano`, fa:(n)=>`${n} انتخاب شد` },
   wizContinue:        { en:(n)=>`Continue${n > 0 ? ` (${n})` : ''} →`, fr:(n)=>`Continuer${n > 0 ? ` (${n})` : ''} →`, ar:(n)=>`← متابعة${n > 0 ? ` (${n})` : ''}`, es:(n)=>`Continuar${n > 0 ? ` (${n})` : ''} →`, da:(n)=>`Fortsæt${n > 0 ? ` (${n})` : ''} →`, ur:(n)=>`← جاری رکھیں${n > 0 ? ` (${n})` : ''}`, de:(n)=>`Weiter${n > 0 ? ` (${n})` : ''} →`, uk:(n)=>`Продовжити${n > 0 ? ` (${n})` : ''} →`, pl:(n)=>`Kontynuuj${n > 0 ? ` (${n})` : ''} →`, fa:(n)=>`← ادامه${n > 0 ? ` (${n})` : ''}` },
   searchHint:      { en:'Search chapters, topics, tasks — try "CPR", "a-kasse", "dental", "tax card"…', fr:'Rechercher chapitres, sujets, tâches — essayez « CPR », « a-kasse », « logement »…', ar:'ابحث في الفصول، الموضوعات، المهام — جرّب "CPR"، "a-kasse"، "سكن"…', es:'Busca capítulos, temas, tareas — prueba "CPR", "a-kasse", "vivienda"…', da:'Søg i kapitler, emner, opgaver — prøv "CPR", "a-kasse", "bolig"…', ur:'ابواب، موضوعات، کام تلاش کریں — "CPR"، "a-kasse"، "رہائش" آزمائیں…', de:"Suche Kapitel, Themen, Aufgaben — versuche \"CPR\", \"a-kasse\", \"Wohnung\"…", uk:"Шукайте розділи, теми, завдання — спробуйте \"CPR\", \"a-kasse\", \"житло\"…", pl:"Szukaj rozdziałów, tematów, zadań — spróbuj \"CPR\", \"a-kasse\", \"mieszkanie\"…", fa:'جستجوی فصل‌ها، موضوعات، وظایف — "CPR"، "a-kasse"، "مسکن" را امتحان کنید…' },
@@ -325,6 +329,19 @@ const i18n = {
       const val = i18n.t(key);
       if (val) el.placeholder = val;
     });
+    // Translate aria-label / title attributes via [data-i18n-aria] /
+    // [data-i18n-title]. Screen-reader users on non-English langs
+    // would otherwise hear English for every nav button.
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+      const key = el.dataset.i18nAria;
+      const val = i18n.t(key);
+      if (val) el.setAttribute('aria-label', val);
+    });
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+      const key = el.dataset.i18nTitle;
+      const val = i18n.t(key);
+      if (val) el.setAttribute('title', val);
+    });
   },
   setLang: (lang) => {
     window.currentLang = lang;
@@ -333,6 +350,18 @@ const i18n = {
     // Update html[lang] and html[dir] for screen readers + RTL
     document.documentElement.setAttribute('lang', lang);
     document.documentElement.setAttribute('dir', ['ar','ur','fa'].includes(lang) ? 'rtl' : 'ltr');
+
+    // Always close the lang dropdown after a switch — defensive against
+    // future code paths that call setLang without going through the
+    // pill click handler (e.g. URL ?lang=, deep link, programmatic).
+    const sel = document.querySelector('.lang-selector');
+    if (sel?.classList.contains('open')) {
+      sel.classList.remove('open');
+      document.getElementById('mobile-overlay')?.classList.remove('visible');
+      if (window.matchMedia('(max-width: 600px)').matches) {
+        document.body.style.overflow = '';
+      }
+    }
 
     document.querySelectorAll('.lang-btn').forEach(b => {
       const active = b.dataset.lang === lang;
@@ -742,29 +771,29 @@ const Wizard = {
     `).join('');
 
     const backHtml = stepIndex > 0
-      ? `<button class="wiz-back-btn" id="wiz-back" type="button">← Back</button>`
+      ? `<button class="wiz-back-btn" id="wiz-back" type="button">${t_('wizBack', lang)}</button>`
       : '<div></div>';
 
     const navHtml = q.multi ? `
       <div class="wizard-nav">
         ${backHtml}
-        <button class="wizard-skip" id="wiz-skip" type="button">Skip for now</button>
+        <button class="wizard-skip" id="wiz-skip" type="button">${t_('wizSkipForNow', lang)}</button>
         <button class="wiz-next-btn" id="wiz-next" type="button" ${selectedSet.size === 0 ? 'disabled' : ''}>
-          Continue ${selectedSet.size > 0 ? `(${selectedSet.size})` : ''} →
+          ${t_('wizContinue', lang, selectedSet.size)}
         </button>
       </div>
     ` : `
       <div class="wizard-nav">
         ${backHtml}
-        <button class="wizard-skip" id="wiz-skip" type="button">Skip for now</button>
+        <button class="wizard-skip" id="wiz-skip" type="button">${t_('wizSkipForNow', lang)}</button>
         <div></div>
       </div>
     `;
 
     const counterHtml = q.multi ? `
       <div class="wiz-select-counter" id="wiz-counter">
-        <strong id="wiz-sel-text">${selectedSet.size === 0 ? 'None selected yet' : `${selectedSet.size} selected`}</strong>
-        &nbsp;— choose up to <strong>${q.maxSelect}</strong>
+        <strong id="wiz-sel-text">${selectedSet.size === 0 ? t_('wizNoneSelected', lang) : t_('wizSelected', lang, selectedSet.size)}</strong>
+        &nbsp;<span>${t_('wizChooseUpTo', lang, q.maxSelect)}</span>
       </div>
     ` : '';
 
@@ -773,7 +802,7 @@ const Wizard = {
         <div class="wizard-q-icon">${q.icon}</div>
         <h2 class="wizard-q-title">${q.title[lang] || q.title.en}</h2>
         <p class="wizard-q-sub">${q.sub[lang] || q.sub.en}</p>
-        ${q.multi ? `<div class="wizard-multi-hint">✦ Select up to ${q.maxSelect} that apply</div>` : ''}
+        ${q.multi ? `<div class="wizard-multi-hint">${t_('wizSelectUpTo', lang, q.maxSelect)}</div>` : ''}
         <div class="wizard-options${singleCol ? ' single-col' : ''}">
           ${optionsHtml}
         </div>
@@ -1294,10 +1323,10 @@ const renderChapter = (index) => {
 
       <div class="chapter-actions-row">
         <button class="print-chapter-btn" onclick="window.print()" title="Print this chapter">
-          🖨️ ${{ en:'Print Chapter', fr:'Imprimer', ar:'طباعة', es:'Imprimir', da:'Print kapitel' }[lang] || 'Print Chapter'}
+          🖨️ ${{ en:'Print Chapter', fr:'Imprimer', ar:'طباعة', es:'Imprimir', da:'Print kapitel', de:'Kapitel drucken', uk:'Друк розділу', pl:'Drukuj rozdział', ur:'باب پرنٹ کریں', fa:'چاپ فصل' }[lang] || 'Print Chapter'}
         </button>
         <button class="print-chapter-btn" onclick="printChecklist()" title="Print full checklist">
-          📋 ${{ en:'Print My Checklist', fr:'Imprimer ma liste', ar:'طباعة قائمتي', es:'Imprimir mi lista', da:'Print min tjekliste' }[lang] || 'Print My Checklist'}
+          📋 ${{ en:'Print My Checklist', fr:'Imprimer ma liste', ar:'طباعة قائمتي', es:'Imprimir mi lista', da:'Print min tjekliste', de:'Meine Checkliste drucken', uk:'Друк мого списку', pl:'Drukuj moją listę', ur:'میری چیک لسٹ پرنٹ کریں', fa:'چاپ چک‌لیست من' }[lang] || 'Print My Checklist'}
         </button>
       </div>
 
@@ -1638,13 +1667,10 @@ const updateDailyFeed = () => {
 ══════════════════════════════════════════════════════ */
 const showAppLayout = () => {
   const app = document.getElementById('app-layout');
-  const hero = document.getElementById('hero');
   if (app) app.classList.remove('hidden');
-  if (hero) {
-    hero.style.height = '64px';
-    hero.style.minHeight = '64px';
-    hero.style.overflow = 'hidden';
-  }
+  // Hero collapse is driven by body.app-active in CSS, NOT inline styles —
+  // synchronous inline writes during render were defeating the transition.
+  document.body.classList.add('app-active');
 };
 
 /* Real "go home" navigation — used by the ANKOMMER logo and the
@@ -1654,15 +1680,12 @@ const showAppLayout = () => {
 window.scrollToTop = () => {
   // Tear down chapter view if open
   const app  = document.getElementById('app-layout');
-  const hero = document.getElementById('hero');
   const main = document.getElementById('main-content');
   if (app)  app.classList.add('hidden');
   if (main) main.innerHTML = '';
-  if (hero) {
-    hero.style.height = '';      // let CSS reset to its natural size
-    hero.style.minHeight = '';
-    hero.style.overflow = '';
-  }
+  // Drop the body.app-active class — CSS handles the hero re-expansion
+  // animation back to 100vh.
+  document.body.classList.remove('app-active');
   // Reset state and URL
   if (typeof AppState !== 'undefined') AppState.currentChapter = null;
   window._currentChapterIdx = null;
@@ -1712,14 +1735,23 @@ window.printChecklist = () => {
     .meta{font-size:0.8rem;color:#888;margin-top:40px;border-top:1px solid #eee;padding-top:12px}
     @media print{body{margin:20px}}
   </style></head><body>`);
-  lines.push(`<h1>🇩🇰 My Denmark Checklist</h1>`);
-  lines.push(`<p style="color:#888;font-size:0.85rem">Printed from ANKOMMER · ankommer.org · ${new Date().toLocaleDateString()}</p>`);
+  // Translated print headers (everything visible in the printed document)
+  const PRINT_T = {
+    title:    { en:'My Denmark Checklist', fr:'Ma Liste pour le Danemark', ar:'قائمتي للدنمارك', es:'Mi Lista de Dinamarca', da:'Min Danmarks-tjekliste', de:'Meine Dänemark-Checkliste', uk:'Мій список для Данії', pl:'Moja lista dla Danii', ur:'ڈنمارک کی میری چیک لسٹ', fa:'چک‌لیست دانمارک من' },
+    printed:  { en:'Printed from ANKOMMER', fr:'Imprimé depuis ANKOMMER', ar:'طُبع من ANKOMMER', es:'Impreso desde ANKOMMER', da:'Udskrevet fra ANKOMMER', de:'Gedruckt aus ANKOMMER', uk:'Надруковано з ANKOMMER', pl:'Wydrukowano z ANKOMMER', ur:'ANKOMMER سے پرنٹ کیا گیا', fa:'چاپ شده از ANKOMMER' },
+    done:     { en:'done', fr:'effectué', ar:'منجز', es:'listo', da:'klaret', de:'erledigt', uk:'виконано', pl:'wykonane', ur:'مکمل', fa:'انجام شد' },
+    footer:   { en:'ANKOMMER · Your life in Denmark. Chapter by chapter.', fr:'ANKOMMER · Votre vie au Danemark. Chapitre par chapitre.', ar:'ANKOMMER · حياتك في الدنمارك. فصلاً تلو الآخر.', es:'ANKOMMER · Tu vida en Dinamarca. Capítulo a capítulo.', da:'ANKOMMER · Dit liv i Danmark. Kapitel for kapitel.', de:'ANKOMMER · Dein Leben in Dänemark. Kapitel für Kapitel.', uk:'ANKOMMER · Ваше життя в Данії. Розділ за розділом.', pl:'ANKOMMER · Twoje życie w Danii. Rozdział po rozdziale.', ur:'ANKOMMER · ڈنمارک میں آپ کی زندگی۔ باب در باب۔', fa:'ANKOMMER · زندگی شما در دانمارک. فصل به فصل.' }
+  };
+  const _pt = (key) => PRINT_T[key][lang] || PRINT_T[key].en;
+
+  lines.push(`<h1>🇩🇰 ${_pt('title')}</h1>`);
+  lines.push(`<p style="color:#888;font-size:0.85rem">${_pt('printed')} · ankommer.org · ${new Date().toLocaleDateString()}</p>`);
 
   CHAPTERS.forEach(ch => {
     const tasks = ch.checklist || [];
     if (!tasks.length) return;
     const done = tasks.filter(t => AppState.completedTasks[t.id]).length;
-    lines.push(`<h2>${ch.icon} ${ch.title[lang] || ch.title.en} <span style="font-size:0.75rem;font-weight:400;color:#888">(${done}/${tasks.length} done)</span></h2>`);
+    lines.push(`<h2>${ch.icon} ${ch.title[lang] || ch.title.en} <span style="font-size:0.75rem;font-weight:400;color:#888">(${done}/${tasks.length} ${_pt('done')})</span></h2>`);
     tasks.forEach(t => {
       const isDone = !!AppState.completedTasks[t.id];
       const label = t.text[lang] || t.text.en || t.text;
@@ -1727,7 +1759,7 @@ window.printChecklist = () => {
     });
   });
 
-  lines.push(`<div class="meta">ANKOMMER · Your life in Denmark. Chapter by chapter.</div></body></html>`);
+  lines.push(`<div class="meta">${_pt('footer')}</div></body></html>`);
   const w = window.open('', '_blank');
   if (w) {
     w.document.write(lines.join(''));
