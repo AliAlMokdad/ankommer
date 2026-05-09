@@ -1123,6 +1123,51 @@ const buildRailNav = () => {
   nav.innerHTML = homeBtn + chapterButtons;
 };
 
+/* End-of-chapter navigator: lets users move to the previous / next
+   chapter or jump to any chapter. Especially important on phones, where
+   the only other way to switch chapters mid-flow is the hamburger menu. */
+const _CH_NAV_LABELS = {
+  prev:    { en:'Previous', fr:'Précédent', ar:'السابق',   es:'Anterior',  da:'Forrige',  de:'Zurück',   uk:'Попередній', pl:'Poprzedni', ur:'پچھلا',   fa:'قبلی' },
+  next:    { en:'Next',     fr:'Suivant',  ar:'التالي',    es:'Siguiente', da:'Næste',    de:'Weiter',   uk:'Далі',       pl:'Następny',  ur:'اگلا',     fa:'بعدی' },
+  pickAny: { en:'Pick another chapter', fr:'Choisir un autre chapitre', ar:'اختر فصلًا آخر', es:'Elegir otro capítulo', da:'Vælg et andet kapitel', de:'Anderes Kapitel wählen', uk:'Обрати інший розділ', pl:'Wybierz inny rozdział', ur:'دوسرا باب چنیں', fa:'فصل دیگری انتخاب کنید' }
+};
+const _renderChapterEndNav = (index, lang) => {
+  const total = (window.CHAPTERS || []).length;
+  const prev  = index > 0 ? CHAPTERS[index - 1] : null;
+  const next  = index < total - 1 ? CHAPTERS[index + 1] : null;
+  const L = (k) => _CH_NAV_LABELS[k][lang] || _CH_NAV_LABELS[k].en;
+  const titleOf = (ch) => (ch.title[lang] || ch.title.en || '').slice(0, 38);
+
+  const prevBtn = prev ? `
+    <button class="ch-end-btn ch-end-prev" onclick="openChapter(${index - 1})" aria-label="${L('prev')}: ${titleOf(prev)}">
+      <span class="ch-end-arrow" aria-hidden="true">←</span>
+      <span class="ch-end-stack">
+        <span class="ch-end-eyebrow">${L('prev')}</span>
+        <span class="ch-end-title"><span class="ch-end-icon" aria-hidden="true">${prev.icon}</span> ${titleOf(prev)}</span>
+      </span>
+    </button>` : `<span class="ch-end-spacer" aria-hidden="true"></span>`;
+  const nextBtn = next ? `
+    <button class="ch-end-btn ch-end-next" onclick="openChapter(${index + 1})" aria-label="${L('next')}: ${titleOf(next)}">
+      <span class="ch-end-stack">
+        <span class="ch-end-eyebrow">${L('next')}</span>
+        <span class="ch-end-title">${titleOf(next)} <span class="ch-end-icon" aria-hidden="true">${next.icon}</span></span>
+      </span>
+      <span class="ch-end-arrow" aria-hidden="true">→</span>
+    </button>` : `<span class="ch-end-spacer" aria-hidden="true"></span>`;
+
+  return `
+    <nav class="chapter-end-nav" aria-label="${L('pickAny')}">
+      <div class="ch-end-row">
+        ${prevBtn}
+        ${nextBtn}
+      </div>
+      <button class="ch-end-all" onclick="event.stopPropagation(); document.getElementById('hamburger')?.click();">
+        📚 ${L('pickAny')}
+      </button>
+    </nav>
+  `;
+};
+
 const renderChapter = (index) => {
   const ch = CHAPTERS[index];
   if (!ch) return;
@@ -1255,6 +1300,8 @@ const renderChapter = (index) => {
           📋 ${{ en:'Print My Checklist', fr:'Imprimer ma liste', ar:'طباعة قائمتي', es:'Imprimir mi lista', da:'Print min tjekliste' }[lang] || 'Print My Checklist'}
         </button>
       </div>
+
+      ${_renderChapterEndNav(index, lang)}
     </div>
   `;
 

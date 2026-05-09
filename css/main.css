@@ -3711,6 +3711,124 @@ body { overflow-wrap: break-word; }
   }
 }
 
+/* "Browse all 16 chapters" link in the hero — only shown on phone
+   because desktop already has the full chapters preview grid below. */
+.hero-browse-btn {
+  display: none;
+  background: transparent;
+  color: rgba(255,255,255,0.85);
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(255,255,255,0.35);
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+.hero-browse-btn:hover { color: #fff; text-decoration-color: #fff; }
+[data-theme="light"] .hero-browse-btn { color: rgba(255,255,255,0.85); }
+@media (max-width: 600px) { .hero-browse-btn { display: inline-block; } }
+
+/* ═══════════════════════════════════════════════════════════════════
+   END-OF-CHAPTER NAVIGATOR
+   Sits at the bottom of every chapter so users can move forward, back,
+   or jump to any chapter without having to find the hamburger menu.
+═══════════════════════════════════════════════════════════════════ */
+.chapter-end-nav {
+  margin: 32px 0 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ch-end-row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+.ch-end-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-lg);
+  cursor: pointer;
+  text-align: start;
+  color: var(--text);
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.ch-end-btn:hover {
+  border-color: var(--nordic-blue);
+  box-shadow: var(--shadow-sm);
+}
+.ch-end-btn:active { transform: scale(0.98); }
+.ch-end-prev { justify-content: flex-start; }
+.ch-end-next { justify-content: flex-end; text-align: end; }
+.ch-end-arrow {
+  font-size: 1.25rem;
+  color: var(--nordic-blue);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.ch-end-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.ch-end-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.ch-end-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ch-end-icon { font-size: 1rem; }
+.ch-end-spacer {
+  flex: 1 1 0;
+  visibility: hidden;
+}
+.ch-end-all {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--flag-red);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-lg);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.ch-end-all:hover { background: var(--brand-red, var(--flag-red)); transform: translateY(-1px); }
+.ch-end-all:active { transform: translateY(0); }
+
+/* On phones: stack the prev/next vertically so each gets full width and
+   long chapter titles never truncate awkwardly. */
+@media (max-width: 600px) {
+  .ch-end-row { flex-direction: column; }
+  .ch-end-btn { padding: 12px 14px; }
+  .ch-end-title { white-space: normal; }
+}
+
+/* RTL: flip the arrows so they keep their semantic direction in the
+   reading order (← becomes → and vice versa). */
+[dir="rtl"] .ch-end-arrow { transform: scaleX(-1); }
+
 /* Home button at the top of the chapter rail — visually distinct so users
    immediately recognise it as the path back to the landing page. */
 .rail-item.rail-home {
