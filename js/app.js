@@ -1161,7 +1161,7 @@ const _renderChapterEndNav = (index, lang) => {
         ${prevBtn}
         ${nextBtn}
       </div>
-      <button class="ch-end-all" onclick="event.stopPropagation(); document.getElementById('hamburger')?.click();">
+      <button class="ch-end-all" onclick="event.stopPropagation(); window.openChapterRail?.();">
         📚 ${L('pickAny')}
       </button>
     </nav>
@@ -1941,6 +1941,21 @@ const animateHeroStats = () => StatsTracker.init();
 const initMobileSidebar = () => {
   const hamburger = document.getElementById('hamburger');
   const rail = document.getElementById('chapter-rail');
+
+  // Expose a direct rail toggle that doesn't depend on the hamburger being
+  // visible — used by "📚 Browse all 16 chapters" on home and "Pick another
+  // chapter" inside chapters. The hamburger is display:none above 768px,
+  // so .click()-ing it silently fails on tablets.
+  window.openChapterRail = () => {
+    if (rail?.classList.contains('open')) return;
+    rail?.classList.add('open');
+    hamburger?.classList.add('open');
+    hamburger?.setAttribute('aria-expanded', 'true');
+    if (window.matchMedia('(max-width: 1024px)').matches) {
+      document.getElementById('mobile-overlay')?.classList.add('visible');
+      document.body.style.overflow = 'hidden';
+    }
+  };
 
   hamburger?.addEventListener('click', () => {
     const opened = hamburger.classList.toggle('open');

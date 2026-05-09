@@ -203,7 +203,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=35" />
+  <link rel="stylesheet" href="css/main.css?v=36" />
 </head>
 <body>
 
@@ -369,8 +369,8 @@
       <!-- Mobile-only: a third path for users who want to pick a chapter
            directly without going through the wizard or AI chat. The
            desktop hero already exposes the 16-chapter grid below it. -->
-      <button class="btn-link btn-xl hero-browse-btn" id="hero-browse-btn"
-        onclick="event.stopPropagation(); document.getElementById('hamburger')?.click();"
+      <button class="hero-browse-btn" id="hero-browse-btn"
+        onclick="event.stopPropagation(); window.openChapterRail?.();"
         data-i18n="hero_cta_browse">📚 Browse all 16 chapters</button>
     </div>
     <!-- Live stats bar -->
@@ -1085,7 +1085,7 @@
 <script defer src="js/bjorn.js?v=36"></script>
 <script defer src="js/calculators.js?v=28"></script>
 <script defer src="js/apis.js?v=28"></script>
-<script defer src="js/app.js?v=37"></script>
+<script defer src="js/app.js?v=38"></script>
 <!-- Shared backdrop for mobile modals (lang dropdown, Björn panel) -->
 <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 </body>

@@ -1002,11 +1002,21 @@ h4 { font-size: 1rem; font-weight: 600; }
    home page, the rail itself lives INSIDE #app-layout. If app-layout is
    .hidden (display:none), the rail can't render no matter what its own
    styles say — it inherits its parent's visibility. Force the parent
-   visible while the rail is open so the slide-in actually shows. The
-   hero stays positioned beneath via z-index; only the rail + overlay
-   are visible above the dim. */
+   visible while the rail is open so the slide-in actually shows.
+
+   But do NOT let app-layout occupy normal-flow space — the chapter rail
+   is position:fixed so it doesn't need its parent to have any height,
+   and main-content is empty in this state, so leaving the parent at its
+   default min-height: 100vh would add a blank 812px below the hero
+   that the user can scroll into. Collapse it to 0×0 in flow. */
 .app-layout.hidden:has(.chapter-rail.open) {
   display: block !important;
+  min-height: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+}
+.app-layout.hidden:has(.chapter-rail.open) .main-content {
+  display: none !important;
 }
 
 /* Chapter rail */
@@ -1014,7 +1024,11 @@ h4 { font-size: 1rem; font-weight: 600; }
   position: fixed;
   top: var(--nav-h); left: 0;
   width: var(--rail-w);
+  /* dvh tracks the visible viewport (iOS Safari URL bar collapse) so the
+     rail's bottom doesn't get cut off when the URL bar shrinks; vh
+     fallback for older browsers. */
   height: calc(100vh - var(--nav-h));
+  height: calc(100dvh - var(--nav-h));
   overflow-y: auto;
   background: var(--bg-card);
   border-right: 1px solid var(--border);
@@ -3705,8 +3719,6 @@ body { overflow-wrap: break-word; }
   #chapters-preview-section,
   #tools-section,
   #daily-section,
-  #stories-section,
-  #map-section,
   .footer-top {
     display: none !important;
   }
