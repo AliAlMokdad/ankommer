@@ -3678,6 +3678,22 @@ body { overflow-wrap: break-word; }
   }
 }
 
+/* Home button at the top of the chapter rail — visually distinct so users
+   immediately recognise it as the path back to the landing page. */
+.rail-item.rail-home {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-strong, var(--text));
+}
+.rail-item.rail-home:hover,
+.rail-item.rail-home:focus-visible {
+  background: var(--flag-red);
+  color: #fff;
+}
+.rail-item.rail-home .rail-icon { font-size: 1.1rem; }
+
 /* Hero stats: orphan dividers wrap awkwardly between 481-600px.
    Hide dividers below 600px and tighten the grid. */
 @media (max-width: 600px) {

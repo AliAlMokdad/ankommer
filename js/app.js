@@ -1082,7 +1082,21 @@ const buildRailNav = () => {
   const totalDone = Object.values(AppState.completedTasks).filter(Boolean).length;
   const isFirstVisit = totalDone === 0 && AppState.currentChapter === null;
 
-  nav.innerHTML = CHAPTERS.map((ch, i) => {
+  // Top of the rail: a "Home" entry so users always have a clear path
+  // back to the landing page (especially important on phones where the
+  // logo is small and the chapter view fills the screen).
+  const homeLabel = {
+    en:'Home', fr:'Accueil', ar:'الرئيسية', es:'Inicio', da:'Hjem',
+    de:'Startseite', uk:'Головна', pl:'Strona główna', ur:'ہوم', fa:'خانه'
+  }[lang] || 'Home';
+  const homeBtn = `<button class="rail-item rail-home"
+    onclick="goHome()"
+    aria-label="${homeLabel}">
+    <span class="rail-icon" aria-hidden="true">🏠</span>
+    <span>${homeLabel}</span>
+  </button>`;
+
+  const chapterButtons = CHAPTERS.map((ch, i) => {
     const allTasks = ch.checklist || [];
     const done = allTasks.filter(t => AppState.completedTasks[t.id]).length;
     const isComplete = allTasks.length > 0 && done === allTasks.length;
@@ -1103,6 +1117,8 @@ const buildRailNav = () => {
       <span class="rail-check" aria-hidden="true">✓</span>
     </button>`;
   }).join('');
+
+  nav.innerHTML = homeBtn + chapterButtons;
 };
 
 const renderChapter = (index) => {
@@ -1582,14 +1598,43 @@ const showAppLayout = () => {
   }
 };
 
+/* Real "go home" navigation — used by the ANKOMMER logo and the
+   Home button at the top of the chapter rail. Hides the chapter view,
+   restores the hero, clears #chapter-N from the URL, and brings the
+   user fully back to the landing page. */
 window.scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Tear down chapter view if open
+  const app  = document.getElementById('app-layout');
   const hero = document.getElementById('hero');
+  const main = document.getElementById('main-content');
+  if (app)  app.classList.add('hidden');
+  if (main) main.innerHTML = '';
   if (hero) {
-    hero.style.height = '100vh';
-    hero.style.minHeight = '600px';
+    hero.style.height = '';      // let CSS reset to its natural size
+    hero.style.minHeight = '';
+    hero.style.overflow = '';
   }
+  // Reset state and URL
+  if (typeof AppState !== 'undefined') AppState.currentChapter = null;
+  window._currentChapterIdx = null;
+  if (location.hash && history.replaceState) {
+    history.replaceState(null, '', location.pathname + location.search);
+  }
+  // Close mobile rail if open
+  const rail = document.getElementById('chapter-rail');
+  const hb   = document.getElementById('hamburger');
+  if (rail) rail.classList.remove('open');
+  if (hb) {
+    hb.classList.remove('open');
+    hb.setAttribute('aria-expanded', 'false');
+  }
+  document.getElementById('mobile-overlay')?.classList.remove('visible');
+  document.body.style.overflow = '';
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+// Public alias — clearer name for future callers
+window.goHome = window.scrollToTop;
 
 /* ══════════════════════════════════════════════════════
    PRINT CHECKLIST — collects all incomplete tasks
