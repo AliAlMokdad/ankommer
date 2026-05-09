@@ -998,6 +998,17 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 .app-layout.hidden { display: none; }
 
+/* CRITICAL: when the user opens the chapter rail from the simplified phone
+   home page, the rail itself lives INSIDE #app-layout. If app-layout is
+   .hidden (display:none), the rail can't render no matter what its own
+   styles say — it inherits its parent's visibility. Force the parent
+   visible while the rail is open so the slide-in actually shows. The
+   hero stays positioned beneath via z-index; only the rail + overlay
+   are visible above the dim. */
+.app-layout.hidden:has(.chapter-rail.open) {
+  display: block !important;
+}
+
 /* Chapter rail */
 .chapter-rail {
   position: fixed;
