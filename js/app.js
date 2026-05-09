@@ -1948,6 +1948,12 @@ const initMobileSidebar = () => {
   // so .click()-ing it silently fails on tablets.
   window.openChapterRail = () => {
     if (rail?.classList.contains('open')) return;
+    // First, dismiss any other open mobile modal that shares the overlay
+    // so we never end up with two stacked panels.
+    const langSel = document.querySelector('.lang-selector');
+    if (langSel?.classList.contains('open')) {
+      langSel.classList.remove('open');
+    }
     rail?.classList.add('open');
     hamburger?.classList.add('open');
     hamburger?.setAttribute('aria-expanded', 'true');
@@ -2041,9 +2047,13 @@ const initLangButtons = () => {
         }
       }
     });
-    // Close after picking a language on mobile
+    // Close after picking a language. Use closest() so this also fires
+    // when the user's tap lands on the inner <span>EN</span> or the flag
+    // emoji text node — exact-class match would miss those targets and
+    // leave the dropdown + backdrop visually stuck after the language
+    // had already switched.
     selector.addEventListener('click', (e) => {
-      if (e.target.classList.contains('lang-btn')) _closeLang();
+      if (e.target.closest('.lang-btn')) _closeLang();
     });
     // Close when clicking outside (only if lang is currently open — don't fight Björn's overlay)
     document.addEventListener('click', (e) => {
