@@ -3304,6 +3304,9 @@ h4 { font-size: 1rem; font-weight: 600; }
 /* Search result arrow — flip for RTL */
 [dir="rtl"] .sri-arrow { transform: scaleX(-1); }
 
+/* Tool selects with English option text — keep LTR so "1-bedroom" doesn't render as "bedroom-1" */
+[dir="rtl"] .tool-field select { direction: ltr; text-align: left; }
+
 /* ═══════════════════════════════════════════════════════════
    PREFERS REDUCED MOTION — Respect user accessibility settings
 ═══════════════════════════════════════════════════════════ */

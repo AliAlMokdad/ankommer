@@ -557,7 +557,7 @@
       <div class="tool-body">
         <!-- City -->
         <div class="tool-field">
-          <label>City</label>
+          <label data-i18n="col_label_city">City</label>
           <div class="col-city-tabs" id="col-city-tabs">
             <button class="col-city-tab active" data-city="cph">Copenhagen</button>
             <button class="col-city-tab" data-city="aar">Aarhus</button>
@@ -567,7 +567,7 @@
         </div>
         <!-- Apartment -->
         <div class="tool-field">
-          <label for="col-apt">Apartment</label>
+          <label for="col-apt" data-i18n="col_label_apt">Apartment</label>
           <select id="col-apt">
             <option value="room">Room / flatshare</option>
             <option value="studio">Studio apartment</option>
@@ -578,7 +578,7 @@
         </div>
         <!-- Transport -->
         <div class="tool-field">
-          <label for="col-transport">Getting around</label>
+          <label for="col-transport" data-i18n="col_label_transport">Getting around</label>
           <select id="col-transport">
             <option value="bike">🚲 Bike only</option>
             <option value="public" selected>🚌 Public transport</option>
@@ -587,7 +587,7 @@
         </div>
         <!-- Food -->
         <div class="tool-field">
-          <label for="col-food">Food habits</label>
+          <label for="col-food" data-i18n="col_label_food">Food habits</label>
           <select id="col-food">
             <option value="budget">🥦 Budget home cooking</option>
             <option value="normal" selected>🍳 Regular home cooking</option>
@@ -597,7 +597,7 @@
         </div>
         <!-- Subscriptions -->
         <div class="tool-field">
-          <label for="col-subs">Subscriptions & lifestyle</label>
+          <label for="col-subs" data-i18n="col_label_subs">Subscriptions & lifestyle</label>
           <select id="col-subs">
             <option value="minimal">📱 Just internet & phone</option>
             <option value="normal" selected>🎬 Internet + streaming (Netflix/HBO)</option>
@@ -605,7 +605,7 @@
             <option value="full">🎧 + Gym + Spotify + extras</option>
           </select>
         </div>
-        <button class="btn-primary" id="col-calc-btn">Estimate My Monthly Budget</button>
+        <button class="btn-primary" id="col-calc-btn" data-i18n="col_calc_btn">Estimate My Monthly Budget</button>
         <div class="tool-result hidden" id="col-result" role="status" aria-live="polite">
           <div class="col-breakdown" id="col-breakdown"></div>
           <div class="col-total-bar" id="col-total-bar"></div>
@@ -622,7 +622,7 @@
       <div class="tool-body">
         <!-- City -->
         <div class="tool-field">
-          <label for="rent-city">City</label>
+          <label for="rent-city" data-i18n="rent_label_city">City</label>
           <select id="rent-city">
             <option value="cph">Copenhagen (overall)</option>
             <option value="cph-nb">Copenhagen — by neighbourhood</option>
@@ -639,7 +639,7 @@
         </div>
         <!-- Neighbourhood (CPH only) -->
         <div class="tool-field" id="rent-nb-wrap" style="display:none">
-          <label for="rent-neighbourhood">Neighbourhood</label>
+          <label for="rent-neighbourhood" data-i18n="rent_label_nb">Neighbourhood</label>
           <select id="rent-neighbourhood">
             <option value="indre-by">Indre By (City Centre)</option>
             <option value="frederiksberg-nb">Frederiksberg</option>
@@ -656,15 +656,15 @@
         </div>
         <!-- Size -->
         <div class="tool-field">
-          <label for="rent-size">Apartment size (m²)</label>
+          <label for="rent-size" data-i18n="rent_label_size">Apartment size (m²)</label>
           <input type="number" id="rent-size" placeholder="e.g. 65" min="10" max="500" />
         </div>
         <!-- Monthly rent -->
         <div class="tool-field">
-          <label for="rent-monthly">Your monthly rent (DKK)</label>
+          <label for="rent-monthly" data-i18n="rent_label_monthly">Your monthly rent (DKK)</label>
           <input type="number" id="rent-monthly" placeholder="e.g. 9500" min="500" max="100000" />
         </div>
-        <button class="btn-primary" id="rent-check-btn">Check My Rent</button>
+        <button class="btn-primary" id="rent-check-btn" data-i18n="rent_check_btn">Check My Rent</button>
         <div class="tool-result hidden" id="rent-result" role="status" aria-live="polite"></div>
       </div>
     </div>
@@ -676,19 +676,19 @@
       <p data-i18n="tool_weather_sub">Pick any date — get a real forecast, actual past data, or monthly climate averages.</p>
       <div class="tool-body">
         <div class="tool-field">
-          <label for="weather-date">Date</label>
+          <label for="weather-date" data-i18n="weather_label_date">Date</label>
           <div class="weather-date-row">
             <input type="date" id="weather-date" />
             <div class="weather-quick-btns">
-              <button class="weather-quick-btn" data-offset="0">Today</button>
-              <button class="weather-quick-btn" data-offset="1">Tomorrow</button>
+              <button class="weather-quick-btn" data-offset="0" data-i18n="weather_btn_today">Today</button>
+              <button class="weather-quick-btn" data-offset="1" data-i18n="weather_btn_tomorrow">Tomorrow</button>
               <button class="weather-quick-btn" data-offset="7">+1 week</button>
               <button class="weather-quick-btn" data-offset="14">+2 weeks</button>
             </div>
           </div>
         </div>
         <div class="tool-field">
-          <label for="weather-city">City</label>
+          <label for="weather-city" data-i18n="weather_label_city">City</label>
           <select id="weather-city">
             <option value="cph">Copenhagen</option>
             <option value="aar">Aarhus</option>
@@ -707,7 +707,7 @@
       <p data-i18n="tool_kommune_sub">Type any Danish address — instantly see your municipality, tax rate, hospital, and local services.</p>
       <div class="tool-body">
         <div class="tool-field">
-          <label for="dawa-input">Your Danish address</label>
+          <label for="dawa-input" data-i18n="dawa_label_addr">Your Danish address</label>
           <div class="dawa-input-wrap">
             <input type="text" id="dawa-input" placeholder="Start typing — e.g. Nørrebrogade 20…" autocomplete="off" spellcheck="false" />
             <div class="dawa-suggestions hidden" id="dawa-suggestions"></div>
@@ -724,24 +724,24 @@
       <p data-i18n="tool_journey_sub">Denmark's official public transport — find routes anywhere by train, metro, or bus.</p>
       <div class="tool-body">
         <div class="tool-field">
-          <label for="journey-from">From</label>
+          <label for="journey-from" data-i18n="journey_label_from">From</label>
           <div class="dawa-input-wrap">
             <input type="text" id="journey-from" placeholder="e.g. Copenhagen Central…" autocomplete="off" spellcheck="false" />
             <div class="dawa-suggestions hidden" id="journey-from-sugg"></div>
           </div>
         </div>
         <div class="tool-field">
-          <label for="journey-to">To</label>
+          <label for="journey-to" data-i18n="journey_label_to">To</label>
           <div class="dawa-input-wrap">
             <input type="text" id="journey-to" placeholder="e.g. Aarhus…" autocomplete="off" spellcheck="false" />
             <div class="dawa-suggestions hidden" id="journey-to-sugg"></div>
           </div>
         </div>
         <div class="tool-field">
-          <label for="journey-when">Departure time</label>
+          <label for="journey-when" data-i18n="journey_label_when">Departure time</label>
           <input type="datetime-local" id="journey-when" />
         </div>
-        <button class="btn-primary" id="journey-search-btn">Find Routes →</button>
+        <button class="btn-primary" id="journey-search-btn" data-i18n="journey_find_btn">Find Routes →</button>
         <div class="tool-result hidden" id="journey-result" role="status" aria-live="polite"></div>
       </div>
     </div>
@@ -753,12 +753,12 @@
       <p data-i18n="tool_jobs_sub">Search all major Danish job boards at once — filtered to your role and city.</p>
       <div class="tool-body">
         <div class="tool-field">
-          <label for="jobs-query">Job title or field</label>
+          <label for="jobs-query" data-i18n="jobs_label_query">Job title or field</label>
           <input type="text" id="jobs-query" placeholder="e.g. Software engineer, nurse, marketing…" />
         </div>
         <div class="job-chips" id="jobs-suggest-chips"></div>
         <div class="tool-field">
-          <label for="jobs-location">Location</label>
+          <label for="jobs-location" data-i18n="jobs_label_location">Location</label>
           <select id="jobs-location">
             <option value="">All Denmark</option>
             <option value="københavn">Copenhagen</option>
@@ -886,11 +886,11 @@
         <div class="footer-col">
           <h4 data-i18n="footer_chapters">Chapters</h4>
           <!-- href points to crawlable static pages; onclick opens the SPA for users -->
-          <a href="/chapter/before-you-land.html" onclick="event.preventDefault(); openChapter(0);">Before You Land</a>
-          <a href="/chapter/first-72-hours.html" onclick="event.preventDefault(); openChapter(1);">First 72 Hours</a>
-          <a href="/chapter/papers-and-legal-identity.html" onclick="event.preventDefault(); openChapter(2);">Papers &amp; Legal</a>
-          <a href="/chapter/housing.html" onclick="event.preventDefault(); openChapter(3);">Housing</a>
-          <a href="/chapter/" style="opacity:0.78">Browse all 16 chapters →</a>
+          <a href="/chapter/before-you-land.html" onclick="event.preventDefault(); openChapter(0);" data-i18n="footer_ch0">Before You Land</a>
+          <a href="/chapter/first-72-hours.html" onclick="event.preventDefault(); openChapter(1);" data-i18n="footer_ch1">First 72 Hours</a>
+          <a href="/chapter/papers-and-legal-identity.html" onclick="event.preventDefault(); openChapter(2);" data-i18n="footer_ch2">Papers &amp; Legal</a>
+          <a href="/chapter/housing.html" onclick="event.preventDefault(); openChapter(3);" data-i18n="footer_ch3">Housing</a>
+          <a href="/chapter/" style="opacity:0.78" data-i18n="footer_all_chapters">Browse all 16 chapters →</a>
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer_tools">Tools</h4>
