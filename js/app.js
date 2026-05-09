@@ -1289,6 +1289,9 @@ const _finishOpenChapter = (index) => {
     hb.classList.remove('open');
     hb.setAttribute('aria-expanded', 'false');
   }
+  // Clear shared mobile backdrop + scroll lock
+  document.getElementById('mobile-overlay')?.classList.remove('visible');
+  document.body.style.overflow = '';
 };
 
 window.openChapter = (index) => {
@@ -1847,18 +1850,26 @@ const initMobileSidebar = () => {
 
   hamburger?.addEventListener('click', () => {
     const opened = hamburger.classList.toggle('open');
-    rail?.classList.toggle('open');
+    rail?.classList.toggle('open', opened);
     hamburger.setAttribute('aria-expanded', opened ? 'true' : 'false');
+    // Sync the shared mobile backdrop on small screens
+    if (window.matchMedia('(max-width: 1024px)').matches) {
+      document.getElementById('mobile-overlay')?.classList.toggle('visible', opened);
+      document.body.style.overflow = opened ? 'hidden' : '';
+    }
   });
 
   // Close on outside click
   document.addEventListener('click', (e) => {
     if (rail?.classList.contains('open') &&
         !rail.contains(e.target) &&
-        !hamburger?.contains(e.target)) {
+        !hamburger?.contains(e.target) &&
+        !e.target.closest('#mobile-overlay')) {
       rail.classList.remove('open');
       hamburger?.classList.remove('open');
       hamburger?.setAttribute('aria-expanded', 'false');
+      document.getElementById('mobile-overlay')?.classList.remove('visible');
+      document.body.style.overflow = '';
     }
   });
 };
@@ -1897,20 +1908,49 @@ const initLangButtons = () => {
 
   // Mobile: tap the ::before pill to expand/collapse the dropdown
   const selector = document.querySelector('.lang-selector');
+  const _overlay  = () => document.getElementById('mobile-overlay');
+  const _closeLang = () => {
+    selector?.classList.remove('open');
+    _overlay()?.classList.remove('visible');
+  };
   if (selector) {
     selector.addEventListener('click', (e) => {
-      // Only toggle when the click is on the bare selector (not a lang-btn child)
-      if (window.matchMedia('(max-width: 600px)').matches && e.target === selector) {
-        selector.classList.toggle('open');
+      // Toggle when click lands on the selector itself or its ::before (not a lang-btn)
+      if (window.matchMedia('(max-width: 600px)').matches && !e.target.closest('.lang-btn')) {
+        const opening = !selector.classList.contains('open');
+        selector.classList.toggle('open', opening);
+        _overlay()?.classList.toggle('visible', opening);
       }
     });
     // Close after picking a language on mobile
     selector.addEventListener('click', (e) => {
-      if (e.target.classList.contains('lang-btn')) selector.classList.remove('open');
+      if (e.target.classList.contains('lang-btn')) _closeLang();
     });
-    // Close when clicking outside
+    // Close when clicking outside (only if lang is currently open — don't fight Björn's overlay)
     document.addEventListener('click', (e) => {
-      if (!selector.contains(e.target)) selector.classList.remove('open');
+      if (selector.classList.contains('open') && !selector.contains(e.target) && !e.target.closest('#mobile-overlay')) {
+        _closeLang();
+      }
+    });
+  }
+
+  // Shared overlay: tap backdrop to close whatever is open
+  const overlayEl = document.getElementById('mobile-overlay');
+  if (overlayEl) {
+    overlayEl.addEventListener('click', () => {
+      _closeLang();
+      // Close Björn (the IIFE exposes itself as the global `Bjorn`)
+      if (typeof Bjorn !== 'undefined' && Bjorn.close) Bjorn.close();
+      // Close hamburger / chapter rail if open
+      const rail = document.getElementById('chapter-rail');
+      const hb   = document.getElementById('hamburger');
+      if (rail?.classList.contains('open')) {
+        rail.classList.remove('open');
+        hb?.classList.remove('open');
+        hb?.setAttribute('aria-expanded', 'false');
+      }
+      overlayEl.classList.remove('visible');
+      document.body.style.overflow = '';
     });
   }
 

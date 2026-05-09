@@ -850,6 +850,12 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     if (widget) widget.classList.remove('closed');
     isOpen = true;
 
+    // On mobile: show backdrop + lock body scroll so page doesn't scroll behind panel
+    if (window.matchMedia('(max-width: 600px)').matches) {
+      document.getElementById('mobile-overlay')?.classList.add('visible');
+      document.body.style.overflow = 'hidden';
+    }
+
     // Reflect open state on toggle button for screen readers
     const toggleBtn = document.getElementById('bjorn-toggle');
     if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
@@ -907,6 +913,9 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     // Reset any keyboard-adjusted inline styles (Visual Viewport API)
     const panelEl = document.getElementById('bjorn-panel');
     if (panelEl) { panelEl.style.bottom = ''; panelEl.style.maxHeight = ''; }
+    // Remove mobile backdrop + scroll lock
+    document.getElementById('mobile-overlay')?.classList.remove('visible');
+    document.body.style.overflow = '';
     // Animate panel out before hiding it
     widget.classList.add('closing');
     setTimeout(() => {

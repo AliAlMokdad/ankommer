@@ -2043,6 +2043,7 @@ h4 { font-size: 1rem; font-weight: 600; }
     transform: translateX(-100%);
     width: 280px;
     box-shadow: var(--shadow-lg);
+    z-index: 600; /* above the .mobile-overlay backdrop (498) */
   }
   .chapter-rail.open { transform: translateX(0); }
   .main-content { margin-left: 0; }
@@ -3406,6 +3407,26 @@ h4 { font-size: 1rem; font-weight: 600; }
   .lang-btn { padding: 6px 10px; }
 }
 
+/* ── Shared mobile backdrop (lang dropdown + Björn panel) ─────── */
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 498;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0s linear 0.2s;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+.mobile-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s ease, visibility 0s linear 0s;
+}
+
 /* ── Mobile lang dropdown — collapse 10 chips below 600px ─────── */
 @media (max-width: 600px) {
   .lang-selector { position: relative; }
@@ -3426,24 +3447,36 @@ h4 { font-size: 1rem; font-weight: 600; }
     text-transform: uppercase;
     cursor: pointer;
   }
+  /* Hide the pill when dropdown is fully open (avoids duplicate "EN" entry) */
+  .lang-selector.open::before { display: none; }
   /* When .lang-selector has class .open we expand into a vertical menu */
   .lang-selector.open {
-    position: absolute;
-    top: calc(env(safe-area-inset-top) + 56px);
+    position: fixed;
+    top: 64px;
     right: 12px;
     background: var(--bg-card);
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 8px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.28);
     z-index: 1000;
     flex-direction: column;
     display: flex !important;
+    min-width: 180px;
   }
   .lang-selector.open .lang-btn {
     display: flex;
     width: 100%;
     justify-content: flex-start;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    gap: 8px;
   }
+  /* Show the language code text (span) in the expanded list */
+  .lang-selector.open .lang-btn span { display: inline !important; }
+  .lang-selector.open .lang-btn:hover,
+  .lang-selector.open .lang-btn:active { background: var(--bg-secondary); }
+  .lang-selector.open .lang-btn.active { background: var(--flag-red); color: #fff; }
 }
 
 /* ── Björn panel — keep inside viewport on small phones ───────── */
@@ -3607,6 +3640,13 @@ body { overflow-wrap: break-word; }
   .hero-content { padding: calc(var(--nav-h) + 12px) 20px 20px; }
 }
 
+/* On phones, the absolutely-positioned scroll indicator collides with the
+   bottom-anchored hero-stats grid. Hide it — the stats themselves invite
+   scrolling. */
+@media (max-width: 600px) {
+  .scroll-indicator { display: none; }
+}
+
 /* Hero stats: orphan dividers wrap awkwardly between 481-600px.
    Hide dividers below 600px and tighten the grid. */
 @media (max-width: 600px) {
@@ -3668,7 +3708,7 @@ body { overflow-wrap: break-word; }
 @media (max-width: 600px) {
   .lang-selector.open {
     max-width: calc(100vw - 24px);
-    width: 200px;
+    min-width: min(180px, calc(100vw - 24px));
   }
   /* Hide search-modal Esc hint on mobile (no physical Esc key) */
   .search-esc-hint { display: none; }
