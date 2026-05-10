@@ -614,7 +614,7 @@ const Calculators = (() => {
           <p>${vt(node.description)}</p>
           ${node.link ? `<a href="${node.link}" target="_blank" rel="noopener">${vt(node.linkText) || vtl('learn_more')}</a>` : ''}
         </div>
-        <span class="visa-reset" id="visa-reset">← ${vtl('start_over')}</span>
+        <span class="visa-reset" id="visa-reset">${(['ar','ur','fa'].includes(window.currentLang||'en')) ? '→' : '←'} ${vtl('start_over')}</span>
       `;
       document.getElementById('visa-reset')?.addEventListener('click', () => initVisaTree());
       return;

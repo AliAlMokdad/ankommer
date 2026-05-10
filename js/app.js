@@ -1335,7 +1335,7 @@ const renderChapter = (index) => {
 
   const sectionsHtml = (ch.sections || []).map((sec, si) => `
     <div class="chapter-section" id="ch-sec-${index}-${si}">
-      <h3 class="section-heading">
+      <h3 class="section-heading" id="ch-sec-${index}-${si}-heading">
         <button class="section-toggle"
                 onclick="toggleSection('ch-sec-${index}-${si}')"
                 aria-expanded="false"
@@ -3041,8 +3041,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const m = hash.match(/^#chapter-(\d+)$/);
     if (m) {
       const idx = parseInt(m[1], 10);
-      if (idx >= 0 && idx < (window.CHAPTERS || []).length) {
+      const total = (window.CHAPTERS || []).length;
+      if (idx >= 0 && idx < total) {
         window.openChapter(idx);
+      } else if (total > 0) {
+        // Out-of-range chapter (e.g. #chapter-99) — strip the bad hash
+        // so the URL doesn't keep the bogus state, and show home. Was
+        // silently failing: URL stayed at #chapter-99, page stuck.
+        if (history.replaceState) {
+          history.replaceState(null, '', location.pathname + location.search);
+        }
+        if (document.body.classList.contains('app-active')) {
+          window.scrollToTop?.();
+        }
       }
     } else if (document.body.classList.contains('app-active')) {
       // Hash cleared while a chapter was open → user pressed back to
