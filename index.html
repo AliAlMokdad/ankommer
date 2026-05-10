@@ -203,7 +203,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=40" />
+  <link rel="stylesheet" href="css/main.css?v=49" />
 </head>
 <body>
 
@@ -232,7 +232,7 @@
   </div>
   <div class="nav-right">
     <!-- Language selector -->
-    <div class="lang-selector" id="lang-selector" data-current-lang="EN" role="group" aria-label="Language selection" data-i18n-aria="nav_lang">
+    <div class="lang-selector" id="lang-selector" data-current-lang="EN" role="button" tabindex="0" aria-label="Language selection" aria-haspopup="menu" aria-expanded="false" data-i18n-aria="nav_lang">
       <div class="lang-dropdown-menu" role="menu">
         <button class="lang-btn active" data-lang="en" aria-label="English" aria-pressed="true">🇬🇧 <span>EN</span></button>
         <button class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="false">🇫🇷 <span>FR</span></button>
@@ -665,12 +665,12 @@
         <!-- Size -->
         <div class="tool-field">
           <label for="rent-size" data-i18n="rent_label_size">Apartment size (m²)</label>
-          <input type="number" id="rent-size" placeholder="e.g. 65" min="10" max="500" />
+          <input type="number" id="rent-size" placeholder="e.g. 65" min="10" max="500" data-i18n-placeholder="ph_rent_size" />
         </div>
         <!-- Monthly rent -->
         <div class="tool-field">
           <label for="rent-monthly" data-i18n="rent_label_monthly">Your monthly rent (DKK)</label>
-          <input type="number" id="rent-monthly" placeholder="e.g. 9500" min="500" max="100000" />
+          <input type="number" id="rent-monthly" placeholder="e.g. 9500" min="500" max="100000" data-i18n-placeholder="ph_rent_monthly" />
         </div>
         <button class="btn-primary" id="rent-check-btn" data-i18n="rent_check_btn">Check My Rent</button>
         <div class="tool-result hidden" id="rent-result" role="status" aria-live="polite"></div>
@@ -717,7 +717,7 @@
         <div class="tool-field">
           <label for="dawa-input" data-i18n="dawa_label_addr">Your Danish address</label>
           <div class="dawa-input-wrap">
-            <input type="text" id="dawa-input" placeholder="Start typing — e.g. Nørrebrogade 20…" autocomplete="off" spellcheck="false" />
+            <input type="text" id="dawa-input" placeholder="Start typing — e.g. Nørrebrogade 20…" autocomplete="off" spellcheck="false" data-i18n-placeholder="ph_dawa_addr" />
             <div class="dawa-suggestions hidden" id="dawa-suggestions"></div>
           </div>
         </div>
@@ -734,14 +734,14 @@
         <div class="tool-field">
           <label for="journey-from" data-i18n="journey_label_from">From</label>
           <div class="dawa-input-wrap">
-            <input type="text" id="journey-from" placeholder="e.g. Copenhagen Central…" autocomplete="off" spellcheck="false" />
+            <input type="text" id="journey-from" placeholder="e.g. Copenhagen Central…" autocomplete="off" spellcheck="false" data-i18n-placeholder="ph_journey_from" />
             <div class="dawa-suggestions hidden" id="journey-from-sugg"></div>
           </div>
         </div>
         <div class="tool-field">
           <label for="journey-to" data-i18n="journey_label_to">To</label>
           <div class="dawa-input-wrap">
-            <input type="text" id="journey-to" placeholder="e.g. Aarhus…" autocomplete="off" spellcheck="false" />
+            <input type="text" id="journey-to" placeholder="e.g. Aarhus…" autocomplete="off" spellcheck="false" data-i18n-placeholder="ph_journey_to" />
             <div class="dawa-suggestions hidden" id="journey-to-sugg"></div>
           </div>
         </div>
@@ -762,13 +762,13 @@
       <div class="tool-body">
         <div class="tool-field">
           <label for="jobs-query" data-i18n="jobs_label_query">Job title or field</label>
-          <input type="text" id="jobs-query" placeholder="e.g. Software engineer, nurse, marketing…" />
+          <input type="text" id="jobs-query" placeholder="e.g. Software engineer, nurse, marketing…" data-i18n-placeholder="ph_jobs_query" />
         </div>
         <div class="job-chips" id="jobs-suggest-chips"></div>
         <div class="tool-field">
           <label for="jobs-location" data-i18n="jobs_label_location">Location</label>
           <select id="jobs-location">
-            <option value="">All Denmark</option>
+            <option value="" data-i18n="jobs_loc_all">All Denmark</option>
             <option value="københavn">Copenhagen</option>
             <option value="aarhus">Aarhus</option>
             <option value="odense">Odense</option>
@@ -779,15 +779,15 @@
           </select>
         </div>
         <div class="tool-field">
-          <label>Job type</label>
+          <label data-i18n="job_label_type">Job type</label>
           <div class="job-type-tabs" id="job-type-tabs">
-            <button class="job-type-tab active" data-type="">All</button>
-            <button class="job-type-tab" data-type="fuldtid">Full-time</button>
-            <button class="job-type-tab" data-type="deltid">Part-time</button>
-            <button class="job-type-tab" data-type="freelance">Freelance</button>
+            <button class="job-type-tab active" data-type="" data-i18n="job_type_all">All</button>
+            <button class="job-type-tab" data-type="fuldtid" data-i18n="job_type_full">Full-time</button>
+            <button class="job-type-tab" data-type="deltid" data-i18n="job_type_part">Part-time</button>
+            <button class="job-type-tab" data-type="freelance" data-i18n="job_type_freelance">Freelance</button>
           </div>
         </div>
-        <button class="btn-primary" id="jobs-search-btn">Search Danish Jobs →</button>
+        <button class="btn-primary" id="jobs-search-btn" data-i18n="jobs_search_btn">Search Danish Jobs →</button>
         <div class="tool-result hidden" id="jobs-result" role="status" aria-live="polite"></div>
       </div>
     </div>
@@ -815,11 +815,11 @@
         <div class="tool-field">
           <label for="res-permit-type" data-i18n="tool_res_type">Permit type</label>
           <select id="res-permit-type">
-            <option value="eu">EU / EEA citizen</option>
-            <option value="work_permit">Work permit (non-EU)</option>
-            <option value="student_visa">Student permit</option>
-            <option value="family_reunification">Family reunification</option>
-            <option value="refugee">Asylum / Refugee</option>
+            <option value="eu" data-i18n="permit_eu">EU / EEA citizen</option>
+            <option value="work_permit" data-i18n="permit_work">Work permit (non-EU)</option>
+            <option value="student_visa" data-i18n="permit_student">Student permit</option>
+            <option value="family_reunification" data-i18n="permit_family">Family reunification</option>
+            <option value="refugee" data-i18n="permit_refugee">Asylum / Refugee</option>
           </select>
         </div>
         <button class="btn-primary" id="res-calc-btn" data-i18n="tool_calc">Calculate</button>
@@ -903,7 +903,7 @@
         <div class="footer-col">
           <h4 data-i18n="footer_tools">Tools</h4>
           <a href="#tools-section" data-i18n="tool_salary_title">Salary Calculator</a>
-          <a href="#tools-section" data-i18n="tool_col_title">Cost of Living</a>
+          <a href="#tools-section" data-i18n="tool_budget_title">Monthly Budget Estimator</a>
           <a href="#tools-section" data-i18n="tool_visa_title">Visa Tree</a>
           <a href="#tools-section" data-i18n="tool_cal_title">Deadline Calendar</a>
         </div>
@@ -1009,21 +1009,21 @@
         <span class="bjorn-status" data-i18n="bjorn_status">Your Denmark guide since 836 AD</span>
       </div>
       <div class="bjorn-header-actions">
-        <button class="bjorn-icon-btn" id="bjorn-translate-btn" title="Translate a Danish document" aria-label="Translate document">📋</button>
-        <button class="bjorn-icon-btn" id="bjorn-clear-history" title="Clear chat history" aria-label="Clear history">🗑️</button>
-        <button class="bjorn-close-btn" id="bjorn-close" aria-label="Close Björn">✕</button>
+        <button class="bjorn-icon-btn" id="bjorn-translate-btn" title="Translate a Danish document" aria-label="Translate document" data-i18n-title="bjorn_translate_btn_title" data-i18n-aria="bjorn_translate_btn_aria">📋</button>
+        <button class="bjorn-icon-btn" id="bjorn-clear-history" title="Clear chat history" aria-label="Clear history" data-i18n-title="bjorn_clear_history_title" data-i18n-aria="bjorn_clear_history_aria">🗑️</button>
+        <button class="bjorn-close-btn" id="bjorn-close" aria-label="Close Björn" data-i18n-aria="bjorn_close_aria">✕</button>
       </div>
     </div>
 
     <!-- Document Translator Panel -->
     <div class="bjorn-translate-panel hidden" id="bjorn-translate-panel">
       <div class="bjorn-translate-header">
-        <span>📋 Translate a Danish Document</span>
-        <button class="bjorn-icon-btn" id="bjorn-translate-close" aria-label="Close translator">✕</button>
+        <span data-i18n="bjorn_translate_panel_title">📋 Translate a Danish Document</span>
+        <button class="bjorn-icon-btn" id="bjorn-translate-close" aria-label="Close translator" data-i18n-aria="bjorn_translate_close_aria">✕</button>
       </div>
-      <p class="bjorn-translate-hint">Paste the text from any letter or document you received and Björn will explain it.</p>
-      <textarea id="bjorn-doc-text" class="bjorn-doc-textarea" rows="5" placeholder="Paste Danish text here…" aria-label="Document text to translate"></textarea>
-      <button class="bjorn-translate-send" id="bjorn-translate-send">Explain this document →</button>
+      <p class="bjorn-translate-hint" data-i18n="bjorn_translate_hint_text">Paste the text from any letter or document you received and Björn will explain it.</p>
+      <textarea id="bjorn-doc-text" class="bjorn-doc-textarea" rows="5" placeholder="Paste Danish text here…" aria-label="Document text to translate" data-i18n-placeholder="bjorn_translate_placeholder" data-i18n-aria="bjorn_translate_textarea_aria"></textarea>
+      <button class="bjorn-translate-send" id="bjorn-translate-send" data-i18n="bjorn_translate_send_btn">Explain this document →</button>
     </div>
 
     <!-- API Setup (hidden — shown only if API key needed) -->
@@ -1053,8 +1053,8 @@
 
     <!-- Input area -->
     <div class="bjorn-input-area">
-      <textarea id="bjorn-input" rows="1" placeholder="Ask Björn anything…" data-i18n-placeholder="bjorn_placeholder" aria-label="Message to Björn"></textarea>
-      <button class="bjorn-send" id="bjorn-send" aria-label="Send">
+      <textarea id="bjorn-input" rows="1" placeholder="Ask Björn anything…" data-i18n-placeholder="bjorn_placeholder" aria-label="Message to Björn" data-i18n-aria="bjorn_input_aria"></textarea>
+      <button class="bjorn-send" id="bjorn-send" aria-label="Send" data-i18n-aria="bjorn_send_aria">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
       </button>
     </div>
@@ -1068,11 +1068,11 @@
 <div id="pwa-install-banner" class="pwa-install-banner hidden" role="complementary" aria-label="Install app">
   <div class="pwa-banner-icon">🇩🇰</div>
   <div class="pwa-banner-text">
-    <strong>Install ANKOMMER</strong>
-    <span>Read offline, any time</span>
+    <strong data-i18n="pwa_install_title">Install ANKOMMER</strong>
+    <span data-i18n="pwa_install_sub">Read offline, any time</span>
   </div>
-  <button class="pwa-install-btn" id="pwa-install-btn">Install</button>
-  <button class="pwa-dismiss-btn" id="pwa-dismiss-btn" aria-label="Dismiss">✕</button>
+  <button class="pwa-install-btn" id="pwa-install-btn" data-i18n="pwa_install_btn">Install</button>
+  <button class="pwa-dismiss-btn" id="pwa-dismiss-btn" aria-label="Dismiss" data-i18n-aria="pwa_dismiss_aria">✕</button>
 </div>
 
 <!-- ═══════════════════════════════════ SCRIPTS ═══════════════════════════════════ -->
@@ -1081,13 +1081,17 @@
 <!-- v24: cache-busting query string forces a fresh fetch when we ship new JS,
      since /js/* historically had a 1-year immutable cache header. Bump the
      query string in lockstep with sw.js CACHE_NAME on every release. -->
-<script defer src="js/data.js?v=30"></script>
-<script defer src="js/data-chapters-meta.js?v=29"></script>
-<link rel="prefetch" href="js/data-chapters.js?v=29" as="script">
-<script defer src="js/bjorn.js?v=36"></script>
-<script defer src="js/calculators.js?v=28"></script>
+<script defer src="js/data.js?v=32"></script>
+<script defer src="js/data-chapters-meta.js?v=30"></script>
+<!-- Removed prefetch tag: js/data-chapters.js is dynamically injected on
+     first openChapter() call. The prefetch caused a duplicate fetch in
+     some browsers (Firefox especially) that didn't reliably coalesce the
+     prefetched response with the script-src request. -->
+
+<script defer src="js/bjorn.js?v=37"></script>
+<script defer src="js/calculators.js?v=31"></script>
 <script defer src="js/apis.js?v=28"></script>
-<script defer src="js/app.js?v=43"></script>
+<script defer src="js/app.js?v=47"></script>
 <!-- Shared backdrop for mobile modals (lang dropdown, Björn panel) -->
 <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 </body>

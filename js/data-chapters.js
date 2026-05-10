@@ -10,7 +10,7 @@ window.CHAPTERS = [
     sections: [
       {
         icon: "🛂",
-        title: { en:"Which Visa Do You Actually Need?", fr:"Quel Visa Avez-Vous Réellement Besoin ?", ar:"أي تأشيرة تحتاج فعلاً؟", es:"¿Qué Visa Necesitas Realmente?", da:"Hvilket visum har du faktisk brug for?" },
+        title: {en:"Which Visa Do You Actually Need?", fr:"Quel Visa Avez-Vous Réellement Besoin ?", ar:"أي تأشيرة تحتاج فعلاً؟", es:"¿Qué Visa Necesitas Realmente?", da:"Hvilket visum har du faktisk brug for?", de:"Welches Visum brauchen Sie wirklich?", fa:"واقعاً به چه ویزایی نیاز دارید؟", pl:"Której wizy naprawdę potrzebujesz?", uk:"Яка віза вам справді потрібна?", ur:"آپ کو واقعی کون سا ویزا چاہیے؟" },
         content: { en:`<p><strong>EU/EEA/Nordic citizens:</strong> You do not need a visa or work permit. You have the right to live and work in Denmark freely. <strong>Two separate registrations apply:</strong> (1) Your <strong>folkeregister address</strong> must be registered <strong>within 5 days of moving</strong> (CPR Act §12 — this is a fineable offence if you miss it). (2) Your <strong>EU residence document</strong> from SIRI must be obtained if you intend to stay more than 3 months.</p>
 <p><strong>Non-EU citizens</strong> need one of these:</p>
 <ul>
@@ -114,7 +114,7 @@ de:`<p><strong>EU/EWR/nordische Staatsangehoerige:</strong> Sie benoetigen kein 
       },
       {
         icon: "📁",
-        title: { en:"The Document Folder — Build It Now", fr:"Le Dossier de Documents — Préparez-le Maintenant", ar:"مجلد الوثائق - ابنِه الآن", es:"La Carpeta de Documentos — Prepárala Ahora", da:"Dokumentmappen — Byg den nu" },
+        title: {en:"The Document Folder — Build It Now", fr:"Le Dossier de Documents — Préparez-le Maintenant", ar:"مجلد الوثائق - ابنِه الآن", es:"La Carpeta de Documentos — Prepárala Ahora", da:"Dokumentmappen — Byg den nu", de:"Der Dokumentenordner — Legen Sie ihn jetzt an", fa:"پوشه‌ی مدارک — همین حالا آن را آماده کنید", pl:"Teczka z dokumentami — przygotuj ją już teraz", uk:"Папка з документами — створіть її вже зараз", ur:"دستاویزات کا فولڈر — ابھی تیار کریں" },
         content: { en:`<p>Bring these physical originals AND certified copies of each:</p>
 <ul>
   <li>✅ Valid passport (+ 2 photocopies of the main page)</li>
@@ -261,7 +261,7 @@ de:`<p>Bringen Sie diese physischen Originale UND beglaubigte Kopien von jedem m
       },
       {
         icon: "🏠",
-        title: { en:"Finding Housing Before You Arrive", fr:"Trouver un Logement Avant d'Arriver", ar:"إيجاد السكن قبل وصولك", es:"Encontrar Vivienda Antes de Llegar", da:"Finde bolig inden ankomst" },
+        title: {en:"Finding Housing Before You Arrive", fr:"Trouver un Logement Avant d'Arriver", ar:"إيجاد السكن قبل وصولك", es:"Encontrar Vivienda Antes de Llegar", da:"Finde bolig inden ankomst", de:"Wohnungssuche vor Ihrer Ankunft", fa:"یافتن مسکن پیش از ورود", pl:"Szukanie mieszkania przed przyjazdem", uk:"Пошук житла до приїзду", ur:"آمد سے پہلے رہائش تلاش کرنا" },
         content: { en:`<p>The Danish rental market is competitive — especially Copenhagen. Starting your search before you land gives you a critical advantage.</p>
 <p><strong>Best platforms:</strong></p>
 <ul>
@@ -425,7 +425,7 @@ de:`<p>Der daenische Mietmarkt ist sehr wettbewerbsintensiv — besonders in Kop
       },
       {
         icon: "💳",
-        title: { en:"Banking & Money Before You Land", fr:"Banque et Argent Avant d'Arriver", ar:"البنوك والمال قبل وصولك", es:"Banca y Dinero Antes de Llegar", da:"Bank og penge inden ankomst" },
+        title: {en:"Banking & Money Before You Land", fr:"Banque et Argent Avant d'Arriver", ar:"البنوك والمال قبل وصولك", es:"Banca y Dinero Antes de Llegar", da:"Bank og penge inden ankomst", de:"Banking & Geld vor Ihrer Ankunft", fa:"بانکداری و پول پیش از ورود", pl:"Bankowość i pieniądze przed przylotem", uk:"Банківська справа та гроші до приїзду", ur:"پہنچنے سے پہلے بینکنگ اور پیسہ" },
         content: { en:`<p>You can set up international accounts before arriving that will tide you over until you get a Danish bank account (which requires a CPR number).</p>
 <p><strong>Recommended pre-arrival accounts:</strong></p>
 <ul>
@@ -509,7 +509,7 @@ de:`<p>Sie koennen internationale Konten eroffnen, bevor Sie ankommen, die Sie u
       },
       {
         icon: "🗣️",
-        title: { en:"Start Learning Danish Now", fr:"Commencez à Apprendre le Danois Maintenant", ar:"ابدأ تعلم الدنماركية الآن", es:"Empieza a Aprender Danés Ahora", da:"Begynd at lære dansk nu" },
+        title: {en:"Start Learning Danish Now", fr:"Commencez à Apprendre le Danois Maintenant", ar:"ابدأ تعلم الدنماركية الآن", es:"Empieza a Aprender Danés Ahora", da:"Begynd at lære dansk nu", de:"Fangen Sie jetzt an, Dänisch zu lernen", fa:"از همین حالا یادگیری دانمارکی را شروع کنید", pl:"Zacznij uczyć się duńskiego już teraz", uk:"Починайте вчити данську вже зараз", ur:"ابھی ڈینش سیکھنا شروع کریں" },
         content: { en:`<p>Danish pronunciation is genuinely one of the hardest for foreigners — the sooner you start, the better. The honest truth: everyone in Denmark speaks excellent English. But learning Danish opens social doors that stay closed to English speakers.</p>
 <p><strong>Best pre-arrival resources:</strong></p>
 <ul>
@@ -603,26 +603,26 @@ de:`<p>Die daenische Aussprache ist wirklich eine der schwersten fuer Auslaender
       }
     ],
     checklist: [
-      { id:"ch0_visa", text: { en:"Research and apply for correct visa/permit", da:"Undersøg og ansøg om korrekt visum/tilladelse" }, xp: 30 },
-      { id:"ch0_docs", text: { en:"Build your physical document folder", da:"Byg din fysiske dokumentmappe" }, xp: 20 },
-      { id:"ch0_housing", text: { en:"Start housing search on BoligPortal/Lejebolig", da:"Start boligsøgning på BoligPortal/Lejebolig" }, xp: 20 },
-      { id:"ch0_wise", text: { en:"Set up Wise or Revolut card", da:"Opret Wise eller Revolut-kort" }, xp: 15 },
-      { id:"ch0_danish", text: { en:"Download a Danish learning app", da:"Download en dansk lærings-app" }, xp: 15 },
-      { id:"ch0_groups", text: { en:"Join expat Facebook groups for your city", da:"Tilslut dig expat Facebook-grupper for din by" }, xp: 10 },
+      { id:"ch0_visa", text: {en:"Research and apply for correct visa/permit", da:"Undersøg og ansøg om korrekt visum/tilladelse", ar:"ابحث وقدّم طلباً للحصول على التأشيرة/التصريح المناسب", de:"Das richtige Visum/die richtige Aufenthaltserlaubnis recherchieren und beantragen", es:"Investiga y solicita el visado o permiso correcto", fa:"ویزا/مجوز صحیح را بررسی و درخواست کنید", fr:"Rechercher et demander le bon visa/permis", pl:"Sprawdź i złóż wniosek o odpowiednią wizę/pozwolenie", uk:"Дослідіть та подайте заявку на правильну візу/дозвіл", ur:"صحیح ویزا/اجازت نامہ کے لیے تحقیق کریں اور درخواست دیں" }, xp: 30 },
+      { id:"ch0_docs", text: {en:"Build your physical document folder", da:"Byg din fysiske dokumentmappe", ar:"أنشئ مجلداً ورقياً لوثائقك", de:"Erstellen Sie Ihren physischen Dokumentenordner", es:"Prepara tu carpeta física de documentos", fa:"پوشه‌ی فیزیکی مدارک خود را آماده کنید", fr:"Préparez votre dossier physique de documents", pl:"Przygotuj fizyczną teczkę z dokumentami", uk:"Створіть фізичну папку з документами", ur:"اپنی دستاویزات کا فزیکل فولڈر تیار کریں" }, xp: 20 },
+      { id:"ch0_housing", text: {en:"Start housing search on BoligPortal/Lejebolig", da:"Start boligsøgning på BoligPortal/Lejebolig", ar:"ابدأ البحث عن سكن على BoligPortal/Lejebolig", de:"Starten Sie die Wohnungssuche auf BoligPortal/Lejebolig", es:"Empieza a buscar vivienda en BoligPortal/Lejebolig", fa:"جستجوی مسکن را در BoligPortal/Lejebolig شروع کنید", fr:"Lancez la recherche de logement sur BoligPortal/Lejebolig", pl:"Rozpocznij szukanie mieszkania na BoligPortal/Lejebolig", uk:"Розпочніть пошук житла на BoligPortal/Lejebolig", ur:"BoligPortal/Lejebolig پر رہائش تلاش کرنا شروع کریں" }, xp: 20 },
+      { id:"ch0_wise", text: {en:"Set up Wise or Revolut card", da:"Opret Wise eller Revolut-kort", ar:"احصل على بطاقة Wise أو Revolut", de:"Wise- oder Revolut-Karte einrichten", es:"Configura una tarjeta Wise o Revolut", fa:"کارت Wise یا Revolut را تنظیم کنید", fr:"Mettez en place une carte Wise ou Revolut", pl:"Załóż kartę Wise lub Revolut", uk:"Оформте картку Wise або Revolut", ur:"Wise یا Revolut کارڈ بنائیں" }, xp: 15 },
+      { id:"ch0_danish", text: {en:"Download a Danish learning app", da:"Download en dansk lærings-app", ar:"حمّل تطبيقاً لتعلم الدنماركية", de:"Eine Sprachlern-App für Dänisch herunterladen", es:"Descarga una aplicación para aprender danés", fa:"یک اپلیکیشن یادگیری دانمارکی دانلود کنید", fr:"Téléchargez une application pour apprendre le danois", pl:"Pobierz aplikację do nauki duńskiego", uk:"Завантажте додаток для вивчення данської", ur:"ڈینش سیکھنے کی ایپ ڈاؤن لوڈ کریں" }, xp: 15 },
+      { id:"ch0_groups", text: {en:"Join expat Facebook groups for your city", da:"Tilslut dig expat Facebook-grupper for din by", ar:"انضمّ إلى مجموعات Facebook للمغتربين في مدينتك", de:"Treten Sie Expat-Facebook-Gruppen für Ihre Stadt bei", es:"Únete a grupos de Facebook de expatriados de tu ciudad", fa:"به گروه‌های فیس‌بوک مهاجران در شهر خود بپیوندید", fr:"Rejoignez les groupes Facebook d'expatriés de votre ville", pl:"Dołącz do grup expat na Facebooku w swoim mieście", uk:"Приєднайтесь до груп експатів у Facebook у вашому місті", ur:"اپنے شہر کے ایکسپیٹ فیس بک گروپس میں شامل ہوں" }, xp: 10 },
     ]
   },
   {
     id: 1, icon: "⚡",
     color: "#C60C30",
-    title: { en:"First 72 Hours", fr:"Les 72 Premières Heures", ar:"أول 72 ساعة", es:"Las Primeras 72 Horas", da:"De Første 72 Timer", uk:"Перші 72 Години", pl:"Pierwsze 72 Godziny", ur:"پہلے 72 گھنٹے", fa:"۷۲ ساعت اول" },
-    subtitle: { en:"The Critical Window", fr:"La Fenêtre Critique", ar:"النافذة الحرجة", es:"La Ventana Crítica", da:"Det Kritiske Vindue", uk:"Критичне Вікно", pl:"Krytyczne Okno", ur:"انتہائی اہم دورانیہ", fa:"دوره حیاتی" },
+    title: {en:"First 72 Hours", fr:"Les 72 Premières Heures", ar:"أول 72 ساعة", es:"Las Primeras 72 Horas", da:"De Første 72 Timer", uk:"Перші 72 Години", pl:"Pierwsze 72 Godziny", ur:"پہلے 72 گھنٹے", fa:"۷۲ ساعت اول", de:"Die ersten 72 Stunden" },
+    subtitle: {en:"The Critical Window", fr:"La Fenêtre Critique", ar:"النافذة الحرجة", es:"La Ventana Crítica", da:"Det Kritiske Vindue", uk:"Критичне Вікно", pl:"Krytyczne Okno", ur:"انتہائی اہم دورانیہ", fa:"دوره حیاتی", de:"Das entscheidende Zeitfenster" },
     intro: { en:"These are the most important tasks of your entire life in Denmark. Do them in order. Do not skip any.", fr:"Ce sont les tâches les plus importantes de toute votre vie au Danemark. Faites-les dans l'ordre.", ar:"هذه أهم مهام حياتك كلها في الدنمارك. افعلها بالترتيب. لا تتخطى أياً منها.", es:"Estas son las tareas más importantes de toda tu vida en Dinamarca. Hazlas en orden.", da:"Dette er de vigtigste opgaver i hele dit liv i Danmark. Gør dem i rækkefølge.", uk:"Це найважливіші завдання за весь ваш час у Данії. Виконуйте їх по порядку. Не пропускайте жодного.", pl:"To najważniejsze zadania przez cały czas twojego życia w Danii. Wykonuj je po kolei. Nie pomijaj żadnego.", ur:"یہ ڈنمارک میں آپ کی پوری زندگی کے سب سے اہم کام ہیں۔ انہیں ترتیب سے کریں۔ کوئی بھی نہ چھوڑیں۔" },
     readTime: "20 min",
     bjornTip: { en:"I've been guiding newcomers for 1,200 years and this chapter is the one I care about most. Tick every single box. Your future self will thank you.", fr:"Je guide les nouveaux arrivants depuis 1 200 ans et c'est le chapitre qui m'importe le plus.", ar:"لقد كنت أرشد الوافدين الجدد منذ 1200 عام وهذا الفصل هو الأهم. حدّد كل مربع.", es:"He guiado recién llegados durante 1.200 años y este es el capítulo que más me importa.", da:"Jeg har guidet nyankomne i 1.200 år og dette kapitel er det vigtigste for mig." },
     sections: [
       {
         icon: "📍",
-        title: { en:"Step 1: Register Your Address (Folkeregister)", fr:"Étape 1 : Enregistrez votre adresse", ar:"الخطوة 1: سجّل عنوانك", es:"Paso 1: Registra tu Dirección", da:"Trin 1: Registrér din adresse" },
+        title: {en:"Step 1: Register Your Address (Folkeregister)", fr:"Étape 1 : Enregistrez votre adresse", ar:"الخطوة 1: سجّل عنوانك", es:"Paso 1: Registra tu Dirección", da:"Trin 1: Registrér din adresse", de:"Schritt 1: Adresse anmelden (Folkeregister)", fa:"گام ۱: ثبت آدرس (Folkeregister)", pl:"Krok 1: Zarejestruj swój adres (Folkeregister)", uk:"Крок 1: Зареєструйте свою адресу (Folkeregister)", ur:"مرحلہ 1: اپنا پتہ رجسٹر کریں (Folkeregister)" },
         content: { en:`<p>This is <strong>the very first thing</strong>. Everything else — your CPR number, your MitID, your doctor, your bank account, your tax card — all of it depends on having a registered address.</p>
 <p class="callout-warning">⏰ <strong>Legal deadline: within 5 days of moving</strong> (CPR Act §12). Late registration is a fineable offence. Book your Borgerservice appointment as soon as you have keys.</p>
 <p><strong>How to do it:</strong></p>
@@ -716,7 +716,7 @@ de:`<p>Dies ist <strong>das Allererste, was Sie tun muessen</strong>. Alles ande
       },
       {
         icon: "🆔",
-        title: { en:"Step 2: Get Your CPR Number", fr:"Étape 2 : Obtenez votre numéro CPR", ar:"الخطوة 2: احصل على رقم CPR الخاص بك", es:"Paso 2: Obtén tu Número CPR", da:"Trin 2: Få dit CPR-nummer" },
+        title: {en:"Step 2: Get Your CPR Number", fr:"Étape 2 : Obtenez votre numéro CPR", ar:"الخطوة 2: احصل على رقم CPR الخاص بك", es:"Paso 2: Obtén tu Número CPR", da:"Trin 2: Få dit CPR-nummer", de:"Schritt 2: CPR-Nummer beantragen", fa:"گام ۲: شماره‌ی CPR خود را بگیرید", pl:"Krok 2: Uzyskaj numer CPR", uk:"Крок 2: Отримайте свій номер CPR", ur:"مرحلہ 2: اپنا CPR نمبر حاصل کریں" },
         content: { en:`<p>Your CPR number (Civil Personal Registration number) is <strong>the single most important number in your Danish life.</strong> It is required for absolutely everything: doctor visits, tax registration, banking, library cards, gym membership, phone contracts — everything.</p>
 <p><strong>Format:</strong> DDMMYY-XXXX (your birthdate + 4 digits)</p>
 <p><strong>EU citizens:</strong> Register at International Citizen Service (ICS). Often same-day if you have all documents.</p>
@@ -840,7 +840,7 @@ de:`<p>Ihre CPR-Nummer (Civil Personal Registration, Zivile Personenregistrierun
       },
       {
         icon: "🔐",
-        title: { en:"Step 3: Activate MitID — Your Digital Identity", fr:"Étape 3 : Activez MitID — Votre Identité Numérique", ar:"الخطوة 3: فعّل MitID - هويتك الرقمية", es:"Paso 3: Activa MitID — Tu Identidad Digital", da:"Trin 3: Aktivér MitID — Din digitale identitet" },
+        title: {en:"Step 3: Activate MitID — Your Digital Identity", fr:"Étape 3 : Activez MitID — Votre Identité Numérique", ar:"الخطوة 3: فعّل MitID - هويتك الرقمية", es:"Paso 3: Activa MitID — Tu Identidad Digital", da:"Trin 3: Aktivér MitID — Din digitale identitet", de:"Schritt 3: MitID aktivieren — Ihre digitale Identität", fa:"گام ۳: MitID را فعال کنید — هویت دیجیتال شما", pl:"Krok 3: Aktywuj MitID — Twoja tożsamość cyfrowa", uk:"Крок 3: Активуйте MitID — вашу цифрову ідентичність", ur:"مرحلہ 3: MitID کو فعال کریں — آپ کی ڈیجیٹل شناخت" },
         content: { en:`<p>MitID is Denmark's national digital identity system. Think of it as the master key to your entire digital life in Denmark. Without it, you cannot access: borger.dk, SKAT (tax), e-Boks (your official mail), your bank online, Sundhed.dk, and dozens more services.</p>
 <p><strong>Get MitID at:</strong> <a href="https://www.mitid.dk" target="_blank" rel="noopener">mitid.dk</a> or in person at your bank or Borgerservice.</p>
 <p>The MitID app goes on your smartphone and generates 6-digit codes for login. Keep your phone safe — this IS your identity.</p>`,
@@ -872,7 +872,7 @@ de:`<p>MitID ist Daenemarks nationales System fuer die digitale Identitaet. Betr
       },
       {
         icon: "📬",
-        title: { en:"Step 4: Check e-Boks Every Week", fr:"Étape 4 : Vérifiez e-Boks chaque semaine", ar:"الخطوة 4: تحقق من e-Boks كل أسبوع", es:"Paso 4: Revisa e-Boks Cada Semana", da:"Trin 4: Tjek e-Boks hver uge" },
+        title: {en:"Step 4: Check e-Boks Every Week", fr:"Étape 4 : Vérifiez e-Boks chaque semaine", ar:"الخطوة 4: تحقق من e-Boks كل أسبوع", es:"Paso 4: Revisa e-Boks Cada Semana", da:"Trin 4: Tjek e-Boks hver uge", de:"Schritt 4: e-Boks jede Woche prüfen", fa:"گام ۴: هر هفته e-Boks را بررسی کنید", pl:"Krok 4: Sprawdzaj e-Boks co tydzień", uk:"Крок 4: Перевіряйте e-Boks щотижня", ur:"مرحلہ 4: ہر ہفتے e-Boks چیک کریں" },
         content: { en:`<p>e-Boks is Denmark's official digital mailbox. Every letter from SKAT, Udbetaling Danmark, your municipality, your bank, and the government goes here. Not to your physical mailbox. Not to your email. Here.</p>
 <p class="callout-warning"><strong>This is critical:</strong> People have missed tax deadlines, permit renewal notices, and benefit payment confirmations because they didn't check e-Boks. Set a weekly calendar reminder right now.</p>
 <p>Download the e-Boks app. Enable push notifications. Set email forwarding in settings so you get an email when something new arrives.</p>
@@ -913,7 +913,7 @@ de:`<p>e-Boks ist Daenemarks offizieller digitaler Briefkasten. Jeder Brief von 
       },
       {
         icon: "🏦",
-        title: { en:"Step 5: Open a Danish Bank Account", fr:"Étape 5 : Ouvrez un compte bancaire danois", ar:"الخطوة 5: افتح حساباً بنكياً دنماركياً", es:"Paso 5: Abre una Cuenta Bancaria Danesa", da:"Trin 5: Åbn en dansk bankkonto" },
+        title: {en:"Step 5: Open a Danish Bank Account", fr:"Étape 5 : Ouvrez un compte bancaire danois", ar:"الخطوة 5: افتح حساباً بنكياً دنماركياً", es:"Paso 5: Abre una Cuenta Bancaria Danesa", da:"Trin 5: Åbn en dansk bankkonto", de:"Schritt 5: Ein dänisches Bankkonto eröffnen", fa:"گام ۵: یک حساب بانکی دانمارکی باز کنید", pl:"Krok 5: Otwórz duńskie konto bankowe", uk:"Крок 5: Відкрийте данський банківський рахунок", ur:"مرحلہ 5: ڈینش بینک اکاؤنٹ کھولیں" },
         content: { en:`<p>You need a Danish bank account for your NemKonto (the account the government sends you money — tax refunds, benefits, etc.). Most banks require a CPR number.</p>
 <table class="info-table">
   <tr><th>Bank</th><th>English?</th><th>Req. CPR?</th><th>Best for</th></tr>
@@ -999,7 +999,7 @@ de:`<p>Sie benoetigen ein daenisches Bankkonto fuer Ihre NemKonto (das Konto, au
       },
       {
         icon: "📱",
-        title: { en:"Step 6: The Essential Danish Apps", fr:"Étape 6 : Les Applications Danoises Essentielles", ar:"الخطوة 6: التطبيقات الدنماركية الأساسية", es:"Paso 6: Las Apps Danesas Esenciales", da:"Trin 6: De essentielle danske apps" },
+        title: {en:"Step 6: The Essential Danish Apps", fr:"Étape 6 : Les Applications Danoises Essentielles", ar:"الخطوة 6: التطبيقات الدنماركية الأساسية", es:"Paso 6: Las Apps Danesas Esenciales", da:"Trin 6: De essentielle danske apps", de:"Schritt 6: Die wichtigsten dänischen Apps", fa:"گام ۶: اپلیکیشن‌های ضروری دانمارکی", pl:"Krok 6: Niezbędne duńskie aplikacje", uk:"Крок 6: Основні данські застосунки", ur:"مرحلہ 6: ضروری ڈینش ایپس" },
         content: { en:`<div class="app-grid">
   <div class="app-card"><div class="app-card-icon">💸</div><div class="app-card-name">MobilePay</div><div class="app-card-desc">Denmark's payment app. You NEED this for splitting bills, paying at stalls, etc.</div><div class="app-card-lang">🇬🇧 English</div></div>
   <div class="app-card"><div class="app-card-icon">📬</div><div class="app-card-name">e-Boks</div><div class="app-card-desc">Your official Danish mailbox. Check weekly.</div><div class="app-card-lang">🇬🇧 English</div></div>
@@ -1103,7 +1103,7 @@ de:`<div class="app-grid">
       },
       {
         icon: "🚨",
-        title: { en:"Emergency Numbers — Save These Now", fr:"Numéros d'urgence — Enregistrez-les maintenant", ar:"أرقام الطوارئ — احفظها الآن", es:"Números de Emergencia — Guárdalos Ahora", da:"Nødnumre — Gem dem nu" },
+        title: {en:"Emergency Numbers — Save These Now", fr:"Numéros d'urgence — Enregistrez-les maintenant", ar:"أرقام الطوارئ — احفظها الآن", es:"Números de Emergencia — Guárdalos Ahora", da:"Nødnumre — Gem dem nu", de:"Notrufnummern — Jetzt speichern", fa:"شماره‌های اضطراری — همین حالا ذخیره کنید", pl:"Numery alarmowe — zapisz je teraz", uk:"Екстрені номери — збережіть їх зараз", ur:"ہنگامی نمبرز — ابھی محفوظ کریں" },
         content: { en:`<table class="info-table">
   <tr><th>Number</th><th>For</th><th>Note</th></tr>
   <tr><td><strong>112</strong></td><td>Police, Fire, Ambulance</td><td>Life-threatening emergencies ONLY</td></tr>
@@ -1207,28 +1207,28 @@ de:`<table class="info-table">
       }
     ],
     checklist: [
-      { id:"ch1_address", text:{ en:"Register address at borger.dk or Borgerservice", da:"Registrér adresse på borger.dk" }, xp:40 },
-      { id:"ch1_cpr", text:{ en:"Book ICS appointment for CPR number", da:"Book ICS-tid til CPR-nummer" }, xp:40 },
-      { id:"ch1_mitid", text:{ en:"Activate MitID (digital identity)", da:"Aktivér MitID" }, xp:35 },
-      { id:"ch1_ebox", text:{ en:"Set up e-Boks with notifications", da:"Opsæt e-Boks med notifikationer" }, xp:30 },
-      { id:"ch1_bank", text:{ en:"Open Danish bank account", da:"Åbn dansk bankkonto" }, xp:30 },
-      { id:"ch1_nemkonto", text:{ en:"Designate account as NemKonto", da:"Registrér konto som NemKonto" }, xp:20 },
-      { id:"ch1_apps", text:{ en:"Download MobilePay + essential apps", da:"Download MobilePay + vigtige apps" }, xp:15 },
-      { id:"ch1_gp", text:{ en:"Register with a local GP (læge)", da:"Tilmeld dig en lokal læge" }, xp:25 },
-      { id:"ch1_tax", text:{ en:"Get tax card (skattekort) from SKAT", da:"Hent skattekort fra SKAT" }, xp:25 },
-      { id:"ch1_emergency", text:{ en:"Save emergency numbers (112, 1813)", da:"Gem nødnumre (112, 1813)" }, xp:10 },
+      { id:"ch1_address", text:{en:"Register address at borger.dk or Borgerservice", da:"Registrér adresse på borger.dk", ar:"سجّل عنوانك على borger.dk أو في Borgerservice", de:"Adresse auf borger.dk oder bei Borgerservice anmelden", es:"Registra tu dirección en borger.dk o en Borgerservice", fa:"آدرس را در borger.dk یا Borgerservice ثبت کنید", fr:"Enregistrez votre adresse sur borger.dk ou à Borgerservice", pl:"Zarejestruj adres na borger.dk lub w Borgerservice", uk:"Зареєструйте адресу на borger.dk або в Borgerservice", ur:"borger.dk یا Borgerservice پر پتہ رجسٹر کریں" }, xp:40 },
+      { id:"ch1_cpr", text:{en:"Book ICS appointment for CPR number", da:"Book ICS-tid til CPR-nummer", ar:"احجز موعداً مع ICS للحصول على رقم CPR", de:"ICS-Termin für CPR-Nummer buchen", es:"Reserva una cita con ICS para el número CPR", fa:"برای دریافت شماره‌ی CPR وقت ICS بگیرید", fr:"Prenez rendez-vous à l'ICS pour le numéro CPR", pl:"Umów wizytę w ICS w celu uzyskania numeru CPR", uk:"Забронюйте зустріч в ICS для отримання номера CPR", ur:"CPR نمبر کے لیے ICS اپوائنٹمنٹ بک کریں" }, xp:40 },
+      { id:"ch1_mitid", text:{en:"Activate MitID (digital identity)", da:"Aktivér MitID", ar:"فعّل MitID (الهوية الرقمية)", de:"MitID (digitale Identität) aktivieren", es:"Activa MitID (identidad digital)", fa:"MitID (هویت دیجیتال) را فعال کنید", fr:"Activez MitID (identité numérique)", pl:"Aktywuj MitID (tożsamość cyfrowa)", uk:"Активуйте MitID (цифрова ідентичність)", ur:"MitID (ڈیجیٹل شناخت) کو فعال کریں" }, xp:35 },
+      { id:"ch1_ebox", text:{en:"Set up e-Boks with notifications", da:"Opsæt e-Boks med notifikationer", ar:"اضبط e-Boks مع تفعيل الإشعارات", de:"e-Boks mit Benachrichtigungen einrichten", es:"Configura e-Boks con notificaciones", fa:"e-Boks را به همراه اعلان‌ها تنظیم کنید", fr:"Configurez e-Boks avec les notifications", pl:"Skonfiguruj e-Boks z powiadomieniami", uk:"Налаштуйте e-Boks зі сповіщеннями", ur:"e-Boks کو نوٹیفکیشنز کے ساتھ سیٹ اپ کریں" }, xp:30 },
+      { id:"ch1_bank", text:{en:"Open Danish bank account", da:"Åbn dansk bankkonto", ar:"افتح حساباً مصرفياً دنماركياً", de:"Dänisches Bankkonto eröffnen", es:"Abre una cuenta bancaria danesa", fa:"یک حساب بانکی دانمارکی باز کنید", fr:"Ouvrez un compte bancaire danois", pl:"Otwórz duńskie konto bankowe", uk:"Відкрийте данський банківський рахунок", ur:"ڈینش بینک اکاؤنٹ کھولیں" }, xp:30 },
+      { id:"ch1_nemkonto", text:{en:"Designate account as NemKonto", da:"Registrér konto som NemKonto", ar:"حدّد الحساب بوصفه NemKonto", de:"Konto als NemKonto festlegen", es:"Designa la cuenta como NemKonto", fa:"حساب را به‌عنوان NemKonto تعیین کنید", fr:"Désignez le compte comme NemKonto", pl:"Ustaw konto jako NemKonto", uk:"Призначте рахунок як NemKonto", ur:"اکاؤنٹ کو NemKonto کے طور پر منتخب کریں" }, xp:20 },
+      { id:"ch1_apps", text:{en:"Download MobilePay + essential apps", da:"Download MobilePay + vigtige apps", ar:"حمّل MobilePay والتطبيقات الأساسية", de:"MobilePay + wichtige Apps herunterladen", es:"Descarga MobilePay y las aplicaciones esenciales", fa:"MobilePay و اپلیکیشن‌های ضروری را دانلود کنید", fr:"Téléchargez MobilePay et les applis essentielles", pl:"Pobierz MobilePay i niezbędne aplikacje", uk:"Завантажте MobilePay та основні застосунки", ur:"MobilePay اور ضروری ایپس ڈاؤن لوڈ کریں" }, xp:15 },
+      { id:"ch1_gp", text:{en:"Register with a local GP (læge)", da:"Tilmeld dig en lokal læge", ar:"سجّل لدى طبيب عام محلي (læge)", de:"Bei einem lokalen Hausarzt (læge) anmelden", es:"Regístrate con un médico de cabecera local (læge)", fa:"نزد یک پزشک عمومی محلی (læge) ثبت‌نام کنید", fr:"Inscrivez-vous chez un médecin généraliste local (læge)", pl:"Zapisz się do lokalnego lekarza rodzinnego (læge)", uk:"Зареєструйтесь у місцевого сімейного лікаря (læge)", ur:"مقامی جی پی (læge) کے ساتھ رجسٹر ہوں" }, xp:25 },
+      { id:"ch1_tax", text:{en:"Get tax card (skattekort) from SKAT", da:"Hent skattekort fra SKAT", ar:"احصل على البطاقة الضريبية (skattekort) من SKAT", de:"Steuerkarte (skattekort) bei SKAT besorgen", es:"Obtén la tarjeta fiscal (skattekort) en SKAT", fa:"کارت مالیاتی (skattekort) را از SKAT دریافت کنید", fr:"Obtenez la carte fiscale (skattekort) auprès de SKAT", pl:"Uzyskaj kartę podatkową (skattekort) w SKAT", uk:"Отримайте податкову картку (skattekort) у SKAT", ur:"SKAT سے ٹیکس کارڈ (skattekort) حاصل کریں" }, xp:25 },
+      { id:"ch1_emergency", text:{en:"Save emergency numbers (112, 1813)", da:"Gem nødnumre (112, 1813)", ar:"احفظ أرقام الطوارئ (112، 1813)", de:"Notrufnummern speichern (112, 1813)", es:"Guarda los números de emergencia (112, 1813)", fa:"شماره‌های اضطراری را ذخیره کنید (۱۱۲، ۱۸۱۳)", fr:"Enregistrez les numéros d'urgence (112, 1813)", pl:"Zapisz numery alarmowe (112, 1813)", uk:"Збережіть екстрені номери (112, 1813)", ur:"ہنگامی نمبرز محفوظ کریں (112، 1813)" }, xp:10 },
     ]
   },
   {
     id: 2, icon: "📋",
     color: "#E8A020",
-    title: { en:"Papers & Legal Identity", fr:"Papiers et Identité Légale", ar:"الأوراق والهوية القانونية", es:"Papeles e Identidad Legal", da:"Papirer og Juridisk Identitet", uk:"Документи та Юридична Ідентичність", pl:"Dokumenty i Tożsamość Prawna", ur:"کاغذات اور قانونی شناخت", fa:"مدارک و هویت قانونی" },
-    subtitle: { en:"Making It Official", fr:"Officialiser sa Situation", ar:"جعل الأمور رسمية", es:"Hacerlo Oficial", da:"Gør det officielt", uk:"Зробити Все Офіційно", pl:"Wszystko po Kolei", ur:"سب کچھ باقاعدہ بنانا", fa:"رسمی کردن همه چیز" },
+    title: {en:"Papers & Legal Identity", fr:"Papiers et Identité Légale", ar:"الأوراق والهوية القانونية", es:"Papeles e Identidad Legal", da:"Papirer og Juridisk Identitet", uk:"Документи та Юридична Ідентичність", pl:"Dokumenty i Tożsamość Prawna", ur:"کاغذات اور قانونی شناخت", fa:"مدارک و هویت قانونی", de:"Papiere & rechtliche Identität" },
+    subtitle: {en:"Making It Official", fr:"Officialiser sa Situation", ar:"جعل الأمور رسمية", es:"Hacerlo Oficial", da:"Gør det officielt", uk:"Зробити Все Офіційно", pl:"Wszystko po Kolei", ur:"سب کچھ باقاعدہ بنانا", fa:"رسمی کردن همه چیز", de:"Offiziell werden" },
     intro: { en:"Denmark's bureaucracy is thorough. Understanding the system turns weeks of confusion into days of clarity.", fr:"La bureaucratie danoise est minutieuse. Comprendre le système transforme des semaines de confusion en jours de clarté.", ar:"البيروقراطية الدنماركية شاملة. فهم النظام يحول أسابيع من الارتباك إلى أيام من الوضوح.", es:"La burocracia danesa es minuciosa. Entender el sistema convierte semanas de confusión en días de claridad.", da:"Danmarks bureaukrati er grundigt. At forstå systemet forvandler uger af forvirring til dage med klarhed.", uk:"Данська бюрократія ретельна. Розуміння системи перетворює тижні плутанини на дні чіткості.", pl:"Duńska biurokracja jest skrupulatna. Zrozumienie systemu zamienia tygodnie chaosu w dni pewności.", ur:"ڈنمارک کی بیوروکریسی جامع ہے۔ نظام کو سمجھنا الجھن کے ہفتوں کو وضاحت کے دنوں میں بدل دیتا ہے۔", fa:"بوروکراسی دانمارک جامع است. درک سیستم، هفته‌های سردرگمی را به روزهای روشنی تبدیل می‌کند." },
     readTime: "18 min",
     sections: [
       {
-        icon:"🛂", title:{ en:"Residence Permit Types", da:"Typer af opholdstilladelser" },
+        icon:"🛂", title:{en:"Residence Permit Types", da:"Typer af opholdstilladelser", ar:"أنواع تصاريح الإقامة", de:"Arten von Aufenthaltserlaubnissen", es:"Tipos de permiso de residencia", fa:"انواع اجازه‌ی اقامت", fr:"Types de permis de séjour", pl:"Rodzaje zezwoleń na pobyt", uk:"Типи дозволів на проживання", ur:"رہائشی اجازت نامے کی اقسام" },
         content:{ en:`<p>Your residence permit determines your rights in Denmark. Here's a clear overview:</p>
 <table class="info-table">
   <tr><th>Permit Type</th><th>For</th><th>Work rights</th><th>Duration</th></tr>
@@ -1322,7 +1322,7 @@ de:`<p>Ihre Aufenthaltserlaubnis bestimmt Ihre Rechte in Daenemark. Hier eine kl
           fa:`<p>نوع مجوز اقامت شما حقوق شما را در دانمارک تعیین می‌کند. در اینجا یک مرور واضح آمده است:</p>` }
       },
       {
-        icon:"⏱️", title:{ en:"Path to Permanent Residency", da:"Vejen til permanent ophold" },
+        icon:"⏱️", title:{en:"Path to Permanent Residency", da:"Vejen til permanent ophold", ar:"الطريق إلى الإقامة الدائمة", de:"Der Weg zur unbefristeten Aufenthaltserlaubnis", es:"Camino a la residencia permanente", fa:"مسیر اقامت دائم", fr:"Le chemin vers la résidence permanente", pl:"Droga do stałego pobytu", uk:"Шлях до постійного проживання", ur:"مستقل رہائش کا راستہ" },
         content:{ en:`<p>The general rule: <strong>8 years of continuous legal residence</strong> in Denmark. However, there are fast-track options:</p>
 <ul>
   <li><strong>4 years</strong> if you pass a special active contribution assessment (points-based)</li>
@@ -1398,7 +1398,7 @@ de:`<p>Die allgemeine Regelung: <strong>8 Jahre ununterbrochenen legalen Aufenth
           fa:`<p>قانون کلی: <strong>۸ سال اقامت قانونی مستمر</strong> در دانمارک. اما مسیرهای سریع‌تر هم وجود دارد:</p>` }
       },
       {
-        icon:"🏛️", title:{ en:"Path to Danish Citizenship", da:"Vejen til dansk statsborgerskab" },
+        icon:"🏛️", title:{en:"Path to Danish Citizenship", da:"Vejen til dansk statsborgerskab", ar:"الطريق إلى الجنسية الدنماركية", de:"Der Weg zur dänischen Staatsbürgerschaft", es:"Camino a la ciudadanía danesa", fa:"مسیر تابعیت دانمارک", fr:"Le chemin vers la citoyenneté danoise", pl:"Droga do duńskiego obywatelstwa", uk:"Шлях до данського громадянства", ur:"ڈینش شہریت کا راستہ" },
         content:{ en:`<p>One of the more demanding paths in Europe, but worth it:</p>
 <ul>
   <li>Must have lived in Denmark for <strong>9 years</strong> (or less with accelerators)</li>
@@ -1511,7 +1511,7 @@ de:`<p>Einer der anspruchsvollsten Wege in Europa, aber die Muehe wert:</p>
           fa:`<p>یکی از مسیرهای پرتقاضاتر اروپا، اما ارزشمند:</p>` }
       },
       {
-        icon:"💶", title:{ en:"Danish Tax — How It Actually Works", da:"Dansk skat — sådan fungerer det" },
+        icon:"💶", title:{en:"Danish Tax — How It Actually Works", da:"Dansk skat — sådan fungerer det", ar:"الضرائب الدنماركية — كيف تعمل فعلياً", de:"Dänische Steuern — wie sie wirklich funktionieren", es:"Los impuestos en Dinamarca — cómo funcionan en realidad", fa:"مالیات دانمارک — واقعاً چگونه کار می‌کند", fr:"Les impôts danois — comment ça marche vraiment", pl:"Podatki w Danii — jak to naprawdę działa", uk:"Данські податки — як це насправді працює", ur:"ڈینش ٹیکس — یہ اصل میں کیسے کام کرتا ہے" },
         content:{ en:`<p>Yes, Danish taxes are high. Here's the honest picture of what you actually pay:</p>
 <ul>
   <li><strong>AM-bidrag (Labour Market Contribution):</strong> 8% off the top of your gross salary. No deductions against this.</li>
@@ -1605,7 +1605,7 @@ de:`<p>Ja, die daenischen Steuern sind hoch. Hier ist das ehrliche Bild dessen, 
           fa:`<p>بله، مالیات دانمارک بالا است. اینجا تصویری صادقانه از آنچه واقعاً می‌پردازید آمده است:</p>` }
       },
       {
-        icon:"🚗", title:{ en:"Driving Licence Conversion", da:"Konvertering af kørekort" },
+        icon:"🚗", title:{en:"Driving Licence Conversion", da:"Konvertering af kørekort", ar:"تحويل رخصة القيادة", de:"Umtausch des Führerscheins", es:"Convalidación del permiso de conducir", fa:"تبدیل گواهینامه‌ی رانندگی", fr:"Conversion du permis de conduire", pl:"Wymiana prawa jazdy", uk:"Обмін водійських прав", ur:"ڈرائیونگ لائسنس کی تبدیلی" },
         content:{ en:`<p>If you have an EU/EEA driving licence, you can use it indefinitely in Denmark. No conversion needed.</p>
 <p>For non-EU licences:</p>
 <ul>
@@ -1673,23 +1673,23 @@ de:`<p>Wenn Sie einen EU/EWR-Fuehrerschein haben, koennen Sie ihn unbegrenzt in 
       }
     ],
     checklist: [
-      { id:"ch2_permit", text:{ en:"Understand which residence permit applies to you", da:"Forstå hvilken opholdstilladelse der gælder dig" }, xp:20 },
-      { id:"ch2_tax", text:{ en:"Get your skattekort (tax card) from SKAT", da:"Hent skattekort fra SKAT" }, xp:30 },
-      { id:"ch2_skat", text:{ en:"Set up your SKAT online profile", da:"Opret din SKAT online profil" }, xp:20 },
-      { id:"ch2_drive", text:{ en:"Check driving licence conversion requirements", da:"Tjek krav til konvertering af kørekort" }, xp:15 },
-      { id:"ch2_perm", text:{ en:"Note your permanent residency eligibility date", da:"Notér din dato for permanent ophold" }, xp:20 },
+      { id:"ch2_permit", text:{en:"Understand which residence permit applies to you", da:"Forstå hvilken opholdstilladelse der gælder dig", ar:"افهم نوع تصريح الإقامة الذي ينطبق عليك", de:"Verstehen Sie, welche Aufenthaltserlaubnis für Sie gilt", es:"Entiende qué permiso de residencia te corresponde", fa:"بفهمید کدام اجازه‌ی اقامت برای شما کاربرد دارد", fr:"Comprenez quel permis de séjour s'applique à vous", pl:"Zrozum, które zezwolenie na pobyt dotyczy Ciebie", uk:"Зрозумійте, який дозвіл на проживання вам підходить", ur:"سمجھیں کہ آپ پر کون سا رہائشی اجازت نامہ لاگو ہوتا ہے" }, xp:20 },
+      { id:"ch2_tax", text:{en:"Get your skattekort (tax card) from SKAT", da:"Hent skattekort fra SKAT", ar:"احصل على skattekort (البطاقة الضريبية) من SKAT", de:"Holen Sie Ihre skattekort (Steuerkarte) bei SKAT", es:"Obtén tu skattekort (tarjeta fiscal) en SKAT", fa:"skattekort (کارت مالیاتی) خود را از SKAT دریافت کنید", fr:"Obtenez votre skattekort (carte fiscale) auprès de SKAT", pl:"Uzyskaj skattekort (kartę podatkową) w SKAT", uk:"Отримайте skattekort (податкову картку) у SKAT", ur:"SKAT سے اپنا skattekort (ٹیکس کارڈ) حاصل کریں" }, xp:30 },
+      { id:"ch2_skat", text:{en:"Set up your SKAT online profile", da:"Opret din SKAT online profil", ar:"أنشئ ملفك الشخصي على موقع SKAT", de:"Richten Sie Ihr SKAT-Online-Profil ein", es:"Configura tu perfil online en SKAT", fa:"پروفایل آنلاین SKAT خود را تنظیم کنید", fr:"Créez votre profil en ligne SKAT", pl:"Skonfiguruj swój profil online w SKAT", uk:"Налаштуйте свій онлайн-профіль SKAT", ur:"اپنا SKAT آن لائن پروفائل سیٹ اپ کریں" }, xp:20 },
+      { id:"ch2_drive", text:{en:"Check driving licence conversion requirements", da:"Tjek krav til konvertering af kørekort", ar:"تحقّق من متطلبات تحويل رخصة القيادة", de:"Anforderungen für den Führerscheinumtausch prüfen", es:"Comprueba los requisitos para convalidar el carné de conducir", fa:"شرایط تبدیل گواهینامه‌ی رانندگی را بررسی کنید", fr:"Vérifiez les conditions de conversion du permis de conduire", pl:"Sprawdź wymagania dotyczące wymiany prawa jazdy", uk:"Перевірте вимоги до обміну водійських прав", ur:"ڈرائیونگ لائسنس کی تبدیلی کے تقاضے چیک کریں" }, xp:15 },
+      { id:"ch2_perm", text:{en:"Note your permanent residency eligibility date", da:"Notér din dato for permanent ophold", ar:"دوّن تاريخ أهليتك للحصول على الإقامة الدائمة", de:"Notieren Sie das Datum Ihrer Berechtigung für die unbefristete Aufenthaltserlaubnis", es:"Apunta la fecha en que serás elegible para la residencia permanente", fa:"تاریخ واجد شرایط بودن خود برای اقامت دائم را یادداشت کنید", fr:"Notez la date à laquelle vous serez éligible à la résidence permanente", pl:"Zanotuj datę, od której będziesz uprawniony do stałego pobytu", uk:"Запишіть дату, коли ви матимете право на постійне проживання", ur:"اپنی مستقل رہائش کی اہلیت کی تاریخ نوٹ کریں" }, xp:20 },
     ]
   },
   {
     id: 3, icon: "🏠",
     color: "#6A9E6A",
-    title: { en:"Housing", fr:"Logement", ar:"السكن", es:"Vivienda", da:"Bolig", uk:"Житло", pl:"Mieszkanie", ur:"رہائش", fa:"مسکن" },
-    subtitle: { en:"Where You'll Breathe", fr:"Là Où Vous Respirerez", ar:"حيث ستتنفس", es:"Donde Respirarás", da:"Hvor du trækker vejret", uk:"Ваш Домашній Простір", pl:"Twoja Przestrzeń Domowa", ur:"آپ کا گھر", fa:"خانه شما" },
+    title: {en:"Housing", fr:"Logement", ar:"السكن", es:"Vivienda", da:"Bolig", uk:"Житло", pl:"Mieszkanie", ur:"رہائش", fa:"مسکن", de:"Wohnen" },
+    subtitle: {en:"Where You'll Breathe", fr:"Là Où Vous Respirerez", ar:"حيث ستتنفس", es:"Donde Respirarás", da:"Hvor du trækker vejret", uk:"Ваш Домашній Простір", pl:"Twoja Przestrzeń Domowa", ur:"آپ کا گھر", fa:"خانه شما", de:"Wo Sie aufatmen werden" },
     intro: { en:"The Danish housing market is brutally competitive — especially Copenhagen. But with the right strategy, you'll find your home.", fr:"Le marché immobilier danois est brutalement compétitif. Avec la bonne stratégie, vous trouverez votre maison.", ar:"سوق الإسكان الدنماركي تنافسي بشكل قاسٍ. لكن بالاستراتيجية الصحيحة، ستجد منزلك.", es:"El mercado inmobiliario danés es brutalmente competitivo. Con la estrategia correcta, encontrarás tu hogar.", da:"Det danske boligmarked er brutalt konkurrencepræget. Med den rette strategi finder du dit hjem.", uk:"Ринок нерухомості Данії жорстко конкурентний — особливо в Копенгагені. Але з правильною стратегією ви знайдете свій дім.", pl:"Duński rynek nieruchomości jest brutalnie konkurencyjny — szczególnie w Kopenhadze. Ale z właściwą strategią znajdziesz swój dom.", ur:"ڈنمارک کی رہائشی مارکیٹ انتہائی مسابقتی ہے — خاص طور پر کوپن ہیگن میں۔ لیکن صحیح حکمت عملی سے آپ اپنا گھر ضرور پائیں گے۔" },
     readTime: "15 min",
     sections: [
       {
-        icon:"🚨", title:{ en:"Read this first — Avoiding rental scams", da:"Læs dette først — Undgå svindel" },
+        icon:"🚨", title:{en:"Read this first — Avoiding rental scams", da:"Læs dette først — Undgå svindel", ar:"اقرأ هذا أولاً — تجنّب عمليات الاحتيال في الإيجار", de:"Erst das lesen — Mietbetrug vermeiden", es:"Lee esto primero — Cómo evitar las estafas de alquiler", fa:"اول این را بخوانید — پرهیز از کلاهبرداری‌های اجاره", fr:"À lire en premier — Éviter les arnaques à la location", pl:"Przeczytaj to najpierw — Jak uniknąć oszustw przy wynajmie", uk:"Спочатку прочитайте це — як уникнути шахрайства з орендою", ur:"پہلے یہ پڑھیں — کرایہ کے فراڈ سے بچنا" },
         content:{ en:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ Housing scams are the #1 financial threat to newcomers in Denmark.</strong> Fake listings on Facebook Marketplace, fake landlords claiming to be abroad, and demands for deposit "to hold the apartment" before viewing have cost newcomers <strong>10,000 to 50,000 DKK</strong> each.</p>
 
 <p><strong>Hard rules — never break them:</strong></p>
@@ -1799,7 +1799,7 @@ da:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-lef
           fa:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ کلاهبرداری مسکن بزرگ‌ترین خطر مالی برای تازه‌واردان به دانمارک است.</strong> آگهی‌های جعلی در Facebook Marketplace، موجران دروغین که ادعا می‌کنند در خارج هستند، و درخواست ودیعه برای "رزرو آپارتمان" قبل از بازدید، تازه‌واردان را تا <strong>۱۰٬۰۰۰ تا ۵۰٬۰۰۰ DKK</strong> متضرر کرده است.</p>` }
       },
       {
-        icon:"🏘️", title:{ en:"Types of Housing in Denmark", da:"Boligtyper i Danmark" },
+        icon:"🏘️", title:{en:"Types of Housing in Denmark", da:"Boligtyper i Danmark", ar:"أنواع السكن في الدنمارك", de:"Wohnformen in Dänemark", es:"Tipos de vivienda en Dinamarca", fa:"انواع مسکن در دانمارک", fr:"Les types de logement au Danemark", pl:"Rodzaje mieszkań w Danii", uk:"Типи житла в Данії", ur:"ڈنمارک میں رہائش کی اقسام" },
         content:{ en:`<p>Denmark has four main types of housing tenure:</p>
 <table class="info-table">
   <tr><th>Type</th><th>What is it</th><th>For newcomers</th></tr>
@@ -1884,7 +1884,7 @@ de:`<p>Daenemark hat vier Haupttypen von Wohnverhaeltnissen:</p>
           fa:`<p>چهار نوع اصلی مسکن در دانمارک وجود دارد:</p>` }
       },
       {
-        icon:"✍️", title:{ en:"Writing a Winning Danish Rental Application", da:"Skriv en vindende lejeansøgning" },
+        icon:"✍️", title:{en:"Writing a Winning Danish Rental Application", da:"Skriv en vindende lejeansøgning", ar:"كتابة طلب إيجار دنماركي ناجح", de:"Eine überzeugende dänische Mietbewerbung schreiben", es:"Cómo escribir una solicitud de alquiler ganadora en Dinamarca", fa:"نگارش یک درخواست اجاره‌ی موفق به سبک دانمارکی", fr:"Rédiger une candidature de location danoise gagnante", pl:"Jak napisać skuteczne podanie o wynajem w Danii", uk:"Як написати виграшну заявку на оренду в Данії", ur:"ایک کامیاب ڈینش کرایہ داری درخواست لکھنا" },
         content:{ en:`<p>Danish landlords receive dozens of applications per listing. Here's what makes yours stand out:</p>
 <ol class="step-list">
   <li><span class="step-num">1</span><strong>Write in Danish or offer Danish version.</strong> Even basic Danish shows commitment.</li>
@@ -1960,7 +1960,7 @@ de:`<p>Daenische Vermieter erhalten Dutzende von Bewerbungen pro Inserat. So sti
           fa:`<p>موجران دانمارکی برای هر آگهی ده‌ها درخواست دریافت می‌کنند. اینجاست که درخواست شما متمایز می‌شود:</p>` }
       },
       {
-        icon:"⚖️", title:{ en:"Your Legal Rights as a Tenant", da:"Dine juridiske rettigheder som lejer" },
+        icon:"⚖️", title:{en:"Your Legal Rights as a Tenant", da:"Dine juridiske rettigheder som lejer", ar:"حقوقك القانونية كمستأجر", de:"Ihre Rechte als Mieter", es:"Tus derechos legales como inquilino", fa:"حقوق قانونی شما به‌عنوان مستأجر", fr:"Vos droits légaux en tant que locataire", pl:"Twoje prawa jako najemcy", uk:"Ваші юридичні права як орендаря", ur:"بطور کرایہ دار آپ کے قانونی حقوق" },
         content:{ en:`<p>Danish tenant protections are strong. Know these:</p>
 <ul>
   <li><strong>Deposit cap:</strong> Maximum 3 months' rent. Prepaid rent: maximum 3 months. Total upfront: 6 months max.</li>
@@ -2054,7 +2054,7 @@ de:`<p>Der Mieterschutz in Daenemark ist stark. Kennen Sie diese Regeln:</p>
           fa:`<p>در دانمارک حمایت از مستأجران قوی است. این حقوق را بشناسید:</p>` }
       },
       {
-        icon:"🗺️", title:{ en:"Copenhagen Neighbourhoods — Honest Guide", da:"Københavns kvarterer — ærlig guide" },
+        icon:"🗺️", title:{en:"Copenhagen Neighbourhoods — Honest Guide", da:"Københavns kvarterer — ærlig guide", ar:"أحياء كوبنهاغن — دليل صريح", de:"Kopenhagens Stadtteile — ein ehrlicher Guide", es:"Los barrios de Copenhague — una guía honesta", fa:"محله‌های کپنهاگ — راهنمای صادقانه", fr:"Les quartiers de Copenhague — un guide honnête", pl:"Dzielnice Kopenhagi — szczery przewodnik", uk:"Райони Копенгагена — чесний путівник", ur:"کوپن ہیگن کے محلے — ایک ایماندار رہنما" },
         content:{ en:`<table class="info-table">
   <tr><th>Area</th><th>Vibe</th><th>Avg 1-bed rent</th><th>Best for</th></tr>
   <tr><td><strong>Nørrebro</strong></td><td>Young, diverse, vibrant, left-leaning</td><td>~8,500 DKK</td><td>Young professionals, internationals</td></tr>
@@ -2148,11 +2148,11 @@ de:`<table class="info-table">
       }
     ],
     checklist: [
-      { id:"ch3_search", text:{ en:"Set up search alerts on BoligPortal and Lejebolig", da:"Opret søgealarmer på BoligPortal og Lejebolig" }, xp:20 },
-      { id:"ch3_letter", text:{ en:"Write your Danish rental application letter", da:"Skriv din danske lejeansøgning" }, xp:25 },
-      { id:"ch3_rights", text:{ en:"Read and understand your lease before signing", da:"Læs og forstå din lejekontrakt inden underskrift" }, xp:30 },
-      { id:"ch3_social", text:{ en:"Join social housing waitlist (if planning long-term)", da:"Tilmeld dig venteliste for almen bolig" }, xp:15 },
-      { id:"ch3_insurance", text:{ en:"Get indboforsikring (home contents insurance)", da:"Tegn indboforsikring" }, xp:20 },
+      { id:"ch3_search", text:{en:"Set up search alerts on BoligPortal and Lejebolig", da:"Opret søgealarmer på BoligPortal og Lejebolig", ar:"اضبط تنبيهات البحث على BoligPortal و Lejebolig", de:"Suchbenachrichtigungen auf BoligPortal und Lejebolig einrichten", es:"Configura alertas de búsqueda en BoligPortal y Lejebolig", fa:"هشدارهای جستجو را در BoligPortal و Lejebolig تنظیم کنید", fr:"Configurez des alertes de recherche sur BoligPortal et Lejebolig", pl:"Ustaw alerty wyszukiwania na BoligPortal i Lejebolig", uk:"Налаштуйте сповіщення про пошук на BoligPortal та Lejebolig", ur:"BoligPortal اور Lejebolig پر سرچ الرٹس سیٹ اپ کریں" }, xp:20 },
+      { id:"ch3_letter", text:{en:"Write your Danish rental application letter", da:"Skriv din danske lejeansøgning", ar:"اكتب رسالة طلب الإيجار الدنماركية", de:"Schreiben Sie Ihr dänisches Bewerbungsschreiben für die Mietwohnung", es:"Escribe tu carta de solicitud de alquiler a la danesa", fa:"نامه‌ی درخواست اجاره به سبک دانمارکی را بنویسید", fr:"Rédigez votre lettre de candidature de location à la danoise", pl:"Napisz duński list motywacyjny do wynajmu", uk:"Напишіть данський лист-заявку на оренду", ur:"اپنا ڈینش کرایہ داری درخواست خط لکھیں" }, xp:25 },
+      { id:"ch3_rights", text:{en:"Read and understand your lease before signing", da:"Læs og forstå din lejekontrakt inden underskrift", ar:"اقرأ عقد الإيجار وافهمه قبل التوقيع", de:"Mietvertrag vor der Unterschrift lesen und verstehen", es:"Lee y entiende tu contrato de alquiler antes de firmar", fa:"پیش از امضا، قرارداد اجاره را بخوانید و درک کنید", fr:"Lisez et comprenez votre bail avant de signer", pl:"Przeczytaj i zrozum umowę najmu przed podpisaniem", uk:"Прочитайте та зрозумійте договір оренди перед підписанням", ur:"دستخط سے پہلے اپنا کرایہ داری معاہدہ پڑھیں اور سمجھیں" }, xp:30 },
+      { id:"ch3_social", text:{en:"Join social housing waitlist (if planning long-term)", da:"Tilmeld dig venteliste for almen bolig", ar:"انضمّ إلى قائمة الانتظار للسكن الاجتماعي (إذا كنت تخطط للإقامة الطويلة)", de:"Auf die Warteliste für Sozialwohnungen setzen lassen (bei langfristiger Planung)", es:"Apúntate a la lista de espera de vivienda social (si planeas quedarte a largo plazo)", fa:"اگر برنامه‌ی بلندمدت دارید، در فهرست انتظار مسکن اجتماعی ثبت‌نام کنید", fr:"Inscrivez-vous sur la liste d'attente du logement social (si vous prévoyez de rester longtemps)", pl:"Zapisz się na listę oczekujących mieszkań socjalnych (jeśli planujesz zostać dłużej)", uk:"Стати в чергу на соціальне житло (якщо плануєте залишитись надовго)", ur:"سوشل ہاؤسنگ ویٹ لسٹ میں شامل ہوں (اگر طویل المدتی منصوبہ بندی ہے)" }, xp:15 },
+      { id:"ch3_insurance", text:{en:"Get indboforsikring (home contents insurance)", da:"Tegn indboforsikring", ar:"احصل على indboforsikring (تأمين على محتويات المنزل)", de:"indboforsikring (Hausratversicherung) abschließen", es:"Contrata un indboforsikring (seguro de contenido del hogar)", fa:"indboforsikring (بیمه‌ی اثاثیه‌ی منزل) تهیه کنید", fr:"Souscrivez à l'indboforsikring (assurance habitation)", pl:"Wykup indboforsikring (ubezpieczenie wyposażenia mieszkania)", uk:"Оформте indboforsikring (страхування домашнього майна)", ur:"indboforsikring (گھریلو سامان کا انشورنس) حاصل کریں" }, xp:20 },
     ]
   },
   {
@@ -2165,7 +2165,7 @@ de:`<table class="info-table">
     sections: [
       {
         icon: "🏦",
-        title: { en:"NemKonto — Your Mandatory Government Account", da:"NemKonto — din obligatoriske offentlige konto" },
+        title: {en:"NemKonto — Your Mandatory Government Account", da:"NemKonto — din obligatoriske offentlige konto", ar:"NemKonto — حسابك الإلزامي مع الحكومة", de:"NemKonto — Ihr verpflichtendes Behördenkonto", es:"NemKonto — Tu cuenta obligatoria con el gobierno", fa:"NemKonto — حساب اجباری شما برای دولت", fr:"NemKonto — Votre compte obligatoire avec l'administration", pl:"NemKonto — Twoje obowiązkowe konto rządowe", uk:"NemKonto — ваш обов'язковий державний рахунок", ur:"NemKonto — آپ کا لازمی سرکاری اکاؤنٹ" },
         content: { en:`<p><strong>NemKonto</strong> (literally "Easy Account") is not a separate bank account — it is the designation you give to an existing account so the Danish government knows where to send you money. Tax refunds, child benefits, pension payments, unemployment benefits — all go to your NemKonto.</p>
 <p class="callout-warning"><strong>This is mandatory.</strong> Every person with a CPR number must have a NemKonto. Without it, the government literally cannot pay you anything, and tax refunds can be delayed for months.</p>
 <p><strong>How to register your NemKonto:</strong></p>
@@ -2260,7 +2260,7 @@ de:`<p><strong>NemKonto</strong> (woertlich "Einfach-Konto") ist kein separates 
       },
       {
         icon: "📊",
-        title: { en:"Your Tax Card (Skattekort) — Get This Before Your First Paycheck", da:"Dit skattekort — hent det inden din første løn" },
+        title: {en:"Your Tax Card (Skattekort) — Get This Before Your First Paycheck", da:"Dit skattekort — hent det inden din første løn", ar:"بطاقتك الضريبية (Skattekort) — احصل عليها قبل أول راتب", de:"Ihre Steuerkarte (Skattekort) — vor dem ersten Gehalt besorgen", es:"Tu tarjeta fiscal (Skattekort) — consíguela antes de tu primera nómina", fa:"کارت مالیاتی (Skattekort) — این را پیش از اولین حقوق دریافت کنید", fr:"Votre carte fiscale (Skattekort) — à obtenir avant votre premier salaire", pl:"Twoja karta podatkowa (Skattekort) — załatw ją przed pierwszą wypłatą", uk:"Ваша податкова картка (Skattekort) — отримайте її до першої зарплати", ur:"آپ کا ٹیکس کارڈ (Skattekort) — یہ اپنی پہلی تنخواہ سے پہلے حاصل کریں" },
         content: { en:`<p>Your <strong>skattekort</strong> (tax card) tells your employer exactly how much tax to deduct from your salary. Without it, your employer is legally required to deduct <strong>55% (trækprocent på 55%)</strong> — the maximum emergency rate. This is not a penalty; it is the Danish system's default when no card exists. But you will lose most of your first paycheck if you haven't sorted this.</p>
 <p><strong>Get your skattekort immediately after getting your CPR number:</strong></p>
 <ol class="step-list">
@@ -2401,7 +2401,7 @@ de:`<p>Ihr <strong>skattekort</strong> (Steuerkarte) teilt Ihrem Arbeitgeber gen
       },
       {
         icon: "📋",
-        title: { en:"The Annual Tax Statement (Årsopgørelse)", da:"Årsopgørelsen" },
+        title: {en:"The Annual Tax Statement (Årsopgørelse)", da:"Årsopgørelsen", ar:"البيان الضريبي السنوي (Årsopgørelse)", de:"Die jährliche Steuererklärung (Årsopgørelse)", es:"La declaración fiscal anual (Årsopgørelse)", fa:"اظهارنامه‌ی مالیاتی سالانه (Årsopgørelse)", fr:"La déclaration fiscale annuelle (Årsopgørelse)", pl:"Roczne zeznanie podatkowe (Årsopgørelse)", uk:"Річна податкова декларація (Årsopgørelse)", ur:"سالانہ ٹیکس اسٹیٹمنٹ (Årsopgørelse)" },
         content: { en:`<p>Every year in <strong>March</strong>, SKAT publishes your <strong>årsopgørelse</strong> — the final tax statement for the previous year. It compares what you actually earned and paid against your estimate, and calculates whether you owe money or get a refund.</p>
 <p><strong>The good news:</strong> Most people get a refund. Danes receive an average refund of around DKK 5,000–8,000 per year.</p>
 <p><strong>Common reasons for a refund:</strong></p>
@@ -2558,7 +2558,7 @@ de:`<p>Jedes Jahr im <strong>Maerz</strong> veroef fentlicht SKAT Ihre <strong>a
       },
       {
         icon: "📱",
-        title: { en:"MobilePay — Denmark's Cashless Revolution", da:"MobilePay — Danmarks kontantløse revolution" },
+        title: {en:"MobilePay — Denmark's Cashless Revolution", da:"MobilePay — Danmarks kontantløse revolution", ar:"MobilePay — ثورة الدنمارك في عالم الدفع بدون نقد", de:"MobilePay — Dänemarks bargeldlose Revolution", es:"MobilePay — La revolución sin efectivo en Dinamarca", fa:"MobilePay — انقلاب بدون پول نقد دانمارک", fr:"MobilePay — La révolution sans espèces du Danemark", pl:"MobilePay — duńska rewolucja bezgotówkowa", uk:"MobilePay — данська безготівкова революція", ur:"MobilePay — ڈنمارک کا کیش لیس انقلاب" },
         content: { en:`<p><strong>MobilePay</strong> is used by approximately 4.4 million Danes — that's nearly 75% of the entire population. If you don't have it, you cannot split bills at restaurants, pay at market stalls, pay for parking in many cities, or send money to Danish friends. It is not optional.</p>
 <p><strong>How to get it:</strong></p>
 <ol class="step-list">
@@ -2695,7 +2695,7 @@ de:`<p><strong>MobilePay</strong> wird von rund 4,4 Millionen Dänen genutzt —
       },
       {
         icon: "🏛️",
-        title: { en:"Danish Pension — Three Pillars You Need to Understand", da:"Dansk pension — tre søjler du skal forstå" },
+        title: {en:"Danish Pension — Three Pillars You Need to Understand", da:"Dansk pension — tre søjler du skal forstå", ar:"التقاعد الدنماركي — ثلاث ركائز عليك فهمها", de:"Dänische Rente — die drei Säulen, die Sie kennen müssen", es:"La pensión danesa — los tres pilares que necesitas entender", fa:"بازنشستگی در دانمارک — سه ستونی که باید بشناسید", fr:"La retraite danoise — les trois piliers à connaître", pl:"Duńska emerytura — trzy filary, które musisz zrozumieć", uk:"Данська пенсія — три стовпи, які варто розуміти", ur:"ڈینش پنشن — تین ستون جنہیں سمجھنا ضروری ہے" },
         content: { en:`<p>Danish pension is built on three distinct systems. Understanding all three affects your retirement significantly.</p>
 <table class="info-table">
   <tr><th>Pillar</th><th>What is it</th><th>Who pays</th><th>Amount (2025)</th></tr>
@@ -2778,7 +2778,7 @@ de:`<p>Das dänische Rentensystem basiert auf drei verschiedenen Säulen. Das Ve
       },
       {
         icon: "🏦",
-        title: { en:"Choosing a Danish Bank", da:"Valg af dansk bank" },
+        title: {en:"Choosing a Danish Bank", da:"Valg af dansk bank", ar:"اختيار مصرف دنماركي", de:"Eine dänische Bank auswählen", es:"Cómo elegir un banco danés", fa:"انتخاب یک بانک دانمارکی", fr:"Choisir une banque danoise", pl:"Wybór duńskiego banku", uk:"Як обрати данський банк", ur:"ڈینش بینک کا انتخاب" },
         content: { en:`<p>Most Danish banks require a CPR number to open a full account. Here's the honest comparison:</p>
 <table class="info-table">
   <tr><th>Bank</th><th>English support</th><th>Monthly fee</th><th>Best for</th></tr>
@@ -2872,12 +2872,12 @@ de:`<p>Die meisten dänischen Banken verlangen eine CPR-Nummer, um ein vollstän
       }
     ],
     checklist: [
-      { id:"ch4_nemkonto", text:{ en:"Register your NemKonto at nemkonto.dk", da:"Registrér din NemKonto på nemkonto.dk" }, xp:40 },
-      { id:"ch4_skattekort", text:{ en:"Get your skattekort from skat.dk (before first paycheck!)", da:"Hent dit skattekort fra skat.dk" }, xp:40 },
-      { id:"ch4_mobilepay", text:{ en:"Download and activate MobilePay", da:"Download og aktiver MobilePay" }, xp:20 },
-      { id:"ch4_bank", text:{ en:"Open a Danish bank account", da:"Åbn en dansk bankkonto" }, xp:30 },
-      { id:"ch4_pension", text:{ en:"Confirm your employer pension scheme is active", da:"Bekræft at din arbejdsgiverpension er aktiv" }, xp:20 },
-      { id:"ch4_aarsopg", text:{ en:"Check your årsopgørelse in March (and claim deductions!)", da:"Tjek din årsopgørelse i marts" }, xp:25 },
+      { id:"ch4_nemkonto", text:{en:"Register your NemKonto at nemkonto.dk", da:"Registrér din NemKonto på nemkonto.dk", ar:"سجّل NemKonto الخاص بك على nemkonto.dk", de:"Registrieren Sie Ihr NemKonto auf nemkonto.dk", es:"Registra tu NemKonto en nemkonto.dk", fa:"NemKonto خود را در nemkonto.dk ثبت کنید", fr:"Enregistrez votre NemKonto sur nemkonto.dk", pl:"Zarejestruj swoje NemKonto na nemkonto.dk", uk:"Зареєструйте свій NemKonto на nemkonto.dk", ur:"اپنا NemKonto nemkonto.dk پر رجسٹر کریں" }, xp:40 },
+      { id:"ch4_skattekort", text:{en:"Get your skattekort from skat.dk (before first paycheck!)", da:"Hent dit skattekort fra skat.dk", ar:"احصل على skattekort من skat.dk (قبل أول راتب!)", de:"Holen Sie Ihre skattekort auf skat.dk (vor dem ersten Gehalt!)", es:"Consigue tu skattekort en skat.dk (¡antes de la primera nómina!)", fa:"skattekort خود را از skat.dk دریافت کنید (پیش از اولین حقوق!)", fr:"Obtenez votre skattekort sur skat.dk (avant le premier salaire !)", pl:"Uzyskaj skattekort na skat.dk (przed pierwszą wypłatą!)", uk:"Отримайте skattekort на skat.dk (до першої зарплати!)", ur:"skat.dk سے اپنا skattekort حاصل کریں (پہلی تنخواہ سے پہلے!)" }, xp:40 },
+      { id:"ch4_mobilepay", text:{en:"Download and activate MobilePay", da:"Download og aktiver MobilePay", ar:"حمّل MobilePay وفعّله", de:"MobilePay herunterladen und aktivieren", es:"Descarga y activa MobilePay", fa:"MobilePay را دانلود و فعال کنید", fr:"Téléchargez et activez MobilePay", pl:"Pobierz i aktywuj MobilePay", uk:"Завантажте та активуйте MobilePay", ur:"MobilePay ڈاؤن لوڈ کریں اور فعال کریں" }, xp:20 },
+      { id:"ch4_bank", text:{en:"Open a Danish bank account", da:"Åbn en dansk bankkonto", ar:"افتح حساباً مصرفياً دنماركياً", de:"Eröffnen Sie ein dänisches Bankkonto", es:"Abre una cuenta bancaria danesa", fa:"یک حساب بانکی دانمارکی باز کنید", fr:"Ouvrez un compte bancaire danois", pl:"Otwórz duńskie konto bankowe", uk:"Відкрийте данський банківський рахунок", ur:"ڈینش بینک اکاؤنٹ کھولیں" }, xp:30 },
+      { id:"ch4_pension", text:{en:"Confirm your employer pension scheme is active", da:"Bekræft at din arbejdsgiverpension er aktiv", ar:"تأكّد من أن نظام التقاعد لدى صاحب العمل فعّال", de:"Bestätigen Sie, dass Ihre betriebliche Altersvorsorge aktiv ist", es:"Confirma que tu plan de pensiones del empleador está activo", fa:"اطمینان حاصل کنید که طرح بازنشستگی کارفرما فعال است", fr:"Vérifiez que votre régime de retraite employeur est bien actif", pl:"Potwierdź, że pracowniczy program emerytalny jest aktywny", uk:"Підтвердіть, що пенсійна програма від роботодавця активна", ur:"تصدیق کریں کہ آپ کا آجر پنشن اسکیم فعال ہے" }, xp:20 },
+      { id:"ch4_aarsopg", text:{en:"Check your årsopgørelse in March (and claim deductions!)", da:"Tjek din årsopgørelse i marts", ar:"تحقّق من årsopgørelse في مارس (واطلب الخصومات الضريبية!)", de:"Überprüfen Sie Ihre årsopgørelse im März (und beantragen Sie Abzüge!)", es:"Revisa tu årsopgørelse en marzo (¡y reclama las deducciones!)", fa:"årsopgørelse خود را در ماه مارس بررسی کنید (و کسورات را مطالبه کنید!)", fr:"Vérifiez votre årsopgørelse en mars (et réclamez vos déductions !)", pl:"Sprawdź swoje årsopgørelse w marcu (i zgłoś odliczenia!)", uk:"Перевірте свою årsopgørelse у березні (і подайте відрахування!)", ur:"مارچ میں اپنا årsopgørelse چیک کریں (اور کٹوتیوں کا دعویٰ کریں!)" }, xp:25 },
     ]
   },
   {
@@ -2890,7 +2890,7 @@ de:`<p>Die meisten dänischen Banken verlangen eine CPR-Nummer, um ein vollstän
     sections: [
       {
         icon: "💛",
-        title: { en:"The Yellow Card (Sundhedskort) — Your Healthcare Passport", da:"Det gule sygesikringskort — dit sundhedspas" },
+        title: {en:"The Yellow Card (Sundhedskort) — Your Healthcare Passport", da:"Det gule sygesikringskort — dit sundhedspas", ar:"البطاقة الصفراء (Sundhedskort) — جواز سفرك الصحي", de:"Die gelbe Karte (Sundhedskort) — Ihr Gesundheitspass", es:"La tarjeta amarilla (Sundhedskort) — tu pasaporte sanitario", fa:"کارت زرد (Sundhedskort) — گذرنامه‌ی درمانی شما", fr:"La carte jaune (Sundhedskort) — votre passeport santé", pl:"Żółta karta (Sundhedskort) — Twój paszport zdrowotny", uk:"Жовта картка (Sundhedskort) — ваш паспорт охорони здоров'я", ur:"پیلا کارڈ (Sundhedskort) — آپ کا ہیلتھ کیئر پاسپورٹ" },
         content: { en:`<p>Your <strong>sundhedskort</strong> (health insurance card) is the yellow plastic card that proves you're entitled to free Danish healthcare. It comes automatically in the mail, typically 2–4 weeks after your CPR number is issued.</p>
 <p>It contains your CPR number, your name, and — critically — the name and address of <strong>your assigned GP (praktiserende læge)</strong>.</p>
 <p class="callout-warning">Until you receive your sundhedskort, you are <strong>not covered</strong> by the Danish public health system. If you need a doctor before it arrives: visit an out-of-hours clinic (lægevagten), call 1813 for guidance, or see a private doctor and claim the cost back later via SKAT. Also check if your home country insurance covers the gap period.</p>
@@ -2940,7 +2940,7 @@ ur:`<p>آپ کی <strong>sundhedskort</strong> (ہیلتھ انشورنس کار
       },
       {
         icon: "👨‍⚕️",
-        title: { en:"Registering with a GP (Din Praktiserende Læge)", da:"Tilmelding til praktiserende læge" },
+        title: {en:"Registering with a GP (Din Praktiserende Læge)", da:"Tilmelding til praktiserende læge", ar:"التسجيل لدى طبيب عام (Din Praktiserende Læge)", de:"Anmeldung beim Hausarzt (Din Praktiserende Læge)", es:"Registrarse con un médico de cabecera (Din Praktiserende Læge)", fa:"ثبت‌نام نزد پزشک عمومی (Din Praktiserende Læge)", fr:"S'inscrire auprès d'un médecin généraliste (Din Praktiserende Læge)", pl:"Rejestracja u lekarza rodzinnego (Din Praktiserende Læge)", uk:"Реєстрація у сімейного лікаря (Din Praktiserende Læge)", ur:"جی پی (Din Praktiserende Læge) کے ساتھ رجسٹریشن" },
         content: { en:`<p>Your GP (general practitioner) is the <strong>gatekeeper to the entire Danish health system</strong>. You do not go straight to a specialist — you always go via your GP first. This is not bureaucracy; it's a well-designed system that ensures you get the right care without wasting time.</p>
 <p><strong>How to register with a GP:</strong></p>
 <ol class="step-list">
@@ -3041,7 +3041,7 @@ ur:`<p>آپ کا GP (praktiserende læge) <strong>پورے ڈنمارکی صحت
       },
       {
         icon: "🚨",
-        title: { en:"Urgent Care — 1813 vs 112: Know the Difference", da:"Akut hjælp — 1813 vs 112" },
+        title: {en:"Urgent Care — 1813 vs 112: Know the Difference", da:"Akut hjælp — 1813 vs 112", ar:"الرعاية العاجلة — 1813 مقابل 112: اعرف الفرق", de:"Notfallversorgung — 1813 vs. 112: kennen Sie den Unterschied", es:"Atención urgente — 1813 vs 112: conoce la diferencia", fa:"مراقبت‌های اورژانسی — ۱۸۱۳ در برابر ۱۱۲: تفاوت را بدانید", fr:"Soins urgents — 1813 vs 112 : faites la différence", pl:"Pomoc doraźna — 1813 a 112: poznaj różnicę", uk:"Невідкладна допомога — 1813 чи 112: знайте різницю", ur:"ہنگامی نگہداشت — 1813 بمقابلہ 112: فرق جانیں" },
         content: { en:`<p>This is one of the most important things to know in Denmark. The two numbers serve completely different purposes:</p>
 <table class="info-table">
   <tr><th>Number</th><th>For</th><th>Response</th><th>When</th></tr>
@@ -3126,7 +3126,7 @@ ur:`<p>یہ ڈنمارک میں جاننے والی سب سے اہم باتوں 
       },
       {
         icon: "🦷",
-        title: { en:"Dental Care — NOT Free (Plan and Budget for This)", da:"Tandpleje — IKKE gratis" },
+        title: {en:"Dental Care — NOT Free (Plan and Budget for This)", da:"Tandpleje — IKKE gratis", ar:"العناية بالأسنان — ليست مجانية (خطّط ووفّر ميزانية لها)", de:"Zahnpflege — NICHT kostenlos (planen und budgetieren Sie dafür)", es:"Cuidado dental — NO es gratis (planifica y presupuesta para esto)", fa:"خدمات دندان‌پزشکی — رایگان نیست (برای آن برنامه و بودجه کنار بگذارید)", fr:"Soins dentaires — PAS gratuits (anticipez et budgétez)", pl:"Opieka stomatologiczna — NIE jest darmowa (zaplanuj i zarezerwuj budżet)", uk:"Стоматологічна допомога — НЕ безкоштовна (плануйте і закладайте у бюджет)", ur:"دانتوں کی دیکھ بھال — مفت نہیں (اس کے لیے منصوبہ بنائیں اور بجٹ رکھیں)" },
         content: { en:`<p><strong>This surprises almost every newcomer:</strong> dental care in Denmark is NOT covered by the public health system for adults. You pay out of pocket, and Danish dental prices are high.</p>
 <p><strong>Typical costs (2025 estimates):</strong></p>
 <ul>
@@ -3276,7 +3276,7 @@ ur:`<p><strong>یہ تقریباً ہر نئے آنے والے کو حیران �
       },
       {
         icon: "🧠",
-        title: { en:"Mental Health Services", da:"Psykisk sundhed og hjælp" },
+        title: {en:"Mental Health Services", da:"Psykisk sundhed og hjælp", ar:"خدمات الصحة النفسية", de:"Psychische Gesundheitsversorgung", es:"Servicios de salud mental", fa:"خدمات سلامت روان", fr:"Services de santé mentale", pl:"Usługi w zakresie zdrowia psychicznego", uk:"Послуги психічного здоров'я", ur:"ذہنی صحت کی خدمات" },
         content: { en:`<p>Moving countries is one of the most psychologically challenging things a person can do. Denmark takes mental health seriously. Here's how the system works:</p>
 <p><strong>Free via the public system:</strong></p>
 <ul>
@@ -3414,7 +3414,7 @@ ur:`<p>کسی نئے ملک میں منتقل ہونا ذہنی طور پر سب
       },
       {
         icon: "🛡️",
-        title: { en:"Sygeforsikring \"denmark\" — The One Insurance Worth Having", da:"Sygeforsikring \"danmark\" — den ene forsikring der er værd at have" },
+        title: { en:"Sygeforsikring \"denmark\" — The One Insurance Worth Having", da:"Sygeforsikring \"danmark\" — den ene forsikring der er værd at have", fr:"Sygeforsikring \"denmark\" — la seule assurance qui en vaut la peine", ar:"Sygeforsikring \"denmark\" — التأمين الوحيد الذي يستحق الاقتناء", es:"Sygeforsikring \"denmark\" — el único seguro que merece la pena", de:"Sygeforsikring \"denmark\" — die einzige Versicherung, die sich lohnt", uk:"Sygeforsikring \"denmark\" — єдина страховка, яку варто мати", pl:"Sygeforsikring \"denmark\" — jedyne ubezpieczenie warte posiadania", ur:"Sygeforsikring \"denmark\" — واحد بیمہ جو رکھنے کے قابل ہے", fa:"Sygeforsikring \"denmark\" — تنها بیمه‌ای که ارزش داشتن دارد" },
         content: { en:`<p><strong>Sygeforsikring "denmark"</strong> is a non-profit mutual insurance fund that more than 2.3 million Danes belong to. For a small monthly fee, it refunds a portion of expenses the public system doesn't cover.</p>
 <p><strong>What it covers (Group 1, ~DKK 130–175/month, 2025):</strong></p>
 <ul>
@@ -3524,12 +3524,12 @@ ur:`<p><strong>Sygeforsikring "denmark"</strong> ایک غیر منافع بخش
       }
     ],
     checklist: [
-      { id:"ch5_gp", text:{ en:"Register with a GP at sundhed.dk", da:"Tilmeld dig en praktiserende læge via sundhed.dk" }, xp:40 },
-      { id:"ch5_card", text:{ en:"Receive and check your yellow sundhedskort", da:"Modtag og tjek dit gule sygesikringskort" }, xp:25 },
-      { id:"ch5_1813", text:{ en:"Save 1813 in your phone (urgent medical help)", da:"Gem 1813 i din telefon (akut lægehjælp)" }, xp:15 },
-      { id:"ch5_dental", text:{ en:"Join Sygeforsikring \"denmark\" for dental coverage", da:"Tilmeld dig Sygeforsikring \"danmark\"" }, xp:25 },
-      { id:"ch5_minlaege", text:{ en:"Download Min Læge app to book appointments", da:"Download Min Læge-appen" }, xp:15 },
-      { id:"ch5_sundhed", text:{ en:"Create profile on sundhed.dk to access health records", da:"Opret profil på sundhed.dk" }, xp:20 },
+      { id:"ch5_gp", text:{en:"Register with a GP at sundhed.dk", da:"Tilmeld dig en praktiserende læge via sundhed.dk", ar:"سجّل لدى طبيب عام عبر sundhed.dk", de:"Bei einem Hausarzt auf sundhed.dk anmelden", es:"Regístrate con un médico de cabecera en sundhed.dk", fa:"نزد یک پزشک عمومی در sundhed.dk ثبت‌نام کنید", fr:"Inscrivez-vous chez un médecin généraliste sur sundhed.dk", pl:"Zapisz się do lekarza rodzinnego na sundhed.dk", uk:"Зареєструйтесь у сімейного лікаря на sundhed.dk", ur:"sundhed.dk پر جی پی کے ساتھ رجسٹر ہوں" }, xp:40 },
+      { id:"ch5_card", text:{en:"Receive and check your yellow sundhedskort", da:"Modtag og tjek dit gule sygesikringskort", ar:"استلم بطاقة sundhedskort الصفراء وافحصها", de:"Ihre gelbe sundhedskort erhalten und überprüfen", es:"Recibe y revisa tu sundhedskort amarilla", fa:"sundhedskort زرد خود را دریافت و بررسی کنید", fr:"Recevez et vérifiez votre sundhedskort jaune", pl:"Odbierz i sprawdź swoją żółtą sundhedskort", uk:"Отримайте та перевірте свою жовту sundhedskort", ur:"اپنا پیلا sundhedskort وصول کریں اور چیک کریں" }, xp:25 },
+      { id:"ch5_1813", text:{en:"Save 1813 in your phone (urgent medical help)", da:"Gem 1813 i din telefon (akut lægehjælp)", ar:"احفظ رقم 1813 في هاتفك (للمساعدة الطبية العاجلة)", de:"Speichern Sie 1813 in Ihrem Handy (medizinische Notfallhilfe)", es:"Guarda el 1813 en el móvil (ayuda médica urgente)", fa:"شماره‌ی ۱۸۱۳ را در گوشی خود ذخیره کنید (کمک‌های اورژانسی پزشکی)", fr:"Enregistrez le 1813 dans votre téléphone (aide médicale urgente)", pl:"Zapisz 1813 w telefonie (pilna pomoc medyczna)", uk:"Збережіть 1813 у телефоні (термінова медична допомога)", ur:"اپنے فون میں 1813 محفوظ کریں (ہنگامی طبی مدد)" }, xp:15 },
+      { id:"ch5_dental", text:{ en:"Join Sygeforsikring \"denmark\" for dental coverage", da:"Tilmeld dig Sygeforsikring \"danmark\"", fr:"Adhérez à Sygeforsikring \"denmark\" pour la couverture dentaire", ar:"انضم إلى Sygeforsikring \"denmark\" للتأمين على الأسنان", es:"Únete a Sygeforsikring \"denmark\" para la cobertura dental", de:"Treten Sie Sygeforsikring \"denmark\" für die Zahnversicherung bei", uk:"Приєднайтеся до Sygeforsikring \"denmark\" для стоматологічного страхування", pl:"Dołącz do Sygeforsikring \"denmark\" dla pokrycia stomatologicznego", ur:"دانتوں کے کور کے لیے Sygeforsikring \"denmark\" میں شامل ہوں", fa:"برای پوشش دندانپزشکی به Sygeforsikring \"denmark\" بپیوندید" }, xp:25 },
+      { id:"ch5_minlaege", text:{en:"Download Min Læge app to book appointments", da:"Download Min Læge-appen", ar:"حمّل تطبيق Min Læge لحجز المواعيد", de:"Laden Sie die Min Læge-App herunter, um Termine zu buchen", es:"Descarga la app Min Læge para reservar citas", fa:"اپلیکیشن Min Læge را برای رزرو نوبت دانلود کنید", fr:"Téléchargez l'application Min Læge pour prendre rendez-vous", pl:"Pobierz aplikację Min Læge do umawiania wizyt", uk:"Завантажте застосунок Min Læge для запису на прийом", ur:"اپوائنٹمنٹس بک کرنے کے لیے Min Læge ایپ ڈاؤن لوڈ کریں" }, xp:15 },
+      { id:"ch5_sundhed", text:{en:"Create profile on sundhed.dk to access health records", da:"Opret profil på sundhed.dk", ar:"أنشئ حساباً على sundhed.dk للوصول إلى سجلاتك الصحية", de:"Erstellen Sie ein Profil auf sundhed.dk, um auf Ihre Krankenakten zuzugreifen", es:"Crea tu perfil en sundhed.dk para acceder a tus registros médicos", fa:"برای دسترسی به سوابق سلامت، در sundhed.dk پروفایل بسازید", fr:"Créez un profil sur sundhed.dk pour accéder à votre dossier médical", pl:"Załóż profil na sundhed.dk, aby uzyskać dostęp do dokumentacji medycznej", uk:"Створіть профіль на sundhed.dk для доступу до медичних записів", ur:"صحت کے ریکارڈز تک رسائی کے لیے sundhed.dk پر پروفائل بنائیں" }, xp:20 },
     ]
   },
   {
@@ -3542,7 +3542,7 @@ ur:`<p><strong>Sygeforsikring "denmark"</strong> ایک غیر منافع بخش
     sections: [
       {
         icon: "🍼",
-        title: { en:"Parental Leave (Barsel) — 52 Weeks, Paid", da:"Barselsorlov — 52 uger, betalt" },
+        title: {en:"Parental Leave (Barsel) — 52 Weeks, Paid", da:"Barselsorlov — 52 uger, betalt", ar:"إجازة الأبوة (Barsel) — 52 أسبوعاً مدفوعة الأجر", de:"Elternzeit (Barsel) — 52 Wochen, bezahlt", es:"Permiso parental (Barsel) — 52 semanas, remuneradas", fa:"مرخصی والدین (Barsel) — ۵۲ هفته، با حقوق", fr:"Congé parental (Barsel) — 52 semaines rémunérées", pl:"Urlop rodzicielski (Barsel) — 52 tygodnie, płatne", uk:"Батьківська відпустка (Barsel) — 52 тижні, оплачувана", ur:"والدین کی چھٹی (Barsel) — 52 ہفتے، تنخواہ کے ساتھ" },
         content: { en:`<p>Denmark's parental leave system is one of the most generous in the world. The Barselslov was reformed on <strong>2 August 2022</strong> to give both parents equal and individual rights, with further updates in 2024.</p>
 <p><strong>How leave is divided under the post-2022 model (per parent):</strong></p>
 <table class="info-table">
@@ -3668,7 +3668,7 @@ ur:`<p>ڈنمارک کا والدین کی چھٹی کا نظام (barsel) دن�
       },
       {
         icon: "🏫",
-        title: { en:"Childcare — Vuggestue, Børnehave & SFO", da:"Pasning — vuggestue, børnehave og SFO" },
+        title: {en:"Childcare — Vuggestue, Børnehave & SFO", da:"Pasning — vuggestue, børnehave og SFO", ar:"رعاية الأطفال — Vuggestue و Børnehave و SFO", de:"Kinderbetreuung — Vuggestue, Børnehave & SFO", es:"Cuidado infantil — Vuggestue, Børnehave y SFO", fa:"مراقبت از کودک — Vuggestue، Børnehave و SFO", fr:"Garde d'enfants — Vuggestue, Børnehave & SFO", pl:"Opieka nad dziećmi — Vuggestue, Børnehave i SFO", uk:"Догляд за дітьми — Vuggestue, Børnehave та SFO", ur:"بچوں کی دیکھ بھال — Vuggestue، Børnehave اور SFO" },
         content: { en:`<p>Denmark's publicly subsidised childcare is world-class. The state covers the majority of costs — you pay a <strong>maximum of 25% of the actual cost</strong>.</p>
 <table class="info-table">
   <tr><th>Type</th><th>Age</th><th>Max parental fee (2025)</th><th>Hours</th></tr>
@@ -3777,7 +3777,7 @@ ur:`<p>ڈنمارک کی سرکاری سبسڈی والی چائلڈ کیئر ع
       },
       {
         icon: "💰",
-        title: { en:"Børnecheck — Child Benefit (You Don't Have to Apply)", da:"Børnecheck — børnetilskud (du skal ikke søge)" },
+        title: {en:"Børnecheck — Child Benefit (You Don't Have to Apply)", da:"Børnecheck — børnetilskud (du skal ikke søge)", ar:"Børnecheck — إعانة الطفل (لا تحتاج إلى التقديم بطلب)", de:"Børnecheck — Kindergeld (kein Antrag nötig)", es:"Børnecheck — Ayuda por hijo (no tienes que solicitarla)", fa:"Børnecheck — کمک هزینه‌ی فرزند (نیازی به درخواست ندارید)", fr:"Børnecheck — Allocation enfant (sans demande à faire)", pl:"Børnecheck — zasiłek na dziecko (nie musisz składać wniosku)", uk:"Børnecheck — допомога на дитину (заявку подавати не потрібно)", ur:"Børnecheck — بچوں کی الاؤنس (آپ کو درخواست دینے کی ضرورت نہیں)" },
         content: { en:`<p><strong>Børnecheck</strong> (formally <em>børne- og ungeydelse</em>) is a tax-free payment from the state for every child under 18. The remarkable thing: <strong>you don't apply for it</strong>. It is paid automatically to your NemKonto once your child is registered with a CPR number — quarterly for under-15, monthly from 15.</p>
 <p><strong>Rates (2025), per Skatteministeriet:</strong></p>
 <table class="info-table">
@@ -3950,7 +3950,7 @@ ur:`<p><strong>Børnecheck</strong> (سرکاری نام: børne- og ungeydelse)
       },
       {
         icon: "🏫",
-        title: { en:"The Folkeskole — Danish Public School System", da:"Folkeskolen — det danske skolesystem" },
+        title: {en:"The Folkeskole — Danish Public School System", da:"Folkeskolen — det danske skolesystem", ar:"Folkeskole — نظام المدارس الحكومية الدنماركية", de:"Die Folkeskole — das dänische öffentliche Schulsystem", es:"La Folkeskole — el sistema escolar público danés", fa:"Folkeskole — نظام مدارس دولتی دانمارک", fr:"La Folkeskole — le système des écoles publiques danoises", pl:"Folkeskole — duński publiczny system szkolny", uk:"Folkeskole — данська державна шкільна система", ur:"Folkeskole — ڈینش پبلک اسکول سسٹم" },
         content: { en:`<p>The <strong>folkeskole</strong> is Denmark's public school system. It is free, includes school materials, and runs from class 0 (børnehaveklasse, age 6) through class 9 (age 15/16), with an optional 10th grade.</p>
 <p><strong>Key facts about the folkeskole:</strong></p>
 <ul>
@@ -4050,7 +4050,7 @@ ur:`<p><strong>folkeskole</strong> ڈنمارک کا سرکاری اسکول ن�
       },
       {
         icon: "🌍",
-        title: { en:"International Schools in Denmark", da:"Internationale skoler i Danmark" },
+        title: {en:"International Schools in Denmark", da:"Internationale skoler i Danmark", ar:"المدارس الدولية في الدنمارك", de:"Internationale Schulen in Dänemark", es:"Colegios internacionales en Dinamarca", fa:"مدارس بین‌المللی در دانمارک", fr:"Les écoles internationales au Danemark", pl:"Szkoły międzynarodowe w Danii", uk:"Міжнародні школи в Данії", ur:"ڈنمارک میں بین الاقوامی اسکول" },
         content: { en:`<p>If you plan to leave Denmark within a few years, or prefer an English-curriculum education, international schools are a good option. They are private and fees apply.</p>
 <table class="info-table">
   <tr><th>School</th><th>City</th><th>Curriculum</th><th>Annual fee (approx.)</th></tr>
@@ -4134,11 +4134,11 @@ ur:`<p>اگر آپ چند سالوں میں ڈنمارک چھوڑنے کا ار�
       }
     ],
     checklist: [
-      { id:"ch6_barsel", text:{ en:"Apply for parental leave through employer and borger.dk", da:"Ansøg om barselsorlov via arbejdsgiver og borger.dk" }, xp:30 },
-      { id:"ch6_childcare", text:{ en:"Apply for vuggestue / børnehave (do this early!)", da:"Søg om vuggestue / børnehave (gør dette tidligt!)" }, xp:35 },
-      { id:"ch6_bornecheck", text:{ en:"Confirm børnecheck payments are reaching your NemKonto", da:"Bekræft at børnecheck udbetales til NemKonto" }, xp:20 },
-      { id:"ch6_school", text:{ en:"Enrol children in local folkeskole or international school", da:"Indmeld børn i folkeskole eller international skole" }, xp:30 },
-      { id:"ch6_sfo", text:{ en:"Register for SFO (after-school care) if needed", da:"Tilmeld til SFO hvis relevant" }, xp:15 },
+      { id:"ch6_barsel", text:{en:"Apply for parental leave through employer and borger.dk", da:"Ansøg om barselsorlov via arbejdsgiver og borger.dk", ar:"قدّم طلب إجازة الأبوة عبر صاحب العمل و borger.dk", de:"Beantragen Sie Elternzeit über Ihren Arbeitgeber und borger.dk", es:"Solicita el permiso parental a través del empleador y borger.dk", fa:"از طریق کارفرما و borger.dk برای مرخصی والدین درخواست دهید", fr:"Demandez le congé parental via votre employeur et borger.dk", pl:"Złóż wniosek o urlop rodzicielski przez pracodawcę i borger.dk", uk:"Подайте заявку на батьківську відпустку через роботодавця та borger.dk", ur:"آجر اور borger.dk کے ذریعے والدین کی چھٹی کے لیے درخواست دیں" }, xp:30 },
+      { id:"ch6_childcare", text:{en:"Apply for vuggestue / børnehave (do this early!)", da:"Søg om vuggestue / børnehave (gør dette tidligt!)", ar:"قدّم طلباً لـ vuggestue / børnehave (افعل هذا مبكراً!)", de:"Bewerben Sie sich für vuggestue / børnehave (möglichst früh!)", es:"Solicita plaza en vuggestue / børnehave (¡hazlo cuanto antes!)", fa:"برای vuggestue / børnehave درخواست دهید (این کار را زود انجام دهید!)", fr:"Demandez une place en vuggestue / børnehave (faites-le tôt !)", pl:"Złóż wniosek o vuggestue / børnehave (zrób to wcześnie!)", uk:"Подайте заявку до vuggestue / børnehave (зробіть це заздалегідь!)", ur:"vuggestue / børnehave کے لیے درخواست دیں (یہ جلدی کریں!)" }, xp:35 },
+      { id:"ch6_bornecheck", text:{en:"Confirm børnecheck payments are reaching your NemKonto", da:"Bekræft at børnecheck udbetales til NemKonto", ar:"تأكّد من وصول دفعات børnecheck إلى NemKonto الخاص بك", de:"Bestätigen Sie, dass die børnecheck-Zahlungen auf Ihrem NemKonto eingehen", es:"Confirma que los pagos de børnecheck llegan a tu NemKonto", fa:"اطمینان حاصل کنید که پرداخت‌های børnecheck به NemKonto شما می‌رسد", fr:"Vérifiez que les paiements børnecheck arrivent bien sur votre NemKonto", pl:"Potwierdź, że wypłaty børnecheck trafiają na Twoje NemKonto", uk:"Підтвердіть, що виплати børnecheck надходять на ваш NemKonto", ur:"تصدیق کریں کہ børnecheck کی ادائیگیاں آپ کے NemKonto تک پہنچ رہی ہیں" }, xp:20 },
+      { id:"ch6_school", text:{en:"Enrol children in local folkeskole or international school", da:"Indmeld børn i folkeskole eller international skole", ar:"سجّل أبناءك في folkeskole المحلية أو في مدرسة دولية", de:"Melden Sie Ihre Kinder in der lokalen folkeskole oder einer internationalen Schule an", es:"Matricula a los niños en la folkeskole local o en una escuela internacional", fa:"فرزندان خود را در folkeskole محلی یا مدرسه‌ی بین‌المللی ثبت‌نام کنید", fr:"Inscrivez vos enfants à la folkeskole locale ou dans une école internationale", pl:"Zapisz dzieci do lokalnej folkeskole lub szkoły międzynarodowej", uk:"Запишіть дітей у місцеву folkeskole або міжнародну школу", ur:"بچوں کو مقامی folkeskole یا بین الاقوامی اسکول میں داخل کرائیں" }, xp:30 },
+      { id:"ch6_sfo", text:{en:"Register for SFO (after-school care) if needed", da:"Tilmeld til SFO hvis relevant", ar:"سجّل في SFO (الرعاية بعد المدرسة) إذا لزم الأمر", de:"Bei Bedarf für SFO (Nachmittagsbetreuung) anmelden", es:"Apunta a tus hijos a la SFO (atención extraescolar) si lo necesitas", fa:"در صورت نیاز برای SFO (مراقبت پس از مدرسه) ثبت‌نام کنید", fr:"Inscrivez à la SFO (garde après l'école) si nécessaire", pl:"Zapisz dziecko na SFO (opieka po szkole), jeśli to potrzebne", uk:"Зареєструйтесь у SFO (післяшкільний догляд), якщо потрібно", ur:"ضرورت پڑنے پر SFO (اسکول کے بعد دیکھ بھال) کے لیے رجسٹر کریں" }, xp:15 },
     ]
   },
   {
@@ -4151,7 +4151,7 @@ ur:`<p>اگر آپ چند سالوں میں ڈنمارک چھوڑنے کا ار�
     sections: [
       {
         icon: "🏛️",
-        title: { en:"Danish Universities — Overview & Admission", da:"Danske universiteter — overblik og optagelse" },
+        title: {en:"Danish Universities — Overview & Admission", da:"Danske universiteter — overblik og optagelse", ar:"الجامعات الدنماركية — نظرة عامة والقبول", de:"Dänische Universitäten — Überblick & Zulassung", es:"Las universidades danesas — visión general y admisión", fa:"دانشگاه‌های دانمارک — بررسی کلی و پذیرش", fr:"Les universités danoises — aperçu et admission", pl:"Duńskie uniwersytety — przegląd i rekrutacja", uk:"Данські університети — огляд та вступ", ur:"ڈینش یونیورسٹیاں — جائزہ اور داخلہ" },
         content: { en:`<p>Denmark has eight public universities and dozens of specialised institutions. All are well-funded and consistently rank among Europe's best.</p>
 <table class="info-table">
   <tr><th>University</th><th>City</th><th>Known for</th><th>International ranking (approx.)</th></tr>
@@ -4253,7 +4253,7 @@ ur:`<p>ڈنمارک کے آٹھ سرکاری یونیورسٹیاں اور در�
       },
       {
         icon: "💵",
-        title: { en:"Tuition Fees & SU (State Education Support)", da:"Studieafgift og SU (statens uddannelsesstøtte)" },
+        title: {en:"Tuition Fees & SU (State Education Support)", da:"Studieafgift og SU (statens uddannelsesstøtte)", ar:"الرسوم الدراسية وSU (الدعم التعليمي الحكومي)", de:"Studiengebühren & SU (staatliche Ausbildungsförderung)", es:"Matrículas y SU (Apoyo Estatal a la Educación)", fa:"شهریه و SU (حمایت تحصیلی دولتی)", fr:"Frais de scolarité et SU (aide d'État à l'éducation)", pl:"Czesne i SU (państwowe wsparcie edukacyjne)", uk:"Плата за навчання та SU (державна підтримка освіти)", ur:"ٹیوشن فیس اور SU (ریاستی تعلیمی معاونت)" },
         content: { en:`<p><strong>Tuition fees by citizenship:</strong></p>
 <ul>
   <li><strong>EU/EEA/Nordic citizens:</strong> No tuition fees at public universities. All bachelor's and master's programmes are fully funded by the state.</li>
@@ -4417,7 +4417,7 @@ ur:`<p><strong>ٹیوشن فیس بلحاظِ شہریت:</strong></p>
       },
       {
         icon: "🗣️",
-        title: { en:"Free Danish Language Classes (Danskuddannelse)", da:"Gratis danskundervisning (Danskuddannelse)" },
+        title: {en:"Free Danish Language Classes (Danskuddannelse)", da:"Gratis danskundervisning (Danskuddannelse)", ar:"دروس مجانية لتعلم اللغة الدنماركية (Danskuddannelse)", de:"Kostenlose Dänisch-Sprachkurse (Danskuddannelse)", es:"Clases gratuitas de danés (Danskuddannelse)", fa:"کلاس‌های رایگان زبان دانمارکی (Danskuddannelse)", fr:"Cours gratuits de danois (Danskuddannelse)", pl:"Bezpłatne kursy języka duńskiego (Danskuddannelse)", uk:"Безкоштовні курси данської мови (Danskuddannelse)", ur:"مفت ڈینش زبان کی کلاسیں (Danskuddannelse)" },
         content: { en:`<p>Denmark offers free Danish language education to all residents with a CPR number who are not EU students (who must pay). This is a legal right — your employer or municipality must facilitate it.</p>
 <p><strong>Three tracks based on educational background:</strong></p>
 <ul>
@@ -4519,7 +4519,7 @@ ur:`<p>ڈنمارک تمام CPR نمبر رکھنے والے باشندوں ک�
       },
       {
         icon: "🎒",
-        title: { en:"Student Life — What's Different in Denmark", da:"Studieliv — hvad der er anderledes i Danmark" },
+        title: {en:"Student Life — What's Different in Denmark", da:"Studieliv — hvad der er anderledes i Danmark", ar:"الحياة الطلابية — ما الذي يختلف في الدنمارك", de:"Studentenleben — was in Dänemark anders ist", es:"La vida estudiantil — lo que es diferente en Dinamarca", fa:"زندگی دانشجویی — چه تفاوت‌هایی در دانمارک وجود دارد", fr:"La vie étudiante — ce qui change au Danemark", pl:"Życie studenckie — co jest inne w Danii", uk:"Студентське життя — чим воно відрізняється в Данії", ur:"طالب علمی زندگی — ڈنمارک میں کیا مختلف ہے" },
         content: { en:`<p>Danish university culture will feel different from most countries. Here's what to expect:</p>
 <ul>
   <li><strong>No lectures without dialogue.</strong> Danish teaching culture is deeply Socratic. Professors expect questions, challenge, and debate. Sitting silently is odd — participation is part of the grade.</li>
@@ -4602,11 +4602,11 @@ ur:`<p>ڈنمارکی یونیورسٹی کی ثقافت زیادہ تر مما�
       }
     ],
     checklist: [
-      { id:"ch7_apply", text:{ en:"Submit university application at optagelse.dk", da:"Send ansøgning via optagelse.dk" }, xp:30 },
-      { id:"ch7_su", text:{ en:"Apply for SU at su.dk (EU students eligible)", da:"Søg SU på su.dk" }, xp:35 },
-      { id:"ch7_danish", text:{ en:"Enrol in free Danskuddannelse language classes", da:"Tilmeld dig gratis Danskuddannelse" }, xp:30 },
-      { id:"ch7_kollegium", text:{ en:"Apply for student housing (kollegium) — do this early!", da:"Søg kollegium — gør dette tidligt!" }, xp:20 },
-      { id:"ch7_studiekort", text:{ en:"Get student transport card (studiekort)", da:"Få studiekort til transport" }, xp:15 },
+      { id:"ch7_apply", text:{en:"Submit university application at optagelse.dk", da:"Send ansøgning via optagelse.dk", ar:"قدّم طلبك الجامعي على optagelse.dk", de:"Universitätsbewerbung auf optagelse.dk einreichen", es:"Envía la solicitud universitaria en optagelse.dk", fa:"درخواست دانشگاه را در optagelse.dk ارسال کنید", fr:"Soumettez votre candidature universitaire sur optagelse.dk", pl:"Złóż wniosek na studia na optagelse.dk", uk:"Подайте заявку до університету на optagelse.dk", ur:"optagelse.dk پر یونیورسٹی کی درخواست جمع کرائیں" }, xp:30 },
+      { id:"ch7_su", text:{en:"Apply for SU at su.dk (EU students eligible)", da:"Søg SU på su.dk", ar:"قدّم طلب SU على su.dk (طلاب الاتحاد الأوروبي مؤهلون)", de:"Beantragen Sie SU auf su.dk (EU-Studierende anspruchsberechtigt)", es:"Solicita la SU en su.dk (los estudiantes de la UE son elegibles)", fa:"برای SU در su.dk درخواست دهید (دانشجویان اتحادیه‌ی اروپا واجد شرایطند)", fr:"Demandez la SU sur su.dk (étudiants de l'UE éligibles)", pl:"Złóż wniosek o SU na su.dk (uprawnieni są studenci z UE)", uk:"Подайте заявку на SU на su.dk (студенти ЄС мають право)", ur:"su.dk پر SU کے لیے درخواست دیں (EU طلباء اہل ہیں)" }, xp:35 },
+      { id:"ch7_danish", text:{en:"Enrol in free Danskuddannelse language classes", da:"Tilmeld dig gratis Danskuddannelse", ar:"سجّل في دروس Danskuddannelse المجانية", de:"Schreiben Sie sich in die kostenlosen Danskuddannelse-Sprachkurse ein", es:"Apúntate a las clases gratuitas de Danskuddannelse", fa:"در کلاس‌های رایگان زبان Danskuddannelse ثبت‌نام کنید", fr:"Inscrivez-vous aux cours gratuits Danskuddannelse", pl:"Zapisz się na bezpłatne kursy językowe Danskuddannelse", uk:"Запишіться на безкоштовні мовні курси Danskuddannelse", ur:"مفت Danskuddannelse زبان کی کلاسوں میں داخلہ لیں" }, xp:30 },
+      { id:"ch7_kollegium", text:{en:"Apply for student housing (kollegium) — do this early!", da:"Søg kollegium — gør dette tidligt!", ar:"قدّم طلباً للسكن الجامعي (kollegium) — افعل هذا مبكراً!", de:"Bewerben Sie sich für eine Studentenwohnung (kollegium) — möglichst früh!", es:"Solicita alojamiento estudiantil (kollegium) — ¡hazlo cuanto antes!", fa:"برای خوابگاه دانشجویی (kollegium) درخواست دهید — این کار را زود انجام دهید!", fr:"Demandez un logement étudiant (kollegium) — faites-le tôt !", pl:"Złóż wniosek o akademik (kollegium) — zrób to wcześnie!", uk:"Подайте заявку на студентський гуртожиток (kollegium) — зробіть це заздалегідь!", ur:"اسٹوڈنٹ ہاؤسنگ (kollegium) کے لیے درخواست دیں — یہ جلدی کریں!" }, xp:20 },
+      { id:"ch7_studiekort", text:{en:"Get student transport card (studiekort)", da:"Få studiekort til transport", ar:"احصل على بطاقة النقل الطلابية (studiekort)", de:"Studenten-Verkehrskarte (studiekort) beantragen", es:"Consigue la tarjeta de transporte para estudiantes (studiekort)", fa:"کارت حمل‌ونقل دانشجویی (studiekort) را تهیه کنید", fr:"Procurez-vous la carte de transport étudiante (studiekort)", pl:"Wyrób studencką kartę komunikacji (studiekort)", uk:"Отримайте студентську транспортну картку (studiekort)", ur:"اسٹوڈنٹ ٹرانسپورٹ کارڈ (studiekort) حاصل کریں" }, xp:15 },
     ]
   },
   {
@@ -4619,7 +4619,7 @@ ur:`<p>ڈنمارکی یونیورسٹی کی ثقافت زیادہ تر مما�
     sections: [
       {
         icon: "🛂",
-        title: { en:"For non-EU readers — Which work-permit scheme applies to you?", da:"For ikke-EU-læsere — Hvilken arbejdstilladelse?" },
+        title: {en:"For non-EU readers — Which work-permit scheme applies to you?", da:"For ikke-EU-læsere — Hvilken arbejdstilladelse?", ar:"للقراء من خارج الاتحاد الأوروبي — أي نظام تصريح عمل ينطبق عليك؟", de:"Für Leser von außerhalb der EU — welches Arbeitserlaubnis-Schema gilt für Sie?", es:"Para lectores de fuera de la UE — ¿qué régimen de permiso de trabajo te corresponde?", fa:"برای خوانندگان غیر اتحادیه‌ی اروپا — کدام طرح مجوز کار برای شما کاربرد دارد؟", fr:"Pour les lecteurs hors UE — quel régime de permis de travail s'applique à vous ?", pl:"Dla czytelników spoza UE — który program zezwoleń na pracę dotyczy Ciebie?", uk:"Для читачів з-поза ЄС — який режим дозволу на роботу стосується вас?", ur:"غیر EU قارئین کے لیے — آپ پر کون سی ورک پرمٹ اسکیم لاگو ہوتی ہے؟" },
         content: { en:`<p>If you're a non-EU/EEA citizen, you can only work in Denmark with a residence-and-work permit. The five main routes:</p>
 <table class="info-table">
   <tr><th>Scheme</th><th>Eligibility</th><th>Apply via</th></tr>
@@ -4719,7 +4719,7 @@ ur:`<p>اگر آپ EU/EEA کے شہری نہیں ہیں تو کام کرنے ک�
       },
       {
         icon: "🏢",
-        title: { en:"Danish Work Culture — What No One Tells You", da:"Dansk arbejdskultur — hvad ingen fortæller dig" },
+        title: {en:"Danish Work Culture — What No One Tells You", da:"Dansk arbejdskultur — hvad ingen fortæller dig", ar:"ثقافة العمل الدنماركية — ما لا يخبرك به أحد", de:"Dänische Arbeitskultur — was Ihnen niemand sagt", es:"La cultura laboral danesa — lo que nadie te cuenta", fa:"فرهنگ کار در دانمارک — آنچه کسی به شما نمی‌گوید", fr:"La culture du travail danoise — ce que personne ne vous dit", pl:"Duńska kultura pracy — to, czego nikt ci nie powie", uk:"Данська культура праці — те, про що вам ніхто не розкаже", ur:"ڈینش ورک کلچر — جو کوئی آپ کو نہیں بتاتا" },
         content: { en:`<p>Danish workplaces operate very differently from most cultures. Understanding these norms will make you effective from day one:</p>
 <ul>
   <li><strong>Flat hierarchy.</strong> Everyone — including the CEO — goes by first name. Formal titles are almost never used in conversation.</li>
@@ -4813,7 +4813,7 @@ ur:`<p>ڈنمارکی کام کی جگہ زیادہ تر ثقافتوں سے ب�
       },
       {
         icon: "⚖️",
-        title: { en:"Your Rights as an Employee — What the Law Guarantees", da:"Dine rettigheder som lønmodtager" },
+        title: {en:"Your Rights as an Employee — What the Law Guarantees", da:"Dine rettigheder som lønmodtager", ar:"حقوقك كموظف — ما يضمنه القانون", de:"Ihre Rechte als Arbeitnehmer — was das Gesetz garantiert", es:"Tus derechos como empleado — lo que garantiza la ley", fa:"حقوق شما به‌عنوان کارمند — آنچه قانون تضمین می‌کند", fr:"Vos droits en tant qu'employé — ce que la loi garantit", pl:"Twoje prawa jako pracownika — co gwarantuje prawo", uk:"Ваші права як працівника — те, що гарантує закон", ur:"بطور ملازم آپ کے حقوق — قانون کیا ضمانت دیتا ہے" },
         content: { en:`<p>Denmark has no statutory minimum wage — wages are instead set by <strong>collective agreements (overenskomster)</strong> between unions and employer organisations. These cover approximately 84% of the workforce and are legally binding.</p>
 <table class="info-table">
   <tr><th>Right</th><th>What you get</th><th>Source</th></tr>
@@ -4921,7 +4921,7 @@ ur:`<p>ڈنمارک میں کوئی قانونی کم از کم اجرت نہی�
       },
       {
         icon: "💸",
-        title: { en:"Understanding Your Danish Payslip (Lønseddel)", da:"Forstå din lønseddel" },
+        title: {en:"Understanding Your Danish Payslip (Lønseddel)", da:"Forstå din lønseddel", ar:"فهم كشف راتبك الدنماركي (Lønseddel)", de:"Ihre dänische Gehaltsabrechnung (Lønseddel) verstehen", es:"Entender tu nómina danesa (Lønseddel)", fa:"درک فیش حقوقی دانمارکی شما (Lønseddel)", fr:"Comprendre votre fiche de paie danoise (Lønseddel)", pl:"Zrozumieć duński pasek wypłaty (Lønseddel)", uk:"Розуміння данської платіжної відомості (Lønseddel)", ur:"اپنی ڈینش پے سلپ (Lønseddel) کو سمجھنا" },
         content: { en:`<p>Your Danish payslip can be confusing at first. Here's what every line means:</p>
 <table class="info-table">
   <tr><th>Line</th><th>What it is</th></tr>
@@ -5031,7 +5031,7 @@ ur:`<p>آپ کی ڈینش تنخواہ کی پرچی (lønseddel) پہلے گی�
       },
       {
         icon: "🛡️",
-        title: { en:"A-kasse — Unemployment Insurance (Join Before You Need It)", da:"A-kasse — dagpengeforsikring (tilmeld dig inden du har brug for det)" },
+        title: {en:"A-kasse — Unemployment Insurance (Join Before You Need It)", da:"A-kasse — dagpengeforsikring (tilmeld dig inden du har brug for det)", ar:"A-kasse — تأمين البطالة (انضمّ قبل أن تحتاجه)", de:"A-kasse — Arbeitslosenversicherung (treten Sie bei, bevor Sie sie brauchen)", es:"A-kasse — Seguro de desempleo (afíliate antes de necesitarlo)", fa:"A-kasse — بیمه‌ی بیکاری (پیش از آنکه به آن نیاز پیدا کنید عضو شوید)", fr:"A-kasse — assurance chômage (adhérez avant d'en avoir besoin)", pl:"A-kasse — ubezpieczenie od bezrobocia (zapisz się, zanim go potrzebujesz)", uk:"A-kasse — страхування на випадок безробіття (приєднайтесь до того, як знадобиться)", ur:"A-kasse — بے روزگاری کا انشورنس (ضرورت سے پہلے شامل ہوں)" },
         content: { en:`<p><strong>A-kasse</strong> (arbejdsløshedskasse) is Denmark's unemployment insurance system. It is <strong>voluntary, not automatic</strong> — you must join and pay contributions to receive benefits if you lose your job.</p>
 <p><strong>Key facts (2025):</strong></p>
 <ul>
@@ -5181,7 +5181,7 @@ ur:`<p><strong>A-kasse</strong> (بے روزگاری انشورنس فنڈ) ڈن
       },
       {
         icon: "🤝",
-        title: { en:"Unions (Fagforeninger) — Worth the Dues", da:"Fagforeninger — pengene værd" },
+        title: {en:"Unions (Fagforeninger) — Worth the Dues", da:"Fagforeninger — pengene værd", ar:"النقابات (Fagforeninger) — تستحق الاشتراكات", de:"Gewerkschaften (Fagforeninger) — die Beiträge sind es wert", es:"Los sindicatos (Fagforeninger) — merecen la cuota", fa:"اتحادیه‌ها (Fagforeninger) — ارزش حق عضویت را دارند", fr:"Les syndicats (Fagforeninger) — la cotisation en vaut la peine", pl:"Związki zawodowe (Fagforeninger) — warte składek", uk:"Профспілки (Fagforeninger) — варті внесків", ur:"یونینز (Fagforeninger) — فیس کے قابل" },
         content: { en:`<p>Denmark has one of the world's highest union membership rates at approximately 67% of the workforce. Unions here are not primarily about strikes — they are about contract security, legal protection, and professional development.</p>
 <p><strong>What a union gives you:</strong></p>
 <ul>
@@ -5295,7 +5295,7 @@ ur:`<p>ڈنمارک میں یونین رکنیت کی شرح دنیا کی سب 
       },
       {
         icon: "🔍",
-        title: { en:"Can You Work Before Your CPR Number Arrives?", da:"Kan du arbejde inden dit CPR-nummer ankommer?" },
+        title: {en:"Can You Work Before Your CPR Number Arrives?", da:"Kan du arbejde inden dit CPR-nummer ankommer?", ar:"هل يمكنك العمل قبل وصول رقم CPR الخاص بك؟", de:"Können Sie arbeiten, bevor Ihre CPR-Nummer eintrifft?", es:"¿Puedes trabajar antes de tener el número CPR?", fa:"آیا می‌توانید پیش از دریافت شماره‌ی CPR کار کنید؟", fr:"Pouvez-vous travailler avant de recevoir votre numéro CPR ?", pl:"Czy możesz pracować, zanim otrzymasz numer CPR?", uk:"Чи можете ви працювати до отримання номера CPR?", ur:"کیا آپ اپنا CPR نمبر آنے سے پہلے کام کر سکتے ہیں؟" },
         content: { en:`<p>This is one of the most common questions — and the answer depends on your citizenship:</p>
 <p><strong>EU/EEA citizens:</strong> Yes. You have the right to work in Denmark immediately. You can start a job while your CPR registration is being processed. Your employer can file an emergency tax deduction. However, without a CPR number, your employer may default to the 55% emergency tax rate temporarily.</p>
 <p><strong>Non-EU citizens with a work permit:</strong> You can work once your permit is approved and active. Some permit types allow work during processing — check your specific permit conditions at <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a>.</p>
@@ -5349,12 +5349,12 @@ ur:`<p>یہ سب سے عام سوالات میں سے ایک ہے — اور ج�
       }
     ],
     checklist: [
-      { id:"ch8_akasse", text:{ en:"Join an a-kasse within your first month (don't wait!)", da:"Tilmeld dig en a-kasse inden for din første måned!" }, xp:40 },
-      { id:"ch8_union", text:{ en:"Consider joining a relevant union (fagforening)", da:"Overvej at melde dig ind i en relevant fagforening" }, xp:25 },
-      { id:"ch8_contract", text:{ en:"Have your employment contract reviewed before signing", da:"Få din ansættelseskontrakt gennemgået inden underskrift" }, xp:30 },
-      { id:"ch8_jobnet", text:{ en:"Register on Jobnet.dk (required for a-kasse benefits)", da:"Registrér dig på Jobnet.dk" }, xp:20 },
-      { id:"ch8_payslip", text:{ en:"Understand your first payslip — check every line", da:"Forstå din første lønseddel" }, xp:15 },
-      { id:"ch8_tax", text:{ en:"Confirm your skattekort is active with your employer", da:"Bekræft at dit skattekort er aktivt hos din arbejdsgiver" }, xp:30 },
+      { id:"ch8_akasse", text:{en:"Join an a-kasse within your first month (don't wait!)", da:"Tilmeld dig en a-kasse inden for din første måned!", ar:"انضمّ إلى a-kasse خلال شهرك الأول (لا تنتظر!)", de:"Treten Sie innerhalb des ersten Monats einer a-kasse bei (nicht warten!)", es:"Afíliate a una a-kasse en tu primer mes (¡no esperes!)", fa:"در ماه اول به یک a-kasse بپیوندید (صبر نکنید!)", fr:"Adhérez à une a-kasse dès le premier mois (n'attendez pas !)", pl:"Zapisz się do a-kasse w pierwszym miesiącu (nie czekaj!)", uk:"Приєднайтесь до a-kasse у перший місяць (не зволікайте!)", ur:"اپنے پہلے مہینے میں a-kasse میں شامل ہوں (انتظار نہ کریں!)" }, xp:40 },
+      { id:"ch8_union", text:{en:"Consider joining a relevant union (fagforening)", da:"Overvej at melde dig ind i en relevant fagforening", ar:"فكّر في الانضمام إلى نقابة (fagforening) مناسبة", de:"Erwägen Sie den Beitritt zu einer passenden Gewerkschaft (fagforening)", es:"Considera afiliarte a un sindicato (fagforening) relevante", fa:"پیوستن به یک اتحادیه‌ی مرتبط (fagforening) را در نظر بگیرید", fr:"Envisagez d'adhérer à un syndicat (fagforening) pertinent", pl:"Rozważ wstąpienie do odpowiedniego związku zawodowego (fagforening)", uk:"Розгляньте можливість вступу до відповідної профспілки (fagforening)", ur:"متعلقہ یونین (fagforening) میں شامل ہونے پر غور کریں" }, xp:25 },
+      { id:"ch8_contract", text:{en:"Have your employment contract reviewed before signing", da:"Få din ansættelseskontrakt gennemgået inden underskrift", ar:"اعرض عقد العمل للمراجعة قبل التوقيع", de:"Lassen Sie Ihren Arbeitsvertrag vor der Unterzeichnung prüfen", es:"Pide que revisen tu contrato laboral antes de firmarlo", fa:"پیش از امضا، قرارداد کاری خود را بررسی کنید", fr:"Faites relire votre contrat de travail avant de le signer", pl:"Skonsultuj umowę o pracę przed podpisaniem", uk:"Перевірте трудовий договір перед підписанням", ur:"دستخط سے پہلے اپنا روزگار معاہدہ نظرثانی کرائیں" }, xp:30 },
+      { id:"ch8_jobnet", text:{en:"Register on Jobnet.dk (required for a-kasse benefits)", da:"Registrér dig på Jobnet.dk", ar:"سجّل على Jobnet.dk (مطلوب للحصول على مزايا a-kasse)", de:"Auf Jobnet.dk registrieren (Voraussetzung für a-kasse-Leistungen)", es:"Regístrate en Jobnet.dk (requisito para las prestaciones de a-kasse)", fa:"در Jobnet.dk ثبت‌نام کنید (لازمه‌ی دریافت مزایای a-kasse)", fr:"Inscrivez-vous sur Jobnet.dk (obligatoire pour les prestations a-kasse)", pl:"Zarejestruj się na Jobnet.dk (wymagane do świadczeń a-kasse)", uk:"Зареєструйтесь на Jobnet.dk (необхідно для отримання виплат a-kasse)", ur:"Jobnet.dk پر رجسٹر کریں (a-kasse فوائد کے لیے ضروری)" }, xp:20 },
+      { id:"ch8_payslip", text:{en:"Understand your first payslip — check every line", da:"Forstå din første lønseddel", ar:"افهم أول كشف راتب لك — راجع كل سطر", de:"Verstehen Sie Ihre erste Gehaltsabrechnung — prüfen Sie jede Zeile", es:"Entiende tu primera nómina — revisa cada línea", fa:"اولین فیش حقوقی خود را درک کنید — هر خط را بررسی کنید", fr:"Comprenez votre première fiche de paie — vérifiez chaque ligne", pl:"Zrozum swój pierwszy pasek wypłaty — sprawdź każdy wiersz", uk:"Розберіться з першою платіжною відомістю — перевірте кожен рядок", ur:"اپنی پہلی پے سلپ کو سمجھیں — ہر لائن چیک کریں" }, xp:15 },
+      { id:"ch8_tax", text:{en:"Confirm your skattekort is active with your employer", da:"Bekræft at dit skattekort er aktivt hos din arbejdsgiver", ar:"تأكّد من أن skattekort الخاص بك مفعّل لدى صاحب العمل", de:"Bestätigen Sie, dass Ihre skattekort bei Ihrem Arbeitgeber aktiv ist", es:"Confirma que tu skattekort está activa con tu empleador", fa:"اطمینان حاصل کنید که skattekort شما نزد کارفرما فعال است", fr:"Vérifiez que votre skattekort est bien active auprès de votre employeur", pl:"Potwierdź, że skattekort jest aktywna u Twojego pracodawcy", uk:"Підтвердіть, що ваша skattekort активна у роботодавця", ur:"تصدیق کریں کہ آپ کا skattekort آپ کے آجر کے ساتھ فعال ہے" }, xp:30 },
     ]
   },
   {
@@ -5367,7 +5367,7 @@ ur:`<p>یہ سب سے عام سوالات میں سے ایک ہے — اور ج�
     sections: [
       {
         icon: "🏢",
-        title: { en:"Choosing Your Business Structure", da:"Valg af virksomhedsform" },
+        title: {en:"Choosing Your Business Structure", da:"Valg af virksomhedsform", ar:"اختيار هيكل عملك التجاري", de:"Die richtige Unternehmensform wählen", es:"Elegir la estructura de tu negocio", fa:"انتخاب ساختار کسب‌وکار شما", fr:"Choisir la structure de votre entreprise", pl:"Wybór struktury Twojej firmy", uk:"Вибір структури вашого бізнесу", ur:"اپنے کاروبار کا ڈھانچہ منتخب کرنا" },
         content: { en:`<p>Denmark offers several business structures. The right choice depends on your liability tolerance and growth plans:</p>
 <table class="info-table">
   <tr><th>Structure</th><th>Danish name</th><th>Min. capital</th><th>Liability</th><th>Best for</th></tr>
@@ -5453,7 +5453,7 @@ ur:`<p>ڈنمارک کاروبار کے لیے کئی قانونی ڈھانچے 
       },
       {
         icon: "📋",
-        title: { en:"Registering Your Business — CVR Number", da:"Registrering af virksomhed — CVR-nummer" },
+        title: {en:"Registering Your Business — CVR Number", da:"Registrering af virksomhed — CVR-nummer", ar:"تسجيل عملك التجاري — رقم CVR", de:"Anmeldung Ihres Unternehmens — CVR-Nummer", es:"Registrar tu negocio — número CVR", fa:"ثبت کسب‌وکار شما — شماره‌ی CVR", fr:"Enregistrer votre entreprise — numéro CVR", pl:"Rejestracja firmy — numer CVR", uk:"Реєстрація бізнесу — номер CVR", ur:"اپنا کاروبار رجسٹر کرنا — CVR نمبر" },
         content: { en:`<p>Every business in Denmark is registered with a unique <strong>CVR number</strong> (Central Business Register). This is your business's identity number — equivalent to a personal CPR number.</p>
 <p><strong>Register at virk.dk (10 minutes, mostly free):</strong></p>
 <ol class="step-list">
@@ -5564,7 +5564,7 @@ ur:`<p>ڈنمارک کا ہر کاروبار منفرد <strong>CVR نمبر</st
       },
       {
         icon: "💰",
-        title: { en:"Tax for Self-Employed & Freelancers", da:"Skat for selvstændige og freelancere" },
+        title: {en:"Tax for Self-Employed & Freelancers", da:"Skat for selvstændige og freelancere", ar:"الضرائب لأصحاب الأعمال الحرة والمستقلين", de:"Steuern für Selbstständige & Freelancer", es:"Impuestos para autónomos y freelancers", fa:"مالیات برای خویش‌فرمایان و فریلنسرها", fr:"La fiscalité des indépendants et freelances", pl:"Podatki dla samozatrudnionych i freelancerów", uk:"Податки для самозайнятих та фрілансерів", ur:"خود ملازمت اور فری لانسرز کے لیے ٹیکس" },
         content: { en:`<p>As a self-employed person in Denmark, your tax situation is more complex than being an employee. Here's the essentials:</p>
 <p><strong>Key taxes for self-employed (2025):</strong></p>
 <ul>
@@ -5666,7 +5666,7 @@ ur:`<p>ڈنمارک میں خود روزگار ہونے کی صورت میں آ�
       },
       {
         icon: "🌐",
-        title: { en:"Denmark's Startup Ecosystem", da:"Danmarks startup-økosystem" },
+        title: {en:"Denmark's Startup Ecosystem", da:"Danmarks startup-økosystem", ar:"منظومة الشركات الناشئة في الدنمارك", de:"Dänemarks Startup-Ökosystem", es:"El ecosistema de startups de Dinamarca", fa:"اکوسیستم استارتاپی دانمارک", fr:"L'écosystème des startups au Danemark", pl:"Duński ekosystem startupów", uk:"Стартап-екосистема Данії", ur:"ڈنمارک کا اسٹارٹ اپ ایکو سسٹم" },
         content: { en:`<p>Copenhagen has quietly become one of Europe's strongest startup hubs, consistently ranking in the top 10 European startup cities.</p>
 <p><strong>Key hubs and organisations:</strong></p>
 <ul>
@@ -5840,7 +5840,7 @@ ur:`<p>کوپن ہیگن آہستہ آہستہ یورپ کے مضبوط ترین
       },
       {
         icon: "🛂",
-        title: { en:"Startup Denmark Visa (Non-EU Founders)", da:"Startup Denmark-visa (ikke-EU-grundlæggere)" },
+        title: {en:"Startup Denmark Visa (Non-EU Founders)", da:"Startup Denmark-visa (ikke-EU-grundlæggere)", ar:"تأشيرة Startup Denmark (للمؤسسين من خارج الاتحاد الأوروبي)", de:"Startup Denmark Visa (für Gründer von außerhalb der EU)", es:"Visado Startup Denmark (fundadores de fuera de la UE)", fa:"ویزای Startup Denmark (بنیان‌گذاران غیر اتحادیه‌ی اروپا)", fr:"Visa Startup Denmark (fondateurs hors UE)", pl:"Wiza Startup Denmark (założyciele spoza UE)", uk:"Віза Startup Denmark (засновники з-поза ЄС)", ur:"Startup Denmark ویزا (غیر EU بانی)" },
         content: { en:`<p>The <strong>Startup Denmark visa</strong> allows non-EU/EEA citizens to come to Denmark specifically to start a company. It requires a business plan assessment by a panel of experts.</p>
 <p><strong>Requirements:</strong></p>
 <ul>
@@ -5942,11 +5942,11 @@ ur:`<p><strong>Startup Denmark ویزا</strong> غیر EU/EEA شہریوں کو
       }
     ],
     checklist: [
-      { id:"ch9_structure", text:{ en:"Decide on business structure (enkeltmand vs ApS)", da:"Beslut virksomhedsform (enkeltmand vs ApS)" }, xp:20 },
-      { id:"ch9_cvr", text:{ en:"Register at virk.dk and get CVR number", da:"Registrér på virk.dk og få CVR-nummer" }, xp:35 },
-      { id:"ch9_moms", text:{ en:"Register for VAT (moms) when turnover exceeds 50,000 DKK", da:"Registrér til moms når omsætning overstiger 50.000 kr." }, xp:25 },
-      { id:"ch9_bskat", text:{ en:"Set up B-skat payments at skat.dk", da:"Opsæt B-skat betalinger på skat.dk" }, xp:25 },
-      { id:"ch9_hub", text:{ en:"Visit The Hub Copenhagen or local startup community", da:"Besøg The Hub Copenhagen eller lokalt startup-miljø" }, xp:15 },
+      { id:"ch9_structure", text:{en:"Decide on business structure (enkeltmand vs ApS)", da:"Beslut virksomhedsform (enkeltmand vs ApS)", ar:"حدّد هيكل العمل (enkeltmand مقابل ApS)", de:"Wählen Sie eine Unternehmensform (enkeltmand oder ApS)", es:"Decide la estructura del negocio (enkeltmand vs ApS)", fa:"ساختار کسب‌وکار را انتخاب کنید (enkeltmand یا ApS)", fr:"Choisissez la forme juridique (enkeltmand ou ApS)", pl:"Zdecyduj o strukturze firmy (enkeltmand czy ApS)", uk:"Визначте структуру бізнесу (enkeltmand чи ApS)", ur:"کاروباری ڈھانچے کا فیصلہ کریں (enkeltmand بمقابلہ ApS)" }, xp:20 },
+      { id:"ch9_cvr", text:{en:"Register at virk.dk and get CVR number", da:"Registrér på virk.dk og få CVR-nummer", ar:"سجّل على virk.dk واحصل على رقم CVR", de:"Auf virk.dk registrieren und CVR-Nummer beantragen", es:"Regístrate en virk.dk y obtén el número CVR", fa:"در virk.dk ثبت‌نام کنید و شماره‌ی CVR را بگیرید", fr:"Inscrivez-vous sur virk.dk et obtenez le numéro CVR", pl:"Zarejestruj się na virk.dk i uzyskaj numer CVR", uk:"Зареєструйтесь на virk.dk та отримайте номер CVR", ur:"virk.dk پر رجسٹر ہوں اور CVR نمبر حاصل کریں" }, xp:35 },
+      { id:"ch9_moms", text:{en:"Register for VAT (moms) when turnover exceeds 50,000 DKK", da:"Registrér til moms når omsætning overstiger 50.000 kr.", ar:"سجّل لضريبة القيمة المضافة (moms) عندما يتجاوز معدل الدوران 50,000 DKK", de:"Bei einem Umsatz über 50.000 DKK für die Umsatzsteuer (moms) registrieren", es:"Date de alta en el IVA (moms) cuando la facturación supere 50.000 DKK", fa:"هنگامی که گردش مالی از ۵۰٬۰۰۰ DKK فراتر رفت، برای مالیات بر ارزش افزوده (moms) ثبت‌نام کنید", fr:"Inscrivez-vous à la TVA (moms) lorsque le chiffre d'affaires dépasse 50 000 DKK", pl:"Zarejestruj się do VAT (moms), gdy obrót przekroczy 50 000 DKK", uk:"Зареєструйтесь для сплати ПДВ (moms), коли обіг перевищить 50 000 DKK", ur:"جب ٹرن اوور 50,000 DKK سے زیادہ ہو تو VAT (moms) کے لیے رجسٹر کریں" }, xp:25 },
+      { id:"ch9_bskat", text:{en:"Set up B-skat payments at skat.dk", da:"Opsæt B-skat betalinger på skat.dk", ar:"اضبط دفعات B-skat على skat.dk", de:"B-skat-Zahlungen auf skat.dk einrichten", es:"Configura los pagos de B-skat en skat.dk", fa:"پرداخت‌های B-skat را در skat.dk تنظیم کنید", fr:"Configurez les paiements de B-skat sur skat.dk", pl:"Skonfiguruj płatności B-skat na skat.dk", uk:"Налаштуйте платежі B-skat на skat.dk", ur:"skat.dk پر B-skat ادائیگیاں سیٹ اپ کریں" }, xp:25 },
+      { id:"ch9_hub", text:{en:"Visit The Hub Copenhagen or local startup community", da:"Besøg The Hub Copenhagen eller lokalt startup-miljø", ar:"زر The Hub Copenhagen أو مجتمع الشركات الناشئة المحلي", de:"Besuchen Sie The Hub Copenhagen oder eine lokale Startup-Community", es:"Visita The Hub Copenhagen o la comunidad startup local", fa:"از The Hub Copenhagen یا جامعه‌ی استارتاپی محلی دیدن کنید", fr:"Visitez The Hub Copenhagen ou une communauté locale de startups", pl:"Odwiedź The Hub Copenhagen lub lokalną społeczność startupową", uk:"Відвідайте The Hub Copenhagen або місцеву стартап-спільноту", ur:"The Hub Copenhagen یا مقامی اسٹارٹ اپ کمیونٹی پر جائیں" }, xp:15 },
     ]
   },
   {
@@ -5959,7 +5959,7 @@ ur:`<p><strong>Startup Denmark ویزا</strong> غیر EU/EEA شہریوں کو
     sections: [
       {
         icon: "🚲",
-        title: { en:"Cycling — The Danish Way to Get Around", da:"Cykling — den danske måde at komme rundt på" },
+        title: {en:"Cycling — The Danish Way to Get Around", da:"Cykling — den danske måde at komme rundt på", ar:"ركوب الدراجة — الطريقة الدنماركية للتنقل", de:"Fahrradfahren — die dänische Art, sich fortzubewegen", es:"La bici — la forma danesa de moverse", fa:"دوچرخه‌سواری — شیوه‌ی دانمارکی برای جابه‌جایی", fr:"Le vélo — la façon danoise de se déplacer", pl:"Rower — duński sposób na poruszanie się", uk:"Велосипед — данський спосіб пересування", ur:"سائیکلنگ — گھومنے پھرنے کا ڈینش طریقہ" },
         content: { en:`<p>Denmark has more bicycles than people (approximately 4.2 million bikes for 5.9 million people). In Copenhagen, <strong>62% of residents cycle to work or education every day</strong> — including in winter, including in rain. This is not a hobby. It is infrastructure.</p>
 <p><strong>Buying a bike:</strong></p>
 <ul>
@@ -6102,7 +6102,7 @@ ur:`<p>ڈنمارک میں انسانوں سے زیادہ سائیکلیں ہی�
       },
       {
         icon: "🚌",
-        title: { en:"Public Transport — Rejsekort and Zones", da:"Offentlig transport — Rejsekort og zoner" },
+        title: {en:"Public Transport — Rejsekort and Zones", da:"Offentlig transport — Rejsekort og zoner", ar:"النقل العام — Rejsekort والمناطق", de:"Öffentlicher Nahverkehr — Rejsekort und Zonen", es:"Transporte público — Rejsekort y zonas", fa:"حمل‌ونقل عمومی — Rejsekort و مناطق", fr:"Les transports publics — Rejsekort et zones", pl:"Transport publiczny — Rejsekort i strefy", uk:"Громадський транспорт — Rejsekort та зони", ur:"پبلک ٹرانسپورٹ — Rejsekort اور زونز" },
         content: { en:`<p>Danish public transport is excellent in cities and very good on intercity routes. It runs on a <strong>zone system</strong> — the more zones you cross, the more you pay.</p>
 <p><strong>Rejsekort (travel card) — essential:</strong></p>
 <ul>
@@ -6211,7 +6211,7 @@ ur:`<p>ڈنمارکی پبلک ٹرانسپورٹ شہروں میں بہترین
       },
       {
         icon: "🚗",
-        title: { en:"Cars and Driving in Denmark", da:"Biler og kørsel i Danmark" },
+        title: {en:"Cars and Driving in Denmark", da:"Biler og kørsel i Danmark", ar:"السيارات والقيادة في الدنمارك", de:"Autos und Autofahren in Dänemark", es:"Coches y conducción en Dinamarca", fa:"خودرو و رانندگی در دانمارک", fr:"Les voitures et la conduite au Danemark", pl:"Samochody i jazda w Danii", uk:"Автомобілі та водіння в Данії", ur:"ڈنمارک میں کاریں اور ڈرائیونگ" },
         content: { en:`<p>Denmark has some of the highest car purchase taxes in the world — <strong>registreringsafgift</strong> (registration tax) is up to 150% of the car's value. A car worth DKK 200,000 can easily cost DKK 400,000+ after tax. This is intentional policy to promote cycling and public transport.</p>
 <p><strong>If you bring your own car from abroad:</strong></p>
 <ul>
@@ -6339,10 +6339,10 @@ ur:`<p>ڈنمارک میں کار کی خریداری کا ٹیکس دنیا ک�
       }
     ],
     checklist: [
-      { id:"ch10_bike", text:{ en:"Buy or borrow a bike (seriously, you need one)", da:"Køb eller lån en cykel (du har brug for en)" }, xp:25 },
-      { id:"ch10_rejsekort", text:{ en:"Buy a Rejsekort for public transport", da:"Køb et Rejsekort til offentlig transport" }, xp:20 },
-      { id:"ch10_lights", text:{ en:"Get front and rear bike lights (legally required)", da:"Sæt for- og baglys på cyklen (lovpligtigt)" }, xp:15 },
-      { id:"ch10_driving", text:{ en:"Check driving licence conversion rules if applicable", da:"Tjek regler for konvertering af kørekort" }, xp:15 },
+      { id:"ch10_bike", text:{en:"Buy or borrow a bike (seriously, you need one)", da:"Køb eller lån en cykel (du har brug for en)", ar:"اشترِ دراجة أو استعرها (جدياً، أنت بحاجة إلى واحدة)", de:"Kaufen oder leihen Sie sich ein Fahrrad (im Ernst, Sie brauchen eines)", es:"Compra o pide prestada una bici (en serio, te hace falta)", fa:"یک دوچرخه بخرید یا قرض بگیرید (جدی می‌گویم، نیاز دارید)", fr:"Achetez ou empruntez un vélo (sérieusement, vous en avez besoin)", pl:"Kup lub pożycz rower (serio, musisz go mieć)", uk:"Купіть або позичте велосипед (серйозно, він вам потрібен)", ur:"ایک سائیکل خریدیں یا ادھار لیں (سنجیدگی سے، آپ کو اس کی ضرورت ہے)" }, xp:25 },
+      { id:"ch10_rejsekort", text:{en:"Buy a Rejsekort for public transport", da:"Køb et Rejsekort til offentlig transport", ar:"اشترِ بطاقة Rejsekort للنقل العام", de:"Eine Rejsekort für den ÖPNV kaufen", es:"Compra un Rejsekort para el transporte público", fa:"برای حمل‌ونقل عمومی Rejsekort بخرید", fr:"Achetez une Rejsekort pour les transports publics", pl:"Kup Rejsekort do transportu publicznego", uk:"Придбайте Rejsekort для громадського транспорту", ur:"پبلک ٹرانسپورٹ کے لیے Rejsekort خریدیں" }, xp:20 },
+      { id:"ch10_lights", text:{en:"Get front and rear bike lights (legally required)", da:"Sæt for- og baglys på cyklen (lovpligtigt)", ar:"اقتنِ أضواء أمامية وخلفية للدراجة (مطلوبة قانونياً)", de:"Vorder- und Rücklichter fürs Fahrrad besorgen (gesetzlich vorgeschrieben)", es:"Consigue luces delantera y trasera para la bici (obligatorias por ley)", fa:"چراغ‌های جلو و عقب دوچرخه بگیرید (الزام قانونی)", fr:"Procurez-vous des feux avant et arrière pour le vélo (obligatoires)", pl:"Zaopatrz się w przednie i tylne światła rowerowe (wymagane prawem)", uk:"Придбайте передній та задній ліхтарі для велосипеда (обов'язково за законом)", ur:"سائیکل کی اگلی اور پچھلی لائٹس حاصل کریں (قانوناً ضروری)" }, xp:15 },
+      { id:"ch10_driving", text:{en:"Check driving licence conversion rules if applicable", da:"Tjek regler for konvertering af kørekort", ar:"تحقّق من قواعد تحويل رخصة القيادة إذا كان ذلك ينطبق", de:"Falls zutreffend, die Regeln für den Führerscheinumtausch prüfen", es:"Comprueba las reglas de convalidación del carné de conducir si te aplica", fa:"در صورت لزوم، قوانین تبدیل گواهینامه‌ی رانندگی را بررسی کنید", fr:"Vérifiez les règles de conversion du permis si applicable", pl:"Sprawdź zasady wymiany prawa jazdy, jeśli Cię dotyczą", uk:"За необхідності перевірте правила обміну водійських прав", ur:"اگر لاگو ہو تو ڈرائیونگ لائسنس کی تبدیلی کے قوانین چیک کریں" }, xp:15 },
     ]
   },
   {
@@ -6355,7 +6355,7 @@ ur:`<p>ڈنمارک میں کار کی خریداری کا ٹیکس دنیا ک�
     sections: [
       {
         icon: "🎯",
-        title: { en:"Why Learning Danish Matters (Even Though Everyone Speaks English)", da:"Hvorfor dansk er vigtigt (selvom alle taler engelsk)" },
+        title: {en:"Why Learning Danish Matters (Even Though Everyone Speaks English)", da:"Hvorfor dansk er vigtigt (selvom alle taler engelsk)", ar:"لماذا يهمّ تعلم الدنماركية (حتى وإن كان الجميع يتحدثون الإنجليزية)", de:"Warum es sich lohnt, Dänisch zu lernen (auch wenn alle Englisch sprechen)", es:"Por qué importa aprender danés (aunque todos hablen inglés)", fa:"چرا یادگیری دانمارکی مهم است (حتی اگر همه انگلیسی صحبت کنند)", fr:"Pourquoi apprendre le danois est important (même si tout le monde parle anglais)", pl:"Dlaczego warto uczyć się duńskiego (nawet gdy wszyscy mówią po angielsku)", uk:"Чому варто вчити данську (навіть якщо всі говорять англійською)", ur:"ڈینش سیکھنا کیوں اہم ہے (حالانکہ ہر کوئی انگریزی بولتا ہے)" },
         content: { en:`<p>The honest truth: you can live in Denmark for years speaking only English and be functionally fine. Most workplaces, especially in tech and international companies, operate in English. Doctors, banks, and government services often have English support.</p>
 <p>But here's what happens when you don't learn Danish:</p>
 <ul>
@@ -6439,7 +6439,7 @@ ur:`<p>تقریباً ہر ڈینش شہری انگریزی بولتا ہے — 
       },
       {
         icon: "📚",
-        title: { en:"Free Danish Classes — Your Right as a Resident", da:"Gratis danskundervisning — din ret som beboer" },
+        title: {en:"Free Danish Classes — Your Right as a Resident", da:"Gratis danskundervisning — din ret som beboer", ar:"دروس دنماركية مجانية — حقّك كمقيم", de:"Kostenlose Dänisch-Kurse — Ihr Recht als Bewohner", es:"Clases gratuitas de danés — tu derecho como residente", fa:"کلاس‌های رایگان دانمارکی — حق شما به‌عنوان مقیم", fr:"Cours gratuits de danois — votre droit en tant que résident", pl:"Bezpłatne lekcje duńskiego — Twoje prawo jako mieszkańca", uk:"Безкоштовні уроки данської — ваше право як резидента", ur:"مفت ڈینش کلاسیں — رہائشی کے طور پر آپ کا حق" },
         content: { en:`<p>If you are a non-EU resident with a CPR number, you have the legal right to free Danish language education (Danskuddannelse) for up to 3 years. EU citizens can access it at a subsidised cost.</p>
 <p>The programme is managed by your municipality. Contact the <strong>International Community</strong> (ICS) office or your municipality's integration department to enrol.</p>
 <p><strong>Language levels and what they unlock:</strong></p>
@@ -6544,7 +6544,7 @@ ur:`<p>اگر آپ CPR نمبر والے غیر EU مقیم ہیں، تو آپ �
       },
       {
         icon: "🔊",
-        title: { en:"The Honest Guide to Danish Pronunciation", da:"Den ærlige guide til dansk udtale" },
+        title: {en:"The Honest Guide to Danish Pronunciation", da:"Den ærlige guide til dansk udtale", ar:"الدليل الصريح لنطق الدنماركية", de:"Der ehrliche Leitfaden zur dänischen Aussprache", es:"La guía sincera de la pronunciación danesa", fa:"راهنمای صادقانه‌ی تلفظ دانمارکی", fr:"Le guide honnête de la prononciation danoise", pl:"Szczery przewodnik po duńskiej wymowie", uk:"Чесний путівник з данської вимови", ur:"ڈینش تلفظ کا ایماندار رہنما" },
         content: { en:`<p>Danish has earned its reputation for difficulty. Here's what makes it genuinely hard:</p>
 <ul>
   <li><strong>Stød (glottal stop):</strong> A subtle throat-catch that changes word meaning. There's no equivalent in most languages. You can hear it; producing it takes months.</li>
@@ -6675,7 +6675,7 @@ ur:`<p>ڈینش زبان نے اپنی مشکل کی شہرت جائز طور پ
       },
       {
         icon: "📱",
-        title: { en:"Best Apps and Resources for Learning Danish", da:"Bedste apps og ressourcer til at lære dansk" },
+        title: {en:"Best Apps and Resources for Learning Danish", da:"Bedste apps og ressourcer til at lære dansk", ar:"أفضل التطبيقات والموارد لتعلم الدنماركية", de:"Die besten Apps und Ressourcen zum Dänischlernen", es:"Las mejores apps y recursos para aprender danés", fa:"بهترین اپلیکیشن‌ها و منابع برای یادگیری دانمارکی", fr:"Les meilleures applis et ressources pour apprendre le danois", pl:"Najlepsze aplikacje i materiały do nauki duńskiego", uk:"Найкращі застосунки та ресурси для вивчення данської", ur:"ڈینش سیکھنے کے لیے بہترین ایپس اور وسائل" },
         content: { en:`<div class="app-grid">
   <div class="app-card"><div class="app-card-icon">🎧</div><div class="app-card-name">Glossika</div><div class="app-card-desc">Best for pronunciation and sentence patterns. Spaced repetition. Worth paying for.</div><div class="app-card-lang">Paid</div></div>
   <div class="app-card"><div class="app-card-icon">📱</div><div class="app-card-name">Babbel</div><div class="app-card-desc">Structured lessons, better than Duolingo for Danish grammar depth.</div><div class="app-card-lang">Paid</div></div>
@@ -6759,10 +6759,10 @@ ur:`<div class="app-grid">
       }
     ],
     checklist: [
-      { id:"ch11_enrol", text:{ en:"Enrol in Danskuddannelse at your municipality", da:"Tilmeld dig Danskuddannelse i din kommune" }, xp:30 },
-      { id:"ch11_app", text:{ en:"Download Babbel or Glossika and start daily practice", da:"Download Babbel eller Glossika og start daglig øvelse" }, xp:20 },
-      { id:"ch11_dr", text:{ en:"Watch one Danish TV show on DR.dk with Danish subtitles", da:"Se et dansk TV-program på DR.dk med danske undertekster" }, xp:15 },
-      { id:"ch11_pd1", text:{ en:"Book your first Danish language test (PD1 or PD2)", da:"Book din første danskprøve (PD1 eller PD2)" }, xp:25 },
+      { id:"ch11_enrol", text:{en:"Enrol in Danskuddannelse at your municipality", da:"Tilmeld dig Danskuddannelse i din kommune", ar:"سجّل في Danskuddannelse في بلديتك", de:"Melden Sie sich für Danskuddannelse in Ihrer Kommune an", es:"Apúntate a Danskuddannelse en tu ayuntamiento", fa:"در Danskuddannelse در شهرداری خود ثبت‌نام کنید", fr:"Inscrivez-vous à Danskuddannelse dans votre commune", pl:"Zapisz się na Danskuddannelse w swojej gminie", uk:"Запишіться на Danskuddannelse у вашій kommune", ur:"اپنی کمیون میں Danskuddannelse میں داخلہ لیں" }, xp:30 },
+      { id:"ch11_app", text:{en:"Download Babbel or Glossika and start daily practice", da:"Download Babbel eller Glossika og start daglig øvelse", ar:"حمّل Babbel أو Glossika وابدأ بالتمرّن يومياً", de:"Laden Sie Babbel oder Glossika herunter und beginnen Sie mit täglichem Üben", es:"Descarga Babbel o Glossika y empieza a practicar a diario", fa:"Babbel یا Glossika را دانلود کنید و تمرین روزانه را شروع کنید", fr:"Téléchargez Babbel ou Glossika et lancez-vous dans la pratique quotidienne", pl:"Pobierz Babbel lub Glossika i ćwicz codziennie", uk:"Завантажте Babbel або Glossika та починайте щоденну практику", ur:"Babbel یا Glossika ڈاؤن لوڈ کریں اور روزانہ مشق شروع کریں" }, xp:20 },
+      { id:"ch11_dr", text:{en:"Watch one Danish TV show on DR.dk with Danish subtitles", da:"Se et dansk TV-program på DR.dk med danske undertekster", ar:"شاهد برنامجاً تلفزيونياً دنماركياً على DR.dk مع ترجمة بالدنماركية", de:"Schauen Sie eine dänische TV-Show auf DR.dk mit dänischen Untertiteln", es:"Mira una serie danesa en DR.dk con subtítulos en danés", fa:"یک برنامه‌ی تلویزیونی دانمارکی را در DR.dk با زیرنویس دانمارکی تماشا کنید", fr:"Regardez une émission danoise sur DR.dk avec sous-titres en danois", pl:"Obejrzyj duński program w DR.dk z duńskimi napisami", uk:"Подивіться один данський серіал на DR.dk із данськими субтитрами", ur:"DR.dk پر ڈینش سب ٹائٹلز کے ساتھ ایک ڈینش ٹی وی شو دیکھیں" }, xp:15 },
+      { id:"ch11_pd1", text:{en:"Book your first Danish language test (PD1 or PD2)", da:"Book din første danskprøve (PD1 eller PD2)", ar:"احجز أول اختبار للغة الدنماركية (PD1 أو PD2)", de:"Buchen Sie Ihre erste Dänisch-Sprachprüfung (PD1 oder PD2)", es:"Reserva tu primer examen de danés (PD1 o PD2)", fa:"اولین آزمون زبان دانمارکی خود (PD1 یا PD2) را رزرو کنید", fr:"Réservez votre premier examen de danois (PD1 ou PD2)", pl:"Zarezerwuj pierwszy egzamin z duńskiego (PD1 lub PD2)", uk:"Забронюйте свій перший іспит з данської мови (PD1 або PD2)", ur:"اپنا پہلا ڈینش زبان کا ٹیسٹ بک کریں (PD1 یا PD2)" }, xp:25 },
     ]
   },
   {
@@ -6775,7 +6775,7 @@ ur:`<div class="app-grid">
     sections: [
       {
         icon: "🕯️",
-        title: { en:"Hygge — What It Actually Means (It's Not Just Candles)", fr:"Hygge — Ce que ça signifie vraiment (pas seulement des bougies)", ar:"هيغا — ما يعنيه حقاً (ليس مجرد شمع)", es:"Hygge — Lo que realmente significa (no son solo velas)", da:"Hygge — hvad det egentlig betyder (det handler ikke kun om lys)" },
+        title: {en:"Hygge — What It Actually Means (It's Not Just Candles)", fr:"Hygge — Ce que ça signifie vraiment (pas seulement des bougies)", ar:"هيغا — ما يعنيه حقاً (ليس مجرد شمع)", es:"Hygge — Lo que realmente significa (no son solo velas)", da:"Hygge — hvad det egentlig betyder (det handler ikke kun om lys)", de:"Hygge — was es wirklich bedeutet (es geht nicht nur um Kerzen)", fa:"Hygge — معنای واقعی آن (فقط شمع نیست)", pl:"Hygge — co to naprawdę znaczy (to nie tylko świece)", uk:"Hygge — що це насправді означає (це не лише про свічки)", ur:"Hygge — اس کا اصل مطلب (یہ صرف موم بتیاں نہیں ہیں)" },
         content: { en:`<p><strong>Hygge</strong> (pronounced roughly "hoo-ga") is a Danish concept with no direct English translation. It describes a quality of presence — a cosy, convivial atmosphere where people feel safe, relaxed, and connected. It is both a noun and an adjective: you can have hygge, or something can be hyggeligt.</p>
 <p><strong>What hygge looks like in practice:</strong></p>
 <ul>
@@ -6918,7 +6918,7 @@ ur:`<p><strong>Hygge</strong> (تلفظ: "ہوگا") ایک ڈینش تصور ہ
       },
       {
         icon: "⚖️",
-        title: { en:"Janteloven — The Unwritten Law of Danish Equality", fr:"Janteloven — La loi non écrite de l'égalité danoise", ar:"قانون يانتيلوفن — القانون غير المكتوب للمساواة الدنماركية", es:"Janteloven — La ley no escrita de la igualdad danesa", da:"Janteloven — danskernes uudtalte lov om lighed" },
+        title: {en:"Janteloven — The Unwritten Law of Danish Equality", fr:"Janteloven — La loi non écrite de l'égalité danoise", ar:"قانون يانتيلوفن — القانون غير المكتوب للمساواة الدنماركية", es:"Janteloven — La ley no escrita de la igualdad danesa", da:"Janteloven — danskernes uudtalte lov om lighed", de:"Janteloven — das ungeschriebene Gesetz der dänischen Gleichheit", fa:"Janteloven — قانون نانوشته‌ی برابری دانمارکی", pl:"Janteloven — niepisane prawo duńskiej równości", uk:"Janteloven — неписаний закон данської рівності", ur:"Janteloven — ڈینش مساوات کا غیر تحریری قانون" },
         content: { en:`<p><strong>Janteloven</strong> (the Law of Jante) is a cultural concept described by Danish-Norwegian author Aksel Sandemose in his 1933 novel. It describes a set of unwritten social norms that emphasise collective equality over individual achievement.</p>
 <p><strong>The ten rules of Janteloven (summarised):</strong></p>
 <ol>
@@ -7102,7 +7102,7 @@ ur:`<p><strong>Janteloven</strong> (یانتے لوون) غیر تحریری م�
       },
       {
         icon: "🏡",
-        title: { en:"How to Make Danish Friends — The Real Guide", fr:"Comment se faire des amis danois — Le vrai guide", ar:"كيف تكتسب أصدقاء دنماركيين — الدليل الحقيقي", es:"Cómo hacer amigos daneses — La guía real", da:"Sådan får du danske venner — den ærlige guide" },
+        title: {en:"How to Make Danish Friends — The Real Guide", fr:"Comment se faire des amis danois — Le vrai guide", ar:"كيف تكتسب أصدقاء دنماركيين — الدليل الحقيقي", es:"Cómo hacer amigos daneses — La guía real", da:"Sådan får du danske venner — den ærlige guide", de:"Wie man dänische Freunde findet — der ehrliche Leitfaden", fa:"چگونه با دانمارکی‌ها دوست شویم — راهنمای واقعی", pl:"Jak zaprzyjaźnić się z Duńczykami — prawdziwy przewodnik", uk:"Як подружитися з данцями — справжній путівник", ur:"ڈینش دوست کیسے بنائیں — حقیقی رہنما" },
         content: { en:`<p>Many expats in Denmark describe Danes as friendly but hard to befriend. This is accurate — and it has nothing to do with you personally.</p>
 <p><strong>Understanding Danish friendship dynamics:</strong></p>
 <ul>
@@ -7242,7 +7242,7 @@ ur:`<p>ڈنمارک میں بہت سے تارکین وطن کہتے ہیں کہ 
       },
       {
         icon: "🎪",
-        title: { en:"Foreningsliv — Denmark's Hidden Social Infrastructure", fr:"Foreningsliv — L'infrastructure sociale cachée du Danemark", ar:"حياة الجمعيات — البنية الاجتماعية الخفية في الدنمارك", es:"Foreningsliv — La infraestructura social oculta de Dinamarca", da:"Foreningsliv — Danmarks skjulte sociale infrastruktur" },
+        title: {en:"Foreningsliv — Denmark's Hidden Social Infrastructure", fr:"Foreningsliv — L'infrastructure sociale cachée du Danemark", ar:"حياة الجمعيات — البنية الاجتماعية الخفية في الدنمارك", es:"Foreningsliv — La infraestructura social oculta de Dinamarca", da:"Foreningsliv — Danmarks skjulte sociale infrastruktur", de:"Foreningsliv — Dänemarks verborgene soziale Infrastruktur", fa:"Foreningsliv — زیرساخت اجتماعی پنهان دانمارک", pl:"Foreningsliv — ukryta infrastruktura społeczna Danii", uk:"Foreningsliv — прихована соціальна інфраструктура Данії", ur:"Foreningsliv — ڈنمارک کا چھپا ہوا سماجی ڈھانچہ" },
         content: { en:`<p>Denmark has approximately <strong>100,000 voluntary associations (foreninger)</strong> — more per capita than almost any country on earth. Sport clubs, choirs, political parties, parent associations, model train clubs, chess societies. If something can be done collectively in Denmark, there is almost certainly an association for it.</p>
 <p><strong>Why this matters to you:</strong> The forening is how Danish society organises community life. It is also the primary social ladder for newcomers — joining one immediately gives you a structured reason to see the same people regularly, which is the foundation of Danish friendship.</p>
 <p><strong>Types of foreninger worth knowing:</strong></p>
@@ -7336,7 +7336,7 @@ ur:`<p><strong>Foreningsliv</strong> (اجتمائی زندگی) ڈینش شہر
       },
       {
         icon: "🎉",
-        title: { en:"Danish Holidays, Traditions & Cultural Calendar", fr:"Fêtes, Traditions et Calendrier Culturel Danois", ar:"الأعياد والتقاليد والتقويم الثقافي الدنماركي", es:"Fiestas, Tradiciones y Calendario Cultural Danés", da:"Danske helligdage, traditioner og kulturkalender" },
+        title: {en:"Danish Holidays, Traditions & Cultural Calendar", fr:"Fêtes, Traditions et Calendrier Culturel Danois", ar:"الأعياد والتقاليد والتقويم الثقافي الدنماركي", es:"Fiestas, Tradiciones y Calendario Cultural Danés", da:"Danske helligdage, traditioner og kulturkalender", de:"Dänische Feiertage, Traditionen & Kulturkalender", fa:"تعطیلات، سنت‌ها و تقویم فرهنگی دانمارک", pl:"Duńskie święta, tradycje i kalendarz kulturalny", uk:"Данські свята, традиції та культурний календар", ur:"ڈینش تہوار، روایات اور ثقافتی کیلنڈر" },
         content: { en:`<p>Understanding Danish cultural moments will help you participate — and avoid being the colleague who booked a meeting on a major holiday.</p>
 <table class="info-table">
   <tr><th>Date / Period</th><th>Holiday / Tradition</th><th>What actually happens</th></tr>
@@ -7458,7 +7458,7 @@ ur:`<p>ڈنمارک کی ثقافتی تعطیلات اور اہم تاریخی�
       },
       {
         icon: "🍞",
-        title: { en:"Danish Food Culture — What to Know and What to Try", fr:"La Culture Alimentaire Danoise — Ce qu'il faut savoir et goûter", ar:"الثقافة الغذائية الدنماركية — ما يجب معرفته وتجربته", es:"Cultura Gastronómica Danesa — Qué saber y qué probar", da:"Dansk madkultur — hvad du bør vide og smage" },
+        title: {en:"Danish Food Culture — What to Know and What to Try", fr:"La Culture Alimentaire Danoise — Ce qu'il faut savoir et goûter", ar:"الثقافة الغذائية الدنماركية — ما يجب معرفته وتجربته", es:"Cultura Gastronómica Danesa — Qué saber y qué probar", da:"Dansk madkultur — hvad du bør vide og smage", de:"Dänische Esskultur — was Sie wissen und probieren sollten", fa:"فرهنگ غذایی دانمارک — چه چیزهایی بدانیم و چه چیزهایی امتحان کنیم", pl:"Duńska kultura jedzenia — co warto wiedzieć i czego spróbować", uk:"Данська культура харчування — що знати і що скуштувати", ur:"ڈینش کھانے کی ثقافت — کیا جانیں اور کیا آزمائیں" },
         content: { en:`<p>Danish food culture has undergone a revolution since Noma put Copenhagen on the global culinary map. But everyday Danish food life is distinct from fine dining.</p>
 <p><strong>The daily food rhythm:</strong></p>
 <ul>
@@ -7599,12 +7599,12 @@ ur:`<p>ڈینش کھانے کی ثقافت نے ایک انقلاب دیکھا �
       }
     ],
     checklist: [
-      { id:"ch12_forening", text:{ en:"Join a local forening (sports club, choir, or volunteer group)", fr:"Rejoindre une forening locale (club sportif, chœur ou bénévoles)", ar:"الانضمام إلى جمعية محلية (نادي رياضي أو جوقة أو متطوعين)", es:"Unirse a una forening local (club deportivo, coro o voluntarios)", da:"Tilmeld dig en lokal forening (sportsklub, kor eller frivilliggruppe)" }, xp:35 },
-      { id:"ch12_santkhans", text:{ en:"Attend a Sankt Hans bonfire on June 23rd", fr:"Assister à un feu de joie de Sankt Hans le 23 juin", ar:"حضور نار مهرجان سانكت هانز في 23 يونيو", es:"Asistir a una hoguera de Sankt Hans el 23 de junio", da:"Deltag i et Sankt Hans bål den 23. juni" }, xp:20 },
-      { id:"ch12_smorrebrod", text:{ en:"Eat a proper smørrebrød lunch at a Danish café", fr:"Manger un vrai déjeuner smørrebrød dans un café danois", ar:"تناول غداء سمورسبرود حقيقي في مقهى دنماركي", es:"Comer un almuerzo smørrebrød auténtico en un café danés", da:"Spis en ordentlig smørrebrødsfrokost på en dansk café" }, xp:10 },
-      { id:"ch12_invite", text:{ en:"Accept a dinner invitation from a Danish colleague or neighbour", fr:"Accepter une invitation à dîner d'un collègue ou voisin danois", ar:"قبول دعوة عشاء من زميل أو جار دنماركي", es:"Aceptar una invitación a cenar de un colega o vecino danés", da:"Accepter en middagsinvitation fra en dansk kollega eller nabo" }, xp:25 },
-      { id:"ch12_toogoodtogo", text:{ en:"Download Too Good To Go and use it at least once", fr:"Télécharger Too Good To Go et l'utiliser au moins une fois", ar:"تنزيل تطبيق Too Good To Go واستخدامه مرة واحدة على الأقل", es:"Descargar Too Good To Go y usarlo al menos una vez", da:"Download Too Good To Go og brug det mindst én gang" }, xp:10 },
-      { id:"ch12_xmas", text:{ en:"Experience a Danish Jul — risengrød, æbleskiver, and all", fr:"Vivre un Jul danois — risengrød, æbleskiver, et tout le reste", ar:"تجربة عيد الميلاد الدنماركي يول — ريسنغرود وأبلسكيفر وكل شيء", es:"Vivir un Jul danés — risengrød, æbleskiver, y todo lo demás", da:"Oplev en dansk jul — risengrød, æbleskiver og det hele" }, xp:20 },
+      { id:"ch12_forening", text:{en:"Join a local forening (sports club, choir, or volunteer group)", fr:"Rejoindre une forening locale (club sportif, chœur ou bénévoles)", ar:"الانضمام إلى جمعية محلية (نادي رياضي أو جوقة أو متطوعين)", es:"Unirse a una forening local (club deportivo, coro o voluntarios)", da:"Tilmeld dig en lokal forening (sportsklub, kor eller frivilliggruppe)", de:"Treten Sie einer lokalen forening bei (Sportverein, Chor oder Freiwilligengruppe)", fa:"به یک forening محلی بپیوندید (باشگاه ورزشی، گروه کر یا گروه داوطلبانه)", pl:"Dołącz do lokalnego forening (klub sportowy, chór lub grupa wolontariuszy)", uk:"Приєднайтесь до місцевого forening (спортивний клуб, хор або волонтерська група)", ur:"ایک مقامی forening میں شامل ہوں (اسپورٹس کلب، کوئر یا رضاکار گروپ)" }, xp:35 },
+      { id:"ch12_santkhans", text:{en:"Attend a Sankt Hans bonfire on June 23rd", fr:"Assister à un feu de joie de Sankt Hans le 23 juin", ar:"حضور نار مهرجان سانكت هانز في 23 يونيو", es:"Asistir a una hoguera de Sankt Hans el 23 de junio", da:"Deltag i et Sankt Hans bål den 23. juni", de:"Besuchen Sie ein Sankt-Hans-Feuer am 23. Juni", fa:"در ۲۳ ژوئن در آتش‌بازی Sankt Hans شرکت کنید", pl:"Weź udział w ognisku Sankt Hans 23 czerwca", uk:"Відвідайте багаття Sankt Hans 23 червня", ur:"23 جون کو Sankt Hans کے الاؤ میں شرکت کریں" }, xp:20 },
+      { id:"ch12_smorrebrod", text:{en:"Eat a proper smørrebrød lunch at a Danish café", fr:"Manger un vrai déjeuner smørrebrød dans un café danois", ar:"تناول غداء سمورسبرود حقيقي في مقهى دنماركي", es:"Comer un almuerzo smørrebrød auténtico en un café danés", da:"Spis en ordentlig smørrebrødsfrokost på en dansk café", de:"Genießen Sie ein richtiges smørrebrød-Mittagessen in einem dänischen Café", fa:"یک ناهار اصیل smørrebrød در یک کافه‌ی دانمارکی بخورید", pl:"Zjedz porządny lunch smørrebrød w duńskiej kawiarni", uk:"З'їжте справжній smørrebrød на обід у данському кафе", ur:"ایک ڈینش کیفے میں اصلی smørrebrød لنچ کھائیں" }, xp:10 },
+      { id:"ch12_invite", text:{en:"Accept a dinner invitation from a Danish colleague or neighbour", fr:"Accepter une invitation à dîner d'un collègue ou voisin danois", ar:"قبول دعوة عشاء من زميل أو جار دنماركي", es:"Aceptar una invitación a cenar de un colega o vecino danés", da:"Accepter en middagsinvitation fra en dansk kollega eller nabo", de:"Nehmen Sie eine Abendessen-Einladung von einem dänischen Kollegen oder Nachbarn an", fa:"یک دعوت شام از همکار یا همسایه‌ی دانمارکی را بپذیرید", pl:"Przyjmij zaproszenie na kolację od duńskiego kolegi lub sąsiada", uk:"Прийміть запрошення на вечерю від данського колеги або сусіда", ur:"کسی ڈینش ساتھی یا پڑوسی کی ڈنر کی دعوت قبول کریں" }, xp:25 },
+      { id:"ch12_toogoodtogo", text:{en:"Download Too Good To Go and use it at least once", fr:"Télécharger Too Good To Go et l'utiliser au moins une fois", ar:"تنزيل تطبيق Too Good To Go واستخدامه مرة واحدة على الأقل", es:"Descargar Too Good To Go y usarlo al menos una vez", da:"Download Too Good To Go og brug det mindst én gang", de:"Laden Sie Too Good To Go herunter und nutzen Sie es mindestens einmal", fa:"Too Good To Go را دانلود کنید و حداقل یک‌بار از آن استفاده کنید", pl:"Pobierz Too Good To Go i skorzystaj z aplikacji co najmniej raz", uk:"Завантажте Too Good To Go та скористайтесь хоча б раз", ur:"Too Good To Go ڈاؤن لوڈ کریں اور کم از کم ایک بار استعمال کریں" }, xp:10 },
+      { id:"ch12_xmas", text:{en:"Experience a Danish Jul — risengrød, æbleskiver, and all", fr:"Vivre un Jul danois — risengrød, æbleskiver, et tout le reste", ar:"تجربة عيد الميلاد الدنماركي يول — ريسنغرود وأبلسكيفر وكل شيء", es:"Vivir un Jul danés — risengrød, æbleskiver, y todo lo demás", da:"Oplev en dansk jul — risengrød, æbleskiver og det hele", de:"Erleben Sie ein dänisches Jul — risengrød, æbleskiver und mehr", fa:"یک Jul دانمارکی را تجربه کنید — risengrød، æbleskiver و همه‌ی آن‌ها", pl:"Przeżyj duńskie Jul — risengrød, æbleskiver i resztę", uk:"Відчуйте данське Jul — risengrød, æbleskiver та все інше", ur:"ایک ڈینش Jul کا تجربہ کریں — risengrød، æbleskiver اور سب کچھ" }, xp:20 },
     ]
   },
   {
@@ -7617,7 +7617,7 @@ ur:`<p>ڈینش کھانے کی ثقافت نے ایک انقلاب دیکھا �
     sections: [
       {
         icon: "💬",
-        title: { en:"How Dating Works in Denmark — The Cultural Code", fr:"Comment fonctionne le dating au Danemark — Le code culturel", ar:"كيف تعمل المواعدة في الدنمارك — الكود الثقافي", es:"Cómo funciona el dating en Dinamarca — El código cultural", da:"Sådan fungerer dating i Danmark — den kulturelle kode" },
+        title: {en:"How Dating Works in Denmark — The Cultural Code", fr:"Comment fonctionne le dating au Danemark — Le code culturel", ar:"كيف تعمل المواعدة في الدنمارك — الكود الثقافي", es:"Cómo funciona el dating en Dinamarca — El código cultural", da:"Sådan fungerer dating i Danmark — den kulturelle kode", de:"Wie Dating in Dänemark funktioniert — der kulturelle Code", fa:"قواعد دوست‌یابی در دانمارک — رمز فرهنگی", pl:"Jak działają randki w Danii — kod kulturowy", uk:"Як працює знайомство в Данії — культурний код", ur:"ڈنمارک میں ڈیٹنگ کیسے کام کرتی ہے — ثقافتی ضابطہ" },
         content: { en:`<p>Dating in Denmark operates by norms that are distinctly different from most other cultures. Understanding them will save you significant confusion.</p>
 <p><strong>The big differences:</strong></p>
 <ul>
@@ -7750,7 +7750,7 @@ ur:`<p>ڈنمارک میں ڈیٹنگ براہ راست اور مساواتی ہ
       },
       {
         icon: "🏛️",
-        title: { en:"Family Reunification — Bringing Your Partner to Denmark", fr:"Regroupement Familial — Amener votre partenaire au Danemark", ar:"لم شمل الأسرة — إحضار شريكك إلى الدنمارك", es:"Reagrupación Familiar — Traer a tu pareja a Dinamarca", da:"Familiesammenføring — at hente din partner til Danmark" },
+        title: {en:"Family Reunification — Bringing Your Partner to Denmark", fr:"Regroupement Familial — Amener votre partenaire au Danemark", ar:"لم شمل الأسرة — إحضار شريكك إلى الدنمارك", es:"Reagrupación Familiar — Traer a tu pareja a Dinamarca", da:"Familiesammenføring — at hente din partner til Danmark", de:"Familienzusammenführung — den Partner nach Dänemark holen", fa:"پیوستن خانواده — آوردن همسر به دانمارک", pl:"Łączenie rodzin — sprowadzenie partnera do Danii", uk:"Возз'єднання сім'ї — як перевезти партнера до Данії", ur:"خاندانی الحاق — اپنے پارٹنر کو ڈنمارک لانا" },
         content: { en:`<p>If you are in Denmark and want to bring a foreign partner or spouse, the process is called <strong>familiesammenføring</strong> (family reunification). The rules are strict and should be understood early.</p>
 <p><strong>Key requirements (2025):</strong></p>
 <ul>
@@ -7859,7 +7859,7 @@ ur:`<p>اگر آپ ڈنمارک میں ہیں اور کسی غیر ملکی پا
       },
       {
         icon: "🌈",
-        title: { en:"LGBTQ+ Life in Denmark — One of the World's Most Equal Countries", fr:"Vie LGBTQ+ au Danemark — Un des pays les plus égaux du monde", ar:"حياة مجتمع الميم في الدنمارك — من أكثر دول العالم مساواة", es:"Vida LGBTQ+ en Dinamarca — Uno de los países más igualitarios del mundo", da:"LGBTQ+-liv i Danmark — et af verdens mest ligestillede lande" },
+        title: {en:"LGBTQ+ Life in Denmark — One of the World's Most Equal Countries", fr:"Vie LGBTQ+ au Danemark — Un des pays les plus égaux du monde", ar:"حياة مجتمع الميم في الدنمارك — من أكثر دول العالم مساواة", es:"Vida LGBTQ+ en Dinamarca — Uno de los países más igualitarios del mundo", da:"LGBTQ+-liv i Danmark — et af verdens mest ligestillede lande", de:"LGBTQ+-Leben in Dänemark — eines der gleichberechtigtsten Länder der Welt", fa:"زندگی LGBTQ+ در دانمارک — یکی از برابرترین کشورهای جهان", pl:"Życie LGBTQ+ w Danii — jeden z najbardziej egalitarnych krajów świata", uk:"Життя LGBTQ+ в Данії — одна з найрівніших країн світу", ur:"ڈنمارک میں LGBTQ+ زندگی — دنیا کے سب سے زیادہ مساوی ممالک میں سے ایک" },
         content: { en:`<p>Denmark was the first country in the world to legally recognise same-sex partnerships, in 1989. Same-sex marriage has been legal since 2012. Denmark consistently ranks among the world's top 3 countries for LGBTQ+ legal equality and social acceptance.</p>
 <p><strong>Legal protections:</strong></p>
 <ul>
@@ -7994,7 +7994,7 @@ ur:`<p>ڈنمارک LGBTQ+ کے لیے دنیا کے سب سے دوستانہ م
       },
       {
         icon: "📋",
-        title: { en:"Living Together — Cohabitation, Samlevende Status & Legal Rights", fr:"Vivre Ensemble — Cohabitation, statut samlevende et droits légaux", ar:"العيش معاً — التعايش والوضع القانوني لغير المتزوجين", es:"Vivir Juntos — Cohabitación, estado samlevende y derechos legales", da:"At bo sammen — samlevendes rettigheder og juridisk status" },
+        title: {en:"Living Together — Cohabitation, Samlevende Status & Legal Rights", fr:"Vivre Ensemble — Cohabitation, statut samlevende et droits légaux", ar:"العيش معاً — التعايش والوضع القانوني لغير المتزوجين", es:"Vivir Juntos — Cohabitación, estado samlevende y derechos legales", da:"At bo sammen — samlevendes rettigheder og juridisk status", de:"Zusammenleben — Cohabitation, Samlevende-Status & rechtliche Ansprüche", fa:"زندگی مشترک — همخانگی، وضعیت Samlevende و حقوق قانونی", pl:"Wspólne życie — kohabitacja, status Samlevende i prawa", uk:"Спільне проживання — кохабітація, статус Samlevende та юридичні права", ur:"ساتھ رہنا — ہم نشینی، Samlevende سٹیٹس اور قانونی حقوق" },
         content: { en:`<p>Moving in together in Denmark has legal implications worth understanding — especially for unmarried couples.</p>
 <p><strong>Samlevende (cohabiting) status:</strong></p>
 <ul>
@@ -8122,7 +8122,7 @@ ur:`<p>ڈنمارک میں غیر شادی شدہ والدین کے لیے مض�
       },
       {
         icon: "🏠",
-        title: { en:"Divorce & Separation in Denmark — How It Works", fr:"Divorce et Séparation au Danemark — Comment ça marche", ar:"الطلاق والانفصال في الدنمارك — كيف يعمل", es:"Divorcio y Separación en Dinamarca — Cómo funciona", da:"Skilsmisse og separation i Danmark — sådan fungerer det" },
+        title: {en:"Divorce & Separation in Denmark — How It Works", fr:"Divorce et Séparation au Danemark — Comment ça marche", ar:"الطلاق والانفصال في الدنمارك — كيف يعمل", es:"Divorcio y Separación en Dinamarca — Cómo funciona", da:"Skilsmisse og separation i Danmark — sådan fungerer det", de:"Scheidung & Trennung in Dänemark — wie es abläuft", fa:"طلاق و جدایی در دانمارک — چگونه کار می‌کند", pl:"Rozwód i separacja w Danii — jak to działa", uk:"Розлучення та розрив у Данії — як це працює", ur:"ڈنمارک میں طلاق اور علیحدگی — یہ کیسے کام کرتا ہے" },
         content: { en:`<p>Denmark has one of the world's simplest and most civilised divorce processes.</p>
 <p><strong>The process:</strong></p>
 <ul>
@@ -8217,10 +8217,10 @@ ur:`<p><strong>Familieretshuset</strong> ڈنمارک کی سرکاری ایجن
       }
     ],
     checklist: [
-      { id:"ch13_apps", text:{ en:"Download Danish dating apps (Tinder / Bumble / Dating.dk) if relevant", fr:"Télécharger des apps de rencontres danoises si pertinent", ar:"تنزيل تطبيقات المواعدة الدنماركية إذا كان ذلك مناسباً", es:"Descargar apps de citas danesas si es relevante", da:"Download danske dating-apps (Tinder / Bumble / Dating.dk) hvis relevant" }, xp:10 },
-      { id:"ch13_will", text:{ en:"Write a will (testament) if unmarried and living with a partner", fr:"Rédiger un testament si non marié(e) et vivant avec un partenaire", ar:"كتابة وصية إذا كنت غير متزوج وتعيش مع شريك", es:"Redactar un testamento si no estás casado/a y vives con una pareja", da:"Skriv et testamente hvis du er ugift og bor med en partner" }, xp:40 },
-      { id:"ch13_family_reun", text:{ en:"Check family reunification eligibility if your partner is abroad", fr:"Vérifier l'éligibilité au regroupement familial si votre partenaire est à l'étranger", ar:"التحقق من أهلية لم شمل الأسرة إذا كان شريكك في الخارج", es:"Comprobar elegibilidad para reagrupación familiar si tu pareja está en el extranjero", da:"Tjek familiesammenføring hvis din partner er i udlandet" }, xp:30 },
-      { id:"ch13_pension_partner", text:{ en:"Add your partner to your pension scheme (udvidet samlevendepension)", fr:"Ajouter votre partenaire à votre régime de retraite", ar:"إضافة شريكك إلى مخطط التقاعد الخاص بك", es:"Añadir a tu pareja a tu plan de pensiones", da:"Tilføj din partner til din pensionsordning" }, xp:20 },
+      { id:"ch13_apps", text:{en:"Download Danish dating apps (Tinder / Bumble / Dating.dk) if relevant", fr:"Télécharger des apps de rencontres danoises si pertinent", ar:"تنزيل تطبيقات المواعدة الدنماركية إذا كان ذلك مناسباً", es:"Descargar apps de citas danesas si es relevante", da:"Download danske dating-apps (Tinder / Bumble / Dating.dk) hvis relevant", de:"Bei Interesse dänische Dating-Apps herunterladen (Tinder / Bumble / Dating.dk)", fa:"در صورت تمایل، اپلیکیشن‌های دوست‌یابی دانمارکی را دانلود کنید (Tinder / Bumble / Dating.dk)", pl:"Jeśli to istotne, pobierz duńskie aplikacje randkowe (Tinder / Bumble / Dating.dk)", uk:"За потреби завантажте данські додатки знайомств (Tinder / Bumble / Dating.dk)", ur:"اگر متعلقہ ہو تو ڈینش ڈیٹنگ ایپس ڈاؤن لوڈ کریں (Tinder / Bumble / Dating.dk)" }, xp:10 },
+      { id:"ch13_will", text:{en:"Write a will (testament) if unmarried and living with a partner", fr:"Rédiger un testament si non marié(e) et vivant avec un partenaire", ar:"كتابة وصية إذا كنت غير متزوج وتعيش مع شريك", es:"Redactar un testamento si no estás casado/a y vives con una pareja", da:"Skriv et testamente hvis du er ugift og bor med en partner", de:"Ein Testament aufsetzen, wenn Sie unverheiratet mit einem Partner zusammenleben", fa:"اگر مجرد هستید و با همسری زندگی می‌کنید، وصیت‌نامه (testament) بنویسید", pl:"Spisz testament, jeśli żyjesz z partnerem bez ślubu", uk:"Складіть заповіт (testament), якщо живете з партнером без шлюбу", ur:"اگر غیر شادی شدہ ہیں اور پارٹنر کے ساتھ رہ رہے ہیں تو وصیت (testament) لکھیں" }, xp:40 },
+      { id:"ch13_family_reun", text:{en:"Check family reunification eligibility if your partner is abroad", fr:"Vérifier l'éligibilité au regroupement familial si votre partenaire est à l'étranger", ar:"التحقق من أهلية لم شمل الأسرة إذا كان شريكك في الخارج", es:"Comprobar elegibilidad para reagrupación familiar si tu pareja está en el extranjero", da:"Tjek familiesammenføring hvis din partner er i udlandet", de:"Prüfen Sie die Voraussetzungen für die Familienzusammenführung, wenn Ihr Partner im Ausland lebt", fa:"اگر همسر شما در خارج است، شرایط پیوستن خانواده را بررسی کنید", pl:"Sprawdź uprawnienia do łączenia rodzin, jeśli partner przebywa za granicą", uk:"Перевірте право на возз'єднання сім'ї, якщо ваш партнер за кордоном", ur:"اگر آپ کا پارٹنر بیرون ملک ہے تو خاندانی الحاق کی اہلیت چیک کریں" }, xp:30 },
+      { id:"ch13_pension_partner", text:{en:"Add your partner to your pension scheme (udvidet samlevendepension)", fr:"Ajouter votre partenaire à votre régime de retraite", ar:"إضافة شريكك إلى مخطط التقاعد الخاص بك", es:"Añadir a tu pareja a tu plan de pensiones", da:"Tilføj din partner til din pensionsordning", de:"Fügen Sie Ihren Partner zu Ihrer Rente hinzu (udvidet samlevendepension)", fa:"همسر خود را به طرح بازنشستگی‌تان اضافه کنید (udvidet samlevendepension)", pl:"Dodaj partnera do swojego programu emerytalnego (udvidet samlevendepension)", uk:"Додайте партнера до своєї пенсійної програми (udvidet samlevendepension)", ur:"اپنے پارٹنر کو اپنی پنشن اسکیم میں شامل کریں (udvidet samlevendepension)" }, xp:20 },
     ]
   },
   {
@@ -8233,7 +8233,7 @@ ur:`<p><strong>Familieretshuset</strong> ڈنمارک کی سرکاری ایجن
     sections: [
       {
         icon: "🌊",
-        title: { en:"The Immigrant Experience — What No One Warns You About", fr:"L'expérience de l'immigrant — Ce dont personne ne vous avertit", ar:"تجربة المهاجر — ما لا يحذرك منه أحد", es:"La experiencia del inmigrante — Lo que nadie te advierte", da:"Indvandrerens oplevelse — hvad ingen advarer dig om" },
+        title: {en:"The Immigrant Experience — What No One Warns You About", fr:"L'expérience de l'immigrant — Ce dont personne ne vous avertit", ar:"تجربة المهاجر — ما لا يحذرك منه أحد", es:"La experiencia del inmigrante — Lo que nadie te advierte", da:"Indvandrerens oplevelse — hvad ingen advarer dig om", de:"Die Erfahrung als Einwanderer — wovor Sie niemand warnt", fa:"تجربه‌ی مهاجران — آنچه کسی به شما هشدار نمی‌دهد", pl:"Doświadczenie imigranta — przed czym nikt cię nie ostrzega", uk:"Досвід іммігранта — про що вас ніхто не попереджає", ur:"تارکین وطن کا تجربہ — جس کے بارے میں کوئی آپ کو خبردار نہیں کرتا" },
         content: { en:`<p>Immigration is sold as adventure, opportunity, and new beginnings. All of those things are true. But it is also, consistently, one of the most psychologically demanding experiences a person can go through — and that part is rarely acknowledged.</p>
 <p><strong>The stages most immigrants experience:</strong></p>
 <ul>
@@ -8328,7 +8328,7 @@ ur:`<p>ڈنمارک میں ذہنی صحت کو سنجیدگی سے لیا جا�
       },
       {
         icon: "☀️",
-        title: { en:"The Danish Winter — SAD, Darkness & How Danes Cope", fr:"L'hiver danois — TAS, obscurité et comment les Danois font face", ar:"الشتاء الدنماركي — اضطراب الاكتئاب الموسمي والظلام وكيف يتعامل الدنماركيون معه", es:"El invierno danés — TAE, oscuridad y cómo lo afrontan los daneses", da:"Den danske vinter — SAD, mørke og hvordan danskere klarer det" },
+        title: {en:"The Danish Winter — SAD, Darkness & How Danes Cope", fr:"L'hiver danois — TAS, obscurité et comment les Danois font face", ar:"الشتاء الدنماركي — اضطراب الاكتئاب الموسمي والظلام وكيف يتعامل الدنماركيون معه", es:"El invierno danés — TAE, oscuridad y cómo lo afrontan los daneses", da:"Den danske vinter — SAD, mørke og hvordan danskere klarer det", de:"Der dänische Winter — SAD, Dunkelheit & wie die Dänen damit umgehen", fa:"زمستان دانمارکی — SAD، تاریکی و راه‌های کنار آمدن دانمارکی‌ها", pl:"Duńska zima — SAD, ciemność i jak Duńczycy sobie radzą", uk:"Данська зима — SAD, темрява та як данці з нею справляються", ur:"ڈینش سرما — SAD، تاریکی اور ڈینش لوگ کیسے نمٹتے ہیں" },
         content: { en:`<p>Denmark's winter is a genuine psychological challenge for most people who arrive from sunnier climates. Copenhagen receives only <strong>1.7 hours of daylight on the winter solstice</strong> — compared to 17+ hours in summer. By November, it's dark by 4pm.</p>
 <p><strong>Seasonal Affective Disorder (SAD):</strong></p>
 <p>SAD is a form of depression triggered by reduced light exposure. It affects an estimated 3–6% of the Danish population clinically, with many more experiencing sub-clinical "winter blues." Symptoms include low energy, increased sleep, carbohydrate cravings, difficulty concentrating, and low mood from October to March.</p>
@@ -8436,7 +8436,7 @@ ur:`<p>ڈنمارک شمال میں واقع ہے — سردیوں میں کوپ
       },
       {
         icon: "🏥",
-        title: { en:"Free Mental Health Support in Denmark — What's Available", fr:"Soutien gratuit en santé mentale au Danemark — Ce qui est disponible", ar:"دعم الصحة النفسية المجاني في الدنمارك — ما هو متاح", es:"Apoyo gratuito de salud mental en Dinamarca — Qué está disponible", da:"Gratis psykisk sundhedsstøtte i Danmark — hvad er tilgængeligt" },
+        title: {en:"Free Mental Health Support in Denmark — What's Available", fr:"Soutien gratuit en santé mentale au Danemark — Ce qui est disponible", ar:"دعم الصحة النفسية المجاني في الدنمارك — ما هو متاح", es:"Apoyo gratuito de salud mental en Dinamarca — Qué está disponible", da:"Gratis psykisk sundhedsstøtte i Danmark — hvad er tilgængeligt", de:"Kostenlose psychologische Hilfe in Dänemark — was zur Verfügung steht", fa:"حمایت رایگان از سلامت روان در دانمارک — چه چیزهایی در دسترس است", pl:"Bezpłatne wsparcie zdrowia psychicznego w Danii — co jest dostępne", uk:"Безкоштовна підтримка психічного здоров'я в Данії — що доступно", ur:"ڈنمارک میں مفت ذہنی صحت کی معاونت — کیا دستیاب ہے" },
         content: { en:`<p>Denmark's healthcare system includes substantial mental health support, much of it free or heavily subsidised.</p>
 <p><strong>Your GP (praktiserende læge) is the entry point:</strong></p>
 <p>For most mental health concerns, you start with your GP. They can:</p>
@@ -8651,7 +8651,7 @@ ur:`<p>اگر آپ جذباتی بحران میں ہیں، فوری مدد دس�
       },
       {
         icon: "🤝",
-        title: { en:"Finding Your Community — The Loneliness Antidote", fr:"Trouver votre communauté — L'antidote à la solitude", ar:"إيجاد مجتمعك — مضاد الوحدة", es:"Encontrar tu comunidad — El antídoto contra la soledad", da:"Find dit fællesskab — ensomhedens modgift" },
+        title: {en:"Finding Your Community — The Loneliness Antidote", fr:"Trouver votre communauté — L'antidote à la solitude", ar:"إيجاد مجتمعك — مضاد الوحدة", es:"Encontrar tu comunidad — El antídoto contra la soledad", da:"Find dit fællesskab — ensomhedens modgift", de:"Eine Gemeinschaft finden — das Mittel gegen Einsamkeit", fa:"یافتن جامعه‌ی خود — پادزهر تنهایی", pl:"Znajdź swoją społeczność — antidotum na samotność", uk:"Знайдіть свою спільноту — антидот від самотності", ur:"اپنی کمیونٹی تلاش کریں — تنہائی کا تریاق" },
         content: { en:`<p>Loneliness is one of the most common mental health challenges for newcomers to Denmark. It is not a personal failing — it is a structural consequence of leaving your existing social network behind and entering a society with a different social calendar.</p>
 <p><strong>Active strategies that work:</strong></p>
 <ul>
@@ -8753,7 +8753,7 @@ ur:`<p>تنہائی ڈنمارک میں نئے آنے والوں کے لیے س�
       },
       {
         icon: "💼",
-        title: { en:"Work Stress, Burnout & Your Rights Under Danish Law", fr:"Stress au travail, épuisement et vos droits selon la loi danoise", ar:"ضغوط العمل والإرهاق وحقوقك بموجب القانون الدنماركي", es:"Estrés laboral, agotamiento y tus derechos según la ley danesa", da:"Arbejdsstress, udbrændthed og dine rettigheder under dansk lov" },
+        title: {en:"Work Stress, Burnout & Your Rights Under Danish Law", fr:"Stress au travail, épuisement et vos droits selon la loi danoise", ar:"ضغوط العمل والإرهاق وحقوقك بموجب القانون الدنماركي", es:"Estrés laboral, agotamiento y tus derechos según la ley danesa", da:"Arbejdsstress, udbrændthed og dine rettigheder under dansk lov", de:"Arbeitsstress, Burnout & Ihre Rechte nach dänischem Recht", fa:"استرس کاری، فرسودگی شغلی و حقوق شما طبق قانون دانمارک", pl:"Stres w pracy, wypalenie zawodowe i Twoje prawa w duńskim prawie", uk:"Робочий стрес, вигорання та ваші права за данським законодавством", ur:"کام کا تناؤ، برن آؤٹ اور ڈینش قانون کے تحت آپ کے حقوق" },
         content: { en:`<p>Denmark's work culture is designed to protect wellbeing — but burnout is still a significant problem, particularly among high-achieving immigrants trying to prove themselves.</p>
 <p><strong>Your rights when work affects your health:</strong></p>
 <ul>
@@ -8836,11 +8836,11 @@ ur:`<p>ڈنمارک کی کام کی ثقافت بہبود کی حفاظت کے 
       }
     ],
     checklist: [
-      { id:"ch14_gp", text:{ en:"Register with a GP and know you can discuss mental health openly", fr:"S'inscrire chez un médecin généraliste et savoir qu'on peut parler de santé mentale", ar:"التسجيل لدى طبيب عام ومعرفة أنك تستطيع مناقشة الصحة النفسية بصراحة", es:"Registrarse con un médico de cabecera y saber que puedes hablar de salud mental abiertamente", da:"Tilmeld dig en læge og vid at du kan tale åbent om mental sundhed" }, xp:20 },
-      { id:"ch14_lamp", text:{ en:"Buy a 10,000 lux daylight lamp before October", fr:"Acheter une lampe de luminothérapie 10 000 lux avant octobre", ar:"شراء مصباح ضوء النهار 10,000 لوكس قبل أكتوبر", es:"Comprar una lámpara de luz diurna de 10.000 lux antes de octubre", da:"Køb en 10.000 lux dagslyslampe inden oktober" }, xp:15 },
-      { id:"ch14_vitamind", text:{ en:"Start Vitamin D supplements (Oct–Apr)", fr:"Commencer les compléments de vitamine D (oct–avr)", ar:"البدء في تناول مكملات فيتامين د (أكتوبر–أبريل)", es:"Empezar suplementos de Vitamina D (oct–abr)", da:"Start med D-vitaminpræparater (okt–apr)" }, xp:10 },
-      { id:"ch14_community", text:{ en:"Join one expat or newcomer community group", fr:"Rejoindre un groupe communautaire d'expatriés ou de nouveaux arrivants", ar:"الانضمام إلى مجموعة مجتمع المغتربين أو الوافدين الجدد", es:"Unirse a un grupo comunitario de expatriados o recién llegados", da:"Bliv medlem af en expat- eller nyankommergruppe" }, xp:25 },
-      { id:"ch14_livslinjen", text:{ en:"Save Livslinjen (70 201 201) in your phone — just in case", fr:"Enregistrer Livslinjen (70 201 201) dans votre téléphone — au cas où", ar:"احفظ رقم Livslinjen (70 201 201) في هاتفك — لمجرد الاحتياط", es:"Guardar Livslinjen (70 201 201) en tu teléfono — por si acaso", da:"Gem Livslinjen (70 201 201) i din telefon — bare for en sikkerheds skyld" }, xp:10 },
+      { id:"ch14_gp", text:{en:"Register with a GP and know you can discuss mental health openly", fr:"S'inscrire chez un médecin généraliste et savoir qu'on peut parler de santé mentale", ar:"التسجيل لدى طبيب عام ومعرفة أنك تستطيع مناقشة الصحة النفسية بصراحة", es:"Registrarse con un médico de cabecera y saber que puedes hablar de salud mental abiertamente", da:"Tilmeld dig en læge og vid at du kan tale åbent om mental sundhed", de:"Melden Sie sich bei einem Hausarzt an und wissen Sie, dass Sie offen über psychische Gesundheit sprechen können", fa:"نزد یک پزشک عمومی ثبت‌نام کنید و بدانید که می‌توانید آزادانه درباره‌ی سلامت روان صحبت کنید", pl:"Zapisz się do lekarza rodzinnego i wiedz, że możesz otwarcie rozmawiać o zdrowiu psychicznym", uk:"Зареєструйтесь у сімейного лікаря — ви можете відкрито обговорювати психічне здоров'я", ur:"جی پی کے ساتھ رجسٹر ہوں اور جانیں کہ آپ ذہنی صحت پر کھل کر بات کر سکتے ہیں" }, xp:20 },
+      { id:"ch14_lamp", text:{en:"Buy a 10,000 lux daylight lamp before October", fr:"Acheter une lampe de luminothérapie 10 000 lux avant octobre", ar:"شراء مصباح ضوء النهار 10,000 لوكس قبل أكتوبر", es:"Comprar una lámpara de luz diurna de 10.000 lux antes de octubre", da:"Køb en 10.000 lux dagslyslampe inden oktober", de:"Kaufen Sie vor Oktober eine 10.000-Lux-Tageslichtlampe", fa:"پیش از ماه اکتبر یک لامپ نور روز ۱۰٬۰۰۰ لوکس بخرید", pl:"Kup lampę światła dziennego 10 000 luksów przed październikiem", uk:"Придбайте лампу денного світла 10 000 люкс до жовтня", ur:"اکتوبر سے پہلے 10,000 لکس ڈے لائٹ لیمپ خریدیں" }, xp:15 },
+      { id:"ch14_vitamind", text:{en:"Start Vitamin D supplements (Oct–Apr)", fr:"Commencer les compléments de vitamine D (oct–avr)", ar:"البدء في تناول مكملات فيتامين د (أكتوبر–أبريل)", es:"Empezar suplementos de Vitamina D (oct–abr)", da:"Start med D-vitaminpræparater (okt–apr)", de:"Beginnen Sie mit Vitamin-D-Präparaten (Okt.–Apr.)", fa:"مصرف مکمل ویتامین D را شروع کنید (اکتبر تا آوریل)", pl:"Zacznij suplementację witaminy D (paź.–kwi.)", uk:"Розпочніть прийом вітаміну D (жов.–квіт.)", ur:"وٹامن D کے سپلیمنٹس شروع کریں (اکتوبر–اپریل)" }, xp:10 },
+      { id:"ch14_community", text:{en:"Join one expat or newcomer community group", fr:"Rejoindre un groupe communautaire d'expatriés ou de nouveaux arrivants", ar:"الانضمام إلى مجموعة مجتمع المغتربين أو الوافدين الجدد", es:"Unirse a un grupo comunitario de expatriados o recién llegados", da:"Bliv medlem af en expat- eller nyankommergruppe", de:"Treten Sie einer Expat- oder Newcomer-Community bei", fa:"به یک گروه جامعه‌ی مهاجران یا تازه‌واردان بپیوندید", pl:"Dołącz do jednej grupy społeczności expat lub nowo przybyłych", uk:"Приєднайтесь до однієї групи спільноти експатів або новоприбулих", ur:"ایک ایکسپیٹ یا نیو کمر کمیونٹی گروپ میں شامل ہوں" }, xp:25 },
+      { id:"ch14_livslinjen", text:{en:"Save Livslinjen (70 201 201) in your phone — just in case", fr:"Enregistrer Livslinjen (70 201 201) dans votre téléphone — au cas où", ar:"احفظ رقم Livslinjen (70 201 201) في هاتفك — لمجرد الاحتياط", es:"Guardar Livslinjen (70 201 201) en tu teléfono — por si acaso", da:"Gem Livslinjen (70 201 201) i din telefon — bare for en sikkerheds skyld", de:"Speichern Sie Livslinjen (70 201 201) in Ihrem Handy — für den Notfall", fa:"شماره‌ی Livslinjen (۷۰ ۲۰۱ ۲۰۱) را در گوشی خود ذخیره کنید — برای مواقع ضروری", pl:"Zapisz Livslinjen (70 201 201) w telefonie — na wszelki wypadek", uk:"Збережіть Livslinjen (70 201 201) у телефоні — про всяк випадок", ur:"Livslinjen (70 201 201) اپنے فون میں محفوظ کریں — صرف احتیاطاً" }, xp:10 },
     ]
   },
   {
@@ -8853,7 +8853,7 @@ ur:`<p>ڈنمارک کی کام کی ثقافت بہبود کی حفاظت کے 
     sections: [
       {
         icon: "🛡️",
-        title: { en:"Anti-Discrimination Law in Denmark — What's Illegal", fr:"Loi anti-discrimination au Danemark — Ce qui est illégal", ar:"قانون مكافحة التمييز في الدنمارك — ما هو غير قانوني", es:"Ley antidiscriminación en Dinamarca — Qué es ilegal", da:"Antidiskriminationslovgivning i Danmark — hvad der er ulovligt" },
+        title: {en:"Anti-Discrimination Law in Denmark — What's Illegal", fr:"Loi anti-discrimination au Danemark — Ce qui est illégal", ar:"قانون مكافحة التمييز في الدنمارك — ما هو غير قانوني", es:"Ley antidiscriminación en Dinamarca — Qué es ilegal", da:"Antidiskriminationslovgivning i Danmark — hvad der er ulovligt", de:"Antidiskriminierungsgesetz in Dänemark — was verboten ist", fa:"قانون ضد تبعیض در دانمارک — چه چیزی غیرقانونی است", pl:"Ustawa antydyskryminacyjna w Danii — co jest nielegalne", uk:"Закон проти дискримінації в Данії — що є незаконним", ur:"ڈنمارک میں امتیازی سلوک کے خلاف قانون — کیا غیر قانونی ہے" },
         content: { en:`<p>Denmark has several overlapping laws that prohibit discrimination. Together, they cover most situations a newcomer might encounter.</p>
 <table class="info-table">
   <tr><th>Law</th><th>What it covers</th><th>Protected characteristics</th></tr>
@@ -8998,7 +8998,7 @@ de:`<p>Dänemark verfügt über mehrere einander ergänzende Gesetze, die Diskri
       },
       {
         icon: "🏠",
-        title: { en:"Tenant Rights — Your Housing is Protected by Law", fr:"Droits des locataires — Votre logement est protégé par la loi", ar:"حقوق المستأجرين — مسكنك محمي بموجب القانون", es:"Derechos del inquilino — Tu vivienda está protegida por la ley", da:"Lejerrettigheder — din bolig er beskyttet af loven" },
+        title: {en:"Tenant Rights — Your Housing is Protected by Law", fr:"Droits des locataires — Votre logement est protégé par la loi", ar:"حقوق المستأجرين — مسكنك محمي بموجب القانون", es:"Derechos del inquilino — Tu vivienda está protegida por la ley", da:"Lejerrettigheder — din bolig er beskyttet af loven", de:"Mieterrechte — Ihre Wohnung ist gesetzlich geschützt", fa:"حقوق مستأجران — مسکن شما توسط قانون محافظت می‌شود", pl:"Prawa najemcy — Twoje mieszkanie jest chronione prawem", uk:"Права орендаря — ваше житло захищене законом", ur:"کرایہ دار کے حقوق — آپ کی رہائش قانون کے ذریعے محفوظ ہے" },
         content: { en:`<p>Denmark has some of Europe's strongest tenant protections. Understanding them can save you significant money and stress.</p>
 <p><strong>Key rights as a tenant:</strong></p>
 <ul>
@@ -9124,7 +9124,7 @@ de:`<p>Dänemark verfügt über einige der stärksten Mieterschutzgesetze Europa
       },
       {
         icon: "👮",
-        title: { en:"Your Rights When Dealing with Danish Police", fr:"Vos droits face à la police danoise", ar:"حقوقك عند التعامل مع الشرطة الدنماركية", es:"Tus derechos al tratar con la policía danesa", da:"Dine rettigheder i kontakt med dansk politi" },
+        title: {en:"Your Rights When Dealing with Danish Police", fr:"Vos droits face à la police danoise", ar:"حقوقك عند التعامل مع الشرطة الدنماركية", es:"Tus derechos al tratar con la policía danesa", da:"Dine rettigheder i kontakt med dansk politi", de:"Ihre Rechte im Umgang mit der dänischen Polizei", fa:"حقوق شما هنگام برخورد با پلیس دانمارک", pl:"Twoje prawa w kontakcie z duńską policją", uk:"Ваші права при спілкуванні з данською поліцією", ur:"ڈینش پولیس سے نمٹنے میں آپ کے حقوق" },
         content: { en:`<p>Denmark's police (Politiet) generally have a good reputation for professionalism and restraint. But knowing your rights matters regardless.</p>
 <p><strong>If you are stopped by police:</strong></p>
 <ul>
@@ -9223,7 +9223,7 @@ de:`<p>Die dänische Polizei (Politiet) hat generell einen guten Ruf für Profes
       },
       {
         icon: "📜",
-        title: { en:"The Danish Ombudsman — When Government Gets It Wrong", fr:"L'Ombudsman danois — Quand le gouvernement se trompe", ar:"أمين المظالم الدنماركي — عندما تخطئ الحكومة", es:"El Defensor del Pueblo danés — Cuando el gobierno se equivoca", da:"Ombudsmanden — når myndighederne fejler" },
+        title: {en:"The Danish Ombudsman — When Government Gets It Wrong", fr:"L'Ombudsman danois — Quand le gouvernement se trompe", ar:"أمين المظالم الدنماركي — عندما تخطئ الحكومة", es:"El Defensor del Pueblo danés — Cuando el gobierno se equivoca", da:"Ombudsmanden — når myndighederne fejler", de:"Der dänische Ombudsmann — wenn der Staat einen Fehler macht", fa:"آمبودزمان دانمارک — وقتی دولت اشتباه می‌کند", pl:"Duński Ombudsman — gdy państwo popełni błąd", uk:"Данський омбудсмен — коли держава помиляється", ur:"ڈینش محتسب — جب حکومت غلطی کرے" },
         content: { en:`<p>The <strong>Folketingets Ombudsmand</strong> (Parliamentary Ombudsman) is an independent institution that investigates complaints about Danish public authorities — including immigration authorities, municipalities, hospitals, and police.</p>
 <p><strong>When to contact the Ombudsman:</strong></p>
 <ul>
@@ -9349,7 +9349,7 @@ de:`<p>Der <strong>Folketingets Ombudsmand</strong> (Parlamentarischer Ombudsman
       },
       {
         icon: "⚖️",
-        title: { en:"Free Legal Aid in Denmark — Getting Help You Can Afford", fr:"Aide juridique gratuite au Danemark — Obtenir une aide abordable", ar:"المساعدة القانونية المجانية في الدنمارك — الحصول على مساعدة يمكنك تحملها", es:"Asistencia jurídica gratuita en Dinamarca — Obtener ayuda que puedes permitirte", da:"Gratis retshjælp i Danmark — hjælp du har råd til" },
+        title: {en:"Free Legal Aid in Denmark — Getting Help You Can Afford", fr:"Aide juridique gratuite au Danemark — Obtenir une aide abordable", ar:"المساعدة القانونية المجانية في الدنمارك — الحصول على مساعدة يمكنك تحملها", es:"Asistencia jurídica gratuita en Dinamarca — Obtener ayuda que puedes permitirte", da:"Gratis retshjælp i Danmark — hjælp du har råd til", de:"Kostenlose Rechtsberatung in Dänemark — Hilfe, die Sie sich leisten können", fa:"کمک حقوقی رایگان در دانمارک — دریافت کمکی که از پس آن برمی‌آیید", pl:"Bezpłatna pomoc prawna w Danii — pomoc, na którą cię stać", uk:"Безкоштовна юридична допомога в Данії — допомога, яку ви можете собі дозволити", ur:"ڈنمارک میں مفت قانونی امداد — وہ مدد جو آپ کی استطاعت میں ہے" },
         content: { en:`<p>Legal help in Denmark is accessible even if you have a limited income, through several routes.</p>
 <p><strong>Retshjælp (civil legal aid):</strong></p>
 <ul>
@@ -9510,7 +9510,7 @@ de:`<p>Rechtliche Hilfe ist in Dänemark auch bei begrenztem Einkommen auf versc
       },
       {
         icon: "🌍",
-        title: { en:"Permit Renewals, Appeals & Protecting Your Status", fr:"Renouvellements de permis, recours et protection de votre statut", ar:"تجديد التصاريح والطعون وحماية وضعك", es:"Renovaciones de permisos, recursos y protección de tu estatus", da:"Fornyelse af opholdstilladelse, klager og beskyttelse af din status" },
+        title: {en:"Permit Renewals, Appeals & Protecting Your Status", fr:"Renouvellements de permis, recours et protection de votre statut", ar:"تجديد التصاريح والطعون وحماية وضعك", es:"Renovaciones de permisos, recursos y protección de tu estatus", da:"Fornyelse af opholdstilladelse, klager og beskyttelse af din status", de:"Verlängerungen, Widersprüche & der Schutz Ihres Aufenthaltsstatus", fa:"تمدید مجوزها، اعتراض‌ها و حفظ وضعیت قانونی شما", pl:"Przedłużenia pozwoleń, odwołania i ochrona Twojego statusu", uk:"Поновлення дозволів, апеляції та захист вашого статусу", ur:"اجازت ناموں کی تجدید، اپیلیں اور اپنی حیثیت کا تحفظ" },
         content: { en:`<p>Your right to stay in Denmark is the foundation of everything else. Protecting it proactively is essential.</p>
 <p><strong>Permit renewals — critical rules:</strong></p>
 <ul>
@@ -9650,11 +9650,11 @@ de:`<p>Ihr Aufenthaltsrecht in Dänemark ist die Grundlage für alles andere. Es
       }
     ],
     checklist: [
-      { id:"ch15_permit_date", text:{ en:"Set a calendar reminder to renew your permit 2 months before expiry", fr:"Définir un rappel calendrier pour renouveler votre permis 2 mois avant expiration", ar:"تعيين تذكير في التقويم لتجديد تصريحك قبل شهرين من انتهاء صلاحيته", es:"Establecer un recordatorio de calendario para renovar tu permiso 2 meses antes de su vencimiento", da:"Sæt en kalender-reminder til at forny dit opholdstilladelse 2 måneder inden udløb" }, xp:40 },
-      { id:"ch15_landlord", text:{ en:"Know your local Huslejenævnet contact in case of rental disputes", fr:"Connaître les coordonnées de votre Huslejenævnet local en cas de litiges locatifs", ar:"معرفة جهة اتصال Huslejenævnet المحلي في حالة نزاعات الإيجار", es:"Conocer el contacto de tu Huslejenævnet local en caso de disputas de alquiler", da:"Kend din lokale huslejenævnet i tilfælde af lejetvister" }, xp:15 },
-      { id:"ch15_discrimination", text:{ en:"Save Ligebehandlingsnævnet contact (ligebehandlingsnaevnet.dk)", fr:"Enregistrer le contact de Ligebehandlingsnævnet", ar:"حفظ معلومات الاتصال بـ Ligebehandlingsnævnet", es:"Guardar el contacto de Ligebehandlingsnævnet", da:"Gem Ligebehandlingsnævnets kontaktoplysninger" }, xp:10 },
-      { id:"ch15_legal_aid", text:{ en:"Find your nearest free legal aid office (retshjælp)", fr:"Trouver le bureau d'aide juridique gratuit le plus proche", ar:"إيجاد أقرب مكتب مساعدة قانونية مجانية", es:"Encontrar la oficina de asistencia jurídica gratuita más cercana", da:"Find din nærmeste gratis retshjælpskontor" }, xp:15 },
-      { id:"ch15_docs", text:{ en:"Organise all your legal documents: permit, contracts, payslips, tax returns", fr:"Organiser tous vos documents légaux: permis, contrats, fiches de paie, déclarations d'impôts", ar:"تنظيم جميع مستنداتك القانونية: التصريح والعقود وكشوف الرواتب والإقرارات الضريبية", es:"Organizar todos tus documentos legales: permiso, contratos, nóminas, declaraciones de impuestos", da:"Organiser alle dine juridiske dokumenter: tilladelse, kontrakter, lønsedler, årsopgørelser" }, xp:30 },
+      { id:"ch15_permit_date", text:{en:"Set a calendar reminder to renew your permit 2 months before expiry", fr:"Définir un rappel calendrier pour renouveler votre permis 2 mois avant expiration", ar:"تعيين تذكير في التقويم لتجديد تصريحك قبل شهرين من انتهاء صلاحيته", es:"Establecer un recordatorio de calendario para renovar tu permiso 2 meses antes de su vencimiento", da:"Sæt en kalender-reminder til at forny dit opholdstilladelse 2 måneder inden udløb", de:"Setzen Sie eine Kalendererinnerung, um Ihre Aufenthaltserlaubnis 2 Monate vor Ablauf zu verlängern", fa:"یادآوری تقویم تنظیم کنید تا ۲ ماه پیش از انقضا، مجوزتان را تمدید کنید", pl:"Ustaw przypomnienie w kalendarzu, by przedłużyć pozwolenie 2 miesiące przed wygaśnięciem", uk:"Поставте нагадування у календарі, щоб поновити дозвіл за 2 місяці до закінчення", ur:"ختم ہونے سے 2 ماہ پہلے اپنا اجازت نامہ تجدید کرنے کے لیے کیلنڈر یاد دہانی سیٹ کریں" }, xp:40 },
+      { id:"ch15_landlord", text:{en:"Know your local Huslejenævnet contact in case of rental disputes", fr:"Connaître les coordonnées de votre Huslejenævnet local en cas de litiges locatifs", ar:"معرفة جهة اتصال Huslejenævnet المحلي في حالة نزاعات الإيجار", es:"Conocer el contacto de tu Huslejenævnet local en caso de disputas de alquiler", da:"Kend din lokale huslejenævnet i tilfælde af lejetvister", de:"Kennen Sie Ihren lokalen Huslejenævnet-Kontakt für den Fall von Mietstreitigkeiten", fa:"اطلاعات تماس Huslejenævnet محلی خود را برای اختلافات اجاره‌ای بدانید", pl:"Zapisz kontakt do lokalnego Huslejenævnet na wypadek sporów najmu", uk:"Знайте контакти місцевого Huslejenævnet на випадок спорів щодо оренди", ur:"کرایہ کے تنازعات کی صورت میں اپنا مقامی Huslejenævnet رابطہ جان لیں" }, xp:15 },
+      { id:"ch15_discrimination", text:{en:"Save Ligebehandlingsnævnet contact (ligebehandlingsnaevnet.dk)", fr:"Enregistrer le contact de Ligebehandlingsnævnet", ar:"حفظ معلومات الاتصال بـ Ligebehandlingsnævnet", es:"Guardar el contacto de Ligebehandlingsnævnet", da:"Gem Ligebehandlingsnævnets kontaktoplysninger", de:"Speichern Sie den Kontakt von Ligebehandlingsnævnet (ligebehandlingsnaevnet.dk)", fa:"اطلاعات تماس Ligebehandlingsnævnet را ذخیره کنید (ligebehandlingsnaevnet.dk)", pl:"Zapisz kontakt do Ligebehandlingsnævnet (ligebehandlingsnaevnet.dk)", uk:"Збережіть контакти Ligebehandlingsnævnet (ligebehandlingsnaevnet.dk)", ur:"Ligebehandlingsnævnet کا رابطہ محفوظ کریں (ligebehandlingsnaevnet.dk)" }, xp:10 },
+      { id:"ch15_legal_aid", text:{en:"Find your nearest free legal aid office (retshjælp)", fr:"Trouver le bureau d'aide juridique gratuit le plus proche", ar:"إيجاد أقرب مكتب مساعدة قانونية مجانية", es:"Encontrar la oficina de asistencia jurídica gratuita más cercana", da:"Find din nærmeste gratis retshjælpskontor", de:"Finden Sie das nächstgelegene Büro für kostenlose Rechtsberatung (retshjælp)", fa:"نزدیک‌ترین دفتر کمک حقوقی رایگان (retshjælp) را پیدا کنید", pl:"Znajdź najbliższe biuro bezpłatnej pomocy prawnej (retshjælp)", uk:"Знайдіть найближчий офіс безкоштовної юридичної допомоги (retshjælp)", ur:"اپنا قریب ترین مفت قانونی امداد کا دفتر تلاش کریں (retshjælp)" }, xp:15 },
+      { id:"ch15_docs", text:{en:"Organise all your legal documents: permit, contracts, payslips, tax returns", fr:"Organiser tous vos documents légaux: permis, contrats, fiches de paie, déclarations d'impôts", ar:"تنظيم جميع مستنداتك القانونية: التصريح والعقود وكشوف الرواتب والإقرارات الضريبية", es:"Organizar todos tus documentos legales: permiso, contratos, nóminas, declaraciones de impuestos", da:"Organiser alle dine juridiske dokumenter: tilladelse, kontrakter, lønsedler, årsopgørelser", de:"Organisieren Sie alle Ihre Unterlagen: Aufenthaltserlaubnis, Verträge, Gehaltsabrechnungen, Steuererklärungen", fa:"همه‌ی مدارک قانونی خود را مرتب کنید: مجوز، قراردادها، فیش‌های حقوقی، اظهارنامه‌های مالیاتی", pl:"Uporządkuj wszystkie dokumenty prawne: pozwolenie, umowy, paski wypłat, zeznania podatkowe", uk:"Організуйте всі юридичні документи: дозвіл, контракти, платіжні відомості, податкові декларації", ur:"اپنی تمام قانونی دستاویزات کو منظم کریں: اجازت نامہ، معاہدے، پے سلپس، ٹیکس ریٹرنز" }, xp:30 },
     ]
   }
 ];

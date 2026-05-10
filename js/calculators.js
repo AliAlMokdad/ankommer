@@ -381,7 +381,26 @@ const Calculators = (() => {
 
   // Base costs for Copenhagen — other cities use a multiplier
   const CITY_MULTIPLIER = { cph: 1.0, aar: 0.84, ode: 0.76, aal: 0.73 };
-  const CITY_LABELS = { cph: 'Copenhagen', aar: 'Aarhus', ode: 'Odense', aal: 'Aalborg' };
+  // Localised city names so the salary-context sentence reads naturally in
+  // every supported language (otherwise non-English users see Latin city
+  // names interpolated into otherwise-translated copy).
+  const CITY_LABELS_I18N = {
+    en: { cph: 'Copenhagen',  aar: 'Aarhus', ode: 'Odense',  aal: 'Aalborg'  },
+    fr: { cph: 'Copenhague',  aar: 'Aarhus', ode: 'Odense',  aal: 'Aalborg'  },
+    ar: { cph: 'كوبنهاغن',     aar: 'آرهوس',  ode: 'أودنسه',   aal: 'ألبورغ'    },
+    es: { cph: 'Copenhague',  aar: 'Aarhus', ode: 'Odense',  aal: 'Aalborg'  },
+    da: { cph: 'København',   aar: 'Aarhus', ode: 'Odense',  aal: 'Aalborg'  },
+    de: { cph: 'Kopenhagen',  aar: 'Aarhus', ode: 'Odense',  aal: 'Aalborg'  },
+    uk: { cph: 'Копенгаген',  aar: 'Орхус',  ode: 'Оденсе',   aal: 'Ольборг'  },
+    pl: { cph: 'Kopenhaga',   aar: 'Aarhus', ode: 'Odense',  aal: 'Aalborg'  },
+    ur: { cph: 'کوپن ہیگن',    aar: 'آرہوس',  ode: 'اوڈنسے',    aal: 'آلبورگ'   },
+    fa: { cph: 'کپنهاگ',       aar: 'آرهوس',  ode: 'اودنسه',   aal: 'آلبورگ'   },
+  };
+  const cityLabel = (key) => {
+    const lang = window.currentLang || 'en';
+    return (CITY_LABELS_I18N[lang] || CITY_LABELS_I18N.en)[key]
+        || CITY_LABELS_I18N.en[key];
+  };
 
   const APT_COSTS = { // CPH base rent
     room:   4500,
@@ -456,7 +475,7 @@ const Calculators = (() => {
 
     calcBtn.addEventListener('click', () => {
       const mult = CITY_MULTIPLIER[selectedCity];
-      const city = CITY_LABELS[selectedCity];
+      const city = cityLabel(selectedCity);
 
       const aptKey   = document.getElementById('col-apt')?.value || '1bed';
       const transKey = document.getElementById('col-transport')?.value || 'public';
@@ -558,17 +577,37 @@ const Calculators = (() => {
   /* ══════════════════════════════════════════════════════
      3. VISA DECISION TREE
   ══════════════════════════════════════════════════════ */
+  // Pull a translatable field from a VISA_TREE node — every visible
+  // string is now a {en, fr, ar, …} map. Falls back to English if the
+  // active language lacks an entry. Plain strings are returned as-is so
+  // links/values that aren't user-visible still work.
+  const vt = (field) => {
+    if (field == null) return '';
+    if (typeof field === 'string') return field;
+    const lang = window.currentLang || 'en';
+    return field[lang] || field.en || '';
+  };
+  // Inline translations for VISA fallback labels — small enough to keep
+  // here rather than mint dedicated CALC_I18N keys.
+  const VISA_LBL = {
+    learn_more: { en:'Learn more →', fr:'En savoir plus →', ar:'اعرف المزيد ←', es:'Más información →', da:'Læs mere →',
+                  de:'Mehr erfahren →', uk:'Дізнатися більше →', pl:'Dowiedz się więcej →', ur:'مزید جانیں ←', fa:'بیشتر بدانید ←' },
+    start_over: { en:'Start over', fr:'Recommencer', ar:'البدء من جديد', es:'Empezar de nuevo', da:'Start forfra',
+                  de:'Neu beginnen', uk:'Почати спочатку', pl:'Zacznij od nowa', ur:'دوبارہ شروع کریں', fa:'شروع دوباره' },
+  };
+  const vtl = (k) => VISA_LBL[k]?.[window.currentLang || 'en'] || VISA_LBL[k]?.en || k;
+
   const renderVisaNode = (node, container) => {
     container.innerHTML = '';
 
     if (node.result) {
       container.innerHTML = `
         <div class="visa-result">
-          <h4>✅ ${node.title}</h4>
-          <p>${node.description}</p>
-          ${node.link ? `<a href="${node.link}" target="_blank" rel="noopener">${node.linkText || 'Learn more →'}</a>` : ''}
+          <h4>✅ ${vt(node.title)}</h4>
+          <p>${vt(node.description)}</p>
+          ${node.link ? `<a href="${node.link}" target="_blank" rel="noopener">${vt(node.linkText) || vtl('learn_more')}</a>` : ''}
         </div>
-        <span class="visa-reset" id="visa-reset">← Start over</span>
+        <span class="visa-reset" id="visa-reset">← ${vtl('start_over')}</span>
       `;
       document.getElementById('visa-reset')?.addEventListener('click', () => initVisaTree());
       return;
@@ -579,7 +618,7 @@ const Calculators = (() => {
 
     const q = document.createElement('p');
     q.className = 'visa-question';
-    q.textContent = node.question;
+    q.textContent = vt(node.question);
     div.appendChild(q);
 
     const opts = document.createElement('div');
@@ -589,7 +628,7 @@ const Calculators = (() => {
       node.options.forEach(opt => {
         const btn = document.createElement('button');
         btn.className = 'visa-opt-btn';
-        btn.textContent = opt.label;
+        btn.textContent = vt(opt.label);
         btn.addEventListener('click', () => {
           if (opt.result !== undefined) {
             renderVisaNode(opt, container);
@@ -621,6 +660,16 @@ const Calculators = (() => {
     if (!body) return;
     renderVisaNode(VISA_TREE, body);
   };
+
+  // Re-render the Visa Decision Tree when the user switches language so
+  // its question + option labels track the active locale instead of
+  // staying stuck in whatever language was active at first paint. The
+  // residency calculator and other tools already reset themselves via
+  // their input handlers, so they don't need a langChange listener.
+  window.addEventListener('langChange', () => {
+    const body = document.getElementById('visa-tree-body');
+    if (body) initVisaTree();
+  });
 
   /* ══════════════════════════════════════════════════════
      4. RESIDENCY TIMELINE CALCULATOR

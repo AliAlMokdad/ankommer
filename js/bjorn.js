@@ -844,11 +844,23 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
 
   /* ── OPEN / CLOSE ────────────────────────────────────── */
   let _focusTrap = null;
+  let _escHandler = null;
 
   const open = () => {
     const widget = document.getElementById('bjorn-widget');
     if (widget) widget.classList.remove('closed');
     isOpen = true;
+    // Document-scope ESC handler — the FocusTrap onEscape only fires when
+    // focus is INSIDE the panel; if the user clicks somewhere else after
+    // opening Björn (or doesn't click at all), focus may not be in the
+    // panel and ESC wouldn't reach the trap. This catches it everywhere.
+    _escHandler = (e) => {
+      if (e.key === 'Escape' && isOpen) {
+        e.preventDefault();
+        close();
+      }
+    };
+    document.addEventListener('keydown', _escHandler);
 
     // On mobile: show backdrop + lock body scroll so page doesn't scroll behind panel
     if (window.matchMedia('(max-width: 600px)').matches) {
@@ -908,6 +920,11 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     // Tear down focus trap and restore focus to the toggle button
     _focusTrap?.deactivate();
     _focusTrap = null;
+    // Remove document-scope ESC handler
+    if (_escHandler) {
+      document.removeEventListener('keydown', _escHandler);
+      _escHandler = null;
+    }
     const toggleBtn = document.getElementById('bjorn-toggle');
     if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
     // Reset any keyboard-adjusted inline styles (Visual Viewport API)

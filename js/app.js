@@ -692,16 +692,41 @@ const XPSystem = {
 ══════════════════════════════════════════════════════ */
 let wizardState = { step: 0, answers: {}, direction: 'forward' };
 
-const STEP_NAMES = ['Timeline', 'Purpose', 'Location', 'Household', 'Passport', 'Concerns'];
+/* Wizard step names — per-language so they don't show as English words
+   wedged into otherwise-translated step labels. Indexed by step number
+   (0..5) matching WIZARD_QUESTIONS order. */
+const STEP_NAMES_I18N = {
+  en: ['Timeline',     'Purpose',    'Location',     'Household',     'Passport',  'Concerns'],
+  fr: ['Calendrier',   'Objectif',   'Lieu',         'Foyer',         'Passeport', 'Inquiétudes'],
+  ar: ['الجدول الزمني', 'الغرض',      'الموقع',        'الأسرة',        'جواز السفر', 'المخاوف'],
+  es: ['Calendario',   'Propósito',  'Ubicación',    'Hogar',         'Pasaporte', 'Preocupaciones'],
+  da: ['Tidsplan',     'Formål',     'Placering',    'Husstand',      'Pas',       'Bekymringer'],
+  de: ['Zeitplan',     'Zweck',      'Ort',          'Haushalt',      'Pass',      'Sorgen'],
+  uk: ['Часова шкала', 'Мета',       'Місце',        'Сім’я',         'Паспорт',   'Хвилювання'],
+  pl: ['Harmonogram',  'Cel',        'Lokalizacja',  'Gospodarstwo',  'Paszport',  'Obawy'],
+  ur: ['ٹائم لائن',     'مقصد',      'مقام',          'گھرانہ',         'پاسپورٹ',   'فکریں'],
+  fa: ['زمان‌بندی',    'هدف',        'موقعیت',       'خانوار',        'پاسپورت',   'نگرانی‌ها'],
+};
+const stepName = (idx) => {
+  const lang = window.currentLang || 'en';
+  return (STEP_NAMES_I18N[lang] || STEP_NAMES_I18N.en)[idx] || STEP_NAMES_I18N.en[idx] || '';
+};
 
 const Wizard = {
 
   _focusTrap: null,
 
+  _escHandler: null,
+
   open: () => {
     const overlay = document.getElementById('wizard-overlay');
     if (!overlay) return;
     overlay.classList.remove('hidden');
+    // Lock body scroll on phones so iOS rubber-band can't scroll the page
+    // behind the opaque overlay (matches rail / Björn / search behaviour).
+    if (window.matchMedia('(max-width: 600px)').matches) {
+      document.body.style.overflow = 'hidden';
+    }
     wizardState = { step: 0, answers: {}, direction: 'forward' };
     // Reset progress wrap visibility
     const pw = document.getElementById('wiz-progress-wrap');
@@ -710,9 +735,20 @@ const Wizard = {
     const res = document.getElementById('wizard-result');
     if (res) res.classList.add('hidden');
     Wizard.renderStep(0);
-    // Activate focus trap (Escape closes, Tab cycles inside modal)
+    // Activate focus trap (Tab cycles inside modal)
     Wizard._focusTrap = FocusTrap(overlay, { onEscape: Wizard.close });
     Wizard._focusTrap.activate(document.activeElement);
+    // Belt-and-suspenders: the FocusTrap's keydown listener is scoped to
+    // the overlay, so an ESC keypress while focus is on document.body
+    // (which can happen mid-session) wouldn't reach it. Catch ESC at the
+    // document scope while the wizard is open.
+    Wizard._escHandler = (e) => {
+      if (e.key === 'Escape' && !document.getElementById('wizard-overlay').classList.contains('hidden')) {
+        e.preventDefault();
+        Wizard.close();
+      }
+    };
+    document.addEventListener('keydown', Wizard._escHandler);
     // Defer initial focus to first focusable element so screen readers announce it
     requestAnimationFrame(() => {
       const first = overlay.querySelector('button:not([disabled]), [tabindex]:not([tabindex="-1"])');
@@ -726,6 +762,13 @@ const Wizard = {
     // Tear down focus trap and restore focus to opener
     Wizard._focusTrap?.deactivate();
     Wizard._focusTrap = null;
+    // Remove document-scope ESC handler
+    if (Wizard._escHandler) {
+      document.removeEventListener('keydown', Wizard._escHandler);
+      Wizard._escHandler = null;
+    }
+    // Release body scroll lock (safe to clear unconditionally)
+    document.body.style.overflow = '';
     // Animate out before hiding
     overlay.classList.add('closing');
     setTimeout(() => {
@@ -743,7 +786,7 @@ const Wizard = {
     const fillEl    = document.getElementById('wiz-bar-fill');
 
     const _wl = window.currentLang || 'en';
-    if (labelEl) labelEl.textContent = `${t_('wizStep', _wl, stepIndex + 1, total)} · ${STEP_NAMES[stepIndex] || ''}`;
+    if (labelEl) labelEl.textContent = `${t_('wizStep', _wl, stepIndex + 1, total)} · ${stepName(stepIndex)}`;
     if (pctEl)   pctEl.textContent   = pct > 0 ? t_('wizPct', _wl, pct) : '';
     if (fillEl)  fillEl.style.width  = pct + '%';
 
@@ -1145,7 +1188,7 @@ const buildRailNav = () => {
     const isActive = AppState.currentChapter === i;
     // Show "Start here →" badge only on first chapter during first visit
     const startHint = (isFirstVisit && i === 0)
-      ? `<span class="rail-start-hint">Start here →</span>`
+      ? `<span class="rail-start-hint">${TRANSLATIONS[lang]?.rail_start_here || TRANSLATIONS.en.rail_start_here}</span>`
       : '';
 
     return `<button class="rail-item ${isActive ? 'active' : ''} ${isComplete ? 'completed' : ''}"
@@ -1373,7 +1416,7 @@ const _loadFullChapters = () => {
   if (_chaptersLoadPromise) return _chaptersLoadPromise;
   _chaptersLoadPromise = new Promise((resolve) => {
     const s = document.createElement('script');
-    s.src = 'js/data-chapters.js?v=29';
+    s.src = 'js/data-chapters.js?v=30';
     s.onload = () => { _chaptersFullLoaded = true; resolve(); };
     s.onerror = () => resolve(); // fail gracefully — content just won't show
     document.head.appendChild(s);
@@ -1970,10 +2013,21 @@ const StatsTracker = (() => {
     return v;
   };
 
-  /* Show cached value immediately, then fetch real value if needed */
+  /* Show cached value immediately, then fetch real value if needed.
+     Audit found the placeholder `—` lingered when there was no cached
+     value, which read as broken on the marketing hero. We now seed
+     each stat with a sensible non-zero starting value so the hero
+     always shows a number, then animate to live counts on top. */
+  const STAT_SEED = { 'visitors': 1, 'bjorn-questions': 0 };
   const showCached = (elId, key) => {
+    const el = document.getElementById(elId);
+    if (!el) return;
     const cached = localGet(key);
-    if (cached > 0) animateTo(document.getElementById(elId), cached);
+    const v = cached > 0 ? cached : (STAT_SEED[key] || 0);
+    // Replace the `—` placeholder with the value (animated if positive,
+    // straight-set if zero so we don't tick "0 → 0" needlessly).
+    if (v > 0) animateTo(el, v);
+    else el.textContent = '0';
   };
 
   /* Count visitor once per browser session */
@@ -2003,7 +2057,7 @@ const StatsTracker = (() => {
   };
 
   const init = () => {
-    // Show cached counts instantly while async calls run
+    // Show cached counts instantly (or fall back to seed) while async runs
     showCached('stat-visitors',  'visitors');
     showCached('stat-bjorn', 'bjorn-questions');
     // Then fire live updates
@@ -2029,7 +2083,6 @@ const initMobileSidebar = () => {
   // chapter" inside chapters. The hamburger is display:none above 768px,
   // so .click()-ing it silently fails on tablets.
   window.openChapterRail = () => {
-    if (rail?.classList.contains('open')) return;
     // First, dismiss any other open mobile modal that shares the overlay
     // so we never end up with two stacked panels.
     const langSel = document.querySelector('.lang-selector');
@@ -2042,6 +2095,16 @@ const initMobileSidebar = () => {
     if (window.matchMedia('(max-width: 1024px)').matches) {
       document.getElementById('mobile-overlay')?.classList.add('visible');
       document.body.style.overflow = 'hidden';
+    } else {
+      // On desktop (>=1024px) the rail is already visible as a sidebar,
+      // so adding `.open` is a no-op visually. Scroll the rail into view
+      // and pulse-highlight the rail header so the user sees WHERE the
+      // chapter list lives — otherwise "Pick another chapter" feels
+      // broken (audit: Maria reported it "scrolled to top instead of
+      // opening a picker"). The pulse class is removed automatically.
+      rail?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      rail?.classList.add('pulse-attn');
+      setTimeout(() => rail?.classList.remove('pulse-attn'), 1400);
     }
   };
 
@@ -2076,7 +2139,14 @@ const initMobileSidebar = () => {
 ══════════════════════════════════════════════════════ */
 const hideLoader = () => {
   setTimeout(() => {
-    document.getElementById('loader')?.classList.add('done');
+    const el = document.getElementById('loader');
+    if (!el) return;
+    el.classList.add('done');
+    // Remove the loader from the DOM after the fade-out transition so
+    // the position:fixed full-screen z-index:9999 node can't catch
+    // hover/scroll events on slow devices. Matches the 600ms transition
+    // declared on #loader.done.
+    setTimeout(() => { el.remove(); }, 700);
   }, 1800);
 };
 
@@ -2113,26 +2183,40 @@ const initLangButtons = () => {
   const _isPhone  = () => window.matchMedia('(max-width: 600px)').matches;
   const _closeLang = () => {
     selector?.classList.remove('open');
+    selector?.setAttribute('aria-expanded', 'false');
     _overlay()?.classList.remove('visible');
     // Always release the body lock — even if it wasn't us who set it,
     // the close path is the safe place to clear it.
     if (_isPhone()) document.body.style.overflow = '';
   };
+  const _toggleLang = () => {
+    const opening = !selector.classList.contains('open');
+    selector.classList.toggle('open', opening);
+    selector.setAttribute('aria-expanded', opening ? 'true' : 'false');
+    if (_isPhone()) {
+      _overlay()?.classList.toggle('visible', opening);
+      document.body.style.overflow = opening ? 'hidden' : '';
+    }
+    // When opening via keyboard, move focus into the menu so arrow/tab navigation works.
+    if (opening) {
+      const firstBtn = selector.querySelector('.lang-btn');
+      // Defer focus a tick so the dropdown is rendered/visible first.
+      setTimeout(() => firstBtn?.focus(), 0);
+    }
+  };
   if (selector) {
     selector.addEventListener('click', (e) => {
       // Toggle when click lands on the selector itself or its ::before
       // pill (not a lang-btn inside the dropdown menu).
-      if (!e.target.closest('.lang-btn')) {
-        const opening = !selector.classList.contains('open');
-        selector.classList.toggle('open', opening);
-        // Only show the full-screen dim on phones — desktop dropdown is
-        // small enough that an outside click is sufficient.
-        if (_isPhone()) {
-          _overlay()?.classList.toggle('visible', opening);
-          // Lock body scroll so the page doesn't scroll behind the dim
-          // (matches the rail / Björn / search behaviour on phone).
-          document.body.style.overflow = opening ? 'hidden' : '';
-        }
+      if (!e.target.closest('.lang-btn')) _toggleLang();
+    });
+    // Keyboard support: Enter/Space on the pill opens/closes the dropdown.
+    // Without this, Tab can reach the pill but it has no way to expand.
+    selector.addEventListener('keydown', (e) => {
+      if (e.target !== selector) return; // ignore when focus is on inner lang-btns
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        _toggleLang();
       }
     });
     // Close after picking a language. Use closest() so this also fires
@@ -2365,11 +2449,20 @@ const Search = (() => {
     buildIndex();
     overlay.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
-    // Use two rAF frames so the overlay is painted before focus — prevents dropped keystrokes
+    // Defer focus so the overlay is painted first — prevents dropped
+    // keystrokes. Belt-and-suspenders: two rAF frames AND a timeout
+    // fallback because audit found the rAF path occasionally raced with
+    // the click event handler returning focus to the trigger.
     requestAnimationFrame(() => requestAnimationFrame(() => {
       input?.focus();
       input?.select();
     }));
+    setTimeout(() => {
+      if (document.activeElement !== input) {
+        input?.focus();
+        input?.select();
+      }
+    }, 100);
     render([], '');
     // Focus trap: Tab cycles inside, Escape closes, focus returns to trigger
     focusTrap = FocusTrap(overlay, { onEscape: close });
@@ -2391,9 +2484,19 @@ const Search = (() => {
     document.getElementById('search-open-btn')?.addEventListener('click', open);
     document.getElementById('search-backdrop')?.addEventListener('click', close);
 
-    // Ctrl+K / Cmd+K — Escape is handled by FocusTrap when overlay is open
+    // Ctrl+K / Cmd+K opens. Belt-and-suspenders Escape close: the
+    // FocusTrap's keydown only fires when focus is inside the overlay,
+    // but Maria reported ESC sometimes failing — likely focus escaping
+    // to the body in some edge case. Listen at document scope too.
     document.addEventListener('keydown', (e) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); open(); }
+      else if (e.key === 'Escape') {
+        const overlay = document.getElementById('search-overlay');
+        if (overlay && !overlay.classList.contains('hidden')) {
+          e.preventDefault();
+          close();
+        }
+      }
     });
 
     // Input handler

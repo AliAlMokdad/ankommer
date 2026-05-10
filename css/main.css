@@ -553,6 +553,17 @@ body.app-active .sky-water-shimmer,
 body.app-active .hero-skyline-wrap::before {
   animation-play-state: paused;
 }
+/* Hide the marketing sections while reading a chapter so scrolling up from
+   the chapter view doesn't reveal "Your First Year" / preview grid / tools
+   / daily / footer-top above and below the chapter content. The simplified
+   minimal footer (#main-footer .footer-inner) stays visible at the bottom. */
+body.app-active #timeline-section,
+body.app-active #chapters-preview-section,
+body.app-active #tools-section,
+body.app-active #daily-section,
+body.app-active .footer-top {
+  display: none !important;
+}
 
 .hero-sky {
   position: absolute; inset: 0;
@@ -578,6 +589,16 @@ body.app-active .hero-skyline-wrap::before {
 }
 [data-time="night"] .hero-stars,
 [data-time="evening"] .hero-stars { opacity: 1; }
+/* Pause the 150 star-twinkle animations when stars are invisible — they
+   were running 24/7 even during the day, costing CPU and battery for
+   nothing. Same for the 11 window-flicker animations on the skyline,
+   which are only visible at night. */
+.hero-stars > div { animation-play-state: paused; }
+[data-time="night"] .hero-stars > div,
+[data-time="evening"] .hero-stars > div { animation-play-state: running; }
+.sky-window { animation-play-state: paused; }
+[data-time="night"] .sky-window,
+[data-time="evening"] .sky-window { animation-play-state: running; }
 
 .hero-aurora {
   position: absolute; top: 0; left: 0; right: 0;
@@ -750,6 +771,12 @@ body.app-active .hero-skyline-wrap::before {
 @keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
 /* Wizard close animation — applied via JS before adding .hidden */
 .wizard-overlay.closing { animation: fade-out 0.25s ease forwards; pointer-events: none; }
+/* Same fix as the Björn panel: when the wizard is open (overlay not
+   hidden, not closing), force the modal's transform to identity so any
+   residual animation transform doesn't leave children at 91% size. */
+.wizard-overlay:not(.hidden):not(.closing) .wizard-modal {
+  transform: scale(1) translateY(0) !important;
+}
 
 .wizard-modal {
   background: var(--bg-card);
@@ -1111,6 +1138,19 @@ body.app-active .hero-skyline-wrap::before {
   display: none !important;
 }
 
+/* Pulse-attention animation — fired on the rail when the user clicks
+   "Pick another chapter" on desktop (where the rail is already visible
+   as a sidebar). Briefly outlines the rail to draw the eye there
+   instead of leaving the click feeling like a no-op. */
+.chapter-rail.pulse-attn {
+  animation: pulse-attn 1.4s ease-out;
+}
+@keyframes pulse-attn {
+  0%   { box-shadow: 0 0 0 0 rgba(198, 12, 48, 0.6); }
+  35%  { box-shadow: 0 0 0 8px rgba(198, 12, 48, 0.0); }
+  100% { box-shadow: 0 0 0 0 rgba(198, 12, 48, 0); }
+}
+
 /* Chapter rail */
 .chapter-rail {
   position: fixed;
@@ -1159,6 +1199,18 @@ body.app-active .hero-skyline-wrap::before {
   border-left-color: var(--ch-accent);
   background: var(--bg-secondary);
   font-weight: 600;
+}
+/* RTL: rail sits on the right edge of the screen, so the active-chapter
+   accent bar should land on the right (screen edge), not on the inside
+   left edge. Mirror the border declarations. */
+[dir="rtl"] .rail-item {
+  border-left: none;
+  border-right: 3px solid transparent;
+  text-align: right;
+}
+[dir="rtl"] .rail-item.active {
+  border-left-color: transparent;
+  border-right-color: var(--ch-accent);
 }
 .rail-item.completed { color: var(--sage); }
 .rail-item.completed .rail-check { opacity: 1; }
@@ -1949,6 +2001,15 @@ body.app-active .hero-skyline-wrap::before {
   pointer-events: none;
 }
 .bjorn-widget.closed .bjorn-panel { display: none; }
+/* Phone QA round 2: when the panel is OPEN (not closing, not closed), the
+   transform from any prior animation must reset to identity. Without this
+   rule the close animation's `forwards` fill could leave the panel at a
+   residual scale that visually shrinks all child controls (audit measured
+   children at 35×35 instead of 44×44 because of a stuck transform). The
+   overriding rule has higher specificity (3 classes) and wins. */
+.bjorn-widget:not(.closed):not(.closing) .bjorn-panel {
+  transform: scale(1) !important;
+}
 
 .bjorn-panel-header {
   display: flex; align-items: center; gap: 12px;
@@ -2200,6 +2261,24 @@ body.app-active .hero-skyline-wrap::before {
   /* Lang selector is now a pill+dropdown at all sizes — no inline-chip
      overrides needed below 768px. */
   .bjorn-nav-btn span { display: none; }
+  /* Tighten the nav so all items fit inside a 375px viewport. Audit
+     measured the hamburger sitting ~50–100px past the right edge with
+     the original gaps + full-width icon buttons. */
+  #main-nav { gap: 4px; padding-left: max(8px, env(safe-area-inset-left));
+              padding-right: max(8px, env(safe-area-inset-right)); }
+  .nav-right { gap: 2px; }
+}
+/* The Björn nav button is redundant on phones — the floating Björn FAB
+   in the bottom-right corner already opens the same panel. Hiding it
+   reclaims ~54px of horizontal nav space and lets the hamburger fit. */
+@media (max-width: 600px) {
+  /* !important needed because the 44×44 tap-target rule below at L3608
+     re-asserts `display: inline-flex` on .bjorn-nav-btn to enforce
+     touch sizing — and that rule's @media (max-width: 768px) ALSO
+     matches at phone widths, so its later source order would otherwise
+     win. Using !important here documents the intent: on phones, the
+     Björn nav button is hidden, period. */
+  .bjorn-nav-btn { display: none !important; }
   .bjorn-panel { width: calc(100vw - 32px); right: 0; }
   .tools-grid { grid-template-columns: 1fr; padding: 0 16px; }
   .stories-grid { grid-template-columns: 1fr; padding: 0 16px; }
@@ -3553,13 +3632,52 @@ body.app-active .hero-skyline-wrap::before {
   .tl-chapter-btn,
   .nav-logo,
   .bjorn-nav-btn,
-  .hamburger {
+  .hamburger,
+  .rating-btn,
+  .print-chapter-btn,
+  .ask-bjorn-btn,
+  .rail-item,
+  .ch-end-btn,
+  .wizard-skip,
+  /* Phone QA round 2: bump every Björn / Wizard control that the audit
+     measured under 44px. They live inside modals so their original sizes
+     were tuned for desktop visual density. */
+  .bjorn-icon-btn,
+  .bjorn-close-btn,
+  .quick-btn,
+  .wiz-back-btn,
+  .wizard-close,
+  .hero-browse-btn,
+  .lang-btn {
     min-width: 44px;
     min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    /* Inside flex containers (Björn header is `display: flex`), children
+     with min-height alone can still shrink below 44 because the parent's
+     auto cross-size + `align-items: center` lets browsers ignore the
+     min-height constraint when squeezing for space. flex-shrink:0 +
+     explicit height forces 44px. */
+    flex-shrink: 0;
   }
+  /* The Björn icon row needs items to be EXACTLY 44 tall so the header
+     row sizes correctly around them. Use !important to beat the L2013
+     base rule that tightens padding. */
+  .bjorn-icon-btn,
+  .bjorn-close-btn { width: 44px !important; height: 44px !important; padding: 0 !important; }
+  /* Björn input textarea — single-line, was 31px. Bump to 44 so it's
+     tappable. line-height keeps text vertically centred. */
+  .bjorn-input-area textarea { min-height: 44px !important; line-height: 1.5; padding: 12px 14px; }
+  /* Quick-prompt chips: white-space:nowrap + tight padding meant a 21px
+     tall pill. Force a comfortable hit area. */
+  .quick-btn { padding: 12px 14px !important; min-height: 44px !important; }
+  /* Wizard close button — explicit 44 not just min, since it's in an
+     absolute position context. */
+  .wizard-close { width: 44px !important; height: 44px !important; }
+  /* Wizard back/skip — add vertical padding since they're text buttons. */
+  .wiz-back-btn { padding: 12px 14px !important; }
+  .wizard-skip { padding: 12px 14px !important; min-height: 44px; }
   /* Lang chips need a bit more breathing room when forced to 44px */
   .lang-btn { padding: 6px 10px; }
   /* Logo: keep its natural width but bump height to a 44px tap target */
@@ -3823,6 +3941,12 @@ body { overflow-wrap: break-word; }
   .footer-top {
     display: none !important;
   }
+  /* The "my roadmap" strip is sticky and floats over the hero on the
+     simplified phone home, so hide it there. It's still useful in chapter
+     mode (body.app-active) where it sits above the chapter content. */
+  body:not(.app-active) .my-roadmap-strip {
+    display: none !important;
+  }
   /* Tighten the now-standalone footer so it doesn't look orphaned */
   #main-footer .footer-inner {
     padding-top: 24px;
@@ -4079,7 +4203,11 @@ body { overflow-wrap: break-word; }
   .hero-title      { font-size: 1.55rem; }
   .nav-logo        { font-size: 1.1rem; }
   .info-table th, .info-table td { font-size: 0.75rem; padding: 6px 8px; }
-  .check-item      { padding: 10px 12px; }
+  /* Audit found the checkbox itself is only 22×22 — too small to feel
+     tappable. The whole <li> is the click target via onclick, so just
+     ensure the row has at least a 44px-tall tap area on phones. */
+  .check-item      { padding: 14px 12px; min-height: 44px; }
+  .check-box       { width: 26px; height: 26px; }
   .col-city-tab    { min-width: 60px; font-size: 0.72rem; padding: 6px 8px; }
   .weather-grid    { grid-template-columns: 1fr 1fr; }
   .jobs-boards-grid{ grid-template-columns: 1fr; }
