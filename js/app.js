@@ -1958,18 +1958,30 @@ window.openBjorn = () => Bjorn.open();
 
 /* Skip-to-content link: <a href="#main-content"> alone scrolls but
    doesn't move keyboard focus, because <main> isn't focusable by
-   default. <main> now has tabindex="-1" (HTML), and this listener
-   programmatically calls .focus() so screen-reader and keyboard users
-   actually land inside the main content after activating the link. */
+   default. <main> now has tabindex="-1" (HTML), but on home the <main>
+   sits inside app-layout.hidden — focus(.) on a hidden element is a
+   no-op. So we pick the right target dynamically: in chapter mode →
+   <main>; on home → the hero. The hero gets a programmatic tabindex
+   on first activation so it's focusable without leaving a stray attr
+   in the HTML. */
 document.addEventListener('DOMContentLoaded', () => {
   const skip = document.querySelector('.skip-to-content');
-  const main = document.getElementById('main-content');
-  if (skip && main) {
-    skip.addEventListener('click', (e) => {
-      // Let the browser scroll, then yank focus next tick.
-      requestAnimationFrame(() => main.focus({ preventScroll: true }));
-    });
-  }
+  if (!skip) return;
+  skip.addEventListener('click', (e) => {
+    e.preventDefault();
+    const main = document.getElementById('main-content');
+    const app  = document.getElementById('app-layout');
+    const hero = document.getElementById('hero');
+    let target = main;
+    // If chapter mode isn't active OR app-layout is hidden, focus hero.
+    if (!app || app.classList.contains('hidden') || !document.body.classList.contains('app-active')) {
+      target = hero;
+    }
+    if (!target) return;
+    if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    requestAnimationFrame(() => target.focus({ preventScroll: true }));
+  });
 });
 
 /* ══════════════════════════════════════════════════════
