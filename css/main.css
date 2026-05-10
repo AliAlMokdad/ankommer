@@ -1190,7 +1190,13 @@ body.app-active .footer-top {
   display: flex; align-items: center; gap: 10px;
   padding: 10px 20px;
   cursor: pointer;
-  color: var(--text-muted);
+  /* Use full --text instead of --text-muted so inactive chapters don't
+     look "faded out" next to the home + active rows. Audit caught the
+     rail looking like a "mix of highlighted and not" because non-active
+     items used a muted purple-gray that read as disabled. The active row
+     still stands out via the accent border + accent colour + bold weight,
+     not by being the only legible row. */
+  color: var(--text);
   font-size: 0.85rem; font-weight: 500;
   transition: all var(--t-fast);
   border-left: 3px solid transparent;
@@ -1202,7 +1208,7 @@ body.app-active .footer-top {
   line-height: inherit;
   position: relative;
 }
-.rail-item:hover { color: var(--text); background: var(--bg-secondary); }
+.rail-item:hover { background: var(--bg-secondary); }
 .rail-item.active {
   color: var(--ch-accent);
   border-left-color: var(--ch-accent);
