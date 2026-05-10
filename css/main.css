@@ -1720,7 +1720,10 @@ body.app-active .footer-top {
 .visa-result h4 { color: var(--sage); margin-bottom: 6px; }
 .visa-result p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
 .visa-result a { color: var(--nordic-blue); }
-.visa-reset { font-size: 0.8rem; color: var(--text-muted); cursor: pointer; text-decoration: underline; margin-top: 10px; display: inline-block; }
+/* Now a <button> (was <span>) so keyboard users can Tab to it. Reset
+   the default button chrome to keep the existing link-style appearance. */
+.visa-reset { font-size: 0.8rem; color: var(--text-muted); cursor: pointer; text-decoration: underline; margin-top: 10px; display: inline-block; background: none; border: none; padding: 0; font-family: inherit; }
+.visa-reset:hover { color: var(--text); }
 
 /* Residency result */
 .res-timeline {
