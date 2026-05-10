@@ -1979,8 +1979,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (!target) return;
     if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+    // Focus FIRST (synchronous), then scroll. Earlier order (scroll →
+    // rAF → focus) failed because the smooth-scroll animation seemed to
+    // interfere with focus() in some Chromium builds — focus would
+    // silently bail back to <body>. Synchronous focus is rock-solid.
+    target.focus({ preventScroll: true });
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    requestAnimationFrame(() => target.focus({ preventScroll: true }));
   });
 });
 
