@@ -4139,10 +4139,19 @@ body { overflow-wrap: break-word; }
   }
 }
 
-/* Björn panel: width:calc(100vw - 32px) on iOS includes the scrollbar
-   width, causing horizontal overflow. Use percentage instead. */
+/* Björn panel sizing on mobile. Using calc(100% - 32px) was wrong: the
+   panel's parent is `.bjorn-widget` which is just 64px wide (the FAB),
+   so 100% resolved to 64px and the panel rendered at 32px wide — only
+   the icon column visible on the right edge. Use 100vw for the
+   intended "fill the viewport minus 32px" sizing, OR 100dvw on
+   browsers that support it (excludes mobile URL-bar collapse jitter). */
 @media (max-width: 768px) {
-  .bjorn-panel { width: calc(100% - 32px); right: 16px; left: auto; }
+  .bjorn-panel { width: calc(100vw - 32px); right: 16px; left: auto; }
+}
+@supports (width: 100dvw) {
+  @media (max-width: 768px) {
+    .bjorn-panel { width: calc(100dvw - 32px); }
+  }
 }
 
 /* Chapter page: 40px horizontal padding on a 360px viewport leaves
