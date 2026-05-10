@@ -430,6 +430,16 @@ const i18n = {
     });
     i18n.applyAll();
     if (AppState.currentChapter !== null) renderChapter(AppState.currentChapter);
+    // Wizard step label, question, options, and step-name suffix are all
+    // language-derived. If the wizard is open while the user switches
+    // language, re-render so its UI tracks (audit caught: step label
+    // stayed "Step 1 of 6 · Timeline" in English while the rest of the
+    // page rendered in Polish).
+    if (typeof Wizard !== 'undefined' &&
+        document.getElementById('wizard-overlay') &&
+        !document.getElementById('wizard-overlay').classList.contains('hidden')) {
+      Wizard.renderStep(wizardState?.step ?? 0);
+    }
     renderChaptersPreview();
     RoadmapStrip.refresh();
     updateDailyFeed();
@@ -668,6 +678,13 @@ const ThemeManager = {
   set: (theme) => {
     document.documentElement.setAttribute('data-theme', theme);
     safeSetItem('ankommer_theme', theme);
+    // Sync the OS-level theme-color (iOS Safari address bar, Android
+    // Chrome status bar, PWA standalone titlebar) to the active theme.
+    // Audit caught: the meta tag was hardcoded to #C60C30 (red), so the
+    // Safari address bar stayed red even in dark mode and matched
+    // neither colour scheme cleanly. Now the bar follows the bg.
+    const tc = document.querySelector('meta[name="theme-color"]');
+    if (tc) tc.setAttribute('content', theme === 'dark' ? '#0F1B2D' : '#F5F2EC');
     const btn = document.getElementById('theme-toggle');
     if (btn) {
       // aria-pressed reflects "dark mode is currently active"
