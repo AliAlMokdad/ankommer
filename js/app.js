@@ -299,12 +299,17 @@ const FocusTrap = (container, { onEscape } = {}) => {
 window.FocusTrap = FocusTrap;
 
 /* ── XP RANKS ──────────────────────────────────────── */
+/* `label` was originally Danish-only and shown to users in every locale.
+   Now each rank carries a per-language label; helpers below pick the
+   right one based on window.currentLang. */
 const XP_RANKS = [
-  { min:0,    label:'Nybegynder',       en:'Newcomer' },
-  { min:100,  label:'Indvandrer',       en:'Settler' },
-  { min:300,  label:'Bosiddende',       en:'Resident' },
-  { min:600,  label:'Dansker i Sjælen', en:'Dane at Heart' },
+  { min:0,    en:'Newcomer',     fr:'Nouveau venu',  ar:'وافد جديد',     es:'Recién llegado',  da:'Nybegynder',       de:'Neuankömmling',  uk:'Новачок',     pl:'Nowicjusz',     ur:'نووارد',        fa:'تازه‌وارد' },
+  { min:100,  en:'Settler',      fr:'Installé',      ar:'مستقر',         es:'Asentado',        da:'Indvandrer',       de:'Siedler',        uk:'Оселений',     pl:'Osadnik',       ur:'آباد',         fa:'ساکن' },
+  { min:300,  en:'Resident',     fr:'Résident',      ar:'مقيم',          es:'Residente',       da:'Bosiddende',       de:'Bewohner',       uk:'Резидент',     pl:'Rezydent',      ur:'مقیم',         fa:'مقیم' },
+  { min:600,  en:'Dane at Heart',fr:'Danois de cœur',ar:'دنماركي القلب', es:'Danés de corazón',da:'Dansker i Sjælen', de:'Däne im Herzen', uk:'Данець у душі', pl:'Duńczyk sercem',ur:'دل سے ڈینش',    fa:'دانمارکی در دل' },
 ];
+/* Pick the active-language label for a rank object */
+const xpRankLabel = (rank) => rank[window.currentLang || 'en'] || rank.en || rank.label || '';
 
 /* ══════════════════════════════════════════════════════
    i18n — TRANSLATION ENGINE
@@ -373,6 +378,10 @@ const i18n = {
     renderChaptersPreview();
     RoadmapStrip.refresh();
     updateDailyFeed();
+    // Refresh the XP rank label — it's per-language now
+    if (typeof XPSystem !== 'undefined' && XPSystem.updateUI) XPSystem.updateUI();
+    // Refresh the timeline feed — task labels and aria-labels are per-language
+    if (typeof updateDailyFeed === 'function') updateDailyFeed();
     window.dispatchEvent(new CustomEvent('langChange', { detail: lang }));
   }
 };
@@ -642,7 +651,8 @@ const XPSystem = {
     if (xpDisplay) xpDisplay.textContent = AppState.xp;
 
     const rank = XPSystem.getRank();
-    if (xpRank) xpRank.textContent = rank.label;
+    const rankLabel = xpRankLabel(rank);
+    if (xpRank) xpRank.textContent = rankLabel;
 
     // Progress within current rank
     const rankIndex = XP_RANKS.indexOf(rank);
@@ -656,10 +666,11 @@ const XPSystem = {
     if (xpMotivate) {
       if (nextRank) {
         const xpNeeded = nextRank.min - AppState.xp;
-        xpMotivate.textContent = `${xpNeeded} Viking Points → ${nextRank.label}`;
+        const nextLabel = xpRankLabel(nextRank);
+        xpMotivate.textContent = `${xpNeeded} Viking Points → ${nextLabel}`;
         xpMotivate.style.display = '';
         // Tooltip on the rank badge itself
-        if (xpRank) xpRank.title = `${AppState.xp} VP · ${xpNeeded} more to reach ${nextRank.label} (${nextRank.en})`;
+        if (xpRank) xpRank.title = `${AppState.xp} VP · ${xpNeeded} more to reach ${nextLabel}`;
       } else {
         xpMotivate.textContent = '🇩🇰 Max rank reached!';
         xpMotivate.style.display = '';
@@ -1305,7 +1316,7 @@ const renderChapter = (index) => {
           <span class="chapter-meta-tag">${t_('readTime', lang, ch.readTime || '10 min')}</span>
           <span class="chapter-meta-tag">${allTasks.length} ${t_('tasks', lang)}</span>
           ${pct === 100 ? `<span class="chapter-meta-tag" style="background:rgba(106,158,106,0.15);color:var(--sage)">${t_('complete', lang)}</span>` : ''}
-          ${ch.lastUpdated ? `<span class="chapter-meta-tag chapter-meta-updated" title="Last reviewed">🛠 ${ch.lastUpdated}</span>` : ''}
+          ${ch.lastUpdated ? `<span class="chapter-meta-tag chapter-meta-updated" title="${ {en:'Last reviewed',fr:'Dernière révision',ar:'آخر مراجعة',es:'Última revisión',da:'Sidst opdateret',de:'Zuletzt geprüft',uk:'Востаннє переглянуто',pl:'Ostatnio sprawdzono',ur:'آخری جائزہ',fa:'آخرین بررسی'}[lang] || 'Last reviewed' }">🛠 ${ch.lastUpdated}</span>` : ''}
         </div>
       </div>
       ${fallbackNotice}
@@ -1322,10 +1333,10 @@ const renderChapter = (index) => {
       </div>
 
       <div class="chapter-actions-row">
-        <button class="print-chapter-btn" onclick="window.print()" title="Print this chapter">
+        <button class="print-chapter-btn" onclick="window.print()" title="${ {en:'Print this chapter',fr:'Imprimer ce chapitre',ar:'طباعة هذا الفصل',es:'Imprimir este capítulo',da:'Print dette kapitel',de:'Dieses Kapitel drucken',uk:'Друк цього розділу',pl:'Drukuj ten rozdział',ur:'یہ باب پرنٹ کریں',fa:'چاپ این فصل'}[lang] || 'Print this chapter' }">
           🖨️ ${{ en:'Print Chapter', fr:'Imprimer', ar:'طباعة', es:'Imprimir', da:'Print kapitel', de:'Kapitel drucken', uk:'Друк розділу', pl:'Drukuj rozdział', ur:'باب پرنٹ کریں', fa:'چاپ فصل' }[lang] || 'Print Chapter'}
         </button>
-        <button class="print-chapter-btn" onclick="printChecklist()" title="Print full checklist">
+        <button class="print-chapter-btn" onclick="printChecklist()" title="${ {en:'Print full checklist',fr:'Imprimer la liste complète',ar:'طباعة القائمة الكاملة',es:'Imprimir lista completa',da:'Print hele tjeklisten',de:'Komplette Checkliste drucken',uk:'Друк повного списку',pl:'Drukuj pełną listę',ur:'مکمل چیک لسٹ پرنٹ کریں',fa:'چاپ چک‌لیست کامل'}[lang] || 'Print full checklist' }">
           📋 ${{ en:'Print My Checklist', fr:'Imprimer ma liste', ar:'طباعة قائمتي', es:'Imprimir mi lista', da:'Print min tjekliste', de:'Meine Checkliste drucken', uk:'Друк мого списку', pl:'Drukuj moją listę', ur:'میری چیک لسٹ پرنٹ کریں', fa:'چاپ چک‌لیست من' }[lang] || 'Print My Checklist'}
         </button>
       </div>
@@ -1396,7 +1407,11 @@ window.openChapter = (index) => {
     // Show app layout immediately so the UI isn't frozen
     showAppLayout();
     const main = document.getElementById('main-content');
-    if (main) main.innerHTML = `<div style="padding:3rem;text-align:center;opacity:.6">Loading chapter…</div>`;
+    if (main) {
+      const lang = window.currentLang || 'en';
+      const loadingMsg = {en:'Loading chapter…',fr:'Chargement du chapitre…',ar:'جارٍ تحميل الفصل…',es:'Cargando capítulo…',da:'Indlæser kapitel…',de:'Kapitel wird geladen…',uk:'Завантаження розділу…',pl:'Wczytywanie rozdziału…',ur:'باب لوڈ ہو رہا ہے…',fa:'در حال بارگذاری فصل…'}[lang] || 'Loading chapter…';
+      main.innerHTML = `<div style="padding:3rem;text-align:center;opacity:.6">${loadingMsg}</div>`;
+    }
     _loadFullChapters().then(() => _finishOpenChapter(index));
     return;
   }
@@ -1474,10 +1489,12 @@ const ChapterRating = (() => {
       return `<div class="rating-thanks">${existing === 1 ? '👍' : '👎'} ${{ en:'Feedback recorded', fr:'Commentaire enregistré', ar:'تم تسجيل الملاحظة', es:'Opinión registrada', da:'Feedback registreret' }[lang] || 'Feedback recorded'}</div>`;
     }
     const label = { en:'Was this chapter helpful?', fr:'Ce chapitre était-il utile ?', ar:'هل كان هذا الفصل مفيداً؟', es:'¿Fue útil este capítulo?', da:'Var dette kapitel nyttigt?' }[lang] || 'Was this chapter helpful?';
+    const yesT = {en:'Yes',fr:'Oui',ar:'نعم',es:'Sí',da:'Ja',de:'Ja',uk:'Так',pl:'Tak',ur:'ہاں',fa:'بله'}[lang] || 'Yes';
+    const noT  = {en:'No',fr:'Non',ar:'لا',es:'No',da:'Nej',de:'Nein',uk:'Ні',pl:'Nie',ur:'نہیں',fa:'خیر'}[lang] || 'No';
     return `<div class="rating-prompt">
       <span class="rating-label">${label}</span>
-      <button class="rating-btn" onclick="ChapterRating.rate(${chapterIndex}, 1)" title="Yes">👍</button>
-      <button class="rating-btn" onclick="ChapterRating.rate(${chapterIndex}, 0)" title="No">👎</button>
+      <button class="rating-btn" onclick="ChapterRating.rate(${chapterIndex}, 1)" title="${yesT}" aria-label="${yesT}">👍</button>
+      <button class="rating-btn" onclick="ChapterRating.rate(${chapterIndex}, 0)" title="${noT}" aria-label="${noT}">👎</button>
     </div>`;
   };
 
@@ -1721,8 +1738,17 @@ window.goHome = window.scrollToTop;
 ══════════════════════════════════════════════════════ */
 window.printChecklist = () => {
   const lang = window.currentLang || 'en';
+  // Translated print headers (everything visible in the printed document,
+  // including the browser-tab <title> below)
+  const PRINT_T = {
+    title:    { en:'My Denmark Checklist', fr:'Ma Liste pour le Danemark', ar:'قائمتي للدنمارك', es:'Mi Lista de Dinamarca', da:'Min Danmarks-tjekliste', de:'Meine Dänemark-Checkliste', uk:'Мій список для Данії', pl:'Moja lista dla Danii', ur:'ڈنمارک کی میری چیک لسٹ', fa:'چک‌لیست دانمارک من' },
+    printed:  { en:'Printed from ANKOMMER', fr:'Imprimé depuis ANKOMMER', ar:'طُبع من ANKOMMER', es:'Impreso desde ANKOMMER', da:'Udskrevet fra ANKOMMER', de:'Gedruckt aus ANKOMMER', uk:'Надруковано з ANKOMMER', pl:'Wydrukowano z ANKOMMER', ur:'ANKOMMER سے پرنٹ کیا گیا', fa:'چاپ شده از ANKOMMER' },
+    done:     { en:'done', fr:'effectué', ar:'منجز', es:'listo', da:'klaret', de:'erledigt', uk:'виконано', pl:'wykonane', ur:'مکمل', fa:'انجام شد' },
+    footer:   { en:'ANKOMMER · Your life in Denmark. Chapter by chapter.', fr:'ANKOMMER · Votre vie au Danemark. Chapitre par chapitre.', ar:'ANKOMMER · حياتك في الدنمارك. فصلاً تلو الآخر.', es:'ANKOMMER · Tu vida en Dinamarca. Capítulo a capítulo.', da:'ANKOMMER · Dit liv i Danmark. Kapitel for kapitel.', de:'ANKOMMER · Dein Leben in Dänemark. Kapitel für Kapitel.', uk:'ANKOMMER · Ваше життя в Данії. Розділ за розділом.', pl:'ANKOMMER · Twoje życie w Danii. Rozdział po rozdziale.', ur:'ANKOMMER · ڈنمارک میں آپ کی زندگی۔ باب در باب۔', fa:'ANKOMMER · زندگی شما در دانمارک. فصل به فصل.' }
+  };
+  const _pt = (key) => PRINT_T[key][lang] || PRINT_T[key].en;
   const lines = [];
-  lines.push(`<html><head><meta charset="utf-8"><title>My Denmark Checklist — ANKOMMER</title>`);
+  lines.push(`<html><head><meta charset="utf-8"><title>${_pt('title')} — ANKOMMER</title>`);
   lines.push(`<style>
     body{font-family:Georgia,serif;max-width:680px;margin:40px auto;color:#1a1a2e;line-height:1.6}
     h1{font-size:1.6rem;color:#C60C30;border-bottom:2px solid #C60C30;padding-bottom:8px}
@@ -1735,15 +1761,6 @@ window.printChecklist = () => {
     .meta{font-size:0.8rem;color:#888;margin-top:40px;border-top:1px solid #eee;padding-top:12px}
     @media print{body{margin:20px}}
   </style></head><body>`);
-  // Translated print headers (everything visible in the printed document)
-  const PRINT_T = {
-    title:    { en:'My Denmark Checklist', fr:'Ma Liste pour le Danemark', ar:'قائمتي للدنمارك', es:'Mi Lista de Dinamarca', da:'Min Danmarks-tjekliste', de:'Meine Dänemark-Checkliste', uk:'Мій список для Данії', pl:'Moja lista dla Danii', ur:'ڈنمارک کی میری چیک لسٹ', fa:'چک‌لیست دانمارک من' },
-    printed:  { en:'Printed from ANKOMMER', fr:'Imprimé depuis ANKOMMER', ar:'طُبع من ANKOMMER', es:'Impreso desde ANKOMMER', da:'Udskrevet fra ANKOMMER', de:'Gedruckt aus ANKOMMER', uk:'Надруковано з ANKOMMER', pl:'Wydrukowano z ANKOMMER', ur:'ANKOMMER سے پرنٹ کیا گیا', fa:'چاپ شده از ANKOMMER' },
-    done:     { en:'done', fr:'effectué', ar:'منجز', es:'listo', da:'klaret', de:'erledigt', uk:'виконано', pl:'wykonane', ur:'مکمل', fa:'انجام شد' },
-    footer:   { en:'ANKOMMER · Your life in Denmark. Chapter by chapter.', fr:'ANKOMMER · Votre vie au Danemark. Chapitre par chapitre.', ar:'ANKOMMER · حياتك في الدنمارك. فصلاً تلو الآخر.', es:'ANKOMMER · Tu vida en Dinamarca. Capítulo a capítulo.', da:'ANKOMMER · Dit liv i Danmark. Kapitel for kapitel.', de:'ANKOMMER · Dein Leben in Dänemark. Kapitel für Kapitel.', uk:'ANKOMMER · Ваше життя в Данії. Розділ за розділом.', pl:'ANKOMMER · Twoje życie w Danii. Rozdział po rozdziale.', ur:'ANKOMMER · ڈنمارک میں آپ کی زندگی۔ باب در باب۔', fa:'ANKOMMER · زندگی شما در دانمارک. فصل به فصل.' }
-  };
-  const _pt = (key) => PRINT_T[key][lang] || PRINT_T[key].en;
-
   lines.push(`<h1>🇩🇰 ${_pt('title')}</h1>`);
   lines.push(`<p style="color:#888;font-size:0.85rem">${_pt('printed')} · ankommer.org · ${new Date().toLocaleDateString()}</p>`);
 
@@ -1792,10 +1809,15 @@ window.copyToolResult = (containerId) => {
   if (!el) return;
   // Extract plain text — strip HTML tags
   const text = el.innerText || el.textContent || '';
+  const lang = window.currentLang || 'en';
+  const COPY_T = {
+    success: { en:'Result copied to clipboard ✓', fr:'Résultat copié ✓', ar:'تم النسخ ✓', es:'Copiado al portapapeles ✓', da:'Kopieret til udklipsholder ✓', de:'In Zwischenablage kopiert ✓', uk:'Скопійовано ✓', pl:'Skopiowano ✓', ur:'کلپ بورڈ پر کاپی کر دیا گیا ✓', fa:'در کلیپ‌بورد کپی شد ✓' },
+    fail:    { en:'Copy failed — try selecting the text manually', fr:'Échec de la copie — sélectionnez le texte manuellement', ar:'فشل النسخ — حاول تحديد النص يدوياً', es:'Error al copiar — selecciona el texto manualmente', da:'Kopiering mislykkedes — vælg teksten manuelt', de:'Kopieren fehlgeschlagen — Text manuell auswählen', uk:'Помилка копіювання — виділіть текст вручну', pl:'Kopiowanie nie powiodło się — zaznacz ręcznie', ur:'کاپی ناکام — متن دستی طور پر منتخب کریں', fa:'کپی نشد — متن را دستی انتخاب کنید' }
+  };
   navigator.clipboard.writeText(text.trim()).then(() => {
-    App.showToast('Result copied to clipboard ✓', 'success');
+    App.showToast(COPY_T.success[lang] || COPY_T.success.en, 'success');
   }).catch(() => {
-    App.showToast('Copy failed — try selecting the text manually', 'error');
+    App.showToast(COPY_T.fail[lang] || COPY_T.fail.en, 'error');
   });
 };
 
@@ -1864,7 +1886,7 @@ const renderChaptersPreview = () => {
       class="ch-preview-card"
       onclick="openChapter(${ch.id})"
       style="--ch-color: ${ch.color || 'var(--nordic-blue)'}"
-      aria-label="Chapter ${ch.id + 1}: ${title}"
+      aria-label="${t_('chapterWord', lang)} ${ch.id + 1}: ${title}"
     >
       <div class="ch-preview-icon">${ch.icon}</div>
       <div class="ch-preview-num">${i18n.t('chapter_label')} ${num}</div>
@@ -2640,9 +2662,12 @@ const Timeline = (() => {
         </div>
         <p class="tl-phase-desc">${phaseDesc}</p>
         <ul class="tl-task-list">
-          ${data.tasks.map(t => `
+          ${data.tasks.map(t => {
+            const markDone = {en:'Mark done',fr:'Marquer comme fait',ar:'تحديد كمنجز',es:'Marcar como hecho',da:'Marker som færdig',de:'Als erledigt markieren',uk:'Позначити виконаним',pl:'Oznacz jako zrobione',ur:'مکمل کا نشان لگائیں',fa:'علامت‌گذاری انجام شد'}[lang] || 'Mark done';
+            const openCh   = {en:'Open chapter',fr:'Ouvrir le chapitre',ar:'افتح الفصل',es:'Abrir capítulo',da:'Åbn kapitel',de:'Kapitel öffnen',uk:'Відкрити розділ',pl:'Otwórz rozdział',ur:'باب کھولیں',fa:'باز کردن فصل'}[lang] || 'Open chapter';
+            return `
             <li class="tl-task ${completedTasks[t.id] ? 'done' : ''} ${t.urgent ? 'urgent' : ''}" data-id="${t.id}" data-chapter="${t.chapter}">
-              <button class="tl-check-btn" aria-label="Mark done" onclick="Timeline.toggle('${t.id}')">
+              <button class="tl-check-btn" aria-label="${markDone}" onclick="Timeline.toggle('${t.id}')">
                 ${completedTasks[t.id] ? '✓' : ''}
               </button>
               <div class="tl-task-body">
@@ -2650,9 +2675,9 @@ const Timeline = (() => {
                 <span class="tl-task-text">${t.text[lang] || t.text.en}</span>
                 ${t.urgent ? `<span class="tl-urgent-badge">${urgentLabel}</span>` : ''}
               </div>
-              <button class="tl-chapter-btn" onclick="openChapter(${t.chapter})" title="Open chapter">→</button>
-            </li>
-          `).join('')}
+              <button class="tl-chapter-btn" onclick="openChapter(${t.chapter})" title="${openCh}" aria-label="${openCh}">→</button>
+            </li>`;
+          }).join('')}
         </ul>
       </div>
     `;
