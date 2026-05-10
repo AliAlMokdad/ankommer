@@ -1318,15 +1318,17 @@ const renderChapter = (index) => {
 
   const sectionsHtml = (ch.sections || []).map((sec, si) => `
     <div class="chapter-section" id="ch-sec-${index}-${si}">
-      <button class="section-toggle"
-              onclick="toggleSection('ch-sec-${index}-${si}')"
-              aria-expanded="false"
-              aria-controls="ch-sec-body-${index}-${si}">
-        <span class="section-toggle-icon">${sec.icon || '📌'}</span>
-        <span>${sec.title[lang] || sec.title.en || sec.title}</span>
-        <span class="section-toggle-arrow" aria-hidden="true">▼</span>
-      </button>
-      <div class="section-body" id="ch-sec-body-${index}-${si}" role="region">
+      <h3 class="section-heading">
+        <button class="section-toggle"
+                onclick="toggleSection('ch-sec-${index}-${si}')"
+                aria-expanded="false"
+                aria-controls="ch-sec-body-${index}-${si}">
+          <span class="section-toggle-icon" aria-hidden="true">${sec.icon || '📌'}</span>
+          <span>${sec.title[lang] || sec.title.en || sec.title}</span>
+          <span class="section-toggle-arrow" aria-hidden="true">▼</span>
+        </button>
+      </h3>
+      <div class="section-body" id="ch-sec-body-${index}-${si}" role="region" aria-labelledby="ch-sec-${index}-${si}-heading">
         ${sec.content[lang] || sec.content.en || sec.content}
       </div>
     </div>
@@ -1411,7 +1413,7 @@ const renderChapter = (index) => {
       <div class="chapter-header">
         <div class="chapter-num">${t_('chapterWord', lang)} ${index} · ${ch.subtitle[lang] || ch.subtitle.en}</div>
         <div class="chapter-icon">${ch.icon}</div>
-        <h1 class="chapter-title">${ch.title[lang] || ch.title.en}</h1>
+        <h2 class="chapter-title">${ch.title[lang] || ch.title.en}</h2>
         <p class="chapter-intro">${ch.intro[lang] || ch.intro.en}</p>
         <div class="chapter-meta">
           <span class="chapter-meta-tag">${t_('readTime', lang, ch.readTime || '10 min')}</span>
@@ -1953,6 +1955,22 @@ const App = {
 window.App = App;
 window.Wizard = Wizard;
 window.openBjorn = () => Bjorn.open();
+
+/* Skip-to-content link: <a href="#main-content"> alone scrolls but
+   doesn't move keyboard focus, because <main> isn't focusable by
+   default. <main> now has tabindex="-1" (HTML), and this listener
+   programmatically calls .focus() so screen-reader and keyboard users
+   actually land inside the main content after activating the link. */
+document.addEventListener('DOMContentLoaded', () => {
+  const skip = document.querySelector('.skip-to-content');
+  const main = document.getElementById('main-content');
+  if (skip && main) {
+    skip.addEventListener('click', (e) => {
+      // Let the browser scroll, then yank focus next tick.
+      requestAnimationFrame(() => main.focus({ preventScroll: true }));
+    });
+  }
+});
 
 /* ══════════════════════════════════════════════════════
    SCROLL ANIMATIONS (Intersection Observer)

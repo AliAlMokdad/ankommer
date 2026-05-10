@@ -203,7 +203,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=52" />
+  <link rel="stylesheet" href="css/main.css?v=53" />
 </head>
 <body>
 
@@ -267,7 +267,9 @@
 </nav>
 
 <!-- ═══════════════════════════════════ HERO SECTION ═══════════════════════════════════ -->
-<section id="hero">
+<!-- aria-labelledby ties this landmark to the H1 inside it so SR users
+     hear "Either way — we've got you. region" instead of just "region". -->
+<section id="hero" aria-labelledby="hero-line3">
   <!-- Animated sky gradient -->
   <div class="hero-sky" id="hero-sky"></div>
 
@@ -481,7 +483,10 @@
 <div id="app-layout" class="app-layout hidden">
 
   <!-- Chapter rail / sidebar -->
-  <aside class="chapter-rail" id="chapter-rail" aria-label="Chapter navigation">
+  <!-- Was <aside> — now <nav> since the rail is purely a chapter list.
+       Also adds the navigation landmark to the page's a11y outline so
+       screen-reader users can jump straight to it. -->
+  <nav class="chapter-rail" id="chapter-rail" aria-label="Chapter navigation">
     <div class="rail-header" data-i18n="rail_header">Your Journey</div>
     <nav class="rail-nav" id="rail-nav" aria-label="Chapters">
       <!-- Populated by JS -->
@@ -493,10 +498,14 @@
       <div class="xp-rank" id="xp-rank">Nybegynder</div>
       <div class="xp-motivate" id="xp-motivate" style="display:none"></div>
     </div>
-  </aside>
+  </nav>
 
   <!-- Main content -->
-  <main class="main-content" id="main-content">
+  <main class="main-content" id="main-content" tabindex="-1">
+    <!-- tabindex="-1" makes <main> programmatically focusable so the
+         skip-to-content link actually moves keyboard focus there
+         (browser default: clicking an in-page anchor scrolls but
+         doesn't move focus to non-focusable targets). -->
     <!-- Chapter content injected here by JS -->
   </main>
 
@@ -810,7 +819,10 @@
       <div class="tool-body">
         <div class="tool-field">
           <label for="res-arrival-date" data-i18n="tool_res_arrival">Arrival date in Denmark</label>
-          <input type="date" id="res-arrival-date" />
+          <!-- min/max guard against absurd dates that break the residency
+               math (e.g. year 1900 or 2150). Allow back to 1990 (long-term
+               residents) and forward 2 years (planning ahead). -->
+          <input type="date" id="res-arrival-date" min="1990-01-01" max="2028-12-31" />
         </div>
         <div class="tool-field">
           <label for="res-permit-type" data-i18n="tool_res_type">Permit type</label>
@@ -835,7 +847,10 @@
       <div class="tool-body">
         <div class="tool-field">
           <label for="cal-arrival-date" data-i18n="tool_cal_arrival">Your arrival date in Denmark</label>
-          <input type="date" id="cal-arrival-date" />
+          <!-- Calendar download is for upcoming arrivals — allow today
+               back 1 year (recent arrivals still have CPR/MitID deadlines)
+               through 2 years forward (planning ahead). -->
+          <input type="date" id="cal-arrival-date" min="2024-01-01" max="2028-12-31" />
         </div>
         <button class="btn-primary" id="cal-download-btn" data-i18n="tool_cal_download">⬇ Download my calendar (.ics)</button>
         <p style="font-size:0.8rem;color:var(--text-muted);margin-top:10px" data-i18n="tool_cal_note">Works with Apple Calendar, Google Calendar, Outlook, and most phones. Each deadline includes a reminder before it's due.</p>
@@ -1091,7 +1106,7 @@
 <script defer src="js/bjorn.js?v=37"></script>
 <script defer src="js/calculators.js?v=31"></script>
 <script defer src="js/apis.js?v=28"></script>
-<script defer src="js/app.js?v=49"></script>
+<script defer src="js/app.js?v=50"></script>
 <!-- Shared backdrop for mobile modals (lang dropdown, Björn panel) -->
 <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 </body>

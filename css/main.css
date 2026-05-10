@@ -154,6 +154,10 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  /* Match body's overflow-x: hidden so iOS Safari doesn't get into
+     stuck-horizontal-scroll states when the body lock is briefly
+     released (e.g. between a modal closing and the next opening). */
+  overflow-x: hidden;
 }
 
 body {
@@ -1356,6 +1360,13 @@ body.app-active .footer-top {
 .chapter-section:hover { box-shadow: var(--shadow-sm); }
 .chapter-section.open { box-shadow: var(--shadow-md); }
 
+/* Section heading wraps the button in <h3> for proper heading semantics
+   without changing the visual layout. Strip the default heading styles
+   so the button continues to render as the toggle. */
+.section-heading {
+  margin: 0; padding: 0;
+  font-size: inherit; font-weight: inherit; line-height: inherit;
+}
 .section-toggle {
   width: 100%;
   display: flex; align-items: center; gap: 14px;
@@ -1365,6 +1376,7 @@ body.app-active .footer-top {
   color: var(--text);
   text-align: left; font-size: 1rem; font-weight: 600;
   transition: background var(--t-fast);
+  font-family: inherit;
 }
 .section-toggle:hover { background: var(--bg-secondary); }
 .section-toggle-icon { font-size: 1.2rem; flex-shrink: 0; }
