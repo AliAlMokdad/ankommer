@@ -3700,6 +3700,9 @@ body.app-active .footer-top {
      area without changing the visual line-height of the surrounding text. */
   .footer-founder-link { display: inline-flex; align-items: center;
                          min-height: 44px; padding: 10px 4px; }
+  /* Footer privacy <details> widget — make the summary a 44 px tap
+     target on phone too. */
+  .footer-privacy summary { min-height: 44px; padding: 10px 0; }
   /* Lang chips need a bit more breathing room when forced to 44px */
   .lang-btn { padding: 6px 10px; }
   /* Logo: keep its natural width but bump height to a 44px tap target */
@@ -3707,6 +3710,38 @@ body.app-active .footer-top {
   /* Hamburger sits as a flex container of bars — keep child centring */
   .hamburger { padding: 12px; flex-direction: column; gap: 4px; }
 }
+
+/* Footer privacy notice — collapsible <details> below the legal line.
+   Audit caught the absence of a privacy disclosure; users with
+   localStorage state deserve to know it's there. */
+.footer-privacy {
+  margin-top: 8px;
+  font-size: 0.78rem;
+  color: var(--text-faint);
+}
+.footer-privacy summary {
+  cursor: pointer;
+  display: inline-block;
+  padding: 4px 0;
+  color: var(--text-muted);
+  font-weight: 500;
+  list-style: none;
+}
+.footer-privacy summary::-webkit-details-marker { display: none; }
+.footer-privacy summary::before {
+  content: '▸';
+  display: inline-block;
+  margin-right: 6px;
+  transition: transform var(--t-fast);
+}
+.footer-privacy[open] summary::before { transform: rotate(90deg); }
+.footer-privacy p {
+  margin-top: 8px;
+  max-width: 70ch;
+  line-height: 1.55;
+}
+[dir="rtl"] .footer-privacy summary::before { content: '◂'; margin-right: 0; margin-left: 6px; }
+[dir="rtl"] .footer-privacy[open] summary::before { transform: rotate(-90deg); }
 
 /* ── Universal press feedback ──────────────────────────────────────
    Subtle scale-down on :active for primary interactive elements. The

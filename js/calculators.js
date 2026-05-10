@@ -307,7 +307,14 @@ const Calculators = (() => {
       }
 
       const r = calcSalary(grossInput.value, muniSelect?.value || '25.10');   // 2025 national avg
-      if (!r) return;
+      // Audit caught: invalid input ("abc", "-1000", "0") made calcSalary
+      // return null and the handler returned silently — leaving the donut
+      // at "—" with no feedback. Now we show the same enterSalary toast
+      // so the user knows their input wasn't a positive number.
+      if (!r) {
+        window.App?.showToast(t('enterSalary'), 'warning');
+        return;
+      }
 
       // Draw donut + cache for theme redraw
       lastDonut = { id:'salary-donut', net:r.net, tax:r.totalTax, gross:r.gross };

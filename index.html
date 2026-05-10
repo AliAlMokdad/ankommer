@@ -51,6 +51,13 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="ANKOMMER" />
   <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+  <!-- Browsers fall back to /favicon.ico when no rel="icon" is declared.
+       Audit caught a 404 on /favicon.ico (still hit by RSS readers, some
+       social platforms, default Chromium tab refresh). These rel="icon"
+       links point browsers at the existing PNG icons so the default-
+       favicon fetch never happens. -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png" />
   <meta name="theme-color" content="#C60C30" />
   <script>
     // Register service worker and prompt user when a new version is ready.
@@ -203,7 +210,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=53" />
+  <link rel="stylesheet" href="css/main.css?v=54" />
 </head>
 <body>
 
@@ -949,6 +956,14 @@
       <div class="footer-bottom-left">
         <p class="footer-made" data-i18n="footer_made">Made with ❤️ for everyone who ever arrived somewhere new.</p>
         <p class="footer-legal" data-i18n="footer_legal">ANKOMMER is an independent guide. Always verify with official Danish authorities.</p>
+        <!-- Inline privacy notice — no third-party tracking, no ad cookies,
+             everything stored locally in your browser. Audit caught the
+             absence of a privacy link required by EU GDPR-style guidance
+             whenever a site keeps any user state in localStorage. -->
+        <details class="footer-privacy">
+          <summary data-i18n="footer_privacy_title">Privacy &amp; your data</summary>
+          <p data-i18n="footer_privacy_body">ANKOMMER stores your language, theme, completed tasks, Viking Points, and (optional) wizard answers locally in your browser — never sent to a server. We use no advertising cookies and no third-party tracking. Calculator, weather, and exchange-rate lookups call public APIs (Open-Meteo, exchange-rate API, Rejseplanen, DAWA, nyidanmark.dk links) which receive only the request data needed to answer. To clear everything, use your browser's clear-site-data tool, or the "Download my plan" / "Restore from file" buttons above.</p>
+        </details>
       </div>
       <div class="footer-bottom-right">
         <p class="footer-founder">
@@ -1096,7 +1111,7 @@
 <!-- v24: cache-busting query string forces a fresh fetch when we ship new JS,
      since /js/* historically had a 1-year immutable cache header. Bump the
      query string in lockstep with sw.js CACHE_NAME on every release. -->
-<script defer src="js/data.js?v=33"></script>
+<script defer src="js/data.js?v=34"></script>
 <script defer src="js/data-chapters-meta.js?v=30"></script>
 <!-- Removed prefetch tag: js/data-chapters.js is dynamically injected on
      first openChapter() call. The prefetch caused a duplicate fetch in
@@ -1104,9 +1119,9 @@
      prefetched response with the script-src request. -->
 
 <script defer src="js/bjorn.js?v=37"></script>
-<script defer src="js/calculators.js?v=31"></script>
+<script defer src="js/calculators.js?v=32"></script>
 <script defer src="js/apis.js?v=28"></script>
-<script defer src="js/app.js?v=52"></script>
+<script defer src="js/app.js?v=53"></script>
 <!-- Shared backdrop for mobile modals (lang dropdown, Björn panel) -->
 <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 </body>

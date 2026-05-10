@@ -1488,8 +1488,18 @@ const _loadFullChapters = () => {
 const _finishOpenChapter = (index) => {
   showAppLayout();
   renderChapter(index);
-  if (history.replaceState) {
-    history.replaceState(null, '', '#chapter-' + index);
+  // Use pushState so each chapter open creates a real browser-history
+  // entry — pressing the back button goes to the PREVIOUS chapter (or
+  // home), not off the site. Skip the push when the hash already
+  // matches (e.g. direct deep-link load like /#chapter-3 — would
+  // otherwise duplicate the entry on first render).
+  const wantHash = '#chapter-' + index;
+  if (location.hash !== wantHash) {
+    if (history.pushState) {
+      history.pushState({ chapter: index }, '', wantHash);
+    } else {
+      location.hash = wantHash;
+    }
   }
   window._currentChapterIdx = index;
   document.getElementById('chapter-rail')?.classList.remove('open');
@@ -2620,10 +2630,18 @@ const Search = (() => {
       } else if (e.key === 'ArrowUp') {
         e.preventDefault();
         selectedIdx = Math.max(selectedIdx - 1, 0);
-      } else if (e.key === 'Enter' && selectedIdx >= 0) {
-        e.preventDefault();
-        const active = items[selectedIdx];
-        if (active) { close(); setTimeout(() => openChapter(parseInt(active.dataset.chapter)), 120); }
+      } else if (e.key === 'Enter') {
+        // If the user typed and pressed Enter without using arrow keys,
+        // selectedIdx is still -1 — default to the first result so
+        // typing+Enter works as a one-shot search (audit caught this
+        // failing silently — common UX expectation).
+        const idx = selectedIdx >= 0 ? selectedIdx : 0;
+        const active = items[idx];
+        if (active) {
+          e.preventDefault();
+          close();
+          setTimeout(() => openChapter(parseInt(active.dataset.chapter)), 120);
+        }
         return;
       }
       items.forEach((item, i) => item.classList.toggle('active', i === selectedIdx));
@@ -2996,9 +3014,12 @@ document.addEventListener('DOMContentLoaded', () => {
     window.dispatchEvent(new CustomEvent('profileSet', { detail: AppState.profile }));
   }
 
-  // ── URL hash deep-link: open chapter directly from URL ──
-  // Uses window.openChapter so the lazy-load path (data-chapters.js full file)
-  // is triggered if section content hasn't been fetched yet.
+  // ── URL hash deep-link / browser back & forward navigation ──
+  // openChapter() now uses history.pushState so each chapter open
+  // creates a real history entry. The handler below picks up:
+  //   • direct deep-links on first load (#chapter-N in URL)
+  //   • back / forward navigation between chapters (#chapter-N → #chapter-M)
+  //   • back navigation from chapter to home (hash cleared → close view)
   const _openFromHash = (hash) => {
     const m = hash.match(/^#chapter-(\d+)$/);
     if (m) {
@@ -3006,10 +3027,19 @@ document.addEventListener('DOMContentLoaded', () => {
       if (idx >= 0 && idx < (window.CHAPTERS || []).length) {
         window.openChapter(idx);
       }
+    } else if (document.body.classList.contains('app-active')) {
+      // Hash cleared while a chapter was open → user pressed back to
+      // home. Tear down the chapter view (clears app-active, restores
+      // hero, releases scroll lock, etc.).
+      window.scrollToTop?.();
     }
   };
   _openFromHash(location.hash);
   window.addEventListener('hashchange', () => _openFromHash(location.hash));
+  // popstate fires for browser back/forward across pushState entries
+  // even when the hash doesn't change (e.g. ?query swaps). Belt-and-
+  // suspenders alongside hashchange.
+  window.addEventListener('popstate', () => _openFromHash(location.hash));
 
   // ── Re-entry prompt: welcome back returning users ──
   const _VISIT_KEY  = 'ankommer_last_visit';
