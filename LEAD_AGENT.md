@@ -138,7 +138,7 @@ Use parallel sub-agents when the work is **independent** and the task is **scope
 
 ---
 
-## Free Björn proxy — concrete plan (no money)
+## Free Bjørn proxy — concrete plan (no money)
 
 The Groq API key is currently in client source (`bjorn.js`). Anyone can scrape it. The fix without spending money:
 

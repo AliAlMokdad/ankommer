@@ -266,7 +266,7 @@ ${jsonld}
 
     ${sectionsHtml}
 
-    <a class="interactive-cta" href="/#chapter-${idx}">Read this chapter in the interactive guide — with checklists, tools, and Björn AI →</a>
+    <a class="interactive-cta" href="/#chapter-${idx}">Read this chapter in the interactive guide — with checklists, tools, and Bjørn AI →</a>
 
     ${crosslinks}
   </article>

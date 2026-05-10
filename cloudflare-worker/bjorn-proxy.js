@@ -1,5 +1,5 @@
 /**
- * ANKOMMER — Björn Groq Proxy (Cloudflare Worker)
+ * ANKOMMER — Bjørn Groq Proxy (Cloudflare Worker)
  *
  * Why this exists: hides the Groq API key from the client. The browser
  * never sees the key — it talks to the Worker, the Worker talks to Groq.

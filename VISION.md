@@ -63,11 +63,11 @@
 
 **🛡** That last sentence violates "no build step." Counter-proposal: ship the questions as part of the existing search index AND emit FAQPage schema in `<head>` listing all 50 questions with answers. Search engines parse JSON-LD even for SPAs. Costs: zero, just a `FAQ` data table.
 
-### D. Document explainer (Björn upgrade)
+### D. Document explainer (Bjørn upgrade)
 
-**🎒** I get letters in Danish. Björn already translates them. But I'd love an upload — take a *photo* of the letter, get an explanation. Half the letters I get are paper.
+**🎒** I get letters in Danish. Bjørn already translates them. But I'd love an upload — take a *photo* of the letter, get an explanation. Half the letters I get are paper.
 
-**🛠** Browser OCR via Tesseract.js works offline, ~3 MB lazy-load. Pipe extracted text into Björn. No new API needed. Free.
+**🛠** Browser OCR via Tesseract.js works offline, ~3 MB lazy-load. Pipe extracted text into Bjørn. No new API needed. Free.
 
 **🛡** Approve. Lazy-load Tesseract only when the camera/upload button is clicked so it doesn't bloat first paint.
 
@@ -139,7 +139,7 @@ The lead agent stack-ranks under the LEAD_AGENT.md priorities. Cost is in the "n
 | 6 | **`_DATA_REVIEWED` freshness markers** | 🌟🌟🌟 | 0 | 2 hours | Tier 2 — trust durability |
 | 7 | **Export/import user plan** as JSON | 🌟🌟🌟 | 0 | 1 hour | Tier 2 — quality of life |
 | 8 | **Voice playback** for chapters (TTS) | 🌟🌟🌟 | 0 | 1 hour | Tier 2 — accessibility |
-| 9 | **Document photo OCR** (Björn upgrade) | 🌟🌟🌟 | 0 | half day | Tier 3 — needs lazy load |
+| 9 | **Document photo OCR** (Bjørn upgrade) | 🌟🌟🌟 | 0 | half day | Tier 3 — needs lazy load |
 | 10 | **Community translation infra** (split data.js) | 🌟🌟🌟 | 0 | half day | Tier 3 — needs governance |
 | 11 | **`.ics`** + RSS + Web Push (full watchdog suite) | 🌟🌟 | 0 | 1 day | Tier 3 — overlapping with #2 |
 | 12 | **Custom domain** (`ankommer.dk`) | 🌟 | $10/yr | 1 hour | ⛔ violates "no money" — skip until justified |

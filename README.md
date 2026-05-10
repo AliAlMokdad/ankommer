@@ -2,13 +2,13 @@
 
 **Moving to Denmark — The Complete Guide.** A multilingual progressive web app helping immigrants build their life in Denmark, chapter by chapter.
 
-🌍 **10 languages** · 📚 **16 life chapters** · 🛠️ **9 smart tools** · 🤖 **Björn AI guide**
+🌍 **10 languages** · 📚 **16 life chapters** · 🛠️ **9 smart tools** · 🤖 **Bjørn AI guide**
 
 ## Features
 
 - **16 chapters** covering everything from before-you-land through citizenship
 - **Smart tools**: salary calculator, cost of living, rent index, weather planner, kommune finder, journey planner, job search, visa decision tree, residency timeline
-- **Björn** — AI assistant with persona-tuned answers
+- **Bjørn** — AI assistant with persona-tuned answers
 - **Live data** via Open-Meteo, DAWA (Danish addresses), Rejseplanen, exchange rates
 - **PWA** — installable, works offline
 - **Full RTL** support for Arabic, Urdu, Farsi

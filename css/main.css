@@ -497,7 +497,7 @@ h4 { font-size: 1rem; font-weight: 600; }
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* Björn nav button */
+/* Bjørn nav button */
 .bjorn-nav-btn {
   display: flex; align-items: center; gap: 7px;
   padding: 7px 14px;
@@ -775,7 +775,7 @@ body.app-active .footer-top {
 @keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
 /* Wizard close animation — applied via JS before adding .hidden */
 .wizard-overlay.closing { animation: fade-out 0.25s ease forwards; pointer-events: none; }
-/* Same fix as the Björn panel: when the wizard is open (overlay not
+/* Same fix as the Bjørn panel: when the wizard is open (overlay not
    hidden, not closing), force the modal's transform to identity so any
    residual animation transform doesn't leave children at 91% size. */
 .wizard-overlay:not(.hidden):not(.closing) .wizard-modal {
@@ -1067,7 +1067,7 @@ body.app-active .footer-top {
   margin-top: 5px; display: flex; align-items: center; gap: 3px;
 }
 
-/* Björn card */
+/* Bjørn card */
 .result-bjorn-card {
   margin: 18px 36px;
   background: linear-gradient(135deg, rgba(46,109,164,0.06), rgba(46,109,164,0.11));
@@ -1313,7 +1313,7 @@ body.app-active .footer-top {
   color: var(--text-muted); background: var(--bg-secondary);
 }
 
-/* Björn tip callout */
+/* Bjørn tip callout */
 .bjorn-tip {
   display: flex; gap: 16px; align-items: flex-start;
   background: rgba(46,109,164,0.08);
@@ -1464,7 +1464,7 @@ body.app-active .footer-top {
   border-radius: 6px; transition: width 0.5s ease;
 }
 
-/* Ask Björn shortcut */
+/* Ask Bjørn shortcut */
 .ask-bjorn-btn {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 8px 18px; border-radius: var(--r-lg);
@@ -2295,7 +2295,7 @@ body.app-active .footer-top {
               padding-right: max(8px, env(safe-area-inset-right)); }
   .nav-right { gap: 2px; }
 }
-/* The Björn nav button is redundant on phones — the floating Björn FAB
+/* The Bjørn nav button is redundant on phones — the floating Bjørn FAB
    in the bottom-right corner already opens the same panel. Hiding it
    reclaims ~54px of horizontal nav space and lets the hamburger fit. */
 @media (max-width: 600px) {
@@ -2304,7 +2304,7 @@ body.app-active .footer-top {
      touch sizing — and that rule's @media (max-width: 768px) ALSO
      matches at phone widths, so its later source order would otherwise
      win. Using !important here documents the intent: on phones, the
-     Björn nav button is hidden, period. */
+     Bjørn nav button is hidden, period. */
   .bjorn-nav-btn { display: none !important; }
   .bjorn-panel { width: calc(100vw - 32px); right: 0; }
   .tools-grid { grid-template-columns: 1fr; padding: 0 16px; }
@@ -2796,7 +2796,7 @@ body.app-active .footer-top {
   text-align: right;
 }
 
-/* Björn tip */
+/* Bjørn tip */
 .rent-tip-box {
   display: flex;
   align-items: flex-start;
@@ -3529,12 +3529,12 @@ body.app-active .footer-top {
    RTL FIXES — Arabic and other RTL languages
 ═══════════════════════════════════════════════════════════ */
 
-/* Björn widget — move from bottom-right to bottom-left for RTL */
+/* Bjørn widget — move from bottom-right to bottom-left for RTL */
 [dir="rtl"] .bjorn-widget {
   right: auto;
   left: 28px;
 }
-/* Björn panel — anchor to the left side in RTL */
+/* Bjørn panel — anchor to the left side in RTL */
 [dir="rtl"] .bjorn-panel {
   right: auto;
   left: 0;
@@ -3591,7 +3591,7 @@ body.app-active .footer-top {
     transition-duration: 100ms !important;
   }
 
-  /* Disable breathing animation on Björn toggle */
+  /* Disable breathing animation on Bjørn toggle */
   .bjorn-toggle { animation: none !important; }
 
   /* Disable rail start hint pulse */
@@ -3605,7 +3605,7 @@ body.app-active .footer-top {
    ACCESSIBILITY & MOBILE POLISH (audit fixes)
    ──────────────────────────────────────────────────────────────
    Added in v5: iOS safe-area, 44×44 touch targets, mobile lang
-   dropdown, Björn panel mobile width, touch :active feedback,
+   dropdown, Bjørn panel mobile width, touch :active feedback,
    RTL chapter rail slide direction.
 ══════════════════════════════════════════════════════════════ */
 
@@ -3666,7 +3666,7 @@ body.app-active .footer-top {
   .rail-item,
   .ch-end-btn,
   .wizard-skip,
-  /* Phone QA round 2: bump every Björn / Wizard control that the audit
+  /* Phone QA round 2: bump every Bjørn / Wizard control that the audit
      measured under 44px. They live inside modals so their original sizes
      were tuned for desktop visual density. */
   .bjorn-icon-btn,
@@ -3681,19 +3681,19 @@ body.app-active .footer-top {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    /* Inside flex containers (Björn header is `display: flex`), children
+    /* Inside flex containers (Bjørn header is `display: flex`), children
      with min-height alone can still shrink below 44 because the parent's
      auto cross-size + `align-items: center` lets browsers ignore the
      min-height constraint when squeezing for space. flex-shrink:0 +
      explicit height forces 44px. */
     flex-shrink: 0;
   }
-  /* The Björn icon row needs items to be EXACTLY 44 tall so the header
+  /* The Bjørn icon row needs items to be EXACTLY 44 tall so the header
      row sizes correctly around them. Use !important to beat the L2013
      base rule that tightens padding. */
   .bjorn-icon-btn,
   .bjorn-close-btn { width: 44px !important; height: 44px !important; padding: 0 !important; }
-  /* Björn input textarea — single-line, was 31px. Bump to 44 so it's
+  /* Bjørn input textarea — single-line, was 31px. Bump to 44 so it's
      tappable. line-height keeps text vertically centred. */
   .bjorn-input-area textarea { min-height: 44px !important; line-height: 1.5; padding: 12px 14px; }
   /* Quick-prompt chips: white-space:nowrap + tight padding meant a 21px
@@ -3778,7 +3778,7 @@ body.app-active .footer-top {
   transform: scale(0.97);
 }
 
-/* ── Shared mobile backdrop (lang dropdown + Björn panel) ─────── */
+/* ── Shared mobile backdrop (lang dropdown + Bjørn panel) ─────── */
 .mobile-overlay {
   position: fixed;
   inset: 0;
@@ -3816,7 +3816,7 @@ body.app-active .footer-top {
   }
 }
 
-/* ── Björn panel — keep inside viewport on small phones ───────── */
+/* ── Bjørn panel — keep inside viewport on small phones ───────── */
 @media (max-width: 480px) {
   .bjorn-panel {
     position: fixed;
@@ -3930,14 +3930,14 @@ body.app-active .footer-top {
    ──────────────────────────────────────────────────────────────
    Fixes from a 2-source audit (code review + dedicated agent).
    Addresses: hero overflow, Arabic mobile margin bug, tools-grid
-   tablet overflow, weather card layout, hero stat dividers, Björn
+   tablet overflow, weather card layout, hero stat dividers, Bjørn
    panel 100vw bug, chapter padding on small phones, long-word
    wrapping, lang dropdown, <360px (Galaxy Fold) coverage.
 ══════════════════════════════════════════════════════════════ */
 
 /* Long compound words (Danish: forældreorlovsdagpenge) and long URLs
    were causing horizontal scroll in chapter prose, info-tables, and
-   Björn replies. */
+   Bjørn replies. */
 body { overflow-wrap: break-word; }
 .info-table td, .info-table th,
 .section-body p, .section-body li, .section-body a,
@@ -3953,7 +3953,7 @@ body { overflow-wrap: break-word; }
 /* Footer columns: ensure long translated headings can shrink */
 .footer-col { min-width: 0; }
 
-/* Toast container: clear of Björn floating toggle (with safe-area) */
+/* Toast container: clear of Bjørn floating toggle (with safe-area) */
 .toast-container {
   bottom: max(100px, calc(env(safe-area-inset-bottom) + 100px));
 }
@@ -3996,8 +3996,8 @@ body { overflow-wrap: break-word; }
    On phones we strip all the marketing/scroll sections so the page is:
      • Home          → top nav + hero + minimal footer
      • Chapter view  → top nav + chapter content + minimal footer
-   Users navigate via the in-hero CTAs ("Start My Journey", "Ask Björn"),
-   the search icon in the nav, the Björn FAB, or the chapter-rail (which
+   Users navigate via the in-hero CTAs ("Start My Journey", "Ask Bjørn"),
+   the search icon in the nav, the Bjørn FAB, or the chapter-rail (which
    slides in from the hamburger when in app mode). Desktop is untouched.
 ═══════════════════════════════════════════════════════════════════ */
 @media (max-width: 600px) {
@@ -4028,7 +4028,7 @@ body { overflow-wrap: break-word; }
 
 /* "Browse all 16 chapters" — third path on the simplified phone home.
    Primary  = "Start My Journey →"   (filled red)
-   Secondary= "Ask Björn Anything"   (ghost outline)
+   Secondary= "Ask Bjørn Anything"   (ghost outline)
    Tertiary = "📚 Browse all 16 chapters"  (this — pill chip)
    The pill style keeps it discoverable without competing with the
    bigger CTAs above. Only shown on phone — desktop already has the
@@ -4208,7 +4208,7 @@ body { overflow-wrap: break-word; }
   }
 }
 
-/* Björn panel sizing on mobile. Using calc(100% - 32px) was wrong: the
+/* Bjørn panel sizing on mobile. Using calc(100% - 32px) was wrong: the
    panel's parent is `.bjorn-widget` which is just 64px wide (the FAB),
    so 100% resolved to 64px and the panel rendered at 32px wide — only
    the icon column visible on the right edge. Use 100vw for the

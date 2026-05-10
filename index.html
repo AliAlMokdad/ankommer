@@ -12,7 +12,7 @@
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://ankommer.org/" />
   <meta property="og:title"       content="Moving to Denmark in 2026 — The Complete Guide | ANKOMMER" />
-  <meta property="og:description" content="The complete guide to moving to Denmark — CPR, MitID, housing, banking, healthcare, taxes, work permits. 16 chapters, 10 languages, free. With AI guide Björn." />
+  <meta property="og:description" content="The complete guide to moving to Denmark — CPR, MitID, housing, banking, healthcare, taxes, work permits. 16 chapters, 10 languages, free. With AI guide Bjørn." />
   <meta property="og:image"       content="https://ankommer.org/og-image.png" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
@@ -210,7 +210,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=58" />
+  <link rel="stylesheet" href="css/main.css?v=59" />
 </head>
 <body>
 
@@ -261,10 +261,10 @@
     <button class="icon-btn" id="theme-toggle" title="Toggle theme" aria-label="Toggle dark mode" aria-pressed="false" data-i18n-aria="nav_theme" data-i18n-title="nav_theme">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
-    <!-- Björn toggle -->
-    <button class="bjorn-nav-btn" id="bjorn-open-btn" title="Ask Björn" aria-label="Open Björn" data-i18n-aria="nav_bjorn" data-i18n-title="nav_bjorn">
+    <!-- Bjørn toggle -->
+    <button class="bjorn-nav-btn" id="bjorn-open-btn" title="Ask Bjørn" aria-label="Open Bjørn" data-i18n-aria="nav_bjorn" data-i18n-title="nav_bjorn">
       <div class="bjorn-nav-face">🛡️</div>
-      <span data-i18n="nav_bjorn">Ask Björn</span>
+      <span data-i18n="nav_bjorn">Ask Bjørn</span>
     </button>
   </div>
   <!-- Mobile hamburger -->
@@ -376,7 +376,7 @@
     </div>
     <div class="hero-ctas" id="hero-ctas">
       <button class="btn-primary btn-xl" id="begin-btn" data-i18n="hero_cta_begin">Begin My Journey →</button>
-      <button class="btn-ghost btn-xl" id="bjorn-hero-btn" data-i18n="hero_cta_bjorn">💬 Ask Björn Anything</button>
+      <button class="btn-ghost btn-xl" id="bjorn-hero-btn" data-i18n="hero_cta_bjorn">💬 Ask Bjørn Anything</button>
       <!-- Mobile-only: a third path for users who want to pick a chapter
            directly without going through the wizard or AI chat. The
            desktop hero already exposes the 16-chapter grid below it. -->
@@ -390,7 +390,7 @@
       <div class="hero-stat-divider"></div>
       <div class="hero-stat"><span class="hero-stat-num">16</span><span data-i18n="stat_chapters">life chapters</span></div>
       <div class="hero-stat-divider"></div>
-      <div class="hero-stat"><span class="hero-stat-num" id="stat-bjorn">—</span><span data-i18n="stat_bjorn">questions answered by Björn</span></div>
+      <div class="hero-stat"><span class="hero-stat-num" id="stat-bjorn">—</span><span data-i18n="stat_bjorn">questions answered by Bjørn</span></div>
       <div class="hero-stat-divider"></div>
       <div class="hero-stat"><span class="hero-stat-num">10</span><span data-i18n="stat_langs">languages</span></div>
     </div>
@@ -930,7 +930,7 @@
           <a href="#tools-section" data-i18n="tool_cal_title">Deadline Calendar</a>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer_bjorn">Björn</h4>
+          <h4 data-i18n="footer_bjorn">Bjørn</h4>
           <a href="#bjorn-widget" onclick="event.preventDefault(); openBjorn();" data-i18n="footer_ask">Ask anything</a>
           <a href="#bjorn-widget" onclick="event.preventDefault(); openBjorn();" data-i18n="footer_doc">Translate a document</a>
           <a href="#bjorn-widget" onclick="event.preventDefault(); openBjorn();" data-i18n="footer_form">Navigate a form</a>
@@ -984,7 +984,7 @@
 <!-- ═══════════════════════════════════ BJÖRN CHAT ═══════════════════════════════════ -->
 <div id="bjorn-widget" class="bjorn-widget closed">
   <!-- Toggle button -->
-  <button class="bjorn-toggle" id="bjorn-toggle" aria-label="Toggle Björn chat" aria-expanded="false" aria-controls="bjorn-panel">
+  <button class="bjorn-toggle" id="bjorn-toggle" aria-label="Toggle Bjørn chat" aria-expanded="false" aria-controls="bjorn-panel">
     <div class="bjorn-avatar-sm" id="bjorn-avatar-sm">
       <svg viewBox="0 0 60 60" class="bjorn-svg-sm" aria-hidden="true">
         <!-- Face -->
@@ -1035,13 +1035,13 @@
         </svg>
       </div>
       <div class="bjorn-panel-info">
-        <h3 id="bjorn-panel-title">Björn</h3>
+        <h3 id="bjorn-panel-title">Bjørn</h3>
         <span class="bjorn-status" data-i18n="bjorn_status">Your Denmark guide since 836 AD</span>
       </div>
       <div class="bjorn-header-actions">
         <button class="bjorn-icon-btn" id="bjorn-translate-btn" title="Translate a Danish document" aria-label="Translate document" data-i18n-title="bjorn_translate_btn_title" data-i18n-aria="bjorn_translate_btn_aria">📋</button>
         <button class="bjorn-icon-btn" id="bjorn-clear-history" title="Clear chat history" aria-label="Clear history" data-i18n-title="bjorn_clear_history_title" data-i18n-aria="bjorn_clear_history_aria">🗑️</button>
-        <button class="bjorn-close-btn" id="bjorn-close" aria-label="Close Björn" data-i18n-aria="bjorn_close_aria">✕</button>
+        <button class="bjorn-close-btn" id="bjorn-close" aria-label="Close Bjørn" data-i18n-aria="bjorn_close_aria">✕</button>
       </div>
     </div>
 
@@ -1051,16 +1051,16 @@
         <span data-i18n="bjorn_translate_panel_title">📋 Translate a Danish Document</span>
         <button class="bjorn-icon-btn" id="bjorn-translate-close" aria-label="Close translator" data-i18n-aria="bjorn_translate_close_aria">✕</button>
       </div>
-      <p class="bjorn-translate-hint" data-i18n="bjorn_translate_hint_text">Paste the text from any letter or document you received and Björn will explain it.</p>
+      <p class="bjorn-translate-hint" data-i18n="bjorn_translate_hint_text">Paste the text from any letter or document you received and Bjørn will explain it.</p>
       <textarea id="bjorn-doc-text" class="bjorn-doc-textarea" rows="5" placeholder="Paste Danish text here…" aria-label="Document text to translate" data-i18n-placeholder="bjorn_translate_placeholder" data-i18n-aria="bjorn_translate_textarea_aria"></textarea>
       <button class="bjorn-translate-send" id="bjorn-translate-send" data-i18n="bjorn_translate_send_btn">Explain this document →</button>
     </div>
 
     <!-- API Setup (hidden — shown only if API key needed) -->
     <div class="bjorn-api-setup hidden" id="bjorn-api-setup">
-      <p class="bjorn-api-info" data-i18n="bjorn_api_info">Björn is your AI guide to Denmark — powered by the latest language models and ready to answer anything.</p>
-      <button class="btn-primary" id="bjorn-api-save" data-i18n="bjorn_api_save">Start Chatting with Björn</button>
-      <p class="bjorn-api-note" data-i18n="bjorn_api_note">Your conversation stays on this device. Björn never shares what you ask.</p>
+      <p class="bjorn-api-info" data-i18n="bjorn_api_info">Bjørn is your AI guide to Denmark — powered by the latest language models and ready to answer anything.</p>
+      <button class="btn-primary" id="bjorn-api-save" data-i18n="bjorn_api_save">Start Chatting with Bjørn</button>
+      <p class="bjorn-api-note" data-i18n="bjorn_api_note">Your conversation stays on this device. Bjørn never shares what you ask.</p>
     </div>
 
     <!-- Chat messages -->
@@ -1083,7 +1083,7 @@
 
     <!-- Input area -->
     <div class="bjorn-input-area">
-      <textarea id="bjorn-input" rows="1" placeholder="Ask Björn anything…" data-i18n-placeholder="bjorn_placeholder" aria-label="Message to Björn" data-i18n-aria="bjorn_input_aria"></textarea>
+      <textarea id="bjorn-input" rows="1" placeholder="Ask Bjørn anything…" data-i18n-placeholder="bjorn_placeholder" aria-label="Message to Bjørn" data-i18n-aria="bjorn_input_aria"></textarea>
       <button class="bjorn-send" id="bjorn-send" aria-label="Send" data-i18n-aria="bjorn_send_aria">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
       </button>
@@ -1111,18 +1111,18 @@
 <!-- v24: cache-busting query string forces a fresh fetch when we ship new JS,
      since /js/* historically had a 1-year immutable cache header. Bump the
      query string in lockstep with sw.js CACHE_NAME on every release. -->
-<script defer src="js/data.js?v=34"></script>
+<script defer src="js/data.js?v=35"></script>
 <script defer src="js/data-chapters-meta.js?v=30"></script>
 <!-- Removed prefetch tag: js/data-chapters.js is dynamically injected on
      first openChapter() call. The prefetch caused a duplicate fetch in
      some browsers (Firefox especially) that didn't reliably coalesce the
      prefetched response with the script-src request. -->
 
-<script defer src="js/bjorn.js?v=37"></script>
+<script defer src="js/bjorn.js?v=38"></script>
 <script defer src="js/calculators.js?v=34"></script>
 <script defer src="js/apis.js?v=28"></script>
-<script defer src="js/app.js?v=55"></script>
-<!-- Shared backdrop for mobile modals (lang dropdown, Björn panel) -->
+<script defer src="js/app.js?v=56"></script>
+<!-- Shared backdrop for mobile modals (lang dropdown, Bjørn panel) -->
 <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 </body>
 </html>

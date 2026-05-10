@@ -1,6 +1,6 @@
-# Björn Proxy — Free Deployment Guide
+# Bjørn Proxy — Free Deployment Guide
 
-This proxies Björn's chat requests through a Cloudflare Worker so the Groq API key isn't exposed in client source code.
+This proxies Bjørn's chat requests through a Cloudflare Worker so the Groq API key isn't exposed in client source code.
 
 **Cost:** $0. Cloudflare's free Workers tier is 100,000 requests/day. No credit card needed to sign up.
 
@@ -95,7 +95,7 @@ The proxy keeps working — the new key is set on Cloudflare, never on the user'
 
 ```
 git add js/bjorn.js
-git commit -m "Move Björn API key behind Cloudflare Worker proxy"
+git commit -m "Move Bjørn API key behind Cloudflare Worker proxy"
 git push
 ```
 
@@ -103,7 +103,7 @@ git push
 
 ## How to verify it works
 
-Open the live site, open Björn, send a message. If you get a real reply, it works.
+Open the live site, open Bjørn, send a message. If you get a real reply, it works.
 
 Open browser devtools → Network tab. The request should go to `*.workers.dev` — **not** to `api.groq.com`. The auth header should be absent in the request from the browser.
 

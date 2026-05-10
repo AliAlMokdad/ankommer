@@ -34,12 +34,12 @@ const UI_T = {
   complete:      { en:'✅ Complete!', fr:'✅ Terminé!', ar:'✅ مكتمل!', es:'✅ ¡Completo!', da:'✅ Færdig!', ur:'✅ مکمل!', de:"✅ Erledigt!", uk:"✅ Готово!", pl:"✅ Ukończone!", fa:'✅ کامل شد!' },
   readTime:      { en:(t)=>`⏱ ${t} read`, fr:(t)=>`⏱ ${t} de lecture`, ar:(t)=>`⏱ ${t} للقراءة`, es:(t)=>`⏱ ${t} de lectura`, da:(t)=>`⏱ ${t} læsning`, de:(t)=>`⏱ ${t} Lesezeit`, uk:(t)=>`⏱ ${t} читання`, pl:(t)=>`⏱ ${t} czytania`, ur:(t)=>`⏱ ${t} مطالعہ`, fa:(t)=>`⏱ ${t} مطالعه` },
   tasks:         { en:'tasks', fr:'tâches', ar:'مهام', es:'tareas', da:'opgaver', ur:'کام', de:"Aufgaben", uk:"завдань", pl:"zadań", fa:'وظایف' },
-  bjornSays:     { en:'Björn says:', fr:'Björn dit :', ar:'يقول بيورن:', es:'Björn dice:', da:'Björn siger:', ur:'بیورن کہتا ہے:', de:"Björn sagt:", uk:"Бйорн каже:", pl:"Björn mówi:", fa:'بیورن می‌گوید:' },
-  askBjorn:      { en:(t)=>`🛡️ Ask Björn about ${t}`, fr:(t)=>`🛡️ Demander à Björn sur ${t}`, ar:(t)=>`🛡️ اسأل بيورن عن ${t}`, es:(t)=>`🛡️ Preguntar a Björn sobre ${t}`, da:(t)=>`🛡️ Spørg Björn om ${t}`, de:(t)=>`🛡️ Björn zu ${t} fragen`, uk:(t)=>`🛡️ Запитати Бйорна про ${t}`, pl:(t)=>`🛡️ Zapytaj Björna o ${t}`, ur:(t)=>`🛡️ ${t} کے بارے میں بیورن سے پوچھیں`, fa:(t)=>`🛡️ از بیورن درباره ${t} بپرسید` },
-  askBjornCh:    { en:'🛡️ Ask Björn about this chapter', fr:'🛡️ Demander à Björn sur ce chapitre', ar:'🛡️ اسأل بيورن عن هذا الفصل', es:'🛡️ Preguntar a Björn sobre este capítulo', da:'🛡️ Spørg Björn om dette kapitel', ur:'🛡️ اس باب کے بارے میں بیورن سے پوچھیں', de:"🛡️ Björn zu diesem Kapitel fragen", uk:"🛡️ Запитати Бйорна про цей розділ", pl:"🛡️ Zapytaj Björna o ten rozdział", fa:'🛡️ از بیورن درباره این فصل بپرسید' },
+  bjornSays:     { en:'Bjørn says:', fr:'Bjørn dit :', ar:'يقول بيورن:', es:'Bjørn dice:', da:'Bjørn siger:', ur:'بیورن کہتا ہے:', de:"Bjørn sagt:", uk:"Бйорн каже:", pl:"Bjørn mówi:", fa:'بیورن می‌گوید:' },
+  askBjorn:      { en:(t)=>`🛡️ Ask Bjørn about ${t}`, fr:(t)=>`🛡️ Demander à Bjørn sur ${t}`, ar:(t)=>`🛡️ اسأل بيورن عن ${t}`, es:(t)=>`🛡️ Preguntar a Bjørn sobre ${t}`, da:(t)=>`🛡️ Spørg Bjørn om ${t}`, de:(t)=>`🛡️ Bjørn zu ${t} fragen`, uk:(t)=>`🛡️ Запитати Бйорна про ${t}`, pl:(t)=>`🛡️ Zapytaj Bjørna o ${t}`, ur:(t)=>`🛡️ ${t} کے بارے میں بیورن سے پوچھیں`, fa:(t)=>`🛡️ از بیورن درباره ${t} بپرسید` },
+  askBjornCh:    { en:'🛡️ Ask Bjørn about this chapter', fr:'🛡️ Demander à Bjørn sur ce chapitre', ar:'🛡️ اسأل بيورن عن هذا الفصل', es:'🛡️ Preguntar a Bjørn sobre este capítulo', da:'🛡️ Spørg Bjørn om dette kapitel', ur:'🛡️ اس باب کے بارے میں بیورن سے پوچھیں', de:"🛡️ Bjørn zu diesem Kapitel fragen", uk:"🛡️ Запитати Бйорна про цей розділ", pl:"🛡️ Zapytaj Bjørna o ten rozdział", fa:'🛡️ از بیورن درباره این فصل بپرسید' },
   chapterWord:   { en:'Chapter', fr:'Chapitre', ar:'فصل', es:'Capítulo', da:'Kapitel', ur:'باب', de:"Kapitel", uk:"Розділ", pl:"Rozdział", fa:'فصل' },
   comingSoonTitle:{ en:'Full content coming soon', fr:'Contenu complet bientôt disponible', ar:'المحتوى الكامل قريباً', es:'Contenido completo próximamente', da:'Fuldt indhold kommer snart', ur:'مکمل مواد جلد آ رہا ہے', de:"Vollständiger Inhalt kommt bald", uk:"Повний вміст незабаром", pl:"Pełna treść już wkrótce", fa:'محتوای کامل به زودی می‌آید' },
-  comingSoonBody: { en:'This chapter is being researched and written to our ultra-high standard. In the meantime, Björn can answer any questions about this topic.', fr:'Ce chapitre est en cours de recherche et de rédaction selon nos normes les plus élevées. En attendant, Björn peut répondre à vos questions sur ce sujet.', ar:'يتم حالياً البحث في هذا الفصل وكتابته وفق أعلى معاييرنا. في هذه الأثناء، يمكن لبيورن الإجابة على أي أسئلة حول هذا الموضوع.', es:'Este capítulo está siendo investigado y redactado según nuestros más altos estándares. Mientras tanto, Björn puede responder cualquier pregunta sobre este tema.', da:'Dette kapitel er ved at blive undersøgt og skrevet til vores højeste standard. I mellemtiden kan Björn besvare spørgsmål om dette emne.', ur:'اس باب پر ہمارے اعلیٰ معیار کے مطابق تحقیق اور تحریر جاری ہے۔ اس دوران، بیورن اس موضوع کے کسی بھی سوال کا جواب دے سکتا ہے۔', de:"Dieses Kapitel wird gerade nach unserem höchsten Standard recherchiert und geschrieben. In der Zwischenzeit kann Björn alle Fragen zu diesem Thema beantworten.", uk:"Цей розділ зараз досліджується та пишеться за найвищими стандартами. Тим часом Бйорн може відповісти на будь-які питання з цієї теми.", pl:"Ten rozdział jest obecnie badany i pisany według naszych najwyższych standardów. Tymczasem Björn może odpowiedzieć na każde pytanie na ten temat.", fa:'این فصل در حال تحقیق و نگارش با بالاترین استانداردهای ما است. در این میان، بیورن می‌تواند هر سوالی درباره این موضوع را پاسخ دهد.' },
+  comingSoonBody: { en:'This chapter is being researched and written to our ultra-high standard. In the meantime, Bjørn can answer any questions about this topic.', fr:'Ce chapitre est en cours de recherche et de rédaction selon nos normes les plus élevées. En attendant, Bjørn peut répondre à vos questions sur ce sujet.', ar:'يتم حالياً البحث في هذا الفصل وكتابته وفق أعلى معاييرنا. في هذه الأثناء، يمكن لبيورن الإجابة على أي أسئلة حول هذا الموضوع.', es:'Este capítulo está siendo investigado y redactado según nuestros más altos estándares. Mientras tanto, Bjørn puede responder cualquier pregunta sobre este tema.', da:'Dette kapitel er ved at blive undersøgt og skrevet til vores højeste standard. I mellemtiden kan Bjørn besvare spørgsmål om dette emne.', ur:'اس باب پر ہمارے اعلیٰ معیار کے مطابق تحقیق اور تحریر جاری ہے۔ اس دوران، بیورن اس موضوع کے کسی بھی سوال کا جواب دے سکتا ہے۔', de:"Dieses Kapitel wird gerade nach unserem höchsten Standard recherchiert und geschrieben. In der Zwischenzeit kann Bjørn alle Fragen zu diesem Thema beantworten.", uk:"Цей розділ зараз досліджується та пишеться за найвищими стандартами. Тим часом Бйорн може відповісти на будь-які питання з цієї теми.", pl:"Ten rozdział jest obecnie badany i pisany według naszych najwyższych standardów. Tymczasem Bjørn może odpowiedzieć na każde pytanie na ten temat.", fa:'این فصل در حال تحقیق و نگارش با بالاترین استانداردهای ما است. در این میان، بیورن می‌تواند هر سوالی درباره این موضوع را پاسخ دهد.' },
   // Roadmap strip
   roadmapTitle: { en:(c)=>`Your Denmark Roadmap — ${c}`, fr:(c)=>`Votre Feuille de Route — ${c}`, ar:(c)=>`خارطة طريقك — ${c}`, es:(c)=>`Tu Hoja de Ruta — ${c}`, da:(c)=>`Din Danmarksplan — ${c}`, ur:(c)=>`ڈنمارک کا آپ کا روڈ میپ — ${c}`, de:(c)=>`Dein Dänemark-Plan — ${c}`, uk:(c)=>`Ваш план Данії — ${c}`, pl:(c)=>`Twój plan Danii — ${c}`, fa:(c)=>`نقشه راه دانمارک شما — ${c}` },
   roadmapSub:   { en:(r)=>`Here for ${r} · Your top priorities`, fr:(r)=>`Ici pour ${r} · Vos priorités`, ar:(r)=>`هنا من أجل ${r} · أولوياتك`, es:(r)=>`Aquí para ${r} · Tus prioridades`, da:(r)=>`Her for ${r} · Dine prioriteter`, ur:(r)=>`${r} کے لیے یہاں · آپ کی اولین ترجیحات`, de:(r)=>`Hier wegen ${r} · Deine Prioritäten`, uk:(r)=>`Тут заради ${r} · Ваші пріоритети`, pl:(r)=>`Tu dla ${r} · Twoje priorytety`, fa:(r)=>`اینجا برای ${r} · اولویت‌های شما` },
@@ -795,7 +795,7 @@ const Wizard = {
     if (!overlay) return;
     overlay.classList.remove('hidden');
     // Lock body scroll on phones so iOS rubber-band can't scroll the page
-    // behind the opaque overlay (matches rail / Björn / search behaviour).
+    // behind the opaque overlay (matches rail / Bjørn / search behaviour).
     if (window.matchMedia('(max-width: 600px)').matches) {
       document.body.style.overflow = 'hidden';
     }
@@ -1079,7 +1079,7 @@ const Wizard = {
 
       <div class="result-ctas">
         <button class="btn-primary" id="wiz-start">${TRANSLATIONS[lang]?.wiz_result_cta || 'Start My Journey'} →</button>
-        <button class="result-bjorn-btn" id="wiz-bjorn">💬 ${TRANSLATIONS[lang]?.wiz_result_bjorn || 'Chat with Björn'}</button>
+        <button class="result-bjorn-btn" id="wiz-bjorn">💬 ${TRANSLATIONS[lang]?.wiz_result_bjorn || 'Chat with Bjørn'}</button>
       </div>
     `;
 
@@ -1858,7 +1858,7 @@ window.scrollToTop = () => {
     hb.classList.remove('open');
     hb.setAttribute('aria-expanded', 'false');
   }
-  // Close Björn too — otherwise the chat panel stays open while the
+  // Close Bjørn too — otherwise the chat panel stays open while the
   // page scroll-lock is reset two lines below, letting the user scroll
   // behind a still-floating panel.
   if (typeof Bjorn !== 'undefined' && !document.getElementById('bjorn-widget')?.classList.contains('closed')) {
@@ -2175,7 +2175,7 @@ const StatsTracker = (() => {
     }
   };
 
-  /* Count each answered Björn question */
+  /* Count each answered Bjørn question */
   const trackBjornQuestion = async () => {
     const el = document.getElementById('stat-bjorn');
     try {
@@ -2357,7 +2357,7 @@ const initLangButtons = () => {
     selector.addEventListener('click', (e) => {
       if (e.target.closest('.lang-btn')) _closeLang();
     });
-    // Close when clicking outside (only if lang is currently open — don't fight Björn's overlay)
+    // Close when clicking outside (only if lang is currently open — don't fight Bjørn's overlay)
     document.addEventListener('click', (e) => {
       if (selector.classList.contains('open') && !selector.contains(e.target) && !e.target.closest('#mobile-overlay')) {
         _closeLang();
@@ -2374,7 +2374,7 @@ const initLangButtons = () => {
   if (overlayEl) {
     overlayEl.addEventListener('click', () => {
       _closeLang();
-      // Close Björn (the IIFE exposes itself as the global `Bjorn`)
+      // Close Bjørn (the IIFE exposes itself as the global `Bjorn`)
       if (typeof Bjorn !== 'undefined' && Bjorn.close) Bjorn.close();
       // Close hamburger / chapter rail if open
       const rail = document.getElementById('chapter-rail');
@@ -2994,7 +2994,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Live APIs (exchange rates, DAWA, weather, transport, jobs)
   _try('APIs', () => { if (typeof APIs !== 'undefined') APIs.init(); });
 
-  // Björn
+  // Bjørn
   _try('Bjorn', () => {
     Bjorn.init();
     if (AppState.profile) Bjorn.setProfile(AppState.profile);
