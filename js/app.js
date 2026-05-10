@@ -314,6 +314,53 @@ const xpRankLabel = (rank) => rank[window.currentLang || 'en'] || rank.en || ran
 /* ══════════════════════════════════════════════════════
    i18n — TRANSLATION ENGINE
 ══════════════════════════════════════════════════════ */
+/* Per-language home title + tagline used by updatePageTitle() so the
+   browser tab + history entry stay in sync with the active language and
+   the navigation state (home vs. chapter). Values match the natural
+   marketing copy in each locale — kept inline rather than minted as
+   data-i18n keys because they're only used here. */
+const PAGE_TITLE_I18N = {
+  en: { home: 'Moving to Denmark in 2026 — The Complete Guide | ANKOMMER',
+        tagline: 'Moving to Denmark' },
+  fr: { home: "S'installer au Danemark en 2026 — Le Guide Complet | ANKOMMER",
+        tagline: "S'installer au Danemark" },
+  ar: { home: 'الانتقال إلى الدنمارك في 2026 — الدليل الكامل | ANKOMMER',
+        tagline: 'الانتقال إلى الدنمارك' },
+  es: { home: 'Mudarse a Dinamarca en 2026 — La Guía Completa | ANKOMMER',
+        tagline: 'Mudarse a Dinamarca' },
+  da: { home: 'Flytte til Danmark i 2026 — Den Komplette Guide | ANKOMMER',
+        tagline: 'Flytte til Danmark' },
+  de: { home: 'Nach Dänemark ziehen 2026 — Der vollständige Leitfaden | ANKOMMER',
+        tagline: 'Nach Dänemark ziehen' },
+  uk: { home: 'Переїзд до Данії у 2026 — Повний посібник | ANKOMMER',
+        tagline: 'Переїзд до Данії' },
+  pl: { home: 'Przeprowadzka do Danii w 2026 — Kompletny przewodnik | ANKOMMER',
+        tagline: 'Przeprowadzka do Danii' },
+  ur: { home: 'ڈنمارک منتقلی 2026 — مکمل گائیڈ | ANKOMMER',
+        tagline: 'ڈنمارک منتقلی' },
+  fa: { home: 'مهاجرت به دانمارک در ۲۰۲۶ — راهنمای کامل | ANKOMMER',
+        tagline: 'مهاجرت به دانمارک' },
+};
+/* Recompute and apply <title> based on active language + current state.
+   Called from setLang (lang change), scrollToTop (home navigation), and
+   chapter render (chapter open). Without this the title was set on
+   chapter open and never updated again — a Polish user navigating
+   home or switching language would still see "Before You Land —
+   ANKOMMER" in their browser tab. */
+window.updatePageTitle = () => {
+  const lang = window.currentLang || 'en';
+  const t = PAGE_TITLE_I18N[lang] || PAGE_TITLE_I18N.en;
+  const ch = (typeof AppState !== 'undefined' && AppState.currentChapter !== null)
+    ? CHAPTERS?.[AppState.currentChapter]
+    : null;
+  if (ch) {
+    const chTitle = ch.title[lang] || ch.title.en;
+    document.title = `${chTitle} — ANKOMMER | ${t.tagline}`;
+  } else {
+    document.title = t.home;
+  }
+};
+
 const i18n = {
   t: (key) => {
     const lang = window.currentLang || 'en';
@@ -355,6 +402,11 @@ const i18n = {
     // Update html[lang] and html[dir] for screen readers + RTL
     document.documentElement.setAttribute('lang', lang);
     document.documentElement.setAttribute('dir', ['ar','ur','fa'].includes(lang) ? 'rtl' : 'ltr');
+    // Re-derive document.title for the new language. Without this the
+    // browser tab + history entry stayed in the previous language even
+    // after a full UI translate (audit-flagged: "user sees site in PL
+    // but tab title still 'Before You Land — ANKOMMER'").
+    updatePageTitle();
 
     // Always close the lang dropdown after a switch — defensive against
     // future code paths that call setLang without going through the
@@ -1263,12 +1315,15 @@ const renderChapter = (index) => {
 
   const sectionsHtml = (ch.sections || []).map((sec, si) => `
     <div class="chapter-section" id="ch-sec-${index}-${si}">
-      <button class="section-toggle" onclick="toggleSection('ch-sec-${index}-${si}')">
+      <button class="section-toggle"
+              onclick="toggleSection('ch-sec-${index}-${si}')"
+              aria-expanded="false"
+              aria-controls="ch-sec-body-${index}-${si}">
         <span class="section-toggle-icon">${sec.icon || '📌'}</span>
         <span>${sec.title[lang] || sec.title.en || sec.title}</span>
-        <span class="section-toggle-arrow">▼</span>
+        <span class="section-toggle-arrow" aria-hidden="true">▼</span>
       </button>
-      <div class="section-body">
+      <div class="section-body" id="ch-sec-body-${index}-${si}" role="region">
         ${sec.content[lang] || sec.content.en || sec.content}
       </div>
     </div>
@@ -1395,10 +1450,11 @@ const renderChapter = (index) => {
     window.scrollTo({ top: document.getElementById('app-layout')?.offsetTop || 0, behavior: 'instant' });
   }
 
-  // Update page title & meta description for SEO / browser tab
-  const chTitle = ch.title[lang] || ch.title.en;
+  // Update page title & meta description for SEO / browser tab. Title
+  // routes through updatePageTitle() so language switches re-derive it
+  // (the "Moving to Denmark" tagline is now also localized).
   const chIntro = ch.intro[lang] || ch.intro.en;
-  document.title = `${chTitle} — ANKOMMER | Moving to Denmark`;
+  updatePageTitle();
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute('content', chIntro.substring(0, 155));
 
@@ -1595,7 +1651,13 @@ const PWAInstall = (() => {
 
 window.toggleSection = (id) => {
   const sec = document.getElementById(id);
-  if (sec) sec.classList.toggle('open');
+  if (!sec) return;
+  const opened = sec.classList.toggle('open');
+  // Keep aria-expanded in sync so screen-reader users know the state
+  // (audit caught: button had no aria-expanded — SR users couldn't tell
+  // whether the section was open or closed).
+  const btn = sec.querySelector('.section-toggle');
+  if (btn) btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
 };
 
 window.toggleTask = (taskId, xp) => {
@@ -1752,6 +1814,10 @@ window.scrollToTop = () => {
   if (location.hash && history.replaceState) {
     history.replaceState(null, '', location.pathname + location.search);
   }
+  // Reset browser tab title to the home title in the active language
+  // (audit caught: title persisted last visited chapter even after
+  // returning home, hurting bookmarks and history readability).
+  if (typeof updatePageTitle === 'function') updatePageTitle();
   // Close mobile rail if open
   const rail = document.getElementById('chapter-rail');
   const hb   = document.getElementById('hamburger');
