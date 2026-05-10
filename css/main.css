@@ -809,13 +809,18 @@ body.app-active .footer-top {
 
 /* ── Progress header ── */
 .wiz-progress-wrap {
-  padding: 26px 36px 12px;
+  /* Right padding bumped from 36 → 72 so the "% complete" label can't
+     run under the absolute-positioned .wizard-close (right:14, width:44
+     ⇒ occupies right-58 to right-14). Audit caught this — visible
+     output was "17% comple" with the "te" hidden behind the ✕. */
+  padding: 26px 72px 12px 36px;
   flex-shrink: 0;
   border-bottom: 1px solid var(--border);
 }
 .wiz-progress-top {
   display: flex; justify-content: space-between; align-items: center;
   margin-bottom: 10px;
+  gap: 8px;
 }
 .wiz-step-label {
   font-size: 0.75rem; font-weight: 800;

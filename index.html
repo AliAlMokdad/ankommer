@@ -203,11 +203,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=50" />
+  <link rel="stylesheet" href="css/main.css?v=51" />
 </head>
 <body>
 
-<a href="#main-content" class="skip-to-content">Skip to content</a>
+<a href="#main-content" class="skip-to-content" data-i18n="skip_to_content">Skip to content</a>
 
 <!-- ═══════════════════════════════════ LOADING SCREEN ═══════════════════════════════════ -->
 <div id="loader">
@@ -909,9 +909,9 @@
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer_bjorn">Björn</h4>
-          <a href="#bjorn" onclick="event.preventDefault(); openBjorn();" data-i18n="footer_ask">Ask anything</a>
-          <a href="#bjorn" onclick="event.preventDefault(); openBjorn();" data-i18n="footer_doc">Translate a document</a>
-          <a href="#bjorn" onclick="event.preventDefault(); openBjorn();" data-i18n="footer_form">Navigate a form</a>
+          <a href="#bjorn-widget" onclick="event.preventDefault(); openBjorn();" data-i18n="footer_ask">Ask anything</a>
+          <a href="#bjorn-widget" onclick="event.preventDefault(); openBjorn();" data-i18n="footer_doc">Translate a document</a>
+          <a href="#bjorn-widget" onclick="event.preventDefault(); openBjorn();" data-i18n="footer_form">Navigate a form</a>
         </div>
       </nav>
     </div>
@@ -1081,7 +1081,7 @@
 <!-- v24: cache-busting query string forces a fresh fetch when we ship new JS,
      since /js/* historically had a 1-year immutable cache header. Bump the
      query string in lockstep with sw.js CACHE_NAME on every release. -->
-<script defer src="js/data.js?v=32"></script>
+<script defer src="js/data.js?v=33"></script>
 <script defer src="js/data-chapters-meta.js?v=30"></script>
 <!-- Removed prefetch tag: js/data-chapters.js is dynamically injected on
      first openChapter() call. The prefetch caused a duplicate fetch in
