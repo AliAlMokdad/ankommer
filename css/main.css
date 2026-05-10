@@ -1188,16 +1188,17 @@ body.app-active .footer-top {
 .rail-nav { padding-bottom: 12px; }
 .rail-item {
   display: flex; align-items: center; gap: 10px;
-  padding: 10px 20px;
+  padding: 12px 20px;
   cursor: pointer;
-  /* Use full --text instead of --text-muted so inactive chapters don't
-     look "faded out" next to the home + active rows. Audit caught the
-     rail looking like a "mix of highlighted and not" because non-active
-     items used a muted purple-gray that read as disabled. The active row
-     still stands out via the accent border + accent colour + bold weight,
-     not by being the only legible row. */
+  /* All rail items use full --text colour (not --text-muted) so the
+     rail reads as a uniform list of available chapters, not a mix of
+     "available" and "faded out". The active row still pops via the
+     accent border + accent colour + bold weight, but the bg stays
+     transparent — earlier the cream bg on home + active vs white bg
+     on everything else created visible "bands" against the dimmed
+     mobile-overlay backdrop. */
   color: var(--text);
-  font-size: 0.85rem; font-weight: 500;
+  font-size: 0.92rem; font-weight: 500;
   transition: all var(--t-fast);
   border-left: 3px solid transparent;
   border-top: none; border-right: none; border-bottom: none;
@@ -1212,8 +1213,8 @@ body.app-active .footer-top {
 .rail-item.active {
   color: var(--ch-accent);
   border-left-color: var(--ch-accent);
-  background: var(--bg-secondary);
-  font-weight: 600;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--ch-accent) 8%, transparent) 0%, transparent 100%);
+  font-weight: 700;
 }
 /* RTL: rail sits on the right edge of the screen, so the active-chapter
    accent bar should land on the right (screen edge), not on the inside
@@ -4157,14 +4158,16 @@ body { overflow-wrap: break-word; }
    reading order (← becomes → and vice versa). */
 [dir="rtl"] .ch-end-arrow { transform: scaleX(-1); }
 
-/* Home button at the top of the chapter rail — visually distinct so users
-   immediately recognise it as the path back to the landing page. */
+/* Home button at the top of the chapter rail — distinct via a bottom
+   divider + bold weight, but no different background so it doesn't
+   create a "band" against the dimmed mobile-overlay backdrop on phone.
+   Audit: the cream bg on home + active rows looked inconsistent with
+   the white bg on the other 15 chapters. */
 .rail-item.rail-home {
-  background: var(--bg-secondary);
   border-bottom: 1px solid var(--border);
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: var(--text-strong, var(--text));
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: var(--text);
 }
 .rail-item.rail-home:hover,
 .rail-item.rail-home:focus-visible {
@@ -4254,15 +4257,14 @@ body { overflow-wrap: break-word; }
 /* Mobile chapter rail: not full-width on tiny phones */
 @media (max-width: 768px) {
   .chapter-rail { width: min(280px, 90vw); }
-  /* Add a backdrop scrim when rail is open so user knows to tap-to-close */
-  .chapter-rail.open::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: -1;
-    animation: fade-in 0.2s ease;
-  }
+  /* Removed an old `.chapter-rail.open::before` scrim with rgba(0,0,0,0.5).
+     It was supposed to dim the area BEHIND the rail, but the rail has
+     `transform: translateX(...)` which makes a containing block for
+     position:fixed children — so the ::before positioned itself
+     relative to the rail and dimmed the rail's OWN content area
+     (visible bug: rail-nav portion looked dim, rail-xp portion looked
+     clean white, with a sharp horizontal split). The `#mobile-overlay`
+     element already provides the proper full-viewport backdrop. */
 }
 
 /* Galaxy Fold (280px when open inner) and other ultra-narrow screens */
