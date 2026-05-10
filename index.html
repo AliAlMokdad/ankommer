@@ -203,7 +203,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=51" />
+  <link rel="stylesheet" href="css/main.css?v=52" />
 </head>
 <body>
 
@@ -234,16 +234,16 @@
     <!-- Language selector -->
     <div class="lang-selector" id="lang-selector" data-current-lang="EN" role="button" tabindex="0" aria-label="Language selection" aria-haspopup="menu" aria-expanded="false" data-i18n-aria="nav_lang">
       <div class="lang-dropdown-menu" role="menu">
-        <button class="lang-btn active" data-lang="en" aria-label="English" aria-pressed="true">🇬🇧 <span>EN</span></button>
-        <button class="lang-btn" data-lang="fr" aria-label="Français" aria-pressed="false">🇫🇷 <span>FR</span></button>
-        <button class="lang-btn" data-lang="ar" aria-label="العربية" aria-pressed="false">🇸🇦 <span>AR</span></button>
-        <button class="lang-btn" data-lang="es" aria-label="Español" aria-pressed="false">🇪🇸 <span>ES</span></button>
-        <button class="lang-btn" data-lang="da" aria-label="Dansk" aria-pressed="false">🇩🇰 <span>DA</span></button>
-        <button class="lang-btn" data-lang="de" aria-label="Deutsch" aria-pressed="false">🇩🇪 <span>DE</span></button>
-        <button class="lang-btn" data-lang="uk" aria-label="Українська" aria-pressed="false">🇺🇦 <span>UK</span></button>
-        <button class="lang-btn" data-lang="pl" aria-label="Polski" aria-pressed="false">🇵🇱 <span>PL</span></button>
-        <button class="lang-btn" data-lang="ur" aria-label="اردو" aria-pressed="false">🇵🇰 <span>UR</span></button>
-        <button class="lang-btn" data-lang="fa" aria-label="فارسی" aria-pressed="false">🇮🇷 <span>FA</span></button>
+        <button class="lang-btn active" role="menuitemradio" data-lang="en" aria-label="English" aria-checked="true">🇬🇧 <span>EN</span></button>
+        <button class="lang-btn" role="menuitemradio" data-lang="fr" aria-label="Français" aria-checked="false">🇫🇷 <span>FR</span></button>
+        <button class="lang-btn" role="menuitemradio" data-lang="ar" aria-label="العربية" aria-checked="false">🇸🇦 <span>AR</span></button>
+        <button class="lang-btn" role="menuitemradio" data-lang="es" aria-label="Español" aria-checked="false">🇪🇸 <span>ES</span></button>
+        <button class="lang-btn" role="menuitemradio" data-lang="da" aria-label="Dansk" aria-checked="false">🇩🇰 <span>DA</span></button>
+        <button class="lang-btn" role="menuitemradio" data-lang="de" aria-label="Deutsch" aria-checked="false">🇩🇪 <span>DE</span></button>
+        <button class="lang-btn" role="menuitemradio" data-lang="uk" aria-label="Українська" aria-checked="false">🇺🇦 <span>UK</span></button>
+        <button class="lang-btn" role="menuitemradio" data-lang="pl" aria-label="Polski" aria-checked="false">🇵🇱 <span>PL</span></button>
+        <button class="lang-btn" role="menuitemradio" data-lang="ur" aria-label="اردو" aria-checked="false">🇵🇰 <span>UR</span></button>
+        <button class="lang-btn" role="menuitemradio" data-lang="fa" aria-label="فارسی" aria-checked="false">🇮🇷 <span>FA</span></button>
       </div>
     </div>
     <!-- Search -->
@@ -399,7 +399,7 @@
   <div class="search-backdrop" id="search-backdrop"></div>
   <div class="search-modal">
     <div class="search-input-wrap">
-      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       <input type="text" id="search-input" placeholder="Search chapters, topics, tasks…" data-i18n-placeholder="search_placeholder" aria-label="Search the guide" autocomplete="off" spellcheck="false" />
       <kbd class="search-esc-hint">ESC</kbd>
     </div>
@@ -529,7 +529,7 @@
       <div class="tool-body">
         <div class="tool-field">
           <label for="salary-input" data-i18n="tool_salary_gross">Gross monthly salary (DKK)</label>
-          <input type="number" id="salary-input" placeholder="45000" min="0" max="999999" />
+          <input type="number" id="salary-input" placeholder="45000" min="0" max="999999" step="500" inputmode="numeric" />
         </div>
         <div class="tool-field">
           <label for="salary-municipality" data-i18n="tool_salary_city">Municipality</label>
@@ -665,12 +665,12 @@
         <!-- Size -->
         <div class="tool-field">
           <label for="rent-size" data-i18n="rent_label_size">Apartment size (m²)</label>
-          <input type="number" id="rent-size" placeholder="e.g. 65" min="10" max="500" data-i18n-placeholder="ph_rent_size" />
+          <input type="number" id="rent-size" placeholder="e.g. 65" min="10" max="500" step="5" inputmode="numeric" data-i18n-placeholder="ph_rent_size" />
         </div>
         <!-- Monthly rent -->
         <div class="tool-field">
           <label for="rent-monthly" data-i18n="rent_label_monthly">Your monthly rent (DKK)</label>
-          <input type="number" id="rent-monthly" placeholder="e.g. 9500" min="500" max="100000" data-i18n-placeholder="ph_rent_monthly" />
+          <input type="number" id="rent-monthly" placeholder="e.g. 9500" min="500" max="100000" step="100" inputmode="numeric" data-i18n-placeholder="ph_rent_monthly" />
         </div>
         <button class="btn-primary" id="rent-check-btn" data-i18n="rent_check_btn">Check My Rent</button>
         <div class="tool-result hidden" id="rent-result" role="status" aria-live="polite"></div>
@@ -797,7 +797,7 @@
       <div class="tool-icon">📄</div>
       <h3 data-i18n="tool_visa_title">Visa Decision Tree</h3>
       <p data-i18n="tool_visa_sub">Answer 3 questions. Know exactly which visa you need.</p>
-      <div class="tool-body" id="visa-tree-body">
+      <div class="tool-body" id="visa-tree-body" role="status" aria-live="polite">
         <!-- Populated by JS -->
       </div>
     </div>
@@ -956,7 +956,7 @@
   <!-- Toggle button -->
   <button class="bjorn-toggle" id="bjorn-toggle" aria-label="Toggle Björn chat" aria-expanded="false" aria-controls="bjorn-panel">
     <div class="bjorn-avatar-sm" id="bjorn-avatar-sm">
-      <svg viewBox="0 0 60 60" class="bjorn-svg-sm">
+      <svg viewBox="0 0 60 60" class="bjorn-svg-sm" aria-hidden="true">
         <!-- Face -->
         <circle cx="30" cy="28" r="18" fill="#C8A96E"/>
         <!-- Hair/helmet -->
@@ -985,10 +985,10 @@
   </button>
 
   <!-- Chat panel -->
-  <div class="bjorn-panel" id="bjorn-panel">
+  <div class="bjorn-panel" id="bjorn-panel" role="dialog" aria-modal="true" aria-labelledby="bjorn-panel-title">
     <div class="bjorn-panel-header">
       <div class="bjorn-panel-avatar">
-        <svg viewBox="0 0 80 80" class="bjorn-svg-lg">
+        <svg viewBox="0 0 80 80" class="bjorn-svg-lg" aria-hidden="true">
           <circle cx="40" cy="36" r="22" fill="#C8A96E"/>
           <ellipse cx="40" cy="16" rx="22" ry="10" fill="#4a3728"/>
           <ellipse cx="17" cy="13" rx="5" ry="8" fill="#e8e0d0" transform="rotate(-20,17,13)"/>
@@ -1005,7 +1005,7 @@
         </svg>
       </div>
       <div class="bjorn-panel-info">
-        <h3>Björn</h3>
+        <h3 id="bjorn-panel-title">Björn</h3>
         <span class="bjorn-status" data-i18n="bjorn_status">Your Denmark guide since 836 AD</span>
       </div>
       <div class="bjorn-header-actions">
@@ -1091,7 +1091,7 @@
 <script defer src="js/bjorn.js?v=37"></script>
 <script defer src="js/calculators.js?v=31"></script>
 <script defer src="js/apis.js?v=28"></script>
-<script defer src="js/app.js?v=48"></script>
+<script defer src="js/app.js?v=49"></script>
 <!-- Shared backdrop for mobile modals (lang dropdown, Björn panel) -->
 <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 </body>

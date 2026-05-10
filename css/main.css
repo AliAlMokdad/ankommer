@@ -3683,6 +3683,11 @@ body.app-active .footer-top {
   /* Wizard back/skip — add vertical padding since they're text buttons. */
   .wiz-back-btn { padding: 12px 14px !important; }
   .wizard-skip { padding: 12px 14px !important; min-height: 44px; }
+  /* Footer "Ali Al Mokdad" credit link — measured 104×24 in audit, well
+     below the 44 px tap minimum. Bump padding to give a comfortable hit
+     area without changing the visual line-height of the surrounding text. */
+  .footer-founder-link { display: inline-flex; align-items: center;
+                         min-height: 44px; padding: 10px 4px; }
   /* Lang chips need a bit more breathing room when forced to 44px */
   .lang-btn { padding: 6px 10px; }
   /* Logo: keep its natural width but bump height to a 44px tap target */

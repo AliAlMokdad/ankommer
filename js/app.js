@@ -423,7 +423,10 @@ const i18n = {
     document.querySelectorAll('.lang-btn').forEach(b => {
       const active = b.dataset.lang === lang;
       b.classList.toggle('active', active);
-      b.setAttribute('aria-pressed', active ? 'true' : 'false');
+      // The lang-btn lives inside a role="menu" with role="menuitemradio"
+      // children — for radios, ARIA uses aria-checked (not aria-pressed,
+      // which is for toggle buttons). Audit caught the role/state mismatch.
+      b.setAttribute('aria-checked', active ? 'true' : 'false');
     });
     i18n.applyAll();
     if (AppState.currentChapter !== null) renderChapter(AppState.currentChapter);
