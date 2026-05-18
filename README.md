@@ -81,8 +81,8 @@ Please also read the [`Code of Conduct`](CODE_OF_CONDUCT.md). Security and respo
 
 ## License
 
-- **Code** is released under the **MIT License**. See [`LICENSE`](LICENSE).
-- **Editorial content, translations, and documentation** are released under **Creative Commons Attribution-ShareAlike 4.0 International** (CC BY-SA 4.0).
+- **Source code** is released under the **MIT License**. See [`LICENSE`](LICENSE).
+- **Editorial content, translations, and documentation** are released under **Creative Commons Attribution-ShareAlike 4.0 International** (CC BY-SA 4.0). See [`LICENSE-CONTENT`](LICENSE-CONTENT).
 
 You are free to use, fork, adapt, and redistribute this project, including for commercial purposes, provided you give appropriate credit and pass content changes along under the same license.
 

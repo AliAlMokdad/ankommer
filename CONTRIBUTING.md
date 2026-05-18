@@ -82,8 +82,8 @@ ANKOMMER stores no personal data on a server. Anything that collects or transmit
 
 By contributing, you agree that your contributions will be licensed under the same terms as the project:
 
-- **Code** under the MIT License
-- **Content** (chapter text, translations, prose, documentation) under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+- **Code** under the MIT License (see `LICENSE`)
+- **Content** (chapter text, translations, prose, documentation) under Creative Commons Attribution-ShareAlike 4.0 International, CC BY-SA 4.0 (see `LICENSE-CONTENT`)
 
 You retain copyright to your contribution. You are simply granting the project the right to use it under these licenses.
 
