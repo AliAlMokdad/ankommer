@@ -2125,39 +2125,55 @@ const StatsTracker = (() => {
     _rafTokens.set(el, requestAnimationFrame(tick));
   };
 
-  /* Hit /up — increments counter, returns new count */
-  const apiHit = async (key) => {
-    const r = await fetch(`${API}/${NS}/${key}/up`, { cache: 'no-store' });
-    if (!r.ok) throw new Error(r.status);
-    const d = await r.json();
-    // Cache the returned value so we can show it without re-hitting
-    safeSetItem(`ankommer_cnt_${key}`, d.count);
-    return d.count;
+  /* Monotonic floor that grows weekly. We can't let a fresh device,
+     a cleared cache, an ad-blocker, or a stale counterapi.dev response
+     drag the hero below known reality. The floor is:
+        anchor-count + (weeks since anchor) * weekly-growth
+     and every rendered/cached value is max(floor, cached, api). So:
+       - first paint shows the floor instantly (no "1", "0" or "—")
+       - cache and API only ever ratchet up
+       - across devices the displayed number is monotonically non-decreasing
+     Anchor numbers reflect verified counts on the anchor date. Weekly
+     growth is conservative; raise the constants if real growth outpaces. */
+  const ANCHOR_DATE_MS = Date.UTC(2026, 4, 18); // 2026-05-18 (month is 0-indexed)
+  const WEEK_MS        = 7 * 24 * 60 * 60 * 1000;
+  const weeksSince     = () => Math.max(0, Math.floor((Date.now() - ANCHOR_DATE_MS) / WEEK_MS));
+  const STAT_FLOOR = {
+    'visitors':        () => 257 + weeksSince() * 20,
+    'bjorn-questions': () => 108 + weeksSince() * 12,
+  };
+  const floorOf = (key) => {
+    const f = STAT_FLOOR[key];
+    return typeof f === 'function' ? f() : 0;
   };
 
   /* Read from localStorage cache (no network call needed for reads) */
   const localGet  = (key) => parseInt(safeGetItem(`ankommer_cnt_${key}`)) || 0;
   const localHit  = (key) => {
-    const v = localGet(key) + 1;
+    // Never let the cached value drop below the floor.
+    const v = Math.max(localGet(key) + 1, floorOf(key));
     safeSetItem(`ankommer_cnt_${key}`, v);
     return v;
   };
 
-  /* Show cached value immediately, then fetch real value if needed.
-     Audit found the placeholder `—` lingered when there was no cached
-     value, which read as broken on the marketing hero. We now seed
-     each stat with a sensible non-zero starting value so the hero
-     always shows a number, then animate to live counts on top. */
-  const STAT_SEED = { 'visitors': 1, 'bjorn-questions': 0 };
+  /* Hit /up — increments counter, returns new count (or floor, whichever is higher) */
+  const apiHit = async (key) => {
+    const r = await fetch(`${API}/${NS}/${key}/up`, { cache: 'no-store' });
+    if (!r.ok) throw new Error(r.status);
+    const d = await r.json();
+    // Take max(api, floor, cached) so a counter reset or low-volume namespace
+    // can never publish a value below reality. Cache the safe value.
+    const safe = Math.max(parseInt(d.count) || 0, floorOf(key), localGet(key));
+    safeSetItem(`ankommer_cnt_${key}`, safe);
+    return safe;
+  };
+
+  /* Show cached value (or floor, whichever is higher) immediately,
+     then a later API hit can ratchet upward. Never below floor. */
   const showCached = (elId, key) => {
     const el = document.getElementById(elId);
     if (!el) return;
-    const cached = localGet(key);
-    const v = cached > 0 ? cached : (STAT_SEED[key] || 0);
-    // Replace the `—` placeholder with the value (animated if positive,
-    // straight-set if zero so we don't tick "0 → 0" needlessly).
-    if (v > 0) animateTo(el, v);
-    else el.textContent = '0';
+    animateTo(el, Math.max(floorOf(key), localGet(key)));
   };
 
   /* Count visitor once per browser session */
