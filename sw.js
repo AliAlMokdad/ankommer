@@ -7,7 +7,7 @@
  *   - Cross-origin APIs:     pass through, never cache (live data only)
  */
 
-const CACHE_NAME = 'ankommer-v51';
+const CACHE_NAME = 'ankommer-v52';
 
 const PRECACHE_URLS = [
   '/',
@@ -30,9 +30,19 @@ const PRECACHE_URLS = [
 // shows an "update available" toast and posts SKIP_WAITING when the user
 // confirms — installing in the background and waiting preserves that flow.
 // On first install (no controller) the new SW activates immediately anyway.
+//
+// Precache fetches use { cache: 'reload' } so each asset is pulled fresh from
+// the network, bypassing the browser's HTTP cache. This prevents a stale CDN
+// copy of (say) /js/data.js from being baked into a fresh SW cache version
+// during the brief window between a deploy of sw.js and the CDN catching up
+// on the other precache assets. Atomicity is preserved (cache.addAll still
+// all-or-nothing); failure modes are unchanged (if origin is unreachable
+// during install, the install rejects and the previous SW keeps serving).
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(PRECACHE_URLS))
+    caches.open(CACHE_NAME).then(cache =>
+      cache.addAll(PRECACHE_URLS.map(url => new Request(url, { cache: 'reload' })))
+    )
   );
 });
 
