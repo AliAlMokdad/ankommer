@@ -1,6 +1,6 @@
 # ANKOMMER
 
-**The world's most complete multilingual guide to arriving in Denmark, built AI-native.**
+**A free, multilingual guide to arriving in Denmark, built AI-native.**
 
 A free, open source, privacy-first progressive web app that walks newcomers through the full journey of moving to and settling in Denmark, in ten languages, with an AI assistant tied to chapter content.
 
