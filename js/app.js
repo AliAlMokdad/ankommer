@@ -2238,9 +2238,16 @@ const initMobileSidebar = () => {
     rail?.classList.add('open');
     hamburger?.classList.add('open');
     hamburger?.setAttribute('aria-expanded', 'true');
-    if (window.matchMedia('(max-width: 1024px)').matches) {
+    if (window.matchMedia('(max-width: 768px)').matches) {
       document.getElementById('mobile-overlay')?.classList.add('visible');
       document.body.style.overflow = 'hidden';
+      // Scroll the active chapter into view inside the rail. With 16
+      // chapters at ~46px each the rail content exceeds the iPhone SE
+      // viewport, so a user reading chapter 13+ would land at
+      // scrollTop=0 and not see where they are.
+      requestAnimationFrame(() => {
+        rail?.querySelector('.rail-item.active')?.scrollIntoView({ block: 'center' });
+      });
     } else {
       // On desktop (>=1024px) the rail is already visible as a sidebar,
       // so adding `.open` is a no-op visually. Scroll the rail into view
@@ -2259,7 +2266,7 @@ const initMobileSidebar = () => {
     rail?.classList.toggle('open', opened);
     hamburger.setAttribute('aria-expanded', opened ? 'true' : 'false');
     // Sync the shared mobile backdrop on small screens
-    if (window.matchMedia('(max-width: 1024px)').matches) {
+    if (window.matchMedia('(max-width: 768px)').matches) {
       document.getElementById('mobile-overlay')?.classList.toggle('visible', opened);
       document.body.style.overflow = opened ? 'hidden' : '';
     }

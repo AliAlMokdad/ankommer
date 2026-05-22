@@ -173,7 +173,18 @@ body {
   line-height: 1.65;
   transition: background var(--t-slow), color var(--t-slow);
   overflow-x: hidden;
+  /* Stop iOS URL-bar rubber band from chaining to children, and stop
+     scroll-through-modal behavior where rubber-banding inside an open
+     overlay can scroll the underlying page. */
+  overscroll-behavior-y: none;
 }
+/* Modal-style overlays: contain scroll within themselves so the
+   underlying page does not move when the user reaches the end of
+   the modal content on iOS. */
+.wizard-overlay,
+.search-overlay,
+.bjorn-panel,
+.chapter-rail { overscroll-behavior: contain; }
 
 a { color: var(--nordic-blue); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -2278,10 +2289,10 @@ body.app-active .footer-top {
   display: inline-block; font-size: 0.72rem; padding: 3px 10px;
   border-radius: 12px; font-weight: 600;
 }
-.tag-blue { background: rgba(46,109,164,0.12); color: var(--nordic-blue); }
+.tag-blue { background: color-mix(in srgb, var(--nordic-blue) 12%, transparent); color: var(--nordic-blue); }
 .tag-red  { background: color-mix(in srgb, var(--flag-red) 10%, transparent); color: var(--flag-red); }
-.tag-sage { background: rgba(106,158,106,0.12); color: var(--sage); }
-.tag-amber{ background: rgba(232,160,32,0.12);  color: var(--amber); }
+.tag-sage { background: color-mix(in srgb, var(--sage) 12%, transparent); color: var(--sage); }
+.tag-amber{ background: color-mix(in srgb, var(--amber) 12%, transparent); color: var(--amber); }
 
 /* ── 19. RESPONSIVE ────────────────────────────────── */
 @media (max-width: 1100px) {
@@ -3359,9 +3370,13 @@ body.app-active .footer-top {
    PRINT STYLES — Clean chapter print layout
 ═══════════════════════════════════════════════════════════ */
 @media print {
-  /* Hide everything except main content */
-  #main-nav, #hero, #tools-section, #stories-section,
-  #daily-section, #map-section, #footer,
+  /* Hide everything except main content. IDs that no longer exist
+     (#stories-section, #map-section, #footer) were removed in favor of
+     the actual ones (#main-footer, #chapters-preview-section) so a
+     printed chapter doesn't end with the entire footer or the 16-card
+     preview grid stapled to it. */
+  #main-nav, #hero, #tools-section, #timeline-section,
+  #daily-section, #main-footer, #chapters-preview-section,
   .chapter-rail, .hamburger, .bjorn-widget, .bjorn-panel,
   .wizard-overlay, .search-overlay, .my-roadmap-strip,
   #pwa-install-banner, .chapter-read-bar,
@@ -4564,7 +4579,12 @@ h3 { letter-spacing: -0.012em; }
   background:
     radial-gradient(ellipse 80% 60% at 50% 0%, rgba(46,109,164,0.18) 0%, transparent 65%),
     var(--danish-night);
-  padding: 0 24px;
+  /* Bottom padding reserves a Bjorn FAB-free zone so the FAB (64px
+     wide + 16px right offset = 80px) cannot float over the founder
+     pill in the footer-bottom row when the user scrolls all the way
+     down. The <=600px override below stretches this to 96px to also
+     clear the stacked Download/Restore plan buttons. */
+  padding: 0 24px 88px;
   margin-top: 64px;
   position: relative;
 }
@@ -4804,7 +4824,11 @@ h3 { letter-spacing: -0.012em; }
      overlaps the right edge of the full-width "Download my plan" /
      "Restore from file" buttons that this layout stacks below. */
   #main-footer { padding: 0 18px max(96px, calc(env(safe-area-inset-bottom) + 80px)); }
-  .footer-inner { padding: 56px 0 28px; gap: 36px; }
+  /* footer-inner bottom padding goes to 0 because the parent
+     #main-footer already reserves the FAB-clear zone. Without this,
+     the user saw 124px of dead space (28 + 96) below the last footer
+     text on iPhone SE, reading as a broken layout. */
+  .footer-inner { padding: 56px 0 0; gap: 36px; }
   .footer-logo { font-size: 1.7rem; }
   .footer-links {
     display: grid;
