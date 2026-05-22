@@ -2629,6 +2629,7 @@ const Search = (() => {
   const init = () => {
     document.getElementById('search-open-btn')?.addEventListener('click', open);
     document.getElementById('search-backdrop')?.addEventListener('click', close);
+    document.getElementById('search-close')?.addEventListener('click', close);
 
     // Ctrl+K / Cmd+K opens. Belt-and-suspenders Escape close: the
     // FocusTrap's keydown only fires when focus is inside the overlay,

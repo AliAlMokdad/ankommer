@@ -2347,7 +2347,7 @@ body.app-active .footer-top {
   .wizard-modal { border-radius: 20px 20px 0 0; align-self: flex-end; max-height: 92vh; }
   .wizard-overlay { align-items: flex-end; padding: 0; }
   .wiz-progress-wrap { padding: 20px 22px 10px; }
-  #wizard-questions { padding: 18px 22px 26px; }
+  #wizard-questions { padding: 18px 22px max(26px, calc(env(safe-area-inset-bottom) + 18px)); }
   .wizard-options { grid-template-columns: 1fr; }
   .result-hero { padding: 24px 22px 20px; }
   .result-chips { padding: 14px 22px 0; }
@@ -2766,7 +2766,25 @@ body.app-active .footer-top {
   border-radius: 5px; padding: 2px 6px; font-family: monospace;
   cursor: pointer; flex-shrink: 0;
 }
-.search-results { max-height: 58vh; overflow-y: auto; }
+/* Search close button: visible on touch/mobile (where the ESC kbd hint
+   is hidden because phones have no Escape key). On desktop the kbd ESC
+   serves as both the keyboard hint and the click target. */
+.search-close {
+  display: none;
+  align-items: center; justify-content: center;
+  width: 32px; height: 32px;
+  background: transparent; border: none;
+  color: var(--text-muted); cursor: pointer;
+  border-radius: 8px; flex-shrink: 0;
+  transition: background var(--t-fast), color var(--t-fast);
+}
+.search-close:hover,
+.search-close:focus-visible { background: var(--bg-secondary); color: var(--text); }
+.search-close svg { width: 20px; height: 20px; }
+@media (max-width: 768px) {
+  .search-close { display: inline-flex; }
+}
+.search-results { max-height: min(58vh, 50dvh); overflow-y: auto; }
 .search-empty {
   display: flex; flex-direction: column; align-items: center;
   padding: 36px 24px; gap: 10px; text-align: center;
@@ -3531,6 +3549,12 @@ body.app-active .footer-top {
   .wiz-back-btn,
   .wizard-close,
   .hero-browse-btn,
+  /* Phone QA round 3: hero CTAs (.btn-xl / .btn-ghost) and the new
+     search-close button were just below 44px on tiny phones (360x640
+     Galaxy class). Bump them too. */
+  .btn-xl,
+  .btn-ghost,
+  .search-close,
   .lang-btn {
     min-width: 44px;
     min-height: 44px;
@@ -4775,7 +4799,11 @@ h3 { letter-spacing: -0.012em; }
   }
 }
 @media (max-width: 600px) {
-  #main-footer { padding: 0 18px; }
+  /* Bottom padding reserves a FAB-free zone (Bjørn FAB is 64px + 16px
+     offset = ~80px footprint at bottom-right). Without this, the FAB
+     overlaps the right edge of the full-width "Download my plan" /
+     "Restore from file" buttons that this layout stacks below. */
+  #main-footer { padding: 0 18px max(96px, calc(env(safe-area-inset-bottom) + 80px)); }
   .footer-inner { padding: 56px 0 28px; gap: 36px; }
   .footer-logo { font-size: 1.7rem; }
   .footer-links {
