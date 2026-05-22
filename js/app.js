@@ -2181,20 +2181,41 @@ const StatsTracker = (() => {
     animateTo(el, Math.max(floorOf(key), localGet(key)));
   };
 
-  /* The visitor / Bjorn-question counters were retired 2026-05-22 after
-     repeated breakage. Root issues: the counterapi.dev backend was
-     unreliable; a hardcoded weekly floor became stale every week and
-     showed numbers visibly below reality after any cache clear; the
-     "no analytics, no accounts" brand voice clashed with showing a
-     usage count we could not guarantee. The hero now displays only
-     verifiable stats (16 chapters, 10 languages, 100% free, 0 ads or
-     tracking) which never break, never need maintenance, and match the
-     brand promise. The tracking helpers below are kept as no-ops so any
-     remaining call sites (e.g. window.dispatchEvent('bjornMessageSent'))
-     do not throw. */
-  const noop = () => {};
-  const init = noop;
-  const trackBjornQuestion = noop;
+  /* Count visitor once per browser session */
+  const trackVisitor = async () => {
+    const el = document.getElementById('stat-visitors');
+    // Show cached value immediately while fetch runs
+    showCached('stat-visitors', 'visitors');
+    if (sessionStorage.getItem('ankommer_session')) return; // already counted
+    sessionStorage.setItem('ankommer_session', '1');
+    try {
+      const count = await apiHit('visitors');
+      animateTo(el, count);
+    } catch (_) {
+      animateTo(el, localHit('visitors'));
+    }
+  };
+
+  /* Count each answered Bjørn question */
+  const trackBjornQuestion = async () => {
+    const el = document.getElementById('stat-bjorn');
+    try {
+      const count = await apiHit('bjorn-questions');
+      animateTo(el, count);
+    } catch (_) {
+      animateTo(el, localHit('bjorn-questions'));
+    }
+  };
+
+  const init = () => {
+    // Show cached counts instantly (or fall back to floor) while async runs
+    showCached('stat-visitors',  'visitors');
+    showCached('stat-bjorn', 'bjorn-questions');
+    // Then fire live updates
+    trackVisitor();
+    window.addEventListener('bjornMessageSent', trackBjornQuestion);
+  };
+
   return { init, trackBjornQuestion };
 })();
 window.StatsTracker = StatsTracker;
