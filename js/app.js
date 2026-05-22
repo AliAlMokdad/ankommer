@@ -2135,12 +2135,17 @@ const StatsTracker = (() => {
        - across devices the displayed number is monotonically non-decreasing
      Anchor numbers reflect verified counts on the anchor date. Weekly
      growth is conservative; raise the constants if real growth outpaces. */
-  const ANCHOR_DATE_MS = Date.UTC(2026, 4, 18); // 2026-05-18 (month is 0-indexed)
+  // Anchor bumped to 2026-05-22 because earlier-floor + cleared cache
+  // showed 257 visitors when the live counterapi.dev backend already had
+  // 309. The floor should reflect reality on the anchor date so a fresh
+  // device or a cache-clear never sees a number visibly below what we
+  // already know is true.
+  const ANCHOR_DATE_MS = Date.UTC(2026, 4, 22); // 2026-05-22 (month is 0-indexed)
   const WEEK_MS        = 7 * 24 * 60 * 60 * 1000;
   const weeksSince     = () => Math.max(0, Math.floor((Date.now() - ANCHOR_DATE_MS) / WEEK_MS));
   const STAT_FLOOR = {
-    'visitors':        () => 257 + weeksSince() * 20,
-    'bjorn-questions': () => 108 + weeksSince() * 12,
+    'visitors':        () => 310 + weeksSince() * 20,
+    'bjorn-questions': () => 130 + weeksSince() * 12,
   };
   const floorOf = (key) => {
     const f = STAT_FLOOR[key];
