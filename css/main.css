@@ -4077,19 +4077,19 @@ body { overflow-wrap: break-word; }
   }
   .hero-stat-divider { display: none; }
   .hero-stat { padding: 4px; }
-  /* Push the 2x2 stats grid up on phone home so the Bjorn FAB
-     (64px tall, bottom: 16px = footprint at y ≥ viewport-80) does not
-     overlap the bottom row of stats. The base .hero-stats rule has a
-     fade-up animation with `forwards` fill mode that locks
-     transform: translateY(0) after running — that would silently
-     override a static transform here. Use a phone-specific keyframe
-     that lands at translateY(-96px) so the animation cooperates with
-     the layout fix. */
-  @keyframes fade-up-hero-stats-mobile {
-    from { opacity: 0; transform: translateY(-108px); }
-    to   { opacity: 1; transform: translateY(-128px); }
+  /* On phone we drop the fade-up animation entirely and apply the
+     translate statically. Two reasons: (1) the base .hero-stats has
+     opacity: 0 + a 2.3s animation delay, which left the stats
+     invisible for the first 2.3s on every page load and was
+     particularly noticeable on phone; (2) under
+     prefers-reduced-motion the animation was suppressed and the
+     stats stayed at opacity 0 permanently. Static + visible from
+     first paint is the right answer here. */
+  .hero-stats {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: translateY(-128px) !important;
   }
-  .hero-stats { animation: fade-up-hero-stats-mobile 0.8s 2.3s ease forwards; }
 }
 /* On smallest phones, stats are visible (don't hide them — they're useful) */
 @media (max-width: 480px) {
