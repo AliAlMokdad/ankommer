@@ -638,61 +638,6 @@
       </div>
     </div>
 
-    <!-- Rent Price Checker — Statistics Denmark data -->
-    <div class="tool-card" id="rent-tool">
-      <div class="tool-icon">🏠</div>
-      <h3 data-i18n="tool_rent_title">Rent Price Checker</h3>
-      <p data-i18n="tool_rent_sub">Is your rent fair? Compare against real Danish market averages by city and neighbourhood.</p>
-      <div class="tool-body">
-        <!-- City -->
-        <div class="tool-field">
-          <label for="rent-city" data-i18n="rent_label_city">City</label>
-          <select id="rent-city">
-            <option value="cph">Copenhagen (overall)</option>
-            <option value="cph-nb">Copenhagen — by neighbourhood</option>
-            <option value="frederiksberg">Frederiksberg</option>
-            <option value="aarhus">Aarhus</option>
-            <option value="odense">Odense</option>
-            <option value="aalborg">Aalborg</option>
-            <option value="roskilde">Roskilde</option>
-            <option value="vejle">Vejle</option>
-            <option value="kolding">Kolding</option>
-            <option value="horsens">Horsens</option>
-            <option value="esbjerg">Esbjerg</option>
-          </select>
-        </div>
-        <!-- Neighbourhood (CPH only) -->
-        <div class="tool-field" id="rent-nb-wrap" style="display:none">
-          <label for="rent-neighbourhood" data-i18n="rent_label_nb">Neighbourhood</label>
-          <select id="rent-neighbourhood">
-            <option value="indre-by">Indre By (City Centre)</option>
-            <option value="frederiksberg-nb">Frederiksberg</option>
-            <option value="osterbro">Østerbro</option>
-            <option value="vesterbro">Vesterbro / Kgs. Enghave</option>
-            <option value="norrebro">Nørrebro</option>
-            <option value="bispebjerg">Bispebjerg</option>
-            <option value="amager-east">Amager East (Øresund)</option>
-            <option value="amager-west">Amager West (Sundby)</option>
-            <option value="valby">Valby</option>
-            <option value="vanlose">Vanløse</option>
-            <option value="bronshoj">Brønshøj / Husum</option>
-          </select>
-        </div>
-        <!-- Size -->
-        <div class="tool-field">
-          <label for="rent-size" data-i18n="rent_label_size">Apartment size (m²)</label>
-          <input type="number" id="rent-size" placeholder="e.g. 65" min="10" max="500" step="5" inputmode="numeric" data-i18n-placeholder="ph_rent_size" />
-        </div>
-        <!-- Monthly rent -->
-        <div class="tool-field">
-          <label for="rent-monthly" data-i18n="rent_label_monthly">Your monthly rent (DKK)</label>
-          <input type="number" id="rent-monthly" placeholder="e.g. 9500" min="500" max="100000" step="100" inputmode="numeric" data-i18n-placeholder="ph_rent_monthly" />
-        </div>
-        <button class="btn-primary" id="rent-check-btn" data-i18n="rent_check_btn">Check My Rent</button>
-        <div class="tool-result hidden" id="rent-result" role="status" aria-live="polite"></div>
-      </div>
-    </div>
-
     <!-- Denmark Weather Planner — DMI Climate Normals -->
     <div class="tool-card" id="weather-tool">
       <div class="tool-icon">🌤️</div>
