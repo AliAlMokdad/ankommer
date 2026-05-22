@@ -2255,7 +2255,10 @@ body.app-active .footer-top {
   animation: toast-in 0.3s ease;
   text-align: center;
 }
-.toast.success { background: var(--sage); }
+/* Sage at #6A9E6A vs white = 3.1:1 contrast (fails WCAG AA at 4.5:1).
+   Toast success uses a darker shade #3F7A3F → ~5.0:1 vs white. The
+   base sage token stays unchanged for everything else. */
+.toast.success { background: #3F7A3F; }
 .toast.warning { background: var(--amber); color: #1a1a2e; }
 @keyframes toast-in { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes toast-out { to { opacity: 0; transform: translateY(-20px); } }
@@ -2278,10 +2281,12 @@ body.app-active .footer-top {
   display: inline-block; font-size: 0.72rem; padding: 3px 10px;
   border-radius: 12px; font-weight: 600;
 }
-.tag-blue { background: color-mix(in srgb, var(--nordic-blue) 12%, transparent); color: var(--nordic-blue); }
-.tag-red  { background: color-mix(in srgb, var(--flag-red) 10%, transparent); color: var(--flag-red); }
-.tag-sage { background: color-mix(in srgb, var(--sage) 12%, transparent); color: var(--sage); }
-.tag-amber{ background: color-mix(in srgb, var(--amber) 12%, transparent); color: var(--amber); }
+/* Two-line declarations: the rgba() fallback wins on older browsers
+   (Safari ≤16.1, Firefox ≤112, Chrome ≤110); color-mix() wins on modern. */
+.tag-blue { background: rgba(46, 109, 164, 0.12); background: color-mix(in srgb, var(--nordic-blue) 12%, transparent); color: var(--nordic-blue); }
+.tag-red  { background: rgba(198, 12, 48, 0.10); background: color-mix(in srgb, var(--flag-red) 10%, transparent); color: var(--flag-red); }
+.tag-sage { background: rgba(106, 158, 106, 0.12); background: color-mix(in srgb, var(--sage) 12%, transparent); color: var(--sage); }
+.tag-amber{ background: rgba(217, 138, 0, 0.12); background: color-mix(in srgb, var(--amber) 12%, transparent); color: var(--amber); }
 
 /* ── 19. RESPONSIVE ────────────────────────────────── */
 @media (max-width: 1100px) {
@@ -2812,7 +2817,7 @@ body.app-active .footer-top {
   font-size: 0.88rem; font-weight: 600; color: var(--text-primary);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.sri-title mark { background: color-mix(in srgb, var(--flag-red) 15%, transparent); color: var(--flag-red); border-radius: 2px; }
+.sri-title mark { background: rgba(198, 12, 48, 0.15); background: color-mix(in srgb, var(--flag-red) 15%, transparent); color: var(--flag-red); border-radius: 2px; }
 .sri-sub {
   font-size: 0.72rem; color: var(--text-muted); margin-top: 1px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -4088,7 +4093,7 @@ body { overflow-wrap: break-word; }
   .hero-stats {
     opacity: 1 !important;
     animation: none !important;
-    transform: translateY(-128px) !important;
+    transform: translateY(-40px) !important;
   }
 }
 /* On smallest phones, stats are visible (don't hide them — they're useful) */
@@ -4333,7 +4338,11 @@ body { overflow-wrap: break-word; }
 .tool-card input,
 .tool-card select,
 .tool-card textarea {
-  background: var(--bg-card);
+  /* Use page bg (not card bg) so inputs read as inset within the card.
+     bg is darker than bg-card in dark mode and lighter-cream vs white in
+     light mode — both directions give visible contrast against the card
+     surface and keep inputs distinguishable. */
+  background: var(--bg);
   border: 1px solid var(--border-strong);
   border-radius: 12px;
   padding: 11px 14px;

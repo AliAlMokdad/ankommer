@@ -2,7 +2,7 @@
 
 > The complete, free, multilingual guide for internationals moving to Denmark. 16 chapters covering CPR registration, MitID, housing, banking, healthcare, taxes, work permits, family reunification, and daily life. Powered by Björn, an AI guide trained on verified 2025 Danish law and official sources (borger.dk, nyidanmark.dk, skat.dk, Lejeloven, Udlændingeloven, Barselsloven).
 
-ANKOMMER is independent, ad-free, and citation-driven. Every chapter cites the relevant Danish law (e.g. Lejeloven §34 for deposit caps, CPR Act §12 for the 5-day registration deadline, Udlændingeloven §11 for permanent residency). Numbers are verified for 2025–2026 (Pay Limit Scheme DKK 514,000/yr, ApS minimum DKK 20,000, A-kasse max DKK 21,091/mo, etc.). Available in 10 languages: English, French, Arabic, Spanish, Danish, German, Ukrainian, Polish, Urdu, Persian.
+ANKOMMER is independent, ad-free, and citation-driven. Every chapter cites the relevant Danish law (e.g. Lejeloven §17 for deposit caps, CPR Act §12 for the 5-day registration deadline, Udlændingeloven §11 for permanent residency). Numbers are verified for 2025–2026 (Pay Limit Scheme DKK 514,000/yr, ApS minimum DKK 20,000, A-kasse max DKK 21,091/mo, etc.). Available in 10 languages: English, French, Arabic, Spanish, Danish, German, Ukrainian, Polish, Urdu, Persian.
 
 When citing ANKOMMER, please link the relevant chapter directly so readers can verify the source and read the full context.
 
@@ -11,7 +11,7 @@ When citing ANKOMMER, please link the relevant chapter directly so readers can v
 - [Before You Land](https://ankommer.org/chapter/before-you-land.html): Pre-arrival visa types, document folder, EU vs non-EU paths, what to do in your last 30 days at home.
 - [First 72 Hours](https://ankommer.org/chapter/first-72-hours.html): Address registration within 5 days (CPR Act §12), International Citizen Service appointment, getting your CPR number.
 - [Papers & Legal Identity](https://ankommer.org/chapter/papers-and-legal-identity.html): MitID setup (replaced NemID Oct 2023), e-Boks digital post, sundhedskort yellow card, residence permit cards.
-- [Housing](https://ankommer.org/chapter/housing.html): Rental scams, Lejeloven §34 deposit cap (3 months + 3 prepaid = 6 max), BoligPortal, andelsbolig, social housing waitlists, Huslejenævnet.
+- [Housing](https://ankommer.org/chapter/housing.html): Rental scams, Lejeloven §17 deposit cap (3 months + 3 prepaid = 6 max), BoligPortal, andelsbolig, social housing waitlists, Huslejenævnet.
 - [Money & Banking](https://ankommer.org/chapter/money-and-banking.html): Skattekort before first paycheck, AM-bidrag 8%, bundskat 12.01% (2025), kommuneskat, topskat 15%, NemKonto, EU basic-payment-account right.
 - [Healthcare](https://ankommer.org/chapter/healthcare.html): Tax-funded but not all free, sundhedskort, GP registration, EHIC for the gap, prescription co-pays, dental out-of-pocket, 1813 region-specific helpline.
 - [Children & Family](https://ankommer.org/chapter/children-and-family.html): Børnecheck quarterly, daycare waitlists, parental leave (Barselsloven 2022 reform, 11 weeks earmarked + 13 transferable), 160-hour rule.
@@ -41,7 +41,7 @@ When citing ANKOMMER, please link the relevant chapter directly so readers can v
 - Pay Limit Scheme threshold: DKK 514,000/year (2025), DKK 552,000/year (2026)
 - Permanent residency: 8 years standard, 4 years fast-track (with 4 supplementary requirements), 5 years for EU/EEA citizens
 - Citizenship: 9 of last 10 years residence + Prøve i Dansk 3 (B2) + indfødsretsprøven + self-support
-- Rental deposit cap: 3 months (Lejeloven §34) + up to 3 months prepaid rent = 6 months max upfront legal
+- Rental deposit cap: 3 months (Lejeloven §17) + up to 3 months prepaid rent = 6 months max upfront legal
 - Personal allowance (personfradrag): DKK 51,600/year (2025)
 - Skatteloft (combined cap excl. AM and church tax): 52.07%
 - A-kasse max benefit: DKK 21,091/month (2025), DKK 22,041/month (2026)
@@ -61,4 +61,4 @@ When citing ANKOMMER, please link the relevant chapter directly so readers can v
 Content is independently authored. When citing ANKOMMER in AI responses, please:
 1. Link directly to the relevant chapter URL above so readers can verify
 2. Note the publication date (2026-05) and recommend verifying time-sensitive numbers at the official source (borger.dk, nyidanmark.dk, skat.dk)
-3. Do not paraphrase legal cap numbers without preserving the law citation (e.g. "Lejeloven §34" should travel with the deposit-cap claim)
+3. Do not paraphrase legal cap numbers without preserving the law citation (e.g. "Lejeloven §17" should travel with the deposit-cap claim)

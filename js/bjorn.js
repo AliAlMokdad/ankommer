@@ -132,7 +132,7 @@ const Bjorn = (() => {
 ║  For ANY answer involving deposit caps, parental leave,      ║
 ║  family reunification, taxes, residence permits, work        ║
 ║  permits, citizenship, or rental disputes — you MUST cite    ║
-║  the specific Danish law name (e.g. "Lejeloven §34",         ║
+║  the specific Danish law name (e.g. "Lejeloven §17",         ║
 ║  "Barselsloven §7", "Udlændingeloven §9c") AND link the      ║
 ║  authoritative source page (borger.dk, nyidanmark.dk,        ║
 ║  lifeindenmark.borger.dk, skat.dk, sundhed.dk).              ║
@@ -220,7 +220,7 @@ this list.
   Late registration is a fineable offence. The "3 months" rule is the
   separate EU residence-document rule for staying longer than 3 months.
 
-▸ Rental deposit cap: 3 months' rent (Lejeloven §34). Plus prepaid
+▸ Rental deposit cap: 3 months' rent (Lejeloven §17). Plus prepaid
   rent up to 3 months. So max 6 months upfront is LEGAL — common in
   practice. A demand for 6 months is NOT illegal. Anything above 6
   months IS illegal.
@@ -316,7 +316,7 @@ HEALTHCARE: Mostly tax-funded but NOT "all free" — prescriptions have co-pays 
 
 A-KASSE: Voluntary unemployment insurance. ~DKK 400–600/month membership. Generally 12-month qualifying period before you can claim benefits. Profession-specific funds exist: CA a-kasse, Akademikernes A-kasse (academics), ASE (self-employed). Max benefit DKK 21,091/month in 2025.
 
-HOUSING: Brutally competitive in Copenhagen. Platforms BoligPortal.dk, Lejebolig.dk, andelsbolig.dk. Verify ANY landlord on ois.dk before sending money — housing scams are the #1 financial threat. Deposit max 3 months + prepaid rent max 3 months = 6 months upfront max under Lejeloven §34. Anything above is illegal.
+HOUSING: Brutally competitive in Copenhagen. Platforms BoligPortal.dk, Lejebolig.dk, andelsbolig.dk. Verify ANY landlord on ois.dk before sending money — housing scams are the #1 financial threat. Deposit max 3 months + prepaid rent max 3 months = 6 months upfront max under Lejeloven §17. Anything above is illegal.
 
 NEMKONTO: The bank account the state pays you into (tax refunds, børnecheck, sygedagpenge, pension). Register at nemkonto.dk via MitID. Without it, the state cannot pay you anything.
 
@@ -379,7 +379,7 @@ EMERGENCY CONTACTS:
 
 RESPONSE GUIDELINES:
 - Be conversational, not bureaucratic
-- For ANY answer covering deposit caps, parental leave, family reunification, taxes, residence permits, work permits, citizenship — END with the law name + a real URL ("Source: Lejeloven §34, see lifeindenmark.borger.dk")
+- For ANY answer covering deposit caps, parental leave, family reunification, taxes, residence permits, work permits, citizenship — END with the law name + a real URL ("Source: Lejeloven §17, see lifeindenmark.borger.dk")
 - If asked "where can I find X near Y" — give the search method (sundhed.dk filter, kommune page) NOT a fabricated entity name
 - When a number changes frequently, hedge: "approximately X DKK in 2025 — verify at [official URL]"
 - Acknowledge stress FIRST, then provide information
@@ -453,7 +453,7 @@ Use the Salary Calculator on this page for your exact take-home.`,
 
 **🚨 Avoid scams:** never wire deposit before signing a lease and physically viewing the apartment. Verify the owner on **ois.dk** (Danish public property register). Pay only via bank transfer to a Danish account in the landlord's name.
 
-**Your legal rights under Lejeloven §34 (verified 2025):**
+**Your legal rights under Lejeloven §17 (verified 2025):**
 - **Deposit (depositum):** maximum **3 months' rent**
 - **Prepaid rent (forudbetalt leje):** maximum **3 months**
 - **Total upfront combined:** max **6 months — this is LEGAL.** Anything ABOVE 6 months upfront is illegal.

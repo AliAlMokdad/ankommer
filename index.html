@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark" data-time="day" data-season="spring">
 <head>
+  <script>
+    // Pre-paint theme resolution. Without this, the hardcoded data-theme="dark"
+    // above flashes for light-mode users until app.js runs. Read saved
+    // preference first, then prefers-color-scheme, fall back to dark.
+    try {
+      var t = localStorage.getItem('ankommer-theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
   <meta charset="UTF-8" />
   <meta http-equiv="content-language" content="en" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -144,7 +154,7 @@
           {
             "@type": "Question",
             "name": "What is the rent deposit cap in Denmark?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Three months' rent (Lejeloven §34), plus up to three months' prepaid rent — so up to six months upfront is legal. Anything above six months is illegal." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Three months' rent (Lejeloven §17), plus up to three months' prepaid rent — so up to six months upfront is legal. Anything above six months is illegal." }
           },
           {
             "@type": "Question",
@@ -179,7 +189,7 @@
           {
             "@type": "Question",
             "name": "How much income tax do you pay in Denmark?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Denmark's effective income tax rate for most workers is around 37–42% including municipal tax (kommuneskat, averaging ~25%) and state taxes. Top earners pay up to ~52% (skatteloft cap, ~56% with church tax). Topskat applies to income above DKK 624,900 in 2026 (DKK 611,800 in 2025). New arrivals may qualify for the researcher tax scheme: 27% plus 8% AM-bidrag (~32.84% effective) for up to 84 months, with a minimum monthly salary threshold of DKK 75,100 in 2025." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Denmark's effective income tax rate for most workers is around 37–42% including municipal tax (kommuneskat, averaging ~25%) and state taxes. Top earners pay up to ~52% (skatteloft cap, ~56% with church tax). Topskat applies to income above DKK 611,800 in 2025. The 2026 threshold and bracket structure may change under the ongoing income-tax reform — verify the current figure at skat.dk before relying on it. New arrivals may qualify for the researcher tax scheme: 27% plus 8% AM-bidrag (~32.84% effective) for up to 84 months, with a minimum monthly salary threshold published annually by SIRI." }
           },
           {
             "@type": "Question",
@@ -375,7 +385,7 @@
       <p class="hero-sub" id="hero-line4" data-i18n="hero_sub">A free, multilingual guide to building your life in Denmark. Chapter by chapter, in your language.</p>
     </div>
     <div class="hero-ctas" id="hero-ctas">
-      <button class="btn-primary btn-xl" id="begin-btn" data-i18n="hero_cta_begin">Begin My Journey →</button>
+      <button class="btn-primary btn-xl" id="begin-btn" data-i18n="hero_cta_begin">Start My Journey →</button>
       <button class="btn-ghost btn-xl" id="bjorn-hero-btn" data-i18n="hero_cta_bjorn">💬 Ask Bjørn Anything</button>
       <!-- Mobile-only: a third path for users who want to pick a chapter
            directly without going through the wizard or AI chat. The

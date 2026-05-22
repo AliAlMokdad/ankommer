@@ -7,7 +7,7 @@
  *   - Cross-origin APIs:     pass through, never cache (live data only)
  */
 
-const CACHE_NAME = 'ankommer-v73';
+const CACHE_NAME = 'ankommer-v74';
 
 const PRECACHE_URLS = [
   '/',
@@ -22,7 +22,25 @@ const PRECACHE_URLS = [
   '/manifest.json',
   '/icons/icon-192.png',
   '/icons/icon-512.png',
-  '/og-image.png'
+  '/og-image.png',
+  // Static chapter pages — so offline first-visit to /chapter/X.html
+  // returns the chapter, not the homepage.
+  '/chapter/before-you-land.html',
+  '/chapter/first-72-hours.html',
+  '/chapter/papers-and-legal-identity.html',
+  '/chapter/housing.html',
+  '/chapter/money-and-banking.html',
+  '/chapter/healthcare.html',
+  '/chapter/children-and-family.html',
+  '/chapter/education-and-university.html',
+  '/chapter/employment.html',
+  '/chapter/startups-and-business.html',
+  '/chapter/transport.html',
+  '/chapter/language.html',
+  '/chapter/culture-and-social-life.html',
+  '/chapter/dating-and-relationships.html',
+  '/chapter/mental-health-and-wellbeing.html',
+  '/chapter/rights-and-advocacy.html'
 ];
 
 // ── Install ────────────────────────────────────────────────────────────────
@@ -113,7 +131,17 @@ async function cacheFirst(request) {
   // Await the promise — using `|| networkPromise` would always be truthy
   // (a Promise is always truthy), so the fallback fetch could never run.
   const fromNetwork = await networkPromise;
-  return fromNetwork || fetch(request);
+  if (fromNetwork) return fromNetwork;
+  // Offline AND uncached: fall back to the cached root shell rather than
+  // re-firing fetch() (which would just fail again and throw). This gives
+  // users a clean offline experience instead of a raw browser error page.
+  const root = await caches.match('/');
+  if (root) return root;
+  return new Response('Offline and asset not cached', {
+    status: 503,
+    statusText: 'Service Unavailable',
+    headers: { 'Content-Type': 'text/plain' }
+  });
 }
 
 // ── Allow page to ask SW to skip waiting (used by update toast) ────────────

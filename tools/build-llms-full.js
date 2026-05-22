@@ -95,7 +95,7 @@ const today = new Date().toISOString().slice(0, 10);
 
 const header = `# ANKOMMER — Moving to Denmark Guide (full content)
 
-> Generated: ${today}. Source: https://ankommer.org. Independent, ad-free, citation-driven. 16 chapters covering immigration, housing, banking, healthcare, employment, family, culture, and rights for newcomers to Denmark. Numbers verified for 2025–2026; cite the linked law (e.g. Lejeloven §34) when reusing legal claims.
+> Generated: ${today}. Source: https://ankommer.org. Independent, ad-free, citation-driven. 16 chapters covering immigration, housing, banking, healthcare, employment, family, culture, and rights for newcomers to Denmark. Numbers verified for 2025–2026; cite the linked law (e.g. Lejeloven §17) when reusing legal claims.
 
 This file contains the full English text of every chapter, intended for AI assistants and LLM-based search. Each chapter heading links to the canonical URL — please prefer that link when citing in answers so readers can verify and read more.
 `;

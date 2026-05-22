@@ -405,7 +405,7 @@ de:`<p>Der daenische Mietmarkt ist sehr wettbewerbsintensiv — besonders in Kop
   <li>🚩 Beder om betaling inden underskrivelse af lejekontrakt</li>
   <li>🚩 Ingen fotos, eller fotos stjålet fra ejendomssider</li>
 </ul>
-<p class="callout-warning">Depositum i Danmark er ved lov begrænset til 3 måneders husleje (Lejeloven §34). Den, der beder om mere, bryder loven.</p>`,
+<p class="callout-warning">Depositum i Danmark er ved lov begrænset til 3 måneders husleje (Lejeloven §17). Den, der beder om mere, bryder loven.</p>`,
           fa:`<p>بازار اجاره دانمارک بسیار رقابتی است — به‌ویژه در کپنهاگ. شروع جستجو قبل از رسیدن، برتری مهمی به شما می‌دهد.</p>
 <p><strong>بهترین پلتفرم‌ها:</strong></p>
 <ul>
@@ -1113,7 +1113,7 @@ de:`<div class="app-grid">
   <tr><td><strong>80 19 13 99</strong></td><td>Poison Control</td><td>Free, 24/7</td></tr>
   <tr><td><strong>70 20 12 60</strong></td><td>Crisis Line (Livslinien)</td><td>Mental health crisis support</td></tr>
 </table>
-<p class="callout-warning"><strong>Key difference:</strong> In Denmark, 1813 is the number to call for medical advice and non-emergency urgent care. Calling 112 for non-emergencies is frowned upon and may delay care for others.</p>`,
+<p class="callout-warning"><strong>Key difference:</strong> 1813 covers the Capital Region (Region Hovedstaden) only — Copenhagen, Frederiksberg, North Zealand, Bornholm. Outside this region, call your local <em>Lægevagten</em> (regional out-of-hours doctor service) — find your number via sundhed.dk. Calling 112 for non-emergencies is frowned upon and may delay care for others.</p>`,
 da:`<table class="info-table">
   <tr><th>Nummer</th><th>Til</th><th>Bemærkning</th></tr>
   <tr><td><strong>112</strong></td><td>Politi, Brandvæsen, Ambulance</td><td>KUN livstruende nødsituationer</td></tr>
@@ -1699,7 +1699,7 @@ de:`<p>Wenn Sie einen EU/EWR-Fuehrerschein haben, koennen Sie ihn unbegrenzt in 
   <li><strong>The CPR-registered owner</strong> on the lease should match what ois.dk shows. If the "landlord" is "abroad and can't meet" — it's a scam.</li>
   <li><strong>Pay only via bank transfer to a Danish account in the landlord's name</strong> — never Western Union, MoneyGram, crypto, gift cards, or "deposit to a friend's account."</li>
   <li><strong>Reverse-image-search the listing photos</strong> (Google Images / TinEye). Scammers reuse photos.</li>
-  <li><strong>Maximum legal upfront</strong>: 3 months deposit (depositum) + 3 months prepaid rent (forudbetalt leje) = 6 months. Anything more is illegal under Lejeloven §34. Many honest leases ask for less.</li>
+  <li><strong>Maximum legal upfront</strong>: 3 months deposit (depositum) + 3 months prepaid rent (forudbetalt leje) = 6 months. Anything more is illegal under Lejeloven §17. Many honest leases ask for less.</li>
 </ul>
 <p><strong>If something feels off, it is.</strong> Walk away — there is always another listing. Report scams to <a href="https://politi.dk" target="_blank" rel="noopener">politi.dk</a> and warn other newcomers in expat groups.</p>`,
 fr:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ Les arnaques au logement sont la principale menace financière pour les nouveaux arrivants au Danemark.</strong> De fausses annonces sur Facebook Marketplace, de faux propriétaires prétendant être à l'étranger, et des demandes de dépôt "pour réserver l'appartement" avant la visite ont coûté aux nouveaux arrivants <strong>10 000 à 50 000 DKK</strong> chacun.</p>
@@ -1710,7 +1710,7 @@ fr:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-lef
   <li><strong>Le propriétaire enregistré au CPR</strong> dans le bail doit correspondre à ce qu'indique ois.dk. Si le "propriétaire" est "à l'étranger et ne peut pas se rencontrer" — c'est une arnaque.</li>
   <li><strong>Payez uniquement par virement bancaire sur un compte danois au nom du propriétaire</strong> — jamais Western Union, MoneyGram, crypto, cartes cadeaux ou "dépôt sur le compte d'un ami."</li>
   <li><strong>Faites une recherche inverse d'image</strong> des photos de l'annonce (Google Images / TinEye). Les escrocs réutilisent des photos.</li>
-  <li><strong>Maximum légal à l'avance :</strong> 3 mois de dépôt (depositum) + 3 mois de loyer prépayé = 6 mois. Au-delà, c'est illégal (Lejeloven §34).</li>
+  <li><strong>Maximum légal à l'avance :</strong> 3 mois de dépôt (depositum) + 3 mois de loyer prépayé = 6 mois. Au-delà, c'est illégal (Lejeloven §17).</li>
 </ul>
 <p><strong>Si quelque chose vous semble bizarre, c'est qu'il l'est.</strong> Passez votre chemin — il y a toujours une autre annonce. Signalez les arnaques sur <a href="https://politi.dk" target="_blank" rel="noopener">politi.dk</a> et avertissez les autres nouveaux arrivants dans les groupes d'expatriés.</p>`,
 ar:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ عمليات الاحتيال في السكن هي التهديد المالي الأول للوافدين الجدد في الدنمارك.</strong> أسفرت إعلانات مزيفة على Facebook Marketplace ومُلاك وهميون يدّعون وجودهم في الخارج وطلبات دفع وديعة "لحجز الشقة" قبل المعاينة عن خسائر تتراوح بين <strong>10,000 و50,000 DKK</strong> لكل شخص.</p>
@@ -1721,7 +1721,7 @@ ar:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-lef
   <li><strong>المالك المسجل بـ CPR</strong> في العقد يجب أن يتطابق مع ما يُظهره ois.dk. إن كان "المالك" "في الخارج ولا يستطيع المقابلة" — فهي عملية احتيال.</li>
   <li><strong>ادفع فقط عبر تحويل بنكي إلى حساب دنماركي باسم المالك</strong> — لا Western Union ولا MoneyGram ولا عملات مشفرة ولا بطاقات هدايا ولا "إيداع في حساب صديق".</li>
   <li><strong>ابحث عكسياً عن صور الإعلان</strong> (Google Images / TinEye). المحتالون يُعيدون استخدام الصور.</li>
-  <li><strong>الحد القانوني الأقصى مقدماً:</strong> 3 أشهر وديعة (depositum) + 3 أشهر إيجار مدفوع مسبقاً = 6 أشهر. أي مبلغ يتجاوز ذلك مخالف للقانون بموجب Lejeloven §34.</li>
+  <li><strong>الحد القانوني الأقصى مقدماً:</strong> 3 أشهر وديعة (depositum) + 3 أشهر إيجار مدفوع مسبقاً = 6 أشهر. أي مبلغ يتجاوز ذلك مخالف للقانون بموجب Lejeloven §17.</li>
 </ul>
 <p><strong>إن شعرت بأن شيئاً ما غير صحيح، فهو كذلك.</strong> ابتعد — هناك دائماً إعلان آخر. أبلّغ عن عمليات الاحتيال على <a href="https://politi.dk" target="_blank" rel="noopener">politi.dk</a> وحذّر الوافدين الجدد في مجموعات المغتربين.</p>`,
 es:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ Las estafas de vivienda son la mayor amenaza financiera para los recién llegados a Dinamarca.</strong> Anuncios falsos en Facebook Marketplace, falsos propietarios que dicen estar en el extranjero, y solicitudes de depósito "para reservar el apartamento" antes de verlo han costado a recién llegados entre <strong>10.000 y 50.000 DKK</strong> cada uno.</p>
@@ -1733,7 +1733,7 @@ es:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-lef
   <li><strong>El propietario registrado con CPR</strong> en el contrato debe coincidir con lo que muestra ois.dk. Si el "propietario" está "en el extranjero y no puede quedar" — es una estafa.</li>
   <li><strong>Paga solo mediante transferencia bancaria a una cuenta danesa a nombre del propietario</strong> — nunca Western Union, MoneyGram, cripto, tarjetas regalo ni "depósito en la cuenta de un amigo".</li>
   <li><strong>Haz búsqueda inversa de imágenes</strong> de las fotos del anuncio (Google Imágenes / TinEye). Los estafadores reutilizan fotos.</li>
-  <li><strong>Máximo legal por adelantado:</strong> 3 meses de depósito (depositum) + 3 meses de alquiler prepagado = 6 meses. Cualquier cantidad mayor es ilegal según Lejeloven §34.</li>
+  <li><strong>Máximo legal por adelantado:</strong> 3 meses de depósito (depositum) + 3 meses de alquiler prepagado = 6 meses. Cualquier cantidad mayor es ilegal según Lejeloven §17.</li>
 </ul>
 <p><strong>Si algo no te cuadra, es porque no cuadra.</strong> Sigue adelante — siempre hay otro anuncio. Denuncia estafas en <a href="https://politi.dk" target="_blank" rel="noopener">politi.dk</a> y avisa a otros recién llegados en los grupos de expatriados.</p>`,
 de:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ Wohnungsbetrug ist die groesste finanzielle Bedrohung fuer Neuankoemmlinge in Daenemark.</strong> Gefaelschte Inserate auf Facebook Marketplace, falsche Vermieter, die behaupten im Ausland zu sein, und Forderungen nach einer Kaution "um die Wohnung zu reservieren" vor der Besichtigung haben Neuankoemmlingen je zwischen <strong>10.000 und 50.000 DKK</strong> gekostet.</p>
@@ -1745,7 +1745,7 @@ de:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-lef
   <li><strong>Der im Vertrag CPR-registrierte Eigentuemer</strong> muss mit dem uebereinstimmen, was ois.dk zeigt. Wenn der "Vermieter" "im Ausland ist und sich nicht treffen kann" — das ist Betrug.</li>
   <li><strong>Zahlen Sie nur per Bankueberweisung auf ein daenisches Konto im Namen des Vermieters</strong> — niemals Western Union, MoneyGram, Kryptowaeehrung, Geschenkkarten oder "Einzahlung auf das Konto eines Freundes".</li>
   <li><strong>Fuehren Sie eine umgekehrte Bildersuche</strong> der Insertionsfotos durch (Google Bilder / TinEye). Betrueger verwenden Fotos erneut.</li>
-  <li><strong>Gesetzliches Maximum im Voraus:</strong> 3 Monate Kaution (depositum) + 3 Monate vorausbezahlte Miete (forudbetalt leje) = 6 Monate. Alles darueber hinaus ist gemaess Lejeloven §34 illegal.</li>
+  <li><strong>Gesetzliches Maximum im Voraus:</strong> 3 Monate Kaution (depositum) + 3 Monate vorausbezahlte Miete (forudbetalt leje) = 6 Monate. Alles darueber hinaus ist gemaess Lejeloven §17 illegal.</li>
 </ul>
 <p><strong>Wenn etwas seltsam wirkt, ist es das auch.</strong> Gehen Sie weiter — es gibt immer ein anderes Inserat. Melden Sie Betrug auf <a href="https://politi.dk" target="_blank" rel="noopener">politi.dk</a> und warnen Sie andere Neuankoemmlinge in Expat-Gruppen.</p>`,
           uk:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ Шахрайство з житлом — найбільша фінансова загроза для новоприбулих у Данії.</strong> Фіктивні оголошення на Facebook Marketplace, фальшиві орендодавці, які стверджують, що перебувають за кордоном, та вимоги застави "для бронювання квартири" до перегляду коштували людям від <strong>10 000 до 50 000 DKK</strong>.</p>
@@ -1757,7 +1757,7 @@ de:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-lef
   <li><strong>Власник, зареєстрований за CPR</strong> у договорі, повинен збігатися з тим, що показує ois.dk. Якщо "орендодавець" "за кордоном і не може зустрітися" — це шахрайство.</li>
   <li><strong>Платіть лише банківським переказом на данський рахунок на ім'я орендодавця</strong> — ніякого Western Union, MoneyGram, крипто, подарункових карток чи "депозиту на рахунок друга".</li>
   <li><strong>Зробіть зворотній пошук за зображенням</strong> фотографій з оголошення (Google Images / TinEye). Шахраї повторно використовують фото.</li>
-  <li><strong>Законний максимум наперед:</strong> 3 місяці застави (depositum) + 3 місяці наперед сплаченої оренди = 6 місяців. Більше є незаконним за Lejeloven §34.</li>
+  <li><strong>Законний максимум наперед:</strong> 3 місяці застави (depositum) + 3 місяці наперед сплаченої оренди = 6 місяців. Більше є незаконним за Lejeloven §17.</li>
 </ul>
 <p><strong>Якщо щось здається підозрілим — так і є.</strong> Відмовтесь — завжди є інше оголошення. Повідомляйте про шахрайство на <a href="https://politi.dk" target="_blank" rel="noopener">politi.dk</a> і попереджайте інших новоприбулих в експат-групах.</p>`,
                pl:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ Oszustwa mieszkaniowe to największe zagrożenie finansowe dla nowo przybyłych w Danii.</strong> Fałszywe ogłoszenia na Facebook Marketplace, fałszywi wynajmujący twierdzący, że są za granicą, i żądania kaucji "na rezerwację mieszkania" przed oglądaniem kosztowały nowo przybyłych od <strong>10 000 do 50 000 DKK</strong>.</p>
@@ -1769,7 +1769,7 @@ de:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-lef
   <li><strong>Właściciel zarejestrowany z CPR</strong> w umowie musi zgadzać się z tym, co pokazuje ois.dk. Jeśli "właściciel" jest "za granicą i nie może się spotkać" — to oszustwo.</li>
   <li><strong>Płać tylko przelewem bankowym na duńskie konto na nazwisko właściciela</strong> — żadnego Western Union, MoneyGram, kryptowalut, kart podarunkowych ani "wpłaty na konto znajomego".</li>
   <li><strong>Wykonaj odwrotne wyszukiwanie obrazem</strong> zdjęć z ogłoszenia (Google Grafika / TinEye). Oszuści ponownie wykorzystują zdjęcia.</li>
-  <li><strong>Maksimum prawne z góry:</strong> 3 miesiące kaucji (depositum) + 3 miesiące czynszu z góry = 6 miesięcy. Więcej jest nielegalne na mocy Lejeloven §34.</li>
+  <li><strong>Maksimum prawne z góry:</strong> 3 miesiące kaucji (depositum) + 3 miesiące czynszu z góry = 6 miesięcy. Więcej jest nielegalne na mocy Lejeloven §17.</li>
 </ul>
 <p><strong>Jeśli coś wzbudza podejrzenia — masz rację.</strong> Odpuść — zawsze pojawi się inne ogłoszenie. Zgłaszaj oszustwa na <a href="https://politi.dk" target="_blank" rel="noopener">politi.dk</a> i ostrzegaj innych nowo przybyłych w grupach dla ekspatów.</p>`,
           ur:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ رہائشی فراڈ ڈنمارک میں نئے آنے والوں کے لیے سب سے بڑا مالی خطرہ ہے۔</strong> Facebook Marketplace پر جھوٹے اشتہارات، بیرون ملک ہونے کا دعویٰ کرنے والے جھوٹے مکان مالکان، اور دیکھنے سے پہلے "اپارٹمنٹ محفوظ کرنے" کے لیے ضمانتی رقم کے مطالبوں نے نئے آنے والوں کو <strong>10,000 سے 50,000 DKK</strong> تک کا نقصان پہنچایا ہے۔</p>
@@ -1781,7 +1781,7 @@ de:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-lef
   <li>لیز میں <strong>CPR رجسٹرڈ مالک</strong> وہی ہونا چاہیے جو ois.dk دکھائے۔ اگر "مالک مکان" "بیرون ملک ہے اور مل نہیں سکتا" — یہ فراڈ ہے۔</li>
   <li><strong>صرف مالک مکان کے نام ڈینش اکاؤنٹ میں بینک ٹرانسفر کے ذریعے ادا کریں</strong> — نہ Western Union، MoneyGram، کریپٹو، گفٹ کارڈ، یا "کسی دوست کے اکاؤنٹ میں ڈپازٹ"۔</li>
   <li><strong>اشتہار کی تصاویر کی ریورس امیج سرچ کریں</strong> (Google Images / TinEye)۔ فراڈیے تصاویر دوبارہ استعمال کرتے ہیں۔</li>
-  <li><strong>قانونی زیادہ سے زیادہ پیشگی:</strong> 3 ماہ کی ضمانت + 3 ماہ کا پیشگی کرایہ = 6 ماہ۔ Lejeloven §34 کے تحت اس سے زیادہ غیر قانونی ہے۔</li>
+  <li><strong>قانونی زیادہ سے زیادہ پیشگی:</strong> 3 ماہ کی ضمانت + 3 ماہ کا پیشگی کرایہ = 6 ماہ۔ Lejeloven §17 کے تحت اس سے زیادہ غیر قانونی ہے۔</li>
 </ul>
 <p><strong>اگر کچھ غلط لگے تو یقیناً غلط ہے۔</strong> چھوڑ دیں — ہمیشہ اور اشتہار ہوتے ہیں۔ <a href="https://politi.dk" target="_blank" rel="noopener">politi.dk</a> پر فراڈ کی رپورٹ کریں اور expat گروپوں میں دوسروں کو خبردار کریں۔</p>`,
 da:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ Boligsvindel er den største finansielle trussel mod nyankomne i Danmark.</strong> Falske opslag på Facebook Marketplace, falske udlejere der hævder at befinde sig i udlandet, og krav om depositum "for at reservere lejligheden" inden fremvisning har kostet nyankomne <strong>10.000 til 50.000 kr.</strong> hver.</p>
@@ -1793,7 +1793,7 @@ da:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-lef
   <li><strong>Den CPR-registrerede ejer</strong> i kontrakten skal stemme overens med hvad ois.dk viser. Hvis "udlejeren" er "i udlandet og kan ikke møde op" — det er svindel.</li>
   <li><strong>Betal kun via bankoverførsel til en dansk konto i udlejerens navn</strong> — aldrig Western Union, MoneyGram, krypto, gavekort eller "depositum til en vens konto."</li>
   <li><strong>Lav omvendt billedsøgning på opslags-fotos</strong> (Google Billeder / TinEye). Svindlere genbruger fotos.</li>
-  <li><strong>Maksimalt lovligt upfront</strong>: 3 måneders depositum + 3 måneders forudbetalt leje = 6 måneder. Alt mere er ulovligt i henhold til Lejeloven §34.</li>
+  <li><strong>Maksimalt lovligt upfront</strong>: 3 måneders depositum + 3 måneders forudbetalt leje = 6 måneder. Alt mere er ulovligt i henhold til Lejeloven §17.</li>
 </ul>
 <p><strong>Hvis noget føles forkert, er det det.</strong> Gå videre — der er altid et andet opslag. Anmeld svindel på <a href="https://politi.dk" target="_blank" rel="noopener">politi.dk</a> og advar andre nyankomne i expat-grupper.</p>`,
           fa:`<p class="callout-warning" style="background:rgba(198,12,48,0.08);border-left:4px solid var(--brand-red);padding:14px 16px;border-radius:8px;margin-bottom:14px;"><strong>⚠️ کلاهبرداری مسکن بزرگ‌ترین خطر مالی برای تازه‌واردان به دانمارک است.</strong> آگهی‌های جعلی در Facebook Marketplace، موجران دروغین که ادعا می‌کنند در خارج هستند، و درخواست ودیعه برای "رزرو آپارتمان" قبل از بازدید، تازه‌واردان را تا <strong>۱۰٬۰۰۰ تا ۵۰٬۰۰۰ DKK</strong> متضرر کرده است.</p>` }

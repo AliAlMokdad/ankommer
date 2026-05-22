@@ -17,7 +17,7 @@ On the homepage, a single `@graph` payload contains:
 - `WebSite` with SearchAction
 - `Organization` with founder + logo
 - `BreadcrumbList`
-- `FAQPage` with 5 high-intent Q&As (CPR 5-day rule, 8-year PR, Lejeloven §34 deposit cap, NemID dead, Pay Limit threshold)
+- `FAQPage` with 5 high-intent Q&As (CPR 5-day rule, 8-year PR, Lejeloven §17 deposit cap, NemID dead, Pay Limit threshold)
 
 Each chapter page (16 of them) carries its own:
 - `Article` (headline, dateModified from `lastUpdated`, publisher)
@@ -146,7 +146,7 @@ External validators:
 ## Realistic timeline
 
 - Week 1: Submit to GSC + Bing. Indexing begins. Expect a handful of pages crawled.
-- Week 2–4: Most chapter pages indexed. Long-tail queries start trickling in (e.g. "Lejeloven §34 deposit cap newcomer Denmark").
+- Week 2–4: Most chapter pages indexed. Long-tail queries start trickling in (e.g. "Lejeloven §17 deposit cap newcomer Denmark").
 - Month 2–3: First brand searches ("ankommer denmark"). FAQ rich results appear in SERPs.
 - Month 3–6: With backlinks landing, ranking improves on competitive head terms ("moving to Denmark guide", "CPR number Denmark").
 - Month 6–12: AI-search citations (Perplexity, ChatGPT, Claude) start sending traffic — that's where the GPTBot / ClaudeBot / PerplexityBot allow rules in robots.txt earn their keep.

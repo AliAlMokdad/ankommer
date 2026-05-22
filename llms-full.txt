@@ -1,6 +1,6 @@
 # ANKOMMER — Moving to Denmark Guide (full content)
 
-> Generated: 2026-05-05. Source: https://ankommer.org. Independent, ad-free, citation-driven. 16 chapters covering immigration, housing, banking, healthcare, employment, family, culture, and rights for newcomers to Denmark. Numbers verified for 2025–2026; cite the linked law (e.g. Lejeloven §34) when reusing legal claims.
+> Generated: 2026-05-05. Source: https://ankommer.org. Independent, ad-free, citation-driven. 16 chapters covering immigration, housing, banking, healthcare, employment, family, culture, and rights for newcomers to Denmark. Numbers verified for 2025–2026; cite the linked law (e.g. Lejeloven §17) when reusing legal claims.
 
 This file contains the full English text of every chapter, intended for AI assistants and LLM-based search. Each chapter heading links to the canonical URL — please prefer that link when citing in answers so readers can verify and read more.
 
@@ -343,7 +343,7 @@ The Danish housing market is brutally competitive — especially Copenhagen. But
 
   - **Reverse-image-search the listing photos** (Google Images / TinEye). Scammers reuse photos.
 
-  - **Maximum legal upfront**: 3 months deposit (depositum) + 3 months prepaid rent (forudbetalt leje) = 6 months. Anything more is illegal under Lejeloven §34. Many honest leases ask for less.
+  - **Maximum legal upfront**: 3 months deposit (depositum) + 3 months prepaid rent (forudbetalt leje) = 6 months. Anything more is illegal under Lejeloven §17. Many honest leases ask for less.
 
 **If something feels off, it is.** Walk away — there is always another listing. Report scams to [politi.dk](https://politi.dk) and warn other newcomers in expat groups.
 
