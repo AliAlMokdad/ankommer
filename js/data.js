@@ -958,7 +958,7 @@ const TRANSLATIONS = {
     layer_employer: "💼 Arbeitgeber",
     tools_title: "Smarte Tools",
     tools_sub: "Echte dänische Zahlen. Echte Berechnungen. Kein Raten.",
-    tools_explainer: "Ein KI-Agent betreibt diese Tools. Er ruft öffentliche APIs (Application Programming Interfaces) von Statistics Denmark, DMI, Open-Meteo und anderen dänischen Quellen ab, um Live-Daten zu holen. Behandle Ergebnisse als Orientierung, nicht als zertifizierte Beratung.",
+    tools_explainer: "Ein KI-Agent betreibt diese Tools. Er nutzt öffentliche APIs (Application Programming Interfaces) von Statistics Denmark, DMI, Open-Meteo und anderen dänischen Quellen, um Live-Daten zu holen. Behandle Ergebnisse als Orientierung, nicht als zertifizierte Beratung.",
     tool_salary_title: "Gehaltsrechner",
     tool_salary_sub: "Echte dänische Steuerberechnung. Sieh genau, was du netto bekommst.",
     salary_disclaimer: "KI-Schätzung basierend auf öffentlichen dänischen Steuerregeln. Für genaue Zahlen prüfe SKAT.",
