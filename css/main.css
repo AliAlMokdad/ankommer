@@ -4077,12 +4077,19 @@ body { overflow-wrap: break-word; }
   }
   .hero-stat-divider { display: none; }
   .hero-stat { padding: 4px; }
-  /* Push the 2x2 stats grid up by ~64px on phone home so the Bjorn FAB
-     (64px wide, bottom: 16px) does not overlap the "10 LANGUAGES" cell.
-     transform is used instead of margin/padding because hero is a
-     flex-centered min-height: 100svh container and margin on a child
-     does not move it within the centered stack. */
-  .hero-stats { transform: translateY(-64px); }
+  /* Push the 2x2 stats grid up on phone home so the Bjorn FAB
+     (64px tall, bottom: 16px = footprint at y ≥ viewport-80) does not
+     overlap the bottom row of stats. The base .hero-stats rule has a
+     fade-up animation with `forwards` fill mode that locks
+     transform: translateY(0) after running — that would silently
+     override a static transform here. Use a phone-specific keyframe
+     that lands at translateY(-96px) so the animation cooperates with
+     the layout fix. */
+  @keyframes fade-up-hero-stats-mobile {
+    from { opacity: 0; transform: translateY(-76px); }
+    to   { opacity: 1; transform: translateY(-96px); }
+  }
+  .hero-stats { animation: fade-up-hero-stats-mobile 0.8s 2.3s ease forwards; }
 }
 /* On smallest phones, stats are visible (don't hide them — they're useful) */
 @media (max-width: 480px) {
