@@ -1428,7 +1428,7 @@ const renderChapter = (index) => {
   const html = `
     <div class="chapter-page" style="--ch-accent:${ch.color}">
       <div class="chapter-header">
-        <div class="chapter-num">${t_('chapterWord', lang)} ${index} · ${ch.subtitle[lang] || ch.subtitle.en}</div>
+        <div class="chapter-num">${t_('chapterWord', lang)} ${index + 1} · ${ch.subtitle[lang] || ch.subtitle.en}</div>
         <div class="chapter-icon">${ch.icon}</div>
         <h2 class="chapter-title">${ch.title[lang] || ch.title.en}</h2>
         <p class="chapter-intro">${ch.intro[lang] || ch.intro.en}</p>
@@ -2483,12 +2483,14 @@ const Search = (() => {
         body: chIntro, color: ch.color,
       });
 
-      // Index each section
-      (ch.sections || []).forEach(sec => {
+      // Index each section. sectionIdx is needed so a search hit on a
+      // section can scroll-and-expand the matching <details> after the
+      // chapter loads, instead of dropping the user at the chapter top.
+      (ch.sections || []).forEach((sec, sectionIdx) => {
         const secTitle = sec.title?.[lang] || sec.title?.en || '';
         const secBody  = (sec.content?.[lang] || sec.content?.en || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
         searchIndex.push({
-          type: 'section', chapterId: ch.id, icon: sec.icon || ch.icon,
+          type: 'section', chapterId: ch.id, sectionIdx, icon: sec.icon || ch.icon,
           title: secTitle, sub: `${ch.icon} ${chTitle}`,
           body: secBody, color: ch.color,
         });
@@ -2568,7 +2570,7 @@ const Search = (() => {
 
     el.innerHTML = `<ul class="search-result-list" role="listbox">
       ${results.map((r, i) => `
-        <li class="search-result-item" role="option" data-idx="${i}" data-chapter="${r.chapterId}">
+        <li class="search-result-item" role="option" data-idx="${i}" data-chapter="${r.chapterId}" data-section="${r.sectionIdx ?? ''}">
           <div class="sri-icon" style="background:${r.color}20;color:${r.color}">${r.icon}</div>
           <div class="sri-body">
             <div class="sri-title">${highlight(r.title, q)}</div>
@@ -2582,8 +2584,27 @@ const Search = (() => {
     el.querySelectorAll('.search-result-item').forEach(item => {
       item.addEventListener('click', () => {
         const chId = parseInt(item.dataset.chapter);
+        const secIdxStr = item.dataset.section;
+        const sectionIdx = secIdxStr === '' || secIdxStr === undefined ? null : parseInt(secIdxStr);
         close();
-        setTimeout(() => openChapter(chId), 120);
+        setTimeout(() => {
+          openChapter(chId);
+          // If the hit was a section, scroll to it and expand it once the
+          // chapter has rendered. Without this the user lands at the
+          // chapter top and has to hunt for the term again.
+          if (sectionIdx !== null && !Number.isNaN(sectionIdx)) {
+            setTimeout(() => {
+              const secId = `ch-sec-${chId}-${sectionIdx}`;
+              const sec = document.getElementById(secId);
+              if (sec) {
+                if (!sec.classList.contains('open') && typeof window.toggleSection === 'function') {
+                  window.toggleSection(secId);
+                }
+                sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }, 400);
+          }
+        }, 120);
       });
       item.addEventListener('mouseenter', () => {
         el.querySelectorAll('.search-result-item').forEach(i => i.classList.remove('active'));

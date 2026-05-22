@@ -73,11 +73,9 @@ const Bjorn = (() => {
     conversationHistory.forEach(m => {
       renderMessage(m.content, m.role === 'assistant' ? 'bjorn' : 'user');
     });
-    // Hide quick prompts if there's history
-    if (conversationHistory.length > 0) {
-      const quick = document.getElementById('bjorn-quick');
-      if (quick) quick.style.display = 'none';
-    }
+    // Quick prompts stay visible across the whole session for
+    // discoverability. They are starter shortcuts, not just a
+    // first-message affordance.
   };
 
   /* ── SYSTEM PROMPT ──────────────────────────────────── */
@@ -763,9 +761,9 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     const input = document.getElementById('bjorn-input');
     if (input) { input.value = ''; input.style.height = 'auto'; }
 
-    // Hide quick prompts after first message
-    const quick = document.getElementById('bjorn-quick');
-    if (quick) quick.style.display = 'none';
+    // Quick prompts stay visible — they are persistent shortcuts, not
+    // a first-message-only affordance. Users (especially newcomers)
+    // benefit from seeing them throughout the session.
 
     // Hide badge
     const badge = document.getElementById('bjorn-badge');

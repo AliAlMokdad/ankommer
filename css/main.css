@@ -2782,7 +2782,10 @@ body.app-active .footer-top {
 .search-close:focus-visible { background: var(--bg-secondary); color: var(--text); }
 .search-close svg { width: 20px; height: 20px; }
 @media (max-width: 768px) {
-  .search-close { display: inline-flex; }
+  /* Visible on phone where the ESC kbd hint is hidden. Force 44x44 to
+     meet WCAG 2.5.5 touch target minimum; the base width/height above
+     is for the desktop hidden state and would otherwise win. */
+  .search-close { display: inline-flex; width: 44px !important; height: 44px !important; }
 }
 .search-results { max-height: min(58vh, 50dvh); overflow-y: auto; }
 .search-empty {
@@ -4074,6 +4077,12 @@ body { overflow-wrap: break-word; }
   }
   .hero-stat-divider { display: none; }
   .hero-stat { padding: 4px; }
+  /* Push the 2x2 stats grid up by ~64px on phone home so the Bjorn FAB
+     (64px wide, bottom: 16px) does not overlap the "10 LANGUAGES" cell.
+     transform is used instead of margin/padding because hero is a
+     flex-centered min-height: 100svh container and margin on a child
+     does not move it within the centered stack. */
+  .hero-stats { transform: translateY(-64px); }
 }
 /* On smallest phones, stats are visible (don't hide them — they're useful) */
 @media (max-width: 480px) {
