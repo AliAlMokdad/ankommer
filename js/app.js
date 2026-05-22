@@ -2125,27 +2125,26 @@ const StatsTracker = (() => {
     _rafTokens.set(el, requestAnimationFrame(tick));
   };
 
-  /* Monotonic floor that grows weekly. We can't let a fresh device,
-     a cleared cache, an ad-blocker, or a stale counterapi.dev response
-     drag the hero below known reality. The floor is:
-        anchor-count + (weeks since anchor) * weekly-growth
-     and every rendered/cached value is max(floor, cached, api). So:
+  /* Monotonic floor that grows DAILY. We can't let a fresh device,
+     a cleared cache, an ad-blocker, or a slow counterapi.dev response
+     drag the hero below known reality. Two contributions add up:
+        floor          = anchor-count + days-since-anchor * daily-growth
+        api / cache    = real backend counter, ratchets above floor
+     and every rendered value is max(floor, cached, api). So:
        - first paint shows the floor instantly (no "1", "0" or "—")
-       - cache and API only ever ratchet up
+       - the floor grows on its own every day, even if backend is offline
+       - the backend /up call on each session can only push higher
        - across devices the displayed number is monotonically non-decreasing
-     Anchor numbers reflect verified counts on the anchor date. Weekly
-     growth is conservative; raise the constants if real growth outpaces. */
-  // Anchor bumped to 2026-05-22 because earlier-floor + cleared cache
-  // showed 257 visitors when the live counterapi.dev backend already had
-  // 309. The floor should reflect reality on the anchor date so a fresh
-  // device or a cache-clear never sees a number visibly below what we
-  // already know is true.
-  const ANCHOR_DATE_MS = Date.UTC(2026, 4, 22); // 2026-05-22 (month is 0-indexed)
-  const WEEK_MS        = 7 * 24 * 60 * 60 * 1000;
-  const weeksSince     = () => Math.max(0, Math.floor((Date.now() - ANCHOR_DATE_MS) / WEEK_MS));
+     Daily growth (was weekly) keeps the floor smoothly tracking reality —
+     no big weekly jumps, no long stretches where backend is far above
+     floor. Anchor numbers reflect verified counts on the anchor date.
+     Adjust the daily-growth constants if real growth outpaces them. */
+  const ANCHOR_DATE_MS = Date.UTC(2026, 4, 22); // 2026-05-22 anchor (month is 0-indexed)
+  const DAY_MS         = 24 * 60 * 60 * 1000;
+  const daysSince      = () => Math.max(0, Math.floor((Date.now() - ANCHOR_DATE_MS) / DAY_MS));
   const STAT_FLOOR = {
-    'visitors':        () => 310 + weeksSince() * 20,
-    'bjorn-questions': () => 130 + weeksSince() * 12,
+    'visitors':        () => 310 + daysSince() * 3,   // ~3 new visitors/day (≈21/week)
+    'bjorn-questions': () => 130 + daysSince() * 2,   // ~2 new questions/day (≈14/week)
   };
   const floorOf = (key) => {
     const f = STAT_FLOOR[key];
