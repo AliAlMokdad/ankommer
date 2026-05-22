@@ -2279,13 +2279,13 @@ body.app-active .footer-top {
   border-radius: 12px; font-weight: 600;
 }
 .tag-blue { background: rgba(46,109,164,0.12); color: var(--nordic-blue); }
-.tag-red  { background: rgba(198,12,48,0.1);   color: var(--flag-red); }
+.tag-red  { background: color-mix(in srgb, var(--flag-red) 10%, transparent); color: var(--flag-red); }
 .tag-sage { background: rgba(106,158,106,0.12); color: var(--sage); }
 .tag-amber{ background: rgba(232,160,32,0.12);  color: var(--amber); }
 
 /* ── 19. RESPONSIVE ────────────────────────────────── */
 @media (max-width: 1100px) {
-  .tools-grid { padding: 0 24px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  .tools-grid { padding: 0 24px; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); }
   .stories-grid { padding: 0 24px; }
   .daily-inner { padding: 0; }
 }
@@ -2791,7 +2791,7 @@ body.app-active .footer-top {
   font-size: 0.88rem; font-weight: 600; color: var(--text-primary);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.sri-title mark { background: rgba(198,12,48,0.15); color: var(--flag-red); border-radius: 2px; }
+.sri-title mark { background: color-mix(in srgb, var(--flag-red) 15%, transparent); color: var(--flag-red); border-radius: 2px; }
 .sri-sub {
   font-size: 0.72rem; color: var(--text-muted); margin-top: 1px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -3814,10 +3814,13 @@ body { overflow-wrap: break-word; }
   bottom: max(100px, calc(env(safe-area-inset-bottom) + 100px));
 }
 
-/* Tools-grid: keep 2 columns on tablets so cards don't stretch to ~720px;
-   the simplified phone experience below 600px hides the section entirely. */
+/* Tools-grid on tablets: stay at 2 columns so the Weather card (which
+   spans 1 / -1) does not leave an empty cell beside Salary + Budget.
+   The minmax floor matches the 1100px / desktop floor so the grid
+   never silently flips to 3-col anywhere between 601px and the
+   simplified phone experience at <=600px (which hides the section). */
 @media (max-width: 900px) {
-  .tools-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .tools-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
   /* Weather card 2-column internal layout collapses earlier too */
   #weather-tool { grid-column: 1 / -1; }
   #weather-tool .weather-card { display: block; }
