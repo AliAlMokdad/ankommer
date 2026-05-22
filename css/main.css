@@ -4086,8 +4086,8 @@ body { overflow-wrap: break-word; }
      that lands at translateY(-96px) so the animation cooperates with
      the layout fix. */
   @keyframes fade-up-hero-stats-mobile {
-    from { opacity: 0; transform: translateY(-76px); }
-    to   { opacity: 1; transform: translateY(-96px); }
+    from { opacity: 0; transform: translateY(-108px); }
+    to   { opacity: 1; transform: translateY(-128px); }
   }
   .hero-stats { animation: fade-up-hero-stats-mobile 0.8s 2.3s ease forwards; }
 }
