@@ -67,13 +67,19 @@
   --bg-card-hover:  #1E3050;
   --text:           #E8E3DC;
   --text-muted:     #8899AA;
-  --text-faint:     #7A8C9A;
+  --text-faint:     #93A3B0;
   --nordic-blue:    #5B9BD5;
   --border:         rgba(255,255,255,0.07);
   --border-strong:  rgba(255,255,255,0.13);
   --shadow-sm:      0 2px 8px rgba(0,0,0,0.25);
   --shadow-md:      0 4px 24px rgba(0,0,0,0.35);
   --shadow-lg:      0 12px 48px rgba(0,0,0,0.5);
+  /* Brand reds lifted for WCAG AA contrast on dark bg (was #C60C30 = 2.88:1) */
+  --flag-red:       #FF4D6A;
+  --brand-red:      #FF4D6A;
+  --nordic-red:     #FF4D6A;
+  /* Amber lifted for foreground contrast on dark bg */
+  --amber:          #F0B340;
 }
 
 /* RTL support for Arabic */
@@ -1666,12 +1672,13 @@ body.app-active .footer-top {
   display: flex; gap: 6px; flex-wrap: wrap;
 }
 .col-city-tab {
-  flex: 1; min-width: 70px;
+  flex: 1 1 auto; min-width: 70px;
   padding: 8px 10px; border-radius: var(--r-md);
   border: 1.5px solid var(--border-strong);
   background: var(--bg-secondary); color: var(--text-muted);
   font-size: 0.78rem; font-weight: 600;
   cursor: pointer; transition: all var(--t-fast); text-align: center;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .col-city-tab:hover { border-color: var(--nordic-blue); color: var(--nordic-blue); }
 .col-city-tab.active {
@@ -1998,6 +2005,8 @@ body.app-active .footer-top {
 .bjorn-toggle:focus-visible {
   transform: scale(1.08);
   box-shadow: 0 8px 28px rgba(46,109,164,0.45);
+  outline: 3px solid var(--flag-red);
+  outline-offset: 4px;
 }
 .bjorn-toggle:active { transform: scale(0.97); }
 @keyframes bjorn-breathe {
@@ -2813,7 +2822,7 @@ body.app-active .footer-top {
   background: linear-gradient(135deg, var(--nordic-blue) 0%, #1a3a5c 100%);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   padding: 10px 20px;
-  position: sticky; top: 64px; z-index: 800;
+  position: sticky; top: var(--nav-h); z-index: 800;
 }
 .my-roadmap-strip.hidden { display: none; }
 .roadmap-strip-inner {
@@ -3805,12 +3814,12 @@ body { overflow-wrap: break-word; }
   bottom: max(100px, calc(env(safe-area-inset-bottom) + 100px));
 }
 
-/* Tools-grid: switch to single column earlier (tablets too) so cards
-   don't get squeezed at 481-900px on landscape phones / small tablets. */
+/* Tools-grid: keep 2 columns on tablets so cards don't stretch to ~720px;
+   the simplified phone experience below 600px hides the section entirely. */
 @media (max-width: 900px) {
-  .tools-grid { grid-template-columns: 1fr; }
+  .tools-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
   /* Weather card 2-column internal layout collapses earlier too */
-  #weather-tool { grid-column: span 1; }
+  #weather-tool { grid-column: 1 / -1; }
   #weather-tool .weather-card { display: block; }
 }
 

@@ -179,7 +179,7 @@
           {
             "@type": "Question",
             "name": "How much income tax do you pay in Denmark?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Denmark's effective income tax rate for most workers is around 37–42% including municipal tax (kommuneskat, averaging ~25%) and state taxes. Top earners pay up to ~56% (topskat kicks in at income above DKK 588,900 in 2026). New arrivals may qualify for the researcher/expat tax scheme (flat 27% rate for up to 84 months)." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Denmark's effective income tax rate for most workers is around 37–42% including municipal tax (kommuneskat, averaging ~25%) and state taxes. Top earners pay up to ~52% (skatteloft cap, ~56% with church tax). Topskat applies to income above DKK 624,900 in 2026 (DKK 611,800 in 2025). New arrivals may qualify for the researcher tax scheme: 27% plus 8% AM-bidrag (~32.84% effective) for up to 84 months, with a minimum monthly salary threshold of DKK 75,100 in 2025." }
           },
           {
             "@type": "Question",
@@ -490,10 +490,12 @@
 <div id="app-layout" class="app-layout hidden">
 
   <!-- Chapter rail / sidebar -->
-  <!-- Was <aside> — now <nav> since the rail is purely a chapter list.
-       Also adds the navigation landmark to the page's a11y outline so
-       screen-reader users can jump straight to it. -->
-  <nav class="chapter-rail" id="chapter-rail" aria-label="Chapter navigation">
+  <!-- Outer wrapper is <aside> (complementary landmark) because it holds
+       more than the chapter list: the rail header, the chapter <nav>,
+       and the XP widget. The inner <nav aria-label="Chapters"> is the
+       single navigation landmark, which avoids nested-nav confusion for
+       screen-reader users. -->
+  <aside class="chapter-rail" id="chapter-rail" aria-label="Journey sidebar">
     <div class="rail-header" data-i18n="rail_header">Your Journey</div>
     <nav class="rail-nav" id="rail-nav" aria-label="Chapters">
       <!-- Populated by JS -->
@@ -583,8 +585,8 @@
       <div class="tool-body">
         <!-- City -->
         <div class="tool-field">
-          <label data-i18n="col_label_city">City</label>
-          <div class="col-city-tabs" id="col-city-tabs">
+          <label id="col-city-label" data-i18n="col_label_city">City</label>
+          <div class="col-city-tabs" id="col-city-tabs" role="group" aria-labelledby="col-city-label">
             <button class="col-city-tab active" data-city="cph">Copenhagen</button>
             <button class="col-city-tab" data-city="aar">Aarhus</button>
             <button class="col-city-tab" data-city="ode">Odense</button>
@@ -742,8 +744,8 @@
           </select>
         </div>
         <div class="tool-field">
-          <label data-i18n="job_label_type">Job type</label>
-          <div class="job-type-tabs" id="job-type-tabs">
+          <label id="job-type-label" data-i18n="job_label_type">Job type</label>
+          <div class="job-type-tabs" id="job-type-tabs" role="group" aria-labelledby="job-type-label">
             <button class="job-type-tab active" data-type="" data-i18n="job_type_all">All</button>
             <button class="job-type-tab" data-type="fuldtid" data-i18n="job_type_full">Full-time</button>
             <button class="job-type-tab" data-type="deltid" data-i18n="job_type_part">Part-time</button>

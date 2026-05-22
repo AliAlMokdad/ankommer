@@ -7,7 +7,7 @@
  *   - Cross-origin APIs:     pass through, never cache (live data only)
  */
 
-const CACHE_NAME = 'ankommer-v55';
+const CACHE_NAME = 'ankommer-v56';
 
 const PRECACHE_URLS = [
   '/',
@@ -109,7 +109,11 @@ async function cacheFirst(request) {
     return response;
   }).catch(() => null);
 
-  return cached || networkPromise || fetch(request);
+  if (cached) return cached;
+  // Await the promise — using `|| networkPromise` would always be truthy
+  // (a Promise is always truthy), so the fallback fetch could never run.
+  const fromNetwork = await networkPromise;
+  return fromNetwork || fetch(request);
 }
 
 // ── Allow page to ask SW to skip waiting (used by update toast) ────────────
