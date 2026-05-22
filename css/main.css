@@ -173,18 +173,7 @@ body {
   line-height: 1.65;
   transition: background var(--t-slow), color var(--t-slow);
   overflow-x: hidden;
-  /* Stop iOS URL-bar rubber band from chaining to children, and stop
-     scroll-through-modal behavior where rubber-banding inside an open
-     overlay can scroll the underlying page. */
-  overscroll-behavior-y: none;
 }
-/* Modal-style overlays: contain scroll within themselves so the
-   underlying page does not move when the user reaches the end of
-   the modal content on iOS. */
-.wizard-overlay,
-.search-overlay,
-.bjorn-panel,
-.chapter-rail { overscroll-behavior: contain; }
 
 a { color: var(--nordic-blue); text-decoration: none; }
 a:hover { text-decoration: underline; }
