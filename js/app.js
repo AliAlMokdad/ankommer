@@ -1101,7 +1101,7 @@ const Wizard = {
   buildHero: (a) => {
     if (a.timing === 'just_arrived') return {
       emoji: '🛬',
-      title: 'Welcome to Denmark!',
+      title: 'Your Denmark Roadmap',
       sub: 'Your personalised roadmap is ready. Let\'s get you settled — step by step.'
     };
     if (a.timing === 'settling') return {
@@ -1130,10 +1130,10 @@ const Wizard = {
     const chips = [];
     const maps = {
       timing:   { just_arrived:'Just arrived', settling:'1–3 months in', established:'3+ months here', pre_arrival:'Pre-arrival' },
-      reason:   { work:'Working', study:'Studying', love:'Partner/Family', startup:'Entrepreneur', nomad:'Remote worker', asylum:'Asylum seeker' },
+      reason:   { work:'Working', study:'Studying', love:'Partner/Family', startup:'Entrepreneur', nomad:'Remote worker', asylum:'§7 protection status' },
       location: { cph:'Copenhagen', aarhus:'Aarhus', odense:'Odense', aalborg:'Aalborg', small:'Smaller town', undecided:'Location TBD' },
       family:   { solo:'Solo', couple:'With partner', family_small:'Young family', family_school:'School-age kids', extended:'Extended family' },
-      passport: { eu:'EU citizen', work_permit:'Work permit', student_visa:'Student visa', family_reunification:'Family reunification', refugee:'Refugee status' },
+      passport: { eu:'EU citizen', work_permit:'Work permit', student_visa:'Student visa', family_reunification:'Family reunification', refugee:'§7 protection status' },
     };
     const icons = { timing:'✈️', reason:'🎯', location:'📍', family:'👤', passport:'🛂' };
     Object.entries(maps).forEach(([key, labels]) => {
@@ -1171,8 +1171,7 @@ const Wizard = {
       p.push({ title:'Sign up for free Danish classes now', desc:'State-subsidised Danskuddannelse — 3 years free. They fill up fast. Register before your first week is out.', chapter:null });
     }
     if (a.reason === 'asylum') {
-      p.push({ title:'Contact Dansk Flygtningehjælp (Refugee Council)', desc:'Free legal support and guidance. They know the system better than anyone.', chapter:null });
-      p.push({ title:'Know your rights during the asylum process', desc:'You have the right to a lawyer and an interpreter at every interview. Always ask for them.', chapter:null });
+      p.push({ title:'Contact Dansk Flygtningehjælp (Danish Refugee Council)', desc:'The state-funded body for free legal counsel on protection cases. ANKOMMER does not advise on any individual case — contact them directly.', chapter:null });
     }
     if (a.family === 'family_small' || a.family === 'family_school') {
       p.push({ title:'Join daycare / school waitlist immediately', desc:'Copenhagen waitlists for pasningsgaranti (guaranteed childcare) can be 6–18 months. Apply on day one.', chapter:null });
@@ -1206,7 +1205,7 @@ const Wizard = {
       return `Good news — as an EU/EEA citizen, your path is dramatically simpler than most. No work permit, no immigration lawyer needed. Just register your address within 3 months and get your CPR number. You can be fully set up in a week. <em>Tillykke og velkommen!</em>`;
     }
     if (a.reason === 'asylum' || a.passport === 'refugee') {
-      return `You are navigating something genuinely difficult, and I want to help every step of the way. The Danish Refugee Council (flygtningehjaelpen.dk) provides free legal guidance — reach out to them immediately. Your safety and health come first. The paperwork will follow.`;
+      return `If you have §7 protection status or your case is being processed by Danish authorities, contact <strong>Dansk Flygtningehjælp</strong> (flygtningehjaelpen.dk) for free legal counsel — it is the state-funded body for this work. ANKOMMER does not handle, assess, advise on, or affect any immigration or protection case. This guide can help with the everyday Danish systems — CPR, healthcare, banking, housing — that apply to anyone legally resident in Denmark.`;
     }
     if (a.reason === 'study') {
       return `As a student, your university's international office is your most important first resource — make them your first stop after landing. And sign up for free Danish classes right away. They fill up within days of term starting. Learning even basic Danish transforms your social life here.`;

@@ -1841,7 +1841,7 @@ Denmark's police (Politiet) generally have a good reputation for professionalism
 
   - **You have the right to remain silent** beyond identification — you do not have to answer any other questions.
 
-  - **Police can search you** without specific cause in designated "search zones" (visitationszoner) in certain high-crime areas — a controversial Danish law. They must be polite and non-discriminatory in doing so.
+  - **Police can search you** without specific cause in designated "search zones" (visitationszoner) established under the Police Act (politiloven §6). They must be polite and non-discriminatory in doing so.
 
   - **If you are arrested:** You have the right to have a lawyer present within 24 hours. You have the right to notify your embassy or a family member. Ask explicitly for both.
 
@@ -1893,13 +1893,13 @@ Many municipalities and libraries host free "lawyer on duty" sessions (advokatva
 
 If you are charged with a crime and cannot afford a lawyer, the court will appoint one for you at state expense. This is a constitutional right.
 
-**Specific organisations for immigrants:**
+**Specific organisations:**
 
-  - **Refugees Welcome Denmark** — legal advice for refugees and asylum seekers
+  - **Dansk Flygtningehjælp (Danish Refugee Council):** [drc.ngo/denmark](https://www.drc.ngo/denmark) — state-funded body providing free legal counsel for people with §7 protection status
 
-  - **Dansk Flygtningehjælp (DRC — Danish Refugee Council):** [drc.ngo/denmark](https://www.drc.ngo/denmark) — provides legal counselling for people with protection status
+  - **LOKK (Landsorganisation af Kvindekrisecentre):** Legal and shelter support for women experiencing violence, regardless of background
 
-  - **Indvandrer Kvindecentret (LOKK):** Legal support for immigrant women in vulnerable situations
+  - **Advokatsamfundet (Danish Bar Association):** [advokatsamfundet.dk](https://www.advokatsamfundet.dk) — directory of free retshjælp legal-aid offices nationwide
 
 [→ Find free legal aid (Advokatsamfundet)](https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp)
 

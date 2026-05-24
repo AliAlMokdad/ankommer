@@ -1237,7 +1237,7 @@ de:`<table class="info-table">
   <tr><td><strong>Pay Limit Scheme</strong></td><td>Salary &gt; DKK 514,000/yr (2025) · DKK 552,000/yr from 2026</td><td>Full</td><td>Up to 4 years</td></tr>
   <tr><td><strong>Student Permit</strong></td><td>Enrolled students</td><td>15 hrs/week</td><td>Duration of study</td></tr>
   <tr><td><strong>Family Reunification</strong></td><td>Joining family member</td><td>Full (usually)</td><td>2 years initially</td></tr>
-  <tr><td><strong>Refugee Status</strong></td><td>Asylum seekers</td><td>Varies</td><td>Varies</td></tr>
+  <tr><td><strong>International protection (§7)</strong></td><td>People granted protection under Udlændingeloven §7</td><td>Varies</td><td>Varies</td></tr>
 </table>`,
 da:`<p>Din opholdstilladelse bestemmer dine rettigheder i Danmark. Her er et klart overblik:</p>
 <table class="info-table">
@@ -1247,7 +1247,7 @@ da:`<p>Din opholdstilladelse bestemmer dine rettigheder i Danmark. Her er et kla
   <tr><td><strong>Beløbsordningen</strong></td><td>Løn &gt; 514.000 kr./år (2025) · 552.000 kr./år fra 2026</td><td>Fuld</td><td>Op til 4 år</td></tr>
   <tr><td><strong>Studietilladelse</strong></td><td>Indskrevne studerende</td><td>15 timer/uge</td><td>Studieperioden</td></tr>
   <tr><td><strong>Familiesammenføring</strong></td><td>Genforening med familiemedlem</td><td>Fuld (normalt)</td><td>2 år indledningsvis</td></tr>
-  <tr><td><strong>Flygtningestatus</strong></td><td>Asylansøgere</td><td>Varierer</td><td>Varierer</td></tr>
+  <tr><td><strong>International beskyttelse (§7)</strong></td><td>Personer med beskyttelse efter Udlændingeloven §7</td><td>Varierer</td><td>Varierer</td></tr>
 </table>`,
 fr:`<p>Votre titre de séjour détermine vos droits au Danemark. Voici un aperçu clair :</p>
 <table class="info-table">
@@ -1257,7 +1257,7 @@ fr:`<p>Votre titre de séjour détermine vos droits au Danemark. Voici un aperç
   <tr><td><strong>Régime de plafond salarial</strong></td><td>Salaire &gt; 514 000 DKK/an (2025) · 552 000 DKK/an dès 2026</td><td>Plein</td><td>Jusqu'à 4 ans</td></tr>
   <tr><td><strong>Titre étudiant</strong></td><td>Étudiants inscrits</td><td>15h/semaine</td><td>Durée des études</td></tr>
   <tr><td><strong>Regroupement familial</strong></td><td>Rejoindre un membre de la famille</td><td>Plein (généralement)</td><td>2 ans initialement</td></tr>
-  <tr><td><strong>Statut de réfugié</strong></td><td>Demandeurs d'asile</td><td>Variable</td><td>Variable</td></tr>
+  <tr><td><strong>Protection internationale (§7)</strong></td><td>Personnes bénéficiant de la protection au titre de Udlændingeloven §7</td><td>Variable</td><td>Variable</td></tr>
 </table>`,
 ar:`<p>تحدد تصريح إقامتك حقوقك في الدنمارك. إليك نظرة عامة واضحة:</p>
 <table class="info-table">
@@ -1277,7 +1277,7 @@ es:`<p>Tu permiso de residencia determina tus derechos en Dinamarca. Un resumen 
   <tr><td><strong>Esquema de Límite Salarial</strong></td><td>Salario &gt; 514.000 DKK/año (2025) · 552.000 DKK/año desde 2026</td><td>Completo</td><td>Hasta 4 años</td></tr>
   <tr><td><strong>Permiso de estudiante</strong></td><td>Estudiantes matriculados</td><td>15 h/semana</td><td>Duración de los estudios</td></tr>
   <tr><td><strong>Reagrupación familiar</strong></td><td>Reunirse con un familiar</td><td>Completo (generalmente)</td><td>2 años inicialmente</td></tr>
-  <tr><td><strong>Estatus de refugiado</strong></td><td>Solicitantes de asilo</td><td>Variable</td><td>Variable</td></tr>
+  <tr><td><strong>Protección internacional (§7)</strong></td><td>Personas con protección conforme a Udlændingeloven §7</td><td>Variable</td><td>Variable</td></tr>
 </table>`,
 de:`<p>Ihre Aufenthaltserlaubnis bestimmt Ihre Rechte in Daenemark. Hier eine klare Uebersicht:</p>
 <table class="info-table">
@@ -1297,7 +1297,7 @@ de:`<p>Ihre Aufenthaltserlaubnis bestimmt Ihre Rechte in Daenemark. Hier eine kl
   <tr><td><strong>Схема граничної зарплати</strong></td><td>Зарплата &gt; 514 000 DKK/рік (2025) · 552 000 DKK/рік з 2026</td><td>Повне</td><td>До 4 років</td></tr>
   <tr><td><strong>Студентський дозвіл</strong></td><td>Зараховані студенти</td><td>15 год/тиждень</td><td>На термін навчання</td></tr>
   <tr><td><strong>Возз'єднання сім'ї</strong></td><td>Для приєднання до члена сім'ї</td><td>Повне (зазвичай)</td><td>Спочатку 2 роки</td></tr>
-  <tr><td><strong>Статус біженця</strong></td><td>Шукачі притулку</td><td>Варіюється</td><td>Варіюється</td></tr>
+  <tr><td><strong>Міжнародний захист (§7)</strong></td><td>Особи зі статусом захисту згідно з Udlændingeloven §7</td><td>Варіюється</td><td>Варіюється</td></tr>
 </table>`,
           pl:`<p>Rodzaj twojego zezwolenia na pobyt określa twoje prawa w Danii. Oto przejrzysty przegląd:</p>
 <table class="info-table">
@@ -1307,7 +1307,7 @@ de:`<p>Ihre Aufenthaltserlaubnis bestimmt Ihre Rechte in Daenemark. Hier eine kl
   <tr><td><strong>System limitów płacowych</strong></td><td>Wynagrodzenie &gt; 514 000 DKK/rok (2025) · 552 000 DKK/rok od 2026</td><td>Pełne</td><td>Do 4 lat</td></tr>
   <tr><td><strong>Zezwolenie studenckie</strong></td><td>Zapisani studenci</td><td>15 godz./tydzień</td><td>Na czas studiów</td></tr>
   <tr><td><strong>Łączenie rodzin</strong></td><td>Dołączenie do członka rodziny</td><td>Pełne (zazwyczaj)</td><td>Początkowo 2 lata</td></tr>
-  <tr><td><strong>Status uchodźcy</strong></td><td>Osoby ubiegające się o azyl</td><td>Różnie</td><td>Różnie</td></tr>
+  <tr><td><strong>Ochrona międzynarodowa (§7)</strong></td><td>Osoby z ochroną na podstawie Udlændingeloven §7</td><td>Różnie</td><td>Różnie</td></tr>
 </table>`,
           ur:`<p>آپ کا رہائشی پرمٹ ڈنمارک میں آپ کے حقوق طے کرتا ہے۔ یہاں ایک واضح جائزہ ہے:</p>
 <table class="info-table">
@@ -9130,7 +9130,7 @@ de:`<p>Dänemark verfügt über einige der stärksten Mieterschutzgesetze Europa
 <ul>
   <li><strong>You must identify yourself</strong> — you are legally required to provide your name and address when asked by police. Carry your ID or residence permit.</li>
   <li><strong>You have the right to remain silent</strong> beyond identification — you do not have to answer any other questions.</li>
-  <li><strong>Police can search you</strong> without specific cause in designated "search zones" (visitationszoner) in certain high-crime areas — a controversial Danish law. They must be polite and non-discriminatory in doing so.</li>
+  <li><strong>Police can search you</strong> without specific cause in designated "search zones" (visitationszoner) established under the Police Act (politiloven §6). They must be polite and non-discriminatory in doing so.</li>
   <li><strong>If you are arrested:</strong> You have the right to have a lawyer present within 24 hours. You have the right to notify your embassy or a family member. Ask explicitly for both.</li>
   <li><strong>If you do not speak Danish:</strong> You have the right to an interpreter. Request one.</li>
 </ul>
@@ -9140,7 +9140,7 @@ da:`<p>Dansk politi (Politiet) har generelt et godt ry for professionalisme og t
 <ul>
   <li><strong>Du skal identificere dig</strong> — du er lovmæssigt forpligtet til at opgive navn og adresse på politiets anmodning. Medbring dit ID eller opholdstilladelse.</li>
   <li><strong>Du har ret til at forholde dig tavs</strong> ud over identifikation — du behøver ikke besvare andre spørgsmål.</li>
-  <li><strong>Politiet kan visitere dig</strong> uden specifik begrundelse i udpegede "visitationszoner" i visse kriminalitetsramte områder — en omdiskuteret dansk lov. De skal optræde høfligt og ikke-diskriminerende.</li>
+  <li><strong>Politiet kan visitere dig</strong> uden specifik begrundelse i udpegede "visitationszoner" oprettet efter politiloven §6. De skal optræde høfligt og ikke-diskriminerende.</li>
   <li><strong>Hvis du bliver anholdt:</strong> Du har ret til en advokat inden for 24 timer. Du har ret til at underrette din ambassade eller et familiemedlem. Bed eksplicit om begge dele.</li>
   <li><strong>Hvis du ikke taler dansk:</strong> Du har ret til en tolk. Anmod om en.</li>
 </ul>
@@ -9150,7 +9150,7 @@ fr:`<p>La police danoise (Politiet) a généralement une bonne réputation en ma
 <ul>
   <li><strong>Vous devez vous identifier</strong> — vous êtes légalement tenu de fournir votre nom et adresse lorsque la police le demande. Portez votre pièce d'identité ou votre permis de séjour.</li>
   <li><strong>Vous avez le droit de garder le silence</strong> au-delà de l'identification — vous n'êtes pas obligé de répondre à d'autres questions.</li>
-  <li><strong>La police peut vous fouiller</strong> sans cause spécifique dans des "zones de fouille" désignées (visitationszoner) dans certaines zones à forte criminalité — une loi danoise controversée. Elle doit se comporter poliment et sans discrimination.</li>
+  <li><strong>La police peut vous fouiller</strong> sans cause spécifique dans des "zones de fouille" désignées (visitationszoner) établies en vertu de la loi sur la police (politiloven §6). Elle doit se comporter poliment et sans discrimination.</li>
   <li><strong>Si vous êtes arrêté :</strong> Vous avez le droit d'avoir un avocat dans les 24 heures. Vous avez le droit d'informer votre ambassade ou un membre de votre famille. Demandez les deux explicitement.</li>
   <li><strong>Si vous ne parlez pas danois :</strong> Vous avez le droit à un interprète. Demandez-en un.</li>
 </ul>
@@ -9160,7 +9160,7 @@ ar:`<p>تتمتع الشرطة الدنماركية (Politiet) عموماً بس
 <ul>
   <li><strong>يجب أن تُعرّف عن نفسك</strong> — يلزمك القانون بتقديم اسمك وعنوانك عند طلب الشرطة. احمل هويتك أو تصريح إقامتك.</li>
   <li><strong>لديك الحق في التزام الصمت</strong> فيما وراء التعريف — لست مضطراً للإجابة على أي أسئلة أخرى.</li>
-  <li><strong>يمكن للشرطة تفتيشك</strong> دون سبب محدد في "مناطق تفتيش" مخصصة (visitationszoner) في بعض المناطق عالية الجريمة — قانون دنماركي مثير للجدل. يجب أن يتصرفوا بلباقة وعدم تمييز في ذلك.</li>
+  <li><strong>يمكن للشرطة تفتيشك</strong> دون سبب محدد في "مناطق تفتيش" مخصصة (visitationszoner) أُنشئت بموجب قانون الشرطة (politiloven §6). يجب أن يتصرفوا بلباقة وعدم تمييز في ذلك.</li>
   <li><strong>إن اعتُقلت:</strong> لديك الحق في وجود محامٍ خلال 24 ساعة. لديك الحق في إخطار سفارتك أو أحد أفراد عائلتك. اطلب كليهما صراحةً.</li>
   <li><strong>إن كنت لا تتكلم الدنماركية:</strong> لديك الحق في مترجم. اطلب ذلك.</li>
 </ul>
@@ -9170,7 +9170,7 @@ es:`<p>La policía danesa (Politiet) generalmente tiene buena reputación por pr
 <ul>
   <li><strong>Debes identificarte</strong> — estás legalmente obligado a proporcionar tu nombre y dirección cuando la policía lo solicite. Lleva contigo tu identificación o permiso de residencia.</li>
   <li><strong>Tienes derecho a guardar silencio</strong> más allá de la identificación — no estás obligado a responder ninguna otra pregunta.</li>
-  <li><strong>La policía puede registrarte</strong> sin causa específica en "zonas de registro" designadas (visitationszoner) en ciertas áreas de alta criminalidad — una ley danesa controvertida. Deben actuar con cortesía y sin discriminación al hacerlo.</li>
+  <li><strong>La policía puede registrarte</strong> sin causa específica en "zonas de registro" designadas (visitationszoner) establecidas conforme a la Ley de Policía (politiloven §6). Deben actuar con cortesía y sin discriminación al hacerlo.</li>
   <li><strong>Si eres arrestado:</strong> Tienes derecho a tener un abogado presente dentro de las 24 horas. Tienes derecho a notificar a tu embajada o a un familiar. Pide ambas cosas explícitamente.</li>
   <li><strong>Si no hablas danés:</strong> Tienes derecho a un intérprete. Solicítalo.</li>
 </ul>
@@ -9180,7 +9180,7 @@ de:`<p>Die dänische Polizei (Politiet) hat generell einen guten Ruf für Profes
 <ul>
   <li><strong>Sie müssen sich ausweisen</strong> — Sie sind gesetzlich verpflichtet, auf Verlangen der Polizei Ihren Namen und Ihre Adresse anzugeben. Führen Sie Ihren Ausweis oder Ihre Aufenthaltserlaubnis mit.</li>
   <li><strong>Sie haben das Schweigerecht</strong> über die Identifizierung hinaus — Sie müssen keine weiteren Fragen beantworten.</li>
-  <li><strong>Die Polizei darf Sie durchsuchen</strong> ohne spezifischen Anlass in ausgewiesenen "Durchsuchungszonen" (visitationszoner) in bestimmten kriminalitätsbelasteten Gebieten — ein umstrittenes dänisches Gesetz. Sie müssen dabei höflich und nicht diskriminierend vorgehen.</li>
+  <li><strong>Die Polizei darf Sie durchsuchen</strong> ohne spezifischen Anlass in ausgewiesenen "Durchsuchungszonen" (visitationszoner), die nach dem Polizeigesetz (politiloven §6) festgelegt sind. Sie müssen dabei höflich und nicht diskriminierend vorgehen.</li>
   <li><strong>Bei einer Verhaftung:</strong> Sie haben das Recht auf einen Anwalt innerhalb von 24 Stunden. Sie haben das Recht, Ihre Botschaft oder ein Familienmitglied zu benachrichtigen. Fordern Sie beides ausdrücklich ein.</li>
   <li><strong>Wenn Sie kein Dänisch sprechen:</strong> Sie haben das Recht auf einen Dolmetscher. Fordern Sie einen an.</li>
 </ul>
@@ -9190,7 +9190,7 @@ de:`<p>Die dänische Polizei (Politiet) hat generell einen guten Ruf für Profes
 <ul>
   <li><strong>Ви повинні ідентифікувати себе</strong> — ви зобов'язані за законом надати своє ім'я та адресу на вимогу поліції. Носіть при собі посвідчення особи або дозвіл на проживання.</li>
   <li><strong>Ви маєте право зберігати мовчання</strong> поза межами ідентифікації — ви не зобов'язані відповідати на будь-які інші запитання.</li>
-  <li><strong>Поліція може обшукати вас</strong> без конкретної причини в спеціальних «зонах обшуку» (visitationszoner) у певних районах з підвищеною злочинністю — суперечливий датський закон. При цьому вони повинні поводитися ввічливо і без дискримінації.</li>
+  <li><strong>Поліція може обшукати вас</strong> без конкретної причини в спеціальних «зонах обшуку» (visitationszoner), встановлених відповідно до Закону про поліцію (politiloven §6). При цьому вони повинні поводитися ввічливо і без дискримінації.</li>
   <li><strong>Якщо вас заарештували:</strong> Ви маєте право на адвоката протягом 24 годин. Ви маєте право повідомити своє посольство або члена родини. Вимагайте обох явно.</li>
   <li><strong>Якщо ви не розмовляєте датською:</strong> Ви маєте право на перекладача. Вимагайте його.</li>
 </ul>
@@ -9361,11 +9361,11 @@ de:`<p>Der <strong>Folketingets Ombudsmand</strong> (Parlamentarischer Ombudsman
 <p>Many municipalities and libraries host free "lawyer on duty" sessions (advokatvagt) where you can get 30–60 minutes of free legal advice from a qualified lawyer. Search "[your municipality] advokatvagt" for schedules.</p>
 <p><strong>Court-appointed lawyer (beskikket forsvarsadvokat):</strong></p>
 <p>If you are charged with a crime and cannot afford a lawyer, the court will appoint one for you at state expense. This is a constitutional right.</p>
-<p><strong>Specific organisations for immigrants:</strong></p>
+<p><strong>Specific organisations:</strong></p>
 <ul>
-  <li><strong>Refugees Welcome Denmark</strong> — legal advice for refugees and asylum seekers</li>
-  <li><strong>Dansk Flygtningehjælp (DRC — Danish Refugee Council):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — provides legal counselling for people with protection status</li>
-  <li><strong>Indvandrer Kvindecentret (LOKK):</strong> Legal support for immigrant women in vulnerable situations</li>
+  <li><strong>Dansk Flygtningehjælp (Danish Refugee Council):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — state-funded body providing free legal counsel on §7 protection cases</li>
+  <li><strong>LOKK (Landsorganisation af Kvindekrisecentre):</strong> Legal and shelter support for women experiencing violence, regardless of background</li>
+  <li><strong>Advokatsamfundet (Danish Bar Association):</strong> <a href="https://www.advokatsamfundet.dk" target="_blank" rel="noopener">advokatsamfundet.dk</a> — directory of free retshjælp legal-aid offices nationwide</li>
 </ul>
 <a href="https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp" target="_blank" rel="noopener">→ Find free legal aid (Advokatsamfundet)</a>`,
 da:`<p>Juridisk hjælp i Danmark er tilgængelig selv ved begrænset indkomst, via flere veje.</p>
@@ -9379,11 +9379,11 @@ da:`<p>Juridisk hjælp i Danmark er tilgængelig selv ved begrænset indkomst, v
 <p>Mange kommuner og biblioteker afholder gratis "advokatvagt"-sessioner, hvor du kan få 30–60 minutters gratis juridisk rådgivning af en kvalificeret advokat. Søg på "[din kommune] advokatvagt" for tidspunkter.</p>
 <p><strong>Beskikket forsvarsadvokat:</strong></p>
 <p>Tiltales du for en forbrydelse og ikke har råd til advokat, beskikker retten en for dig på statens regning. Det er en grundlovssikret rettighed.</p>
-<p><strong>Specifikke organisationer for indvandrere:</strong></p>
+<p><strong>Specifikke organisationer:</strong></p>
 <ul>
-  <li><strong>Refugees Welcome Denmark</strong> — juridisk rådgivning til flygtninge og asylansøgere</li>
-  <li><strong>Dansk Flygtningehjælp (DRC):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — juridisk rådgivning til folk med beskyttelsesstatus</li>
-  <li><strong>Indvandrer Kvindecentret (LOKK):</strong> Juridisk støtte til indvandrende kvinder i sårbare situationer</li>
+  <li><strong>Dansk Flygtningehjælp:</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — statsfinansieret organisation, der yder gratis juridisk rådgivning i sager om §7-beskyttelse</li>
+  <li><strong>LOKK (Landsorganisation af Kvindekrisecentre):</strong> Juridisk og kvindekrisecenter-støtte til kvinder udsat for vold, uanset baggrund</li>
+  <li><strong>Advokatsamfundet:</strong> <a href="https://www.advokatsamfundet.dk" target="_blank" rel="noopener">advokatsamfundet.dk</a> — oversigt over gratis retshjælpskontorer landet over</li>
 </ul>
 <a href="https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp" target="_blank" rel="noopener">→ Find gratis retshjælp (Advokatsamfundet)</a>`,
 fr:`<p>L'aide juridique au Danemark est accessible même si vous avez un revenu limité, par plusieurs voies.</p>
@@ -9397,11 +9397,11 @@ fr:`<p>L'aide juridique au Danemark est accessible même si vous avez un revenu 
 <p>De nombreuses municipalités et bibliothèques organisent des séances gratuites d'"avocat de permanence" (advokatvagt) où vous pouvez obtenir 30 à 60 minutes de conseils juridiques gratuits d'un avocat qualifié. Recherchez "[votre municipalité] advokatvagt" pour les horaires.</p>
 <p><strong>Avocat commis d'office (beskikket forsvarsadvokat) :</strong></p>
 <p>Si vous êtes inculpé d'un crime et ne pouvez pas vous offrir un avocat, le tribunal vous en désignera un aux frais de l'État. C'est un droit constitutionnel.</p>
-<p><strong>Organisations spécifiques pour les immigrants :</strong></p>
+<p><strong>Organisations spécifiques :</strong></p>
 <ul>
-  <li><strong>Refugees Welcome Denmark</strong> — conseils juridiques pour les réfugiés et demandeurs d'asile</li>
-  <li><strong>Dansk Flygtningehjælp (DRC — Conseil danois pour les réfugiés) :</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — fournit des conseils juridiques aux personnes bénéficiant du statut de protection</li>
-  <li><strong>Indvandrer Kvindecentret (LOKK) :</strong> Soutien juridique pour les femmes immigrantes en situation vulnérable</li>
+  <li><strong>Dansk Flygtningehjælp (Conseil danois pour les réfugiés) :</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — organisme financé par l'État fournissant des conseils juridiques gratuits sur les dossiers de protection §7</li>
+  <li><strong>LOKK (Landsorganisation af Kvindekrisecentre) :</strong> soutien juridique et hébergement d'urgence pour les femmes victimes de violences, quel que soit leur statut</li>
+  <li><strong>Advokatsamfundet (Barreau danois) :</strong> <a href="https://www.advokatsamfundet.dk" target="_blank" rel="noopener">advokatsamfundet.dk</a> — annuaire des bureaux d'aide juridique gratuite (retshjælp) sur tout le territoire</li>
 </ul>
 <a href="https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp" target="_blank" rel="noopener">→ Trouver une aide juridique gratuite (Advokatsamfundet)</a>`,
 ar:`<p>المساعدة القانونية في الدنمارك متاحة حتى لو كان دخلك محدوداً، عبر عدة مسارات.</p>
@@ -9415,11 +9415,11 @@ ar:`<p>المساعدة القانونية في الدنمارك متاحة حت
 <p>كثير من البلديات والمكتبات تستضيف جلسات "محامي مناوب" (advokatvagt) المجانية حيث يمكنك الحصول على 30–60 دقيقة من المشورة القانونية المجانية من محامٍ مؤهل. ابحث عن "[بلديتك] advokatvagt" للمواعيد.</p>
 <p><strong>محامٍ معيَّن من قِبل المحكمة (beskikket forsvarsadvokat):</strong></p>
 <p>إن وُجّهت إليك تهمة جنائية ولا تستطيع تحمّل تكلفة محامٍ، ستعيّن المحكمة لك واحداً على نفقة الدولة. هذا حق دستوري.</p>
-<p><strong>منظمات محددة للمهاجرين:</strong></p>
+<p><strong>منظمات محددة:</strong></p>
 <ul>
-  <li><strong>Refugees Welcome Denmark</strong> — مشورة قانونية للاجئين وطالبي اللجوء</li>
-  <li><strong>Dansk Flygtningehjælp (DRC — المجلس الدنماركي للاجئين):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — يقدم استشارات قانونية لأصحاب وضع الحماية</li>
-  <li><strong>Indvandrer Kvindecentret (LOKK):</strong> دعم قانوني للنساء المهاجرات في أوضاع هشّة</li>
+  <li><strong>Dansk Flygtningehjælp (المجلس الدنماركي للاجئين):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — هيئة ممولة من الدولة تقدّم استشارات قانونية مجانية في قضايا الحماية §7</li>
+  <li><strong>LOKK (Landsorganisation af Kvindekrisecentre):</strong> دعم قانوني وإيواء للنساء اللواتي يتعرّضن للعنف، بصرف النظر عن الخلفية</li>
+  <li><strong>Advokatsamfundet (نقابة المحامين الدنماركية):</strong> <a href="https://www.advokatsamfundet.dk" target="_blank" rel="noopener">advokatsamfundet.dk</a> — دليل بمكاتب المساعدة القانونية المجانية (retshjælp) على المستوى الوطني</li>
 </ul>
 <a href="https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp" target="_blank" rel="noopener">← ابحث عن مساعدة قانونية مجانية (Advokatsamfundet)</a>`,
 es:`<p>La asistencia jurídica en Dinamarca es accesible incluso si tienes ingresos limitados, a través de varias vías.</p>
@@ -9433,11 +9433,11 @@ es:`<p>La asistencia jurídica en Dinamarca es accesible incluso si tienes ingre
 <p>Muchos municipios y bibliotecas organizan sesiones gratuitas de "abogado de guardia" (advokatvagt) donde puedes recibir 30–60 minutos de asesoramiento jurídico gratuito de un abogado cualificado. Busca "[tu municipio] advokatvagt" para los horarios.</p>
 <p><strong>Abogado de oficio (beskikket forsvarsadvokat):</strong></p>
 <p>Si eres acusado de un delito y no puedes costear un abogado, el tribunal te asignará uno a expensas del Estado. Este es un derecho constitucional.</p>
-<p><strong>Organizaciones específicas para inmigrantes:</strong></p>
+<p><strong>Organizaciones específicas:</strong></p>
 <ul>
-  <li><strong>Refugees Welcome Denmark</strong> — asesoramiento legal para refugiados y solicitantes de asilo</li>
-  <li><strong>Dansk Flygtningehjælp (DRC — Consejo Danés para los Refugiados):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — proporciona asesoramiento legal a personas con estatus de protección</li>
-  <li><strong>Indvandrer Kvindecentret (LOKK):</strong> Apoyo legal para mujeres inmigrantes en situaciones vulnerables</li>
+  <li><strong>Dansk Flygtningehjælp (Consejo Danés para los Refugiados):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — organismo financiado por el Estado que ofrece asesoramiento jurídico gratuito en casos de protección §7</li>
+  <li><strong>LOKK (Landsorganisation af Kvindekrisecentre):</strong> apoyo jurídico y de refugio para mujeres víctimas de violencia, sea cual sea su situación</li>
+  <li><strong>Advokatsamfundet (Colegio de Abogados de Dinamarca):</strong> <a href="https://www.advokatsamfundet.dk" target="_blank" rel="noopener">advokatsamfundet.dk</a> — directorio de oficinas gratuitas de asistencia jurídica (retshjælp) en todo el país</li>
 </ul>
 <a href="https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp" target="_blank" rel="noopener">→ Encuentra asistencia jurídica gratuita (Advokatsamfundet)</a>`,
 de:`<p>Rechtliche Hilfe ist in Dänemark auch bei begrenztem Einkommen auf verschiedenen Wegen zugänglich.</p>
@@ -9451,11 +9451,11 @@ de:`<p>Rechtliche Hilfe ist in Dänemark auch bei begrenztem Einkommen auf versc
 <p>Viele Kommunen und Bibliotheken veranstalten kostenlose "Anwalt vom Dienst"-Sitzungen (advokatvagt), bei denen Sie 30–60 Minuten kostenlose Rechtsberatung von einem qualifizierten Anwalt erhalten können. Suchen Sie nach "[Ihre Gemeinde] advokatvagt" für die Termine.</p>
 <p><strong>Pflichtverteidiger (beskikket forsvarsadvokat):</strong></p>
 <p>Wenn Sie einer Straftat angeklagt werden und sich keinen Anwalt leisten können, wird Ihnen das Gericht auf Staatskosten einen beistellen. Das ist ein verfassungsmäßiges Recht.</p>
-<p><strong>Spezifische Organisationen für Einwanderer:</strong></p>
+<p><strong>Spezifische Organisationen:</strong></p>
 <ul>
-  <li><strong>Refugees Welcome Denmark</strong> — Rechtsberatung für Flüchtlinge und Asylsuchende</li>
-  <li><strong>Dansk Flygtningehjælp (DRC — Dänischer Flüchtlingsrat):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — bietet Rechtsberatung für Personen mit Schutzstatus</li>
-  <li><strong>Indvandrer Kvindecentret (LOKK):</strong> Rechtliche Unterstützung für eingewanderte Frauen in vulnerablen Situationen</li>
+  <li><strong>Dansk Flygtningehjælp (Dänischer Flüchtlingsrat):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — staatlich finanzierte Organisation, die kostenlose Rechtsberatung in Fällen des §7-Schutzes anbietet</li>
+  <li><strong>LOKK (Landsorganisation af Kvindekrisecentre):</strong> Rechtliche und Schutzraum-Hilfe für von Gewalt betroffene Frauen, unabhängig vom Hintergrund</li>
+  <li><strong>Advokatsamfundet (Dänische Rechtsanwaltskammer):</strong> <a href="https://www.advokatsamfundet.dk" target="_blank" rel="noopener">advokatsamfundet.dk</a> — Verzeichnis der kostenlosen Rechtsberatungsstellen (retshjælp) bundesweit</li>
 </ul>
 <a href="https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp" target="_blank" rel="noopener">→ Kostenlose Rechtsberatung finden (Advokatsamfundet)</a>`,
           uk:`<p>Юридична допомога в Данії доступна навіть за обмеженого доходу через кілька шляхів.</p>
@@ -9469,11 +9469,11 @@ de:`<p>Rechtliche Hilfe ist in Dänemark auch bei begrenztem Einkommen auf versc
 <p>Багато муніципалітетів і бібліотек проводять безкоштовні сесії «адвокат чергування» (advokatvagt), де ви можете отримати 30–60 хвилин безкоштовної юридичної консультації від кваліфікованого адвоката. Знайдіть «[ваш муніципалітет] advokatvagt» для розкладів.</p>
 <p><strong>Призначений судом адвокат (beskikket forsvarsadvokat):</strong></p>
 <p>Якщо вам пред'явлено обвинувачення у злочині і ви не можете дозволити собі адвоката, суд призначить його вам за державні кошти. Це конституційне право.</p>
-<p><strong>Конкретні організації для іммігрантів:</strong></p>
+<p><strong>Конкретні організації:</strong></p>
 <ul>
-  <li><strong>Refugees Welcome Denmark</strong> — юридичні консультації для біженців і шукачів притулку</li>
-  <li><strong>Dansk Flygtningehjælp (DRC — Данська рада у справах біженців):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — надає юридичні консультації для осіб зі статусом захисту</li>
-  <li><strong>Indvandrer Kvindecentret (LOKK):</strong> Юридична підтримка для жінок-іммігранток у вразливих ситуаціях</li>
+  <li><strong>Dansk Flygtningehjælp (Данська Рада у справах біженців):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — орган з державним фінансуванням, що надає безкоштовні юридичні консультації у справах захисту §7</li>
+  <li><strong>LOKK (Landsorganisation af Kvindekrisecentre):</strong> юридична підтримка та притулок для жінок, які зазнали насильства, незалежно від походження</li>
+  <li><strong>Advokatsamfundet (Данська адвокатська палата):</strong> <a href="https://www.advokatsamfundet.dk" target="_blank" rel="noopener">advokatsamfundet.dk</a> — каталог безкоштовних юридичних консультацій (retshjælp) по всій країні</li>
 </ul>
 <a href="https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp" target="_blank" rel="noopener">→ Знайдіть безкоштовну юридичну допомогу (Advokatsamfundet)</a>`,
                pl:`<p>Pomoc prawna w Danii jest dostępna nawet przy ograniczonych dochodach.</p>
@@ -9485,10 +9485,11 @@ de:`<p>Rechtliche Hilfe ist in Dänemark auch bei begrenztem Einkommen auf versc
 </ul>
 <p><strong>Advokatvagt (dyżur adwokacki):</strong> Wiele gmin i bibliotek organizuje bezpłatne sesje "adwokata dyżurnego" — 30–60 minut bezpłatnej porady od wykwalifikowanego adwokata. Szukaj "[twoja gmina] advokatvagt".</p>
 <p><strong>Obrońca z urzędu (beskikket forsvarsadvokat):</strong> Jeśli postawiono Ci zarzuty karne i nie stać Cię na adwokata, sąd go wyznaczy na koszt państwa. To prawo konstytucyjne.</p>
-<p><strong>Organizacje dla imigrantów:</strong></p>
+<p><strong>Organizacje:</strong></p>
 <ul>
-  <li><strong>Refugees Welcome Denmark</strong> — porady prawne dla uchodźców</li>
-  <li><strong>Dansk Flygtningehjælp (DRC)</strong>: <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — porady dla osób z ochroną</li>
+  <li><strong>Dansk Flygtningehjælp (Duńska Rada ds. Uchodźców):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — instytucja finansowana przez państwo udzielająca bezpłatnych porad prawnych w sprawach ochrony §7</li>
+  <li><strong>LOKK (Landsorganisation af Kvindekrisecentre):</strong> wsparcie prawne i schronisko dla kobiet doświadczających przemocy, niezależnie od pochodzenia</li>
+  <li><strong>Advokatsamfundet (Duńska Izba Adwokacka):</strong> <a href="https://www.advokatsamfundet.dk" target="_blank" rel="noopener">advokatsamfundet.dk</a> — katalog bezpłatnych biur pomocy prawnej (retshjælp) w całym kraju</li>
 </ul>
 <a href="https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp" target="_blank" rel="noopener">→ Znajdź bezpłatną pomoc prawną (Advokatsamfundet)</a>`,
                ur:`<p>ڈنمارک میں قانونی مدد محدود آمدنی کے باوجود بھی کئی طریقوں سے دستیاب ہے۔</p>
@@ -9500,10 +9501,11 @@ de:`<p>Rechtliche Hilfe ist in Dänemark auch bei begrenztem Einkommen auf versc
 </ul>
 <p><strong>Advokatvagt (وکیل ڈیوٹی):</strong> بہت سی کمیونٹیز اور لائبریریاں مفت "ڈیوٹی وکیل" سیشن منعقد کرتی ہیں — ایک قابل وکیل سے 30–60 منٹ کا مفت مشورہ۔ "[آپ کی کمیونٹی] advokatvagt" تلاش کریں۔</p>
 <p><strong>عدالت کا مقرر وکیل (beskikket forsvarsadvokat):</strong> اگر آپ پر جرم کا الزام ہو اور آپ وکیل کا خرچ نہ اٹھا سکیں، عدالت ریاستی خرچے پر ایک مقرر کرے گی۔ یہ آئینی حق ہے۔</p>
-<p><strong>تارکین وطن کے لیے مخصوص تنظیمیں:</strong></p>
+<p><strong>مخصوص تنظیمیں:</strong></p>
 <ul>
-  <li><strong>Refugees Welcome Denmark</strong> — پناہ گزینوں کے لیے قانونی مشورہ</li>
-  <li><strong>Dansk Flygtningehjælp (DRC)</strong>: <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — تحفظ یافتہ افراد کے لیے مشورہ</li>
+  <li><strong>Dansk Flygtningehjælp (ڈینش ریفیوجی کونسل):</strong> <a href="https://www.drc.ngo/denmark" target="_blank" rel="noopener">drc.ngo/denmark</a> — ریاستی فنڈ یافتہ ادارہ جو §7 تحفظ کے کیسز میں مفت قانونی مشاورت فراہم کرتا ہے</li>
+  <li><strong>LOKK (Landsorganisation af Kvindekrisecentre):</strong> تشدد کا شکار خواتین کے لیے قانونی اور پناہ گاہ کی مدد، پس منظر سے قطع نظر</li>
+  <li><strong>Advokatsamfundet (ڈینش بار ایسوسی ایشن):</strong> <a href="https://www.advokatsamfundet.dk" target="_blank" rel="noopener">advokatsamfundet.dk</a> — ملک بھر میں مفت قانونی امداد (retshjælp) دفاتر کی فہرست</li>
 </ul>
 <a href="https://www.advokatsamfundet.dk/find-advokat/fri-proces-og-retshjælp" target="_blank" rel="noopener">→ مفت قانونی امداد تلاش کریں (Advokatsamfundet)</a>`,
           fa:`<p>در دانمارک کمک حقوقی حتی با درآمد محدود هم در دسترس است.</p>` }
