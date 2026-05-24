@@ -1113,7 +1113,7 @@ de:`<div class="app-grid">
   <tr><td><strong>80 19 13 99</strong></td><td>Poison Control</td><td>Free, 24/7</td></tr>
   <tr><td><strong>70 20 12 60</strong></td><td>Crisis Line (Livslinien)</td><td>Mental health crisis support</td></tr>
 </table>
-<p class="callout-warning"><strong>Key difference:</strong> 1813 covers the Capital Region (Region Hovedstaden) only — Copenhagen, Frederiksberg, North Zealand, Bornholm. Outside this region, call your local <em>Lægevagten</em> (regional out-of-hours doctor service) — find your number via sundhed.dk. Calling 112 for non-emergencies is frowned upon and may delay care for others.</p>`,
+<p class="callout-warning"><strong>Key difference:</strong> 1813 covers the Capital Region (Region Hovedstaden) only — Copenhagen, Frederiksberg, North Zealand, Bornholm. Outside this region, call your local <em>Lægevagten</em> (regional out-of-hours doctor service) — find your number via sundhed.dk. Calling 112 for non-emergencies may delay care for people with genuine emergencies.</p>`,
 da:`<table class="info-table">
   <tr><th>Nummer</th><th>Til</th><th>Bemærkning</th></tr>
   <tr><td><strong>112</strong></td><td>Politi, Brandvæsen, Ambulance</td><td>KUN livstruende nødsituationer</td></tr>
@@ -2058,7 +2058,7 @@ de:`<p>Der Mieterschutz in Daenemark ist stark. Kennen Sie diese Regeln:</p>
         content:{ en:`<table class="info-table">
   <tr><th>Area</th><th>Vibe</th><th>Avg 1-bed rent</th><th>Best for</th></tr>
   <tr><td><strong>Nørrebro</strong></td><td>Young, diverse, vibrant, creative scene</td><td>~8,500 DKK</td><td>Young professionals, internationals</td></tr>
-  <tr><td><strong>Vesterbro</strong></td><td>Hip, food scene, gentrifying</td><td>~9,500 DKK</td><td>Foodies, creatives</td></tr>
+  <tr><td><strong>Vesterbro</strong></td><td>Hip, food scene, evolving</td><td>~9,500 DKK</td><td>Foodies, creatives</td></tr>
   <tr><td><strong>Østerbro</strong></td><td>Calm, family-oriented, affluent</td><td>~10,500 DKK</td><td>Families, established professionals</td></tr>
   <tr><td><strong>Frederiksberg</strong></td><td>Elegant, quiet, expensive</td><td>~11,000 DKK</td><td>Families, professionals</td></tr>
   <tr><td><strong>Amager / Islands Brygge</strong></td><td>Up-and-coming, waterfront, mixed</td><td>~8,000 DKK</td><td>Budget-conscious, young people</td></tr>
@@ -2103,7 +2103,7 @@ es:`<table class="info-table">
 de:`<table class="info-table">
   <tr><th>Stadtteil</th><th>Flair</th><th>Durchschn. Miete 1-Zi.</th><th>Ideal fuer</th></tr>
   <tr><td><strong>Noerrebro</strong></td><td>Jung, bunt, lebendig, linksorientiert</td><td>~8.500 DKK</td><td>Junge Berufstaet ige, Internationale</td></tr>
-  <tr><td><strong>Vesterbro</strong></td><td>Trendig, Foodszene, gentrifying</td><td>~9.500 DKK</td><td>Foodliebhaber, Kreative</td></tr>
+  <tr><td><strong>Vesterbro</strong></td><td>Trendig, Foodszene, im Wandel</td><td>~9.500 DKK</td><td>Foodliebhaber, Kreative</td></tr>
   <tr><td><strong>Oesterbro</strong></td><td>Ruhig, familienorientiert, wohlhabend</td><td>~10.500 DKK</td><td>Familien, etablierte Berufstaet ige</td></tr>
   <tr><td><strong>Frederiksberg</strong></td><td>Elegant, still, teuer</td><td>~11.000 DKK</td><td>Familien, Berufstaet ige</td></tr>
   <tr><td><strong>Amager / Islands Brygge</strong></td><td>Aufstrebend, Wasserlage, gemischt</td><td>~8.000 DKK</td><td>Budgetbewusste, junge Leute</td></tr>
@@ -3536,7 +3536,7 @@ ur:`<p><strong>Sygeforsikring "denmark"</strong> ایک غیر منافع بخش
     id: 6, icon: "👧", color: "#6A9E6A",
     title: { en:"Children & Family", fr:"Enfants et Famille", ar:"الأطفال والعائلة", es:"Niños y Familia", da:"Børn og Familie", de:"Kinder und Familie", uk:"Діти та Сім'я", pl:"Dzieci i Rodzina", ur:"بچے اور خاندان", fa:"کودکان و خانواده" },
     subtitle: { en:"Raising Little Vikings", fr:"Élever de Petits Vikings", ar:"تربية فايكنج صغار", es:"Criando Pequeños Vikingos", da:"At opdrage små vikinger", de:"Kleine Wikinger großziehen", uk:"Виховуємо Маленьких Вікінгів", pl:"Wychowujemy Małych Wikingów", ur:"چھوٹے وائکنگز کی پرورش", fa:"پرورش وایکینگ‌های کوچک" },
-    intro: { en:"Denmark is arguably the best country in the world to raise children. Here's everything you need to know.", fr:"Le Danemark est sans doute le meilleur pays du monde pour élever des enfants.", ar:"الدنمارك هي على الأرجح أفضل دولة في العالم لتربية الأطفال.", es:"Dinamarca es posiblemente el mejor país del mundo para criar niños.", da:"Danmark er sandsynligvis verdens bedste land at opdrage børn i.", de:"Dänemark gilt als eines der besten Länder der Welt für die Kindererziehung. Hier ist alles, was Sie wissen müssen.", uk:"Данія — мабуть, найкраща країна у світі для виховання дітей. Ось усе, що вам потрібно знати.", pl:"Dania jest prawdopodobnie najlepszym krajem na świecie do wychowywania dzieci. Oto wszystko, co musisz wiedzieć.", ur:"ڈنمارک دنیا میں بچوں کی پرورش کے لیے شاید سب سے بہترین ملک ہے۔ یہاں وہ سب کچھ ہے جو آپ کو جاننا چاہیے۔", fa:"دانمارک شاید بهترین کشور جهان برای بزرگ کردن فرزندان باشد. اینجا همه چیزی است که باید بدانید." },
+    intro: { en:"Denmark is consistently rated among the top countries in the world for raising children. Here's everything you need to know.", fr:"Le Danemark est régulièrement classé parmi les meilleurs pays au monde pour élever des enfants.", ar:"تُصنَّف الدنمارك باستمرار ضمن أفضل دول العالم لتربية الأطفال.", es:"Dinamarca está consistentemente clasificada entre los mejores países del mundo para criar niños.", da:"Danmark er konsekvent rangeret blandt verdens bedste lande at opdrage børn i.", de:"Dänemark wird regelmäßig zu den weltweit besten Ländern für die Kindererziehung gezählt. Hier ist alles, was Sie wissen müssen.", uk:"Данія регулярно входить до найкращих країн світу для виховання дітей. Ось усе, що вам потрібно знати.", pl:"Dania jest stale klasyfikowana wśród najlepszych krajów na świecie do wychowywania dzieci. Oto wszystko, co musisz wiedzieć.", ur:"ڈنمارک کو بچوں کی پرورش کے لیے دنیا کے بہترین ممالک میں مسلسل شمار کیا جاتا ہے۔ یہاں وہ سب کچھ ہے جو آپ کو جاننا چاہیے۔", fa:"دانمارک به‌طور پیوسته در میان برترین کشورهای جهان برای بزرگ‌کردن فرزندان رتبه‌بندی می‌شود. اینجا همه چیزی است که باید بدانید." },
     readTime: "16 min",
     lastUpdated: "2025-01",
     sections: [
@@ -8235,7 +8235,7 @@ ur:`<p><strong>Familieretshuset</strong> ڈنمارک کی سرکاری ایجن
         icon: "🌊",
         title: {en:"The Immigrant Experience — What No One Warns You About", fr:"L'expérience de l'immigrant — Ce dont personne ne vous avertit", ar:"تجربة المهاجر — ما لا يحذرك منه أحد", es:"La experiencia del inmigrante — Lo que nadie te advierte", da:"Indvandrerens oplevelse — hvad ingen advarer dig om", de:"Die Erfahrung als Einwanderer — wovor Sie niemand warnt", fa:"تجربه‌ی مهاجران — آنچه کسی به شما هشدار نمی‌دهد", pl:"Doświadczenie imigranta — przed czym nikt cię nie ostrzega", uk:"Досвід іммігранта — про що вас ніхто не попереджає", ur:"تارکین وطن کا تجربہ — جس کے بارے میں کوئی آپ کو خبردار نہیں کرتا" },
         content: { en:`<p>Immigration is sold as adventure, opportunity, and new beginnings. All of those things are true. But it is also, consistently, one of the most psychologically demanding experiences a person can go through — and that part is rarely acknowledged.</p>
-<p><strong>The stages most immigrants experience:</strong></p>
+<p><strong>The stages many newcomers experience:</strong></p>
 <ul>
   <li><strong>The honeymoon phase (0–3 months):</strong> Everything is new and exciting. Denmark is charming, people seem friendly, you feel energised. This phase can mask underlying stress.</li>
   <li><strong>Culture shock (3–12 months):</strong> The novelty fades. You realise you don't understand the social rules. You're lonely. Simple tasks feel exhausting. You miss home in ways you didn't expect — not just people, but sounds, smells, the feeling of being understood without effort.</li>

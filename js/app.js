@@ -1183,7 +1183,7 @@ const Wizard = {
       p.push({ title:'Secure even temporary accommodation first', desc:'You need a registered address for your CPR. AirBnb or student housing works while you search properly.', chapter:'Chapter 3: Housing', chapterIndex:3 });
     }
     if (a.anxiety?.includes('money')) {
-      p.push({ title:'Open a Danish bank account (requires CPR)', desc:'Lunar is the most newcomer-friendly. Once open, designate it as your NemKonto at nemkonto.dk.', chapter:'Chapter 4: Money & Banking', chapterIndex:4 });
+      p.push({ title:'Open a Danish bank account (requires CPR)', desc:'Compare Lunar, Danske Bank, Nordea, and Jyske Bank — fees and onboarding speed vary. Once open, designate it as your NemKonto at nemkonto.dk.', chapter:'Chapter 4: Money & Banking', chapterIndex:4 });
     }
     if (a.anxiety?.includes('language')) {
       p.push({ title:'Enroll in Danskuddannelse (free Danish lessons)', desc:'All newcomers are legally entitled to 3 years of free, subsidised Danish instruction. Enroll early.', chapter:null });
@@ -1220,7 +1220,7 @@ const Wizard = {
       return `Welcome to the working majority of internationals here. Your employer handles the permit paperwork, but the CPR, MitID, skattekort, and a-kasse — those are on you, and they matter enormously. Get them done this week, not next month.`;
     }
     if (a.family === 'family_small' || a.family === 'family_school') {
-      return `Denmark is genuinely one of the best places in the world to raise children — world-class childcare, excellent schools, safe streets. But the waitlists for daycare are very long. Apply for the pasningsgaranti (guaranteed childcare place) on your very first day. Everything else can wait a week. The daycare list cannot.`;
+      return `Denmark is consistently rated among the top countries for raising children — strong public childcare, well-resourced schools, safe streets. But the waitlists for daycare are very long. Apply for the pasningsgaranti (guaranteed childcare place) on your very first day. Everything else can wait a week. The daycare list cannot.`;
     }
     return `Your most important first move is registering your address at borger.dk or your local Borgerservice office. Bring your passport and proof of accommodation. Everything else in Denmark — your CPR, your bank account, your doctor, your tax card — all of it flows from that one step. I'm here whenever you need me. <em>Du klarer det!</em> (You've got this!)`;
   }

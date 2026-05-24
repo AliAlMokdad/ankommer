@@ -220,7 +220,7 @@ After opening, designate it as your **NemKonto** at [nemkonto.dk](https://www.ne
 
 **70 20 12 60** | Crisis Line (Livslinien) | Mental health crisis support |
 
-> ⚠️ **Key difference:** In Denmark, 1813 is the number to call for medical advice and non-emergency urgent care. Calling 112 for non-emergencies is frowned upon and may delay care for others.
+> ⚠️ **Key difference:** In Denmark, 1813 is the number to call for medical advice and non-emergency urgent care. Calling 112 for non-emergencies may delay care for people with genuine emergencies.
 
 
 ---
@@ -402,7 +402,7 @@ If you have a dispute with your landlord, contact **Huslejenævnet** (Rent Tribu
 
 **Nørrebro** | Young, diverse, vibrant, creative scene | ~8,500 DKK | Young professionals, internationals |
 
-**Vesterbro** | Hip, food scene, gentrifying | ~9,500 DKK | Foodies, creatives |
+**Vesterbro** | Hip, food scene, evolving | ~9,500 DKK | Foodies, creatives |
 
 **Østerbro** | Calm, family-oriented, affluent | ~10,500 DKK | Families, established professionals |
 
@@ -690,7 +690,7 @@ Many newcomers find the adjustment to Danish social culture genuinely difficult 
 
 Source: https://ankommer.org/chapter/children-and-family.html
 
-Denmark is arguably the best country in the world to raise children. Here's everything you need to know.
+Denmark is consistently rated among the top countries in the world for raising children. Here's everything you need to know.
 
 ## Parental Leave (Barsel) — 52 Weeks, Paid
 
@@ -1656,7 +1656,7 @@ Moving countries is one of the hardest things a human being can do. Your feeling
 
 Immigration is sold as adventure, opportunity, and new beginnings. All of those things are true. But it is also, consistently, one of the most psychologically demanding experiences a person can go through — and that part is rarely acknowledged.
 
-**The stages most immigrants experience:**
+**The stages many newcomers experience:**
 
   - **The honeymoon phase (0–3 months):** Everything is new and exciting. Denmark is charming, people seem friendly, you feel energised. This phase can mask underlying stress.
 
