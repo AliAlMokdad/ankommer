@@ -1123,7 +1123,7 @@ da:`<table class="info-table">
   <tr><td><strong>80 19 13 99</strong></td><td>Giftlinjen</td><td>Gratis, døgnet rundt</td></tr>
   <tr><td><strong>70 20 12 60</strong></td><td>Kriselinje (Livslinien)</td><td>Støtte ved psykisk krise</td></tr>
 </table>
-<p class="callout-warning"><strong>Vigtigt at vide:</strong> I Danmark er 1813 nummeret, du ringer til for lægelig rådgivning og ikke-akut behandling. Det er uhøfligt at ringe til 112 for ikke-akutte situationer og kan forsinke hjælpen til andre.</p>`,
+<p class="callout-warning"><strong>Vigtigt at vide:</strong> I Danmark er 1813 nummeret, du ringer til for lægelig rådgivning og ikke-akut behandling. At ringe til 112 for ikke-akutte situationer kan forsinke hjælpen til personer i reel nød.</p>`,
 fr:`<table class="info-table">
   <tr><th>Numéro</th><th>Pour</th><th>Remarque</th></tr>
   <tr><td><strong>112</strong></td><td>Police, pompiers, ambulance</td><td>Urgences vitales UNIQUEMENT</td></tr>
@@ -1133,7 +1133,7 @@ fr:`<table class="info-table">
   <tr><td><strong>80 19 13 99</strong></td><td>Centre antipoison</td><td>Gratuit, 24h/24</td></tr>
   <tr><td><strong>70 20 12 60</strong></td><td>Ligne de crise (Livslinien)</td><td>Soutien en crise psychologique</td></tr>
 </table>
-<p class="callout-warning"><strong>Différence clé :</strong> Au Danemark, le 1813 est le numéro à appeler pour des conseils médicaux et des soins urgents non vitaux. Appeler le 112 pour des non-urgences est mal vu et peut retarder les secours pour d'autres.</p>`,
+<p class="callout-warning"><strong>Différence clé :</strong> Au Danemark, le 1813 est le numéro à appeler pour des conseils médicaux et des soins urgents non vitaux. Appeler le 112 pour des non-urgences peut retarder les secours pour les personnes en situation d'urgence réelle.</p>`,
 ar:`<table class="info-table">
   <tr><th>الرقم</th><th>للاستخدام في</th><th>ملاحظة</th></tr>
   <tr><td><strong>112</strong></td><td>الشرطة، الإطفاء، الإسعاف</td><td>للحالات التي تُهدد الحياة فقط</td></tr>
@@ -1143,7 +1143,7 @@ ar:`<table class="info-table">
   <tr><td><strong>80 19 13 99</strong></td><td>مركز معلومات السموم</td><td>مجاني، على مدار الساعة</td></tr>
   <tr><td><strong>70 20 12 60</strong></td><td>خط الأزمات (Livslinien)</td><td>دعم أزمات الصحة النفسية</td></tr>
 </table>
-<p class="callout-warning"><strong>فرق مهم:</strong> في الدنمارك، 1813 هو الرقم المخصص للاستشارة الطبية والرعاية العاجلة غير الطارئة. الاتصال بـ 112 لأمور غير طارئة أمر مرفوض اجتماعياً وقد يُؤخّر النجدة عن غيرك.</p>`,
+<p class="callout-warning"><strong>فرق مهم:</strong> في الدنمارك، 1813 هو الرقم المخصص للاستشارة الطبية والرعاية العاجلة غير الطارئة. الاتصال بـ 112 لأمور غير طارئة قد يُؤخّر النجدة عن أشخاص يواجهون طوارئ حقيقية.</p>`,
 es:`<table class="info-table">
   <tr><th>Número</th><th>Para</th><th>Nota</th></tr>
   <tr><td><strong>112</strong></td><td>Policía, Bomberos, Ambulancia</td><td>Emergencias que amenazan la vida ÚNICAMENTE</td></tr>
@@ -1153,7 +1153,7 @@ es:`<table class="info-table">
   <tr><td><strong>80 19 13 99</strong></td><td>Control de intoxicaciones</td><td>Gratuito, 24/7</td></tr>
   <tr><td><strong>70 20 12 60</strong></td><td>Línea de crisis (Livslinien)</td><td>Apoyo en crisis de salud mental</td></tr>
 </table>
-<p class="callout-warning"><strong>Diferencia clave:</strong> En Dinamarca, el 1813 es el número para solicitar orientación médica y atención urgente no crítica. Llamar al 112 para no emergencias está mal visto y puede retrasar la atención de otros.</p>`,
+<p class="callout-warning"><strong>Diferencia clave:</strong> En Dinamarca, el 1813 es el número para solicitar orientación médica y atención urgente no crítica. Llamar al 112 para no emergencias puede retrasar la atención a personas con emergencias reales.</p>`,
 de:`<table class="info-table">
   <tr><th>Nummer</th><th>Fuer</th><th>Hinweis</th></tr>
   <tr><td><strong>112</strong></td><td>Polizei, Feuerwehr, Krankenwagen</td><td>NUR lebensbedrohliche Notfaelle</td></tr>
@@ -1163,7 +1163,7 @@ de:`<table class="info-table">
   <tr><td><strong>80 19 13 99</strong></td><td>Giftnotruf</td><td>Kostenlos, 24/7</td></tr>
   <tr><td><strong>70 20 12 60</strong></td><td>Krisentelefon (Livslinien)</td><td>Unterstuetzung bei psychischen Krisen</td></tr>
 </table>
-<p class="callout-warning"><strong>Wichtiger Unterschied:</strong> In Daenemark ist die 1813 die Nummer fuer medizinischen Rat und nicht lebensbedrohliche dringende Versorgung. Die 112 fuer Nicht-Notfaelle anzurufen wird missbilligt und kann die Versorgung anderer verzoegern.</p>`,
+<p class="callout-warning"><strong>Wichtiger Unterschied:</strong> In Daenemark ist die 1813 die Nummer fuer medizinischen Rat und nicht lebensbedrohliche dringende Versorgung. Die 112 fuer Nicht-Notfaelle anzurufen kann die Versorgung von Personen mit echten Notfaellen verzoegern.</p>`,
           uk:`<table class="info-table">
   <tr><th>Номер</th><th>Для чого</th><th>Примітка</th></tr>
   <tr><td><strong>112</strong></td><td>Поліція, пожежна, швидка</td><td>ТІЛЬКИ для небезпечних для життя ситуацій</td></tr>
@@ -1173,7 +1173,7 @@ de:`<table class="info-table">
   <tr><td><strong>80 19 13 99</strong></td><td>Токсикологічний центр</td><td>Безкоштовно, цілодобово</td></tr>
   <tr><td><strong>70 20 12 60</strong></td><td>Лінія психологічної кризи (Livslinien)</td><td>Підтримка в кризових ситуаціях</td></tr>
 </table>
-<p class="callout-warning"><strong>Ключова різниця:</strong> У Данії 1813 — номер для медичних консультацій та термінової допомоги без загрози для життя. Дзвонити на 112 без реальної загрози вважається неприйнятним і може затримати допомогу іншим.</p>`,
+<p class="callout-warning"><strong>Ключова різниця:</strong> У Данії 1813 — номер для медичних консультацій та термінової допомоги без загрози для життя. Дзвонити на 112 без реальної загрози може затримати допомогу людям зі справжніми надзвичайними ситуаціями.</p>`,
           pl:`<table class="info-table">
   <tr><th>Numer</th><th>Przeznaczenie</th><th>Uwaga</th></tr>
   <tr><td><strong>112</strong></td><td>Policja, Straż Pożarna, Pogotowie</td><td>WYŁĄCZNIE sytuacje zagrożenia życia</td></tr>
@@ -1183,7 +1183,7 @@ de:`<table class="info-table">
   <tr><td><strong>80 19 13 99</strong></td><td>Centrum Informacji Toksykologicznych</td><td>Bezpłatne, całą dobę</td></tr>
   <tr><td><strong>70 20 12 60</strong></td><td>Linia Kryzysowa (Livslinien)</td><td>Wsparcie w kryzysach psychicznych</td></tr>
 </table>
-<p class="callout-warning"><strong>Ważna różnica:</strong> W Danii numer 1813 służy do konsultacji medycznych i pilnej pomocy niebędącej zagrożeniem życia. Dzwonienie pod 112 w sprawach nienaglących jest źle widziane i może opóźnić pomoc innym.</p>`,
+<p class="callout-warning"><strong>Ważna różnica:</strong> W Danii numer 1813 służy do konsultacji medycznych i pilnej pomocy niebędącej zagrożeniem życia. Dzwonienie pod 112 w sprawach nienaglących może opóźnić pomoc osobom w prawdziwych sytuacjach zagrożenia.</p>`,
           ur:`<table class="info-table">
   <tr><th>نمبر</th><th>کے لیے</th><th>نوٹ</th></tr>
   <tr><td><strong>112</strong></td><td>پولیس، فائر بریگیڈ، ایمبولینس</td><td>صرف جان لیوا ہنگامی حالات</td></tr>
@@ -1193,7 +1193,7 @@ de:`<table class="info-table">
   <tr><td><strong>80 19 13 99</strong></td><td>زہر کنٹرول</td><td>مفت، 24/7</td></tr>
   <tr><td><strong>70 20 12 60</strong></td><td>بحران لائن (Livslinien)</td><td>ذہنی صحت بحران مدد</td></tr>
 </table>
-<p class="callout-warning"><strong>اہم فرق:</strong> ڈنمارک میں 1813 طبی مشورے اور غیر ہنگامی فوری دیکھ بھال کے لیے نمبر ہے۔ غیر ہنگامی حالات میں 112 کال کرنا معیوب سمجھا جاتا ہے اور دوسروں کی مدد میں تاخیر ہو سکتی ہے۔</p>`,
+<p class="callout-warning"><strong>اہم فرق:</strong> ڈنمارک میں 1813 طبی مشورے اور غیر ہنگامی فوری دیکھ بھال کے لیے نمبر ہے۔ غیر ہنگامی حالات میں 112 کال کرنا حقیقی ہنگامی صورتحال میں مبتلا لوگوں کی مدد میں تاخیر کر سکتا ہے۔</p>`,
           fa:`<table class="info-table">
   <tr><th>نمبر</th><th>کے لیے</th><th>نوٹ</th></tr>
   <tr><td><strong>112</strong></td><td>پولیس، فائر بریگیڈ، ایمبولینس</td><td>صرف جان لیوا ہنگامی حالات</td></tr>
@@ -1203,7 +1203,7 @@ de:`<table class="info-table">
   <tr><td><strong>80 19 13 99</strong></td><td>زہر کنٹرول</td><td>مفت، 24/7</td></tr>
   <tr><td><strong>70 20 12 60</strong></td><td>بحران لائن (Livslinien)</td><td>ذہنی صحت بحران مدد</td></tr>
 </table>
-<p class="callout-warning"><strong>اہم فرق:</strong> ڈنمارک میں 1813 طبی مشورے اور غیر ہنگامی فوری دیکھ بھال کے لیے نمبر ہے۔ غیر ہنگامی حالات میں 112 کال کرنا معیوب سمجھا جاتا ہے اور دوسروں کی مدد میں تاخیر ہو سکتی ہے۔</p>` }
+<p class="callout-warning"><strong>اہم فرق:</strong> ڈنمارک میں 1813 طبی مشورے اور غیر ہنگامی فوری دیکھ بھال کے لیے نمبر ہے۔ غیر ہنگامی حالات میں 112 کال کرنا حقیقی ہنگامی صورتحال میں مبتلا لوگوں کی مدد میں تاخیر کر سکتا ہے۔</p>` }
       }
     ],
     checklist: [
@@ -3049,7 +3049,7 @@ ur:`<p>آپ کا GP (praktiserende læge) <strong>پورے ڈنمارکی صحت
   <tr><td><strong style="font-size:1.1rem">1813</strong></td><td>Medical advice and urgent (non-emergency) care</td><td>Nurse or doctor by phone, then direction</td><td>Ill or injured but not life-threatening</td></tr>
 </table>
 <p><strong>1813</strong> is run by Region Hovedstaden (Copenhagen region). Outside of Copenhagen, call your local <strong>lægevagt</strong> (out-of-hours GP service). The number varies by region — check at <a href="https://www.sundhed.dk" target="_blank" rel="noopener">sundhed.dk</a>.</p>
-<p class="callout-warning">Calling 112 for a non-emergency wastes emergency resources and is socially strongly disapproved of in Denmark. Call 1813 first for anything that isn't immediately life-threatening. They will send an ambulance if you need one.</p>
+<p class="callout-warning">Calling 112 for a non-emergency uses up resources that may be needed for life-threatening cases. Call 1813 first for anything that isn't immediately life-threatening. They will send an ambulance if you need one.</p>
 <p><strong>Hospital emergency (skadestue):</strong> You can also walk into a hospital emergency department, but 1813 will often redirect you to a faster option.</p>`,
 da:`<p>Dette er noget af det vigtigste at vide i Danmark. De to numre tjener helt forskellige formål:</p>
 <table class="info-table">
@@ -3058,7 +3058,7 @@ da:`<p>Dette er noget af det vigtigste at vide i Danmark. De to numre tjener hel
   <tr><td><strong style="font-size:1.1rem">1813</strong></td><td>Lægelig rådgivning og akut (ikke-livstruende) hjælp</td><td>Sygeplejerske eller læge pr. telefon, derefter vejledning</td><td>Syg eller skadet, men ikke livstruende</td></tr>
 </table>
 <p><strong>1813</strong> drives af Region Hovedstaden. Uden for København skal du ringe til din lokale <strong>lægevagt</strong>. Nummeret varierer pr. region — tjek på <a href="https://www.sundhed.dk" target="_blank" rel="noopener">sundhed.dk</a>.</p>
-<p class="callout-warning">At ringe til 112 for en ikke-akut situation spilder nødressourcer og er socialt stærkt misbilliget i Danmark. Ring til 1813 først for alt, der ikke er umiddelbart livstruende. De sender en ambulance, hvis du har brug for det.</p>
+<p class="callout-warning">At ringe til 112 for en ikke-akut situation bruger ressourcer, der kan være nødvendige til livstruende tilfælde. Ring til 1813 først for alt, der ikke er umiddelbart livstruende. De sender en ambulance, hvis du har brug for det.</p>
 <p><strong>Skadestue:</strong> Du kan også møde op på en skadestue, men 1813 vil ofte henvise dig til en hurtigere løsning.</p>`,
 fr:`<p>C'est l'une des choses les plus importantes à savoir au Danemark. Les deux numéros servent des objectifs complètement différents :</p>
 <table class="info-table">
@@ -3067,7 +3067,7 @@ fr:`<p>C'est l'une des choses les plus importantes à savoir au Danemark. Les de
   <tr><td><strong style="font-size:1.1rem">1813</strong></td><td>Conseils médicaux et soins urgents (non urgence)</td><td>Infirmière ou médecin par téléphone, puis orientation</td><td>Malade ou blessé mais sans danger immédiat</td></tr>
 </table>
 <p><strong>1813</strong> est géré par Region Hovedstaden (région de Copenhague). En dehors de Copenhague, appelez votre <strong>lægevagt</strong> local (service médical de garde). Le numéro varie selon la région — consultez <a href="https://www.sundhed.dk" target="_blank" rel="noopener">sundhed.dk</a>.</p>
-<p class="callout-warning">Appeler le 112 pour une non-urgence gaspille les ressources d'urgence et est socialement très mal vu au Danemark. Appelez d'abord le 1813 pour tout ce qui n'est pas immédiatement menaçant pour la vie. Ils enverront une ambulance si nécessaire.</p>
+<p class="callout-warning">Appeler le 112 pour une non-urgence mobilise des ressources qui pourraient être nécessaires pour des cas vitaux. Appelez d'abord le 1813 pour tout ce qui n'est pas immédiatement menaçant pour la vie. Ils enverront une ambulance si nécessaire.</p>
 <p><strong>Urgences hospitalières (skadestue) :</strong> Vous pouvez également vous rendre directement aux urgences d'un hôpital, mais le 1813 vous orientera souvent vers une option plus rapide.</p>`,
 ar:`<p>هذا من أهم ما يجب معرفته في الدنمارك. الرقمان يخدمان غرضين مختلفين تماماً:</p>
 <table class="info-table">
@@ -3076,7 +3076,7 @@ ar:`<p>هذا من أهم ما يجب معرفته في الدنمارك. الر
   <tr><td><strong style="font-size:1.1rem">1813</strong></td><td>استشارة طبية ورعاية عاجلة (غير طارئة)</td><td>ممرض أو طبيب هاتفياً ثم توجيه</td><td>مريض أو مصاب لكن الوضع غير مهدد للحياة</td></tr>
 </table>
 <p><strong>1813</strong> تُشغّله Region Hovedstaden (منطقة كوبنهاغن). خارج كوبنهاغن، اتصل بـ <strong>lægevagt</strong> المحلي (خدمة الطبيب خارج أوقات العمل). يختلف الرقم بحسب المنطقة — تحقق على <a href="https://www.sundhed.dk" target="_blank" rel="noopener">sundhed.dk</a>.</p>
-<p class="callout-warning">الاتصال بـ 112 لحالة غير طارئة يُهدر موارد الطوارئ وهو مرفوض اجتماعياً في الدنمارك. اتصل بـ 1813 أولاً لأي حالة لا تهدد الحياة مباشرة. سيرسلون لك سيارة إسعاف إن احتجت.</p>
+<p class="callout-warning">الاتصال بـ 112 لحالة غير طارئة يستهلك موارد قد تكون مطلوبة لحالات تهدد الحياة. اتصل بـ 1813 أولاً لأي حالة لا تهدد الحياة مباشرة. سيرسلون لك سيارة إسعاف إن احتجت.</p>
 <p><strong>قسم الطوارئ (skadestue):</strong> يمكنك أيضاً التوجه مباشرة لقسم الطوارئ في مستشفى، لكن 1813 غالباً يوجهك لخيار أسرع.</p>`,
 es:`<p>Esto es una de las cosas más importantes que debes saber en Dinamarca. Los dos números tienen propósitos completamente distintos:</p>
 <table class="info-table">
@@ -3085,7 +3085,7 @@ es:`<p>Esto es una de las cosas más importantes que debes saber en Dinamarca. L
   <tr><td><strong style="font-size:1.1rem">1813</strong></td><td>Asesoramiento médico y atención urgente (no emergencia)</td><td>Enfermero o médico por teléfono, luego orientación</td><td>Enfermo o lesionado pero sin riesgo vital</td></tr>
 </table>
 <p><strong>1813</strong> lo gestiona Region Hovedstaden (región de Copenhague). Fuera de Copenhague, llama a tu <strong>lægevagt</strong> local (servicio médico fuera de horario). El número varía según la región — consulta en <a href="https://www.sundhed.dk" target="_blank" rel="noopener">sundhed.dk</a>.</p>
-<p class="callout-warning">Llamar al 112 por una no-emergencia desperdicia recursos de emergencia y está muy mal visto socialmente en Dinamarca. Llama primero al 1813 para todo lo que no suponga un riesgo vital inmediato. Ellos enviarán una ambulancia si la necesitas.</p>
+<p class="callout-warning">Llamar al 112 por una no-emergencia consume recursos que pueden ser necesarios para casos con riesgo vital. Llama primero al 1813 para todo lo que no suponga un riesgo vital inmediato. Ellos enviarán una ambulancia si la necesitas.</p>
 <p><strong>Urgencias hospitalarias (skadestue):</strong> También puedes ir directamente a urgencias de un hospital, pero el 1813 suele derivarte a una opción más rápida.</p>`,
 de:`<p>Das ist eines der wichtigsten Dinge, die Sie in Dänemark wissen müssen. Die beiden Nummern dienen völlig unterschiedlichen Zwecken:</p>
 <table class="info-table">
@@ -3094,7 +3094,7 @@ de:`<p>Das ist eines der wichtigsten Dinge, die Sie in Dänemark wissen müssen.
   <tr><td><strong style="font-size:1.1rem">1813</strong></td><td>Medizinische Beratung und dringende (nicht lebensbedrohliche) Versorgung</td><td>Krankenschwester oder Arzt telefonisch, dann Weiterleitung</td><td>Krank oder verletzt, aber nicht lebensbedrohlich</td></tr>
 </table>
 <p><strong>1813</strong> wird von der Region Hauptstadt (Region Hoofdstaden, Kopenhagener Region) betrieben. Außerhalb Kopenhagens rufen Sie Ihren lokalen <strong>lægevagt</strong> (ärztlicher Bereitschaftsdienst) an. Die Nummer variiert je nach Region — prüfen Sie auf <a href="https://www.sundhed.dk" target="_blank" rel="noopener">sundhed.dk</a>.</p>
-<p class="callout-warning">Den Notruf 112 für Nicht-Notfälle anzurufen verschwendet Einsatzressourcen und gilt in Dänemark als sozial sehr unangemessen. Rufen Sie für alles, was nicht unmittelbar lebensbedrohlich ist, zuerst 1813 an. Die Leitstelle schickt einen Krankenwagen, wenn nötig.</p>
+<p class="callout-warning">Den Notruf 112 für Nicht-Notfälle anzurufen beansprucht Ressourcen, die für lebensbedrohliche Fälle benötigt werden könnten. Rufen Sie für alles, was nicht unmittelbar lebensbedrohlich ist, zuerst 1813 an. Die Leitstelle schickt einen Krankenwagen, wenn nötig.</p>
 <p><strong>Krankenhaus-Notaufnahme (skadestue):</strong> Sie können auch direkt in eine Notaufnahme gehen, aber 1813 wird Sie oft an eine schnellere Option weiterleiten.</p>`,
           uk:`<p>Це одна з найважливіших речей, які треба знати в Данії. Два номери служать зовсім різним цілям:</p>
 <table class="info-table">
@@ -3103,7 +3103,7 @@ de:`<p>Das ist eines der wichtigsten Dinge, die Sie in Dänemark wissen müssen.
   <tr><td><strong style="font-size:1.1rem">1813</strong></td><td>Медична консультація та термінова (не екстрена) допомога</td><td>Медсестра або лікар телефоном, потім направлення</td><td>Хворий або травмований, але без загрози для життя</td></tr>
 </table>
 <p><strong>1813</strong> обслуговується Region Hovedstaden (Копенгагенський регіон). За межами Копенгагена дзвоніть до місцевої служби <strong>lægevagt</strong> (лікарська чергова служба). Номер залежить від регіону — перевіряйте на <a href="https://www.sundhed.dk" target="_blank" rel="noopener">sundhed.dk</a>.</p>
-<p class="callout-warning">Дзвінок на 112 через несрочну ситуацію марнує ресурси екстреної служби і в Данії вважається соціально неприйнятним. За будь-чим, що безпосередньо не загрожує життю, спочатку дзвоніть на 1813. За потреби вони пришлють швидку.</p>
+<p class="callout-warning">Дзвінок на 112 через несрочну ситуацію використовує ресурси, які можуть знадобитися для випадків загрози життю. За будь-чим, що безпосередньо не загрожує життю, спочатку дзвоніть на 1813. За потреби вони пришлють швидку.</p>
 <p><strong>Лікарняна невідкладна допомога (skadestue):</strong> Ви також можете прийти безпосередньо у відділення невідкладної допомоги, але 1813 часто направить вас до швидшого варіанта.</p>`,
                pl:`<p><strong>Jak uzyskać pomoc medyczną w Danii — kiedy dzwonić:</strong></p>
 <ul>
@@ -3112,7 +3112,7 @@ de:`<p>Das ist eines der wichtigsten Dinge, die Sie in Dänemark wissen müssen.
   <li><strong>Lekarz pierwszego kontaktu</strong> — rutynowe schorzenia w godzinach pracy. Zawsze pierwsza opcja dla spraw niepinych.</li>
   <li><strong>Szpitalny oddział ratunkowy (skadestue)</strong> — urazy i nagłe przypadki. Udaj się bezpośrednio.</li>
 </ul>
-<p class="callout-warning">Dzwonienie pod 112 w sprawach niepilnych jest źle widziane i może opóźnić pomoc innym.</p>`,
+<p class="callout-warning">Dzwonienie pod 112 w sprawach niepilnych zużywa zasoby ratunkowe, które mogą być potrzebne w sytuacjach zagrożenia życia.</p>`,
 ur:`<p>یہ ڈنمارک میں جاننے والی سب سے اہم باتوں میں سے ایک ہے۔ دونوں نمبروں کا مقصد بالکل مختلف ہے:</p>
 <table class="info-table">
   <tr><th>نمبر</th><th>کس لیے</th><th>کب استعمال کریں</th></tr>
@@ -3120,7 +3120,7 @@ ur:`<p>یہ ڈنمارک میں جاننے والی سب سے اہم باتوں 
   <tr><td><strong style="font-size:1.1rem">1813</strong></td><td>طبی مشورہ اور فوری (غیر ہنگامی) نگہداشت</td><td>بیمار یا زخمی لیکن جان کو خطرہ نہیں</td></tr>
 </table>
 <p><strong>1813</strong> Region Hovedstaden (کوپن ہیگن علاقہ) چلاتی ہے۔ کوپن ہیگن سے باہر اپنے مقامی <strong>lægevagt</strong> (آؤٹ آف آورز GP سروس) کو کال کریں۔ نمبر علاقے کے مطابق مختلف ہوتا ہے — <a href="https://www.sundhed.dk" target="_blank" rel="noopener">sundhed.dk</a> پر چیک کریں۔</p>
-<p class="callout-warning">غیر ہنگامی صورت میں 112 پر کال کرنا ہنگامی وسائل ضائع کرتا ہے اور ڈنمارک میں سماجی طور پر سخت ناپسندیدہ ہے۔ جو بات فوری طور پر جان لیوا نہ ہو، پہلے 1813 پر کال کریں۔</p>
+<p class="callout-warning">غیر ہنگامی صورت میں 112 پر کال کرنا ان وسائل کا استعمال کرتا ہے جو جان لیوا حالات کے لیے درکار ہو سکتے ہیں۔ جو بات فوری طور پر جان لیوا نہ ہو، پہلے 1813 پر کال کریں۔ ضرورت پڑنے پر وہ ایمبولینس بھیجیں گے۔</p>
 <p><strong>ہسپتال ایمرجنسی (skadestue):</strong> آپ سیدھے ہسپتال کے ایمرجنسی وارڈ بھی جا سکتے ہیں، لیکن 1813 اکثر آپ کو تیز تر آپشن کی طرف رہنمائی کرے گا۔</p>`,
           fa:`<p>این یکی از مهم‌ترین چیزهایی است که باید در دانمارک بدانید. هر دو شماره هدف کاملاً متفاوتی دارند:</p>` }
       },

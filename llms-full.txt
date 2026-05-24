@@ -605,7 +605,7 @@ This is one of the most important things to know in Denmark. The two numbers ser
 
 **1813** is run by Region Hovedstaden (Copenhagen region). Outside of Copenhagen, call your local **lægevagt** (out-of-hours GP service). The number varies by region — check at [sundhed.dk](https://www.sundhed.dk).
 
-> ⚠️ Calling 112 for a non-emergency wastes emergency resources and is socially strongly disapproved of in Denmark. Call 1813 first for anything that isn't immediately life-threatening. They will send an ambulance if you need one.
+> ⚠️ Calling 112 for a non-emergency uses up resources that may be needed for life-threatening cases. Call 1813 first for anything that isn't immediately life-threatening. They will send an ambulance if you need one.
 
 **Hospital emergency (skadestue):** You can also walk into a hospital emergency department, but 1813 will often redirect you to a faster option.
 
