@@ -1073,8 +1073,8 @@
 <!-- v24: cache-busting query string forces a fresh fetch when we ship new JS,
      since /js/* historically had a 1-year immutable cache header. Bump the
      query string in lockstep with sw.js CACHE_NAME on every release. -->
-<script defer src="js/data.js?v=35"></script>
-<script defer src="js/data-chapters-meta.js?v=30"></script>
+<script defer src="js/data.js?v=36"></script>
+<script defer src="js/data-chapters-meta.js?v=31"></script>
 <!-- Removed prefetch tag: js/data-chapters.js is dynamically injected on
      first openChapter() call. The prefetch caused a duplicate fetch in
      some browsers (Firefox especially) that didn't reliably coalesce the
@@ -1083,7 +1083,7 @@
 <script defer src="js/bjorn.js?v=38"></script>
 <script defer src="js/calculators.js?v=34"></script>
 <script defer src="js/apis.js?v=28"></script>
-<script defer src="js/app.js?v=56"></script>
+<script defer src="js/app.js?v=57"></script>
 <!-- Shared backdrop for mobile modals (lang dropdown, Bjørn panel) -->
 <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 </body>

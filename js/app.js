@@ -1513,7 +1513,7 @@ const _loadFullChapters = () => {
   if (_chaptersLoadPromise) return _chaptersLoadPromise;
   _chaptersLoadPromise = new Promise((resolve) => {
     const s = document.createElement('script');
-    s.src = 'js/data-chapters.js?v=30';
+    s.src = 'js/data-chapters.js?v=31';
     s.onload = () => { _chaptersFullLoaded = true; resolve(); };
     s.onerror = () => resolve(); // fail gracefully — content just won't show
     document.head.appendChild(s);
