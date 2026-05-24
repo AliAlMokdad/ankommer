@@ -23,7 +23,7 @@ Everything you should do before your flight touches down. Starting right now get
 
   - **Student visa** — if enrolled at a Danish university or educational institution. Apply at newtodenmark.dk at least 2 months before.
 
-  - **Family reunification** — to join a Danish citizen or permanent resident. Requirements are strict: the Danish sponsor must meet income and housing requirements.
+  - **Family reunification** — to join a Danish citizen or permanent resident. Requirements include income and housing thresholds for the Danish sponsor.
 
   - **Startup Denmark visa** — for entrepreneurs with an approved business plan.
 
@@ -325,7 +325,7 @@ For non-EU licences:
 
 Source: https://ankommer.org/chapter/housing.html
 
-The Danish housing market is brutally competitive — especially Copenhagen. But with the right strategy, you'll find your home.
+The Danish housing market is competitive, especially in Copenhagen. With the right strategy, you'll find your home.
 
 ## Read this first — Avoiding rental scams
 
@@ -400,7 +400,7 @@ If you have a dispute with your landlord, contact **Huslejenævnet** (Rent Tribu
 
 **Area** | **Vibe** | **Avg 1-bed rent** | **Best for** |
 
-**Nørrebro** | Young, diverse, vibrant, left-leaning | ~8,500 DKK | Young professionals, internationals |
+**Nørrebro** | Young, diverse, vibrant, creative scene | ~8,500 DKK | Young professionals, internationals |
 
 **Vesterbro** | Hip, food scene, gentrifying | ~9,500 DKK | Foodies, creatives |
 
@@ -657,7 +657,7 @@ Moving countries is one of the most psychologically challenging things a person 
 
   - **Expat Counselling Copenhagen:** English-language therapy, private, ~DKK 900–1,400/session
 
-Many expats find the adjustment to Danish social culture (reserved, indirect, hard to penetrate) genuinely difficult. This is normal, not a personal failure. Allow 1–2 years to build a real social network.
+Many newcomers find the adjustment to Danish social culture genuinely difficult at first. It's a culture where trust is built slowly and meaningfully — that's a feature, not a flaw. This is normal, not a personal failure. Allow 1–2 years to build a real social network.
 
 [→ Mental health resources (sundhed.dk)](https://www.sundhed.dk/borger/patienthaandbogen/psyke/)
 
@@ -1419,11 +1419,11 @@ Denmark consistently ranks among the world's happiest countries (World Happiness
 
 > **For newcomers:** Don't confuse Janteloven with low confidence. Danes are assertive, direct, and proud — they just express it collectively rather than individually. Lead with curiosity about others, not your own CV.
 
-Younger Danes increasingly critique Janteloven as an obstacle to ambition and entrepreneurship. You'll find its influence varies significantly by age group and industry.
+Younger Danes increasingly discuss Janteloven's role in shaping ambition and entrepreneurship. You'll find its influence varies significantly by age group and industry.
 
 ## How to Make Danish Friends — The Real Guide
 
-Many expats in Denmark describe Danes as friendly but hard to befriend. This is accurate — and it has nothing to do with you personally.
+Building close friendships with Danes takes time. This is a cultural pattern, not a personal rejection — and the friendships that form here often last for decades.
 
 **Understanding Danish friendship dynamics:**
 
@@ -1555,7 +1555,7 @@ Dating in Denmark operates by norms that are distinctly different from most othe
 
 ## Family Reunification — Bringing Your Partner to Denmark
 
-If you are in Denmark and want to bring a foreign partner or spouse, the process is called **familiesammenføring** (family reunification). The rules are strict and should be understood early.
+If you are in Denmark and want to bring a foreign partner or spouse, the process is called **familiesammenføring** (family reunification). The rules have multiple components and should be understood early.
 
 **Key requirements (2025):**
 
@@ -1599,7 +1599,7 @@ Denmark was the first country in the world to legally recognise same-sex partner
 
   - LGBT+ community spaces are concentrated in Copenhagen's Vesterbro and Nørrebro neighbourhoods, but acceptance is generally high across the country
 
-> While Denmark is highly accepting, individual experiences may vary by region and community. Rural areas and some religious communities may be more conservative. The legal framework, however, is among the strongest in the world.
+> Denmark's legal framework protects everyone equally and is among the strongest in the world. Individual experiences may vary.
 
 ## Living Together — Cohabitation, Samlevende Status & Legal Rights
 

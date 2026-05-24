@@ -16,7 +16,7 @@ window.CHAPTERS = [
 <ul>
   <li><strong>Work permit</strong> — requires a job offer from a Danish employer. Most common types: Positive List (for high-demand professions), Pay Limit Scheme (if salary &gt; DKK 514,000/year in 2025, rising to DKK 552,000 in 2026), Fast-track Scheme (for certified companies).</li>
   <li><strong>Student visa</strong> — if enrolled at a Danish university or educational institution. Apply at newtodenmark.dk at least 2 months before.</li>
-  <li><strong>Family reunification</strong> — to join a Danish citizen or permanent resident. Requirements are strict: the Danish sponsor must meet income and housing requirements.</li>
+  <li><strong>Family reunification</strong> — to join a Danish citizen or permanent resident. Requirements include income and housing thresholds for the Danish sponsor.</li>
   <li><strong>Startup Denmark visa</strong> — for entrepreneurs with an approved business plan.</li>
 </ul>
 <p class="callout-warning">Apply as early as possible. Non-EU processing times range from 1–4 months. Do not book a one-way ticket until the permit is approved.</p>
@@ -26,7 +26,7 @@ window.CHAPTERS = [
 <ul>
   <li><strong>Arbejdstilladelse</strong> — kræver et jobtilbud fra en dansk arbejdsgiver. Hyppigste typer: Positivlisten (for efterspurgte erhverv), Beløbsordningen (løn &gt; 514.000 DKK/år i 2025, stiger til 552.000 DKK i 2026), Hurtigvejen (for certificerede virksomheder).</li>
   <li><strong>Studievisum</strong> — hvis du er indskrevet på et dansk universitet. Ansøg på nyidanmark.dk mindst 2 måneder i forvejen.</li>
-  <li><strong>Familiesammenføring</strong> — for at slutte dig til en dansk statsborger eller fastboende. Kravene er strenge: den danske sponsor skal opfylde indkomst- og boligkrav.</li>
+  <li><strong>Familiesammenføring</strong> — for at slutte dig til en dansk statsborger eller fastboende. Kravene omfatter indkomst- og boligkrav for den danske sponsor.</li>
   <li><strong>Startup Denmark-visum</strong> — for iværksættere med en godkendt forretningsplan.</li>
 </ul>
 <p class="callout-warning">Ansøg så tidligt som muligt. Sagsbehandlingstider for ikke-EU-borgere er 1–4 måneder. Book ikke en enkeltbillet, før tilladelsen er godkendt.</p>
@@ -36,7 +36,7 @@ fr:`<p><strong>Citoyens UE/EEE/nordiques :</strong> Vous n'avez pas besoin de vi
 <ul>
   <li><strong>Permis de travail</strong> — nécessite une offre d'emploi d'un employeur danois. Types les plus courants : Liste positive (professions en tension), Régime de plafond salarial (salaire &gt; 514 000 DKK/an en 2025, 552 000 DKK en 2026), Régime accéléré (entreprises certifiées).</li>
   <li><strong>Visa étudiant</strong> — pour les personnes inscrites dans un établissement d'enseignement danois. Faites la demande sur newtodenmark.dk au moins 2 mois à l'avance.</li>
-  <li><strong>Regroupement familial</strong> — pour rejoindre un citoyen danois ou un résident permanent. Les conditions sont strictes : le garant danois doit remplir les exigences de revenus et de logement.</li>
+  <li><strong>Regroupement familial</strong> — pour rejoindre un citoyen danois ou un résident permanent. Les conditions comprennent des exigences de revenus et de logement pour le garant danois.</li>
   <li><strong>Visa Startup Denmark</strong> — pour les entrepreneurs ayant un plan d'affaires approuvé.</li>
 </ul>
 <p class="callout-warning">Faites votre demande le plus tôt possible. Les délais de traitement pour les non-UE vont de 1 à 4 mois. Ne réservez pas de billet aller simple avant l'approbation du permis.</p>
@@ -46,7 +46,7 @@ ar:`<p><strong>مواطنو الاتحاد الأوروبي / المنطقة ا�
 <ul>
   <li><strong>تصريح العمل</strong> — يستلزم عرض عمل من صاحب عمل دنماركي. أكثر الأنواع شيوعاً: القائمة الإيجابية (للمهن عالية الطلب)، نظام سقف الراتب (إذا كان الراتب &gt; 514,000 DKK/سنة في 2025، ويرتفع إلى 552,000 DKK في 2026)، المسار السريع (للشركات المعتمدة).</li>
   <li><strong>تأشيرة الطالب</strong> — إذا كنت مسجلاً في جامعة أو مؤسسة تعليمية دنماركية. قدّم طلبك على newtodenmark.dk قبل الوصول بشهرين على الأقل.</li>
-  <li><strong>لم شمل الأسرة</strong> — للانضمام إلى مواطن دنماركي أو مقيم دائم. الاشتراطات صارمة: يجب على الكفيل الدنماركي استيفاء متطلبات الدخل والسكن.</li>
+  <li><strong>لم شمل الأسرة</strong> — للانضمام إلى مواطن دنماركي أو مقيم دائم. تشمل الاشتراطات حدود الدخل والسكن للكفيل الدنماركي.</li>
   <li><strong>تأشيرة Startup Denmark</strong> — لرواد الأعمال أصحاب خطة عمل معتمدة.</li>
 </ul>
 <p class="callout-warning">قدّم طلبك في أقرب وقت ممكن. تستغرق معالجة طلبات مواطني الدول غير الأعضاء في الاتحاد الأوروبي من 1 إلى 4 أشهر. لا تحجز تذكرة ذهاب فقط قبل الحصول على موافقة على التصريح.</p>
@@ -56,7 +56,7 @@ es:`<p><strong>Ciudadanos de la UE/EEE/países nórdicos:</strong> No necesitas 
 <ul>
   <li><strong>Permiso de trabajo</strong> — requiere una oferta de empleo de un empleador danés. Tipos más comunes: Lista Positiva (para profesiones con alta demanda), Esquema de Límite Salarial (si el salario es &gt; 514.000 DKK/año en 2025, subiendo a 552.000 DKK en 2026), Esquema Fast-track (para empresas certificadas).</li>
   <li><strong>Visa de estudiante</strong> — si estás matriculado en una universidad o institución educativa danesa. Solicítala en newtodenmark.dk al menos 2 meses antes.</li>
-  <li><strong>Reagrupación familiar</strong> — para reunirte con un ciudadano danés o residente permanente. Los requisitos son estrictos: el patrocinador danés debe cumplir con requisitos de ingresos y vivienda.</li>
+  <li><strong>Reagrupación familiar</strong> — para reunirte con un ciudadano danés o residente permanente. Los requisitos incluyen umbrales de ingresos y vivienda para el patrocinador danés.</li>
   <li><strong>Visa Startup Denmark</strong> — para emprendedores con un plan de negocio aprobado.</li>
 </ul>
 <p class="callout-warning">Solicita lo antes posible. Los tiempos de tramitación para no comunitarios van de 1 a 4 meses. No reserves un boleto de ida hasta que el permiso esté aprobado.</p>
@@ -66,7 +66,7 @@ de:`<p><strong>EU/EWR/nordische Staatsangehoerige:</strong> Sie benoetigen kein 
 <ul>
   <li><strong>Arbeitserlaubnis</strong> — erfordert ein Stellenangebot von einem daenischen Arbeitgeber. Haeufigste Typen: Positivliste (fuer gefragte Berufe), Gehaltsgrenzregelung (bei Gehalt &gt; 514.000 DKK/Jahr in 2025, steigend auf 552.000 DKK in 2026), Fast-track-Regelung (fuer zertifizierte Unternehmen).</li>
   <li><strong>Studentenvisum</strong> — bei Einschreibung an einer daenischen Universitaet oder Bildungseinrichtung. Beantragen Sie es auf newtodenmark.dk mindestens 2 Monate im Voraus.</li>
-  <li><strong>Familienzusammenfuehrung</strong> — um zu einem daenischen Staatsangehoerigen oder dauerhaften Einwohner zu ziehen. Die Anforderungen sind streng: der daenische Sponsor muss Einkommens- und Wohnanforderungen erfuellen.</li>
+  <li><strong>Familienzusammenfuehrung</strong> — um zu einem daenischen Staatsangehoerigen oder dauerhaften Einwohner zu ziehen. Die Anforderungen umfassen Einkommens- und Wohnraumkriterien fuer den daenischen Sponsor.</li>
   <li><strong>Startup Denmark Visum</strong> — fuer Unternehmer mit einem genehmigten Geschaeftsplan.</li>
 </ul>
 <p class="callout-warning">Stellen Sie den Antrag so frueh wie moeglich. Die Bearbeitungszeiten fuer Nicht-EU-Buerger liegen zwischen 1 und 4 Monaten. Buchen Sie kein Einzelticket, bevor die Genehmigung erteilt wurde.</p>
@@ -76,7 +76,7 @@ de:`<p><strong>EU/EWR/nordische Staatsangehoerige:</strong> Sie benoetigen kein 
 <ul>
   <li><strong>Дозвіл на роботу</strong> — вимагає пропозиції від данського роботодавця. Найпоширеніші типи: Позитивний список (для затребуваних професій), Схема граничної зарплати (якщо зарплата &gt; 514 000 DKK/рік у 2025, зростає до 552 000 DKK у 2026), Прискорена схема (для сертифікованих компаній).</li>
   <li><strong>Студентська віза</strong> — якщо ви зараховані до данського університету чи навчального закладу. Подайте заявку на newtodenmark.dk щонайменше за 2 місяці.</li>
-  <li><strong>Возз'єднання сім'ї</strong> — для приєднання до громадянина Данії чи постійного резидента. Вимоги суворі: данський спонсор зобов'язаний відповідати вимогам щодо доходу та житла.</li>
+  <li><strong>Возз'єднання сім'ї</strong> — для приєднання до громадянина Данії чи постійного резидента. Вимоги охоплюють критерії доходу та житла для данського спонсора.</li>
   <li><strong>Стартап-віза Startup Denmark</strong> — для підприємців із затвердженим бізнес-планом.</li>
 </ul>
 <p class="callout-warning">Подавайте заявку якомога раніше. Терміни розгляду для не-ЄС становлять 1–4 місяці. Не купуйте квиток в один бік, доки дозвіл не затверджено.</p>
@@ -96,7 +96,7 @@ de:`<p><strong>EU/EWR/nordische Staatsangehoerige:</strong> Sie benoetigen kein 
 <ul>
   <li><strong>ورک پرمٹ</strong> — ڈنمارک کے کسی آجر کی جانب سے ملازمت کی پیشکش ضروری ہے۔ سب سے عام اقسام: Positive List (زیادہ طلب والے پیشوں کے لیے)، Pay Limit Scheme (اگر تنخواہ &gt; DKK 514,000/سال 2025 میں، 2026 میں DKK 552,000 تک بڑھے گی)، Fast-track Scheme (تصدیق شدہ کمپنیوں کے لیے)۔</li>
   <li><strong>اسٹوڈنٹ ویزا</strong> — اگر آپ کسی ڈینش یونیورسٹی یا تعلیمی ادارے میں داخل ہیں۔ newtodenmark.dk پر کم از کم 2 ماہ پہلے درخواست دیں۔</li>
-  <li><strong>خاندانی ملاپ</strong> — ڈنمارک کے شہری یا مستقل رہائشی سے ملنے کے لیے۔ شرائط سخت ہیں: ڈینش کفیل کو آمدنی اور رہائش کی ضروریات پوری کرنی ہوں گی۔</li>
+  <li><strong>خاندانی ملاپ</strong> — ڈنمارک کے شہری یا مستقل رہائشی سے ملنے کے لیے۔ شرائط میں ڈینش کفیل کے لیے آمدنی اور رہائش کے معیارات شامل ہیں۔</li>
   <li><strong>Startup Denmark ویزا</strong> — منظور شدہ کاروباری منصوبے والے کاروباریوں کے لیے۔</li>
 </ul>
 <p class="callout-warning">جلد از جلد درخواست دیں۔ یورپی یونین سے باہر کے شہریوں کے لیے پروسیسنگ کا وقت 1 سے 4 ماہ ہے۔ پرمٹ منظور ہونے سے پہلے ون-وے ٹکٹ بک نہ کریں۔</p>
@@ -106,7 +106,7 @@ de:`<p><strong>EU/EWR/nordische Staatsangehoerige:</strong> Sie benoetigen kein 
 <ul>
   <li><strong>مجوز کار</strong> — مستلزم پیشنهاد شغلی از یک کارفرمای دانمارکی است. رایج‌ترین انواع: Positive List (برای مشاغل پرتقاضا)، Pay Limit Scheme (در صورتی که حقوق &gt; ۵۱۴٬۰۰۰ DKK/سال در ۲۰۲۵، که در ۲۰۲۶ به ۵۵۲٬۰۰۰ DKK افزایش می‌یابد)، Fast-track Scheme (برای شرکت‌های دارای گواهینامه).</li>
   <li><strong>ویزای دانشجویی</strong> — در صورت ثبت‌نام در دانشگاه یا مؤسسه آموزشی دانمارکی. حداقل ۲ ماه قبل از طریق newtodenmark.dk درخواست دهید.</li>
-  <li><strong>اجتماع مجدد خانوادگی</strong> — برای پیوستن به شهروند دانمارکی یا مقیم دائم. شرایط سختگیرانه است: حامی دانمارکی باید الزامات درآمدی و مسکن را برآورده کند.</li>
+  <li><strong>اجتماع مجدد خانوادگی</strong> — برای پیوستن به شهروند دانمارکی یا مقیم دائم. شرایط شامل الزامات درآمد و مسکن برای حامی دانمارکی است.</li>
   <li><strong>ویزای Startup Denmark</strong> — برای کارآفرینان دارای طرح کسب‌وکار تأیید شده.</li>
 </ul>
 <p class="callout-warning">هرچه زودتر درخواست دهید. زمان پردازش برای غیر اتحادیه اروپا ۱ تا ۴ ماه است. قبل از تأیید مجوز، بلیط یک‌طرفه رزرو نکنید.</p>
@@ -1685,7 +1685,7 @@ de:`<p>Wenn Sie einen EU/EWR-Fuehrerschein haben, koennen Sie ihn unbegrenzt in 
     color: "#6A9E6A",
     title: {en:"Housing", fr:"Logement", ar:"السكن", es:"Vivienda", da:"Bolig", uk:"Житло", pl:"Mieszkanie", ur:"رہائش", fa:"مسکن", de:"Wohnen" },
     subtitle: {en:"Where You'll Breathe", fr:"Là Où Vous Respirerez", ar:"حيث ستتنفس", es:"Donde Respirarás", da:"Hvor du trækker vejret", uk:"Ваш Домашній Простір", pl:"Twoja Przestrzeń Domowa", ur:"آپ کا گھر", fa:"خانه شما", de:"Wo Sie aufatmen werden" },
-    intro: { en:"The Danish housing market is brutally competitive — especially Copenhagen. But with the right strategy, you'll find your home.", fr:"Le marché immobilier danois est brutalement compétitif. Avec la bonne stratégie, vous trouverez votre maison.", ar:"سوق الإسكان الدنماركي تنافسي بشكل قاسٍ. لكن بالاستراتيجية الصحيحة، ستجد منزلك.", es:"El mercado inmobiliario danés es brutalmente competitivo. Con la estrategia correcta, encontrarás tu hogar.", da:"Det danske boligmarked er brutalt konkurrencepræget. Med den rette strategi finder du dit hjem.", uk:"Ринок нерухомості Данії жорстко конкурентний — особливо в Копенгагені. Але з правильною стратегією ви знайдете свій дім.", pl:"Duński rynek nieruchomości jest brutalnie konkurencyjny — szczególnie w Kopenhadze. Ale z właściwą strategią znajdziesz swój dom.", ur:"ڈنمارک کی رہائشی مارکیٹ انتہائی مسابقتی ہے — خاص طور پر کوپن ہیگن میں۔ لیکن صحیح حکمت عملی سے آپ اپنا گھر ضرور پائیں گے۔" },
+    intro: { en:"The Danish housing market is competitive, especially in Copenhagen. With the right strategy, you'll find your home.", fr:"Le marché immobilier danois est compétitif, en particulier à Copenhague. Avec la bonne stratégie, vous trouverez votre maison.", ar:"سوق الإسكان الدنماركي تنافسي، خاصة في كوبنهاغن. مع الاستراتيجية الصحيحة ستجد منزلك.", es:"El mercado inmobiliario danés es competitivo, especialmente en Copenhague. Con la estrategia correcta, encontrarás tu hogar.", da:"Det danske boligmarked er konkurrencepræget, særligt i København. Med den rette strategi finder du dit hjem.", uk:"Ринок нерухомості Данії конкурентний, особливо в Копенгагені. З правильною стратегією ви знайдете свій дім.", pl:"Duński rynek nieruchomości jest konkurencyjny, szczególnie w Kopenhadze. Z właściwą strategią znajdziesz swój dom.", ur:"ڈنمارک کی رہائشی مارکیٹ مسابقتی ہے، خاص طور پر کوپن ہیگن میں۔ صحیح حکمت عملی کے ساتھ آپ اپنا گھر پائیں گے۔" },
     readTime: "15 min",
     sections: [
       {
@@ -2057,7 +2057,7 @@ de:`<p>Der Mieterschutz in Daenemark ist stark. Kennen Sie diese Regeln:</p>
         icon:"🗺️", title:{en:"Copenhagen Neighbourhoods — Honest Guide", da:"Københavns kvarterer — ærlig guide", ar:"أحياء كوبنهاغن — دليل صريح", de:"Kopenhagens Stadtteile — ein ehrlicher Guide", es:"Los barrios de Copenhague — una guía honesta", fa:"محله‌های کپنهاگ — راهنمای صادقانه", fr:"Les quartiers de Copenhague — un guide honnête", pl:"Dzielnice Kopenhagi — szczery przewodnik", uk:"Райони Копенгагена — чесний путівник", ur:"کوپن ہیگن کے محلے — ایک ایماندار رہنما" },
         content:{ en:`<table class="info-table">
   <tr><th>Area</th><th>Vibe</th><th>Avg 1-bed rent</th><th>Best for</th></tr>
-  <tr><td><strong>Nørrebro</strong></td><td>Young, diverse, vibrant, left-leaning</td><td>~8,500 DKK</td><td>Young professionals, internationals</td></tr>
+  <tr><td><strong>Nørrebro</strong></td><td>Young, diverse, vibrant, creative scene</td><td>~8,500 DKK</td><td>Young professionals, internationals</td></tr>
   <tr><td><strong>Vesterbro</strong></td><td>Hip, food scene, gentrifying</td><td>~9,500 DKK</td><td>Foodies, creatives</td></tr>
   <tr><td><strong>Østerbro</strong></td><td>Calm, family-oriented, affluent</td><td>~10,500 DKK</td><td>Families, established professionals</td></tr>
   <tr><td><strong>Frederiksberg</strong></td><td>Elegant, quiet, expensive</td><td>~11,000 DKK</td><td>Families, professionals</td></tr>
@@ -2066,7 +2066,7 @@ de:`<p>Der Mieterschutz in Daenemark ist stark. Kennen Sie diese Regeln:</p>
 </table>`,
 da:`<table class="info-table">
   <tr><th>Område</th><th>Stemning</th><th>Gns. 1-værelses leje</th><th>Bedst til</th></tr>
-  <tr><td><strong>Nørrebro</strong></td><td>Ungt, mangfoldigt, livligt, venstreorienteret</td><td>~8.500 kr.</td><td>Unge fagfolk, internationale</td></tr>
+  <tr><td><strong>Nørrebro</strong></td><td>Ungt, mangfoldigt, livligt, kreativt miljø</td><td>~8.500 kr.</td><td>Unge fagfolk, internationale</td></tr>
   <tr><td><strong>Vesterbro</strong></td><td>Hipster, madscene, under gentrificering</td><td>~9.500 kr.</td><td>Madentusiaster, kreative</td></tr>
   <tr><td><strong>Østerbro</strong></td><td>Roligt, familieorienteret, velstående</td><td>~10.500 kr.</td><td>Familier, etablerede fagfolk</td></tr>
   <tr><td><strong>Frederiksberg</strong></td><td>Elegant, stille, dyrt</td><td>~11.000 kr.</td><td>Familier, fagfolk</td></tr>
@@ -2075,7 +2075,7 @@ da:`<table class="info-table">
 </table>`,
 fr:`<table class="info-table">
   <tr><th>Quartier</th><th>Ambiance</th><th>Loyer moy. studio</th><th>Idéal pour</th></tr>
-  <tr><td><strong>Nørrebro</strong></td><td>Jeune, diversifié, vivant, orienté gauche</td><td>~8 500 DKK</td><td>Jeunes actifs, internationaux</td></tr>
+  <tr><td><strong>Nørrebro</strong></td><td>Jeune, diversifié, vivant, scène créative</td><td>~8 500 DKK</td><td>Jeunes actifs, internationaux</td></tr>
   <tr><td><strong>Vesterbro</strong></td><td>Branché, scène gastronomique, en gentrification</td><td>~9 500 DKK</td><td>Amateurs de cuisine, créatifs</td></tr>
   <tr><td><strong>Østerbro</strong></td><td>Calme, familial, aisé</td><td>~10 500 DKK</td><td>Familles, professionnels établis</td></tr>
   <tr><td><strong>Frederiksberg</strong></td><td>Élégant, tranquille, cher</td><td>~11 000 DKK</td><td>Familles, professionnels</td></tr>
@@ -2084,7 +2084,7 @@ fr:`<table class="info-table">
 </table>`,
 ar:`<table class="info-table">
   <tr><th>المنطقة</th><th>الطابع</th><th>متوسط إيجار الغرفة الواحدة</th><th>الأنسب لـ</th></tr>
-  <tr><td><strong>Nørrebro</strong></td><td>شبابي، متنوع، نابض، ميول يسارية</td><td>~8,500 DKK</td><td>المهنيون الشباب، الوافدون الدوليون</td></tr>
+  <tr><td><strong>Nørrebro</strong></td><td>شبابي، متنوع، نابض، مشهد إبداعي</td><td>~8,500 DKK</td><td>المهنيون الشباب، الوافدون الدوليون</td></tr>
   <tr><td><strong>Vesterbro</strong></td><td>عصري، مشهد طعام غني، يشهد تحسيناً</td><td>~9,500 DKK</td><td>محبو الطعام، المبدعون</td></tr>
   <tr><td><strong>Østerbro</strong></td><td>هادئ، عائلي، راقٍ</td><td>~10,500 DKK</td><td>العائلات، المهنيون الراسخون</td></tr>
   <tr><td><strong>Frederiksberg</strong></td><td>أنيق، هادئ، مكلف</td><td>~11,000 DKK</td><td>العائلات، المهنيون</td></tr>
@@ -2129,7 +2129,7 @@ de:`<table class="info-table">
 </table>`,
           ur:`<table class="info-table">
   <tr><th>علاقہ</th><th>ماحول</th><th>اوسط 1 بیڈروم کرایہ</th><th>بہترین برائے</th></tr>
-  <tr><td><strong>Nørrebro</strong></td><td>نوجوان، متنوع، جاندار، بائیں بازو</td><td>~8,500 DKK</td><td>نوجوان پیشہ ور، بین الاقوامی</td></tr>
+  <tr><td><strong>Nørrebro</strong></td><td>نوجوان، متنوع، جاندار، تخلیقی منظرنامہ</td><td>~8,500 DKK</td><td>نوجوان پیشہ ور، بین الاقوامی</td></tr>
   <tr><td><strong>Vesterbro</strong></td><td>ہپسٹر، فوڈ سین، جنٹریفائینگ</td><td>~9,500 DKK</td><td>کھانے کے شوقین، تخلیقی</td></tr>
   <tr><td><strong>Østerbro</strong></td><td>پرسکون، خاندانی، خوشحال</td><td>~10,500 DKK</td><td>خاندان، قائم شدہ پیشہ ور</td></tr>
   <tr><td><strong>Frederiksberg</strong></td><td>خوبصورت، پرسکون، مہنگا</td><td>~11,000 DKK</td><td>خاندان، پیشہ ور</td></tr>
@@ -2138,7 +2138,7 @@ de:`<table class="info-table">
 </table>`,
           fa:`<table class="info-table">
   <tr><th>علاقہ</th><th>ماحول</th><th>اوسط 1 بیڈروم کرایہ</th><th>بہترین برائے</th></tr>
-  <tr><td><strong>Nørrebro</strong></td><td>نوجوان، متنوع، جاندار، بائیں بازو</td><td>~8,500 DKK</td><td>نوجوان پیشہ ور، بین الاقوامی</td></tr>
+  <tr><td><strong>Nørrebro</strong></td><td>نوجوان، متنوع، جاندار، تخلیقی منظرنامہ</td><td>~8,500 DKK</td><td>نوجوان پیشہ ور، بین الاقوامی</td></tr>
   <tr><td><strong>Vesterbro</strong></td><td>ہپسٹر، فوڈ سین، جنٹریفائینگ</td><td>~9,500 DKK</td><td>کھانے کے شوقین، تخلیقی</td></tr>
   <tr><td><strong>Østerbro</strong></td><td>پرسکون، خاندانی، خوشحال</td><td>~10,500 DKK</td><td>خاندان، قائم شدہ پیشہ ور</td></tr>
   <tr><td><strong>Frederiksberg</strong></td><td>خوبصورت، پرسکون، مہنگا</td><td>~11,000 DKK</td><td>خاندان، پیشہ ور</td></tr>
@@ -6941,7 +6941,7 @@ ur:`<p><strong>Hygge</strong> (تلفظ: "ہوگا") ایک ڈینش تصور ہ
   <li>This is also why Danes can seem reserved when you first meet them — effusive self-promotion is culturally uncomfortable</li>
 </ul>
 <p class="callout-info"><strong>For newcomers:</strong> Don't confuse Janteloven with low confidence. Danes are assertive, direct, and proud — they just express it collectively rather than individually. Lead with curiosity about others, not your own CV.</p>
-<p>Younger Danes increasingly critique Janteloven as an obstacle to ambition and entrepreneurship. You'll find its influence varies significantly by age group and industry.</p>`,
+<p>Younger Danes increasingly discuss Janteloven's role in shaping ambition and entrepreneurship. Its influence varies significantly by age group and industry.</p>`,
 da:`<p><strong>Janteloven</strong> er et kulturelt begreb beskrevet af den dansk-norske forfatter Aksel Sandemose i sin roman fra 1933. Det beskriver en række uskrevne sociale normer, der betoner kollektiv lighed frem for individuelle præstationer.</p>
 <p><strong>Jantelovens ti regler (i kortform):</strong></p>
 <ol>
@@ -7056,7 +7056,7 @@ de:`<p><strong>Janteloven</strong> (das Gesetz von Jante) ist ein kulturelles Ko
   <li>Das ist auch der Grund, warum Dänen beim ersten Kennenlernen reserviert wirken können — effusive Selbstvermarktung ist kulturell unangenehm</li>
 </ul>
 <p class="callout-info"><strong>Für Neuankömmlinge:</strong> Verwechseln Sie Janteloven nicht mit mangelndem Selbstbewusstsein. Dänen sind durchsetzungsfähig, direkt und stolz — sie drücken es nur kollektiv statt individuell aus. Zeigen Sie Neugier für andere, nicht Ihren eigenen Lebenslauf.</p>
-<p>Jüngere Dänen kritisieren Janteloven zunehmend als Hindernis für Ehrgeiz und Unternehmertum. Sie werden feststellen, dass sein Einfluss je nach Altersgruppe und Branche stark variiert.</p>`,
+<p>Jüngere Dänen diskutieren zunehmend die Rolle von Janteloven für Ehrgeiz und Unternehmertum. Sein Einfluss variiert je nach Altersgruppe und Branche stark.</p>`,
           uk:`<p><strong>Janteloven</strong> (Закон Янте) — культурна концепція, описана дансько-норвезьким письменником Акселем Сандемосе в його романі 1933 року. Вона описує набір неписаних соціальних норм, що ставлять колективну рівність вище індивідуальних досягнень.</p>
 <p><strong>Десять правил Janteloven (скорочено):</strong></p>
 <ol>
@@ -7079,7 +7079,7 @@ de:`<p><strong>Janteloven</strong> (das Gesetz von Jante) ist ein kulturelles Ko
   <li>Це також причина, чому датчани можуть здаватися стриманими при першій зустрічі — надмірне самопросування культурно незручне</li>
 </ul>
 <p class="callout-info"><strong>Для новоприбулих:</strong> Не плутайте Janteloven з браком впевненості. Датчани наполегливі, прямолінійні та горді — вони просто виражають це колективно, а не індивідуально. Виявляйте цікавість до інших, а не демонструйте своє резюме.</p>
-<p>Молодші датчани дедалі більше критикують Janteloven як перешкоду амбіціям і підприємництву. Ви побачите, що його вплив значно відрізняється залежно від вікової групи та галузі.</p>`,
+<p>Молодші датчани дедалі частіше обговорюють роль Janteloven у формуванні амбіцій та підприємництва. Його вплив значно відрізняється залежно від вікової групи та галузі.</p>`,
                pl:`<p><strong>Janteloven</strong> ("prawo Jante") to zestaw niepisanych norm egalitarnych. Pochodzi z powieści Aksela Sandemosego z 1933 r. Kluczowa zasada: nie uważaj się za lepszego od innych.</p>
 <p><strong>Jak Janteloven wpływa na codzienne życie:</strong></p>
 <ul>
@@ -7238,7 +7238,7 @@ ur:`<p>ڈنمارک میں بہت سے تارکین وطن کہتے ہیں کہ 
   <li><strong>پہلے سال ہر دعوت قبول کریں</strong></li>
   <li><strong>Internations.org اور meetup.com</strong> پر فعال expat کمیونٹیز ہیں</li>
 </ul>`,
-          fa:`<p>بسیاری از مهاجران می‌گویند دانمارکی‌ها دوستانه اما سخت برای دوستی هستند. این واقعی است — و هیچ ربطی به شخص شما ندارد.</p>` }
+          fa:`<p>دوستی نزدیک با دانمارکی‌ها زمان می‌برد. این یک الگوی فرهنگی است، نه یک رد شخصی — و دوستی‌هایی که اینجا شکل می‌گیرند معمولاً برای دهه‌ها پایدار می‌مانند.</p>` }
       },
       {
         icon: "🎪",
@@ -7751,7 +7751,7 @@ ur:`<p>ڈنمارک میں ڈیٹنگ براہ راست اور مساواتی ہ
       {
         icon: "🏛️",
         title: {en:"Family Reunification — Bringing Your Partner to Denmark", fr:"Regroupement Familial — Amener votre partenaire au Danemark", ar:"لم شمل الأسرة — إحضار شريكك إلى الدنمارك", es:"Reagrupación Familiar — Traer a tu pareja a Dinamarca", da:"Familiesammenføring — at hente din partner til Danmark", de:"Familienzusammenführung — den Partner nach Dänemark holen", fa:"پیوستن خانواده — آوردن همسر به دانمارک", pl:"Łączenie rodzin — sprowadzenie partnera do Danii", uk:"Возз'єднання сім'ї — як перевезти партнера до Данії", ur:"خاندانی الحاق — اپنے پارٹنر کو ڈنمارک لانا" },
-        content: { en:`<p>If you are in Denmark and want to bring a foreign partner or spouse, the process is called <strong>familiesammenføring</strong> (family reunification). The rules are strict and should be understood early.</p>
+        content: { en:`<p>If you are in Denmark and want to bring a foreign partner or spouse, the process is called <strong>familiesammenføring</strong> (family reunification). The rules have multiple components and should be understood early.</p>
 <p><strong>Key requirements (2025):</strong></p>
 <ul>
   <li><strong>You must be at least 24 years old</strong> (both you and your partner)</li>
@@ -7763,7 +7763,7 @@ ur:`<p>ڈنمارک میں ڈیٹنگ براہ راست اور مساواتی ہ
 <p><strong>EU/EEA citizens:</strong> If you are an EU citizen exercising treaty rights in Denmark (working, studying, or being self-employed), you have the right to bring your partner under EU free movement rules. The process is simpler — apply for an EU residence document at <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a>.</p>
 <p><strong>Processing time:</strong> Typically 6–12 months from application. Your partner can apply for permission to work while the application is being processed.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Family/Spouse-or-cohabitant" target="_blank" rel="noopener">→ Family reunification guide (nyidanmark.dk, English)</a>`,
-da:`<p>Ønsker du at hente en udenlandsk partner eller ægtefælle til Danmark, hedder processen <strong>familiesammenføring</strong>. Reglerne er strenge og bør forstås tidligt.</p>
+da:`<p>Ønsker du at hente en udenlandsk partner eller ægtefælle til Danmark, hedder processen <strong>familiesammenføring</strong>. Reglerne har flere elementer og bør forstås tidligt.</p>
 <p><strong>Vigtigste krav (2025):</strong></p>
 <ul>
   <li><strong>Du skal være mindst 24 år</strong> (begge parter)</li>
@@ -7775,7 +7775,7 @@ da:`<p>Ønsker du at hente en udenlandsk partner eller ægtefælle til Danmark, 
 <p><strong>EU/EØS-borgere:</strong> Udøver du traktatrettigheder i Danmark (arbejder, studerer eller er selvstændig), har du ret til at medbringe din partner efter EU's regler om fri bevægelighed. Processen er enklere — ansøg om EU-opholdsdokument på <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a>.</p>
 <p><strong>Behandlingstid:</strong> Typisk 6–12 måneder fra ansøgning. Din partner kan søge om arbejdstilladelse mens sagen behandles.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Family/Spouse-or-cohabitant" target="_blank" rel="noopener">→ Guide til familiesammenføring (nyidanmark.dk, engelsk)</a>`,
-fr:`<p>Si vous êtes au Danemark et souhaitez amener un partenaire ou conjoint étranger, le processus s'appelle <strong>familiesammenføring</strong> (regroupement familial). Les règles sont strictes et doivent être comprises tôt.</p>
+fr:`<p>Si vous êtes au Danemark et souhaitez amener un partenaire ou conjoint étranger, le processus s'appelle <strong>familiesammenføring</strong> (regroupement familial). Les règles comportent plusieurs éléments et doivent être comprises tôt.</p>
 <p><strong>Conditions principales (2025) :</strong></p>
 <ul>
   <li><strong>Vous devez avoir au moins 24 ans</strong> (vous et votre partenaire)</li>
@@ -7787,7 +7787,7 @@ fr:`<p>Si vous êtes au Danemark et souhaitez amener un partenaire ou conjoint �
 <p><strong>Citoyens UE/EEE :</strong> Si vous êtes un citoyen de l'UE exerçant des droits conventionnels au Danemark (travaillant, étudiant ou indépendant), vous avez le droit d'amener votre partenaire selon les règles de libre circulation de l'UE. Le processus est plus simple — demandez un document de résidence UE sur <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a>.</p>
 <p><strong>Délai de traitement :</strong> Généralement 6 à 12 mois à partir de la demande. Votre partenaire peut demander l'autorisation de travailler pendant le traitement de la demande.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Family/Spouse-or-cohabitant" target="_blank" rel="noopener">→ Guide du regroupement familial (nyidanmark.dk, anglais)</a>`,
-ar:`<p>إن كنت في الدنمارك وتريد إحضار شريك أجنبي أو زوج، تسمّى العملية <strong>familiesammenføring</strong> (لم الشمل الأسري). القواعد صارمة ويجب فهمها مبكراً.</p>
+ar:`<p>إن كنت في الدنمارك وتريد إحضار شريك أجنبي أو زوج، تسمّى العملية <strong>familiesammenføring</strong> (لم الشمل الأسري). القواعد متعدّدة الجوانب ويجب فهمها مبكراً.</p>
 <p><strong>المتطلبات الرئيسية (2025):</strong></p>
 <ul>
   <li><strong>يجب أن تكون في الـ24 من عمرك على الأقل</strong> (أنت وشريكك)</li>
@@ -7811,7 +7811,7 @@ es:`<p>Si estás en Dinamarca y quieres traer a un pareja o cónyuge extranjero,
 <p><strong>Ciudadanos de la UE/EEE:</strong> Si eres ciudadano de la UE ejerciendo derechos del tratado en Dinamarca (trabajando, estudiando o siendo autónomo), tienes derecho a traer a tu pareja bajo las normas de libre circulación de la UE. El proceso es más sencillo — solicita un documento de residencia de la UE en <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a>.</p>
 <p><strong>Tiempo de procesamiento:</strong> Generalmente 6–12 meses desde la solicitud. Tu pareja puede solicitar permiso para trabajar mientras se procesa la solicitud.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Family/Spouse-or-cohabitant" target="_blank" rel="noopener">→ Guía de reagrupación familiar (nyidanmark.dk, inglés)</a>`,
-de:`<p>Wenn Sie in Dänemark sind und einen ausländischen Partner oder Ehepartner nachziehen möchten, heißt der Prozess <strong>Familiesammenføring</strong> (Familienzusammenführung). Die Regeln sind streng und sollten frühzeitig verstanden werden.</p>
+de:`<p>Wenn Sie in Dänemark sind und einen ausländischen Partner oder Ehepartner nachziehen möchten, heißt der Prozess <strong>Familiesammenføring</strong> (Familienzusammenführung). Die Regeln haben mehrere Komponenten und sollten frühzeitig verstanden werden.</p>
 <p><strong>Wesentliche Voraussetzungen (2025):</strong></p>
 <ul>
   <li><strong>Sie müssen mindestens 24 Jahre alt sein</strong> (Sie und Ihr Partner)</li>
@@ -7823,7 +7823,7 @@ de:`<p>Wenn Sie in Dänemark sind und einen ausländischen Partner oder Ehepartn
 <p><strong>EU/EWR-Bürger:</strong> Wenn Sie EU-Bürger sind und in Dänemark Vertragsrechte ausüben (arbeiten, studieren oder selbstständig sind), haben Sie das Recht, Ihren Partner nach EU-Freizügigkeitsregeln mitzubringen. Der Prozess ist einfacher — beantragen Sie ein EU-Aufenthaltsdokument auf <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a>.</p>
 <p><strong>Bearbeitungszeit:</strong> In der Regel 6–12 Monate ab Antragstellung. Ihr Partner kann während der Bearbeitung eine Arbeitserlaubnis beantragen.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Family/Spouse-or-cohabitant" target="_blank" rel="noopener">→ Leitfaden zur Familienzusammenführung (nyidanmark.dk, Englisch)</a>`,
-          uk:`<p>Якщо ви перебуваєте в Данії і хочете привезти іноземного партнера або чоловіка/дружину, цей процес називається <strong>familiesammenføring</strong> (возз'єднання сім'ї). Правила суворі і їх слід зрозуміти заздалегідь.</p>
+          uk:`<p>Якщо ви перебуваєте в Данії і хочете привезти іноземного партнера або чоловіка/дружину, цей процес називається <strong>familiesammenføring</strong> (возз'єднання сім'ї). Правила мають кілька компонентів і їх слід зрозуміти заздалегідь.</p>
 <p><strong>Ключові вимоги (2025):</strong></p>
 <ul>
   <li><strong>Вам має бути не менше 24 років</strong> (вам і вашому партнеру)</li>
@@ -7844,7 +7844,7 @@ de:`<p>Wenn Sie in Dänemark sind und einen ausländischen Partner oder Ehepartn
 </ul>
 <p>Czas rozpatrzenia: 3–12 miesięcy. Aplikuj przez <a href="https://www.nyidanmark.dk" target="_blank" rel="noopener">nyidanmark.dk</a>.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Family-reunification/Spouse-or-cohabitant" target="_blank" rel="noopener">→ Przewodnik po łączeniu rodzin (nyidanmark.dk, angielski)</a>`,
-ur:`<p>اگر آپ ڈنمارک میں ہیں اور کسی غیر ملکی پارٹنر کو لانا چاہتے ہیں، تو یہ عمل <strong>familiesammenføring</strong> (خاندان کا اتحاد) کہلاتا ہے۔ قوانین سخت ہیں۔</p>
+ur:`<p>اگر آپ ڈنمارک میں ہیں اور کسی غیر ملکی پارٹنر کو لانا چاہتے ہیں، تو یہ عمل <strong>familiesammenføring</strong> (خاندان کا اتحاد) کہلاتا ہے۔ قوانین کے کئی اجزاء ہیں اور انہیں جلد سمجھ لینا چاہیے۔</p>
 <p><strong>اہم تقاضے (2025):</strong></p>
 <ul>
   <li><strong>آپ کی عمر کم از کم 24 سال ہونی چاہیے</strong> (آپ اور آپ کا پارٹنر دونوں)</li>
@@ -7855,7 +7855,7 @@ ur:`<p>اگر آپ ڈنمارک میں ہیں اور کسی غیر ملکی پا
 </ul>
 <p><strong>EU/EEA شہری:</strong> اگر آپ ڈنمارک میں EU معاہدے کے حقوق استعمال کر رہے ہیں تو یہ عمل آسان ہے۔</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Family/Spouse-or-cohabitant" target="_blank" rel="noopener">→ خاندانی اتحاد گائیڈ (nyidanmark.dk، انگریزی)</a>`,
-          fa:`<p>اگر در دانمارک هستید و می‌خواهید شریک زندگی خارجی خود را بیاورید، این فرآیند <strong>familiesammenføring</strong> (اجتماع خانوادگی) نامیده می‌شود. قوانین سختگیرانه هستند.</p>` }
+          fa:`<p>اگر در دانمارک هستید و می‌خواهید شریک زندگی خارجی خود را بیاورید، این فرآیند <strong>familiesammenføring</strong> (اجتماع خانوادگی) نامیده می‌شود. قوانین چندین مؤلفه دارند و باید زود فهمیده شوند.</p>` }
       },
       {
         icon: "🌈",
@@ -7875,7 +7875,7 @@ ur:`<p>اگر آپ ڈنمارک میں ہیں اور کسی غیر ملکی پا
   <li><strong>LGBT+ Danmark</strong> (<a href="https://www.lgbt.dk" target="_blank" rel="noopener">lgbt.dk</a>) is the main national organisation and a valuable resource for newcomers</li>
   <li>LGBT+ community spaces are concentrated in Copenhagen's Vesterbro and Nørrebro neighbourhoods, but acceptance is generally high across the country</li>
 </ul>
-<p class="callout-info">While Denmark is highly accepting, individual experiences may vary by region and community. Rural areas and some religious communities may be more conservative. The legal framework, however, is among the strongest in the world.</p>`,
+<p class="callout-info">Denmark's legal framework protects everyone equally and is among the strongest in the world. Individual experiences may vary.</p>`,
 da:`<p>Danmark var det første land i verden, der lovligt anerkendte homoseksuelle partnerskaber i 1989. Homoseksuelt ægteskab har været lovligt siden 2012. Danmark rangerer konsekvent blandt verdens top 3 lande for LGBTQ+-retslig ligestilling og social accept.</p>
 <p><strong>Juridisk beskyttelse:</strong></p>
 <ul>
@@ -7907,7 +7907,7 @@ fr:`<p>Le Danemark a été le premier pays au monde à reconnaître légalement 
   <li><strong>LGBT+ Danmark</strong> (<a href="https://www.lgbt.dk" target="_blank" rel="noopener">lgbt.dk</a>) est la principale organisation nationale et une ressource précieuse pour les nouveaux arrivants</li>
   <li>Les espaces communautaires LGBT+ sont concentrés dans les quartiers Vesterbro et Nørrebro de Copenhague, mais l'acceptation est généralement élevée dans tout le pays</li>
 </ul>
-<p class="callout-info">Bien que le Danemark soit très accueillant, les expériences individuelles peuvent varier selon la région et la communauté. Les zones rurales et certaines communautés religieuses peuvent être plus conservatrices. Le cadre juridique est cependant parmi les plus forts au monde.</p>`,
+<p class="callout-info">Le cadre juridique danois protège chacun de manière égale et figure parmi les plus solides au monde. Les expériences individuelles peuvent varier.</p>`,
 ar:`<p>كانت الدنمارك أول دولة في العالم تعترف قانونياً بالشراكات المثلية عام 1989. زواج المثليين قانوني منذ 2012. تحتل الدنمارك باستمرار مرتبة ضمن أفضل 3 دول عالمياً في المساواة القانونية وتقبّل مجتمع الميم.</p>
 <p><strong>الحماية القانونية:</strong></p>
 <ul>
@@ -7923,7 +7923,7 @@ ar:`<p>كانت الدنمارك أول دولة في العالم تعترف ق
   <li><strong>LGBT+ Danmark</strong> (<a href="https://www.lgbt.dk" target="_blank" rel="noopener">lgbt.dk</a>) هي المنظمة الوطنية الرئيسية ومرجع قيّم للوافدين الجدد</li>
   <li>الفضاءات المجتمعية لمجتمع الميم متركزة في أحياء Vesterbro وNørrebro في كوبنهاغن، لكن القبول مرتفع عموماً في أنحاء البلاد</li>
 </ul>
-<p class="callout-info">رغم أن الدنمارك متقبِّلة للغاية، قد تتفاوت التجارب الفردية بحسب المنطقة والمجتمع. المناطق الريفية وبعض المجتمعات الدينية قد تكون أكثر محافظة. غير أن الإطار القانوني من بين الأقوى في العالم.</p>`,
+<p class="callout-info">الإطار القانوني الدنماركي يحمي الجميع على قدم المساواة، وهو من أقوى الأطر في العالم. قد تتفاوت التجارب الفردية.</p>`,
 es:`<p>Dinamarca fue el primer país del mundo en reconocer legalmente las uniones del mismo sexo, en 1989. El matrimonio entre personas del mismo sexo es legal desde 2012. Dinamarca se clasifica consistentemente entre los 3 primeros países del mundo en igualdad legal LGBTQ+ y aceptación social.</p>
 <p><strong>Protecciones legales:</strong></p>
 <ul>
@@ -7939,7 +7939,7 @@ es:`<p>Dinamarca fue el primer país del mundo en reconocer legalmente las union
   <li><strong>LGBT+ Danmark</strong> (<a href="https://www.lgbt.dk" target="_blank" rel="noopener">lgbt.dk</a>) es la principal organización nacional y un recurso valioso para los recién llegados</li>
   <li>Los espacios comunitarios LGBT+ se concentran en los barrios de Vesterbro y Nørrebro de Copenhague, pero la aceptación es generalmente alta en todo el país</li>
 </ul>
-<p class="callout-info">Aunque Dinamarca es muy acogedora, las experiencias individuales pueden variar según la región y la comunidad. Las zonas rurales y algunas comunidades religiosas pueden ser más conservadoras. Sin embargo, el marco legal es de los más fuertes del mundo.</p>`,
+<p class="callout-info">El marco legal danés protege a todos por igual y está entre los más fuertes del mundo. Las experiencias individuales pueden variar.</p>`,
 de:`<p>Dänemark war 1989 das erste Land der Welt, das gleichgeschlechtliche Partnerschaften rechtlich anerkannte. Die gleichgeschlechtliche Ehe ist seit 2012 legal. Dänemark zählt beständig zu den Top-3-Ländern weltweit in rechtlicher LGBTQ+-Gleichstellung und gesellschaftlicher Akzeptanz.</p>
 <p><strong>Rechtliche Schutzmaßnahmen:</strong></p>
 <ul>
@@ -7955,7 +7955,7 @@ de:`<p>Dänemark war 1989 das erste Land der Welt, das gleichgeschlechtliche Par
   <li><strong>LGBT+ Danmark</strong> (<a href="https://www.lgbt.dk" target="_blank" rel="noopener">lgbt.dk</a>) ist die wichtigste nationale Organisation und eine wertvolle Ressource für Neuankömmlinge</li>
   <li>LGBT+-Community-Räume konzentrieren sich in den Kopenhagener Vierteln Vesterbro und Nørrebro, aber die Akzeptanz ist im ganzen Land generell hoch</li>
 </ul>
-<p class="callout-info">Obwohl Dänemark sehr aufgeschlossen ist, können individuelle Erfahrungen je nach Region und Gemeinschaft variieren. Ländliche Gebiete und einige religiöse Gemeinschaften können konservativer sein. Der rechtliche Rahmen gehört jedoch zu den stärksten der Welt.</p>`,
+<p class="callout-info">Das dänische Rechtssystem schützt alle gleichermaßen und gehört zu den stärksten der Welt. Individuelle Erfahrungen können variieren.</p>`,
           uk:`<p>Данія у 1989 році стала першою країною у світі, що офіційно визнала одностатеві партнерства. Одностатеві шлюби є законними з 2012 року. Данія стабільно входить до трійки найкращих країн світу за рівнем правової рівності ЛГБТК+ і соціального прийняття.</p>
 <p><strong>Правовий захист:</strong></p>
 <ul>
@@ -7971,7 +7971,7 @@ de:`<p>Dänemark war 1989 das erste Land der Welt, das gleichgeschlechtliche Par
   <li><strong>LGBT+ Danmark</strong> (<a href="https://www.lgbt.dk" target="_blank" rel="noopener">lgbt.dk</a>) — головна національна організація і цінний ресурс для новоприбулих</li>
   <li>Простори ЛГБТК+-спільноти сконцентровані в районах Вестербро і Нерребро Копенгагена, але загалом рівень прийняття у всій країні є високим</li>
 </ul>
-<p class="callout-info">Хоча Данія є дуже відкритою, індивідуальний досвід може різнитися залежно від регіону та спільноти. Сільські райони і деякі релігійні громади можуть бути більш консервативними. Утім, правова база є однією з найміцніших у світі.</p>`,
+<p class="callout-info">Правова база Данії захищає всіх однаково і є однією з найміцніших у світі. Індивідуальний досвід може різнитися.</p>`,
                pl:`<p>Dania jest jednym z najbardziej przyjaznych LGBTQ+ krajów na świecie. Małżeństwa jednopłciowe legalne od 2012 r. — pierwsze na świecie (1989 r. — związki partnerskie).</p>
 <p><strong>Praw gwarancje:</strong></p>
 <ul>

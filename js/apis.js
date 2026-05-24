@@ -451,7 +451,7 @@ const APIs = (() => {
   };
 
   const MONTH_COMMENTARY = [
-    "January in Denmark — brace yourself. Cold, dark, and the Danes are somehow fine with it. The upside: hygge is at absolute peak levels. Candles everywhere.",
+    "January in Denmark — cold, dark, candle-and-Vitamin-D season. Hygge at peak levels. Lean in.",
     "February is marginally better than January. Marginally. The days are getting longer though — Danes notice and celebrate every extra minute of daylight.",
     "March brings the first signs of spring. Danes emerge blinking into the pale sunshine. Café terraces open optimistically, usually too early.",
     "April is genuinely lovely. Cherry blossoms, longer evenings, Danes rediscovering their bikes with remarkable enthusiasm.",

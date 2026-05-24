@@ -1189,7 +1189,7 @@ const Wizard = {
       p.push({ title:'Enroll in Danskuddannelse (free Danish lessons)', desc:'All newcomers are legally entitled to 3 years of free, subsidised Danish instruction. Enroll early.', chapter:null });
     }
     if (a.anxiety?.includes('social')) {
-      p.push({ title:'Join InterNations or local expat groups', desc:'internations.org and Facebook groups for your city are excellent. Danes are reserved but warm once you connect.', chapter:null });
+      p.push({ title:'Join InterNations or local expat groups', desc:'internations.org and Facebook groups for your city are excellent for early connections — meeting other newcomers often builds the strongest networks first.', chapter:null });
     }
 
     // Deduplicate and cap at 5
