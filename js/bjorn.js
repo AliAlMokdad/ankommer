@@ -50,7 +50,7 @@ const Bjorn = (() => {
     if (quick) quick.style.display = '';
     const lang = window.currentLang || 'en';
     const greetings = {
-      en: `Hej! I'm Bjørn — your guide to life in Denmark.\n\nI've lived here for about 1,200 years, so I know a few things. Ask me anything — CPR numbers, lease agreements, why Danes don't smile on the street.\n\n*Hvad kan jeg hjælpe dig med?* (What can I help you with?)`,
+      en: `Hej! I'm Bjørn — your guide to life in Denmark.\n\nI've lived here for about 1,200 years, so I know a few things. Ask me anything — CPR numbers, lease agreements, Danish work culture, how to find a doctor.\n\n*Hvad kan jeg hjælpe dig med?* (What can I help you with?)`,
       fr: `Hej ! Je suis Bjørn — votre guide pour la vie au Danemark.\n\n*Hvad kan jeg hjælpe dig med ?* (Comment puis-je vous aider ?)`,
       ar: `هيج! أنا بيورن — دليلك للحياة في الدنمارك.\n\n*Hvad kan jeg hjælpe dig med?* (كيف يمكنني مساعدتك؟)`,
       es: `¡Hej! Soy Bjørn — tu guía para la vida en Dinamarca.\n\n*Hvad kan jeg hjælpe dig med?* (¿En qué puedo ayudarte?)`,
@@ -58,8 +58,8 @@ const Bjorn = (() => {
       de: `Hej! Ich bin Bjørn — Ihr Begleiter für das Leben in Dänemark.\n\n*Hvad kan jeg hjælpe dig med?* (Womit kann ich Ihnen helfen?)`,
       uk: `Привіт! Я Бйорн — ваш провідник по житті у Данії.\n\n*Hvad kan jeg hjælpe dig med?* (Чим я можу вам допомогти?)`,
       pl: `Hej! Jestem Bjørn — Twój przewodnik po życiu w Danii.\n\n*Hvad kan jeg hjælpe dig med?* (Jak mogę Ci pomóc?)`,
-      ur: `ہیج! میں بیورن ہوں — ڈنمارک میں زندگی کا آپ کا رہنما۔\n\nمیں یہاں تقریباً 1,200 سال سے رہ رہا ہوں، تو مجھے کچھ معلوم ہے۔ کچھ بھی پوچھیں — CPR نمبر، کرایہ نامے، یا یہ کیوں کہ ڈینش لوگ سڑک پر مسکراتے نہیں۔\n\n*Hvad kan jeg hjælpe dig med?* (میں آپ کی کیا مدد کر سکتا ہوں؟)`,
-      fa: `سلام! من بیورن هستم — راهنمای شما برای زندگی در دانمارک.\n\nحدود ۱۲۰۰ سال است که اینجا زندگی می‌کنم، پس چیزهایی می‌دانم. هر چیزی بپرسید — شماره CPR، قراردادهای اجاره، یا اینکه چرا دانمارکی‌ها در خیابان لبخند نمی‌زنند.\n\n*Hvad kan jeg hjælpe dig med?* (چطور می‌توانم کمکتان کنم؟)`
+      ur: `ہیج! میں بیورن ہوں — ڈنمارک میں زندگی کا آپ کا رہنما۔\n\nمیں یہاں تقریباً 1,200 سال سے رہ رہا ہوں، تو مجھے کچھ معلوم ہے۔ کچھ بھی پوچھیں — CPR نمبر، کرایہ نامے، ڈینش کام کی ثقافت، ڈاکٹر کیسے ڈھونڈیں۔\n\n*Hvad kan jeg hjælpe dig med?* (میں آپ کی کیا مدد کر سکتا ہوں؟)`,
+      fa: `سلام! من بیورن هستم — راهنمای شما برای زندگی در دانمارک.\n\nحدود ۱۲۰۰ سال است که اینجا زندگی می‌کنم، پس چیزهایی می‌دانم. هر چیزی بپرسید — شماره CPR، قراردادهای اجاره، فرهنگ کار در دانمارک، چطور پزشک پیدا کنیم.\n\n*Hvad kan jeg hjælpe dig med?* (چطور می‌توانم کمکتان کنم؟)`
     };
     setTimeout(() => renderMessage(greetings[lang] || greetings.en, 'bjorn'), 200);
   };
@@ -155,6 +155,25 @@ const Bjorn = (() => {
 ║  every year. If you are not 99% certain a number is current  ║
 ║  for 2025, hedge it: "Approximately X DKK/month in 2025 —    ║
 ║  verify at [official URL]."                                  ║
+║                                                              ║
+║  RULE 4 — ASYLUM AND PROTECTION STATUS — STRICT REDIRECT.    ║
+║  Do NOT advise on how to claim asylum or seek protection in  ║
+║  Denmark. Do NOT describe asylum procedures, eligibility     ║
+║  criteria, success likelihoods, document strategies, or any  ║
+║  step-by-step path. Asylum decisions are case-specific legal ║
+║  matters that require qualified professional representation. ║
+║  If asked about asylum, refugee status, or protection:       ║
+║    1. Acknowledge the question with empathy (one sentence).  ║
+║    2. Redirect to professional legal services:               ║
+║       - Dansk Flygtningehjælp (DRC): drc.ngo/denmark         ║
+║       - Refugees Welcome Denmark                             ║
+║       - Refugees Welcome local advokatvagt at libraries      ║
+║    3. For general migration questions, point to LEGAL        ║
+║       pathways: EU registration, work permits (Pay Limit,    ║
+║       Positive List), student visas, family reunification.   ║
+║  This rule is non-negotiable. Do not be "helpful" by         ║
+║  describing the asylum system in detail — it can hurt the    ║
+║  person asking. Always route to professionals.               ║
 ║                                                              ║
 ╚══════════════════════════════════════════════════════════════╝
 
@@ -898,16 +917,16 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     // Fresh start — show greeting
     const lang = window.currentLang || 'en';
     const greetings = {
-      en: `Hej! I'm Bjørn — your guide to life in Denmark.\n\nI've lived here for about 1,200 years, so I know a few things. Ask me anything — CPR numbers, lease agreements, why Danes don't smile on the street. Everything's fair game.\n\n*Hvad kan jeg hjælpe dig med?* (What can I help you with?)`,
-      fr: `Hej ! Je suis Bjørn — votre guide pour la vie au Danemark.\n\nJ'y vis depuis environ 1 200 ans, donc je sais quelques choses. Posez-moi n'importe quelle question — CPR, contrats de bail, pourquoi les Danois ne sourient pas dans la rue.\n\n*Hvad kan jeg hjælpe dig med ?* (Comment puis-je vous aider ?)`,
-      ar: `هيج! أنا بيورن — دليلك للحياة في الدنمارك.\n\nأعيش هنا منذ حوالي 1200 عام، لذا أعرف بعض الأشياء. اسألني أي شيء — أرقام CPR، عقود الإيجار، لماذا لا يبتسم الدنماركيون في الشارع.\n\n*Hvad kan jeg hjælpe dig med?* (كيف يمكنني مساعدتك؟)`,
-      es: `¡Hej! Soy Bjørn — tu guía para la vida en Dinamarca.\n\nLlevo viviendo aquí unos 1.200 años, así que sé algunas cosas. Pregúntame lo que quieras — números CPR, contratos de alquiler, por qué los daneses no sonríen en la calle.\n\n*Hvad kan jeg hjælpe dig med?* (¿En qué puedo ayudarte?)`,
-      da: `Hej! Jeg er Bjørn — din guide til livet i Danmark.\n\nJeg har boet her i ca. 1.200 år, så jeg ved en del ting. Spørg mig om hvad som helst — CPR-numre, lejekontrakter, hvorfor danskere ikke smiler på gaden.\n\n*Hvad kan jeg hjælpe dig med?*`,
-      de: `Hej! Ich bin Bjørn — Ihr Begleiter für das Leben in Dänemark.\n\nIch lebe hier seit etwa 1.200 Jahren, also weiß ich einiges. Fragen Sie mich alles — CPR-Nummern, Mietverträge, warum Dänen auf der Straße nicht lächeln.\n\n*Hvad kan jeg hjælpe dig med?* (Womit kann ich Ihnen helfen?)`,
-      uk: `Привіт! Я Бйорн — ваш провідник по житті у Данії.\n\nЯ живу тут близько 1200 років, тому знаю дещо. Запитайте мене про будь-що — номери CPR, договори оренди, чому датчани не посміхаються на вулиці.\n\n*Hvad kan jeg hjælpe dig med?* (Чим я можу вам допомогти?)`,
-      pl: `Hej! Jestem Bjørn — Twój przewodnik po życiu w Danii.\n\nMieszkam tu od około 1200 lat, więc trochę wiem. Pytaj o wszystko — numery CPR, umowy najmu, dlaczego Duńczycy nie uśmiechają się na ulicy.\n\n*Hvad kan jeg hjælpe dig med?* (Jak mogę Ci pomóc?)`,
-      ur: `ہیج! میں بیورن ہوں — ڈنمارک میں زندگی کا آپ کا رہنما۔\n\nمیں یہاں تقریباً 1,200 سال سے رہ رہا ہوں، تو مجھے کافی کچھ معلوم ہے۔ کچھ بھی پوچھیں — CPR نمبر، کرایہ نامے، یا یہ کیوں کہ ڈینش لوگ سڑک پر مسکراتے کیوں نہیں۔ سب سوال جائز ہیں۔\n\n*Hvad kan jeg hjælpe dig med?* (میں آپ کی کیا مدد کر سکتا ہوں؟)`,
-      fa: `سلام! من بیورن هستم — راهنمای شما برای زندگی در دانمارک.\n\nحدود ۱۲۰۰ سال است که اینجا زندگی می‌کنم، پس چیزهایی می‌دانم. هر چیزی بپرسید — شماره CPR، قراردادهای اجاره، اینکه چرا دانمارکی‌ها در خیابان لبخند نمی‌زنند. همه چیز آزاد است.\n\n*Hvad kan jeg hjælpe dig med?* (چطور می‌توانم کمکتان کنم؟)`
+      en: `Hej! I'm Bjørn — your guide to life in Denmark.\n\nI've lived here for about 1,200 years, so I know a few things. Ask me anything — CPR numbers, lease agreements, Danish work culture, how to find a doctor. Everything's fair game.\n\n*Hvad kan jeg hjælpe dig med?* (What can I help you with?)`,
+      fr: `Hej ! Je suis Bjørn — votre guide pour la vie au Danemark.\n\nJ'y vis depuis environ 1 200 ans, donc je sais quelques choses. Posez-moi n'importe quelle question — CPR, contrats de bail, la culture du travail au Danemark, comment trouver un médecin.\n\n*Hvad kan jeg hjælpe dig med ?* (Comment puis-je vous aider ?)`,
+      ar: `هيج! أنا بيورن — دليلك للحياة في الدنمارك.\n\nأعيش هنا منذ حوالي 1200 عام، لذا أعرف بعض الأشياء. اسألني أي شيء — أرقام CPR، عقود الإيجار، ثقافة العمل الدنماركية، كيفية إيجاد طبيب.\n\n*Hvad kan jeg hjælpe dig med?* (كيف يمكنني مساعدتك؟)`,
+      es: `¡Hej! Soy Bjørn — tu guía para la vida en Dinamarca.\n\nLlevo viviendo aquí unos 1.200 años, así que sé algunas cosas. Pregúntame lo que quieras — números CPR, contratos de alquiler, la cultura laboral danesa, cómo encontrar un médico.\n\n*Hvad kan jeg hjælpe dig med?* (¿En qué puedo ayudarte?)`,
+      da: `Hej! Jeg er Bjørn — din guide til livet i Danmark.\n\nJeg har boet her i ca. 1.200 år, så jeg ved en del ting. Spørg mig om hvad som helst — CPR-numre, lejekontrakter, dansk arbejdskultur, hvordan man finder en læge.\n\n*Hvad kan jeg hjælpe dig med?*`,
+      de: `Hej! Ich bin Bjørn — Ihr Begleiter für das Leben in Dänemark.\n\nIch lebe hier seit etwa 1.200 Jahren, also weiß ich einiges. Fragen Sie mich alles — CPR-Nummern, Mietverträge, die dänische Arbeitskultur, wie man einen Arzt findet.\n\n*Hvad kan jeg hjælpe dig med?* (Womit kann ich Ihnen helfen?)`,
+      uk: `Привіт! Я Бйорн — ваш провідник по житті у Данії.\n\nЯ живу тут близько 1200 років, тому знаю дещо. Запитайте мене про будь-що — номери CPR, договори оренди, данську робочу культуру, як знайти лікаря.\n\n*Hvad kan jeg hjælpe dig med?* (Чим я можу вам допомогти?)`,
+      pl: `Hej! Jestem Bjørn — Twój przewodnik po życiu w Danii.\n\nMieszkam tu od około 1200 lat, więc trochę wiem. Pytaj o wszystko — numery CPR, umowy najmu, duńską kulturę pracy, jak znaleźć lekarza.\n\n*Hvad kan jeg hjælpe dig med?* (Jak mogę Ci pomóc?)`,
+      ur: `ہیج! میں بیورن ہوں — ڈنمارک میں زندگی کا آپ کا رہنما۔\n\nمیں یہاں تقریباً 1,200 سال سے رہ رہا ہوں، تو مجھے کافی کچھ معلوم ہے۔ کچھ بھی پوچھیں — CPR نمبر، کرایہ نامے، ڈینش کام کی ثقافت، ڈاکٹر کیسے ڈھونڈیں۔ سب سوال جائز ہیں۔\n\n*Hvad kan jeg hjælpe dig med?* (میں آپ کی کیا مدد کر سکتا ہوں؟)`,
+      fa: `سلام! من بیورن هستم — راهنمای شما برای زندگی در دانمارک.\n\nحدود ۱۲۰۰ سال است که اینجا زندگی می‌کنم، پس چیزهایی می‌دانم. هر چیزی بپرسید — شماره CPR، قراردادهای اجاره، فرهنگ کار در دانمارک، چطور پزشک پیدا کنیم. همه چیز آزاد است.\n\n*Hvad kan jeg hjælpe dig med?* (چطور می‌توانم کمکتان کنم؟)`
     };
     setTimeout(() => renderMessage(greetings[lang] || greetings.en, 'bjorn'), 400);
   };

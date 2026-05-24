@@ -3290,7 +3290,7 @@ ur:`<p><strong>یہ تقریباً ہر نئے آنے والے کو حیران �
   <li><strong>Headspace Denmark:</strong> free counselling for young people (12–25)</li>
   <li><strong>Expat Counselling Copenhagen:</strong> English-language therapy, private, ~DKK 900–1,400/session</li>
 </ul>
-<p>Many expats find the adjustment to Danish social culture (reserved, indirect, hard to penetrate) genuinely difficult. This is normal, not a personal failure. Allow 1–2 years to build a real social network.</p>
+<p>Many newcomers find the adjustment to Danish social culture genuinely difficult at first. It's a culture where trust is built slowly and meaningfully — that's a feature, not a flaw. This is normal, not a personal failure. Allow 1–2 years to build a real social network.</p>
 <a href="https://www.sundhed.dk/borger/patienthaandbogen/psyke/" target="_blank" rel="noopener">→ Mental health resources (sundhed.dk)</a>`,
 da:`<p>At flytte til et nyt land er en af de mest psykologisk udfordrende ting, et menneske kan gøre. Danmark tager psykisk sundhed alvorligt. Sådan fungerer systemet:</p>
 <p><strong>Gratis via det offentlige system:</strong></p>
@@ -7103,7 +7103,7 @@ ur:`<p><strong>Janteloven</strong> (یانتے لوون) غیر تحریری م�
       {
         icon: "🏡",
         title: {en:"How to Make Danish Friends — The Real Guide", fr:"Comment se faire des amis danois — Le vrai guide", ar:"كيف تكتسب أصدقاء دنماركيين — الدليل الحقيقي", es:"Cómo hacer amigos daneses — La guía real", da:"Sådan får du danske venner — den ærlige guide", de:"Wie man dänische Freunde findet — der ehrliche Leitfaden", fa:"چگونه با دانمارکی‌ها دوست شویم — راهنمای واقعی", pl:"Jak zaprzyjaźnić się z Duńczykami — prawdziwy przewodnik", uk:"Як подружитися з данцями — справжній путівник", ur:"ڈینش دوست کیسے بنائیں — حقیقی رہنما" },
-        content: { en:`<p>Many expats in Denmark describe Danes as friendly but hard to befriend. This is accurate — and it has nothing to do with you personally.</p>
+        content: { en:`<p>Building close friendships with Danes takes time. This is a cultural pattern, not a personal rejection — and the friendships that form last for decades.</p>
 <p><strong>Understanding Danish friendship dynamics:</strong></p>
 <ul>
   <li><strong>Danes already have their friends.</strong> Most Danes have known their closest friends since school or university. Their social calendar is often full. This is not exclusion — it's just a different social structure.</li>
