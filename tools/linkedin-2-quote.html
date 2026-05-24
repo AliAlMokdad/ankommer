@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400&family=Inter:wght@400;500;600;900&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    width: 1200px; height: 1500px;
+    background: #F5F2EC;
+    color: #1A1A2E;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .accent-bar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 12px;
+    background: linear-gradient(90deg, #C60C30 0%, #C60C30 45%, white 45%, white 55%, #C60C30 55%, #C60C30 100%);
+  }
+
+  .container {
+    position: relative;
+    height: 100%;
+    padding: 110px 100px 90px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .wordmark {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    letter-spacing: 0.18em;
+    color: #1A1A2E;
+  }
+  .wordmark .a { color: #C60C30; }
+
+  .badge {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #C60C30;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 220px;
+    line-height: 0.6;
+    color: rgba(198, 12, 48, 0.15);
+    font-weight: 900;
+  }
+
+  .quote {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1.15;
+    color: #1A1A2E;
+    margin-top: -40px;
+    letter-spacing: -0.01em;
+    font-style: italic;
+  }
+
+  .quote strong {
+    font-weight: 900;
+    font-style: normal;
+    color: #1A1A2E;
+  }
+
+  .attribution {
+    margin-top: 60px;
+    border-left: 4px solid #C60C30;
+    padding-left: 28px;
+  }
+
+  .attribution-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #1A1A2E;
+    margin-bottom: 6px;
+  }
+
+  .attribution-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #5A5A6E;
+    line-height: 1.5;
+  }
+
+  .spacer { flex: 1; }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 40px;
+    border-top: 1px solid rgba(26, 26, 46, 0.1);
+  }
+
+  .url {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #C60C30;
+  }
+
+  .meta {
+    text-align: right;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #5A5A6E;
+    line-height: 1.6;
+  }
+  .meta strong { color: #1A1A2E; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="accent-bar"></div>
+
+  <div class="container">
+    <div class="header">
+      <div class="wordmark"><span class="a">A</span>NKOMMER</div>
+      <div class="badge">A new guide · Denmark</div>
+    </div>
+
+    <div class="quote-mark">"</div>
+    <div class="quote">
+      Moving to a new country is one of the <strong>hardest things</strong> a person can do.<br><br>
+      So I built a guide for the next one who tries.
+    </div>
+
+    <div class="attribution">
+      <div class="attribution-title">Ali Al Mokdad</div>
+      <div class="attribution-sub">Builder of ankommer.org<br>An AI-native guide for newcomers to Denmark</div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="bottom">
+      <div class="url">ankommer.org</div>
+      <div class="meta">
+        <strong>16 chapters</strong> · <strong>10 languages</strong> · <strong>9 tools</strong><br>
+        Free. No ads. No signup.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ANKOMMER · LinkedIn carousel</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-cream: #F5F2EC;
+    --bg-secondary: #EDEAE3;
+    --nordic-blue: #2E6DA4;
+    --nordic-blue-dark: #1B4A75;
+    --navy: #0F1B2D;
+    --navy-2: #1A2840;
+    --danish-red: #C60C30;
+    --sage: #6A9E6A;
+    --text-primary: #1A1A2E;
+    --text-muted: #4A4A5A;
+    --text-faint: #7A7A8A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #999; font-family: 'Inter', system-ui, sans-serif; }
+  .slide {
+    width: 1080px;
+    height: 1350px;
+    margin: 24px auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 90px;
+  }
+  .display { font-family: 'Playfair Display', Georgia, serif; }
+
+  /* Slide 1 — Cover */
+  .s1 {
+    background: linear-gradient(160deg, #0F1B2D 0%, #1B4A75 100%);
+    color: #fff;
+    justify-content: space-between;
+  }
+  .s1 .brand { font-family: 'Inter'; font-weight: 700; font-size: 38px; letter-spacing: 0.04em; }
+  .s1 .brand .a { color: var(--danish-red); }
+  .s1 .headline { font-size: 132px; line-height: 1.0; font-weight: 900; letter-spacing: -0.025em; }
+  .s1 .sub { font-size: 36px; line-height: 1.4; font-weight: 400; color: rgba(255,255,255,0.78); max-width: 760px; margin-top: 28px; }
+  .s1 .url { font-family: 'JetBrains Mono', monospace; font-size: 28px; color: rgba(255,255,255,0.6); }
+  .s1 .stripe { display: flex; gap: 0; height: 8px; margin-top: 40px; width: 200px; }
+  .s1 .stripe span:nth-child(1) { background: var(--danish-red); flex: 1; }
+  .s1 .stripe span:nth-child(2) { background: #fff; flex: 1; }
+
+  /* Slide 2 — The problem (editorial pull-quote) */
+  .s2 {
+    background: var(--bg-cream);
+    color: var(--text-primary);
+    justify-content: center;
+  }
+  .s2 .label { font-family: 'Inter'; font-size: 22px; font-weight: 600; color: var(--danish-red); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 40px; }
+  .s2 .quote { font-family: 'Playfair Display'; font-size: 88px; line-height: 1.08; font-weight: 700; letter-spacing: -0.02em; }
+  .s2 .quote em { font-style: italic; }
+  .s2 .attribution { margin-top: 56px; font-size: 24px; color: var(--text-muted); max-width: 700px; line-height: 1.5; }
+
+  /* Slide 3 — The product (numbers) */
+  .s3 {
+    background: var(--navy);
+    color: #fff;
+    justify-content: space-between;
+  }
+  .s3 .eyebrow { font-family: 'Inter'; font-size: 22px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+  .s3 .stack { display: flex; flex-direction: column; gap: 32px; }
+  .s3 .row { border-top: 1px solid rgba(255,255,255,0.13); padding-top: 32px; display: flex; align-items: baseline; gap: 36px; }
+  .s3 .row:first-child { border-top: none; padding-top: 0; }
+  .s3 .num { font-family: 'Playfair Display'; font-size: 184px; line-height: 0.9; font-weight: 900; letter-spacing: -0.03em; min-width: 280px; }
+  .s3 .label-2 { font-size: 32px; font-weight: 500; line-height: 1.35; color: rgba(255,255,255,0.85); padding-bottom: 18px; }
+  .s3 .label-2 strong { color: #fff; font-weight: 700; }
+  .s3 .footer { font-size: 22px; color: rgba(255,255,255,0.5); font-family: 'JetBrains Mono', monospace; }
+
+  /* Slide 4 — Trust */
+  .s4 {
+    background: var(--bg-cream);
+    color: var(--text-primary);
+    justify-content: center;
+    text-align: left;
+  }
+  .s4 .pill { display: inline-block; font-family: 'Inter'; font-size: 20px; font-weight: 600; padding: 8px 20px; border-radius: 999px; background: var(--danish-red); color: #fff; letter-spacing: 0.06em; margin-bottom: 56px; width: fit-content; }
+  .s4 .lines { display: flex; flex-direction: column; gap: 24px; }
+  .s4 .line { font-family: 'Playfair Display'; font-size: 96px; font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; color: var(--text-primary); display: flex; align-items: center; gap: 28px; }
+  .s4 .line .dot { width: 18px; height: 18px; background: var(--sage); border-radius: 50%; display: inline-block; flex-shrink: 0; }
+  .s4 .closer { font-size: 28px; color: var(--text-muted); line-height: 1.5; margin-top: 56px; max-width: 720px; }
+
+  /* Slide 5 — Invitation */
+  .s5 {
+    background: linear-gradient(180deg, #1B4A75 0%, #0F1B2D 100%);
+    color: #fff;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .s5 .top { font-family: 'Inter'; font-size: 22px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+  .s5 .invite { font-family: 'Playfair Display'; font-size: 92px; line-height: 1.04; font-weight: 700; letter-spacing: -0.022em; max-width: 880px; }
+  .s5 .invite em { font-style: italic; color: rgba(255,255,255,0.85); }
+  .s5 .footer { display: flex; flex-direction: column; gap: 20px; width: 100%; }
+  .s5 .url-big { font-family: 'Playfair Display'; font-size: 100px; font-weight: 900; letter-spacing: -0.02em; color: var(--danish-red); }
+  .s5 .by { font-family: 'Inter'; font-size: 22px; color: rgba(255,255,255,0.55); }
+</style>
+</head>
+<body>
+
+<!-- Slide 1: Cover -->
+<div class="slide s1" id="slide-1">
+  <div class="brand"><span class="a">A</span>NKOMMER</div>
+  <div>
+    <div class="headline display">Moving to<br>Denmark?</div>
+    <div class="sub">A free guide for everyone who's about to arrive — or just landed.</div>
+    <div class="stripe"><span></span><span></span></div>
+  </div>
+  <div class="url">ankommer.org</div>
+</div>
+
+<!-- Slide 2: The problem -->
+<div class="slide s2" id="slide-2">
+  <div class="label">Why this exists</div>
+  <div class="quote display">Moving to a new country is <em>one of the hardest things</em> a person can do.</div>
+  <div class="attribution">Half the chaos is just not knowing what comes next. The CPR. The lease. The tax. The 5-day window. The system that assumes you already know how it works.</div>
+</div>
+
+<!-- Slide 3: The product -->
+<div class="slide s3" id="slide-3">
+  <div class="eyebrow">What ANKOMMER is</div>
+  <div class="stack">
+    <div class="row">
+      <div class="num display">16</div>
+      <div class="label-2"><strong>Chapters</strong> — from before you land to citizenship. Every step covered.</div>
+    </div>
+    <div class="row">
+      <div class="num display">10</div>
+      <div class="label-2"><strong>Languages</strong> — including Arabic, Spanish, Urdu, and Persian. Full RTL support.</div>
+    </div>
+    <div class="row">
+      <div class="num display">9</div>
+      <div class="label-2"><strong>Smart tools</strong> — salary calculator, kommune lookup, journey planner, visa decision tree.</div>
+    </div>
+  </div>
+  <div class="footer">An AI-native guide for newcomers · ankommer.org</div>
+</div>
+
+<!-- Slide 4: Trust -->
+<div class="slide s4" id="slide-4">
+  <div class="pill">THE PROMISE</div>
+  <div class="lines">
+    <div class="line"><span class="dot"></span><span>Free.</span></div>
+    <div class="line"><span class="dot"></span><span>No ads.</span></div>
+    <div class="line"><span class="dot"></span><span>No signup.</span></div>
+    <div class="line"><span class="dot"></span><span>No tracking.</span></div>
+  </div>
+  <div class="closer">Every claim cites the actual Danish law. Independent. Built for the people who need it most.</div>
+</div>
+
+<!-- Slide 5: Invitation -->
+<div class="slide s5" id="slide-5">
+  <div class="top">If you know someone arriving</div>
+  <div class="invite display">Send them this.<br>It might save them<br><em>weeks of guessing.</em></div>
+  <div class="footer">
+    <div class="url-big display">ankommer.org</div>
+    <div class="by">Built independently · No funding · No agenda · Just useful.</div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Inter:wght@400;500;700;900&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    width: 1200px; height: 1500px;
+    background: #1A1A2E;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Diagonal red splash */
+  .splash {
+    position: absolute;
+    top: -100px; right: -200px;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(198, 12, 48, 0.25) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .container {
+    width: 100%;
+    padding: 100px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .small-mark {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: 0.22em;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 80px;
+  }
+  .small-mark .a { color: #FF4D6A; }
+
+  .lang-row {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  .hero {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 130px;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+    margin-bottom: 30px;
+  }
+
+  .hero .accent {
+    color: #FF4D6A;
+  }
+
+  .sub {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.4;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 80px;
+    max-width: 920px;
+  }
+  .sub strong { color: white; font-weight: 700; }
+
+  .bottom-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .url-block {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 56px;
+    color: white;
+    line-height: 1;
+  }
+  .url-block .dot { color: #FF4D6A; }
+
+  .pill {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 14px 28px;
+    border-radius: 100px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+  }
+</style>
+</head>
+<body>
+  <div class="splash"></div>
+
+  <div class="container">
+    <div class="small-mark"><span class="a">A</span>NKOMMER</div>
+
+    <div class="lang-row">EN · DA · FR · ES · DE · UK · PL · العربية · فارسی · اردو</div>
+
+    <div class="hero">
+      Either way<span class="accent">.</span><br>
+      we've got<br>
+      you<span class="accent">.</span>
+    </div>
+
+    <div class="sub">
+      A <strong>free, AI-native guide</strong> for newcomers to Denmark.<br>
+      16 chapters. 10 languages. No ads. No signup.
+    </div>
+
+    <div class="bottom-row">
+      <div class="url-block">ankommer<span class="dot">.</span>org</div>
+      <div class="pill">→ Read it. Share it. Send it.</div>
+    </div>
+  </div>
+</body>
+</html>

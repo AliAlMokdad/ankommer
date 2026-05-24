@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;600;700;900&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    width: 1200px; height: 1500px;
+    background: radial-gradient(ellipse at 50% 40%, #1B3258 0%, #0F1B2D 60%, #060D1A 100%);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Dense, varied star field */
+  .stars-layer-1 {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1.5px 1.5px at 80px 220px, white 50%, transparent),
+      radial-gradient(1px 1px at 280px 480px, white 50%, transparent),
+      radial-gradient(2.5px 2.5px at 580px 90px, white 50%, transparent),
+      radial-gradient(1px 1px at 920px 760px, white 50%, transparent),
+      radial-gradient(1.5px 1.5px at 1080px 280px, white 50%, transparent),
+      radial-gradient(2px 2px at 180px 680px, rgba(255,255,255,0.7) 50%, transparent),
+      radial-gradient(1px 1px at 780px 1020px, white 50%, transparent),
+      radial-gradient(1.5px 1.5px at 400px 1180px, white 50%, transparent),
+      radial-gradient(1px 1px at 1100px 1280px, white 50%, transparent),
+      radial-gradient(2px 2px at 60px 1340px, rgba(255,255,255,0.7) 50%, transparent),
+      radial-gradient(1.5px 1.5px at 320px 50px, white 50%, transparent),
+      radial-gradient(1px 1px at 720px 320px, rgba(255,255,255,0.8) 50%, transparent),
+      radial-gradient(2px 2px at 480px 600px, white 50%, transparent),
+      radial-gradient(1.5px 1.5px at 1020px 920px, rgba(255,255,255,0.6) 50%, transparent),
+      radial-gradient(1px 1px at 140px 990px, white 50%, transparent),
+      radial-gradient(2.5px 2.5px at 950px 540px, rgba(255,255,255,0.9) 50%, transparent);
+  }
+  .stars-layer-2 {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 50px 50px, rgba(255,255,255,0.5) 50%, transparent),
+      radial-gradient(1px 1px at 240px 150px, rgba(255,255,255,0.4) 50%, transparent),
+      radial-gradient(1px 1px at 450px 280px, rgba(255,255,255,0.5) 50%, transparent),
+      radial-gradient(1px 1px at 660px 440px, rgba(255,255,255,0.4) 50%, transparent),
+      radial-gradient(1px 1px at 880px 180px, rgba(255,255,255,0.5) 50%, transparent),
+      radial-gradient(1px 1px at 1140px 460px, rgba(255,255,255,0.4) 50%, transparent),
+      radial-gradient(1px 1px at 350px 360px, rgba(255,255,255,0.5) 50%, transparent),
+      radial-gradient(1px 1px at 600px 720px, rgba(255,255,255,0.4) 50%, transparent),
+      radial-gradient(1px 1px at 820px 880px, rgba(255,255,255,0.3) 50%, transparent),
+      radial-gradient(1px 1px at 1040px 700px, rgba(255,255,255,0.5) 50%, transparent),
+      radial-gradient(1px 1px at 200px 380px, rgba(255,255,255,0.4) 50%, transparent);
+    opacity: 0.7;
+  }
+
+  /* Aurora — soft green/pink glow at top */
+  .aurora-green {
+    position: absolute;
+    top: -100px; left: 10%; right: 30%;
+    height: 500px;
+    background: radial-gradient(ellipse 700px 350px at 50% 0%, rgba(34, 197, 110, 0.18), transparent 75%);
+    pointer-events: none;
+    filter: blur(20px);
+  }
+  .aurora-pink {
+    position: absolute;
+    top: 0px; right: -50px;
+    width: 600px; height: 400px;
+    background: radial-gradient(ellipse 500px 300px at 50% 0%, rgba(255, 77, 106, 0.15), transparent 70%);
+    pointer-events: none;
+    filter: blur(15px);
+  }
+  .aurora-blue {
+    position: absolute;
+    top: 100px; left: -50px;
+    width: 500px; height: 300px;
+    background: radial-gradient(ellipse 400px 250px at 50% 0%, rgba(64, 156, 255, 0.10), transparent 70%);
+    pointer-events: none;
+    filter: blur(15px);
+  }
+
+  /* Skyline — TALLER (180px), softer (gradient mask at the top so it
+     reads as a shade fading into the night sky, not a hard cut).
+     The polygon defines a richer skyline with more vertical variation. */
+  .skyline {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 220px;
+    background: linear-gradient(180deg, rgba(6, 13, 26, 0) 0%, rgba(6, 13, 26, 0.4) 25%, #060D1A 60%, #03060F 100%);
+    clip-path: polygon(
+      0 100%, 0 55%,
+      60px 55%, 70px 40%, 110px 40%, 115px 55%,
+      170px 55%, 175px 45%, 195px 45%, 200px 30%, 220px 30%, 225px 18%, 245px 18%, 250px 30%, 270px 30%, 275px 45%, 295px 45%, 300px 55%,
+      370px 55%, 375px 35%, 405px 35%, 410px 22%, 430px 22%, 435px 35%, 465px 35%, 470px 55%,
+      540px 55%, 545px 42%, 580px 42%, 585px 30%, 605px 30%, 610px 42%, 645px 42%, 650px 55%,
+      720px 55%, 725px 28%, 760px 28%, 765px 15%, 790px 15%, 795px 5%, 815px 5%, 820px 15%, 845px 15%, 850px 28%, 885px 28%, 890px 55%,
+      950px 55%, 955px 38%, 990px 38%, 995px 55%,
+      1050px 55%, 1055px 25%, 1090px 25%, 1095px 12%, 1115px 12%, 1120px 25%, 1155px 25%, 1160px 55%,
+      1200px 55%, 1200px 100%
+    );
+  }
+
+  .container {
+    position: relative; z-index: 3;
+    height: 100%;
+    display: flex; flex-direction: column;
+    padding: 80px 90px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .wordmark {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 34px;
+    letter-spacing: 0.18em;
+    color: white;
+  }
+  .wordmark .a { color: #FF4D6A; }
+
+  .header-badge {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 100px;
+  }
+
+  .main {
+    flex: 1;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -40px;
+  }
+
+  .pretitle-1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 38px;
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 10px;
+    letter-spacing: 0.01em;
+  }
+  .pretitle-2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 38px;
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 50px;
+  }
+
+  .hero {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 50px;
+    color: white;
+  }
+
+  .tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 70px;
+    max-width: 980px;
+  }
+  .tagline strong { color: white; font-weight: 600; }
+
+  .facts {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 60px;
+    align-items: center;
+  }
+
+  .fact { text-align: center; }
+  .fact-num {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 1;
+    color: white;
+  }
+  .fact-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-top: 10px;
+  }
+  .fact-divider {
+    width: 1px; height: 50px;
+    background: rgba(255,255,255,0.15);
+  }
+
+  .url {
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #FF4D6A;
+    letter-spacing: 0.01em;
+  }
+
+  /* Footer is now centered (the "free at the point of access" line is gone). */
+  .footer-row {
+    position: relative; z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 24px;
+  }
+
+  .footer-author {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.02em;
+  }
+</style>
+</head>
+<body>
+  <div class="stars-layer-1"></div>
+  <div class="stars-layer-2"></div>
+  <div class="aurora-green"></div>
+  <div class="aurora-pink"></div>
+  <div class="aurora-blue"></div>
+
+  <div class="skyline"></div>
+
+  <div class="container">
+    <div class="header">
+      <div class="wordmark"><span class="a">A</span>NKOMMER</div>
+      <div class="header-badge">A guide for newcomers</div>
+    </div>
+
+    <div class="main">
+      <div class="pretitle-1">You just landed.</div>
+      <div class="pretitle-2">Or you're about to.</div>
+
+      <div class="hero">Either way —<br>we've got you.</div>
+
+      <div class="tagline">
+        A <strong>free, AI-native guide</strong> for newcomers to Denmark, in <strong>10 languages</strong>.<br>
+        No ads. No signup. Built independently.
+      </div>
+
+      <div class="facts">
+        <div class="fact">
+          <div class="fact-num">16</div>
+          <div class="fact-label">Chapters</div>
+        </div>
+        <div class="fact-divider"></div>
+        <div class="fact">
+          <div class="fact-num">10</div>
+          <div class="fact-label">Languages</div>
+        </div>
+        <div class="fact-divider"></div>
+        <div class="fact">
+          <div class="fact-num">9</div>
+          <div class="fact-label">AI Tools</div>
+        </div>
+      </div>
+
+      <div class="url">ankommer.org</div>
+    </div>
+
+    <div class="footer-row">
+      <div class="footer-author">Created by Ali Al Mokdad</div>
+    </div>
+  </div>
+</body>
+</html>
