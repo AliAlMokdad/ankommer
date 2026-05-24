@@ -1322,6 +1322,26 @@ const _renderChapterEndNav = (index, lang) => {
   `;
 };
 
+// Pick the best-quality language variant for a multilingual content dict.
+// Falls back to English when the target language is missing OR is a stub
+// significantly shorter than the English version (e.g. Persian sections where
+// only an intro sentence exists with no body content underneath). The 200-char
+// + 4x-shorter-than-English rule avoids false positives where English itself
+// is brief (short titles, labels, captions keep their native translation —
+// genuine stub paragraphs have ~14x size differential vs ~1x for true short
+// strings). Without this, Persian users see a one-line teaser followed by
+// nothing on chapters where the fa translation is still in progress.
+const pickLang = (dict, lang) => {
+  if (!dict) return '';
+  if (typeof dict === 'string') return dict;
+  const val = dict[lang];
+  const en = dict.en;
+  if (lang !== 'en' && typeof val === 'string' && typeof en === 'string') {
+    if (val.length < 200 && en.length > val.length * 4) return en;
+  }
+  return val || en || '';
+};
+
 const renderChapter = (index) => {
   const ch = CHAPTERS[index];
   if (!ch) return;
@@ -1345,7 +1365,7 @@ const renderChapter = (index) => {
         </button>
       </h3>
       <div class="section-body" id="ch-sec-body-${index}-${si}" role="region" aria-labelledby="ch-sec-${index}-${si}-heading">
-        ${sec.content[lang] || sec.content.en || sec.content}
+        ${pickLang(sec.content, lang)}
       </div>
     </div>
   `).join('');
@@ -1377,7 +1397,7 @@ const renderChapter = (index) => {
       <div class="bjorn-tip-avatar">🛡️</div>
       <div class="bjorn-tip-body">
         <strong>${t_('bjornSays', lang)}</strong>
-        <p>${ch.bjornTip[lang] || ch.bjornTip.en || ch.bjornTip}</p>
+        <p>${pickLang(ch.bjornTip, lang)}</p>
       </div>
     </div>
   ` : '';
@@ -1430,7 +1450,7 @@ const renderChapter = (index) => {
         <div class="chapter-num">${t_('chapterWord', lang)} ${index + 1} · ${ch.subtitle[lang] || ch.subtitle.en}</div>
         <div class="chapter-icon">${ch.icon}</div>
         <h2 class="chapter-title">${ch.title[lang] || ch.title.en}</h2>
-        <p class="chapter-intro">${ch.intro[lang] || ch.intro.en}</p>
+        <p class="chapter-intro">${pickLang(ch.intro, lang)}</p>
         <div class="chapter-meta">
           <span class="chapter-meta-tag">${t_('readTime', lang, ch.readTime || '10 min')}</span>
           <span class="chapter-meta-tag">${allTasks.length} ${t_('tasks', lang)}</span>
@@ -1474,7 +1494,7 @@ const renderChapter = (index) => {
   // Update page title & meta description for SEO / browser tab. Title
   // routes through updatePageTitle() so language switches re-derive it
   // (the "Moving to Denmark" tagline is now also localized).
-  const chIntro = ch.intro[lang] || ch.intro.en;
+  const chIntro = pickLang(ch.intro, lang);
   updatePageTitle();
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute('content', chIntro.substring(0, 155));
