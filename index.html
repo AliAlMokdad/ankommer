@@ -235,7 +235,11 @@
   <div class="loader-bar"><div class="loader-fill"></div></div>
 </div>
 
-<!-- ═══════════════════════════════════ NAVIGATION ═══════════════════════════════════ -->
+<!-- ═══════════════════════════════════ HEADER WITH PRIMARY NAVIGATION ═══════════════════════════════════ -->
+<!-- <header> wraps the primary nav so the page exposes a proper "banner"
+     landmark (WCAG 1.3.1). CSS selectors targeting #main-nav (line ~349 in
+     main.css) are ID-based and continue to work unchanged inside <header>. -->
+<header>
 <nav id="main-nav" aria-label="Main navigation">
   <div class="nav-left">
     <button class="nav-logo" onclick="scrollToTop()" aria-label="ANKOMMER — go to top" data-i18n-aria="nav_logo_label">
@@ -282,6 +286,7 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
+</header>
 
 <!-- ═══════════════════════════════════ HERO SECTION ═══════════════════════════════════ -->
 <!-- aria-labelledby ties this landmark to the H1 inside it so SR users
@@ -910,7 +915,7 @@
         <button type="button" class="footer-progress-btn" id="progress-export-btn" data-i18n="footer_progress_export">⬇ Download my plan</button>
         <button type="button" class="footer-progress-btn" id="progress-import-btn" data-i18n="footer_progress_import">⬆ Restore from file</button>
       </div>
-      <input type="file" id="progress-import-file" accept="application/json,.json" hidden />
+      <input type="file" id="progress-import-file" accept="application/json,.json" aria-label="Restore plan from file" hidden />
     </div>
 
     <!-- Tier 3 — Signature + Legal -->
