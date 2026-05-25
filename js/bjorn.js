@@ -922,7 +922,9 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       if (!navigator.onLine) {
         await new Promise(r => setTimeout(r, 400));
         reply = getOfflineResponse(message) + '\n\n*Note: You appear to be offline. Showing a cached response — reconnect for Bjørn\'s full AI capabilities.*';
-      } else if (apiKey) {
+      } else if (apiKey || PROXY_URL) {
+        // Either a Cloudflare worker proxy OR a direct apiKey is enough —
+        // callGroq picks the right path internally via its useProxy check.
         reply = await callGroq(message);
       } else {
         // Simulate thinking delay for better UX
@@ -937,7 +939,13 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       showThinking(false);
       let errorMsg = '❌ ';
       if (err.name === 'AbortError') {
-        // Request timed out — fall back gracefully
+        // Request timed out — the user message was pushed in callGroq before
+        // the fetch but never popped because the fetch threw before the
+        // !response.ok rollback ran. Pop it now so the next call doesn't
+        // resend an unanswered turn as part of conversationHistory context.
+        if (conversationHistory.length && conversationHistory[conversationHistory.length - 1].role === 'user') {
+          conversationHistory.pop();
+        }
         const offline = getOfflineResponse(message);
         renderMessage(offline + '\n\n*Note: Bjørn took too long to respond. Showing a cached answer — try again if you need his full reasoning.*', 'bjorn');
       } else if (err.message.includes('401') || err.message.includes('invalid_api_key')) {

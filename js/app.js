@@ -1568,7 +1568,21 @@ window.openChapter = (index) => {
       const loadingMsg = {en:'Loading chapter…',fr:'Chargement du chapitre…',ar:'جارٍ تحميل الفصل…',es:'Cargando capítulo…',da:'Indlæser kapitel…',de:'Kapitel wird geladen…',uk:'Завантаження розділу…',pl:'Wczytywanie rozdziału…',ur:'باب لوڈ ہو رہا ہے…',fa:'در حال بارگذاری فصل…'}[lang] || 'Loading chapter…';
       main.innerHTML = `<div style="padding:3rem;text-align:center;opacity:.6">${loadingMsg}</div>`;
     }
-    _loadFullChapters().then(() => _finishOpenChapter(index));
+    _loadFullChapters().then(() => {
+      // _loadFullChapters resolves on both success and network failure to
+      // keep the SPA from hanging — but on failure CHAPTERS is still empty
+      // and renderChapter would show "Full content coming soon" for a
+      // chapter that does have content. Check the load flag and show an
+      // actionable retry instead.
+      if (_chaptersFullLoaded) {
+        _finishOpenChapter(index);
+      } else if (main) {
+        const lang = window.currentLang || 'en';
+        const errMsg = {en:'Could not load this chapter — check your connection and try again.',fr:'Impossible de charger ce chapitre — vérifiez votre connexion et réessayez.',ar:'تعذر تحميل هذا الفصل — تحقق من اتصالك وحاول مرة أخرى.',es:'No se pudo cargar este capítulo — comprueba tu conexión y vuelve a intentarlo.',da:'Kunne ikke indlæse kapitlet — tjek din forbindelse og prøv igen.',de:'Kapitel konnte nicht geladen werden — bitte Verbindung prüfen und erneut versuchen.',uk:'Не вдалося завантажити розділ — перевірте з’єднання та повторіть.',pl:'Nie udało się załadować rozdziału — sprawdź połączenie i spróbuj ponownie.',ur:'یہ باب لوڈ نہیں ہو سکا — کنکشن چیک کریں اور دوبارہ کوشش کریں۔',fa:'بارگذاری این فصل ممکن نشد — اتصال خود را بررسی کنید و دوباره امتحان کنید.'}[lang] || 'Could not load this chapter — check your connection and try again.';
+        const retryLabel = {en:'Reload',fr:'Recharger',ar:'إعادة تحميل',es:'Recargar',da:'Genindlæs',de:'Neu laden',uk:'Перезавантажити',pl:'Przeładuj',ur:'دوبارہ لوڈ کریں',fa:'بارگذاری مجدد'}[lang] || 'Reload';
+        main.innerHTML = `<div style="padding:3rem;text-align:center;opacity:.7"><p style="margin-bottom:1rem">${errMsg}</p><button onclick="location.reload()" style="padding:0.5rem 1.25rem;border-radius:8px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer">${retryLabel}</button></div>`;
+      }
+    });
     return;
   }
   _finishOpenChapter(index);

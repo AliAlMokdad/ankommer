@@ -6,7 +6,11 @@
     // above flashes for light-mode users until app.js runs. Read saved
     // preference first, then prefers-color-scheme, fall back to dark.
     try {
-      var t = localStorage.getItem('ankommer-theme');
+      // ThemeManager.set writes to 'ankommer_theme' (underscore). Read the
+      // canonical key first, fall back to the legacy hyphen key for users
+      // whose preference was saved before the alignment fix. Without this,
+      // returning visitors saw a dark flash before the real preference loaded.
+      var t = localStorage.getItem('ankommer_theme') || localStorage.getItem('ankommer-theme');
       if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', t);
     } catch (e) {}
@@ -34,7 +38,7 @@
          ignore it when set via meta — it must be an HTTP header to
          work. Listed for reference.
   ─────────────────────────────────────────────────────────────────── -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.open-meteo.com https://open.er-api.com https://api.counterapi.dev https://ankommer-bjorn-proxy.ankommer.workers.dev; base-uri 'self'; form-action 'self'; object-src 'none';" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.open-meteo.com https://archive-api.open-meteo.com https://open.er-api.com https://api.counterapi.dev https://api.dataforsyningen.dk https://api.allorigins.win https://ankommer-bjorn-proxy.ankommer.workers.dev; base-uri 'self'; form-action 'self'; object-src 'none';" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), accelerometer=(), gyroscope=()" />
   <title>Moving to Denmark in 2026 — The Complete Guide | ANKOMMER</title>
@@ -1162,10 +1166,10 @@
      some browsers (Firefox especially) that didn't reliably coalesce the
      prefetched response with the script-src request. -->
 
-<script defer src="js/bjorn.js?v=40"></script>
+<script defer src="js/bjorn.js?v=41"></script>
 <script defer src="js/calculators.js?v=35"></script>
 <script defer src="js/apis.js?v=29"></script>
-<script defer src="js/app.js?v=58"></script>
+<script defer src="js/app.js?v=59"></script>
 <!-- Shared backdrop for mobile modals (lang dropdown, Bjørn panel) -->
 <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 </body>
