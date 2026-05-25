@@ -306,6 +306,10 @@ h4 { font-size: 1rem; font-weight: 600; }
 #loader.done {
   opacity: 0; visibility: hidden; pointer-events: none;
 }
+/* Reload navigations (SW auto-update or user F5) skip the brand-intro
+   splash — set by an inline script in <head> before first paint. The
+   user has already seen the loader on the original visit. */
+html.skip-loader #loader { display: none; }
 
 .loader-wordmark {
   font-family: var(--font-display);
@@ -380,6 +384,17 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 [data-theme="light"] .nav-logo { color: var(--text); }
 .logo-a { color: var(--flag-red); }
+
+/* Trademark superscript — scales with parent font-size so it looks
+   proportional on the small nav wordmark and the large loader wordmark. */
+.brand-tm {
+  font-size: 0.42em;
+  font-weight: 700;
+  vertical-align: super;
+  letter-spacing: 0;
+  margin-left: 0.08em;
+  opacity: 0.85;
+}
 
 .nav-center {
   flex: 1;

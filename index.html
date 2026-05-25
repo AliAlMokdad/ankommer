@@ -93,6 +93,19 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png" />
   <meta name="theme-color" content="#C60C30" />
   <script>
+    // Suppress the brand-intro loader on reload navigations. The Service Worker
+    // auto-reloads the page after a new version activates (see SW block below),
+    // which would otherwise re-show the splash a second time. Manual F5 also
+    // counts as reload — that's fine, the user has already seen the brand.
+    // Runs before first paint, so the CSS rule (main.css) hides #loader from
+    // the moment the body parses it. Wrapped in try/catch because some old
+    // browsers don't support performance navigation timing.
+    try {
+      var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+      if (nav && nav.type === 'reload') document.documentElement.classList.add('skip-loader');
+    } catch (e) {}
+  </script>
+  <script>
     // Register service worker and prompt user when a new version is ready.
     // Avoids the silent v→v+1 swap that can leave a tab running stale JS
     // while the SW already controls newer fetch responses.
@@ -243,7 +256,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=59" />
+  <link rel="stylesheet" href="css/main.css?v=60" />
 </head>
 <body>
 
@@ -252,7 +265,7 @@
 <!-- ═══════════════════════════════════ LOADING SCREEN ═══════════════════════════════════ -->
 <div id="loader">
   <div class="loader-wordmark">
-    <span class="loader-a">A</span><span class="loader-rest">NKOMMER</span>
+    <span class="loader-a">A</span><span class="loader-rest">NKOMMER<sup class="brand-tm" aria-hidden="true">™</sup></span>
   </div>
   <div class="loader-sub" data-i18n="loader_sub">Preparing your Denmark…</div>
   <div class="loader-bar"><div class="loader-fill"></div></div>
