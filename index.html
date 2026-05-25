@@ -118,21 +118,48 @@
     // Register service worker and prompt user when a new version is ready.
     // Avoids the silent v→v+1 swap that can leave a tab running stale JS
     // while the SW already controls newer fetch responses.
+    //
+    // ──────────────────────────────────────────────────────────────────────
+    // CHAIN-RELOAD GUARD (added 2026-05-25)
+    // Previous bug: if a returning visitor had multiple SW versions queued
+    // (e.g. v91 controller + v92 waiting + v93 just deployed), the page
+    // would auto-reload once per version step — v91 → v92 → v93 = two
+    // sequential reloads, each showing the brand splash. Cap auto-reload
+    // at ONE per browser session. After the first SW-triggered reload,
+    // subsequent SW updates activate silently and the user picks them up
+    // on their next manual navigation.
+    // ──────────────────────────────────────────────────────────────────────
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js').then(reg => {
           // A waiting worker means a new version downloaded but didn't activate
+          var alreadyReloaded = false;
+          try { alreadyReloaded = sessionStorage.getItem('ankommer_sw_session_reloaded') === '1'; } catch (e) {}
+
           const promptUpdate = (waiting) => {
             if (!waiting) return;
+            // If we've already done our one auto-reload this session, just
+            // tell the new SW to activate silently. No second splash, no
+            // jarring page swap. The user gets the new version on their
+            // next manual navigation / tab open.
+            if (alreadyReloaded) {
+              waiting.postMessage({ type: 'SKIP_WAITING' });
+              return;
+            }
             // Reload once the new SW takes control to swap to fresh assets.
-            // sessionStorage flag tells the pre-paint script (top of <head>)
-            // to suppress the brand-intro splash on the reload navigation —
-            // belt-and-suspenders alongside the controller-presence check.
+            // sessionStorage flags tell (a) the pre-paint script in <head>
+            // to suppress the brand-intro splash on the reload navigation,
+            // and (b) future promptUpdate calls in this session to skip the
+            // reload entirely (chain-reload guard above).
             let reloaded = false;
             navigator.serviceWorker.addEventListener('controllerchange', () => {
               if (reloaded) return;
               reloaded = true;
-              try { sessionStorage.setItem('ankommer_sw_reloading', '1'); } catch (e) {}
+              alreadyReloaded = true;
+              try {
+                sessionStorage.setItem('ankommer_sw_reloading', '1');
+                sessionStorage.setItem('ankommer_sw_session_reloaded', '1');
+              } catch (e) {}
               window.location.reload();
             });
             waiting.postMessage({ type: 'SKIP_WAITING' });
@@ -269,7 +296,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=61" />
+  <link rel="stylesheet" href="css/main.css?v=62" />
 </head>
 <body>
 
