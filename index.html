@@ -14,6 +14,29 @@
   <meta charset="UTF-8" />
   <meta http-equiv="content-language" content="en" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <!-- ─── Security headers via <meta http-equiv> ────────────────────────
+       GitHub Pages doesn't serve custom HTTP headers, so these are the
+       only headers we can set. Covers ~60% of the security-header
+       protection (CSP + Referrer-Policy + Permissions-Policy). The
+       remaining 3 (HSTS, X-Frame-Options, X-Content-Type-Options) need
+       real HTTP headers — added later via Cloudflare DNS in front.
+
+       CSP notes:
+       - 'unsafe-inline' is required for scripts because the pre-paint
+         theme script above is inline, plus the chapter pages use
+         onclick="..." attributes. Acceptable trade for now; tighten
+         with nonces/hashes later.
+       - connect-src lists every API the site actually calls today:
+         Open-Meteo (weather), exchange-rate, counterapi.dev (visitor
+         counter), and the Cloudflare Worker that proxies Bjørn.
+       - frame-ancestors 'none' is in here for completeness but browsers
+         ignore it when set via meta — it must be an HTTP header to
+         work. Listed for reference.
+  ─────────────────────────────────────────────────────────────────── -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.open-meteo.com https://open.er-api.com https://api.counterapi.dev https://ankommer-bjorn-proxy.ankommer.workers.dev; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none';" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), accelerometer=(), gyroscope=()" />
   <title>Moving to Denmark in 2026 — The Complete Guide | ANKOMMER</title>
   <meta name="description" content="The complete guide to moving to Denmark — CPR, MitID, housing, banking, healthcare, taxes, work permits, family reunification. 16 chapters, 10 languages. Free." />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
