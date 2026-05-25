@@ -93,16 +93,25 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png" />
   <meta name="theme-color" content="#C60C30" />
   <script>
-    // Suppress the brand-intro loader on reload navigations. The Service Worker
-    // auto-reloads the page after a new version activates (see SW block below),
-    // which would otherwise re-show the splash a second time. Manual F5 also
-    // counts as reload — that's fine, the user has already seen the brand.
-    // Runs before first paint, so the CSS rule (main.css) hides #loader from
-    // the moment the body parses it. Wrapped in try/catch because some old
-    // browsers don't support performance navigation timing.
+    // Suppress the brand-intro loader for any visit where the Service Worker
+    // is already controlling the page. This catches three cases at once:
+    //   1. Returning visitors (SW from prior session is already active)
+    //   2. SW auto-reload after a new version activates (new SW is controller)
+    //   3. Manual F5 / Cmd-R (SW still controls)
+    // First-ever visitors hit `controller === null` (SW hasn't installed yet
+    // at this point in the page lifecycle) and so the splash plays normally.
+    // Belt-and-suspenders sessionStorage flag — set by the SW update handler
+    // below right before location.reload() — covers any edge case where the
+    // controller-check misses (e.g. SW was unregistered but page reloaded).
+    // Runs before first paint via the CSS rule `html.skip-loader #loader {
+    // display: none }` in main.css, so #loader is hidden the moment <body>
+    // parses it. Wrapped in try/catch for old browsers.
     try {
-      var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
-      if (nav && nav.type === 'reload') document.documentElement.classList.add('skip-loader');
+      var hasController = !!(navigator.serviceWorker && navigator.serviceWorker.controller);
+      var flag = false;
+      try { flag = sessionStorage.getItem('ankommer_sw_reloading') === '1'; } catch (e) {}
+      if (hasController || flag) document.documentElement.classList.add('skip-loader');
+      if (flag) { try { sessionStorage.removeItem('ankommer_sw_reloading'); } catch (e) {} }
     } catch (e) {}
   </script>
   <script>
@@ -115,11 +124,15 @@
           // A waiting worker means a new version downloaded but didn't activate
           const promptUpdate = (waiting) => {
             if (!waiting) return;
-            // Reload once the new SW takes control to swap to fresh assets
+            // Reload once the new SW takes control to swap to fresh assets.
+            // sessionStorage flag tells the pre-paint script (top of <head>)
+            // to suppress the brand-intro splash on the reload navigation —
+            // belt-and-suspenders alongside the controller-presence check.
             let reloaded = false;
             navigator.serviceWorker.addEventListener('controllerchange', () => {
               if (reloaded) return;
               reloaded = true;
+              try { sessionStorage.setItem('ankommer_sw_reloading', '1'); } catch (e) {}
               window.location.reload();
             });
             waiting.postMessage({ type: 'SKIP_WAITING' });
@@ -256,7 +269,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=60" />
+  <link rel="stylesheet" href="css/main.css?v=61" />
 </head>
 <body>
 
