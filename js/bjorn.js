@@ -6,13 +6,17 @@
 const Bjorn = (() => {
 
   /* ── STATE ──────────────────────────────────────────── */
-  // After deploying cloudflare-worker/bjorn-proxy.js, set PROXY_URL to your
-  // Worker URL (e.g. 'https://ankommer-bjorn-proxy.YOURID.workers.dev').
-  // Once set, the key below is unused and can be removed; rotate the old key at console.groq.com/keys.
-  const PROXY_URL = '';
+  // Bjørn requests are proxied through a Cloudflare Worker so the Groq API
+  // key is never exposed in client source. Deploy at cloudflare-worker/.
+  // The Worker stores GROQ_API_KEY as an encrypted secret and forwards the
+  // call server-side. See cloudflare-worker/DEPLOY.md for setup details.
+  const PROXY_URL = 'https://ankommer-bjorn-proxy.ankommer.workers.dev';
 
-  // Fallback direct key — used only when PROXY_URL is empty. Remove after Worker is live.
-  const _k = ['gsk_yHEFAAEzAPNVFcQftwJa', 'WGdyb3FYUSnzqVYzlCvsmp', '7RgpjHiJzD'].join('');
+  // Legacy fallback — empty after the Worker went live (2026-05-25). Kept
+  // as an empty string so the apiKey reference below doesn't throw. When
+  // PROXY_URL is truthy, callGroq omits the Authorization header and lets
+  // the Worker inject the key from its secret.
+  const _k = '';
 
   const HISTORY_KEY = 'ankommer_bjorn_history';
   let apiKey = _k;
