@@ -2089,15 +2089,25 @@ body.app-active .footer-top {
 }
 
 .bjorn-panel-header {
-  display: flex; align-items: center; gap: 12px;
-  padding: 16px; background: var(--danish-dusk);
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; background: var(--danish-dusk);
   flex-shrink: 0;
 }
-.bjorn-panel-avatar { width: 52px; height: 52px; flex-shrink: 0; }
+.bjorn-panel-avatar { width: 38px; height: 38px; flex-shrink: 0; }
 .bjorn-svg-lg { width: 100%; height: 100%; }
-.bjorn-panel-info { flex: 1; }
-.bjorn-panel-info h3 { color: white; font-size: 1rem; margin-bottom: 2px; }
-.bjorn-status { font-size: 0.72rem; color: rgba(255,255,255,0.55); }
+.bjorn-panel-info { flex: 1; min-width: 0; }
+.bjorn-panel-info h3 { color: white; font-size: 0.92rem; margin-bottom: 0; line-height: 1.15; }
+.bjorn-status {
+  font-size: 0.66rem; color: rgba(255,255,255,0.55);
+  display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+/* When the user has sent at least one message, collapse the starter chips
+   down to only the "Translate a document" affordance. Starter prompts are
+   noise once a conversation is underway. */
+.bjorn-quick.collapsed .quick-btn:not(.quick-btn-translate) {
+  display: none;
+}
 .bjorn-header-actions {
   display: flex; align-items: center; gap: 2px; margin-left: auto;
 }

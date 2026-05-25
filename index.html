@@ -296,7 +296,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=63" />
+  <link rel="stylesheet" href="css/main.css?v=64" />
 </head>
 <body>
 
@@ -999,6 +999,7 @@
       <div class="footer-bottom-left">
         <p class="footer-made" data-i18n="footer_made">Made with ❤️ for everyone who ever arrived somewhere new.</p>
         <p class="footer-legal" data-i18n="footer_legal">ANKOMMER is an independent guide that organizes public information, built for people who have already moved to Denmark — or are about to, through legal channels. Always verify important information with official Danish authorities.</p>
+        <p class="footer-copyright">© 2026 ANKOMMER™. All rights reserved.</p>
         <!-- Inline privacy notice — no third-party tracking, no ad cookies,
              everything stored locally in your browser. Audit caught the
              absence of a privacy link required by EU GDPR-style guidance
@@ -1079,7 +1080,7 @@
       </div>
       <div class="bjorn-panel-info">
         <h3 id="bjorn-panel-title">Bjørn</h3>
-        <span class="bjorn-status" data-i18n="bjorn_status">Your Denmark guide since 836 AD</span>
+        <span class="bjorn-status" data-i18n="bjorn_status">Denmark guide since 836 AD</span>
       </div>
       <div class="bjorn-header-actions">
         <button class="bjorn-icon-btn" id="bjorn-translate-btn" title="Translate a Danish document" aria-label="Translate document" data-i18n-title="bjorn_translate_btn_title" data-i18n-aria="bjorn_translate_btn_aria">📋</button>
@@ -1154,17 +1155,17 @@
 <!-- v24: cache-busting query string forces a fresh fetch when we ship new JS,
      since /js/* historically had a 1-year immutable cache header. Bump the
      query string in lockstep with sw.js CACHE_NAME on every release. -->
-<script defer src="js/data.js?v=36"></script>
+<script defer src="js/data.js?v=37"></script>
 <script defer src="js/data-chapters-meta.js?v=31"></script>
 <!-- Removed prefetch tag: js/data-chapters.js is dynamically injected on
      first openChapter() call. The prefetch caused a duplicate fetch in
      some browsers (Firefox especially) that didn't reliably coalesce the
      prefetched response with the script-src request. -->
 
-<script defer src="js/bjorn.js?v=39"></script>
+<script defer src="js/bjorn.js?v=40"></script>
 <script defer src="js/calculators.js?v=35"></script>
-<script defer src="js/apis.js?v=28"></script>
-<script defer src="js/app.js?v=57"></script>
+<script defer src="js/apis.js?v=29"></script>
+<script defer src="js/app.js?v=58"></script>
 <!-- Shared backdrop for mobile modals (lang dropdown, Bjørn panel) -->
 <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 </body>

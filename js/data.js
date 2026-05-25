@@ -142,7 +142,7 @@ const TRANSLATIONS = {
     footer_built_by: "Built by",
     footer_built_by_suffix: "— say hi.",
     footer_legal: "ANKOMMER is an independent guide that organizes public information, built for people who have already moved to Denmark — or are about to, through legal channels. Always verify important information with official Danish authorities.",
-    bjorn_status: "Your Denmark guide since 836 AD",
+    bjorn_status: "Denmark guide since 836 AD",
     bjorn_api_info: "Bjørn is your AI guide to Denmark — powered by the latest language models and ready to answer anything.",
     bjorn_api_save: "Start Chatting with Bjørn",
     bjorn_api_note: "Your conversation stays on this device. Bjørn never shares what you ask.",

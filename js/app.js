@@ -1513,9 +1513,15 @@ const _loadFullChapters = () => {
   if (_chaptersLoadPromise) return _chaptersLoadPromise;
   _chaptersLoadPromise = new Promise((resolve) => {
     const s = document.createElement('script');
-    s.src = 'js/data-chapters.js?v=31';
+    s.src = 'js/data-chapters.js?v=32';
     s.onload = () => { _chaptersFullLoaded = true; resolve(); };
-    s.onerror = () => resolve(); // fail gracefully — content just won't show
+    s.onerror = () => {
+      // Clear the cached promise so a future retry (e.g. after the user
+      // regains connectivity) actually re-injects the script instead of
+      // hitting the resolved-but-failed cache and silently doing nothing.
+      _chaptersLoadPromise = null;
+      resolve();
+    };
     document.head.appendChild(s);
   });
   return _chaptersLoadPromise;

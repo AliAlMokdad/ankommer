@@ -4524,7 +4524,7 @@ ur:`<p>ڈنمارک تمام CPR نمبر رکھنے والے باشندوں ک�
 <ul>
   <li><strong>No lectures without dialogue.</strong> Danish teaching culture is deeply Socratic. Professors expect questions, challenge, and debate. Sitting silently is odd — participation is part of the grade.</li>
   <li><strong>First-name basis.</strong> You address professors by first name. This is not rude — it's the norm.</li>
-  <li><strong>Group work is dominant.</strong> Most courses involve substantial group projects. Danes are direct and constructive in groups.</li>
+  <li><strong>Group work is dominant.</strong> Most courses involve substantial group projects. Expect direct and constructive feedback.</li>
   <li><strong>Rustur / studenterhus:</strong> Every university has a student house and an intro camp (rustur) — go to both. This is how you make friends in Denmark.</li>
   <li><strong>Studiekort</strong> gives ~50% discount on all Danish public transport. Essential.</li>
   <li><strong>Kollegium (student housing):</strong> Apply as early as possible. Waiting lists can be 6–12 months. Apply at <a href="https://www.kollegierneskontor.dk" target="_blank" rel="noopener">kollegierneskontor.dk</a></li>
@@ -6936,12 +6936,12 @@ ur:`<p><strong>Hygge</strong> (تلفظ: "ہوگا") ایک ڈینش تصور ہ
 <p><strong>In practice, this means:</strong></p>
 <ul>
   <li>Bragging about your salary, car, or achievements is considered very bad taste</li>
-  <li>Danes rarely introduce themselves with their titles ("I'm a doctor / director / professor")</li>
+  <li>Introducing yourself by your title ("I'm a doctor / director / professor") is uncommon</li>
   <li>Status displays (luxury goods, name-dropping) are met with quiet social disapproval</li>
-  <li>This is also why Danes can seem reserved when you first meet them — effusive self-promotion is culturally uncomfortable</li>
+  <li>This is also why first meetings can feel reserved — effusive self-promotion is culturally uncomfortable</li>
 </ul>
-<p class="callout-info"><strong>For newcomers:</strong> Don't confuse Janteloven with low confidence. Danes are assertive, direct, and proud — they just express it collectively rather than individually. Lead with curiosity about others, not your own CV.</p>
-<p>Younger Danes increasingly discuss Janteloven's role in shaping ambition and entrepreneurship. Its influence varies significantly by age group and industry.</p>`,
+<p class="callout-info"><strong>For newcomers:</strong> Don't confuse Janteloven with low confidence. Confidence is real and present — it is just expressed collectively rather than individually. Lead with curiosity about others, not your own CV.</p>
+<p>Younger generations increasingly discuss Janteloven's role in shaping ambition and entrepreneurship. Its influence varies significantly by age group and industry.</p>`,
 da:`<p><strong>Janteloven</strong> er et kulturelt begreb beskrevet af den dansk-norske forfatter Aksel Sandemose i sin roman fra 1933. Det beskriver en række uskrevne sociale normer, der betoner kollektiv lighed frem for individuelle præstationer.</p>
 <p><strong>Jantelovens ti regler (i kortform):</strong></p>
 <ol>
@@ -9524,7 +9524,7 @@ de:`<p>Rechtliche Hilfe ist in Dänemark auch bei begrenztem Einkommen auf versc
 <ol>
   <li>You have the right to appeal to the Immigration Appeals Board (Udlændingenævnet) within the specified deadline (usually stated in the decision letter)</li>
   <li>You may continue to stay in Denmark during the appeal process if you applied before your permit expired</li>
-  <li>Seek legal advice immediately — the Danish Refugee Council and legal aid offices can advise on appeal prospects</li>
+  <li>Seek legal advice immediately — legal aid offices and the Danish Bar Association (Advokatsamfundet) can review your case and explain next steps. ANKOMMER does not handle, assess, advise on, or affect any individual case.</li>
 </ol>
 <p><strong>SIRI — the Danish Agency for International Recruitment and Integration:</strong> Your main immigration authority for work and family permits. Their website has English guidance. <a href="https://www.siri.dk/en" target="_blank" rel="noopener">siri.dk/en</a></p>
 <p><strong>Udlændingenævnet — the Immigration Appeals Board:</strong> Independent body for appeals on immigration decisions. <a href="https://www.udlaendingenaevnet.dk/en" target="_blank" rel="noopener">udlaendingenaevnet.dk/en</a></p>`,

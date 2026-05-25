@@ -452,15 +452,15 @@ const APIs = (() => {
 
   const MONTH_COMMENTARY = [
     "January in Denmark — cold, dark, candle-and-Vitamin-D season. Hygge at peak levels. Lean in.",
-    "February is marginally better than January. Marginally. The days are getting longer though — Danes notice and celebrate every extra minute of daylight.",
-    "March brings the first signs of spring. Danes emerge blinking into the pale sunshine. Café terraces open optimistically, usually too early.",
-    "April is genuinely lovely. Cherry blossoms, longer evenings, Danes rediscovering their bikes with remarkable enthusiasm.",
-    "May is probably the best month in Denmark. Everything is green, the sun stays up until 9pm, and people are almost... cheerful.",
+    "February is marginally better than January. Marginally. The days are getting longer though — every extra minute of daylight is noticed and celebrated.",
+    "March brings the first signs of spring. The country emerges blinking into the pale sunshine. Café terraces open optimistically, usually too early.",
+    "April is genuinely lovely. Cherry blossoms, longer evenings, bikes coming out everywhere with remarkable enthusiasm.",
+    "May is probably the best month in Denmark. Everything is green, the sun stays up until 9pm, and the mood lifts everywhere.",
     "June in Denmark is magical. Endless daylight, outdoor concerts, cold beers by the harbour. You'll wonder why you ever hesitated.",
     "July is peak Danish summer. Half the country goes on mandatory vacation — that's not an exaggeration. Enjoy it.",
-    "August is the second-best month. Summer lingers and there's a golden quality to the light. The Danes call it 'late summer' and savour every day.",
+    "August is the second-best month. Summer lingers and there's a golden quality to the light. Locally it's called 'late summer' — savour every day of it.",
     "September is still decent — like a gentle warning that winter is coming. The light turns amber and beautiful. Buy a good jacket soon.",
-    "October and the Danes start hunkering down. It's actually quite cosy if you lean into it. This is the month to buy candles. Many candles.",
+    "October and the country starts hunkering down. It's actually quite cosy if you lean into it. This is the month to buy candles. Many candles.",
     "November is tough, not going to lie. Grey, wet, dark. Invest in a quality rain jacket. And more candles. Vitamin D supplements help.",
     "December — the Danes rescue this month with Christmas markets, æbleskiver, and industrial quantities of hygge. It's actually genuinely lovely.",
   ];

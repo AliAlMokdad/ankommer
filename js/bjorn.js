@@ -51,7 +51,10 @@ const Bjorn = (() => {
     const msgs = document.getElementById('bjorn-messages');
     if (msgs) msgs.innerHTML = '';
     const quick = document.getElementById('bjorn-quick');
-    if (quick) quick.style.display = '';
+    if (quick) {
+      quick.style.display = '';
+      quick.classList.remove('collapsed');
+    }
     const lang = window.currentLang || 'en';
     const greetings = {
       en: `Hej! I'm Bjørn — your guide to life in Denmark.\n\nI've lived here for about 1,200 years, so I know a few things. Ask me anything — CPR numbers, lease agreements, Danish work culture, how to find a doctor.\n\n*Hvad kan jeg hjælpe dig med?* (What can I help you with?)`,
@@ -77,9 +80,15 @@ const Bjorn = (() => {
     conversationHistory.forEach(m => {
       renderMessage(m.content, m.role === 'assistant' ? 'bjorn' : 'user');
     });
-    // Quick prompts stay visible across the whole session for
-    // discoverability. They are starter shortcuts, not just a
-    // first-message affordance.
+    // After the user has sent at least one message, collapse the starter
+    // chips down to just the "Translate a document" affordance. Starter
+    // prompts are noise once a conversation is underway — only the
+    // document-helper stays useful at any point in the session.
+    const hasUserMessage = conversationHistory.some(m => m.role === 'user');
+    if (hasUserMessage) {
+      const quick = document.getElementById('bjorn-quick');
+      if (quick) quick.classList.add('collapsed');
+    }
   };
 
   /* ── SYSTEM PROMPT ──────────────────────────────────── */
@@ -226,7 +235,7 @@ You are Bjørn — a warm, knowledgeable, slightly witty Viking who has lived in
 ║    1. One sentence of empathy: "I hear this is urgent."      ║
 ║    2. Hard redirect to professionals:                        ║
 ║       - Dansk Flygtningehjælp (DRC): drc.ngo/denmark         ║
-║       - Refugees Welcome Denmark                             ║
+║       - Advokatsamfundet (Danish Bar Association)            ║
 ║       - Local advokatvagt (lawyer hour) at libraries         ║
 ║       - Emergency: 112 if there is immediate danger          ║
 ║    3. For general migration questions, point to LEGAL        ║
@@ -296,7 +305,7 @@ this list.
 ▸ Free Danish classes: 5 years entitlement (not 3) within first 5
   years of residence. There is a DKK 2,000 deposit per module,
   refunded if you complete on time. Au pairs, family-reunified, and
-  refugees are exempt. Source: studieskolen.dk, clavis.org.
+  §7 protection holders are exempt. Source: studieskolen.dk, clavis.org.
 
 ▸ Address registration deadline: 5 days after moving in (CPR Act §12).
   Late registration is a fineable offence. The "3 months" rule is the
@@ -401,7 +410,7 @@ HEALTHCARE: Mostly tax-funded but NOT "all free" — prescriptions have co-pays 
 
 A-KASSE: Voluntary unemployment insurance. ~DKK 400–600/month membership. Generally 12-month qualifying period before you can claim benefits. Profession-specific funds exist: CA a-kasse, Akademikernes A-kasse (academics), ASE (self-employed). Max benefit DKK 21,091/month in 2025.
 
-HOUSING: Brutally competitive in Copenhagen. Platforms BoligPortal.dk, Lejebolig.dk, andelsbolig.dk. Verify ANY landlord on ois.dk before sending money — housing scams are the #1 financial threat. Deposit max 3 months + prepaid rent max 3 months = 6 months upfront max under Lejeloven §17. Anything above is illegal.
+HOUSING: Competitive in Copenhagen. Platforms BoligPortal.dk, Lejebolig.dk, andelsbolig.dk. Verify ANY landlord on ois.dk before sending money — housing scams are the #1 financial threat. Deposit max 3 months + prepaid rent max 3 months = 6 months upfront max under Lejeloven §17. Anything above is illegal.
 
 NEMKONTO: The bank account the state pays you into (tax refunds, børnecheck, sygedagpenge, pension). Register at nemkonto.dk via MitID. Without it, the state cannot pay you anything.
 
@@ -410,10 +419,10 @@ CHILDREN & FAMILY: Børnecheck quarterly, rates change yearly — verify at borg
 STARTUPS: ApS minimum capital is DKK 20,000 (since 27 Feb 2025). Register CVR at virk.dk. VAT registration mandatory above DKK 50,000/yr turnover. Self-employed pay B-skat in 10 monthly instalments.
 
 CULTURAL NOTES (apply judgement, these are tendencies not laws):
-- Danes arrive on time. 5 minutes late is rude.
+- Punctuality is expected; arriving 5 minutes late is considered rude.
 - Leaving work at 4pm is normal and expected.
 - Splitting bills equally is the default, including on dates.
-- Janteloven is satire, but reservedness about status displays is real.
+- Janteloven is satire, but understated status displays are the norm.
 - Babies sleeping outdoors in prams is normal, even in winter.
 - Making close Danish friends takes 1–2 years; foreningsliv (clubs) is the path.
 
@@ -549,7 +558,7 @@ Use the Salary Calculator on this page for your exact take-home.`,
 
 **Apply fast:** Good Copenhagen apartments get 50+ applications in the first hours.
 
-*Source: Lejeloven §§9, 34, 86 — see lifeindenmark.borger.dk → Renting a home.*`,
+*Source: Lejeloven §§9, 17, 86 — see lifeindenmark.borger.dk → Renting a home.*`,
 
     akasse: `The a-kasse (arbejdsløshedskasse / unemployment insurance fund) is one of the most important things you can do early in Denmark — and most newcomers don't know it exists until they need it.
 
@@ -797,8 +806,18 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       .replace(/^## (.*$)/gm, '<h3 style="margin:8px 0 4px">$1</h3>')
       .replace(/^- (.*$)/gm, '• $1<br>')
       .replace(/^\d+\. (.*$)/gm, (m, p1, offset, str) => `${m}<br>`)
-      // Markdown links: escapeHtml turned & into &amp; so we match both forms in URLs
-      .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color:var(--nordic-blue)">$1 ↗</a>')
+      // Markdown links: escapeHtml turned & into &amp; so we match both forms in URLs.
+      // Allowlist canonical Danish gov + trusted hosts. A jailbroken Bjørn could
+      // emit phishing-shaped links (e.g. fake "borger-update.dk") — out-of-list
+      // URLs render as label + hostname (still readable, no clickable anchor).
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, (m, label, url) => {
+        const ALLOW = ['borger.dk','skat.dk','virk.dk','sundhed.dk','siri.dk','nyidanmark.dk','um.dk','udlaendingenaevnet.dk','domstol.dk','advokatsamfundet.dk','drc.ngo','ois.dk','nemkonto.dk','cpr.dk','jobnet.dk','rejseplanen.dk','workindenmark.dk','positivlisten.dk','studieskolen.dk','clavis.org','kollegierneskontor.dk','boligportal.dk','lejebolig.dk','andelsbolig.dk','ankommer.org','wikipedia.org','dr.dk','dst.dk','politi.dk','atp.dk','eboks.dk','mitid.dk','bibliotek.dk'];
+        let host = '';
+        try { host = new URL(url).hostname.toLowerCase(); } catch (e) { return label; }
+        const safe = ALLOW.some(h => host === h || host.endsWith('.' + h));
+        if (!safe) return `${label} (${host})`;
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color:var(--nordic-blue)" title="${host}">${label} ↗</a>`;
+      })
       .replace(/\n\n/g, '<br><br>')
       .replace(/\n/g, '<br>');
   };
@@ -874,9 +893,10 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     const input = document.getElementById('bjorn-input');
     if (input) { input.value = ''; input.style.height = 'auto'; }
 
-    // Quick prompts stay visible — they are persistent shortcuts, not
-    // a first-message-only affordance. Users (especially newcomers)
-    // benefit from seeing them throughout the session.
+    // Collapse the starter chips after the first send — only the
+    // "Translate a document" chip remains useful mid-conversation.
+    const quick = document.getElementById('bjorn-quick');
+    if (quick) quick.classList.add('collapsed');
 
     // Hide badge
     const badge = document.getElementById('bjorn-badge');
