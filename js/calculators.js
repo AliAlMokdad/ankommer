@@ -320,8 +320,12 @@ const Calculators = (() => {
       lastDonut = { id:'salary-donut', net:r.net, tax:r.totalTax, gross:r.gross };
       drawDonut('salary-donut', r.net, r.totalTax, r.gross);
 
-      // Update center
-      if (netVal) netVal.textContent = formatDKK(r.net);
+      // Pre-seed the center to "0" so the animation starts cleanly. The
+      // earlier code set the final value here AND then animated 0→final,
+      // which made the donut flash the answer for one paint frame before
+      // resetting to 0 to count up. Setting to 0 here matches what the
+      // animation's first frame would render anyway.
+      if (netVal) netVal.textContent = formatDKK(0);
 
       // Breakdown rows
       if (breakdown) {
