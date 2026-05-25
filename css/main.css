@@ -317,6 +317,11 @@ html.skip-loader #loader { display: none; }
   font-weight: 900;
   color: white;
   letter-spacing: 0.08em;
+  /* Force LTR rendering so the ™ stays AFTER ANKOMMER in RTL languages
+     (ar, ur, fa). Without this, the bidi algorithm treats ™ as a neutral
+     character and renders it on the leading edge, producing ™ANKOMMER. */
+  direction: ltr;
+  unicode-bidi: isolate;
 }
 .loader-a { color: var(--flag-red); }
 .loader-rest {
@@ -381,6 +386,11 @@ html.skip-loader #loader { display: none; }
   border: none;
   padding: 0;
   line-height: inherit;
+  /* Force LTR rendering — brand is "ANKOMMER™", the ™ must stay AFTER the
+     name in RTL languages. unicode-bidi: isolate keeps the wordmark its
+     own bidi context so surrounding Arabic/Urdu/Persian text never flips it. */
+  direction: ltr;
+  unicode-bidi: isolate;
 }
 [data-theme="light"] .nav-logo { color: var(--text); }
 .logo-a { color: var(--flag-red); }
