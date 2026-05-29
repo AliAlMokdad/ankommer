@@ -3398,6 +3398,19 @@ body.app-active .footer-top {
   }
 }
 
+/* When the install banner is visible on a phone it docks at the bottom and
+   collides with the Bjørn FAB: the banner (z-index 8000) paints over the FAB
+   (z-index 500), hiding its lower half and the dismiss/install controls under
+   it. Raising/lowering z-index only swaps which element gets buried, so lift
+   the FAB clear of the banner instead — Material's snackbar+FAB pattern. The
+   banner only ever appears on Chromium (beforeinstallprompt), which supports
+   :has(); iOS Safari never fires that event so this rule is inert there. */
+@media (max-width: 600px) {
+  body:has(.pwa-install-banner:not(.hidden)) .bjorn-widget {
+    bottom: calc(env(safe-area-inset-bottom) + 88px);
+  }
+}
+
 /* ═══════════════════════════════════════════════════════════
    PRINT STYLES — Clean chapter print layout
 ═══════════════════════════════════════════════════════════ */

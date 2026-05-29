@@ -3056,6 +3056,13 @@ document.addEventListener('DOMContentLoaded', () => {
   _try('ThemeManager', () => ThemeManager.init());
   _try('Atmosphere',   () => Atmosphere.init());
   _try('i18n',         () => i18n.applyAll());
+  // Localize document.title on first paint. applyAll() translates the visible
+  // UI + sets html[lang]/[dir] but does NOT touch <title>; updatePageTitle was
+  // only called from setLang (manual switch) and chapter render. A crawler
+  // hitting ?lang=pl renders Polish body text under the static English title —
+  // hreflang + sitemap advertise 10 per-language URLs that all shared one
+  // SERP title. This call derives the title from the active language at load.
+  _try('pageTitle',    () => updatePageTitle());
 
   // UI
   _try('hideLoader',       () => hideLoader());
