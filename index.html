@@ -244,7 +244,7 @@
           {
             "@type": "Question",
             "name": "What is the Pay Limit Scheme threshold for Denmark in 2025?",
-            "acceptedAnswer": { "@type": "Answer", "text": "DKK 514,000 per year in 2025, rising to DKK 552,000 in 2026. The supplementary scheme is DKK 415,000 (2025) / DKK 446,000 (2026)." }
+            "acceptedAnswer": { "@type": "Answer", "text": "DKK 552,000 per year in 2026 for the standard Pay Limit Scheme; DKK 446,000 for the supplementary scheme. Both are regulated annually on 1 January; see nyidanmark.dk for the current figure." }
           },
           {
             "@type": "Question",
@@ -341,7 +341,7 @@
         <button class="lang-btn" role="menuitemradio" data-lang="es" aria-label="Español" aria-checked="false">🇪🇸 <span>ES</span></button>
         <button class="lang-btn" role="menuitemradio" data-lang="da" aria-label="Dansk" aria-checked="false">🇩🇰 <span>DA</span></button>
         <button class="lang-btn" role="menuitemradio" data-lang="de" aria-label="Deutsch" aria-checked="false">🇩🇪 <span>DE</span></button>
-        <button class="lang-btn" role="menuitemradio" data-lang="uk" aria-label="Українська" aria-checked="false">🇺🇦 <span>UK</span></button>
+        <button class="lang-btn" role="menuitemradio" data-lang="uk" aria-label="Українська" aria-checked="false">🇺🇦 <span>UA</span></button>
         <button class="lang-btn" role="menuitemradio" data-lang="pl" aria-label="Polski" aria-checked="false">🇵🇱 <span>PL</span></button>
         <button class="lang-btn" role="menuitemradio" data-lang="ur" aria-label="اردو" aria-checked="false">🇵🇰 <span>UR</span></button>
         <button class="lang-btn" role="menuitemradio" data-lang="fa" aria-label="فارسی" aria-checked="false">🇮🇷 <span>FA</span></button>
@@ -504,7 +504,7 @@
   <div class="search-modal">
     <div class="search-input-wrap">
       <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="text" id="search-input" placeholder="Search chapters, topics, tasks…" data-i18n-placeholder="search_placeholder" aria-label="Search the guide" autocomplete="off" spellcheck="false" />
+      <input type="text" id="search-input" placeholder="Search chapters, topics, tasks…" data-i18n-placeholder="search_placeholder" aria-label="Search the guide" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="search-listbox" aria-autocomplete="list" aria-haspopup="listbox" />
       <kbd class="search-esc-hint">ESC</kbd>
       <button class="search-close" id="search-close" aria-label="Close search" type="button">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
@@ -670,7 +670,7 @@
           </div>
           <div class="result-breakdown" id="salary-breakdown"></div>
           <div class="result-context" id="salary-context"></div>
-          <p class="tool-disclaimer" data-i18n="salary_disclaimer">AI estimate based on public Danish tax rules. For exact figures, check SKAT.</p>
+          <p class="tool-disclaimer" data-i18n="salary_disclaimer">Estimate based on public Danish tax rules. For exact figures, check SKAT.</p>
         </div>
       </div>
     </div>
@@ -1159,17 +1159,17 @@
 <!-- v24: cache-busting query string forces a fresh fetch when we ship new JS,
      since /js/* historically had a 1-year immutable cache header. Bump the
      query string in lockstep with sw.js CACHE_NAME on every release. -->
-<script defer src="js/data.js?v=38"></script>
+<script defer src="js/data.js?v=39"></script>
 <script defer src="js/data-chapters-meta.js?v=31"></script>
 <!-- Removed prefetch tag: js/data-chapters.js is dynamically injected on
      first openChapter() call. The prefetch caused a duplicate fetch in
      some browsers (Firefox especially) that didn't reliably coalesce the
      prefetched response with the script-src request. -->
 
-<script defer src="js/bjorn.js?v=42"></script>
-<script defer src="js/calculators.js?v=35"></script>
-<script defer src="js/apis.js?v=29"></script>
-<script defer src="js/app.js?v=61"></script>
+<script defer src="js/bjorn.js?v=43"></script>
+<script defer src="js/calculators.js?v=36"></script>
+<script defer src="js/apis.js?v=30"></script>
+<script defer src="js/app.js?v=62"></script>
 <!-- Shared backdrop for mobile modals (lang dropdown, Bjørn panel) -->
 <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 </body>

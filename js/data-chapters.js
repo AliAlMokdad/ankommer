@@ -14,7 +14,7 @@ window.CHAPTERS = [
         content: { en:`<p><strong>EU/EEA/Nordic citizens:</strong> You do not need a visa or work permit. You have the right to live and work in Denmark freely. <strong>Two separate registrations apply:</strong> (1) Your <strong>folkeregister address</strong> must be registered <strong>within 5 days of moving</strong> (CPR Act §12 — this is a fineable offence if you miss it). (2) Your <strong>EU residence document</strong> from SIRI must be obtained if you intend to stay more than 3 months.</p>
 <p><strong>Non-EU citizens</strong> need one of these:</p>
 <ul>
-  <li><strong>Work permit</strong> — requires a job offer from a Danish employer. Most common types: Positive List (for high-demand professions), Pay Limit Scheme (if salary &gt; DKK 514,000/year in 2025, rising to DKK 552,000 in 2026), Fast-track Scheme (for certified companies).</li>
+  <li><strong>Work permit</strong> — requires a job offer from a Danish employer. Most common types: Positive List (for high-demand professions), Pay Limit Scheme (if salary &gt; DKK 552,000/year in 2026), Fast-track Scheme (for certified companies).</li>
   <li><strong>Student visa</strong> — if enrolled at a Danish university or educational institution. Apply at newtodenmark.dk at least 2 months before.</li>
   <li><strong>Family reunification</strong> — to join a Danish citizen or permanent resident. Requirements include income and housing thresholds for the Danish sponsor.</li>
   <li><strong>Startup Denmark visa</strong> — for entrepreneurs with an approved business plan.</li>
@@ -24,7 +24,7 @@ window.CHAPTERS = [
           da:`<p><strong>EU/EØS/Nordiske statsborgere:</strong> Du behøver ikke visum eller arbejdstilladelse. Du har ret til frit at bo og arbejde i Danmark. <strong>To separate registreringer gælder:</strong> (1) Din <strong>folkeregisteradresse</strong> skal registreres <strong>inden for 5 dage efter flytning</strong> (CPR-loven §12 — dette er en bødepligtig overtrædelse, hvis du glemmer det). (2) Dit <strong>EU-opholdsbevis</strong> fra SIRI skal indhentes, hvis du agter at blive mere end 3 måneder.</p>
 <p><strong>Ikke-EU-borgere</strong> har brug for én af disse:</p>
 <ul>
-  <li><strong>Arbejdstilladelse</strong> — kræver et jobtilbud fra en dansk arbejdsgiver. Hyppigste typer: Positivlisten (for efterspurgte erhverv), Beløbsordningen (løn &gt; 514.000 DKK/år i 2025, stiger til 552.000 DKK i 2026), Hurtigvejen (for certificerede virksomheder).</li>
+  <li><strong>Arbejdstilladelse</strong> — kræver et jobtilbud fra en dansk arbejdsgiver. Hyppigste typer: Positivlisten (for efterspurgte erhverv), Beløbsordningen (løn &gt; 552.000 DKK/år i 2026), Hurtigvejen (for certificerede virksomheder).</li>
   <li><strong>Studievisum</strong> — hvis du er indskrevet på et dansk universitet. Ansøg på nyidanmark.dk mindst 2 måneder i forvejen.</li>
   <li><strong>Familiesammenføring</strong> — for at slutte dig til en dansk statsborger eller fastboende. Kravene omfatter indkomst- og boligkrav for den danske sponsor.</li>
   <li><strong>Startup Denmark-visum</strong> — for iværksættere med en godkendt forretningsplan.</li>
@@ -34,7 +34,7 @@ window.CHAPTERS = [
 fr:`<p><strong>Citoyens UE/EEE/nordiques :</strong> Vous n'avez pas besoin de visa ni de permis de travail. Vous avez le droit de vivre et travailler librement au Danemark. <strong>Deux inscriptions distinctes s'appliquent :</strong> (1) Votre <strong>adresse au registre civil (folkeregister)</strong> doit être enregistrée <strong>dans les 5 jours suivant votre emménagement</strong> (loi CPR §12 — infraction punissable d'amende). (2) Votre <strong>document de séjour UE</strong> auprès de SIRI est obligatoire si vous souhaitez rester plus de 3 mois.</p>
 <p><strong>Citoyens non-UE</strong> — il vous faut l'un de ces titres :</p>
 <ul>
-  <li><strong>Permis de travail</strong> — nécessite une offre d'emploi d'un employeur danois. Types les plus courants : Liste positive (professions en tension), Régime de plafond salarial (salaire &gt; 514 000 DKK/an en 2025, 552 000 DKK en 2026), Régime accéléré (entreprises certifiées).</li>
+  <li><strong>Permis de travail</strong> — nécessite une offre d'emploi d'un employeur danois. Types les plus courants : Liste positive (professions en tension), Régime de plafond salarial (salaire &gt; 552 000 DKK/an en 2026), Régime accéléré (entreprises certifiées).</li>
   <li><strong>Visa étudiant</strong> — pour les personnes inscrites dans un établissement d'enseignement danois. Faites la demande sur newtodenmark.dk au moins 2 mois à l'avance.</li>
   <li><strong>Regroupement familial</strong> — pour rejoindre un citoyen danois ou un résident permanent. Les conditions comprennent des exigences de revenus et de logement pour le garant danois.</li>
   <li><strong>Visa Startup Denmark</strong> — pour les entrepreneurs ayant un plan d'affaires approuvé.</li>
@@ -44,7 +44,7 @@ fr:`<p><strong>Citoyens UE/EEE/nordiques :</strong> Vous n'avez pas besoin de vi
 ar:`<p><strong>مواطنو الاتحاد الأوروبي / المنطقة الاقتصادية الأوروبية / الدول الاسكندنافية:</strong> لا تحتاج إلى تأشيرة أو تصريح عمل. لديك الحق في العيش والعمل بحرية في الدنمارك. <strong>تنطبق عليك تسجيلتان منفصلتان:</strong> (1) يجب تسجيل <strong>عنوانك في السجل المدني (folkeregister)</strong> <strong>خلال 5 أيام من الانتقال</strong> (قانون CPR §12 — هذه مخالفة تستوجب الغرامة). (2) يجب الحصول على <strong>وثيقة إقامة الاتحاد الأوروبي</strong> من SIRI إذا كنت تنوي البقاء أكثر من 3 أشهر.</p>
 <p><strong>مواطنو الدول خارج الاتحاد الأوروبي</strong> يحتاجون إلى أحد هذه الخيارات:</p>
 <ul>
-  <li><strong>تصريح العمل</strong> — يستلزم عرض عمل من صاحب عمل دنماركي. أكثر الأنواع شيوعاً: القائمة الإيجابية (للمهن عالية الطلب)، نظام سقف الراتب (إذا كان الراتب &gt; 514,000 DKK/سنة في 2025، ويرتفع إلى 552,000 DKK في 2026)، المسار السريع (للشركات المعتمدة).</li>
+  <li><strong>تصريح العمل</strong> — يستلزم عرض عمل من صاحب عمل دنماركي. أكثر الأنواع شيوعاً: القائمة الإيجابية (للمهن عالية الطلب)، نظام سقف الراتب (إذا كان الراتب &gt; 552,000 DKK/سنة في 2026)، المسار السريع (للشركات المعتمدة).</li>
   <li><strong>تأشيرة الطالب</strong> — إذا كنت مسجلاً في جامعة أو مؤسسة تعليمية دنماركية. قدّم طلبك على newtodenmark.dk قبل الوصول بشهرين على الأقل.</li>
   <li><strong>لم شمل الأسرة</strong> — للانضمام إلى مواطن دنماركي أو مقيم دائم. تشمل الاشتراطات حدود الدخل والسكن للكفيل الدنماركي.</li>
   <li><strong>تأشيرة Startup Denmark</strong> — لرواد الأعمال أصحاب خطة عمل معتمدة.</li>
@@ -54,7 +54,7 @@ ar:`<p><strong>مواطنو الاتحاد الأوروبي / المنطقة ا�
 es:`<p><strong>Ciudadanos de la UE/EEE/países nórdicos:</strong> No necesitas visa ni permiso de trabajo. Tienes derecho a vivir y trabajar libremente en Dinamarca. <strong>Aplican dos registros distintos:</strong> (1) Tu <strong>dirección en el folkeregister (registro civil)</strong> debe registrarse <strong>dentro de los 5 días posteriores a la mudanza</strong> (Ley CPR §12 — es una infracción sancionable con multa si no lo haces). (2) Tu <strong>documento de residencia de la UE</strong> ante SIRI es obligatorio si planeas quedarte más de 3 meses.</p>
 <p><strong>Ciudadanos de fuera de la UE</strong> necesitan uno de los siguientes:</p>
 <ul>
-  <li><strong>Permiso de trabajo</strong> — requiere una oferta de empleo de un empleador danés. Tipos más comunes: Lista Positiva (para profesiones con alta demanda), Esquema de Límite Salarial (si el salario es &gt; 514.000 DKK/año en 2025, subiendo a 552.000 DKK en 2026), Esquema Fast-track (para empresas certificadas).</li>
+  <li><strong>Permiso de trabajo</strong> — requiere una oferta de empleo de un empleador danés. Tipos más comunes: Lista Positiva (para profesiones con alta demanda), Esquema de Límite Salarial (si el salario es &gt; 552.000 DKK/año en 2026), Esquema Fast-track (para empresas certificadas).</li>
   <li><strong>Visa de estudiante</strong> — si estás matriculado en una universidad o institución educativa danesa. Solicítala en newtodenmark.dk al menos 2 meses antes.</li>
   <li><strong>Reagrupación familiar</strong> — para reunirte con un ciudadano danés o residente permanente. Los requisitos incluyen umbrales de ingresos y vivienda para el patrocinador danés.</li>
   <li><strong>Visa Startup Denmark</strong> — para emprendedores con un plan de negocio aprobado.</li>
@@ -64,7 +64,7 @@ es:`<p><strong>Ciudadanos de la UE/EEE/países nórdicos:</strong> No necesitas 
 de:`<p><strong>EU/EWR/nordische Staatsangehoerige:</strong> Sie benoetigen kein Visum und keine Arbeitserlaubnis. Sie haben das Recht, frei in Daenemark zu leben und zu arbeiten. <strong>Es gelten zwei separate Anmeldungen:</strong> (1) Ihre <strong>Meldeadresse (folkeregister)</strong> muss <strong>innerhalb von 5 Tagen nach dem Einzug</strong> registriert werden (CPR-Gesetz §12 — bei Versaeumnis droht ein Bussgeld). (2) Ihr <strong>EU-Aufenthaltsdokument</strong> von SIRI ist erforderlich, wenn Sie beabsichtigen, laenger als 3 Monate zu bleiben.</p>
 <p><strong>Nicht-EU-Staatsangehoerige</strong> benoetigen eines der folgenden Dokumente:</p>
 <ul>
-  <li><strong>Arbeitserlaubnis</strong> — erfordert ein Stellenangebot von einem daenischen Arbeitgeber. Haeufigste Typen: Positivliste (fuer gefragte Berufe), Gehaltsgrenzregelung (bei Gehalt &gt; 514.000 DKK/Jahr in 2025, steigend auf 552.000 DKK in 2026), Fast-track-Regelung (fuer zertifizierte Unternehmen).</li>
+  <li><strong>Arbeitserlaubnis</strong> — erfordert ein Stellenangebot von einem daenischen Arbeitgeber. Haeufigste Typen: Positivliste (fuer gefragte Berufe), Gehaltsgrenzregelung (bei Gehalt &gt; 552.000 DKK/Jahr in 2026), Fast-track-Regelung (fuer zertifizierte Unternehmen).</li>
   <li><strong>Studentenvisum</strong> — bei Einschreibung an einer daenischen Universitaet oder Bildungseinrichtung. Beantragen Sie es auf newtodenmark.dk mindestens 2 Monate im Voraus.</li>
   <li><strong>Familienzusammenfuehrung</strong> — um zu einem daenischen Staatsangehoerigen oder dauerhaften Einwohner zu ziehen. Die Anforderungen umfassen Einkommens- und Wohnraumkriterien fuer den daenischen Sponsor.</li>
   <li><strong>Startup Denmark Visum</strong> — fuer Unternehmer mit einem genehmigten Geschaeftsplan.</li>
@@ -74,7 +74,7 @@ de:`<p><strong>EU/EWR/nordische Staatsangehoerige:</strong> Sie benoetigen kein 
           uk:`<p><strong>Громадяни ЄС/ЄЕП/Скандинавських країн:</strong> Вам не потрібна віза чи дозвіл на роботу. Ви маєте право вільно жити та працювати в Данії. <strong>Необхідні два окремі реєстрації:</strong> (1) Вашу <strong>адресу у фольке­регістрі (folkeregister)</strong> потрібно зареєструвати <strong>протягом 5 днів після переїзду</strong> (Закон CPR §12 — порушення карається штрафом). (2) Ваш <strong>документ про проживання в ЄС</strong> від SIRI є обов'язковим, якщо ви плануєте залишитися більш ніж на 3 місяці.</p>
 <p><strong>Громадянам не-ЄС</strong> потрібен один із таких документів:</p>
 <ul>
-  <li><strong>Дозвіл на роботу</strong> — вимагає пропозиції від данського роботодавця. Найпоширеніші типи: Позитивний список (для затребуваних професій), Схема граничної зарплати (якщо зарплата &gt; 514 000 DKK/рік у 2025, зростає до 552 000 DKK у 2026), Прискорена схема (для сертифікованих компаній).</li>
+  <li><strong>Дозвіл на роботу</strong> — вимагає пропозиції від данського роботодавця. Найпоширеніші типи: Позитивний список (для затребуваних професій), Схема граничної зарплати (якщо зарплата &gt; 552 000 DKK/рік у 2026), Прискорена схема (для сертифікованих компаній).</li>
   <li><strong>Студентська віза</strong> — якщо ви зараховані до данського університету чи навчального закладу. Подайте заявку на newtodenmark.dk щонайменше за 2 місяці.</li>
   <li><strong>Возз'єднання сім'ї</strong> — для приєднання до громадянина Данії чи постійного резидента. Вимоги охоплюють критерії доходу та житла для данського спонсора.</li>
   <li><strong>Стартап-віза Startup Denmark</strong> — для підприємців із затвердженим бізнес-планом.</li>
@@ -84,7 +84,7 @@ de:`<p><strong>EU/EWR/nordische Staatsangehoerige:</strong> Sie benoetigen kein 
           pl:`<p><strong>Obywatele UE/EOG/krajów nordyckich:</strong> Nie potrzebujesz wizy ani zezwolenia na pracę. Masz prawo swobodnie mieszkać i pracować w Danii. <strong>Obowiązują dwie osobne rejestracje:</strong> (1) Twój <strong>adres w folkeregister (rejestr ludności)</strong> musi zostać zgłoszony <strong>w ciągu 5 dni od przeprowadzki</strong> (ustawa CPR §12 — niedopełnienie podlega karze grzywny). (2) Twój <strong>dokument pobytowy UE</strong> wydawany przez SIRI jest wymagany, jeśli zamierzasz zostać dłużej niż 3 miesiące.</p>
 <p><strong>Obywatele spoza UE</strong> potrzebują jednego z poniższych:</p>
 <ul>
-  <li><strong>Zezwolenie na pracę</strong> — wymaga oferty pracy od duńskiego pracodawcy. Najczęstsze typy: Lista pozytywna (dla poszukiwanych zawodów), system limitów płacowych (wynagrodzenie &gt; 514 000 DKK/rok w 2025, rosnące do 552 000 DKK w 2026), system fast-track (dla certyfikowanych firm).</li>
+  <li><strong>Zezwolenie na pracę</strong> — wymaga oferty pracy od duńskiego pracodawcy. Najczęstsze typy: Lista pozytywna (dla poszukiwanych zawodów), system limitów płacowych (wynagrodzenie &gt; 552 000 DKK/rok w 2026), system fast-track (dla certyfikowanych firm).</li>
   <li><strong>Wiza studencka</strong> — jeśli jesteś zapisany na duński uniwersytet lub uczelnię. Złóż wniosek na newtodenmark.dk co najmniej 2 miesiące wcześniej.</li>
   <li><strong>Łączenie rodzin (familiesammenføring)</strong> — aby dołączyć do obywatela Danii lub stałego rezydenta. Wymagania są rygorystyczne: duński sponsor musi spełniać wymogi dochodowe i mieszkaniowe.</li>
   <li><strong>Wiza Startup Denmark</strong> — dla przedsiębiorców z zatwierdzonym biznesplanem.</li>
@@ -94,7 +94,7 @@ de:`<p><strong>EU/EWR/nordische Staatsangehoerige:</strong> Sie benoetigen kein 
           ur:`<p><strong>شہریانِ یورپی یونین/EEA/اسکنڈینیویا:</strong> آپ کو ویزا یا ورک پرمٹ کی ضرورت نہیں۔ آپ کو ڈنمارک میں آزادانہ رہنے اور کام کرنے کا حق حاصل ہے۔ <strong>دو الگ الگ اندراجات ضروری ہیں:</strong> (1) آپ کا <strong>folkeregister پتہ</strong> (ڈنمارک کا قومی آبادی رجسٹر) <strong>منتقلی کے 5 دن کے اندر</strong> درج ہونا چاہیے (CPR قانون §12 — تاخیر پر جرمانہ ہو سکتا ہے)۔ (2) اگر آپ 3 ماہ سے زیادہ قیام کا ارادہ رکھتے ہیں تو SIRI سے <strong>EU رہائشی دستاویز</strong> حاصل کریں۔</p>
 <p><strong>یورپی یونین سے باہر کے شہریوں</strong> کو درج ذیل میں سے ایک کی ضرورت ہے:</p>
 <ul>
-  <li><strong>ورک پرمٹ</strong> — ڈنمارک کے کسی آجر کی جانب سے ملازمت کی پیشکش ضروری ہے۔ سب سے عام اقسام: Positive List (زیادہ طلب والے پیشوں کے لیے)، Pay Limit Scheme (اگر تنخواہ &gt; DKK 514,000/سال 2025 میں، 2026 میں DKK 552,000 تک بڑھے گی)، Fast-track Scheme (تصدیق شدہ کمپنیوں کے لیے)۔</li>
+  <li><strong>ورک پرمٹ</strong> — ڈنمارک کے کسی آجر کی جانب سے ملازمت کی پیشکش ضروری ہے۔ سب سے عام اقسام: Positive List (زیادہ طلب والے پیشوں کے لیے)، Pay Limit Scheme (اگر تنخواہ &gt; DKK 552,000/سال 2026 میں)، Fast-track Scheme (تصدیق شدہ کمپنیوں کے لیے)۔</li>
   <li><strong>اسٹوڈنٹ ویزا</strong> — اگر آپ کسی ڈینش یونیورسٹی یا تعلیمی ادارے میں داخل ہیں۔ newtodenmark.dk پر کم از کم 2 ماہ پہلے درخواست دیں۔</li>
   <li><strong>خاندانی ملاپ</strong> — ڈنمارک کے شہری یا مستقل رہائشی سے ملنے کے لیے۔ شرائط میں ڈینش کفیل کے لیے آمدنی اور رہائش کے معیارات شامل ہیں۔</li>
   <li><strong>Startup Denmark ویزا</strong> — منظور شدہ کاروباری منصوبے والے کاروباریوں کے لیے۔</li>
@@ -104,7 +104,7 @@ de:`<p><strong>EU/EWR/nordische Staatsangehoerige:</strong> Sie benoetigen kein 
           fa:`<p><strong>شهروندان اتحادیه اروپا/EEA/کشورهای نوردیک:</strong> شما نیازی به ویزا یا مجوز کار ندارید. حق دارید آزادانه در دانمارک زندگی و کار کنید. <strong>دو ثبت‌نام جداگانه لازم است:</strong> (1) <strong>آدرس شما در folkeregister</strong> (دفتر ثبت جمعیت دانمارک) باید <strong>ظرف ۵ روز از تاریخ اسکان</strong> ثبت شود (قانون CPR §۱۲ — تأخیر جریمه دارد). (2) <strong>مدرک اقامت اتحادیه اروپا</strong> از SIRI در صورت قصد اقامت بیش از ۳ ماه الزامی است.</p>
 <p><strong>شهروندان غیر اتحادیه اروپا</strong> به یکی از موارد زیر نیاز دارند:</p>
 <ul>
-  <li><strong>مجوز کار</strong> — مستلزم پیشنهاد شغلی از یک کارفرمای دانمارکی است. رایج‌ترین انواع: Positive List (برای مشاغل پرتقاضا)، Pay Limit Scheme (در صورتی که حقوق &gt; ۵۱۴٬۰۰۰ DKK/سال در ۲۰۲۵، که در ۲۰۲۶ به ۵۵۲٬۰۰۰ DKK افزایش می‌یابد)، Fast-track Scheme (برای شرکت‌های دارای گواهینامه).</li>
+  <li><strong>مجوز کار</strong> — مستلزم پیشنهاد شغلی از یک کارفرمای دانمارکی است. رایج‌ترین انواع: Positive List (برای مشاغل پرتقاضا)، Pay Limit Scheme (در صورتی که حقوق &gt; ۵۵۲٬۰۰۰ DKK/سال در ۲۰۲۶)، Fast-track Scheme (برای شرکت‌های دارای گواهینامه).</li>
   <li><strong>ویزای دانشجویی</strong> — در صورت ثبت‌نام در دانشگاه یا مؤسسه آموزشی دانمارکی. حداقل ۲ ماه قبل از طریق newtodenmark.dk درخواست دهید.</li>
   <li><strong>اجتماع مجدد خانوادگی</strong> — برای پیوستن به شهروند دانمارکی یا مقیم دائم. شرایط شامل الزامات درآمد و مسکن برای حامی دانمارکی است.</li>
   <li><strong>ویزای Startup Denmark</strong> — برای کارآفرینان دارای طرح کسب‌وکار تأیید شده.</li>
@@ -1234,7 +1234,7 @@ de:`<table class="info-table">
   <tr><th>Permit Type</th><th>For</th><th>Work rights</th><th>Duration</th></tr>
   <tr><td><strong>EU Registration</strong></td><td>EU/EEA citizens</td><td>Unlimited</td><td>5 years (then permanent)</td></tr>
   <tr><td><strong>Positive List</strong></td><td>High-demand professions</td><td>Full</td><td>Up to 4 years</td></tr>
-  <tr><td><strong>Pay Limit Scheme</strong></td><td>Salary &gt; DKK 514,000/yr (2025) · DKK 552,000/yr from 2026</td><td>Full</td><td>Up to 4 years</td></tr>
+  <tr><td><strong>Pay Limit Scheme</strong></td><td>Salary &gt; DKK 552,000/yr (2026)</td><td>Full</td><td>Up to 4 years</td></tr>
   <tr><td><strong>Student Permit</strong></td><td>Enrolled students</td><td>15 hrs/week</td><td>Duration of study</td></tr>
   <tr><td><strong>Family Reunification</strong></td><td>Joining family member</td><td>Full (usually)</td><td>2 years initially</td></tr>
   <tr><td><strong>International protection (§7)</strong></td><td>People granted protection under Udlændingeloven §7</td><td>Varies</td><td>Varies</td></tr>
@@ -1244,7 +1244,7 @@ da:`<p>Din opholdstilladelse bestemmer dine rettigheder i Danmark. Her er et kla
   <tr><th>Tilladelsestype</th><th>For</th><th>Arbejdsret</th><th>Varighed</th></tr>
   <tr><td><strong>EU-registrering</strong></td><td>EU/EØS-borgere</td><td>Ubegrænset</td><td>5 år (derefter permanent)</td></tr>
   <tr><td><strong>Positivlisten</strong></td><td>Efterspurgte erhverv</td><td>Fuld</td><td>Op til 4 år</td></tr>
-  <tr><td><strong>Beløbsordningen</strong></td><td>Løn &gt; 514.000 kr./år (2025) · 552.000 kr./år fra 2026</td><td>Fuld</td><td>Op til 4 år</td></tr>
+  <tr><td><strong>Beløbsordningen</strong></td><td>Løn &gt; 552.000 kr./år (2026)</td><td>Fuld</td><td>Op til 4 år</td></tr>
   <tr><td><strong>Studietilladelse</strong></td><td>Indskrevne studerende</td><td>15 timer/uge</td><td>Studieperioden</td></tr>
   <tr><td><strong>Familiesammenføring</strong></td><td>Genforening med familiemedlem</td><td>Fuld (normalt)</td><td>2 år indledningsvis</td></tr>
   <tr><td><strong>International beskyttelse (§7)</strong></td><td>Personer med beskyttelse efter Udlændingeloven §7</td><td>Varierer</td><td>Varierer</td></tr>
@@ -1254,7 +1254,7 @@ fr:`<p>Votre titre de séjour détermine vos droits au Danemark. Voici un aperç
   <tr><th>Type de titre</th><th>Pour</th><th>Droit au travail</th><th>Durée</th></tr>
   <tr><td><strong>Enregistrement UE</strong></td><td>Citoyens UE/EEE</td><td>Illimité</td><td>5 ans (puis permanent)</td></tr>
   <tr><td><strong>Liste positive</strong></td><td>Professions en tension</td><td>Plein</td><td>Jusqu'à 4 ans</td></tr>
-  <tr><td><strong>Régime de plafond salarial</strong></td><td>Salaire &gt; 514 000 DKK/an (2025) · 552 000 DKK/an dès 2026</td><td>Plein</td><td>Jusqu'à 4 ans</td></tr>
+  <tr><td><strong>Régime de plafond salarial</strong></td><td>Salaire &gt; 552 000 DKK/an (2026)</td><td>Plein</td><td>Jusqu'à 4 ans</td></tr>
   <tr><td><strong>Titre étudiant</strong></td><td>Étudiants inscrits</td><td>15h/semaine</td><td>Durée des études</td></tr>
   <tr><td><strong>Regroupement familial</strong></td><td>Rejoindre un membre de la famille</td><td>Plein (généralement)</td><td>2 ans initialement</td></tr>
   <tr><td><strong>Protection internationale (§7)</strong></td><td>Personnes bénéficiant de la protection au titre de Udlændingeloven §7</td><td>Variable</td><td>Variable</td></tr>
@@ -1264,7 +1264,7 @@ ar:`<p>تحدد تصريح إقامتك حقوقك في الدنمارك. إلي
   <tr><th>نوع التصريح</th><th>لمن</th><th>حق العمل</th><th>المدة</th></tr>
   <tr><td><strong>تسجيل الاتحاد الأوروبي</strong></td><td>مواطنو الاتحاد الأوروبي / المنطقة الاقتصادية الأوروبية</td><td>غير محدود</td><td>5 سنوات (ثم دائم)</td></tr>
   <tr><td><strong>القائمة الإيجابية</strong></td><td>المهن عالية الطلب</td><td>كامل</td><td>حتى 4 سنوات</td></tr>
-  <tr><td><strong>نظام سقف الراتب</strong></td><td>الراتب &gt; 514,000 DKK/سنة (2025) · 552,000 DKK/سنة من 2026</td><td>كامل</td><td>حتى 4 سنوات</td></tr>
+  <tr><td><strong>نظام سقف الراتب</strong></td><td>الراتب &gt; 552,000 DKK/سنة (2026)</td><td>كامل</td><td>حتى 4 سنوات</td></tr>
   <tr><td><strong>تصريح الطالب</strong></td><td>الطلاب المسجلون</td><td>15 ساعة/أسبوع</td><td>مدة الدراسة</td></tr>
   <tr><td><strong>لم شمل الأسرة</strong></td><td>الانضمام لأحد أفراد الأسرة</td><td>كامل (عادةً)</td><td>سنتان في البداية</td></tr>
   <tr><td><strong>وضع اللاجئ</strong></td><td>طالبو اللجوء</td><td>متفاوت</td><td>متفاوت</td></tr>
@@ -1274,7 +1274,7 @@ es:`<p>Tu permiso de residencia determina tus derechos en Dinamarca. Un resumen 
   <tr><th>Tipo de permiso</th><th>Para</th><th>Derecho a trabajar</th><th>Duración</th></tr>
   <tr><td><strong>Registro UE</strong></td><td>Ciudadanos UE/EEE</td><td>Ilimitado</td><td>5 años (luego permanente)</td></tr>
   <tr><td><strong>Lista Positiva</strong></td><td>Profesiones con alta demanda</td><td>Completo</td><td>Hasta 4 años</td></tr>
-  <tr><td><strong>Esquema de Límite Salarial</strong></td><td>Salario &gt; 514.000 DKK/año (2025) · 552.000 DKK/año desde 2026</td><td>Completo</td><td>Hasta 4 años</td></tr>
+  <tr><td><strong>Esquema de Límite Salarial</strong></td><td>Salario &gt; 552.000 DKK/año (2026)</td><td>Completo</td><td>Hasta 4 años</td></tr>
   <tr><td><strong>Permiso de estudiante</strong></td><td>Estudiantes matriculados</td><td>15 h/semana</td><td>Duración de los estudios</td></tr>
   <tr><td><strong>Reagrupación familiar</strong></td><td>Reunirse con un familiar</td><td>Completo (generalmente)</td><td>2 años inicialmente</td></tr>
   <tr><td><strong>Protección internacional (§7)</strong></td><td>Personas con protección conforme a Udlændingeloven §7</td><td>Variable</td><td>Variable</td></tr>
@@ -1284,7 +1284,7 @@ de:`<p>Ihre Aufenthaltserlaubnis bestimmt Ihre Rechte in Daenemark. Hier eine kl
   <tr><th>Erlaubnistyp</th><th>Fuer</th><th>Arbeitsrecht</th><th>Dauer</th></tr>
   <tr><td><strong>EU-Registrierung</strong></td><td>EU/EWR-Staatsangehoerige</td><td>Unbegrenzt</td><td>5 Jahre (dann dauerhaft)</td></tr>
   <tr><td><strong>Positivliste</strong></td><td>Gefragte Berufe</td><td>Vollstaendig</td><td>Bis zu 4 Jahre</td></tr>
-  <tr><td><strong>Gehaltsgrenzregelung</strong></td><td>Gehalt &gt; 514.000 DKK/Jahr (2025) · 552.000 DKK/Jahr ab 2026</td><td>Vollstaendig</td><td>Bis zu 4 Jahre</td></tr>
+  <tr><td><strong>Gehaltsgrenzregelung</strong></td><td>Gehalt &gt; 552.000 DKK/Jahr (2026)</td><td>Vollstaendig</td><td>Bis zu 4 Jahre</td></tr>
   <tr><td><strong>Studentenerlaubnis</strong></td><td>Eingeschriebene Studenten</td><td>15 Std./Woche</td><td>Studiendauer</td></tr>
   <tr><td><strong>Familienzusammenfuehrung</strong></td><td>Familienmitglied beitreten</td><td>Vollstaendig (in der Regel)</td><td>Anfaenglich 2 Jahre</td></tr>
   <tr><td><strong>Fluechtlingsstatus</strong></td><td>Asylbewerber</td><td>Variiert</td><td>Variiert</td></tr>
@@ -1294,7 +1294,7 @@ de:`<p>Ihre Aufenthaltserlaubnis bestimmt Ihre Rechte in Daenemark. Hier eine kl
   <tr><th>Тип дозволу</th><th>Для кого</th><th>Право на роботу</th><th>Тривалість</th></tr>
   <tr><td><strong>Реєстрація ЄС</strong></td><td>Громадяни ЄС/ЄЕП</td><td>Необмежено</td><td>5 років (потім постійний)</td></tr>
   <tr><td><strong>Позитивний список</strong></td><td>Затребувані професії</td><td>Повне</td><td>До 4 років</td></tr>
-  <tr><td><strong>Схема граничної зарплати</strong></td><td>Зарплата &gt; 514 000 DKK/рік (2025) · 552 000 DKK/рік з 2026</td><td>Повне</td><td>До 4 років</td></tr>
+  <tr><td><strong>Схема граничної зарплати</strong></td><td>Зарплата &gt; 552 000 DKK/рік (2026)</td><td>Повне</td><td>До 4 років</td></tr>
   <tr><td><strong>Студентський дозвіл</strong></td><td>Зараховані студенти</td><td>15 год/тиждень</td><td>На термін навчання</td></tr>
   <tr><td><strong>Возз'єднання сім'ї</strong></td><td>Для приєднання до члена сім'ї</td><td>Повне (зазвичай)</td><td>Спочатку 2 роки</td></tr>
   <tr><td><strong>Міжнародний захист (§7)</strong></td><td>Особи зі статусом захисту згідно з Udlændingeloven §7</td><td>Варіюється</td><td>Варіюється</td></tr>
@@ -1304,7 +1304,7 @@ de:`<p>Ihre Aufenthaltserlaubnis bestimmt Ihre Rechte in Daenemark. Hier eine kl
   <tr><th>Rodzaj zezwolenia</th><th>Dla</th><th>Prawo do pracy</th><th>Czas trwania</th></tr>
   <tr><td><strong>Rejestracja UE</strong></td><td>Obywatele UE/EOG</td><td>Nieograniczone</td><td>5 lat (potem stały)</td></tr>
   <tr><td><strong>Lista pozytywna</strong></td><td>Poszukiwane zawody</td><td>Pełne</td><td>Do 4 lat</td></tr>
-  <tr><td><strong>System limitów płacowych</strong></td><td>Wynagrodzenie &gt; 514 000 DKK/rok (2025) · 552 000 DKK/rok od 2026</td><td>Pełne</td><td>Do 4 lat</td></tr>
+  <tr><td><strong>System limitów płacowych</strong></td><td>Wynagrodzenie &gt; 552 000 DKK/rok (2026)</td><td>Pełne</td><td>Do 4 lat</td></tr>
   <tr><td><strong>Zezwolenie studenckie</strong></td><td>Zapisani studenci</td><td>15 godz./tydzień</td><td>Na czas studiów</td></tr>
   <tr><td><strong>Łączenie rodzin</strong></td><td>Dołączenie do członka rodziny</td><td>Pełne (zazwyczaj)</td><td>Początkowo 2 lata</td></tr>
   <tr><td><strong>Ochrona międzynarodowa (§7)</strong></td><td>Osoby z ochroną na podstawie Udlændingeloven §7</td><td>Różnie</td><td>Różnie</td></tr>
@@ -1314,7 +1314,7 @@ de:`<p>Ihre Aufenthaltserlaubnis bestimmt Ihre Rechte in Daenemark. Hier eine kl
   <tr><th>پرمٹ کی قسم</th><th>کے لیے</th><th>کام کا حق</th><th>مدت</th></tr>
   <tr><td><strong>EU رجسٹریشن</strong></td><td>EU/EEA شہری</td><td>غیر محدود</td><td>5 سال (پھر مستقل)</td></tr>
   <tr><td><strong>Positive List</strong></td><td>زیادہ طلب والے پیشے</td><td>مکمل</td><td>4 سال تک</td></tr>
-  <tr><td><strong>Pay Limit Scheme</strong></td><td>تنخواہ &gt; DKK 514,000/سال (2025) · DKK 552,000/سال 2026 سے</td><td>مکمل</td><td>4 سال تک</td></tr>
+  <tr><td><strong>Pay Limit Scheme</strong></td><td>تنخواہ &gt; DKK 552,000/سال (2026)</td><td>مکمل</td><td>4 سال تک</td></tr>
   <tr><td><strong>اسٹوڈنٹ پرمٹ</strong></td><td>داخل طلباء</td><td>15 گھنٹے/ہفتہ</td><td>تعلیم کی مدت</td></tr>
   <tr><td><strong>خاندانی ملاپ</strong></td><td>خاندانی رکن سے ملنے کے لیے</td><td>مکمل (عام طور پر)</td><td>ابتداء میں 2 سال</td></tr>
   <tr><td><strong>مہاجر حیثیت</strong></td><td>پناہ کے متقاضی</td><td>مختلف</td><td>مختلف</td></tr>
@@ -4623,8 +4623,8 @@ ur:`<p>ڈنمارکی یونیورسٹی کی ثقافت زیادہ تر مما�
         content: { en:`<p>If you're a non-EU/EEA citizen, you can only work in Denmark with a residence-and-work permit. The five main routes:</p>
 <table class="info-table">
   <tr><th>Scheme</th><th>Eligibility</th><th>Apply via</th></tr>
-  <tr><td><strong>Pay Limit Scheme (Beløbsordningen)</strong></td><td>Job offer with salary above DKK <strong>514,000/yr (2025)</strong> · DKK 552,000/yr from 2026. Most flexible. Allows job-switching after 6 months.</td><td>Your employer applies via SIRI</td></tr>
-  <tr><td><strong>Supplementary Pay Limit Scheme</strong></td><td>Lower threshold (DKK 415,000/yr in 2025; DKK 446,000 from 2026) but only for nationals of selected high-income countries with a labour-market need.</td><td>SIRI</td></tr>
+  <tr><td><strong>Pay Limit Scheme (Beløbsordningen)</strong></td><td>Job offer with salary above DKK <strong>552,000/yr (2026)</strong>. Most flexible. Allows job-switching after 6 months.</td><td>Your employer applies via SIRI</td></tr>
+  <tr><td><strong>Supplementary Pay Limit Scheme</strong></td><td>Lower threshold (DKK 446,000/yr in 2026) but only for nationals of selected high-income countries with a labour-market need.</td><td>SIRI</td></tr>
   <tr><td><strong>Positive List (high education / labour shortage)</strong></td><td>Your profession appears on the <a href="https://www.nyidanmark.dk/en-GB/Words-and-concepts/SIRI/Positive-Lists/Positive-List-for-People-with-a-Higher-Education" target="_blank" rel="noopener">Positive List</a> (engineers, doctors, certain IT, nurses, etc.). No salary threshold beyond market wage.</td><td>SIRI</td></tr>
   <tr><td><strong>Fast-track Scheme</strong></td><td>Your employer is a SIRI-certified company. Approval in ~1 month vs 1–4 months. 4 sub-tracks: Pay Limit, Educational, Researcher, Short-term.</td><td>Certified employer applies</td></tr>
   <tr><td><strong>Researcher / Establishment Card</strong></td><td>For researchers and recent graduates from approved Danish universities seeking work after studies.</td><td>SIRI / your university</td></tr>
@@ -4634,8 +4634,8 @@ ur:`<p>ڈنمارکی یونیورسٹی کی ثقافت زیادہ تر مما�
 da:`<p>Er du ikke EU/EØS-borger, kan du kun arbejde i Danmark med en opholds- og arbejdstilladelse. De fem hovedveje:</p>
 <table class="info-table">
   <tr><th>Ordning</th><th>Berettigelse</th><th>Ansøg via</th></tr>
-  <tr><td><strong>Beløbsordningen</strong></td><td>Jobtilbud med løn over <strong>514.000 kr./år (2025)</strong> · 552.000 kr./år fra 2026. Mest fleksibel. Tillader jobskifte efter 6 måneder.</td><td>Din arbejdsgiver ansøger via SIRI</td></tr>
-  <tr><td><strong>Supplerende beløbsordning</strong></td><td>Lavere tærskel (415.000 kr./år i 2025; 446.000 kr. fra 2026), men kun for statsborgere i udvalgte høj-indkomstlande med arbejdsmarkedsbehov.</td><td>SIRI</td></tr>
+  <tr><td><strong>Beløbsordningen</strong></td><td>Jobtilbud med løn over <strong>552.000 kr./år (2026)</strong>. Mest fleksibel. Tillader jobskifte efter 6 måneder.</td><td>Din arbejdsgiver ansøger via SIRI</td></tr>
+  <tr><td><strong>Supplerende beløbsordning</strong></td><td>Lavere tærskel (446.000 kr./år i 2026), men kun for statsborgere i udvalgte høj-indkomstlande med arbejdsmarkedsbehov.</td><td>SIRI</td></tr>
   <tr><td><strong>Positivlisten</strong></td><td>Dit erhverv fremgår af <a href="https://www.nyidanmark.dk/en-GB/Words-and-concepts/SIRI/Positive-Lists/Positive-List-for-People-with-a-Higher-Education" target="_blank" rel="noopener">Positivlisten</a> (ingeniører, læger, visse IT-profiler, sygeplejersker osv.). Ingen løngrænse ud over markedsløn.</td><td>SIRI</td></tr>
   <tr><td><strong>Greencard-ordningen (Fast-track)</strong></td><td>Din arbejdsgiver er SIRI-certificeret. Godkendelse på ~1 måned vs. 1–4 måneder. 4 spor: Beløb, Uddannelse, Forsker, Kortvarigt.</td><td>Certificeret arbejdsgiver ansøger</td></tr>
   <tr><td><strong>Forsker / Etableringsbevis</strong></td><td>For forskere og nyuddannede fra godkendte danske universiteter der søger arbejde efter studierne.</td><td>SIRI / dit universitet</td></tr>
@@ -4645,8 +4645,8 @@ da:`<p>Er du ikke EU/EØS-borger, kan du kun arbejde i Danmark med en opholds- o
 fr:`<p>Si vous êtes un citoyen non-UE/EEE, vous ne pouvez travailler au Danemark qu'avec un permis de résidence et de travail. Les cinq principales voies :</p>
 <table class="info-table">
   <tr><th>Régime</th><th>Éligibilité</th><th>Postuler via</th></tr>
-  <tr><td><strong>Régime de plafond salarial (Beløbsordningen)</strong></td><td>Offre d'emploi avec salaire supérieur à <strong>514 000 DKK/an (2025)</strong> · 552 000 DKK/an à partir de 2026. Le plus flexible. Permet de changer d'emploi après 6 mois.</td><td>Votre employeur postule via SIRI</td></tr>
-  <tr><td><strong>Régime supplémentaire de plafond salarial</strong></td><td>Seuil plus bas (415 000 DKK/an en 2025 ; 446 000 DKK à partir de 2026) mais réservé aux ressortissants de pays sélectionnés à hauts revenus avec un besoin du marché du travail.</td><td>SIRI</td></tr>
+  <tr><td><strong>Régime de plafond salarial (Beløbsordningen)</strong></td><td>Offre d'emploi avec salaire supérieur à <strong>552 000 DKK/an (2026)</strong>. Le plus flexible. Permet de changer d'emploi après 6 mois.</td><td>Votre employeur postule via SIRI</td></tr>
+  <tr><td><strong>Régime supplémentaire de plafond salarial</strong></td><td>Seuil plus bas (446 000 DKK/an en 2026) mais réservé aux ressortissants de pays sélectionnés à hauts revenus avec un besoin du marché du travail.</td><td>SIRI</td></tr>
   <tr><td><strong>Liste positive (formation supérieure / pénurie de main-d'œuvre)</strong></td><td>Votre profession figure sur la <a href="https://www.nyidanmark.dk/en-GB/Words-and-concepts/SIRI/Positive-Lists/Positive-List-for-People-with-a-Higher-Education" target="_blank" rel="noopener">Liste positive</a> (ingénieurs, médecins, certains IT, infirmiers, etc.). Pas de seuil salarial au-delà du salaire du marché.</td><td>SIRI</td></tr>
   <tr><td><strong>Régime accéléré (Fast-track)</strong></td><td>Votre employeur est une entreprise certifiée SIRI. Approbation en ~1 mois vs 1–4 mois. 4 sous-filières : Plafond salarial, Formation, Chercheur, Court terme.</td><td>Employeur certifié postule</td></tr>
   <tr><td><strong>Carte chercheur / d'établissement</strong></td><td>Pour les chercheurs et diplômés récents d'universités danoises approuvées cherchant un emploi après les études.</td><td>SIRI / votre université</td></tr>
@@ -4656,8 +4656,8 @@ fr:`<p>Si vous êtes un citoyen non-UE/EEE, vous ne pouvez travailler au Danemar
 ar:`<p>إن كنت مواطناً من خارج الاتحاد الأوروبي/المنطقة الاقتصادية الأوروبية، لا يمكنك العمل في الدنمارك إلا بتصريح إقامة وعمل. المسارات الخمسة الرئيسية:</p>
 <table class="info-table">
   <tr><th>النظام</th><th>الأهلية</th><th>التقديم عبر</th></tr>
-  <tr><td><strong>نظام حد الراتب (Beløbsordningen)</strong></td><td>عرض عمل براتب يتجاوز <strong>514,000 DKK/سنة (2025)</strong> · 552,000 DKK/سنة من 2026. الأكثر مرونة. يسمح بتغيير الوظيفة بعد 6 أشهر.</td><td>يتقدم صاحب عملك عبر SIRI</td></tr>
-  <tr><td><strong>نظام حد الراتب التكميلي</strong></td><td>حد أدنى أقل (415,000 DKK/سنة في 2025؛ 446,000 DKK من 2026) لكن لمواطني دول ذات دخل مرتفع محددة ذات حاجة سوقية.</td><td>SIRI</td></tr>
+  <tr><td><strong>نظام حد الراتب (Beløbsordningen)</strong></td><td>عرض عمل براتب يتجاوز <strong>552,000 DKK/سنة (2026)</strong>. الأكثر مرونة. يسمح بتغيير الوظيفة بعد 6 أشهر.</td><td>يتقدم صاحب عملك عبر SIRI</td></tr>
+  <tr><td><strong>نظام حد الراتب التكميلي</strong></td><td>حد أدنى أقل (446,000 DKK/سنة في 2026) لكن لمواطني دول ذات دخل مرتفع محددة ذات حاجة سوقية.</td><td>SIRI</td></tr>
   <tr><td><strong>القائمة الإيجابية (تعليم عالٍ / نقص عمالة)</strong></td><td>مهنتك مدرجة في <a href="https://www.nyidanmark.dk/en-GB/Words-and-concepts/SIRI/Positive-Lists/Positive-List-for-People-with-a-Higher-Education" target="_blank" rel="noopener">القائمة الإيجابية</a> (مهندسون، أطباء، تقنية معلومات، ممرضون إلخ). لا حد راتب بخلاف أجر السوق.</td><td>SIRI</td></tr>
   <tr><td><strong>نظام المسار السريع</strong></td><td>صاحب عملك شركة معتمدة من SIRI. موافقة في ~شهر مقابل 1–4 أشهر. 4 مسارات فرعية: راتب، تعليمي، باحث، قصير الأجل.</td><td>صاحب عمل معتمد يتقدم</td></tr>
   <tr><td><strong>بطاقة باحث / تأسيس</strong></td><td>للباحثين والخريجين الجدد من جامعات دنماركية معتمدة يبحثون عن عمل بعد الدراسة.</td><td>SIRI / جامعتك</td></tr>
@@ -4667,8 +4667,8 @@ ar:`<p>إن كنت مواطناً من خارج الاتحاد الأوروبي/
 es:`<p>Si eres ciudadano de fuera de la UE/EEE, solo puedes trabajar en Dinamarca con un permiso de residencia y trabajo. Las cinco vías principales:</p>
 <table class="info-table">
   <tr><th>Esquema</th><th>Requisitos</th><th>Solicitar a través de</th></tr>
-  <tr><td><strong>Esquema de Límite Salarial (Beløbsordningen)</strong></td><td>Oferta de trabajo con salario superior a <strong>514.000 DKK/año (2025)</strong> · 552.000 DKK/año desde 2026. El más flexible. Permite cambiar de empleo después de 6 meses.</td><td>Tu empleador solicita a través de SIRI</td></tr>
-  <tr><td><strong>Esquema de Límite Salarial Complementario</strong></td><td>Umbral más bajo (415.000 DKK/año en 2025; 446.000 DKK desde 2026), pero solo para ciudadanos de países de ingresos altos seleccionados con necesidad en el mercado laboral.</td><td>SIRI</td></tr>
+  <tr><td><strong>Esquema de Límite Salarial (Beløbsordningen)</strong></td><td>Oferta de trabajo con salario superior a <strong>552.000 DKK/año (2026)</strong>. El más flexible. Permite cambiar de empleo después de 6 meses.</td><td>Tu empleador solicita a través de SIRI</td></tr>
+  <tr><td><strong>Esquema de Límite Salarial Complementario</strong></td><td>Umbral más bajo (446.000 DKK/año en 2026), pero solo para ciudadanos de países de ingresos altos seleccionados con necesidad en el mercado laboral.</td><td>SIRI</td></tr>
   <tr><td><strong>Lista Positiva (educación superior / escasez de mano de obra)</strong></td><td>Tu profesión aparece en la <a href="https://www.nyidanmark.dk/en-GB/Words-and-concepts/SIRI/Positive-Lists/Positive-List-for-People-with-a-Higher-Education" target="_blank" rel="noopener">Lista Positiva</a> (ingenieros, médicos, ciertos perfiles de TI, enfermeros, etc.). Sin umbral salarial más allá del salario de mercado.</td><td>SIRI</td></tr>
   <tr><td><strong>Esquema Fast-track</strong></td><td>Tu empleador es una empresa certificada por SIRI. Aprobación en ~1 mes frente a 1–4 meses. 4 subvías: Límite salarial, Educativo, Investigador, Corto plazo.</td><td>El empleador certificado solicita</td></tr>
   <tr><td><strong>Tarjeta de Investigador / Establecimiento</strong></td><td>Para investigadores y recién graduados de universidades danesas aprobadas que buscan trabajo después de sus estudios.</td><td>SIRI / tu universidad</td></tr>
@@ -4678,8 +4678,8 @@ es:`<p>Si eres ciudadano de fuera de la UE/EEE, solo puedes trabajar en Dinamarc
 de:`<p>Wenn Sie Staatsangehöriger eines Nicht-EU/EWR-Landes sind, können Sie in Dänemark nur mit einer Aufenthalts- und Arbeitserlaubnis arbeiten. Die fünf Hauptwege:</p>
 <table class="info-table">
   <tr><th>Regelung</th><th>Voraussetzungen</th><th>Beantragen über</th></tr>
-  <tr><td><strong>Gehaltsgrenzregelung (Beløbsordningen)</strong></td><td>Jobangebot mit Gehalt über <strong>514.000 DKK/Jahr (2025)</strong> · 552.000 DKK/Jahr ab 2026. Am flexibelsten. Erlaubt Jobwechsel nach 6 Monaten.</td><td>Ihr Arbeitgeber beantragt über SIRI</td></tr>
-  <tr><td><strong>Ergänzende Gehaltsgrenzregelung</strong></td><td>Niedrigere Schwelle (415.000 DKK/Jahr in 2025; 446.000 DKK ab 2026), aber nur für Staatsangehörige bestimmter einkommensstarker Länder mit Arbeitskräftebedarf.</td><td>SIRI</td></tr>
+  <tr><td><strong>Gehaltsgrenzregelung (Beløbsordningen)</strong></td><td>Jobangebot mit Gehalt über <strong>552.000 DKK/Jahr (2026)</strong>. Am flexibelsten. Erlaubt Jobwechsel nach 6 Monaten.</td><td>Ihr Arbeitgeber beantragt über SIRI</td></tr>
+  <tr><td><strong>Ergänzende Gehaltsgrenzregelung</strong></td><td>Niedrigere Schwelle (446.000 DKK/Jahr in 2026), aber nur für Staatsangehörige bestimmter einkommensstarker Länder mit Arbeitskräftebedarf.</td><td>SIRI</td></tr>
   <tr><td><strong>Positivliste (Hochschulbildung / Fachkräftemangel)</strong></td><td>Ihr Beruf erscheint auf der <a href="https://www.nyidanmark.dk/en-GB/Words-and-concepts/SIRI/Positive-Lists/Positive-List-for-People-with-a-Higher-Education" target="_blank" rel="noopener">Positivliste</a> (Ingenieure, Ärzte, bestimmte IT-Profile, Krankenpfleger usw.). Keine Gehaltsschwelle über dem Marktlohn.</td><td>SIRI</td></tr>
   <tr><td><strong>Fast-Track-Regelung</strong></td><td>Ihr Arbeitgeber ist ein SIRI-zertifiziertes Unternehmen. Genehmigung in ~1 Monat statt 1–4 Monate. 4 Unterrouten: Gehaltsgrenze, Bildung, Forscher, Kurzfristig.</td><td>Zertifizierter Arbeitgeber beantragt</td></tr>
   <tr><td><strong>Forscher- / Gründerkarte</strong></td><td>Für Forscher und Absolventen anerkannter dänischer Universitäten, die nach dem Studium Arbeit suchen.</td><td>SIRI / Ihre Universität</td></tr>
@@ -4689,8 +4689,8 @@ de:`<p>Wenn Sie Staatsangehöriger eines Nicht-EU/EWR-Landes sind, können Sie i
           uk:`<p>Якщо ви громадянин країни поза ЄС/ЄЕА, ви можете працювати в Данії лише з дозволом на проживання та роботу. П'ять основних шляхів:</p>
 <table class="info-table">
   <tr><th>Схема</th><th>Умови</th><th>Подати через</th></tr>
-  <tr><td><strong>Схема зарплатного ліміту (Beløbsordningen)</strong></td><td>Пропозиція роботи із зарплатою понад <strong>514 000 DKK/рік (2025)</strong> · 552 000 DKK/рік з 2026. Найгнучкіша. Дозволяє змінити роботу після 6 місяців.</td><td>Ваш роботодавець подає через SIRI</td></tr>
-  <tr><td><strong>Додаткова схема зарплатного ліміту</strong></td><td>Нижчий поріг (415 000 DKK/рік у 2025; 446 000 DKK з 2026), але лише для громадян окремих країн із високим доходом і потребами ринку праці.</td><td>SIRI</td></tr>
+  <tr><td><strong>Схема зарплатного ліміту (Beløbsordningen)</strong></td><td>Пропозиція роботи із зарплатою понад <strong>552 000 DKK/рік (2026)</strong>. Найгнучкіша. Дозволяє змінити роботу після 6 місяців.</td><td>Ваш роботодавець подає через SIRI</td></tr>
+  <tr><td><strong>Додаткова схема зарплатного ліміту</strong></td><td>Нижчий поріг (446 000 DKK/рік у 2026), але лише для громадян окремих країн із високим доходом і потребами ринку праці.</td><td>SIRI</td></tr>
   <tr><td><strong>Позитивний список (вища освіта / брак кадрів)</strong></td><td>Ваша професія є в <a href="https://www.nyidanmark.dk/en-GB/Words-and-concepts/SIRI/Positive-Lists/Positive-List-for-People-with-a-Higher-Education" target="_blank" rel="noopener">Позитивному списку</a> (інженери, лікарі, певні IT-фахівці, медсестри тощо). Немає зарплатного порогу понад ринкову ставку.</td><td>SIRI</td></tr>
   <tr><td><strong>Прискорена схема (Fast-track)</strong></td><td>Ваш роботодавець є сертифікованою компанією SIRI. Схвалення ~за 1 місяць проти 1–4 місяців. 4 підтипи: зарплатний ліміт, освіта, дослідник, короткостроковий.</td><td>Сертифікований роботодавець подає</td></tr>
   <tr><td><strong>Картка дослідника / засновника</strong></td><td>Для дослідників і нещодавніх випускників визнаних данських університетів, що шукають роботу після навчання.</td><td>SIRI / ваш університет</td></tr>
@@ -4710,7 +4710,7 @@ de:`<p>Wenn Sie Staatsangehöriger eines Nicht-EU/EWR-Landes sind, können Sie i
 ur:`<p>اگر آپ EU/EEA کے شہری نہیں ہیں تو کام کرنے کے لیے رہائش اور کام کا پرمٹ ضروری ہے۔ پانچ اہم ذرائع:</p>
 <table class="info-table">
   <tr><th>اسکیم</th><th>اہلیت</th><th>درخواست</th></tr>
-  <tr><td><strong>تنخواہ کی حد (Beløbsordningen)</strong></td><td><strong>514,000 DKK/سال (2025)</strong> سے زیادہ تنخواہ والی نوکری۔ سب سے لچکدار۔</td><td>آپ کا آجر SIRI کے ذریعے</td></tr>
+  <tr><td><strong>تنخواہ کی حد (Beløbsordningen)</strong></td><td><strong>552,000 DKK/سال (2026)</strong> سے زیادہ تنخواہ والی نوکری۔ سب سے لچکدار۔</td><td>آپ کا آجر SIRI کے ذریعے</td></tr>
   <tr><td><strong>مثبت فہرست (Positive List)</strong></td><td>آپ کا پیشہ <a href="https://www.nyidanmark.dk/en-GB/Words-and-concepts/SIRI/Positive-Lists/Positive-List-for-People-with-a-Higher-Education" target="_blank" rel="noopener">مثبت فہرست</a> میں (انجینئر، ڈاکٹر، IT، نرسیں وغیرہ)</td><td>SIRI</td></tr>
   <tr><td><strong>Fast-track اسکیم</strong></td><td>آپ کا آجر SIRI سے تصدیق شدہ کمپنی ہے۔ ~1 ماہ میں منظوری</td><td>تصدیق شدہ آجر</td></tr>
 </table>
@@ -7622,7 +7622,7 @@ ur:`<p>ڈینش کھانے کی ثقافت نے ایک انقلاب دیکھا �
 <p><strong>The big differences:</strong></p>
 <ul>
   <li><strong>Radical equality.</strong> Danish dating is genuinely egalitarian. Anyone can ask anyone out. Paying for the other person is not expected — splitting the bill is standard from the first date. Don't read anything into who pays; it's neutral territory.</li>
-  <li><strong>Directness over games.</strong> Danes do not play hard-to-get in the way common in other cultures. If someone is interested, they will usually say so relatively quickly. If they're not interested, they'll say that too — or simply stop replying, which is also understood to mean no.</li>
+  <li><strong>Directness over games.</strong> Dating here tends to be direct. If someone is interested, they will usually say so relatively quickly. If they're not interested, they'll say that too — or simply stop replying, which is also understood to mean no.</li>
   <li><strong>Alcohol as social lubricant.</strong> Many Danes find it easier to make the first move after some drinks. Danish bar culture is a genuine dating environment, especially Thursday–Saturday evenings.</li>
   <li><strong>Slow escalation into exclusivity.</strong> There is often no formal "defining the relationship" moment in Denmark. You may date someone for several months before either person brings up exclusivity. Don't interpret slow commitment as disinterest.</li>
   <li><strong>Gender roles are very flat.</strong> Assumptions about who drives, who plans, who earns more — all irrelevant. Expect full equality in how dates are organised, paid, and planned.</li>
@@ -7638,7 +7638,7 @@ da:`<p>Dating i Danmark foregår efter normer, der adskiller sig tydeligt fra de
 <p><strong>De store forskelle:</strong></p>
 <ul>
   <li><strong>Radikal lighed.</strong> Dansk dating er genuint ligestillet. Alle kan bede alle ud. Det forventes ikke, at man betaler for den anden — regningen deles fra første date. Tillæg ingen betydning til hvem der betaler; det er neutralt territorium.</li>
-  <li><strong>Direkthed frem for spil.</strong> Danskere spiller ikke svær at få på den måde, der er almindelig i andre kulturer. Hvis nogen er interesseret, siger de det typisk relativt hurtigt. Hvis de ikke er interesserede, siger de det også — eller holder simpelthen op med at svare, hvilket også forstås som nej.</li>
+  <li><strong>Direkthed frem for spil.</strong> Dating her er typisk direkte. Hvis nogen er interesseret, siger de det typisk relativt hurtigt. Hvis de ikke er interesserede, siger de det også — eller holder simpelthen op med at svare, hvilket også forstås som nej.</li>
   <li><strong>Alkohol som social smøremiddel.</strong> Mange danskere finder det lettere at tage det første skridt efter et par drinks. Dansk barbyliv er et reelt datingmiljø, særligt torsdag–lørdag aften.</li>
   <li><strong>Langsom optrapning til eksklusivitet.</strong> Der er ofte ikke noget formelt "define the relationship"-øjeblik i Danmark. Man kan date nogen i flere måneder, før nogen bringer eksklusivitet op. Fortolk ikke langsom forpligtelse som uinteresse.</li>
   <li><strong>Kønsroller er meget flade.</strong> Antagelser om hvem der kører, planlægger, tjener mest — alt irrelevant. Forvent fuld lighed i, hvordan dates organiseres, betales og planlægges.</li>
@@ -7654,7 +7654,7 @@ fr:`<p>Les rencontres au Danemark obéissent à des normes nettement différente
 <p><strong>Les grandes différences :</strong></p>
 <ul>
   <li><strong>Égalité radicale.</strong> Les rencontres danoises sont véritablement égalitaires. N'importe qui peut inviter n'importe qui. Payer pour l'autre n'est pas attendu — partager l'addition est la norme dès le premier rendez-vous. Ne lisez rien dans qui paie ; c'est un territoire neutre.</li>
-  <li><strong>Franchise plutôt que jeux.</strong> Les Danois ne font pas semblant d'être difficiles à séduire comme c'est courant dans d'autres cultures. Si quelqu'un est intéressé, il le dira généralement assez rapidement. S'il n'est pas intéressé, il le dira aussi — ou arrêtera simplement de répondre, ce qui signifie aussi non.</li>
+  <li><strong>Franchise plutôt que jeux.</strong> Les rencontres ici sont plutôt directes. Si quelqu'un est intéressé, il le dira généralement assez rapidement. S'il n'est pas intéressé, il le dira aussi — ou arrêtera simplement de répondre, ce qui signifie aussi non.</li>
   <li><strong>L'alcool comme lubrifiant social.</strong> Beaucoup de Danois trouvent plus facile de faire le premier pas après quelques verres. La culture des bars danois est un vrai environnement de rencontres, surtout le jeudi–samedi soir.</li>
   <li><strong>Montée en puissance lente vers l'exclusivité.</strong> Il n'y a souvent pas de moment formel de "définition de la relation" au Danemark. Vous pouvez fréquenter quelqu'un pendant plusieurs mois avant que l'un ou l'autre n'aborde l'exclusivité. N'interprétez pas l'engagement lent comme un désintérêt.</li>
   <li><strong>Rôles de genre très plats.</strong> Les suppositions sur qui conduit, qui planifie, qui gagne plus — tout cela est sans importance. Attendez-vous à une égalité totale dans la façon dont les rendez-vous sont organisés, payés et planifiés.</li>
@@ -7670,7 +7670,7 @@ ar:`<p>تعمل المواعدة في الدنمارك وفق معايير تخ�
 <p><strong>الفوارق الكبرى:</strong></p>
 <ul>
   <li><strong>مساواة جذرية.</strong> المواعدة الدنماركية متساوية حقاً. أي شخص يمكنه دعوة أي شخص. الدفع عن الطرف الآخر غير متوقع — تقسيم الفاتورة هو المعيار من الموعد الأول. لا تستنتج شيئاً من يدفع؛ إنه أرض محايدة.</li>
-  <li><strong>المباشرة لا الألعاب.</strong> الدنماركيون لا يتظاهرون بصعوبة المنال كما هو شائع في ثقافات أخرى. إن اهتم شخص ما، سيقوله في الغالب بسرعة نسبية. إن لم يكن مهتماً، سيقول ذلك أيضاً — أو سيتوقف ببساطة عن الرد، وهو مفهوم أيضاً بمعنى لا.</li>
+  <li><strong>المباشرة لا الألعاب.</strong> المواعدة هنا تميل إلى المباشرة. إن اهتم شخص ما، سيقوله في الغالب بسرعة نسبية. إن لم يكن مهتماً، سيقول ذلك أيضاً — أو سيتوقف ببساطة عن الرد، وهو مفهوم أيضاً بمعنى لا.</li>
   <li><strong>الكحول كمزيت اجتماعي.</strong> كثير من الدنماركيين يجدون الخطوة الأولى أيسر بعد بعض المشروبات. ثقافة البار الدنماركية بيئة مواعدة حقيقية، خاصة مساءات الخميس–السبت.</li>
   <li><strong>تصعيد بطيء نحو الحصرية.</strong> كثيراً ما لا يوجد لحظة رسمية لـ"تحديد العلاقة" في الدنمارك. قد تواعد شخصاً لأشهر قبل أن يطرح أي منكما موضوع الحصرية. لا تفسّر بطء الالتزام على أنه فقدان اهتمام.</li>
   <li><strong>الأدوار الجنسية مستوية جداً.</strong> الافتراضات حول من يقود ومن يخطط ومن يكسب أكثر — كلها غير ذات صلة. توقع مساواة كاملة في كيفية تنظيم المواعيد والدفع والتخطيط لها.</li>
@@ -7686,7 +7686,7 @@ es:`<p>Las citas en Dinamarca operan según normas claramente diferentes a la ma
 <p><strong>Las grandes diferencias:</strong></p>
 <ul>
   <li><strong>Igualdad radical.</strong> Las citas danesas son genuinamente igualitarias. Cualquiera puede invitar a salir a cualquiera. No se espera que uno pague por el otro — dividir la cuenta es la norma desde la primera cita. No interpretes nada de quién paga; es territorio neutro.</li>
-  <li><strong>Franqueza en lugar de juegos.</strong> Los daneses no se hacen los difíciles de conseguir como es habitual en otras culturas. Si alguien está interesado, generalmente lo dirá con bastante rapidez. Si no está interesado, también lo dirá — o simplemente dejará de responder, lo que también se entiende como un no.</li>
+  <li><strong>Franqueza en lugar de juegos.</strong> Las citas aquí tienden a ser directas. Si alguien está interesado, generalmente lo dirá con bastante rapidez. Si no está interesado, también lo dirá — o simplemente dejará de responder, lo que también se entiende como un no.</li>
   <li><strong>El alcohol como lubricante social.</strong> Muchos daneses encuentran más fácil dar el primer paso después de algunas bebidas. La cultura de bares danesa es un entorno real de citas, especialmente los jueves–sábados por la noche.</li>
   <li><strong>Escalada lenta hacia la exclusividad.</strong> A menudo no hay un momento formal de "definir la relación" en Dinamarca. Puedes salir con alguien durante varios meses antes de que cualquiera de los dos plantee la exclusividad. No interpretes el compromiso lento como falta de interés.</li>
   <li><strong>Los roles de género son muy planos.</strong> Las suposiciones sobre quién conduce, quién planea, quién gana más — todo irrelevante. Espera plena igualdad en cómo se organizan, se pagan y se planifican las citas.</li>
@@ -7702,7 +7702,7 @@ de:`<p>Dating in Dänemark funktioniert nach Normen, die sich deutlich von den m
 <p><strong>Die großen Unterschiede:</strong></p>
 <ul>
   <li><strong>Radikale Gleichheit.</strong> Dänisches Dating ist aufrichtig egalitär. Jeder kann jeden einladen. Es wird nicht erwartet, dass einer für den anderen zahlt — die Rechnung teilen ist ab dem ersten Date Standard. Interpretieren Sie nichts in das Wer-zahlt hinein; es ist neutrales Territorium.</li>
-  <li><strong>Direktheit statt Spielchen.</strong> Dänen spielen nicht "schwer zu haben" wie in anderen Kulturen üblich. Wenn jemand interessiert ist, sagt er es in der Regel relativ schnell. Wenn nicht, sagt er das auch — oder hört einfach auf zu antworten, was ebenfalls als Nein verstanden wird.</li>
+  <li><strong>Direktheit statt Spielchen.</strong> Dating ist hier eher direkt. Wenn jemand interessiert ist, sagt er es in der Regel relativ schnell. Wenn nicht, sagt er das auch — oder hört einfach auf zu antworten, was ebenfalls als Nein verstanden wird.</li>
   <li><strong>Alkohol als sozialer Schmierstoff.</strong> Viele Dänen finden es einfacher, nach einigen Getränken den ersten Schritt zu machen. Die dänische Barkultur ist ein echtes Dating-Umfeld, besonders donnerstags bis samstags.</li>
   <li><strong>Langsame Eskalation zur Exklusivität.</strong> Es gibt oft keinen formellen "Die Beziehung definieren"-Moment in Dänemark. Man kann jemanden monatelang daten, bevor einer die Exklusivität anspricht. Interpretieren Sie langsames Commitment nicht als Desinteresse.</li>
   <li><strong>Geschlechterrollen sind sehr flach.</strong> Annahmen darüber, wer fährt, wer plant, wer mehr verdient — alles irrelevant. Erwarten Sie vollständige Gleichheit bei der Organisation, Bezahlung und Planung von Dates.</li>
@@ -7718,7 +7718,7 @@ de:`<p>Dating in Dänemark funktioniert nach Normen, die sich deutlich von den m
 <p><strong>Головні відмінності:</strong></p>
 <ul>
   <li><strong>Радикальна рівність.</strong> Датські знайомства справді егалітарні. Будь-хто може запросити будь-кого. Не очікується, що хтось платить за іншого — розділити рахунок на першому побаченні є стандартом. Не шукайте прихованого сенсу в тому, хто платить; це нейтральна територія.</li>
-  <li><strong>Прямота замість гри.</strong> Датчани не вдають недоступності, як це прийнято в інших культурах. Якщо хтось зацікавлений, він зазвичай скаже це досить швидко. Якщо ні — також скаже або просто припинить відповідати, що теж розуміється як «ні».</li>
+  <li><strong>Прямота замість гри.</strong> Знайомства тут зазвичай прямі. Якщо хтось зацікавлений, він зазвичай скаже це досить швидко. Якщо ні — також скаже або просто припинить відповідати, що теж розуміється як «ні».</li>
   <li><strong>Алкоголь як соціальне мастило.</strong> Багатьом датчанам простіше зробити перший крок після кількох напоїв. Датська барна культура — це справжнє середовище для знайомств, особливо в четвер–суботу ввечері.</li>
   <li><strong>Повільна ескалація до ексклюзивності.</strong> У Данії часто немає формального моменту «визначення стосунків». Ви можете зустрічатися з кимось кілька місяців, перш ніж хтось із вас порушить питання ексклюзивності. Не сприймайте повільне зобов'язання як незацікавленість.</li>
   <li><strong>Гендерні ролі дуже плоскі.</strong> Припущення про те, хто кермує, хто планує, хто більше заробляє — все це несуттєво. Очікуйте повної рівності в організації, оплаті та плануванні побачень.</li>
@@ -7734,7 +7734,7 @@ de:`<p>Dating in Dänemark funktioniert nach Normen, die sich deutlich von den m
 <ul>
   <li><strong>Bezpośredniość:</strong> Jeśli ktoś jest zainteresowany, powie wprost. Nie ma zawoalowanych aluzji.</li>
   <li><strong>Równość płci:</strong> Dzielenie rachunków jest normalą. Żadna płeć nie oczekuje, że druga zawsze płaci.</li>
-  <li><strong>Wolniejsze tempo:</strong> Duńczycy rzadko spieszą się do związku. Przyjaźń przechodzi w romantykę stopniowo.</li>
+  <li><strong>Wolniejsze tempo:</strong> Tempo bywa wolniejsze, a przyjaźń przechodzi w romantykę stopniowo.</li>
   <li><strong>Aplikacje randkowe:</strong> Tinder, Bumble i Hinge są popularne w Kopenhadze.</li>
   <li><strong>Spotkania przez aktywności:</strong> W klubach sportowych, na wydarzeniach muzycznych i wolontariacie</li>
 </ul>`,
@@ -7742,7 +7742,7 @@ ur:`<p>ڈنمارک میں ڈیٹنگ براہ راست اور مساواتی ہ
 <ul>
   <li><strong>براہ راستی:</strong> اگر کوئی دلچسپی رکھتا ہے تو واضح کہے گا۔ کوئی چھپا ہوا اشارہ نہیں۔</li>
   <li><strong>صنفی مساوات:</strong> بل تقسیم کرنا معمول ہے۔ کوئی بھی صنف نہیں سمجھتی کہ دوسرا ہمیشہ ادا کرے گا۔</li>
-  <li><strong>آہستہ رفتار:</strong> ڈینش عام طور پر رشتے میں جلدی نہیں کرتے۔</li>
+  <li><strong>آہستہ رفتار:</strong> رشتے عموماً بتدریج آگے بڑھتے ہیں۔</li>
   <li><strong>ڈیٹنگ ایپس:</strong> Tinder، Bumble اور Hinge کوپن ہیگن میں مقبول ہیں۔</li>
   <li><strong>سرگرمیوں کے ذریعے ملاقات:</strong> کھیل کلبوں، موسیقی کے پروگراموں اور رضاکاری میں</li>
 </ul>`,

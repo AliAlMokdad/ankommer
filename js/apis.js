@@ -209,12 +209,34 @@ const APIs = (() => {
     const suggestions = document.getElementById(suggestionsId);
     if (!input || !suggestions) return;
 
+    // WAI-ARIA 1.2 combobox wiring. The input keeps DOM focus; the active
+    // suggestion is surfaced to assistive tech via aria-activedescendant.
+    input.setAttribute('role', 'combobox');
+    input.setAttribute('aria-expanded', 'false');
+    input.setAttribute('aria-controls', suggestionsId);
+    input.setAttribute('aria-autocomplete', 'list');
+    input.setAttribute('aria-haspopup', 'listbox');
+    suggestions.setAttribute('role', 'listbox');
+
+    const collapse = () => {
+      suggestions.classList.add('hidden');
+      input.setAttribute('aria-expanded', 'false');
+      input.removeAttribute('aria-activedescendant');
+    };
+    const setActive = (el) => {
+      suggestions.querySelectorAll('.dawa-item').forEach(i => { i.classList.remove('active'); i.setAttribute('aria-selected', 'false'); });
+      el.classList.add('active');
+      el.setAttribute('aria-selected', 'true');
+      if (el.id) input.setAttribute('aria-activedescendant', el.id);
+      el.scrollIntoView({ block: 'nearest' });
+    };
+
     let debounceTimer;
 
     input.addEventListener('input', () => {
       clearTimeout(debounceTimer);
       const q = input.value.trim();
-      if (q.length < 2) { suggestions.classList.add('hidden'); suggestions.innerHTML = ''; return; }
+      if (q.length < 2) { collapse(); suggestions.innerHTML = ''; return; }
       debounceTimer = setTimeout(() => fetchDAWASuggestions(q, suggestions, input, onSelect), 280);
     });
 
@@ -224,22 +246,22 @@ const APIs = (() => {
       if (e.key === 'ArrowDown') {
         e.preventDefault();
         const next = active ? active.nextElementSibling : items[0];
-        if (next) { active?.classList.remove('active'); next.classList.add('active'); next.scrollIntoView({ block: 'nearest' }); }
+        if (next) setActive(next);
       } else if (e.key === 'ArrowUp') {
         e.preventDefault();
         const prev = active ? active.previousElementSibling : items[items.length - 1];
-        if (prev) { active?.classList.remove('active'); prev.classList.add('active'); prev.scrollIntoView({ block: 'nearest' }); }
+        if (prev) setActive(prev);
       } else if (e.key === 'Enter') {
         const activeItem = suggestions.querySelector('.dawa-item.active');
         if (activeItem) { e.preventDefault(); activeItem.click(); }
       } else if (e.key === 'Escape') {
-        suggestions.classList.add('hidden');
+        collapse();
       }
     });
 
     document.addEventListener('click', (e) => {
       if (!input.contains(e.target) && !suggestions.contains(e.target)) {
-        suggestions.classList.add('hidden');
+        collapse();
       }
     });
   };
@@ -256,11 +278,13 @@ const APIs = (() => {
       if (!data.length) {
         suggestionsEl.innerHTML = '<div class="dawa-no-results">No addresses found — try more of the street name</div>';
         suggestionsEl.classList.remove('hidden');
+        inputEl.setAttribute('aria-expanded', 'false');
+        inputEl.removeAttribute('aria-activedescendant');
         return;
       }
 
-      suggestionsEl.innerHTML = data.map(item => `
-        <div class="dawa-item"
+      suggestionsEl.innerHTML = data.map((item, i) => `
+        <div class="dawa-item" role="option" id="${suggestionsEl.id}-opt-${i}" aria-selected="false"
           data-tekst="${esc(item.tekst || '')}"
           data-lat="${esc(item.adresse?.y || '')}"
           data-lon="${esc(item.adresse?.x || '')}"
@@ -275,6 +299,8 @@ const APIs = (() => {
         item.addEventListener('click', () => {
           inputEl.value = item.dataset.tekst;
           suggestionsEl.classList.add('hidden');
+          inputEl.setAttribute('aria-expanded', 'false');
+          inputEl.removeAttribute('aria-activedescendant');
           if (onSelect) onSelect({
             text:        item.dataset.tekst,
             lat:         parseFloat(item.dataset.lat) || null,
@@ -284,9 +310,16 @@ const APIs = (() => {
             postnrnavn:  item.dataset.postnrnavn,
           });
         });
+        item.addEventListener('mouseenter', () => {
+          suggestionsEl.querySelectorAll('.dawa-item').forEach(i => { i.classList.remove('active'); i.setAttribute('aria-selected', 'false'); });
+          item.classList.add('active');
+          item.setAttribute('aria-selected', 'true');
+          if (item.id) inputEl.setAttribute('aria-activedescendant', item.id);
+        });
       });
 
       suggestionsEl.classList.remove('hidden');
+      inputEl.setAttribute('aria-expanded', 'true');
     } catch (e) {
       console.warn('DAWA fetch failed:', e);
       // Show user feedback inside the suggestion dropdown — silent failure
@@ -297,6 +330,8 @@ const APIs = (() => {
         </div>
       `;
       suggestionsEl.classList.remove('hidden');
+      inputEl.setAttribute('aria-expanded', 'false');
+      inputEl.removeAttribute('aria-activedescendant');
     }
   };
 
@@ -751,7 +786,7 @@ const APIs = (() => {
         </div>
 
         <div class="weather-bjorn-quote">
-          <div class="weather-bjorn-face">🛡️</div>
+          <div class="weather-bjorn-face" aria-hidden="true">🛡️</div>
           <blockquote>${commentary}</blockquote>
         </div>
 
@@ -809,11 +844,32 @@ const APIs = (() => {
     const sugg  = document.getElementById(suggestionsId);
     if (!input || !sugg) return;
 
+    // WAI-ARIA 1.2 combobox wiring (mirrors the address autocomplete).
+    input.setAttribute('role', 'combobox');
+    input.setAttribute('aria-expanded', 'false');
+    input.setAttribute('aria-controls', suggestionsId);
+    input.setAttribute('aria-autocomplete', 'list');
+    input.setAttribute('aria-haspopup', 'listbox');
+    sugg.setAttribute('role', 'listbox');
+
+    const collapse = () => {
+      sugg.classList.add('hidden');
+      input.setAttribute('aria-expanded', 'false');
+      input.removeAttribute('aria-activedescendant');
+    };
+    const setActive = (el) => {
+      sugg.querySelectorAll('.dawa-item').forEach(i => { i.classList.remove('active'); i.setAttribute('aria-selected', 'false'); });
+      el.classList.add('active');
+      el.setAttribute('aria-selected', 'true');
+      if (el.id) input.setAttribute('aria-activedescendant', el.id);
+      el.scrollIntoView({ block: 'nearest' });
+    };
+
     let debounce;
     input.addEventListener('input', () => {
       clearTimeout(debounce);
       const q = input.value.trim().toLowerCase();
-      if (q.length < 2) { sugg.classList.add('hidden'); return; }
+      if (q.length < 2) { collapse(); return; }
 
       debounce = setTimeout(async () => {
         // Local known stations first
@@ -841,28 +897,50 @@ const APIs = (() => {
         if (!allItems.length) {
           sugg.innerHTML = '<div class="dawa-no-results">No stations found</div>';
           sugg.classList.remove('hidden');
+          input.setAttribute('aria-expanded', 'false');
+          input.removeAttribute('aria-activedescendant');
           return;
         }
 
-        sugg.innerHTML = allItems.map(s => `
-          <div class="dawa-item" data-stop-id="${esc(s.id)}" data-name="${esc(s.name)}">
+        sugg.innerHTML = allItems.map((s, i) => `
+          <div class="dawa-item" role="option" id="${suggestionsId}-opt-${i}" aria-selected="false" data-stop-id="${esc(s.id)}" data-name="${esc(s.name)}">
             <span class="dawa-street">🚉 ${esc(s.name)}</span>
           </div>
         `).join('');
         sugg.classList.remove('hidden');
+        input.setAttribute('aria-expanded', 'true');
 
         sugg.querySelectorAll('.dawa-item').forEach(item => {
           item.addEventListener('click', () => {
             input.value     = item.dataset.name;
             input.dataset.stopId = item.dataset.stopId;
-            sugg.classList.add('hidden');
+            collapse();
           });
+          item.addEventListener('mouseenter', () => setActive(item));
         });
       }, 300);
     });
 
+    input.addEventListener('keydown', (e) => {
+      const items = sugg.querySelectorAll('.dawa-item');
+      const active = sugg.querySelector('.dawa-item.active');
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        const next = active ? active.nextElementSibling : items[0];
+        if (next) setActive(next);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prev = active ? active.previousElementSibling : items[items.length - 1];
+        if (prev) setActive(prev);
+      } else if (e.key === 'Enter') {
+        if (active) { e.preventDefault(); active.click(); }
+      } else if (e.key === 'Escape') {
+        collapse();
+      }
+    });
+
     document.addEventListener('click', (e) => {
-      if (!input.contains(e.target)) sugg.classList.add('hidden');
+      if (!input.contains(e.target)) collapse();
     });
   };
 

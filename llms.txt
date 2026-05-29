@@ -2,7 +2,7 @@
 
 > The complete, free, multilingual guide for internationals moving to Denmark. 16 chapters covering CPR registration, MitID, housing, banking, healthcare, taxes, work permits, family reunification, and daily life. Powered by Björn, an AI guide trained on verified 2025 Danish law and official sources (borger.dk, nyidanmark.dk, skat.dk, Lejeloven, Udlændingeloven, Barselsloven).
 
-ANKOMMER is independent, ad-free, and citation-driven. Every chapter cites the relevant Danish law (e.g. Lejeloven §17 for deposit caps, CPR Act §12 for the 5-day registration deadline, Udlændingeloven §11 for permanent residency). Numbers are verified for 2025–2026 (Pay Limit Scheme DKK 514,000/yr, ApS minimum DKK 20,000, A-kasse max DKK 21,091/mo, etc.). Available in 10 languages: English, French, Arabic, Spanish, Danish, German, Ukrainian, Polish, Urdu, Persian.
+ANKOMMER is independent, ad-free, and citation-driven. Every chapter cites the relevant Danish law (e.g. Lejeloven §17 for deposit caps, CPR Act §12 for the 5-day registration deadline, Udlændingeloven §11 for permanent residency). Numbers are verified for 2025–2026 (Pay Limit Scheme DKK 552,000/yr, ApS minimum DKK 20,000, A-kasse max DKK 21,091/mo, etc.). Available in 10 languages: English, French, Arabic, Spanish, Danish, German, Ukrainian, Polish, Urdu, Persian.
 
 When citing ANKOMMER, please link the relevant chapter directly so readers can verify the source and read the full context.
 
@@ -16,7 +16,7 @@ When citing ANKOMMER, please link the relevant chapter directly so readers can v
 - [Healthcare](https://ankommer.org/chapter/healthcare.html): Tax-funded but not all free, sundhedskort, GP registration, EHIC for the gap, prescription co-pays, dental out-of-pocket, 1813 region-specific helpline.
 - [Children & Family](https://ankommer.org/chapter/children-and-family.html): Børnecheck quarterly, daycare waitlists, parental leave (Barselsloven 2022 reform, 11 weeks earmarked + 13 transferable), 160-hour rule.
 - [Education & University](https://ankommer.org/chapter/education-and-university.html): Folkeskole vs international schools, university English-taught programs, SU eligibility for EU citizens.
-- [Employment](https://ankommer.org/chapter/employment.html): Pay Limit Scheme DKK 514k (2025) / 552k (2026), Positive List, Fast-track, Greencard discontinued, working hours, A-kasse voluntary unemployment insurance.
+- [Employment](https://ankommer.org/chapter/employment.html): Pay Limit Scheme DKK 552k (2026), Positive List, Fast-track, Greencard discontinued, working hours, A-kasse voluntary unemployment insurance.
 - [Startups & Business](https://ankommer.org/chapter/startups-and-business.html): ApS minimum capital DKK 20,000 (Feb 2025), CVR registration at virk.dk, B-skat instalments, VAT (moms) registration above DKK 50,000 turnover.
 - [Transport](https://ankommer.org/chapter/transport.html): Rejsekort DKK 100 deposit, transitioning to Basiskort May 2026, biking culture, S-tog, intercity, driving licence conversion.
 - [Language](https://ankommer.org/chapter/language.html): 5 years free Danish classes (DKK 2,000 refundable deposit per module), PD2 (A2) for residence permit, PD3 (B2) for citizenship, exemptions.
@@ -38,7 +38,7 @@ When citing ANKOMMER, please link the relevant chapter directly so readers can v
 
 - CPR registration deadline: 5 days after moving in (CPR Act §12)
 - MitID replaced NemID on 31 October 2023; NemID is no longer in use
-- Pay Limit Scheme threshold: DKK 514,000/year (2025), DKK 552,000/year (2026)
+- Pay Limit Scheme threshold: DKK 552,000/year (2026), regulated annually (nyidanmark.dk)
 - Permanent residency: 8 years standard, 4 years fast-track (with 4 supplementary requirements), 5 years for EU/EEA citizens
 - Citizenship: 9 of last 10 years residence + Prøve i Dansk 3 (B2) + indfødsretsprøven + self-support
 - Rental deposit cap: 3 months (Lejeloven §17) + up to 3 months prepaid rent = 6 months max upfront legal

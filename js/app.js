@@ -1068,7 +1068,7 @@ const Wizard = {
       </div>
 
       <div class="result-bjorn-card">
-        <div class="result-bjorn-avatar">🛡️</div>
+        <div class="result-bjorn-avatar" aria-hidden="true">🛡️</div>
         <div>
           <span class="result-bjorn-label">${t_('bjornSays', lang)}</span>
           <p class="result-bjorn-text">${bjornNote}</p>
@@ -1394,7 +1394,7 @@ const renderChapter = (index) => {
 
   const bjornTip = ch.bjornTip ? `
     <div class="bjorn-tip">
-      <div class="bjorn-tip-avatar">🛡️</div>
+      <div class="bjorn-tip-avatar" aria-hidden="true">🛡️</div>
       <div class="bjorn-tip-body">
         <strong>${t_('bjornSays', lang)}</strong>
         <p>${pickLang(ch.bjornTip, lang)}</p>
@@ -1513,7 +1513,7 @@ const _loadFullChapters = () => {
   if (_chaptersLoadPromise) return _chaptersLoadPromise;
   _chaptersLoadPromise = new Promise((resolve) => {
     const s = document.createElement('script');
-    s.src = 'js/data-chapters.js?v=32';
+    s.src = 'js/data-chapters.js?v=33';
     s.onload = () => { _chaptersFullLoaded = true; resolve(); };
     s.onerror = () => {
       // Clear the cached promise so a future retry (e.g. after the user
@@ -2592,10 +2592,15 @@ const Search = (() => {
   const render = (results, q) => {
     const el = document.getElementById('search-results');
     if (!el) return;
+    const cbInput = document.getElementById('search-input');
     selectedIdx = -1;
+    // Combobox: a fresh render rebuilds the option list, so clear any
+    // previously-tracked active descendant. Arrow keys re-establish it.
+    if (cbInput) cbInput.removeAttribute('aria-activedescendant');
 
     const _l = window.currentLang || 'en';
     if (!q || q.length < 2) {
+      if (cbInput) cbInput.setAttribute('aria-expanded', 'false');
       el.innerHTML = `<div class="search-empty">
         <div class="search-empty-icon">🔍</div>
         <div class="search-empty-text">${t_('searchHint', _l)}</div>
@@ -2604,16 +2609,19 @@ const Search = (() => {
     }
 
     if (!results.length) {
+      if (cbInput) cbInput.setAttribute('aria-expanded', 'false');
       // escapeHtml prevents XSS from user query appearing in innerHTML
       el.innerHTML = `<div class="search-empty"><div class="search-empty-icon">🤷</div><div class="search-empty-text">${t_('searchNoResults', _l, escapeHtml(q))}</div></div>`;
       return;
     }
 
+    if (cbInput) cbInput.setAttribute('aria-expanded', 'true');
+
     const typeLabel = { chapter: t_('searchTypeChapter', _l), section: t_('searchTypeTopic', _l), task: t_('searchTypeTask', _l) };
 
-    el.innerHTML = `<ul class="search-result-list" role="listbox">
+    el.innerHTML = `<ul class="search-result-list" role="listbox" id="search-listbox">
       ${results.map((r, i) => `
-        <li class="search-result-item" role="option" data-idx="${i}" data-chapter="${r.chapterId}" data-section="${r.sectionIdx ?? ''}">
+        <li class="search-result-item" role="option" id="search-opt-${i}" aria-selected="false" data-idx="${i}" data-chapter="${r.chapterId}" data-section="${r.sectionIdx ?? ''}">
           <div class="sri-icon" style="background:${r.color}20;color:${r.color}">${r.icon}</div>
           <div class="sri-body">
             <div class="sri-title">${highlight(r.title, q)}</div>
@@ -2650,9 +2658,11 @@ const Search = (() => {
         }, 120);
       });
       item.addEventListener('mouseenter', () => {
-        el.querySelectorAll('.search-result-item').forEach(i => i.classList.remove('active'));
+        el.querySelectorAll('.search-result-item').forEach(i => { i.classList.remove('active'); i.setAttribute('aria-selected', 'false'); });
         item.classList.add('active');
+        item.setAttribute('aria-selected', 'true');
         selectedIdx = parseInt(item.dataset.idx);
+        if (cbInput) cbInput.setAttribute('aria-activedescendant', item.id);
       });
     });
   };
@@ -2692,7 +2702,11 @@ const Search = (() => {
     overlay.classList.add('hidden');
     document.body.style.overflow = '';
     const input = document.getElementById('search-input');
-    if (input) input.value = '';
+    if (input) {
+      input.value = '';
+      input.setAttribute('aria-expanded', 'false');
+      input.removeAttribute('aria-activedescendant');
+    }
     focusTrap?.deactivate();
     focusTrap = null;
   };
@@ -2749,7 +2763,16 @@ const Search = (() => {
         }
         return;
       }
-      items.forEach((item, i) => item.classList.toggle('active', i === selectedIdx));
+      items.forEach((item, i) => {
+        const sel = i === selectedIdx;
+        item.classList.toggle('active', sel);
+        item.setAttribute('aria-selected', sel ? 'true' : 'false');
+      });
+      const cbInput = document.getElementById('search-input');
+      if (cbInput) {
+        if (selectedIdx >= 0 && items[selectedIdx]) cbInput.setAttribute('aria-activedescendant', items[selectedIdx].id);
+        else cbInput.removeAttribute('aria-activedescendant');
+      }
       items[selectedIdx]?.scrollIntoView({ block: 'nearest' });
     });
   };

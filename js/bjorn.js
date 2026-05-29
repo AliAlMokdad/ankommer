@@ -271,9 +271,9 @@ this list.
 ▸ MitID has FULLY replaced NemID since 31 October 2023. NemID is dead.
   Anyone telling a newcomer "use NemID" is wrong.
 
-▸ Pay Limit Scheme threshold: DKK 514,000/year in 2025, rising to
-  DKK 552,000/year in 2026. The supplementary scheme is DKK 415,000
-  (2025) / DKK 446,000 (2026). Source: nyidanmark.dk.
+▸ Pay Limit Scheme threshold: DKK 552,000/year (2026). The
+  supplementary scheme is DKK 446,000 (2026). Both are regulated
+  annually on 1 January. Source: nyidanmark.dk.
 
 ▸ Family reunification financial guarantee (sikkerhedsstillelse):
   approximately DKK 57,000 in 2025. The July 2024 reform halved the
@@ -791,6 +791,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       const avatar = document.createElement('div');
       avatar.className = 'msg-avatar';
       avatar.textContent = '🛡️';
+      avatar.setAttribute('aria-hidden', 'true');
       div.appendChild(avatar);
     }
 

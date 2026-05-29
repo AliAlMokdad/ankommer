@@ -19,7 +19,7 @@ Everything you should do before your flight touches down. Starting right now get
 
 **Non-EU citizens** need one of these:
 
-  - **Work permit** — requires a job offer from a Danish employer. Most common types: Positive List (for high-demand professions), Pay Limit Scheme (if salary > DKK 514,000/year in 2025, rising to DKK 552,000 in 2026), Fast-track Scheme (for certified companies).
+  - **Work permit** — requires a job offer from a Danish employer. Most common types: Positive List (for high-demand professions), Pay Limit Scheme (if salary > DKK 552,000/year in 2026), Fast-track Scheme (for certified companies).
 
   - **Student visa** — if enrolled at a Danish university or educational institution. Apply at newtodenmark.dk at least 2 months before.
 
@@ -242,7 +242,7 @@ Your residence permit determines your rights in Denmark. Here's a clear overview
 
 **Positive List** | High-demand professions | Full | Up to 4 years |
 
-**Pay Limit Scheme** | Salary > DKK 514,000/yr (2025) · DKK 552,000/yr from 2026 | Full | Up to 4 years |
+**Pay Limit Scheme** | Salary > DKK 552,000/yr (2026) | Full | Up to 4 years |
 
 **Student Permit** | Enrolled students | 15 hrs/week | Duration of study |
 
@@ -928,9 +928,9 @@ If you're a non-EU/EEA citizen, you can only work in Denmark with a residence-an
 
 **Scheme** | **Eligibility** | **Apply via** |
 
-**Pay Limit Scheme (Beløbsordningen)** | Job offer with salary above DKK **514,000/yr (2025)** · DKK 552,000/yr from 2026. Most flexible. Allows job-switching after 6 months. | Your employer applies via SIRI |
+**Pay Limit Scheme (Beløbsordningen)** | Job offer with salary above DKK **552,000/yr (2026)**. Most flexible. Allows job-switching after 6 months. | Your employer applies via SIRI |
 
-**Supplementary Pay Limit Scheme** | Lower threshold (DKK 415,000/yr in 2025; DKK 446,000 from 2026) but only for nationals of selected high-income countries with a labour-market need. | SIRI |
+**Supplementary Pay Limit Scheme** | Lower threshold (DKK 446,000/yr in 2026) but only for nationals of selected high-income countries with a labour-market need. | SIRI |
 
 **Positive List (high education / labour shortage)** | Your profession appears on the [Positive List](https://www.nyidanmark.dk/en-GB/Words-and-concepts/SIRI/Positive-Lists/Positive-List-for-People-with-a-Higher-Education) (engineers, doctors, certain IT, nurses, etc.). No salary threshold beyond market wage. | SIRI |
 
@@ -1535,7 +1535,7 @@ Dating in Denmark operates by norms that are distinctly different from most othe
 
   - **Radical equality.** Danish dating is genuinely egalitarian. Anyone can ask anyone out. Paying for the other person is not expected — splitting the bill is standard from the first date. Don't read anything into who pays; it's neutral territory.
 
-  - **Directness over games.** Danes do not play hard-to-get in the way common in other cultures. If someone is interested, they will usually say so relatively quickly. If they're not interested, they'll say that too — or simply stop replying, which is also understood to mean no.
+  - **Directness over games.** Dating here tends to be direct. If someone is interested, they will usually say so relatively quickly. If they're not interested, they'll say that too — or simply stop replying, which is also understood to mean no.
 
   - **Alcohol as social lubricant.** Many Danes find it easier to make the first move after some drinks. Danish bar culture is a genuine dating environment, especially Thursday–Saturday evenings.
 

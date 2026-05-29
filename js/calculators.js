@@ -767,7 +767,7 @@ const Calculators = (() => {
           date: citizenDate,
           reached: now >= citizenDate,
           icon: '🇩🇰',
-          note: `Requires Prøve i Dansk 3 (≈B2), citizenship test, self-sufficiency, and continuous residence (8 of last 9 years)`
+          note: `Requires Prøve i Dansk 3 (≈B2), citizenship test, self-sufficiency, and 9 years' continuous residence`
         }
       ];
 
