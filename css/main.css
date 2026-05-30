@@ -4272,7 +4272,11 @@ body { overflow-wrap: break-word; }
   position: relative;
   display: inline-block;
 }
-.section-header > h2::before {
+/* Eyebrow label above section h2. Moved out of CSS ::before content
+   so the text can be translated by the data-i18n system. The previous
+   ::before pseudo-elements left these labels frozen in English for
+   all 10 languages. */
+.section-header > .section-eyebrow {
   display: block;
   font-family: var(--font-body);
   font-size: 0.72rem;
@@ -4283,9 +4287,6 @@ body { overflow-wrap: break-word; }
   margin-bottom: 14px;
   opacity: 0.85;
 }
-#chapters-preview-section .section-header h2::before { content: "THE GUIDE · 16 CHAPTERS"; }
-#tools-section .section-header h2::before          { content: "SMART TOOLS"; }
-#daily-section .section-header h2::before          { content: "TODAY IN DENMARK"; }
 .section-header > h2::after {
   content: ""; display: block;
   width: 48px; height: 2px;

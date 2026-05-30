@@ -85,6 +85,7 @@ const UI_T = {
   tl_tab_month3:    { en:'Month 3', fr:'Mois 3',    ar:'الشهر 3',   es:'Mes 3',     da:'Måned 3',  de:'Monat 3',  uk:'Місяць 3',  pl:'Miesiąc 3', ur:'مہینہ 3', fa:'ماه ۳'  },
   tl_tab_month6:    { en:'Month 6', fr:'Mois 6',    ar:'الشهر 6',   es:'Mes 6',     da:'Måned 6',  de:'Monat 6',  uk:'Місяць 6',  pl:'Miesiąc 6', ur:'مہینہ 6', fa:'ماه ۶'  },
   tl_tab_year1:     { en:'Year 1',  fr:'An 1',      ar:'السنة 1',   es:'Año 1',     da:'År 1',     de:'Jahr 1',   uk:'Рік 1',     pl:'Rok 1',     ur:'سال 1',   fa:'سال ۱'  },
+  minUnit:          { en:'min',     fr:'min',       ar:'دقيقة',     es:'min',       da:'min',      de:'Min.',     uk:'хв',        pl:'min',       ur:'منٹ',     fa:'دقیقه'  },
 };
 const t_ = (key, lang, ...args) => {
   const val = UI_T[key]?.[lang] || UI_T[key]?.en;
@@ -1452,7 +1453,7 @@ const renderChapter = (index) => {
         <h2 class="chapter-title">${ch.title[lang] || ch.title.en}</h2>
         <p class="chapter-intro">${pickLang(ch.intro, lang)}</p>
         <div class="chapter-meta">
-          <span class="chapter-meta-tag">${t_('readTime', lang, ch.readTime || '10 min')}</span>
+          <span class="chapter-meta-tag">${String(ch.readTime || '10').replace(/\s*min\s*$/i, '').trim()} ${t_('minUnit', lang)}</span>
           <span class="chapter-meta-tag">${allTasks.length} ${t_('tasks', lang)}</span>
           ${pct === 100 ? `<span class="chapter-meta-tag" style="background:rgba(106,158,106,0.15);color:var(--sage)">${t_('complete', lang)}</span>` : ''}
           ${ch.lastUpdated ? `<span class="chapter-meta-tag chapter-meta-updated" title="${ {en:'Last reviewed',fr:'Dernière révision',ar:'آخر مراجعة',es:'Última revisión',da:'Sidst opdateret',de:'Zuletzt geprüft',uk:'Востаннє переглянуто',pl:'Ostatnio sprawdzono',ur:'آخری جائزہ',fa:'آخرین بررسی'}[lang] || 'Last reviewed' }">🛠 ${ch.lastUpdated}</span>` : ''}
@@ -2092,7 +2093,10 @@ const renderChaptersPreview = () => {
   grid.innerHTML = chapData.map(ch => {
     const title    = L(ch.title);
     const subtitle = L(ch.subtitle);
-    const readTime = ch.readTime || '';
+    const readTimeRaw = ch.readTime || '';
+    const readTime    = readTimeRaw
+      ? `${String(readTimeRaw).replace(/\s*min\s*$/i, '').trim()} ${t_('minUnit', lang)}`
+      : '';
     const num      = String(ch.id + 1).padStart(2, '0');
     return `<button
       class="ch-preview-card"
