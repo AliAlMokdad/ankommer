@@ -564,7 +564,7 @@ Use the Salary Calculator on this page for your exact take-home.`,
 - **Deposit (depositum):** maximum **3 months' rent**
 - **Prepaid rent (forudbetalt leje):** maximum **3 months**
 - **Total upfront combined:** max **6 months — this is LEGAL.** Anything ABOVE 6 months upfront is illegal.
-- **Landlord notice for unfurnished housing:** minimum **1 year** (Lejeloven §86), not 3 months.
+- **Landlord notice for unfurnished housing:** minimum **1 year** (Lejeloven §175), not 3 months.
 - **Move-in report:** must be issued within 14 days of move-in (Lejeloven §9) or landlord cannot charge for damages.
 
 **Approximate Copenhagen 1-bed rents (2025):** Nørrebro/Vesterbro 10–12k, Frederiksberg 12–14k, Amager 9–11k. Outside CPH: Aarhus 7–10k, Odense 6–8k.

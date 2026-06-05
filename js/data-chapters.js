@@ -1965,7 +1965,7 @@ de:`<p>Daenische Vermieter erhalten Dutzende von Bewerbungen pro Inserat. So sti
 <ul>
   <li><strong>Deposit cap:</strong> Maximum 3 months' rent. Prepaid rent: maximum 3 months. Total upfront: 6 months max.</li>
   <li><strong>Rent increases:</strong> Regulated. Landlord cannot raise rent arbitrarily. Must follow net price index or be approved.</li>
-  <li><strong>Notice period:</strong> For unfurnished housing (the typical lease), the landlord must give you at least <strong>1 year's notice</strong> under Lejeloven §86 — only 3 months for furnished single rooms. Tenants have a 3-month notice obligation in most cases.</li>
+  <li><strong>Notice period:</strong> For unfurnished housing (the typical lease), the landlord must give you at least <strong>1 year's notice</strong> under Lejeloven §175. Tenants have a 3-month notice obligation in most cases.</li>
   <li><strong>Deposit return:</strong> The unused portion must be returned promptly, but the landlord typically has up to ~6 weeks (and in disputed cases up to 2 months) to settle the move-out report (flytteopgørelse) and repair costs. "Within 2 weeks" is a myth — disputes go to Huslejenævnet.</li>
   <li><strong>Heating/utilities:</strong> Must be specified in lease. Cannot be changed without notice.</li>
 </ul>
@@ -1975,7 +1975,7 @@ da:`<p>Dansk lejelovgivning beskytter lejere godt. Kend disse regler:</p>
 <ul>
   <li><strong>Depositumsloft:</strong> Maksimalt 3 måneders husleje. Forudbetalt leje: maks. 3 måneder. Samlet upfront: maks. 6 måneder.</li>
   <li><strong>Huslejestigninger:</strong> Reguleret. Udlejer kan ikke hæve huslejen vilkårligt. Skal følge nettoprisindekset eller godkendes.</li>
-  <li><strong>Opsigelsesvarsel:</strong> For umøblerede boliger (den typiske lejekontrakt) skal udlejer give dig mindst <strong>1 års varsel</strong> jf. Lejeloven §86 — kun 3 måneder for møblerede enkeltværelser. Lejer har 3 måneders opsigelsesfrist i de fleste tilfælde.</li>
+  <li><strong>Opsigelsesvarsel:</strong> For umøblerede boliger (den typiske lejekontrakt) skal udlejer give dig mindst <strong>1 års varsel</strong> jf. Lejeloven §175. Lejer har 3 måneders opsigelsesfrist i de fleste tilfælde.</li>
   <li><strong>Tilbagebetaling af depositum:</strong> Den ubrugte del skal tilbagebetales, men udlejer har typisk op til ~6 uger (og i tvistede sager op til 2 måneder) til at opgøre fraflytningsrapporten og reparationsomkostninger. Tvister afgøres af Huslejenævnet.</li>
   <li><strong>Varme/forsyninger:</strong> Skal fremgå af lejekontrakten. Kan ikke ændres uden varsel.</li>
 </ul>
@@ -1985,7 +1985,7 @@ fr:`<p>Les protections locataires danoises sont solides. Connaissez ces règles 
 <ul>
   <li><strong>Plafond du dépôt :</strong> Maximum 3 mois de loyer. Loyer prépayé : maximum 3 mois. Total initial : 6 mois max.</li>
   <li><strong>Augmentations de loyer :</strong> Réglementées. Le propriétaire ne peut pas augmenter le loyer arbitrairement. Doit suivre l'indice des prix nets ou être approuvé.</li>
-  <li><strong>Préavis :</strong> Pour les logements non meublés (bail typique), le propriétaire doit vous donner au moins <strong>1 an de préavis</strong> selon la Lejeloven §86 — seulement 3 mois pour les chambres meublées. Le locataire a généralement 3 mois de préavis.</li>
+  <li><strong>Préavis :</strong> Pour les logements non meublés (bail typique), le propriétaire doit vous donner au moins <strong>1 an de préavis</strong> selon la Lejeloven §175. Le locataire a généralement 3 mois de préavis.</li>
   <li><strong>Restitution du dépôt :</strong> La partie non utilisée doit être restituée, mais le propriétaire dispose généralement d'environ 6 semaines (et jusqu'à 2 mois en cas de litige) pour établir l'état des lieux de sortie. Les litiges sont tranchés par le Huslejenævnet.</li>
   <li><strong>Chauffage/services :</strong> Doit être spécifié dans le bail. Ne peut pas être modifié sans préavis.</li>
 </ul>
@@ -1995,7 +1995,7 @@ ar:`<p>حقوق المستأجرين في الدنمارك قوية. اعرف ه
 <ul>
   <li><strong>سقف الوديعة:</strong> الحد الأقصى 3 أشهر إيجار. الإيجار المدفوع مسبقاً: 3 أشهر كحد أقصى. إجمالي المبلغ المقدّم: 6 أشهر كحد أقصى.</li>
   <li><strong>زيادات الإيجار:</strong> خاضعة للتنظيم. لا يجوز للمالك رفع الإيجار بشكل تعسفي. يجب أن تتبع مؤشر الأسعار الصافي أو تحصل على موافقة.</li>
-  <li><strong>فترة الإشعار:</strong> للسكن غير المفروش (العقد المعتاد)، يجب على المالك إعطاءك إشعاراً بمدة <strong>سنة كاملة</strong> على الأقل وفق Lejeloven §86 — 3 أشهر فقط للغرف المفروشة المنفردة. يلتزم المستأجر عادةً بـ 3 أشهر إشعار.</li>
+  <li><strong>فترة الإشعار:</strong> للسكن غير المفروش (العقد المعتاد)، يجب على المالك إعطاءك إشعاراً بمدة <strong>سنة كاملة</strong> على الأقل وفق Lejeloven §175. يلتزم المستأجر عادةً بـ 3 أشهر إشعار.</li>
   <li><strong>استرداد الوديعة:</strong> يجب إعادة الجزء غير المستخدم، لكن يتاح للمالك عادةً نحو 6 أسابيع (وحتى شهرين في حالات النزاع) لإعداد تقرير الإخلاء (flytteopgørelse) وتسوية تكاليف الإصلاح. النزاعات تُحال إلى Huslejenævnet.</li>
   <li><strong>التدفئة/المرافق:</strong> يجب تحديدها في العقد. لا يمكن تغييرها دون إشعار.</li>
 </ul>
@@ -2005,7 +2005,7 @@ es:`<p>Las protecciones al inquilino en Dinamarca son sólidas. Conoce estas reg
 <ul>
   <li><strong>Límite del depósito:</strong> Máximo 3 meses de alquiler. Alquiler prepagado: máximo 3 meses. Total por adelantado: 6 meses como máximo.</li>
   <li><strong>Subidas de alquiler:</strong> Reguladas. El propietario no puede subir el alquiler arbitrariamente. Debe seguir el índice de precios netos o ser aprobado.</li>
-  <li><strong>Plazo de preaviso:</strong> Para vivienda sin amueblar (el contrato típico), el propietario debe darte al menos <strong>1 año de preaviso</strong> según Lejeloven §86 — solo 3 meses para habitaciones amuebladas. Los inquilinos tienen generalmente 3 meses de preaviso.</li>
+  <li><strong>Plazo de preaviso:</strong> Para vivienda sin amueblar (el contrato típico), el propietario debe darte al menos <strong>1 año de preaviso</strong> según Lejeloven §175. Los inquilinos tienen generalmente 3 meses de preaviso.</li>
   <li><strong>Devolución del depósito:</strong> La parte no utilizada debe devolverse, pero el propietario suele tener hasta ~6 semanas (y en casos de disputa hasta 2 meses) para liquidar el informe de salida (flytteopgørelse) y los costes de reparación. Las disputas van a Huslejenævnet.</li>
   <li><strong>Calefacción/suministros:</strong> Deben especificarse en el contrato. No pueden cambiarse sin preaviso.</li>
 </ul>
@@ -2015,7 +2015,7 @@ de:`<p>Der Mieterschutz in Daenemark ist stark. Kennen Sie diese Regeln:</p>
 <ul>
   <li><strong>Kautionsobergrenze:</strong> Hoechstens 3 Monatsmieten. Vorausbezahlte Miete: hoechstens 3 Monate. Gesamt im Voraus: maximal 6 Monate.</li>
   <li><strong>Mieterhoehungen:</strong> Reguliert. Der Vermieter kann die Miete nicht willkuerlich erhoehen. Muss dem Nettopre isindex folgen oder genehmigt werden.</li>
-  <li><strong>Kuendigungsfrist:</strong> Fuer unmoeblierten Wohnraum (der typische Mietvertrag) muss der Vermieter Ihnen mindestens <strong>1 Jahr Kuendigungsfrist</strong> gemaess Lejeloven §86 geben — nur 3 Monate fuer moeblie rte Einzelzimmer. Mieter haben in den meisten Faellen eine 3-monatige Kuendigungspflicht.</li>
+  <li><strong>Kuendigungsfrist:</strong> Fuer unmoeblierten Wohnraum (der typische Mietvertrag) muss der Vermieter Ihnen mindestens <strong>1 Jahr Kuendigungsfrist</strong> gemaess Lejeloven §175 geben. Mieter haben in den meisten Faellen eine 3-monatige Kuendigungspflicht.</li>
   <li><strong>Kautionsrueckgabe:</strong> Der nicht verbrauchte Teil muss zurueckgegeben werden, aber der Vermieter hat typischerweise bis zu ~6 Wochen (und in Streitfaellen bis zu 2 Monate) fuer den Auszugsbericht (flytteopgorelse) und Reparaturkosten. Streitigkeiten gehen an den Huslejenaevnet.</li>
   <li><strong>Heizung/Nebenkosten:</strong> Muss im Mietvertrag angegeben werden. Kann nicht ohne Vorankuendigung geaendert werden.</li>
 </ul>
@@ -2025,7 +2025,7 @@ de:`<p>Der Mieterschutz in Daenemark ist stark. Kennen Sie diese Regeln:</p>
 <ul>
   <li><strong>Обмеження застави:</strong> Максимум 3 місяці оренди. Наперед оплачена оренда: максимум 3 місяці. Загалом наперед: максимум 6 місяців.</li>
   <li><strong>Підвищення орендної плати:</strong> Регулюється. Орендодавець не може довільно підвищувати оренду. Повинно відповідати індексу цін або бути затвердженим.</li>
-  <li><strong>Термін повідомлення:</strong> Для немебльованого житла (типовий договір) орендодавець зобов'язаний попередити вас щонайменше за <strong>1 рік</strong> відповідно до Lejeloven §86 — лише 3 місяці для мебльованих кімнат. Орендарі зазвичай мають 3-місячне зобов'язання з повідомлення.</li>
+  <li><strong>Термін повідомлення:</strong> Для немебльованого житла (типовий договір) орендодавець зобов'язаний попередити вас щонайменше за <strong>1 рік</strong> відповідно до Lejeloven §175. Орендарі зазвичай мають 3-місячне зобов'язання з повідомлення.</li>
   <li><strong>Повернення застави:</strong> Невикористана частина має бути повернута, але орендодавець зазвичай має до ~6 тижнів (а в спірних випадках до 2 місяців) для складання акту про виїзд (flytteopgørelse) та розрахунку витрат на ремонт. Суперечки розглядаються в Huslejenævnet.</li>
   <li><strong>Опалення/комунальні послуги:</strong> Мають бути вказані в договорі. Не можуть змінюватись без повідомлення.</li>
 </ul>
@@ -2035,7 +2035,7 @@ de:`<p>Der Mieterschutz in Daenemark ist stark. Kennen Sie diese Regeln:</p>
 <ul>
   <li><strong>Limit kaucji:</strong> Maksymalnie 3 miesiące czynszu. Czynsz z góry: maksymalnie 3 miesiące. Łącznie z góry: maksymalnie 6 miesięcy.</li>
   <li><strong>Podwyżki czynszu:</strong> Regulowane. Właściciel nie może arbitralnie podnosić czynszu. Musi być zgodny z indeksem cen netto lub zatwierdzony.</li>
-  <li><strong>Okres wypowiedzenia:</strong> Dla mieszkań nieumeblowanych (typowa umowa) właściciel musi dać ci co najmniej <strong>1 rok wypowiedzenia</strong> na mocy Lejeloven §86 — tylko 3 miesiące dla umeblowanych pokoi. Najemcy mają zazwyczaj 3-miesięczne zobowiązanie wypowiedzenia.</li>
+  <li><strong>Okres wypowiedzenia:</strong> Dla mieszkań nieumeblowanych (typowa umowa) właściciel musi dać ci co najmniej <strong>1 rok wypowiedzenia</strong> na mocy Lejeloven §175. Najemcy mają zazwyczaj 3-miesięczne zobowiązanie wypowiedzenia.</li>
   <li><strong>Zwrot kaucji:</strong> Niewykorzystana część musi zostać zwrócona, ale właściciel ma zazwyczaj do ~6 tygodni (a w spornych przypadkach do 2 miesięcy) na sporządzenie protokołu zdawczego (flytteopgørelse) i rozliczenie kosztów napraw. Spory trafiają do Huslejenævnet.</li>
   <li><strong>Ogrzewanie/media:</strong> Muszą być określone w umowie. Nie mogą być zmieniane bez wypowiedzenia.</li>
 </ul>
@@ -2045,7 +2045,7 @@ de:`<p>Der Mieterschutz in Daenemark ist stark. Kennen Sie diese Regeln:</p>
 <ul>
   <li><strong>ضمانتی رقم کی حد:</strong> زیادہ سے زیادہ 3 ماہ کا کرایہ۔ پیشگی کرایہ: زیادہ سے زیادہ 3 ماہ۔ کل پیشگی: 6 ماہ زیادہ سے زیادہ۔</li>
   <li><strong>کرایہ میں اضافہ:</strong> ریگولیٹڈ۔ مکان مالک من مانے طریقے سے کرایہ نہیں بڑھا سکتا۔ قیمت اشاریہ کے مطابق یا منظور شدہ ہونا ضروری ہے۔</li>
-  <li><strong>نوٹس کی مدت:</strong> بغیر فرنیچر رہائش (عام لیز) کے لیے مکان مالک کو Lejeloven §86 کے تحت کم از کم <strong>1 سال کا نوٹس</strong> دینا ہوگا — فرنش کمروں کے لیے صرف 3 ماہ۔ کرایہ داروں کا عموماً 3 ماہ کا نوٹس کا ذمہ ہوتا ہے۔</li>
+  <li><strong>نوٹس کی مدت:</strong> بغیر فرنیچر رہائش (عام لیز) کے لیے مکان مالک کو Lejeloven §175 کے تحت کم از کم <strong>1 سال کا نوٹس</strong> دینا ہوگا۔ کرایہ داروں کا عموماً 3 ماہ کا نوٹس کا ذمہ ہوتا ہے۔</li>
   <li><strong>ضمانتی رقم کی واپسی:</strong> غیر استعمال شدہ حصہ واپس کیا جانا چاہیے، لیکن مکان مالک کو عام طور پر نقل مکانی رپورٹ اور مرمت اخراجات طے کرنے کے لیے ~6 ہفتے تک (متنازعہ معاملات میں 2 ماہ تک) کا وقت ملتا ہے۔ تنازعات Huslejenævnet میں جاتے ہیں۔</li>
   <li><strong>حرارت/یوٹیلیٹیز:</strong> لیز میں بیان ہونی چاہیے۔ نوٹس کے بغیر تبدیل نہیں کی جا سکتیں۔</li>
 </ul>
@@ -9003,7 +9003,7 @@ de:`<p>Dänemark verfügt über mehrere einander ergänzende Gesetze, die Diskri
 <p><strong>Key rights as a tenant:</strong></p>
 <ul>
   <li><strong>Rent control:</strong> In most older properties (built before 1992), rent increases are regulated and must be approved by the local rent tribunal (huslejenævn). Your landlord cannot simply raise rent whenever they like.</li>
-  <li><strong>Notice periods:</strong> For unfurnished housing (the typical lease), your landlord must give you at least 1 year's notice to end the tenancy under Lejeloven §86 — only 3 months for furnished single rooms. Your own notice to leave is typically 3 months.</li>
+  <li><strong>Notice periods:</strong> For unfurnished housing (the typical lease), your landlord must give you at least 1 year's notice to end the tenancy under Lejeloven §175. Your own notice to leave is typically 3 months.</li>
   <li><strong>Deposit (depositum) limits:</strong> Landlords can charge a maximum of 3 months' rent as deposit, and maximum 3 months' advance rent. The total cannot exceed 6 months' combined rent.</li>
   <li><strong>Condition on move-in:</strong> The landlord must provide a move-in report (indflytningsrapport) within 2 weeks of your move-in. If they don't, they cannot charge you for damages when you leave.</li>
   <li><strong>Maintenance:</strong> The landlord is responsible for major maintenance. You are responsible for interior maintenance (painting, minor repairs) unless your contract says otherwise.</li>
@@ -9018,7 +9018,7 @@ da:`<p>Danmark har nogle af Europas stærkeste lejerrettigheder. At kende dem ka
 <p><strong>Vigtigste rettigheder som lejer:</strong></p>
 <ul>
   <li><strong>Huslejeregulering:</strong> I de fleste ældre ejendomme (opført før 1992) er huslejestigninger reguleret og skal godkendes af huslejenævnet. Din udlejer kan ikke bare sætte huslejen op, når vedkommende ønsker det.</li>
-  <li><strong>Opsigelsesvarsel:</strong> For umøblerede boliger (den typiske lejekontrakt) skal din udlejer give dig mindst <strong>1 års varsel</strong> for at opsige lejemålet jf. Lejeloven §86 — kun 3 måneder for møblerede enkeltværelser. Dit eget opsigelsesvarsel er typisk 3 måneder.</li>
+  <li><strong>Opsigelsesvarsel:</strong> For umøblerede boliger (den typiske lejekontrakt) skal din udlejer give dig mindst <strong>1 års varsel</strong> for at opsige lejemålet jf. Lejeloven §175. Dit eget opsigelsesvarsel er typisk 3 måneder.</li>
   <li><strong>Depositumgrænser:</strong> Udlejere kan maksimalt kræve 3 måneders husleje i depositum og maksimalt 3 måneders forudbetalt leje. Tilsammen kan det ikke overstige 6 måneders samlet husleje.</li>
   <li><strong>Stand ved indflytning:</strong> Udlejeren skal udlevere en indflytningsrapport inden for 2 uger efter din indflytning. Gør vedkommende det ikke, kan der ikke opkræves for skader ved fraflytning.</li>
   <li><strong>Vedligeholdelse:</strong> Udlejeren er ansvarlig for større vedligeholdelse. Du er ansvarlig for indvendig vedligeholdelse (maling, mindre reparationer) medmindre din kontrakt siger andet.</li>
@@ -9033,7 +9033,7 @@ fr:`<p>Le Danemark dispose de certaines des protections locataires les plus soli
 <p><strong>Droits clés en tant que locataire :</strong></p>
 <ul>
   <li><strong>Contrôle des loyers :</strong> Dans la plupart des propriétés anciennes (construites avant 1992), les augmentations de loyer sont réglementées et doivent être approuvées par le tribunal des loyers local (huslejenævn). Votre propriétaire ne peut pas simplement augmenter le loyer quand il le souhaite.</li>
-  <li><strong>Délais de préavis :</strong> Pour les logements non meublés (bail typique), votre propriétaire doit vous donner au moins <strong>1 an de préavis</strong> pour résilier le bail, selon la Lejeloven §86 — seulement 3 mois pour les chambres meublées. Votre propre préavis pour partir est généralement de 3 mois.</li>
+  <li><strong>Délais de préavis :</strong> Pour les logements non meublés (bail typique), votre propriétaire doit vous donner au moins <strong>1 an de préavis</strong> pour résilier le bail, selon la Lejeloven §175. Votre propre préavis pour partir est généralement de 3 mois.</li>
   <li><strong>Limites de dépôt (depositum) :</strong> Les propriétaires peuvent exiger au maximum 3 mois de loyer en dépôt, et au maximum 3 mois de loyer d'avance. Le total ne peut pas dépasser 6 mois de loyer combiné.</li>
   <li><strong>État à l'entrée :</strong> Le propriétaire doit fournir un rapport d'état des lieux d'entrée (indflytningsrapport) dans les 2 semaines suivant votre emménagement. S'il ne le fait pas, il ne peut pas vous facturer des dommages lors de votre départ.</li>
   <li><strong>Entretien :</strong> Le propriétaire est responsable des travaux d'entretien majeurs. Vous êtes responsable de l'entretien intérieur (peinture, petites réparations) sauf si votre contrat stipule le contraire.</li>
@@ -9048,7 +9048,7 @@ ar:`<p>تتمتع الدنمارك بعض من أقوى حمايات المست�
 <p><strong>الحقوق الرئيسية كمستأجر:</strong></p>
 <ul>
   <li><strong>التحكم في الإيجار:</strong> في معظم العقارات القديمة (مبنية قبل 1992)، تُنظَّم زيادات الإيجار ويجب أن تعتمدها هيئة الإيجار المحلية (huslejenævn). لا يمكن لمالك العقار رفع الإيجار كيفما شاء.</li>
-  <li><strong>فترات الإشعار:</strong> للسكن غير المفروش (العقد المعتاد)، يجب على المالك إعطاؤك إشعاراً بمدة <strong>سنة كاملة</strong> على الأقل لإنهاء عقد الإيجار وفق Lejeloven §86 — 3 أشهر فقط للغرف المفروشة المنفردة. أما إشعارك أنت للمغادرة فعادةً 3 أشهر.</li>
+  <li><strong>فترات الإشعار:</strong> للسكن غير المفروش (العقد المعتاد)، يجب على المالك إعطاؤك إشعاراً بمدة <strong>سنة كاملة</strong> على الأقل لإنهاء عقد الإيجار وفق Lejeloven §175. أما إشعارك أنت للمغادرة فعادةً 3 أشهر.</li>
   <li><strong>حدود التأمين (depositum):</strong> يمكن للملاك تحصيل حد أقصى 3 أشهر إيجار كتأمين، وحد أقصى 3 أشهر إيجار مقدم. لا يمكن أن يتجاوز المجموع 6 أشهر إيجار مجمّعة.</li>
   <li><strong>الحالة عند الدخول:</strong> يجب على المالك تقديم تقرير دخول (indflytningsrapport) خلال أسبوعين من انتقالك. إن لم يفعل، لا يمكنه تحميلك تكلفة الأضرار عند مغادرتك.</li>
   <li><strong>الصيانة:</strong> المالك مسؤول عن الصيانة الكبرى. أنت مسؤول عن الصيانة الداخلية (الطلاء، الإصلاحات الصغيرة) ما لم يَنُصّ عقدك على خلاف ذلك.</li>
@@ -9063,7 +9063,7 @@ es:`<p>Dinamarca tiene algunas de las protecciones para inquilinos más sólidas
 <p><strong>Derechos clave como inquilino:</strong></p>
 <ul>
   <li><strong>Control de alquiler:</strong> En la mayoría de propiedades antiguas (construidas antes de 1992), los aumentos de alquiler están regulados y deben ser aprobados por el tribunal local de arrendamiento (huslejenævn). Tu propietario no puede simplemente subir el alquiler cuando quiera.</li>
-  <li><strong>Plazos de preaviso:</strong> Para vivienda sin amueblar (el contrato típico), tu propietario debe darte al menos <strong>1 año de preaviso</strong> para rescindir el contrato según Lejeloven §86 — solo 3 meses para habitaciones amuebladas. Tu propio preaviso para marcharte es normalmente de 3 meses.</li>
+  <li><strong>Plazos de preaviso:</strong> Para vivienda sin amueblar (el contrato típico), tu propietario debe darte al menos <strong>1 año de preaviso</strong> para rescindir el contrato según Lejeloven §175. Tu propio preaviso para marcharte es normalmente de 3 meses.</li>
   <li><strong>Límites de depósito (depositum):</strong> Los propietarios pueden cobrar un máximo de 3 meses de alquiler como depósito y un máximo de 3 meses de alquiler anticipado. El total no puede superar 6 meses de alquiler combinados.</li>
   <li><strong>Estado al entrar:</strong> El propietario debe proporcionarte un informe de entrada (indflytningsrapport) dentro de las 2 semanas siguientes a tu mudanza. Si no lo hace, no puede cobrarte daños cuando te vayas.</li>
   <li><strong>Mantenimiento:</strong> El propietario es responsable del mantenimiento mayor. Tú eres responsable del mantenimiento interior (pintura, reparaciones menores) a menos que tu contrato indique lo contrario.</li>
@@ -9078,7 +9078,7 @@ de:`<p>Dänemark verfügt über einige der stärksten Mieterschutzgesetze Europa
 <p><strong>Wichtige Rechte als Mieter:</strong></p>
 <ul>
   <li><strong>Mietpreiskontrolle:</strong> In den meisten älteren Immobilien (vor 1992 gebaut) sind Mieterhöhungen reguliert und müssen vom lokalen Mietgericht (huslejenævn) genehmigt werden. Ihr Vermieter kann die Miete nicht einfach nach Belieben erhöhen.</li>
-  <li><strong>Kündigungsfristen:</strong> Für unmöblierten Wohnraum (der typische Mietvertrag) muss Ihr Vermieter Ihnen mindestens <strong>1 Jahr Kündigungsfrist</strong> gemäß Lejeloven §86 geben — nur 3 Monate für möblierte Einzelzimmer. Ihre eigene Kündigungsfrist beträgt in der Regel 3 Monate.</li>
+  <li><strong>Kündigungsfristen:</strong> Für unmöblierten Wohnraum (der typische Mietvertrag) muss Ihr Vermieter Ihnen mindestens <strong>1 Jahr Kündigungsfrist</strong> gemäß Lejeloven §175 geben. Ihre eigene Kündigungsfrist beträgt in der Regel 3 Monate.</li>
   <li><strong>Kautionsgrenzen (depositum):</strong> Vermieter dürfen maximal 3 Monatsmieten als Kaution und maximal 3 Monatsmieten als Vorauszahlung verlangen. Die Gesamtsumme darf 6 kombinierte Monatsmieten nicht übersteigen.</li>
   <li><strong>Zustand beim Einzug:</strong> Der Vermieter muss innerhalb von 2 Wochen nach Ihrem Einzug einen Einzugsbericht (indflytningsrapport) erstellen. Tut er das nicht, kann er Ihnen beim Auszug keine Schäden in Rechnung stellen.</li>
   <li><strong>Instandhaltung:</strong> Der Vermieter ist für größere Instandhaltungsarbeiten verantwortlich. Sie sind für Innenreparaturen (Streichen, kleine Reparaturen) zuständig, sofern Ihr Vertrag nichts anderes vorsieht.</li>
@@ -9093,7 +9093,7 @@ de:`<p>Dänemark verfügt über einige der stärksten Mieterschutzgesetze Europa
 <p><strong>Ключові права як орендаря:</strong></p>
 <ul>
   <li><strong>Контроль оренди:</strong> У більшості старих об'єктів (побудованих до 1992 року) підвищення орендної плати регулюється і має бути схвалено місцевим трибуналом з оренди (huslejenævn). Ваш орендодавець не може просто підвищувати оренду коли завгодно.</li>
-  <li><strong>Строки повідомлення:</strong> Для немебльованого житла (типовий договір) ваш орендодавець зобов'язаний попередити вас щонайменше за <strong>1 рік</strong> для розірвання договору відповідно до Lejeloven §86 — лише 3 місяці для мебльованих кімнат. Ваше власне повідомлення про виїзд зазвичай становить 3 місяці.</li>
+  <li><strong>Строки повідомлення:</strong> Для немебльованого житла (типовий договір) ваш орендодавець зобов'язаний попередити вас щонайменше за <strong>1 рік</strong> для розірвання договору відповідно до Lejeloven §175. Ваше власне повідомлення про виїзд зазвичай становить 3 місяці.</li>
   <li><strong>Ліміти застави (depositum):</strong> Орендодавці можуть стягувати максимум 3 місяці оренди як заставу та максимум 3 місяці авансового платежу. Загальна сума не може перевищувати 6 місяців сукупної оренди.</li>
   <li><strong>Стан при в'їзді:</strong> Орендодавець повинен надати акт огляду при в'їзді (indflytningsrapport) протягом 2 тижнів після вашого в'їзду. Якщо він цього не зробить, він не зможе стягнути з вас плату за пошкодження при виїзді.</li>
   <li><strong>Обслуговування:</strong> Орендодавець відповідає за великий ремонт. Ви відповідаєте за внутрішній ремонт (фарбування, дрібні ремонти), якщо в договорі не передбачено інше.</li>
