@@ -2946,7 +2946,7 @@ ur:`<p>آپ کی <strong>sundhedskort</strong> (ہیلتھ انشورنس کار
 <ol class="step-list">
   <li><span class="step-num">1</span>Go to <a href="https://www.sundhed.dk" target="_blank" rel="noopener">sundhed.dk</a> and click "Find a doctor"</li>
   <li><span class="step-num">2</span>Search by your postcode — you must register with a GP in your region</li>
-  <li><span class="step-num">3</span>Check if the practice is accepting new patients (accepting = green "optaget" means full, "ledig" means available)</li>
+  <li><span class="step-num">3</span>Check if the practice is accepting new patients ("optaget" = full, "ledig" = available)</li>
   <li><span class="step-num">4</span>Contact the practice to register — either online or by phone</li>
 </ol>
 <p><strong>What your GP covers (all free with sundhedskort):</strong> consultations, referrals to specialists, prescriptions, blood tests, basic minor surgery, mental health referrals, vaccinations, and preventive care.</p>
@@ -8329,7 +8329,7 @@ ur:`<p>ڈنمارک میں ذہنی صحت کو سنجیدگی سے لیا جا�
       {
         icon: "☀️",
         title: {en:"The Danish Winter — SAD, Darkness & How Danes Cope", fr:"L'hiver danois — TAS, obscurité et comment les Danois font face", ar:"الشتاء الدنماركي — اضطراب الاكتئاب الموسمي والظلام وكيف يتعامل الدنماركيون معه", es:"El invierno danés — TAE, oscuridad y cómo lo afrontan los daneses", da:"Den danske vinter — SAD, mørke og hvordan danskere klarer det", de:"Der dänische Winter — SAD, Dunkelheit & wie die Dänen damit umgehen", fa:"زمستان دانمارکی — SAD، تاریکی و راه‌های کنار آمدن دانمارکی‌ها", pl:"Duńska zima — SAD, ciemność i jak Duńczycy sobie radzą", uk:"Данська зима — SAD, темрява та як данці з нею справляються", ur:"ڈینش سرما — SAD، تاریکی اور ڈینش لوگ کیسے نمٹتے ہیں" },
-        content: { en:`<p>Denmark's winter is a genuine psychological challenge for most people who arrive from sunnier climates. Copenhagen receives only <strong>1.7 hours of daylight on the winter solstice</strong> — compared to 17+ hours in summer. By November, it's dark by 4pm.</p>
+        content: { en:`<p>Denmark's winter is a genuine psychological challenge for most people who arrive from sunnier climates. Copenhagen receives only <strong>about 7 hours of daylight on the winter solstice</strong> — compared to 17+ hours in summer. By November, it's dark by 4pm.</p>
 <p><strong>Seasonal Affective Disorder (SAD):</strong></p>
 <p>SAD is a form of depression triggered by reduced light exposure. It affects an estimated 3–6% of the Danish population clinically, with many more experiencing sub-clinical "winter blues." Symptoms include low energy, increased sleep, carbohydrate cravings, difficulty concentrating, and low mood from October to March.</p>
 <p><strong>How Danes cope (evidence-based strategies):</strong></p>
@@ -8340,7 +8340,7 @@ ur:`<p>ڈنمارک میں ذہنی صحت کو سنجیدگی سے لیا جا�
   <li><strong>Vitamin D supplementation:</strong> Denmark's latitude means most people become Vitamin D deficient by October. The Danish Health Authority recommends Vitamin D supplements (10 micrograms/day) for all Danes from October to April. Widely available at pharmacies and supermarkets.</li>
 </ul>
 <p class="callout-info"><strong>Practical tip:</strong> Buy a daylight lamp in September before you feel you need it. By the time SAD symptoms arrive, the research shows you've already been exposed to weeks of insufficient light.</p>`,
-da:`<p>Danmarks vinter er en reel psykologisk udfordring for de fleste, der ankommer fra solrigere klimaer. København modtager kun <strong>1,7 timers dagslys ved vintersolhverv</strong> — mod 17+ timer om sommeren. I november er det mørkt kl. 16.</p>
+da:`<p>Danmarks vinter er en reel psykologisk udfordring for de fleste, der ankommer fra solrigere klimaer. København modtager kun <strong>omkring 7 timers dagslys ved vintersolhverv</strong> — mod 17+ timer om sommeren. I november er det mørkt kl. 16.</p>
 <p><strong>Sæsonbetinget affektiv lidelse (SAD):</strong></p>
 <p>SAD er en form for depression udløst af nedsat lyseksponering. Det rammer anslået 3–6% af den danske befolkning klinisk, og mange flere oplever sub-klinisk "vinterdepression". Symptomer inkluderer lavt energiniveau, øget søvn, kulhydrattrang, koncentrationsbesvær og nedtrykthed fra oktober til marts.</p>
 <p><strong>Sådan klarer danskere det (evidensbaserede strategier):</strong></p>
@@ -8351,7 +8351,7 @@ da:`<p>Danmarks vinter er en reel psykologisk udfordring for de fleste, der anko
   <li><strong>D-vitamintilskud:</strong> Danmarks breddegrad betyder, at de fleste bliver D-vitaminmangelfulde i oktober. Sundhedsstyrelsen anbefaler D-vitamintilskud (10 mikrogram/dag) til alle danskere fra oktober til april. Fås bredt på apoteker og supermarkeder.</li>
 </ul>
 <p class="callout-info"><strong>Praktisk tip:</strong> Køb en dagslyslampe i september, inden du føler behov. Når SAD-symptomerne ankommer, viser forskningen, at du allerede har fået uger med utilstrækkeligt lys.</p>`,
-fr:`<p>L'hiver danois est un véritable défi psychologique pour la plupart des personnes arrivant de climats plus ensoleillés. Copenhague ne reçoit que <strong>1,7 heures de lumière du jour au solstice d'hiver</strong> — contre 17+ heures en été. En novembre, il fait nuit à 16h.</p>
+fr:`<p>L'hiver danois est un véritable défi psychologique pour la plupart des personnes arrivant de climats plus ensoleillés. Copenhague ne reçoit que <strong>environ 7 heures de lumière du jour au solstice d'hiver</strong> — contre 17+ heures en été. En novembre, il fait nuit à 16h.</p>
 <p><strong>Trouble affectif saisonnier (TAS) :</strong></p>
 <p>Le TAS est une forme de dépression déclenchée par une exposition réduite à la lumière. Il touche cliniquement environ 3 à 6% de la population danoise, et bien d'autres éprouvent un "blues hivernal" sous-clinique. Les symptômes incluent un faible niveau d'énergie, un sommeil accru, des envies de glucides, des difficultés de concentration et une humeur basse d'octobre à mars.</p>
 <p><strong>Comment les Danois font face (stratégies fondées sur des preuves) :</strong></p>
@@ -8362,7 +8362,7 @@ fr:`<p>L'hiver danois est un véritable défi psychologique pour la plupart des 
   <li><strong>Supplémentation en vitamine D :</strong> La latitude du Danemark signifie que la plupart des gens deviennent carencés en vitamine D en octobre. L'Autorité danoise de la santé recommande des suppléments de vitamine D (10 microgrammes/jour) à tous les Danois d'octobre à avril. Largement disponible en pharmacie et en supermarché.</li>
 </ul>
 <p class="callout-info"><strong>Conseil pratique :</strong> Achetez une lampe à lumière du jour en septembre avant de sentir que vous en avez besoin. Au moment où les symptômes du TAS arrivent, les recherches montrent que vous avez déjà été exposé à des semaines de lumière insuffisante.</p>`,
-ar:`<p>الشتاء الدنماركي تحدٍّ نفسي حقيقي لمعظم القادمين من مناخات أكثر شمساً. لا تتلقى كوبنهاغن سوى <strong>1.7 ساعة من ضوء النهار في انقلاب الشتاء</strong> — مقارنة بـ17+ ساعة في الصيف. في نوفمبر، يحلّ الظلام الساعة 4 مساءً.</p>
+ar:`<p>الشتاء الدنماركي تحدٍّ نفسي حقيقي لمعظم القادمين من مناخات أكثر شمساً. لا تتلقى كوبنهاغن سوى <strong>نحو 7 ساعات من ضوء النهار في انقلاب الشتاء</strong> — مقارنة بـ17+ ساعة في الصيف. في نوفمبر، يحلّ الظلام الساعة 4 مساءً.</p>
 <p><strong>اضطراب الاكتئاب الموسمي (SAD):</strong></p>
 <p>SAD شكل من أشكال الاكتئاب يُثيره انخفاض التعرض للضوء. يؤثر سريرياً على ما يُقدَّر بـ3–6% من السكان الدنماركيين، مع تجربة الكثيرين لـ"كآبة الشتاء" دون السريرية. الأعراض تشمل انخفاض الطاقة وزيادة النوم والشهية للكربوهيدرات وصعوبة التركيز وتراجع المزاج من أكتوبر إلى مارس.</p>
 <p><strong>كيف يتعامل الدنماركيون مع هذا (استراتيجيات مبنية على الأدلة):</strong></p>
@@ -8373,7 +8373,7 @@ ar:`<p>الشتاء الدنماركي تحدٍّ نفسي حقيقي لمعظم
   <li><strong>مكمل فيتامين د:</strong> خط عرض الدنمارك يعني أن معظم الناس يصابون بنقص فيتامين د بحلول أكتوبر. تُوصي هيئة الصحة الدنماركية بمكملات فيتامين د (10 ميكروغرام/يوم) لجميع الدنماركيين من أكتوبر إلى أبريل. متوفر على نطاق واسع في الصيدليات والسوبرماركتات.</li>
 </ul>
 <p class="callout-info"><strong>نصيحة عملية:</strong> اشترِ مصباح ضوء النهار في سبتمبر قبل أن تشعر بالحاجة إليه. حين تظهر أعراض SAD، تُظهر الأبحاث أنك كنت قد تعرضت بالفعل لأسابيع من الضوء الغير كافي.</p>`,
-es:`<p>El invierno danés es un desafío psicológico genuino para la mayoría de las personas que llegan de climas más soleados. Copenhague recibe solo <strong>1,7 horas de luz diurna en el solsticio de invierno</strong> — frente a más de 17 horas en verano. En noviembre, ya oscurece a las 4pm.</p>
+es:`<p>El invierno danés es un desafío psicológico genuino para la mayoría de las personas que llegan de climas más soleados. Copenhague recibe solo <strong>unas 7 horas de luz diurna en el solsticio de invierno</strong> — frente a más de 17 horas en verano. En noviembre, ya oscurece a las 4pm.</p>
 <p><strong>Trastorno Afectivo Estacional (TAE):</strong></p>
 <p>El TAE es una forma de depresión desencadenada por la reducción de la exposición a la luz. Afecta clínicamente a un estimado del 3–6% de la población danesa, y muchos más experimentan un "bajón invernal" subclínico. Los síntomas incluyen baja energía, aumento del sueño, antojos de carbohidratos, dificultad para concentrarse y bajo estado de ánimo de octubre a marzo.</p>
 <p><strong>Cómo lo afrontan los daneses (estrategias basadas en evidencia):</strong></p>
@@ -8384,7 +8384,7 @@ es:`<p>El invierno danés es un desafío psicológico genuino para la mayoría d
   <li><strong>Suplementación de Vitamina D:</strong> La latitud de Dinamarca significa que la mayoría de las personas se vuelven deficientes en Vitamina D para octubre. La Autoridad Sanitaria Danesa recomienda suplementos de Vitamina D (10 microgramos/día) para todos los daneses de octubre a abril. Disponible ampliamente en farmacias y supermercados.</li>
 </ul>
 <p class="callout-info"><strong>Consejo práctico:</strong> Compra una lámpara de luz diurna en septiembre antes de sentir que la necesitas. Cuando llegan los síntomas del TAE, la investigación muestra que ya has estado expuesto durante semanas a luz insuficiente.</p>`,
-de:`<p>Dänemarks Winter ist für die meisten Menschen, die aus sonnenreicheren Klimaten kommen, eine echte psychologische Herausforderung. Kopenhagen erhält am Wintersonnenwende nur <strong>1,7 Stunden Tageslicht</strong> — im Vergleich zu 17+ Stunden im Sommer. Im November wird es bereits um 16 Uhr dunkel.</p>
+de:`<p>Dänemarks Winter ist für die meisten Menschen, die aus sonnenreicheren Klimaten kommen, eine echte psychologische Herausforderung. Kopenhagen erhält am Wintersonnenwende nur <strong>etwa 7 Stunden Tageslicht</strong> — im Vergleich zu 17+ Stunden im Sommer. Im November wird es bereits um 16 Uhr dunkel.</p>
 <p><strong>Saisonale Affektive Störung (SAD):</strong></p>
 <p>SAD ist eine Form der Depression, die durch reduzierte Lichtexposition ausgelöst wird. Sie betrifft klinisch schätzungsweise 3–6 % der dänischen Bevölkerung; viele weitere erleben ein subklinisches "Wintertief". Symptome sind geringe Energie, erhöhter Schlafbedarf, Kohlenhydratheißhunger, Konzentrationsschwäche und gedrückte Stimmung von Oktober bis März.</p>
 <p><strong>Wie Dänen damit umgehen (evidenzbasierte Strategien):</strong></p>
@@ -8395,7 +8395,7 @@ de:`<p>Dänemarks Winter ist für die meisten Menschen, die aus sonnenreicheren 
   <li><strong>Vitamin-D-Ergänzung:</strong> Durch Dänemarks Breitengrad werden die meisten Menschen bis Oktober Vitamin-D-mangelhaft. Die dänische Gesundheitsbehörde empfiehlt Vitamin-D-Präparate (10 Mikrogramm/Tag) für alle Dänen von Oktober bis April. Weit verbreitet in Apotheken und Supermärkten erhältlich.</li>
 </ul>
 <p class="callout-info"><strong>Praktischer Tipp:</strong> Kaufen Sie eine Tageslichtlampe im September, bevor Sie das Bedürfnis danach spüren. Wenn SAD-Symptome auftreten, zeigt die Forschung, dass Sie bereits wochenlang unzureichendem Licht ausgesetzt waren.</p>`,
-          uk:`<p>Данська зима є справжнім психологічним викликом для більшості людей, що приїздять із сонячніших кліматів. У день зимового сонцестояння Копенгаген отримує лише <strong>1,7 години денного світла</strong> — порівняно з 17+ годинами влітку. У листопаді темніє вже о 16:00.</p>
+          uk:`<p>Данська зима є справжнім психологічним викликом для більшості людей, що приїздять із сонячніших кліматів. У день зимового сонцестояння Копенгаген отримує лише <strong>близько 7 годин денного світла</strong> — порівняно з 17+ годинами влітку. У листопаді темніє вже о 16:00.</p>
 <p><strong>Сезонний афективний розлад (SAD):</strong></p>
 <p>SAD — це форма депресії, спричинена зменшенням впливу світла. Клінічно вона вражає приблизно 3–6% данського населення; ще більше людей відчувають субклінічну «зимову хандру». Симптоми включають низький рівень енергії, збільшення сну, тягу до вуглеводів, труднощі з концентрацією та знижений настрій з жовтня по березень.</p>
 <p><strong>Як датчани справляються (стратегії, засновані на доказах):</strong></p>
@@ -9003,7 +9003,7 @@ de:`<p>Dänemark verfügt über mehrere einander ergänzende Gesetze, die Diskri
 <p><strong>Key rights as a tenant:</strong></p>
 <ul>
   <li><strong>Rent control:</strong> In most older properties (built before 1992), rent increases are regulated and must be approved by the local rent tribunal (huslejenævn). Your landlord cannot simply raise rent whenever they like.</li>
-  <li><strong>Notice periods:</strong> Your landlord must give you at least 3 months' notice to terminate a tenancy — often longer, depending on the type of property and how long you've lived there. Your notice to leave is typically 1 month.</li>
+  <li><strong>Notice periods:</strong> For unfurnished housing (the typical lease), your landlord must give you at least 1 year's notice to end the tenancy under Lejeloven §86 — only 3 months for furnished single rooms. Your own notice to leave is typically 3 months.</li>
   <li><strong>Deposit (depositum) limits:</strong> Landlords can charge a maximum of 3 months' rent as deposit, and maximum 3 months' advance rent. The total cannot exceed 6 months' combined rent.</li>
   <li><strong>Condition on move-in:</strong> The landlord must provide a move-in report (indflytningsrapport) within 2 weeks of your move-in. If they don't, they cannot charge you for damages when you leave.</li>
   <li><strong>Maintenance:</strong> The landlord is responsible for major maintenance. You are responsible for interior maintenance (painting, minor repairs) unless your contract says otherwise.</li>
@@ -9018,7 +9018,7 @@ da:`<p>Danmark har nogle af Europas stærkeste lejerrettigheder. At kende dem ka
 <p><strong>Vigtigste rettigheder som lejer:</strong></p>
 <ul>
   <li><strong>Huslejeregulering:</strong> I de fleste ældre ejendomme (opført før 1992) er huslejestigninger reguleret og skal godkendes af huslejenævnet. Din udlejer kan ikke bare sætte huslejen op, når vedkommende ønsker det.</li>
-  <li><strong>Opsigelsesvarsel:</strong> Din udlejer skal give dig mindst 3 måneders varsel for at opsige lejemålet — ofte længere afhængigt af ejendomstype og botid. Dit varsel er typisk 1 måned.</li>
+  <li><strong>Opsigelsesvarsel:</strong> For umøblerede boliger (den typiske lejekontrakt) skal din udlejer give dig mindst <strong>1 års varsel</strong> for at opsige lejemålet jf. Lejeloven §86 — kun 3 måneder for møblerede enkeltværelser. Dit eget opsigelsesvarsel er typisk 3 måneder.</li>
   <li><strong>Depositumgrænser:</strong> Udlejere kan maksimalt kræve 3 måneders husleje i depositum og maksimalt 3 måneders forudbetalt leje. Tilsammen kan det ikke overstige 6 måneders samlet husleje.</li>
   <li><strong>Stand ved indflytning:</strong> Udlejeren skal udlevere en indflytningsrapport inden for 2 uger efter din indflytning. Gør vedkommende det ikke, kan der ikke opkræves for skader ved fraflytning.</li>
   <li><strong>Vedligeholdelse:</strong> Udlejeren er ansvarlig for større vedligeholdelse. Du er ansvarlig for indvendig vedligeholdelse (maling, mindre reparationer) medmindre din kontrakt siger andet.</li>
@@ -9033,7 +9033,7 @@ fr:`<p>Le Danemark dispose de certaines des protections locataires les plus soli
 <p><strong>Droits clés en tant que locataire :</strong></p>
 <ul>
   <li><strong>Contrôle des loyers :</strong> Dans la plupart des propriétés anciennes (construites avant 1992), les augmentations de loyer sont réglementées et doivent être approuvées par le tribunal des loyers local (huslejenævn). Votre propriétaire ne peut pas simplement augmenter le loyer quand il le souhaite.</li>
-  <li><strong>Délais de préavis :</strong> Votre propriétaire doit vous donner au moins 3 mois de préavis pour résilier une location — souvent plus, selon le type de propriété et la durée de votre séjour. Votre préavis pour partir est généralement de 1 mois.</li>
+  <li><strong>Délais de préavis :</strong> Pour les logements non meublés (bail typique), votre propriétaire doit vous donner au moins <strong>1 an de préavis</strong> pour résilier le bail, selon la Lejeloven §86 — seulement 3 mois pour les chambres meublées. Votre propre préavis pour partir est généralement de 3 mois.</li>
   <li><strong>Limites de dépôt (depositum) :</strong> Les propriétaires peuvent exiger au maximum 3 mois de loyer en dépôt, et au maximum 3 mois de loyer d'avance. Le total ne peut pas dépasser 6 mois de loyer combiné.</li>
   <li><strong>État à l'entrée :</strong> Le propriétaire doit fournir un rapport d'état des lieux d'entrée (indflytningsrapport) dans les 2 semaines suivant votre emménagement. S'il ne le fait pas, il ne peut pas vous facturer des dommages lors de votre départ.</li>
   <li><strong>Entretien :</strong> Le propriétaire est responsable des travaux d'entretien majeurs. Vous êtes responsable de l'entretien intérieur (peinture, petites réparations) sauf si votre contrat stipule le contraire.</li>
@@ -9048,7 +9048,7 @@ ar:`<p>تتمتع الدنمارك بعض من أقوى حمايات المست�
 <p><strong>الحقوق الرئيسية كمستأجر:</strong></p>
 <ul>
   <li><strong>التحكم في الإيجار:</strong> في معظم العقارات القديمة (مبنية قبل 1992)، تُنظَّم زيادات الإيجار ويجب أن تعتمدها هيئة الإيجار المحلية (huslejenævn). لا يمكن لمالك العقار رفع الإيجار كيفما شاء.</li>
-  <li><strong>فترات الإشعار:</strong> يجب على المالك منحك إشعاراً لا يقل عن 3 أشهر لإنهاء عقد الإيجار — وكثيراً ما يكون أطول، حسب نوع العقار ومدة الإقامة. إشعارك للمغادرة عادةً شهر واحد.</li>
+  <li><strong>فترات الإشعار:</strong> للسكن غير المفروش (العقد المعتاد)، يجب على المالك إعطاؤك إشعاراً بمدة <strong>سنة كاملة</strong> على الأقل لإنهاء عقد الإيجار وفق Lejeloven §86 — 3 أشهر فقط للغرف المفروشة المنفردة. أما إشعارك أنت للمغادرة فعادةً 3 أشهر.</li>
   <li><strong>حدود التأمين (depositum):</strong> يمكن للملاك تحصيل حد أقصى 3 أشهر إيجار كتأمين، وحد أقصى 3 أشهر إيجار مقدم. لا يمكن أن يتجاوز المجموع 6 أشهر إيجار مجمّعة.</li>
   <li><strong>الحالة عند الدخول:</strong> يجب على المالك تقديم تقرير دخول (indflytningsrapport) خلال أسبوعين من انتقالك. إن لم يفعل، لا يمكنه تحميلك تكلفة الأضرار عند مغادرتك.</li>
   <li><strong>الصيانة:</strong> المالك مسؤول عن الصيانة الكبرى. أنت مسؤول عن الصيانة الداخلية (الطلاء، الإصلاحات الصغيرة) ما لم يَنُصّ عقدك على خلاف ذلك.</li>
@@ -9063,7 +9063,7 @@ es:`<p>Dinamarca tiene algunas de las protecciones para inquilinos más sólidas
 <p><strong>Derechos clave como inquilino:</strong></p>
 <ul>
   <li><strong>Control de alquiler:</strong> En la mayoría de propiedades antiguas (construidas antes de 1992), los aumentos de alquiler están regulados y deben ser aprobados por el tribunal local de arrendamiento (huslejenævn). Tu propietario no puede simplemente subir el alquiler cuando quiera.</li>
-  <li><strong>Plazos de preaviso:</strong> Tu propietario debe darte al menos 3 meses de preaviso para rescindir el contrato de arrendamiento — a menudo más, según el tipo de propiedad y el tiempo que hayas vivido allí. Tu preaviso para marcharte es normalmente de 1 mes.</li>
+  <li><strong>Plazos de preaviso:</strong> Para vivienda sin amueblar (el contrato típico), tu propietario debe darte al menos <strong>1 año de preaviso</strong> para rescindir el contrato según Lejeloven §86 — solo 3 meses para habitaciones amuebladas. Tu propio preaviso para marcharte es normalmente de 3 meses.</li>
   <li><strong>Límites de depósito (depositum):</strong> Los propietarios pueden cobrar un máximo de 3 meses de alquiler como depósito y un máximo de 3 meses de alquiler anticipado. El total no puede superar 6 meses de alquiler combinados.</li>
   <li><strong>Estado al entrar:</strong> El propietario debe proporcionarte un informe de entrada (indflytningsrapport) dentro de las 2 semanas siguientes a tu mudanza. Si no lo hace, no puede cobrarte daños cuando te vayas.</li>
   <li><strong>Mantenimiento:</strong> El propietario es responsable del mantenimiento mayor. Tú eres responsable del mantenimiento interior (pintura, reparaciones menores) a menos que tu contrato indique lo contrario.</li>
@@ -9078,7 +9078,7 @@ de:`<p>Dänemark verfügt über einige der stärksten Mieterschutzgesetze Europa
 <p><strong>Wichtige Rechte als Mieter:</strong></p>
 <ul>
   <li><strong>Mietpreiskontrolle:</strong> In den meisten älteren Immobilien (vor 1992 gebaut) sind Mieterhöhungen reguliert und müssen vom lokalen Mietgericht (huslejenævn) genehmigt werden. Ihr Vermieter kann die Miete nicht einfach nach Belieben erhöhen.</li>
-  <li><strong>Kündigungsfristen:</strong> Ihr Vermieter muss Ihnen mindestens 3 Monate Kündigungsfrist geben — oft länger, je nach Art der Immobilie und Wohndauer. Ihre Kündigungsfrist beträgt in der Regel 1 Monat.</li>
+  <li><strong>Kündigungsfristen:</strong> Für unmöblierten Wohnraum (der typische Mietvertrag) muss Ihr Vermieter Ihnen mindestens <strong>1 Jahr Kündigungsfrist</strong> gemäß Lejeloven §86 geben — nur 3 Monate für möblierte Einzelzimmer. Ihre eigene Kündigungsfrist beträgt in der Regel 3 Monate.</li>
   <li><strong>Kautionsgrenzen (depositum):</strong> Vermieter dürfen maximal 3 Monatsmieten als Kaution und maximal 3 Monatsmieten als Vorauszahlung verlangen. Die Gesamtsumme darf 6 kombinierte Monatsmieten nicht übersteigen.</li>
   <li><strong>Zustand beim Einzug:</strong> Der Vermieter muss innerhalb von 2 Wochen nach Ihrem Einzug einen Einzugsbericht (indflytningsrapport) erstellen. Tut er das nicht, kann er Ihnen beim Auszug keine Schäden in Rechnung stellen.</li>
   <li><strong>Instandhaltung:</strong> Der Vermieter ist für größere Instandhaltungsarbeiten verantwortlich. Sie sind für Innenreparaturen (Streichen, kleine Reparaturen) zuständig, sofern Ihr Vertrag nichts anderes vorsieht.</li>
@@ -9093,7 +9093,7 @@ de:`<p>Dänemark verfügt über einige der stärksten Mieterschutzgesetze Europa
 <p><strong>Ключові права як орендаря:</strong></p>
 <ul>
   <li><strong>Контроль оренди:</strong> У більшості старих об'єктів (побудованих до 1992 року) підвищення орендної плати регулюється і має бути схвалено місцевим трибуналом з оренди (huslejenævn). Ваш орендодавець не може просто підвищувати оренду коли завгодно.</li>
-  <li><strong>Строки повідомлення:</strong> Ваш орендодавець повинен повідомити вас щонайменше за 3 місяці для розірвання договору оренди — часто довше, залежно від типу нерухомості та строку проживання. Ваше повідомлення про виїзд зазвичай становить 1 місяць.</li>
+  <li><strong>Строки повідомлення:</strong> Для немебльованого житла (типовий договір) ваш орендодавець зобов'язаний попередити вас щонайменше за <strong>1 рік</strong> для розірвання договору відповідно до Lejeloven §86 — лише 3 місяці для мебльованих кімнат. Ваше власне повідомлення про виїзд зазвичай становить 3 місяці.</li>
   <li><strong>Ліміти застави (depositum):</strong> Орендодавці можуть стягувати максимум 3 місяці оренди як заставу та максимум 3 місяці авансового платежу. Загальна сума не може перевищувати 6 місяців сукупної оренди.</li>
   <li><strong>Стан при в'їзді:</strong> Орендодавець повинен надати акт огляду при в'їзді (indflytningsrapport) протягом 2 тижнів після вашого в'їзду. Якщо він цього не зробить, він не зможе стягнути з вас плату за пошкодження при виїзді.</li>
   <li><strong>Обслуговування:</strong> Орендодавець відповідає за великий ремонт. Ви відповідаєте за внутрішній ремонт (фарбування, дрібні ремонти), якщо в договорі не передбачено інше.</li>

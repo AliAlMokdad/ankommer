@@ -1514,7 +1514,7 @@ const _loadFullChapters = () => {
   if (_chaptersLoadPromise) return _chaptersLoadPromise;
   _chaptersLoadPromise = new Promise((resolve) => {
     const s = document.createElement('script');
-    s.src = 'js/data-chapters.js?v=33';
+    s.src = 'js/data-chapters.js?v=34';
     s.onload = () => { _chaptersFullLoaded = true; resolve(); };
     s.onerror = () => {
       // Clear the cached promise so a future retry (e.g. after the user

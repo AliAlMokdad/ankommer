@@ -582,7 +582,7 @@ Your GP (general practitioner) is the **gatekeeper to the entire Danish health s
 
   - 2. Search by your postcode — you must register with a GP in your region
 
-  - 3. Check if the practice is accepting new patients (accepting = green "optaget" means full, "ledig" means available)
+  - 3. Check if the practice is accepting new patients ("optaget" = full, "ledig" = available)
 
   - 4. Contact the practice to register — either online or by phone
 
@@ -1672,7 +1672,7 @@ Immigration is sold as adventure, opportunity, and new beginnings. All of those 
 
 ## The Danish Winter — SAD, Darkness & How Danes Cope
 
-Denmark's winter is a genuine psychological challenge for most people who arrive from sunnier climates. Copenhagen receives only **1.7 hours of daylight on the winter solstice** — compared to 17+ hours in summer. By November, it's dark by 4pm.
+Denmark's winter is a genuine psychological challenge for most people who arrive from sunnier climates. Copenhagen receives only **about 7 hours of daylight on the winter solstice** — compared to 17+ hours in summer. By November, it's dark by 4pm.
 
 **Seasonal Affective Disorder (SAD):**
 
@@ -1815,7 +1815,7 @@ Denmark has some of Europe's strongest tenant protections. Understanding them ca
 
   - **Rent control:** In most older properties (built before 1992), rent increases are regulated and must be approved by the local rent tribunal (huslejenævn). Your landlord cannot simply raise rent whenever they like.
 
-  - **Notice periods:** Your landlord must give you at least 3 months' notice to terminate a tenancy — often longer, depending on the type of property and how long you've lived there. Your notice to leave is typically 1 month.
+  - **Notice periods:** For unfurnished housing (the typical lease), your landlord must give you at least 1 year's notice to end the tenancy under Lejeloven §86 — only 3 months for furnished single rooms. Your own notice to leave is typically 3 months.
 
   - **Deposit (depositum) limits:** Landlords can charge a maximum of 3 months' rent as deposit, and maximum 3 months' advance rent. The total cannot exceed 6 months' combined rent.
 
