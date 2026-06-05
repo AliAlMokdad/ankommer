@@ -386,7 +386,7 @@ Danish tenant protections are strong. Know these:
 
   - **Rent increases:** Regulated. Landlord cannot raise rent arbitrarily. Must follow net price index or be approved.
 
-  - **Notice period:** For unfurnished housing (the typical lease), the landlord must give you at least **1 year's notice** under Lejeloven §175. Tenants have a 3-month notice obligation in most cases.
+  - **Notice period:** For unfurnished housing (the typical lease), the landlord must give you at least **1 year's notice** under Lejeloven §175. Tenants have a 3-month notice obligation in most cases. Always check your own lease, as your contract can set different terms.
 
   - **Deposit return:** The unused portion must be returned promptly, but the landlord typically has up to ~6 weeks (and in disputed cases up to 2 months) to settle the move-out report (flytteopgørelse) and repair costs. "Within 2 weeks" is a myth — disputes go to Huslejenævnet.
 
@@ -1815,7 +1815,7 @@ Denmark has some of Europe's strongest tenant protections. Understanding them ca
 
   - **Rent control:** In most older properties (built before 1992), rent increases are regulated and must be approved by the local rent tribunal (huslejenævn). Your landlord cannot simply raise rent whenever they like.
 
-  - **Notice periods:** For unfurnished housing (the typical lease), your landlord must give you at least 1 year's notice to end the tenancy under Lejeloven §175. Your own notice to leave is typically 3 months.
+  - **Notice periods:** For unfurnished housing (the typical lease), your landlord must give you at least 1 year's notice to end the tenancy under Lejeloven §175. Your own notice to leave is typically 3 months. Always check your own lease, as your contract can set different terms.
 
   - **Deposit (depositum) limits:** Landlords can charge a maximum of 3 months' rent as deposit, and maximum 3 months' advance rent. The total cannot exceed 6 months' combined rent.
 
