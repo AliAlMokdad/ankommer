@@ -2089,10 +2089,11 @@ body.app-active .footer-top {
 }
 
 /* Expanded / full-screen Bjorn panel (toggled by the header button). */
+.bjorn-widget.fullscreen { z-index: 100000; }
 .bjorn-widget.fullscreen .bjorn-panel {
   position: fixed; inset: 0; margin: auto;
   width: min(760px, 94vw); height: min(90vh, 880px); max-height: 90vh;
-  bottom: auto; right: auto; z-index: 1100;
+  z-index: 1100;
 }
 /* While Bjorn is full screen, hide the PWA install banner so it cannot
    overlap the panel's input area on phones (the banner is z-index 8000). */
@@ -2104,6 +2105,10 @@ body:has(.bjorn-widget.fullscreen) .pwa-install-banner { display: none; }
 @media (max-width: 768px) {
   .bjorn-widget.fullscreen .bjorn-panel {
     width: 100vw; height: 100vh; max-height: none; margin: 0; border-radius: 0;
+  }
+  /* Keep the header (close/shrink) clear of the phone status bar / notch. */
+  .bjorn-widget.fullscreen .bjorn-panel-header {
+    padding-top: calc(10px + env(safe-area-inset-top));
   }
 }
 @supports (height: 100dvh) {
