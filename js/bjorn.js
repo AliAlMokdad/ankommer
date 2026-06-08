@@ -1090,12 +1090,24 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     widget.classList.add('closing');
     setTimeout(() => {
       widget.classList.remove('closing');
+      widget.classList.remove('fullscreen');
+      document.getElementById('bjorn-fullscreen')?.setAttribute('aria-pressed', 'false');
       widget.classList.add('closed');
       isOpen = false;
     }, 200);
   };
 
   const toggle = () => { isOpen ? close() : open(); };
+
+  /* Expand the panel to full screen, or shrink it back. Just a class
+     toggle on the widget; close() clears it so the next open is the card. */
+  const toggleFullscreen = () => {
+    const widget = document.getElementById('bjorn-widget');
+    if (!widget) return;
+    const isFull = widget.classList.toggle('fullscreen');
+    document.getElementById('bjorn-fullscreen')?.setAttribute('aria-pressed', isFull ? 'true' : 'false');
+    document.getElementById('bjorn-input')?.focus({ preventScroll: true });
+  };
 
   /* ── SET USER PROFILE ────────────────────────────────── */
   const setProfile = (profile) => { userProfile = { ...userProfile, ...profile }; };
@@ -1112,6 +1124,10 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     // Close button
     const closeBtn = document.getElementById('bjorn-close');
     if (closeBtn) closeBtn.addEventListener('click', close);
+
+    // Full-screen toggle button
+    const fsBtn = document.getElementById('bjorn-fullscreen');
+    if (fsBtn) fsBtn.addEventListener('click', toggleFullscreen);
 
     // Clear history button
     const clearBtn = document.getElementById('bjorn-clear-history');
