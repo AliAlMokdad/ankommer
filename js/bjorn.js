@@ -1066,9 +1066,19 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     if (panel && window.FocusTrap) {
       _focusTrap = window.FocusTrap(panel, { onEscape: escapeOrShrink });
       _focusTrap.activate(toggleBtn);
-      requestAnimationFrame(() => {
-        document.getElementById('bjorn-input')?.focus({ preventScroll: true });
-      });
+      // Auto-focus the input so desktop users can type right away — but NOT on
+      // touch / small screens. Focusing a text field there pops the soft keyboard
+      // the instant the panel opens, which fires the Visual Viewport resize
+      // handler below and reflows the panel + page: it reads as a jarring
+      // "refresh" on open. On touch the keyboard should appear only when the user
+      // taps the input. (Same reasoning the fullscreen-collapse path already uses.)
+      const _skipAutoFocus = window.matchMedia('(max-width: 600px)').matches
+                          || window.matchMedia('(pointer: coarse)').matches;
+      if (!_skipAutoFocus) {
+        requestAnimationFrame(() => {
+          document.getElementById('bjorn-input')?.focus({ preventScroll: true });
+        });
+      }
     }
 
     const msgs = document.getElementById('bjorn-messages');
