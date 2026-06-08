@@ -1106,7 +1106,7 @@
         <button class="bjorn-icon-btn" id="bjorn-translate-close" aria-label="Close translator" data-i18n-aria="bjorn_translate_close_aria">✕</button>
       </div>
       <p class="bjorn-translate-hint" data-i18n="bjorn_translate_hint_text">Paste the text from any letter or document you received and Bjørn will explain it.</p>
-      <textarea id="bjorn-doc-text" class="bjorn-doc-textarea" rows="5" placeholder="Paste Danish text here…" aria-label="Document text to translate" data-i18n-placeholder="bjorn_translate_placeholder" data-i18n-aria="bjorn_translate_textarea_aria"></textarea>
+      <textarea id="bjorn-doc-text" class="bjorn-doc-textarea" rows="5" maxlength="8000" placeholder="Paste Danish text here…" aria-label="Document text to translate" data-i18n-placeholder="bjorn_translate_placeholder" data-i18n-aria="bjorn_translate_textarea_aria"></textarea>
       <button class="bjorn-translate-send" id="bjorn-translate-send" data-i18n="bjorn_translate_send_btn">Explain this document →</button>
     </div>
 
@@ -1137,7 +1137,7 @@
 
     <!-- Input area -->
     <div class="bjorn-input-area">
-      <textarea id="bjorn-input" rows="1" placeholder="Ask Bjørn anything…" data-i18n-placeholder="bjorn_placeholder" aria-label="Message to Bjørn" data-i18n-aria="bjorn_input_aria"></textarea>
+      <textarea id="bjorn-input" rows="1" maxlength="2000" placeholder="Ask Bjørn anything…" data-i18n-placeholder="bjorn_placeholder" aria-label="Message to Bjørn" data-i18n-aria="bjorn_input_aria"></textarea>
       <button class="bjorn-send" id="bjorn-send" aria-label="Send" data-i18n-aria="bjorn_send_aria">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
       </button>
@@ -1172,7 +1172,7 @@
      some browsers (Firefox especially) that didn't reliably coalesce the
      prefetched response with the script-src request. -->
 
-<script defer src="js/bjorn.js?v=46"></script>
+<script defer src="js/bjorn.js?v=47"></script>
 <script defer src="js/calculators.js?v=36"></script>
 <script defer src="js/apis.js?v=31"></script>
 <script defer src="js/app.js?v=67"></script>

@@ -40,7 +40,15 @@ const Bjorn = (() => {
       if (!stored) return false;
       const parsed = JSON.parse(stored);
       if (!Array.isArray(parsed) || parsed.length === 0) return false;
-      conversationHistory = parsed;
+      // Validate each entry's shape. Corrupted, legacy, or foreign data on this
+      // key (a valid JSON array of the wrong objects) would otherwise render as
+      // "undefined" bubbles, all attributed to the user. Drop malformed entries.
+      const clean = parsed.filter(m =>
+        m && typeof m.content === 'string' &&
+        (m.role === 'user' || m.role === 'assistant')
+      );
+      if (clean.length === 0) return false;
+      conversationHistory = clean;
       return true;
     } catch (e) { return false; }
   };
@@ -716,7 +724,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
           showHint('Still thinking…');
           return callGroq(message, attempt + 1);
         } else {
-          // All instant fallbacks (70B, 8B, gemma2) exhausted — wait for the 60s window to reset
+          // All instant fallbacks (70B, 8B, Llama-4-Scout) exhausted — wait for the 60s window to reset
           const retryAfterRaw = response.headers.get('retry-after') || '60';
           // Groq's retry-after is in seconds (e.g. "30" or "60") — parseInt is safe
           const retryAfter = Math.min(parseInt(retryAfterRaw, 10) || 60, 120);
@@ -854,7 +862,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     /\bforget\s+(everything|your\s+instructions|the\s+above)/i,
     /\byou\s+are\s+(now|no\s+longer)\s+(a|an)\s+\w+/i,
     /\byou'?re\s+(now|no\s+longer)\s+(a|an)\s+\w+/i,
-    /\bact\s+as\s+(a|an|if)\s+/i,
+    /\bact\s+as\s+(if\s+you\b|(an?\s+)?(ai|assistant|chat\s?bot|bot|language\s+model|llm|unrestricted|uncensored|jailbroken|character|persona|dan)\b)/i,
     /\bpretend\s+(to\s+be|you\s+are|you'?re)/i,
     /\bdeveloper\s+mode\b/i,
     /\bjailbreak/i,
@@ -963,12 +971,16 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
         const offline = getOfflineResponse(message);
         renderMessage(offline + '\n\n*Note: Bjørn took too long to respond. Showing a cached answer — try again if you need his full reasoning.*', 'bjorn');
       } else if (err.message.includes('401') || err.message.includes('invalid_api_key')) {
-        errorMsg += 'Bjørn is temporarily unavailable. Refresh the page to reconnect.';
+        errorMsg += 'Bjørn is temporarily unavailable right now. Please try again in a little while.';
         renderMessage(errorMsg, 'bjorn');
       } else if (err.message.includes('429') || err.message.toLowerCase().includes('rate limit') || err.message.includes('rate_limit') || err.message.includes('tokens per min')) {
         // All models exhausted — give useful offline answer so user always gets something
         const offline = getOfflineResponse(message);
         renderMessage(offline + '\n\n*🐾 Bjørn is very popular right now! This is a cached answer — for his full live reasoning, try again in about 60 seconds. Undskyld! (Sorry!)*', 'bjorn');
+      } else if (err.message.includes('413') || /too\s+large|too\s+long|context[_\s]length|maximum\s+context|request entity/i.test(err.message)) {
+        // Input/payload too large — the issue is length, not connectivity, so a
+        // clear "shorten it" message is more useful than a generic cached answer.
+        renderMessage('🛡️ That is a bit too long for me to handle in one go. Please shorten it, or split it into a couple of messages, and try again.', 'bjorn');
       } else if (err.message.includes('Failed to fetch') || !navigator.onLine) {
         // Network failure — fall back to offline
         const offline = getOfflineResponse(message);
