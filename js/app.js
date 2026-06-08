@@ -2229,9 +2229,10 @@ const StatsTracker = (() => {
   };
 
   const init = () => {
-    // Show cached counts instantly (or fall back to floor) while async runs
+    // Show the cached visitor count instantly while the live count loads.
+    // The Bjorn stat is a real static snapshot in the HTML; we do NOT
+    // overwrite it on load. It updates live only if a question is asked.
     showCached('stat-visitors',  'visitors');
-    showCached('stat-bjorn', 'bjorn-questions');
     // Then fire live updates
     trackVisitor();
     window.addEventListener('bjornMessageSent', trackBjornQuestion);
