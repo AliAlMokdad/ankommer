@@ -1023,7 +1023,18 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     // Escape behaviour: when full screen, the first Escape shrinks back to the
     // card; in card mode it closes the panel. Shared by the document-scope
     // handler and the focus trap so both stage Escape the same way.
+    // Reentrancy guard: when focus is inside the panel a single Escape fires
+    // BOTH the focus trap's onEscape AND the document handler below. Without
+    // this flag that one keypress runs escapeOrShrink twice — shrinking
+    // fullscreen->card and then immediately closing the card, so Escape from
+    // full screen would skip the card entirely. The flag collapses the two
+    // synchronous calls of one keypress into a single action; a microtask
+    // re-arms it before the next genuine keypress.
+    let _escBusy = false;
     const escapeOrShrink = () => {
+      if (_escBusy) return;
+      _escBusy = true;
+      Promise.resolve().then(() => { _escBusy = false; });
       const w = document.getElementById('bjorn-widget');
       if (w && w.classList.contains('fullscreen')) toggleFullscreen();
       else close();
