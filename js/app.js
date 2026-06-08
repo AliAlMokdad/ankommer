@@ -2168,38 +2168,33 @@ const StatsTracker = (() => {
     _rafTokens.set(el, requestAnimationFrame(tick));
   };
 
-  /* No synthetic floor. The hero shows the real backend count from
-     counterapi, falling back to the cached value if the API is
-     unreachable. floorOf is a no-op kept so the callers stay simple. */
-  const floorOf = () => 0;
-
-  /* Read from localStorage cache (no network call needed for reads) */
+  /* Read the cached count from localStorage (no network needed). */
   const localGet  = (key) => parseInt(safeGetItem(`ankommer_cnt_${key}`)) || 0;
   const localHit  = (key) => {
-    // Never let the cached value drop below the floor.
-    const v = Math.max(localGet(key) + 1, floorOf(key));
+    const v = localGet(key) + 1;
     safeSetItem(`ankommer_cnt_${key}`, v);
     return v;
   };
 
-  /* Hit /up — increments counter, returns new count (or floor, whichever is higher) */
+  /* Hit /up to increment the counter and return the live backend count
+     (or the cached value if that is higher). Caches the result. */
   const apiHit = async (key) => {
     const r = await fetch(`${API}/${NS}/${key}/up`, { cache: 'no-store' });
     if (!r.ok) throw new Error(r.status);
     const d = await r.json();
-    // Take max(api, floor, cached) so a counter reset or low-volume namespace
-    // can never publish a value below reality. Cache the safe value.
-    const safe = Math.max(parseInt(d.count) || 0, floorOf(key), localGet(key));
+    const safe = Math.max(parseInt(d.count) || 0, localGet(key));
     safeSetItem(`ankommer_cnt_${key}`, safe);
     return safe;
   };
 
-  /* Show cached value (or floor, whichever is higher) immediately,
-     then a later API hit can ratchet upward. Never below floor. */
+  /* Show a cached count instantly if we have one, then the live API call
+     updates it. With no cache yet, leave the HTML value (a real snapshot)
+     in place rather than flashing 0 before the API responds. */
   const showCached = (elId, key) => {
     const el = document.getElementById(elId);
     if (!el) return;
-    animateTo(el, Math.max(floorOf(key), localGet(key)));
+    const cached = localGet(key);
+    if (cached > 0) animateTo(el, cached);
   };
 
   /* Count visitor once per browser session */
