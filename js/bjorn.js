@@ -1003,6 +1003,14 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     const widget = document.getElementById('bjorn-widget');
     if (widget) widget.classList.remove('closed');
     isOpen = true;
+    // Escape behaviour: when full screen, the first Escape shrinks back to the
+    // card; in card mode it closes the panel. Shared by the document-scope
+    // handler and the focus trap so both stage Escape the same way.
+    const escapeOrShrink = () => {
+      const w = document.getElementById('bjorn-widget');
+      if (w && w.classList.contains('fullscreen')) toggleFullscreen();
+      else close();
+    };
     // Document-scope ESC handler — the FocusTrap onEscape only fires when
     // focus is INSIDE the panel; if the user clicks somewhere else after
     // opening Bjørn (or doesn't click at all), focus may not be in the
@@ -1010,7 +1018,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     _escHandler = (e) => {
       if (e.key === 'Escape' && isOpen) {
         e.preventDefault();
-        close();
+        escapeOrShrink();
       }
     };
     document.addEventListener('keydown', _escHandler);
@@ -1028,7 +1036,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     // Focus trap on the panel — Escape closes, Tab cycles inside
     const panel = document.getElementById('bjorn-panel') || widget;
     if (panel && window.FocusTrap) {
-      _focusTrap = window.FocusTrap(panel, { onEscape: close });
+      _focusTrap = window.FocusTrap(panel, { onEscape: escapeOrShrink });
       _focusTrap.activate(toggleBtn);
       requestAnimationFrame(() => {
         document.getElementById('bjorn-input')?.focus({ preventScroll: true });
@@ -1070,6 +1078,10 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
   const close = () => {
     const widget = document.getElementById('bjorn-widget');
     if (!widget) return;
+    // Cancel any in-flight full-screen zoom so a lingering .fs-animating class
+    // can't leave the transform-pin disabled after the panel is hidden.
+    clearTimeout(widget._fsAnimTimer);
+    widget.classList.remove('fs-animating');
     // Tear down focus trap and restore focus to the toggle button
     _focusTrap?.deactivate();
     _focusTrap = null;
@@ -1099,14 +1111,35 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
 
   const toggle = () => { isOpen ? close() : open(); };
 
-  /* Expand the panel to full screen, or shrink it back. Just a class
-     toggle on the widget; close() clears it so the next open is the card. */
+  /* Expand the panel to full screen, or shrink it back. close() clears the
+     class so the next open is always the card. */
   const toggleFullscreen = () => {
     const widget = document.getElementById('bjorn-widget');
     if (!widget) return;
+    const panel = widget.querySelector('.bjorn-panel');
     const isFull = widget.classList.toggle('fullscreen');
     document.getElementById('bjorn-fullscreen')?.setAttribute('aria-pressed', isFull ? 'true' : 'false');
-    document.getElementById('bjorn-input')?.focus({ preventScroll: true });
+    // Smooth zoom on expand AND collapse. The transient `.fs-animating` class
+    // lifts the transform-pin in main.css (an !important rule that otherwise
+    // beats the keyframe and makes the resize snap), and the inline
+    // animation:none -> reflow -> '' restart re-runs the EXISTING panel-open
+    // keyframe. Reusing that keyframe (rather than a new name) is what avoids
+    // the animation-name swap that would replay panel-open and flash the panel.
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (panel && !reduce) {
+      widget.classList.add('fs-animating');
+      panel.style.animation = 'none';
+      void panel.offsetWidth; // force reflow so the keyframe restarts
+      panel.style.animation = '';
+      clearTimeout(widget._fsAnimTimer);
+      widget._fsAnimTimer = setTimeout(() => widget.classList.remove('fs-animating'), 320);
+    }
+    // Entering full screen puts focus in the now-prominent chat input; exiting
+    // returns focus to the toggle button the user just pressed. Don't refocus
+    // the input on collapse — it steals focus from a keyboard user and re-pops
+    // the mobile soft keyboard.
+    if (isFull) document.getElementById('bjorn-input')?.focus({ preventScroll: true });
+    else document.getElementById('bjorn-fullscreen')?.focus({ preventScroll: true });
   };
 
   /* ── SET USER PROFILE ────────────────────────────────── */
@@ -1128,6 +1161,17 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     // Full-screen toggle button
     const fsBtn = document.getElementById('bjorn-fullscreen');
     if (fsBtn) fsBtn.addEventListener('click', toggleFullscreen);
+
+    // Click the dimmed backdrop (the area outside the panel while full screen)
+    // to shrink back to the card. Clicks on the ::before backdrop surface on
+    // the widget element itself; clicks on the panel have a target inside it,
+    // so this never fires while interacting with the chat.
+    const fsWidget = document.getElementById('bjorn-widget');
+    if (fsWidget) {
+      fsWidget.addEventListener('click', (e) => {
+        if (e.target === fsWidget && fsWidget.classList.contains('fullscreen')) toggleFullscreen();
+      });
+    }
 
     // Clear history button
     const clearBtn = document.getElementById('bjorn-clear-history');

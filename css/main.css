@@ -2083,8 +2083,11 @@ body.app-active .footer-top {
    rule the close animation's `forwards` fill could leave the panel at a
    residual scale that visually shrinks all child controls (audit measured
    children at 35×35 instead of 44×44 because of a stuck transform). The
-   overriding rule has higher specificity (3 classes) and wins. */
-.bjorn-widget:not(.closed):not(.closing) .bjorn-panel {
+   overriding rule has higher specificity (3 classes) and wins.
+   `:not(.fs-animating)` lifts this pin for the ~0.3s of a full-screen toggle
+   so the panel-open zoom (a transform animation) is visible — otherwise this
+   !important rule beats the keyframe in the cascade and the expand snaps. */
+.bjorn-widget:not(.closed):not(.closing):not(.fs-animating) .bjorn-panel {
   transform: scale(1) !important;
 }
 
@@ -2094,7 +2097,26 @@ body.app-active .footer-top {
   position: fixed; inset: 0; margin: auto;
   width: min(760px, 94vw); height: min(90vh, 880px); max-height: 90vh;
   z-index: 1100;
+  /* The card opens from the bottom-right corner; the full-screen modal is
+     centred, so it should zoom from its centre, not a corner. */
+  transform-origin: center;
 }
+/* Dim + focus backdrop behind the centred modal so it reads as an intentional
+   overlay rather than a panel floating over the live page. Sits inside the
+   widget's stacking context (z 100000) just under the panel (z 1100), so it
+   covers the nav and page. On phones the panel fills the viewport, so the
+   backdrop is simply hidden behind it (harmless). */
+.bjorn-widget.fullscreen::before {
+  content: '';
+  position: fixed; inset: 0;
+  background: rgba(10, 14, 28, 0.55);
+  z-index: 1099;
+  animation: bjorn-fs-fade 0.26s ease;
+}
+@keyframes bjorn-fs-fade { from { opacity: 0; } to { opacity: 1; } }
+/* The floating toggle button is redundant while the panel is expanded (and on
+   phones it would overlap the panel), so hide it in full screen. */
+.bjorn-widget.fullscreen .bjorn-toggle { display: none; }
 /* While Bjorn is full screen, hide the PWA install banner so it cannot
    overlap the panel's input area on phones (the banner is z-index 8000). */
 body:has(.bjorn-widget.fullscreen) .pwa-install-banner { display: none; }
