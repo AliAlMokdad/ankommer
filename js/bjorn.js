@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════
    ANKOMMER — Bjørn AI Chat Engine
-   Powered by Groq (Meta Llama 3.3 70B — free tier)
+   Powered by Groq (OpenAI gpt-oss open models — free tier)
 ═══════════════════════════════════════════════════════ */
 
 const Bjorn = (() => {
@@ -633,17 +633,21 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
   };
 
   /* ── GROQ API CALL ───────────────────────────────────── */
-  // Model cascade — each model has its OWN separate TPM bucket on Groq free tier:
-  //   attempt 0 = llama-3.3-70b-versatile              (6k TPM  — best quality)
-  //   attempt 1 = llama-3.1-8b-instant                 (20k TPM — instant switch, separate bucket)
-  //   attempt 2 = llama-4-scout-17b-16e-instruct        (separate bucket — different model family)
-  //   attempt 3 = llama-3.1-8b-instant                 (after 62s wait — window has reset)
+  // Model cascade — each model has its OWN separate rate bucket on Groq free tier.
+  // Migrated 2026-06-30: Groq deprecated llama-3.3-70b-versatile, llama-3.1-8b-instant,
+  // qwen3-32b and llama-4-scout (decommission 2026-08-16). These are the free-tier
+  // PRODUCTION replacements Groq recommends — OpenAI's open-weight gpt-oss models,
+  // which keep reasoning on a separate channel so the chat text stays clean:
+  //   attempt 0 = openai/gpt-oss-120b   (best quality — replaces the 70B)
+  //   attempt 1 = openai/gpt-oss-20b    (instant switch, separate bucket, faster)
+  //   attempt 2 = openai/gpt-oss-120b   (after 62s wait — window has reset)
+  //   attempt 3 = openai/gpt-oss-20b    (after 62s wait)
   // If ALL four fail → return a useful offline answer (never show a blank/error to user)
   const MODELS = [
-    'llama-3.3-70b-versatile',                    // attempt 0 — premium quality
-    'llama-3.1-8b-instant',                       // attempt 1 — instant fallback, separate bucket
-    'meta-llama/llama-4-scout-17b-16e-instruct',  // attempt 2 — Llama 4, separate bucket
-    'llama-3.1-8b-instant'                        // attempt 3 — after 62s wait, window reset
+    'openai/gpt-oss-120b',   // attempt 0 — premium quality, free tier
+    'openai/gpt-oss-20b',    // attempt 1 — instant fallback, separate bucket
+    'openai/gpt-oss-120b',   // attempt 2 — after 62s wait, window reset
+    'openai/gpt-oss-20b'     // attempt 3 — after 62s wait
   ];
   const callGroq = async (message, attempt = 0) => {
     // Push user message BEFORE the call, but roll back on failure so
@@ -697,10 +701,19 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       const errBody = await response.json().catch(() => ({}));
       const msg = errBody.error?.message || `API error ${response.status}`;
 
+      // A decommissioned or unknown model returns a 4xx (not 429). Instantly
+      // fall through to the next model in the cascade rather than erroring out,
+      // so a future Groq model retirement degrades gracefully instead of breaking.
+      const isModelGone = (response.status === 400 || response.status === 404) &&
+        /\bmodel\b|decommission|deprecat|not found|does not exist|no longer/i.test(msg);
+      if (isModelGone && attempt < MODELS.length - 1) {
+        return callGroq(message, attempt + 1);
+      }
+
       // Auto-retry on rate-limit (HTTP 429).
-      // attempt 0 → attempt 1: instantly switch to llama-3.1-8b-instant
-      //   (completely separate TPM bucket — no wait needed)
-      // attempt 1 → attempt 2: 8b is also rate-limited; wait for reset then retry
+      // attempt 0 → attempt 1: instantly switch to gpt-oss-20b
+      //   (completely separate rate bucket — no wait needed)
+      // attempt 1 → attempt 2: also rate-limited; wait for reset then retry
       const isRateLimit = response.status === 429 ||
         msg.toLowerCase().includes('rate limit') ||
         msg.toLowerCase().includes('rate_limit') ||
@@ -724,7 +737,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
           showHint('Still thinking…');
           return callGroq(message, attempt + 1);
         } else {
-          // All instant fallbacks (70B, 8B, Llama-4-Scout) exhausted — wait for the 60s window to reset
+          // All instant fallbacks (gpt-oss-120b, gpt-oss-20b) exhausted — wait for the 60s window to reset
           const retryAfterRaw = response.headers.get('retry-after') || '60';
           // Groq's retry-after is in seconds (e.g. "30" or "60") — parseInt is safe
           const retryAfter = Math.min(parseInt(retryAfterRaw, 10) || 60, 120);
@@ -744,6 +757,21 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     if (!reply) {
       conversationHistory.pop(); // rollback unanswered user message
       throw new Error('Empty response from Groq');
+    }
+
+    // Defensive: some reasoning models (e.g. Qwen) emit a <think>…</think>
+    // chain-of-thought inside the content. gpt-oss keeps reasoning on a
+    // separate channel so this is a no-op for the current cascade, but strip
+    // it so a future model swap can never leak raw reasoning into the chat.
+    // Also handles an unclosed <think> if the reasoning was truncated.
+    if (reply.indexOf('<think>') !== -1) {
+      reply = reply.replace(/<think>[\s\S]*?<\/think>/gi, '')
+                   .replace(/<think>[\s\S]*$/i, '')
+                   .trim();
+      if (!reply) {
+        conversationHistory.pop(); // rollback — nothing left after stripping
+        throw new Error('Empty response after stripping reasoning');
+      }
     }
 
     /* ── PROMPT-LEAK GUARDRAIL ────────────────────────────────
