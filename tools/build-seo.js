@@ -26,7 +26,9 @@ function loadChapters() {
   const chapSrc = fs.readFileSync(path.join(ROOT, 'js', 'data-chapters.js'), 'utf8');
   // Both files declare globals via `const NAME = ...`. Concat them and wrap
   // in a function that returns the bindings — no pollution of Node globals.
-  const wrapped = `${dataSrc}\n${chapSrc}\nreturn { CHAPTERS, TIMELINE_EVENTS };`;
+  // data-chapters.js assigns window.CHAPTERS (not a top-level const), so provide
+  // a window stub and read CHAPTERS off it; TIMELINE_EVENTS is a const in data.js.
+  const wrapped = `const window = {};\n${dataSrc}\n${chapSrc}\nreturn { CHAPTERS: window.CHAPTERS, TIMELINE_EVENTS };`;
   return new Function(wrapped)();
 }
 
@@ -168,6 +170,10 @@ function renderChapter(ch, idx, slug, slugs, titles) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.open-meteo.com https://open.er-api.com https://api.counterapi.dev https://ankommer-bjorn-proxy.ankommer.workers.dev; base-uri 'self'; form-action 'self'; object-src 'none';" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), accelerometer=(), gyroscope=()" />
 <title>${esc(title)} — Moving to Denmark | ANKOMMER</title>
 <meta name="description" content="${esc(desc)}">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
