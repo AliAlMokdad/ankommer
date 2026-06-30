@@ -1517,7 +1517,7 @@ const _loadFullChapters = () => {
   if (_chaptersLoadPromise) return _chaptersLoadPromise;
   _chaptersLoadPromise = new Promise((resolve) => {
     const s = document.createElement('script');
-    s.src = 'js/data-chapters.js?v=34';
+    s.src = 'js/data-chapters.js?v=35';
     let settled = false;
     const done = (ok) => {
       if (settled) return;

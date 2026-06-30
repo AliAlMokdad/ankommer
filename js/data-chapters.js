@@ -1404,8 +1404,6 @@ de:`<p>Die allgemeine Regelung: <strong>8 Jahre ununterbrochenen legalen Aufenth
   <li>Must have lived in Denmark for <strong>9 years</strong> (or less with accelerators)</li>
   <li>Pass the <strong>Indfødsretsprøven</strong> (citizenship test) — Danish history, culture, society</li>
   <li>Pass <strong>Prøve i Dansk 3 (PD3, ≈ B2 level)</strong> — the citizenship-track language test</li>
-  <li>Pass the <strong>indfødsretsprøven</strong> (citizenship knowledge test, ~40 questions on Danish history, society, and democracy)</li>
-  <li>Have lived in Denmark for at least <strong>9 of the last 10 years</strong> with permanent residency</li>
   <li>Be <strong>self-supporting</strong> with no public-assistance benefits in the last 4 years</li>
   <li>Have been self-supporting for the last 4.5 of 5 years</li>
   <li>No criminal convictions</li>
@@ -1417,7 +1415,6 @@ da:`<p>En af de mere krævende veje i Europa, men det er det værd:</p>
   <li>Skal have boet i Danmark i <strong>9 år</strong> (eller færre med acceleratorer)</li>
   <li>Bestå <strong>indfødsretsprøven</strong> — dansk historie, kultur og samfund</li>
   <li>Bestå <strong>Prøve i Dansk 3 (PD3, ≈ B2-niveau)</strong> — sprogprøven på statsborgerskabssporet</li>
-  <li>Have boet i Danmark i mindst <strong>9 af de seneste 10 år</strong> med permanent opholdstilladelse</li>
   <li>Være <strong>selvforsørgende</strong> — ingen offentlig forsørgelse de seneste 4 år</li>
   <li>Have forsørget sig selv de seneste 4,5 af 5 år</li>
   <li>Ingen straffedomme</li>
@@ -1429,7 +1426,6 @@ fr:`<p>L'une des voies les plus exigeantes d'Europe, mais qui en vaut la peine :
   <li>Avoir vécu au Danemark pendant <strong>9 ans</strong> (ou moins avec des accélérateurs)</li>
   <li>Réussir l'<strong>indfødsretsprøven</strong> (test de citoyenneté) — histoire, culture et société danoises</li>
   <li>Réussir le <strong>Prøve i Dansk 3 (PD3, ≈ niveau B2)</strong> — le test de langue pour la citoyenneté</li>
-  <li>Avoir résidé au Danemark pendant au moins <strong>9 des 10 dernières années</strong> avec résidence permanente</li>
   <li>Être <strong>autonome financièrement</strong> — aucune aide sociale durant les 4 dernières années</li>
   <li>Avoir subvenu à ses besoins pendant 4,5 des 5 dernières années</li>
   <li>Aucune condamnation pénale</li>
@@ -1441,7 +1437,6 @@ ar:`<p>أحد أصعب مسارات الجنسية في أوروبا، لكنه 
   <li>الإقامة في الدنمارك لمدة <strong>9 سنوات</strong> (أو أقل مع المسارات المسرّعة)</li>
   <li>اجتياز <strong>اختبار الجنسية (indfødsretsprøven)</strong> — التاريخ والثقافة والمجتمع الدنماركي</li>
   <li>اجتياز <strong>Prøve i Dansk 3 (PD3، ≈ المستوى B2)</strong> — اختبار اللغة لمسار الجنسية</li>
-  <li>الإقامة في الدنمارك لـ<strong>9 سنوات على الأقل من آخر 10 سنوات</strong> بإقامة دائمة</li>
   <li>الـ<strong>اكتفاء الذاتي</strong> — بدون مساعدات اجتماعية في آخر 4 سنوات</li>
   <li>الاكتفاء الذاتي لمدة 4.5 سنة من آخر 5 سنوات</li>
   <li>لا إدانات جنائية</li>
@@ -1453,7 +1448,6 @@ es:`<p>Uno de los caminos más exigentes de Europa, pero vale la pena:</p>
   <li>Haber vivido en Dinamarca <strong>9 años</strong> (o menos con aceleradores)</li>
   <li>Superar la <strong>indfødsretsprøven</strong> (prueba de ciudadanía) — historia, cultura y sociedad danesas</li>
   <li>Superar el <strong>Prøve i Dansk 3 (PD3, ≈ nivel B2)</strong> — la prueba de idioma para la vía de ciudadanía</li>
-  <li>Haber residido en Dinamarca al menos <strong>9 de los últimos 10 años</strong> con residencia permanente</li>
   <li>Ser <strong>autosuficiente</strong> — sin prestaciones públicas en los últimos 4 años</li>
   <li>Haber sido autosuficiente durante los últimos 4,5 de 5 años</li>
   <li>Sin condenas penales</li>
@@ -1465,7 +1459,6 @@ de:`<p>Einer der anspruchsvollsten Wege in Europa, aber die Muehe wert:</p>
   <li>Mindestens <strong>9 Jahre</strong> in Daenemark gelebt haben (oder weniger mit Beschleunigern)</li>
   <li>Den <strong>indfodsretspro ven</strong> (Staatsbuergerschaftstest) bestehen — daenische Geschichte, Kultur und Gesellschaft</li>
   <li>Den <strong>Prove i Dansk 3 (PD3, ≈ B2-Niveau)</strong> bestehen — den Sprachtest fuer den Staatsbuergerschaftsweg</li>
-  <li>Mindestens <strong>9 der letzten 10 Jahre</strong> mit dauerhafter Aufenthaltserlaubnis in Daenemark gelebt haben</li>
   <li><strong>Selbstversorgend</strong> sein — keine oeffentlichen Leistungen in den letzten 4 Jahren</li>
   <li>In 4,5 der letzten 5 Jahre selbstversorgend gewesen sein</li>
   <li>Keine strafrechtlichen Verurteilungen</li>
@@ -1477,7 +1470,6 @@ de:`<p>Einer der anspruchsvollsten Wege in Europa, aber die Muehe wert:</p>
   <li>Потрібно прожити в Данії <strong>9 років</strong> (або менше за прискореними маршрутами)</li>
   <li>Скласти <strong>indfødsretsprøven</strong> (іспит на громадянство) — данська історія, культура, суспільство</li>
   <li>Скласти <strong>Prøve i Dansk 3 (PD3, ≈ рівень B2)</strong> — мовний тест для отримання громадянства</li>
-  <li>Прожити в Данії щонайменше <strong>9 із останніх 10 років</strong> з постійним посвідкою на проживання</li>
   <li>Бути <strong>фінансово самостійним</strong> — без державних виплат протягом останніх 4 років</li>
   <li>Бути самостійним протягом 4,5 із останніх 5 років</li>
   <li>Відсутність судимостей</li>
@@ -1489,7 +1481,6 @@ de:`<p>Einer der anspruchsvollsten Wege in Europa, aber die Muehe wert:</p>
   <li>Trzeba mieszkać w Danii przez <strong>9 lat</strong> (lub krócej dzięki ścieżkom przyspieszonym)</li>
   <li>Zdać <strong>indfødsretsprøven</strong> (egzamin na obywatelstwo) — historia, kultura i społeczeństwo duńskie</li>
   <li>Zdać <strong>Prøve i Dansk 3 (PD3, ≈ poziom B2)</strong> — egzamin językowy na ścieżce obywatelstwa</li>
-  <li>Mieszkać w Danii przez co najmniej <strong>9 z ostatnich 10 lat</strong> ze stałym zezwoleniem na pobyt</li>
   <li>Być <strong>samowystarczalnym finansowo</strong> — bez świadczeń publicznych przez ostatnie 4 lata</li>
   <li>Być samowystarczalnym przez 4,5 z ostatnich 5 lat</li>
   <li>Brak skazań karnych</li>
@@ -1501,7 +1492,6 @@ de:`<p>Einer der anspruchsvollsten Wege in Europa, aber die Muehe wert:</p>
   <li>ڈنمارک میں <strong>9 سال</strong> رہنا ضروری ہے (یا تیز ٹریک سے کم)</li>
   <li><strong>indfødsretsprøven</strong> (شہریت امتحان) پاس کریں — ڈینش تاریخ، ثقافت اور معاشرہ</li>
   <li><strong>Prøve i Dansk 3 (PD3, ≈ B2 سطح)</strong> پاس کریں — شہریت راہ پر زبان کا امتحان</li>
-  <li>مستقل رہائشی پرمٹ کے ساتھ <strong>گزشتہ 10 سالوں میں سے کم از کم 9</strong> ڈنمارک میں رہیں</li>
   <li><strong>مالی طور پر خود کفیل</strong> ہوں — گزشتہ 4 سالوں میں کوئی سرکاری امداد نہیں</li>
   <li>گزشتہ 5 سالوں میں سے 4.5 سال خود کفیل رہیں</li>
   <li>کوئی مجرمانہ سزا نہ ہو</li>
@@ -4425,7 +4415,7 @@ ur:`<p><strong>ٹیوشن فیس بلحاظِ شہریت:</strong></p>
   <li><strong>Danskuddannelse 2 (DU2):</strong> For people with some secondary education. Leads to PD2</li>
   <li><strong>Danskuddannelse 3 (DU3):</strong> For people with higher education (most professionals). Leads to Studieprøven (university entry level)</li>
 </ul>
-<p><strong>Duration:</strong> Up to 3 years (you have 5 years from when you first became eligible to use the right).</p>
+<p><strong>Duration:</strong> Up to 5 years from when you first became eligible to use the right.</p>
 <p><strong>How to start:</strong> Contact your municipality's integration department (integrationsafdelingen) or apply directly at a language school (sprogcenter) in your area.</p>
 <p><strong>Test levels that matter for residency and citizenship:</strong> Permanent residency requires <strong>Prøve i Dansk 2 (PD2 ≈ B1)</strong>. Citizenship requires <strong>Prøve i Dansk 3 (PD3 ≈ B2)</strong>. University admission to Danish-language programmes typically requires <strong>Studieprøven (≈ C1)</strong>. (PD2 is officially mapped to B1 by the Ministry of Children and Education.)</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement" target="_blank" rel="noopener">→ Language requirements for residency (nyidanmark.dk)</a>`,
@@ -4436,7 +4426,7 @@ da:`<p>Danmark tilbyder gratis danskundervisning til alle beboere med et CPR-num
   <li><strong>Danskuddannelse 2 (DU2):</strong> For mennesker med nogen gymnasial uddannelse. Fører til PD2</li>
   <li><strong>Danskuddannelse 3 (DU3):</strong> For mennesker med videregående uddannelse (de fleste fagfolk). Fører til Studieprøven (universitetsniveau)</li>
 </ul>
-<p><strong>Varighed:</strong> Op til 3 år (du har 5 år fra du første gang blev berettiget til at bruge retten).</p>
+<p><strong>Varighed:</strong> Op til 5 år fra du første gang blev berettiget til at bruge retten.</p>
 <p><strong>Sådan starter du:</strong> Kontakt din kommunes integrationsafdeling eller ansøg direkte på et sprogcenter i dit område.</p>
 <p><strong>Testniveauer der tæller for ophold og statsborgerskab:</strong> Permanent ophold kræver <strong>Prøve i Dansk 2 (PD2 ≈ B1)</strong>. Statsborgerskab kræver <strong>Prøve i Dansk 3 (PD3 ≈ B2)</strong>. Universitetsoptagelse på dansksprogede programmer kræver typisk <strong>Studieprøven (≈ C1)</strong>.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement" target="_blank" rel="noopener">→ Sprogkrav til ophold (nyidanmark.dk)</a>`,
@@ -4447,7 +4437,7 @@ fr:`<p>Le Danemark propose des cours de langue danoise gratuits à tous les rés
   <li><strong>Danskuddannelse 2 (DU2) :</strong> Pour les personnes ayant une éducation secondaire. Mène à PD2</li>
   <li><strong>Danskuddannelse 3 (DU3) :</strong> Pour les personnes ayant une formation supérieure (la plupart des professionnels). Mène à la Studieprøven (niveau entrée universitaire)</li>
 </ul>
-<p><strong>Durée :</strong> Jusqu'à 3 ans (vous avez 5 ans à partir du moment où vous êtes devenu éligible pour exercer ce droit).</p>
+<p><strong>Durée :</strong> Jusqu'à 5 ans à partir du moment où vous êtes devenu éligible pour exercer ce droit.</p>
 <p><strong>Comment commencer :</strong> Contactez le département d'intégration de votre municipalité (integrationsafdelingen) ou postulez directement dans une école de langues (sprogcenter) de votre région.</p>
 <p><strong>Niveaux d'examen importants pour la résidence et la citoyenneté :</strong> La résidence permanente requiert <strong>Prøve i Dansk 2 (PD2 ≈ B1)</strong>. La citoyenneté requiert <strong>Prøve i Dansk 3 (PD3 ≈ B2)</strong>. L'admission universitaire aux programmes en danois requiert généralement la <strong>Studieprøven (≈ C1)</strong>.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement" target="_blank" rel="noopener">→ Exigences linguistiques pour la résidence (nyidanmark.dk)</a>`,
@@ -4458,7 +4448,7 @@ ar:`<p>تُقدّم الدنمارك تعليم اللغة الدنماركية 
   <li><strong>Danskuddannelse 2 (DU2):</strong> لمن لديهم تعليم ثانوي. يقود إلى PD2</li>
   <li><strong>Danskuddannelse 3 (DU3):</strong> لمن لديهم تعليم عالٍ (معظم المهنيين). يقود إلى Studieprøven (مستوى الدخول الجامعي)</li>
 </ul>
-<p><strong>المدة:</strong> حتى 3 سنوات (لديك 5 سنوات منذ أول تاريخ أصبحت فيه مؤهلاً لاستخدام هذا الحق).</p>
+<p><strong>المدة:</strong> حتى 5 سنوات من أول تاريخ أصبحت فيه مؤهلاً لاستخدام هذا الحق.</p>
 <p><strong>كيف تبدأ:</strong> تواصل مع قسم التكامل في بلديتك (integrationsafdelingen) أو تقدّم مباشرةً في مدرسة لغات (sprogcenter) في منطقتك.</p>
 <p><strong>مستويات الاختبار المهمة للإقامة والجنسية:</strong> الإقامة الدائمة تستلزم <strong>Prøve i Dansk 2 (PD2 ≈ B1)</strong>. الجنسية تستلزم <strong>Prøve i Dansk 3 (PD3 ≈ B2)</strong>. القبول الجامعي في البرامج الدنماركية يستلزم عادةً <strong>Studieprøven (≈ C1)</strong>.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement" target="_blank" rel="noopener">← متطلبات اللغة للإقامة (nyidanmark.dk)</a>`,
@@ -4469,7 +4459,7 @@ es:`<p>Dinamarca ofrece clases de idioma danés gratuitas a todos los residentes
   <li><strong>Danskuddannelse 2 (DU2):</strong> Para personas con cierta educación secundaria. Conduce a PD2</li>
   <li><strong>Danskuddannelse 3 (DU3):</strong> Para personas con educación superior (la mayoría de los profesionales). Conduce a la Studieprøven (nivel de acceso universitario)</li>
 </ul>
-<p><strong>Duración:</strong> Hasta 3 años (tienes 5 años desde que te convertiste en elegible para usar este derecho).</p>
+<p><strong>Duración:</strong> Hasta 5 años desde que te convertiste en elegible para usar este derecho.</p>
 <p><strong>Cómo empezar:</strong> Contacta con el departamento de integración de tu municipio (integrationsafdelingen) o apúntate directamente en una escuela de idiomas (sprogcenter) de tu zona.</p>
 <p><strong>Niveles de examen que importan para la residencia y la ciudadanía:</strong> La residencia permanente requiere <strong>Prøve i Dansk 2 (PD2 ≈ B1)</strong>. La ciudadanía requiere <strong>Prøve i Dansk 3 (PD3 ≈ B2)</strong>. La admisión universitaria a programas en danés suele requerir la <strong>Studieprøven (≈ C1)</strong>.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement" target="_blank" rel="noopener">→ Requisitos de idioma para la residencia (nyidanmark.dk)</a>`,
@@ -4480,7 +4470,7 @@ de:`<p>Dänemark bietet allen Einwohnern mit einer CPR-Nummer, die keine EU-Stud
   <li><strong>Danskuddannelse 2 (DU2):</strong> Für Personen mit teilweiser Sekundarbildung. Führt zu PD2</li>
   <li><strong>Danskuddannelse 3 (DU3):</strong> Für Personen mit Hochschulbildung (die meisten Fachkräfte). Führt zur Studieprøven (Universitätszulassungsniveau)</li>
 </ul>
-<p><strong>Dauer:</strong> Bis zu 3 Jahre (Sie haben 5 Jahre ab dem Zeitpunkt, an dem Sie erstmals anspruchsberechtigt wurden, um dieses Recht zu nutzen).</p>
+<p><strong>Dauer:</strong> Bis zu 5 Jahre ab dem Zeitpunkt, an dem Sie erstmals anspruchsberechtigt wurden, um dieses Recht zu nutzen.</p>
 <p><strong>So beginnen Sie:</strong> Wenden Sie sich an das Integrationsamt Ihrer Gemeinde (integrationsafdelingen) oder melden Sie sich direkt an einer Sprachschule (sprogcenter) in Ihrer Nähe an.</p>
 <p><strong>Prüfungsniveaus, die für Aufenthalt und Staatsbürgerschaft wichtig sind:</strong> Die dauerhafte Aufenthaltserlaubnis erfordert <strong>Prøve i Dansk 2 (PD2 ≈ B1)</strong>. Die Staatsbürgerschaft erfordert <strong>Prøve i Dansk 3 (PD3 ≈ B2)</strong>. Die Universitätszulassung für dänischsprachige Programme erfordert in der Regel die <strong>Studieprøven (≈ C1)</strong>.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement" target="_blank" rel="noopener">→ Sprachanforderungen für die Aufenthaltserlaubnis (nyidanmark.dk)</a>`,
@@ -4491,7 +4481,7 @@ de:`<p>Dänemark bietet allen Einwohnern mit einer CPR-Nummer, die keine EU-Stud
   <li><strong>Danskuddannelse 2 (DU2):</strong> Для людей із середньою освітою. Веде до PD2</li>
   <li><strong>Danskuddannelse 3 (DU3):</strong> Для людей із вищою освітою (більшість фахівців). Веде до Studieprøven (рівень вступу до університету)</li>
 </ul>
-<p><strong>Тривалість:</strong> До 3 років (у вас є 5 років з моменту першого отримання права скористатися ним).</p>
+<p><strong>Тривалість:</strong> До 5 років з моменту першого отримання права скористатися ним.</p>
 <p><strong>Як розпочати:</strong> Зверніться до відділу інтеграції вашої комуни (integrationsafdelingen) або запишіться безпосередньо в мовний центр (sprogcenter) у своєму районі.</p>
 <p><strong>Рівні іспитів, важливі для проживання та громадянства:</strong> Постійне проживання вимагає <strong>Prøve i Dansk 2 (PD2 ≈ B1)</strong>. Громадянство вимагає <strong>Prøve i Dansk 3 (PD3 ≈ B2)</strong>. Вступ до університету на данськомовні програми зазвичай вимагає <strong>Studieprøven (≈ C1)</strong>.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement" target="_blank" rel="noopener">→ Мовні вимоги для проживання (nyidanmark.dk)</a>`,
@@ -4502,7 +4492,7 @@ de:`<p>Dänemark bietet allen Einwohnern mit einer CPR-Nummer, die keine EU-Stud
   <li><strong>Danskuddannelse 2 (DU2):</strong> Dla osób ze średnim wykształceniem. Prowadzi do PD2</li>
   <li><strong>Danskuddannelse 3 (DU3):</strong> Dla osób z wyższym wykształceniem (większość specjalistów). Prowadzi do Studieprøven (poziom wstępu na uczelnię)</li>
 </ul>
-<p><strong>Czas trwania:</strong> Do 3 lat (masz 5 lat od pierwszego uzyskania prawa do kursu).</p>
+<p><strong>Czas trwania:</strong> Do 5 lat od pierwszego uzyskania prawa do kursu.</p>
 <p><strong>Jak zacząć:</strong> Zgłoś się do działu integracji gminy (integrationsafdelingen) lub zapisz bezpośrednio do centrum językowego (sprogcenter) w swoim rejonie.</p>
 <p><strong>Poziomy egzaminów ważne dla pobytu i obywatelstwa:</strong> Stały pobyt wymaga <strong>PD2 (≈ B1)</strong>. Obywatelstwo wymaga <strong>PD3 (≈ B2)</strong>. Studia na programach po duńsku zazwyczaj wymagają <strong>Studieprøven (≈ C1)</strong>.</p>
 <a href="https://www.nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Language-requirement" target="_blank" rel="noopener">→ Wymagania językowe dla pobytu (nyidanmark.dk)</a>`,
@@ -5960,7 +5950,7 @@ ur:`<p><strong>Startup Denmark ویزا</strong> غیر EU/EEA شہریوں کو
       {
         icon: "🚲",
         title: {en:"Cycling — The Danish Way to Get Around", da:"Cykling — den danske måde at komme rundt på", ar:"ركوب الدراجة — الطريقة الدنماركية للتنقل", de:"Fahrradfahren — die dänische Art, sich fortzubewegen", es:"La bici — la forma danesa de moverse", fa:"دوچرخه‌سواری — شیوه‌ی دانمارکی برای جابه‌جایی", fr:"Le vélo — la façon danoise de se déplacer", pl:"Rower — duński sposób na poruszanie się", uk:"Велосипед — данський спосіб пересування", ur:"سائیکلنگ — گھومنے پھرنے کا ڈینش طریقہ" },
-        content: { en:`<p>Denmark has more bicycles than people (approximately 4.2 million bikes for 5.9 million people). In Copenhagen, <strong>62% of residents cycle to work or education every day</strong> — including in winter, including in rain. This is not a hobby. It is infrastructure.</p>
+        content: { en:`<p>Denmark has roughly 4.2 million bicycles for 5.9 million people, and in Copenhagen bikes outnumber cars by more than five to one. In Copenhagen, <strong>62% of residents cycle to work or education every day</strong> — including in winter, including in rain. This is not a hobby. It is infrastructure.</p>
 <p><strong>Buying a bike:</strong></p>
 <ul>
   <li><strong>New bike (cykelbutik):</strong> DKK 1,500–5,000 for a reliable commuter bike</li>
@@ -5976,7 +5966,7 @@ ur:`<p><strong>Startup Denmark ویزا</strong> غیر EU/EEA شہریوں کو
   <li>Helmet is NOT legally required (but recommended for children)</li>
 </ul>
 <p>Fine for cycling without lights: DKK 700. Danes take cycling rules seriously.</p>`,
-da:`<p>Danmark har flere cykler end mennesker (ca. 4,2 millioner cykler til 5,9 millioner mennesker). I København <strong>cykler 62% af beboerne til arbejde eller uddannelse hver dag</strong> — også om vinteren, også i regn. Det er ikke en hobby. Det er infrastruktur.</p>
+da:`<p>Danmark har omkring 4,2 millioner cykler til 5,9 millioner mennesker, og i København er der mere end fem gange så mange cykler som biler. I København <strong>cykler 62% af beboerne til arbejde eller uddannelse hver dag</strong> — også om vinteren, også i regn. Det er ikke en hobby. Det er infrastruktur.</p>
 <p><strong>Køb en cykel:</strong></p>
 <ul>
   <li><strong>Ny cykel (cykelbutik):</strong> 1.500–5.000 kr. for en pålidelig pendlercykel</li>
@@ -5992,7 +5982,7 @@ da:`<p>Danmark har flere cykler end mennesker (ca. 4,2 millioner cykler til 5,9 
   <li>Hjelm er IKKE lovpligtig (men anbefales til børn)</li>
 </ul>
 <p>Bøde for cykling uden lys: 700 kr. Danskerne tager cykelsikkerhed alvorligt.</p>`,
-fr:`<p>Le Danemark compte plus de vélos que d'habitants (environ 4,2 millions de vélos pour 5,9 millions de personnes). À Copenhague, <strong>62% des résidents font du vélo pour aller au travail ou à l'école chaque jour</strong> — y compris en hiver, y compris sous la pluie. Ce n'est pas un loisir. C'est une infrastructure.</p>
+fr:`<p>Le Danemark compte environ 4,2 millions de vélos pour 5,9 millions d'habitants, et à Copenhague les vélos sont plus de cinq fois plus nombreux que les voitures. À Copenhague, <strong>62% des résidents font du vélo pour aller au travail ou à l'école chaque jour</strong> — y compris en hiver, y compris sous la pluie. Ce n'est pas un loisir. C'est une infrastructure.</p>
 <p><strong>Acheter un vélo :</strong></p>
 <ul>
   <li><strong>Vélo neuf (cykelbutik) :</strong> 1 500–5 000 DKK pour un vélo de pendulaire fiable</li>
@@ -6008,7 +5998,7 @@ fr:`<p>Le Danemark compte plus de vélos que d'habitants (environ 4,2 millions d
   <li>Le casque N'est PAS légalement obligatoire (mais recommandé pour les enfants)</li>
 </ul>
 <p>Amende pour vélo sans lumières : 700 DKK. Les Danois prennent les règles du vélo au sérieux.</p>`,
-ar:`<p>الدنمارك لديها دراجات هوائية أكثر من سكانها (نحو 4.2 مليون دراجة لـ 5.9 مليون شخص). في كوبنهاغن، <strong>62% من السكان يركبون الدراجة إلى العمل أو التعليم يومياً</strong> — في الشتاء أيضاً، وفي المطر أيضاً. هذا ليس هواية. بل هو بنية تحتية.</p>
+ar:`<p>لدى الدنمارك نحو 4.2 مليون دراجة هوائية مقابل 5.9 مليون شخص، وفي كوبنهاغن تفوق الدراجات عدد السيارات بأكثر من خمسة أضعاف. في كوبنهاغن، <strong>62% من السكان يركبون الدراجة إلى العمل أو التعليم يومياً</strong> — في الشتاء أيضاً، وفي المطر أيضاً. هذا ليس هواية. بل هو بنية تحتية.</p>
 <p><strong>شراء دراجة:</strong></p>
 <ul>
   <li><strong>دراجة جديدة (cykelbutik):</strong> 1,500–5,000 DKK لدراجة تنقل موثوقة</li>
@@ -6024,7 +6014,7 @@ ar:`<p>الدنمارك لديها دراجات هوائية أكثر من سك�
   <li>الخوذة ليست إلزامية قانونياً (لكن مستحسنة للأطفال)</li>
 </ul>
 <p>غرامة ركوب الدراجة بلا أضواء: 700 DKK. الدنماركيون جادون في قواعد الدراجات.</p>`,
-es:`<p>Dinamarca tiene más bicicletas que habitantes (aproximadamente 4,2 millones de bicicletas para 5,9 millones de personas). En Copenhague, <strong>el 62% de los residentes van al trabajo o a estudiar en bicicleta cada día</strong> — incluso en invierno, incluso bajo la lluvia. No es un hobby. Es infraestructura.</p>
+es:`<p>Dinamarca tiene unos 4,2 millones de bicicletas para 5,9 millones de habitantes, y en Copenhague las bicicletas superan a los coches en más de cinco a uno. En Copenhague, <strong>el 62% de los residentes van al trabajo o a estudiar en bicicleta cada día</strong> — incluso en invierno, incluso bajo la lluvia. No es un hobby. Es infraestructura.</p>
 <p><strong>Comprar una bicicleta:</strong></p>
 <ul>
   <li><strong>Bicicleta nueva (cykelbutik):</strong> 1.500–5.000 DKK por una bicicleta de commuter fiable</li>
@@ -6040,7 +6030,7 @@ es:`<p>Dinamarca tiene más bicicletas que habitantes (aproximadamente 4,2 millo
   <li>El casco NO es obligatorio legalmente (pero se recomienda para niños)</li>
 </ul>
 <p>Multa por circular sin luces: 700 DKK. Los daneses se toman en serio las normas ciclistas.</p>`,
-de:`<p>Dänemark hat mehr Fahrräder als Einwohner (ca. 4,2 Millionen Fahrräder für 5,9 Millionen Menschen). In Kopenhagen <strong>fahren 62 % der Einwohner täglich mit dem Fahrrad zur Arbeit oder zur Schule</strong> — auch im Winter, auch im Regen. Es ist kein Hobby. Es ist Infrastruktur.</p>
+de:`<p>Dänemark hat rund 4,2 Millionen Fahrräder für 5,9 Millionen Menschen, und in Kopenhagen gibt es mehr als fünfmal so viele Fahrräder wie Autos. In Kopenhagen <strong>fahren 62 % der Einwohner täglich mit dem Fahrrad zur Arbeit oder zur Schule</strong> — auch im Winter, auch im Regen. Es ist kein Hobby. Es ist Infrastruktur.</p>
 <p><strong>Fahrrad kaufen:</strong></p>
 <ul>
   <li><strong>Neues Fahrrad (cykelbutik):</strong> 1.500–5.000 DKK für ein zuverlässiges Pendlerfahrrad</li>
@@ -6056,7 +6046,7 @@ de:`<p>Dänemark hat mehr Fahrräder als Einwohner (ca. 4,2 Millionen Fahrräder
   <li>Ein Helm ist gesetzlich NICHT vorgeschrieben (aber für Kinder empfohlen)</li>
 </ul>
 <p>Bußgeld für Fahren ohne Beleuchtung: 700 DKK. Dänen nehmen Fahrradregeln ernst.</p>`,
-          uk:`<p>У Данії велосипедів більше, ніж людей (приблизно 4,2 мільйона велосипедів на 5,9 мільйона жителів). У Копенгагені <strong>62% мешканців щодня їздять на роботу чи навчання велосипедом</strong> — і взимку, і в дощ. Це не хобі. Це інфраструктура.</p>
+          uk:`<p>У Данії близько 4,2 мільйона велосипедів на 5,9 мільйона жителів, а в Копенгагені велосипедів більш ніж уп'ятеро більше, ніж автомобілів. У Копенгагені <strong>62% мешканців щодня їздять на роботу чи навчання велосипедом</strong> — і взимку, і в дощ. Це не хобі. Це інфраструктура.</p>
 <p><strong>Купівля велосипеда:</strong></p>
 <ul>
   <li><strong>Новий велосипед (cykelbutik):</strong> 1 500–5 000 DKK за надійний велосипед для щоденних поїздок</li>
@@ -6083,7 +6073,7 @@ de:`<p>Dänemark hat mehr Fahrräder als Einwohner (ca. 4,2 Millionen Fahrräder
 </ul>
 <p><strong>Zakup roweru:</strong> Dobry używany rower kosztuje 500–2 000 DKK (Den Blå Avis, Facebook Marketplace). Nowy: 1 500–8 000 DKK. Rowery elektryczne: od 8 000 DKK.</p>
 <p><strong>Mandaty za wykroczenia rowerowe:</strong> Korzystanie z telefonu podczas jazdy: 700 DKK. Duńczycy poważnie traktują przepisy ruchu rowerowego.</p>`,
-ur:`<p>ڈنمارک میں انسانوں سے زیادہ سائیکلیں ہیں (5.9 ملین لوگوں کے لیے تقریباً 4.2 ملین سائیکلیں)۔ کوپن ہیگن میں <strong>62% باشندے روزانہ کام یا تعلیم کے لیے سائیکل چلاتے ہیں</strong> — سردیوں میں بھی، بارش میں بھی۔ یہ شوق نہیں بلکہ بنیادی ڈھانچہ ہے۔</p>
+ur:`<p>ڈنمارک میں تقریباً 4.2 ملین سائیکلیں 5.9 ملین لوگوں کے لیے ہیں، اور کوپن ہیگن میں سائیکلیں گاڑیوں سے پانچ گنا سے زیادہ ہیں۔ کوپن ہیگن میں <strong>62% باشندے روزانہ کام یا تعلیم کے لیے سائیکل چلاتے ہیں</strong> — سردیوں میں بھی، بارش میں بھی۔ یہ شوق نہیں بلکہ بنیادی ڈھانچہ ہے۔</p>
 <p><strong>سائیکل خریدنا:</strong></p>
 <ul>
   <li><strong>نئی سائیکل (cykelbutik):</strong> قابل اعتماد کمیوٹر سائیکل کے لیے 1,500–5,000 DKK</li>
@@ -6098,7 +6088,7 @@ ur:`<p>ڈنمارک میں انسانوں سے زیادہ سائیکلیں ہی�
   <li>ہیلمٹ قانونی طور پر ضروری نہیں (لیکن بچوں کے لیے تجویز کیا جاتا ہے)</li>
 </ul>
 <p>لائٹس کے بغیر سائیکل چلانے پر جرمانہ: 700 DKK۔</p>`,
-          fa:`<p>دانمارک دوچرخه بیشتر از انسان دارد (حدود ۴٫۲ میلیون دوچرخه برای ۵٫۹ میلیون نفر). در کپنهاگ <strong>۶۲٪ ساکنان روزانه برای کار یا تحصیل دوچرخه می‌رانند</strong> — حتی در زمستان، حتی در باران. این سرگرمی نیست، بلکه زیرساخت است.</p>` }
+          fa:`<p>دانمارک حدود ۴٫۲ میلیون دوچرخه برای ۵٫۹ میلیون نفر دارد، و در کپنهاگ تعداد دوچرخه‌ها بیش از پنج برابر خودروهاست. در کپنهاگ <strong>۶۲٪ ساکنان روزانه برای کار یا تحصیل دوچرخه می‌رانند</strong> — حتی در زمستان، حتی در باران. این سرگرمی نیست، بلکه زیرساخت است.</p>` }
       },
       {
         icon: "🚌",
@@ -6440,7 +6430,7 @@ ur:`<p>تقریباً ہر ڈینش شہری انگریزی بولتا ہے — 
       {
         icon: "📚",
         title: {en:"Free Danish Classes — Your Right as a Resident", da:"Gratis danskundervisning — din ret som beboer", ar:"دروس دنماركية مجانية — حقّك كمقيم", de:"Kostenlose Dänisch-Kurse — Ihr Recht als Bewohner", es:"Clases gratuitas de danés — tu derecho como residente", fa:"کلاس‌های رایگان دانمارکی — حق شما به‌عنوان مقیم", fr:"Cours gratuits de danois — votre droit en tant que résident", pl:"Bezpłatne lekcje duńskiego — Twoje prawo jako mieszkańca", uk:"Безкоштовні уроки данської — ваше право як резидента", ur:"مفت ڈینش کلاسیں — رہائشی کے طور پر آپ کا حق" },
-        content: { en:`<p>If you are a non-EU resident with a CPR number, you have the legal right to free Danish language education (Danskuddannelse) for up to 3 years. EU citizens can access it at a subsidised cost.</p>
+        content: { en:`<p>If you are a non-EU resident with a CPR number, you have the legal right to free Danish language education (Danskuddannelse) for up to 5 years. EU citizens can access it at a subsidised cost.</p>
 <p>The programme is managed by your municipality. Contact the <strong>International Community</strong> (ICS) office or your municipality's integration department to enrol.</p>
 <p><strong>Language levels and what they unlock:</strong></p>
 <table class="info-table">
@@ -6451,7 +6441,7 @@ ur:`<p>تقریباً ہر ڈینش شہری انگریزی بولتا ہے — 
   <tr><td>C1</td><td>Studieprøven</td><td>University admission to Danish-language programmes</td></tr>
 </table>
 <p>Timeline reality: with 2–3 hours of class per day, most people reach A2 in 6–9 months, B2 in 2–3 years. It requires regular study outside class — passive attendance is not enough.</p>`,
-da:`<p>Hvis du er ikke-EU-beboer med CPR-nummer, har du lovmæssig ret til gratis danskuddannelse i op til 3 år. EU-borgere kan deltage til en subsidieret pris.</p>
+da:`<p>Hvis du er ikke-EU-beboer med CPR-nummer, har du lovmæssig ret til gratis danskuddannelse i op til 5 år. EU-borgere kan deltage til en subsidieret pris.</p>
 <p>Programmet administreres af din kommune. Kontakt <strong>International Community</strong> (ICS) eller kommunens integrationsafdeling for at tilmelde dig.</p>
 <p><strong>Sproglige niveauer og hvad de giver adgang til:</strong></p>
 <table class="info-table">
@@ -6462,7 +6452,7 @@ da:`<p>Hvis du er ikke-EU-beboer med CPR-nummer, har du lovmæssig ret til grati
   <tr><td>C1</td><td>Studieprøven</td><td>Universitetsoptagelse til dansksprogede uddannelser</td></tr>
 </table>
 <p>Realistisk tidslinje: med 2–3 timers undervisning om dagen når de fleste A2 på 6–9 måneder, B2 på 2–3 år. Det kræver regelmæssig selvstudium uden for klassen — passiv deltagelse er ikke nok.</p>`,
-fr:`<p>Si vous êtes un résident non-UE avec un numéro CPR, vous avez le droit légal à des cours de danois gratuits (Danskuddannelse) pendant jusqu'à 3 ans. Les citoyens de l'UE peuvent y accéder à un coût subventionné.</p>
+fr:`<p>Si vous êtes un résident non-UE avec un numéro CPR, vous avez le droit légal à des cours de danois gratuits (Danskuddannelse) pendant jusqu'à 5 ans. Les citoyens de l'UE peuvent y accéder à un coût subventionné.</p>
 <p>Le programme est géré par votre municipalité. Contactez le bureau <strong>International Community</strong> (ICS) ou le département d'intégration de votre municipalité pour vous inscrire.</p>
 <p><strong>Niveaux de langue et ce qu'ils débloquent :</strong></p>
 <table class="info-table">
@@ -6473,7 +6463,7 @@ fr:`<p>Si vous êtes un résident non-UE avec un numéro CPR, vous avez le droit
   <tr><td>C1</td><td>Studieprøven</td><td>Admission universitaire aux programmes en danois</td></tr>
 </table>
 <p>Réalité des délais : avec 2–3 heures de cours par jour, la plupart des gens atteignent A2 en 6–9 mois, B2 en 2–3 ans. Cela nécessite une étude régulière en dehors des cours — la présence passive ne suffit pas.</p>`,
-ar:`<p>إن كنت مقيماً من خارج الاتحاد الأوروبي ولديك رقم CPR، فلديك الحق القانوني في تعليم اللغة الدنماركية المجاني (Danskuddannelse) لمدة تصل إلى 3 سنوات. يمكن لمواطني الاتحاد الأوروبي الاستفادة منه بتكلفة مدعومة.</p>
+ar:`<p>إن كنت مقيماً من خارج الاتحاد الأوروبي ولديك رقم CPR، فلديك الحق القانوني في تعليم اللغة الدنماركية المجاني (Danskuddannelse) لمدة تصل إلى 5 سنوات. يمكن لمواطني الاتحاد الأوروبي الاستفادة منه بتكلفة مدعومة.</p>
 <p>يُدار البرنامج من قِبل بلديتك. تواصل مع مكتب <strong>International Community</strong> (ICS) أو قسم الاندماج في بلديتك للتسجيل.</p>
 <p><strong>مستويات اللغة وما تفتحه:</strong></p>
 <table class="info-table">
@@ -6484,7 +6474,7 @@ ar:`<p>إن كنت مقيماً من خارج الاتحاد الأوروبي و
   <tr><td>C1</td><td>Studieprøven</td><td>القبول الجامعي في البرامج الدنماركية</td></tr>
 </table>
 <p>الواقع الزمني: مع 2-3 ساعات يومياً من الدراسة، يصل معظم الناس إلى A2 في 6-9 أشهر، وB2 في 2-3 سنوات. يتطلب ذلك دراسة منتظمة خارج الصف — الحضور السلبي لا يكفي.</p>`,
-es:`<p>Si eres residente no perteneciente a la UE con número CPR, tienes el derecho legal a educación gratuita en lengua danesa (Danskuddannelse) durante hasta 3 años. Los ciudadanos de la UE pueden acceder a ella a un costo subvencionado.</p>
+es:`<p>Si eres residente no perteneciente a la UE con número CPR, tienes el derecho legal a educación gratuita en lengua danesa (Danskuddannelse) durante hasta 5 años. Los ciudadanos de la UE pueden acceder a ella a un costo subvencionado.</p>
 <p>El programa está gestionado por tu municipio. Contacta la oficina de <strong>International Community</strong> (ICS) o el departamento de integración de tu municipio para inscribirte.</p>
 <p><strong>Niveles de idioma y lo que desbloquean:</strong></p>
 <table class="info-table">
@@ -6495,7 +6485,7 @@ es:`<p>Si eres residente no perteneciente a la UE con número CPR, tienes el der
   <tr><td>C1</td><td>Studieprøven</td><td>Admisión universitaria a programas en danés</td></tr>
 </table>
 <p>Realidad del cronograma: con 2–3 horas de clase por día, la mayoría de las personas alcanza A2 en 6–9 meses, y B2 en 2–3 años. Requiere estudio regular fuera de clase — la asistencia pasiva no es suficiente.</p>`,
-de:`<p>Wenn Sie Nicht-EU-Einwohner mit CPR-Nummer sind, haben Sie das gesetzliche Recht auf kostenlose Dänischkurse (Danskuddannelse) für bis zu 3 Jahre. EU-Bürger können zu einem subventionierten Preis teilnehmen.</p>
+de:`<p>Wenn Sie Nicht-EU-Einwohner mit CPR-Nummer sind, haben Sie das gesetzliche Recht auf kostenlose Dänischkurse (Danskuddannelse) für bis zu 5 Jahre. EU-Bürger können zu einem subventionierten Preis teilnehmen.</p>
 <p>Das Programm wird von Ihrer Gemeinde verwaltet. Wenden Sie sich an das <strong>International Community</strong> (ICS) Büro oder die Integrationsabteilung Ihrer Gemeinde zur Anmeldung.</p>
 <p><strong>Sprachniveaus und was sie ermöglichen:</strong></p>
 <table class="info-table">
@@ -6506,7 +6496,7 @@ de:`<p>Wenn Sie Nicht-EU-Einwohner mit CPR-Nummer sind, haben Sie das gesetzlich
   <tr><td>C1</td><td>Studieprøven</td><td>Universitätszulassung für dänischsprachige Programme</td></tr>
 </table>
 <p>Realistischer Zeitrahmen: Mit 2–3 Stunden Unterricht täglich erreichen die meisten Menschen A2 in 6–9 Monaten, B2 in 2–3 Jahren. Es erfordert regelmäßiges Lernen außerhalb des Unterrichts — passives Erscheinen reicht nicht.</p>`,
-          uk:`<p>Якщо ви є резидентом не-ЄС з CPR-номером, ви маєте законне право на безкоштовне навчання данської мови (Danskuddannelse) терміном до 3 років. Громадяни ЄС можуть скористатися ним за субсидованою ціною.</p>
+          uk:`<p>Якщо ви є резидентом не-ЄС з CPR-номером, ви маєте законне право на безкоштовне навчання данської мови (Danskuddannelse) терміном до 5 років. Громадяни ЄС можуть скористатися ним за субсидованою ціною.</p>
 <p>Програмою керує ваша муніципалітет. Зверніться до офісу <strong>International Community</strong> (ICS) або відділу інтеграції вашого муніципалітету для запису.</p>
 <p><strong>Мовні рівні та що вони відкривають:</strong></p>
 <table class="info-table">
@@ -6529,7 +6519,7 @@ de:`<p>Wenn Sie Nicht-EU-Einwohner mit CPR-Nummer sind, haben Sie das gesetzlich
   <li>Online: Duolingo (podstawy), Babbel (pośredni), Dreaming Spanish metodą dla duńskiego</li>
 </ul>
 <p>Pamiętaj: nauka wymaga regularnej pracy poza lekcjami — bierna obecność na zajęciach nie wystarczy.</p>`,
-ur:`<p>اگر آپ CPR نمبر والے غیر EU مقیم ہیں، تو آپ کو 3 سال تک مفت ڈینش زبان کی تعلیم (Danskuddannelse) کا قانونی حق حاصل ہے۔ EU شہری سبسڈی شدہ قیمت پر رسائی حاصل کر سکتے ہیں۔</p>
+ur:`<p>اگر آپ CPR نمبر والے غیر EU مقیم ہیں، تو آپ کو 5 سال تک مفت ڈینش زبان کی تعلیم (Danskuddannelse) کا قانونی حق حاصل ہے۔ EU شہری سبسڈی شدہ قیمت پر رسائی حاصل کر سکتے ہیں۔</p>
 <p>یہ پروگرام آپ کے میونسپلٹی کے ذریعے چلایا جاتا ہے۔ داخلے کے لیے <strong>International Community</strong> (ICS) دفتر یا اپنے میونسپلٹی کے انٹیگریشن ڈیپارٹمنٹ سے رابطہ کریں۔</p>
 <p><strong>زبانی درجات اور یہ کیا کھولتے ہیں:</strong></p>
 <table class="info-table">
@@ -6540,7 +6530,7 @@ ur:`<p>اگر آپ CPR نمبر والے غیر EU مقیم ہیں، تو آپ �
   <tr><td>C1</td><td>Studieprøven</td><td>ڈینش زبان کے پروگراموں میں یونیورسٹی داخلہ</td></tr>
 </table>
 <p>حقیقت پسندانہ ٹائم لائن: روزانہ 2–3 گھنٹے کی کلاس کے ساتھ، زیادہ تر لوگ 6–9 ماہ میں A2 اور 2–3 سال میں B2 تک پہنچتے ہیں۔</p>`,
-          fa:`<p>اگر مقیم غیر اتحادیه اروپا با شماره CPR هستید، تا ۳ سال حق قانونی برای آموزش رایگان زبان دانمارکی (Danskuddannelse) دارید. شهروندان اتحادیه اروپا می‌توانند با قیمت یارانه‌ای دسترسی داشته باشند.</p>` }
+          fa:`<p>اگر مقیم غیر اتحادیه اروپا با شماره CPR هستید، تا ۵ سال حق قانونی برای آموزش رایگان زبان دانمارکی (Danskuddannelse) دارید. شهروندان اتحادیه اروپا می‌توانند با قیمت یارانه‌ای دسترسی داشته باشند.</p>` }
       },
       {
         icon: "🔊",
@@ -7865,7 +7855,7 @@ ur:`<p>اگر آپ ڈنمارک میں ہیں اور کسی غیر ملکی پا
 <ul>
   <li>Same-sex marriage is fully equal to heterosexual marriage in all legal respects</li>
   <li>Same-sex couples have full adoption rights</li>
-  <li>Gender recognition is self-declared (since 2014 for adults, 2017 for minors with parental consent) — no surgical requirement, no psychiatric diagnosis needed</li>
+  <li>Legal gender change is self-declared for adults aged 18 and over (since 2014), with no surgical or psychiatric requirement. In 2017, Denmark became the first country in the world to stop classifying being transgender as a mental illness.</li>
   <li>Discrimination on the basis of sexual orientation or gender identity is illegal in employment, housing, and services</li>
   <li>Hate crimes based on sexual orientation are subject to enhanced penalties</li>
 </ul>
@@ -7881,7 +7871,7 @@ da:`<p>Danmark var det første land i verden, der lovligt anerkendte homoseksuel
 <ul>
   <li>Homoseksuelt ægteskab er fuldt ligestillet med heteroseksuelt ægteskab i alle juridiske henseender</li>
   <li>Homoseksuelle par har fuld adoptionsret</li>
-  <li>Kønsskifte er selverklæret (siden 2014 for voksne, 2017 for mindreårige med forældresamtykke) — intet kirurgisk krav, ingen psykiatrisk diagnose nødvendig</li>
+  <li>Juridisk kønsskifte er selverklæret for voksne på 18 år og derover (siden 2014), uden krav om kirurgi eller psykiatrisk diagnose. I 2017 blev Danmark det første land i verden, der holdt op med at klassificere det at være transkønnet som en psykisk lidelse.</li>
   <li>Diskrimination på grund af seksuel orientering eller kønsidentitet er ulovlig i ansættelse, bolig og serviceydelser</li>
   <li>Had baseret på seksuel orientering giver skærpede straffe</li>
 </ul>
@@ -7897,7 +7887,7 @@ fr:`<p>Le Danemark a été le premier pays au monde à reconnaître légalement 
 <ul>
   <li>Le mariage homosexuel est entièrement égal au mariage hétérosexuel dans tous les aspects juridiques</li>
   <li>Les couples homosexuels ont le plein droit d'adoption</li>
-  <li>La reconnaissance du genre est autodéclarée (depuis 2014 pour les adultes, 2017 pour les mineurs avec consentement parental) — aucune exigence chirurgicale, aucun diagnostic psychiatrique requis</li>
+  <li>Le changement de genre légal est autodéclaré pour les adultes de 18 ans et plus (depuis 2014), sans exigence chirurgicale ni diagnostic psychiatrique. En 2017, le Danemark est devenu le premier pays au monde à cesser de classer le fait d'être transgenre comme une maladie mentale.</li>
   <li>La discrimination fondée sur l'orientation sexuelle ou l'identité de genre est illégale dans l'emploi, le logement et les services</li>
   <li>Les crimes haineux fondés sur l'orientation sexuelle sont passibles de peines aggravées</li>
 </ul>
@@ -7913,7 +7903,7 @@ ar:`<p>كانت الدنمارك أول دولة في العالم تعترف ق
 <ul>
   <li>زواج المثليين مساوٍ تماماً للزواج بين الجنسين في جميع الجوانب القانونية</li>
   <li>الأزواج المثليون لديهم حقوق تبني كاملة</li>
-  <li>الاعتراف بالجنس معلَن ذاتياً (منذ 2014 للبالغين، 2017 للقاصرين بموافقة الوالدين) — لا يشترط تدخل جراحي ولا تشخيص نفسي</li>
+  <li>تغيير الجنس قانونياً يتم بالإقرار الذاتي للبالغين من سن 18 عاماً فأكثر (منذ 2014)، دون اشتراط تدخل جراحي أو تشخيص نفسي. وفي عام 2017 أصبحت الدنمارك أول دولة في العالم تتوقف عن تصنيف كون الشخص متحوّلاً جنسياً ضمن الأمراض النفسية.</li>
   <li>التمييز على أساس التوجه الجنسي أو هوية الجنس غير قانوني في التوظيف والسكن والخدمات</li>
   <li>جرائم الكراهية القائمة على التوجه الجنسي تستوجب عقوبات مشددة</li>
 </ul>
@@ -7929,7 +7919,7 @@ es:`<p>Dinamarca fue el primer país del mundo en reconocer legalmente las union
 <ul>
   <li>El matrimonio entre personas del mismo sexo es plenamente igual al matrimonio heterosexual en todos los aspectos legales</li>
   <li>Las parejas del mismo sexo tienen plenos derechos de adopción</li>
-  <li>El reconocimiento de género es autodeclarado (desde 2014 para adultos, 2017 para menores con consentimiento parental) — sin requisito quirúrgico, sin diagnóstico psiquiátrico</li>
+  <li>El cambio legal de género es autodeclarado para adultos mayores de 18 años (desde 2014), sin requisito quirúrgico ni diagnóstico psiquiátrico. En 2017, Dinamarca se convirtió en el primer país del mundo en dejar de clasificar el ser transgénero como una enfermedad mental.</li>
   <li>La discriminación por orientación sexual o identidad de género es ilegal en el empleo, la vivienda y los servicios</li>
   <li>Los crímenes de odio basados en orientación sexual están sujetos a penas agravadas</li>
 </ul>
@@ -7945,7 +7935,7 @@ de:`<p>Dänemark war 1989 das erste Land der Welt, das gleichgeschlechtliche Par
 <ul>
   <li>Gleichgeschlechtliche Ehe ist der heterosexuellen Ehe in allen rechtlichen Aspekten vollständig gleichgestellt</li>
   <li>Gleichgeschlechtliche Paare haben vollständige Adoptionsrechte</li>
-  <li>Geschlechtsanerkennung ist selbst erklärt (seit 2014 für Erwachsene, 2017 für Minderjährige mit elterlicher Zustimmung) — keine chirurgischen Anforderungen, keine psychiatrische Diagnose erforderlich</li>
+  <li>Die rechtliche Geschlechtsänderung erfolgt für Erwachsene ab 18 Jahren per Selbsterklärung (seit 2014), ohne chirurgischen Eingriff und ohne psychiatrische Diagnose. 2017 war Dänemark das erste Land der Welt, das Transgeschlechtlichkeit nicht mehr als psychische Erkrankung einstufte.</li>
   <li>Diskriminierung aufgrund der sexuellen Orientierung oder Geschlechtsidentität ist in Beschäftigung, Wohnen und Dienstleistungen illegal</li>
   <li>Hassverbrechen aufgrund der sexuellen Orientierung sind mit verschärften Strafen belegt</li>
 </ul>
@@ -7961,7 +7951,7 @@ de:`<p>Dänemark war 1989 das erste Land der Welt, das gleichgeschlechtliche Par
 <ul>
   <li>Одностатевий шлюб повністю прирівняний до різностатевого в усіх правових аспектах</li>
   <li>Одностатеві пари мають повні права на усиновлення</li>
-  <li>Визнання гендеру здійснюється за самозаявою (з 2014 року для дорослих, з 2017 року для неповнолітніх за згодою батьків) — без вимог до хірургічного втручання, без психіатричного діагнозу</li>
+  <li>Зміна юридичної статі здійснюється за самозаявою для дорослих віком від 18 років (з 2014 року), без вимоги хірургічного втручання чи психіатричного діагнозу. У 2017 році Данія стала першою країною у світі, яка перестала вважати трансгендерність психічним розладом.</li>
   <li>Дискримінація за ознакою сексуальної орієнтації або гендерної ідентичності є незаконною у сфері зайнятості, житла та послуг</li>
   <li>Злочини на ґрунті ненависті за ознакою сексуальної орієнтації тягнуть за собою посилені покарання</li>
 </ul>
