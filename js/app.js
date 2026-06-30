@@ -1375,9 +1375,9 @@ const renderChapter = (index) => {
     <div class="mt-lg">
       <h3 style="margin-bottom:12px">✅ ${t_('yourChecklist', lang)}</h3>
       <div class="chapter-progress-bar" style="--ch-accent:${ch.color}">
-        <div class="chapter-progress-fill" style="width:${pct}%;background:${ch.color}"></div>
+        <div class="chapter-progress-fill" id="ch-progress-fill" style="width:${pct}%;background:${ch.color}"></div>
       </div>
-      <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:12px">${t_('tasksComplete', lang, doneTasks, allTasks.length)}</p>
+      <p id="ch-progress-count" style="font-size:0.8rem;color:var(--text-muted);margin-bottom:12px">${t_('tasksComplete', lang, doneTasks, allTasks.length)}</p>
       <ul class="checklist">
         ${allTasks.map(task => `
           <li class="check-item ${AppState.completedTasks[task.id] ? 'done' : ''}"
@@ -1385,11 +1385,11 @@ const renderChapter = (index) => {
               aria-checked="${AppState.completedTasks[task.id] ? 'true' : 'false'}"
               onclick="toggleTask('${task.id}', ${task.xp || 10})"
               onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
-            <div class="check-box">${AppState.completedTasks[task.id] ? '✓' : ''}</div>
+            <div class="check-box" aria-hidden="true">${AppState.completedTasks[task.id] ? '✓' : ''}</div>
             <div>
               <div class="check-label">${task.text[lang] || task.text.en || task.text}</div>
             </div>
-            <div class="check-xp">+${task.xp || 10} XP</div>
+            <div class="check-xp" aria-hidden="true">+${task.xp || 10} XP</div>
           </li>
         `).join('')}
       </ul>
@@ -1762,14 +1762,30 @@ window.toggleTask = (taskId, xp) => {
   }
   safeSetItem('ankommer_tasks', JSON.stringify(AppState.completedTasks));
 
-  // Re-render current chapter
-  if (AppState.currentChapter !== null) renderChapter(AppState.currentChapter);
+  // Update the checklist IN PLACE rather than re-rendering the whole chapter.
+  // A full renderChapter() here destroyed the focused <li> and scrolled the
+  // user to the top of the chapter on every toggle — a keyboard-a11y
+  // regression — so mutate only the affected node + the progress bar/count.
+  const nowDone = !!AppState.completedTasks[taskId];
+  const li = document.querySelector(`.check-item[onclick*="'${taskId}'"]`);
+  if (li) {
+    li.classList.toggle('done', nowDone);
+    li.setAttribute('aria-checked', nowDone ? 'true' : 'false');
+    const box = li.querySelector('.check-box');
+    if (box) box.textContent = nowDone ? '✓' : '';
+  }
 
-  // Celebrate completion
-  if (!wasComplete) {
-    const allTasks = CHAPTERS[AppState.currentChapter]?.checklist || [];
+  const ch = CHAPTERS[AppState.currentChapter];
+  if (ch) {
+    const allTasks = ch.checklist || [];
     const done = allTasks.filter(t => AppState.completedTasks[t.id]).length;
-    if (done === allTasks.length && allTasks.length > 0) {
+    const pct = allTasks.length ? Math.round((done / allTasks.length) * 100) : 0;
+    const fill = document.getElementById('ch-progress-fill');
+    if (fill) fill.style.width = pct + '%';
+    const cnt = document.getElementById('ch-progress-count');
+    if (cnt) cnt.textContent = t_('tasksComplete', window.currentLang || 'en', done, allTasks.length);
+    // Celebrate completion
+    if (!wasComplete && allTasks.length > 0 && done === allTasks.length) {
       App.showToast(i18n.t('complete_msg'), 'success');
       launchConfetti();
     }
