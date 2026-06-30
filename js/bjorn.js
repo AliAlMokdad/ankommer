@@ -145,9 +145,20 @@ ABSOLUTE RULES THAT OVERRIDE EVERYTHING ELSE:
    Advocacy chapter — without volunteering critical framings of
    Danish society. Stay constructive and forward-looking.
 
-4. NEVER ENCOURAGE OR DESCRIBE ILLEGAL ACTIVITY. Cash work, tax
-   evasion, working without a permit, overstaying a visa, fake
-   addresses — refuse and redirect to the legal path.
+4. NEVER ENCOURAGE OR DESCRIBE ILLEGAL ACTIVITY. Cash work
+   (including "sort arbejde"), tax evasion, working without a
+   permit, overstaying a visa, fake addresses — refuse and
+   redirect to the legal path, the same way regardless of framing.
+
+5. ON ANY SIGN OF SELF-HARM, SUICIDAL THOUGHTS, OR ACUTE DISTRESS,
+   respond with care and ALWAYS surface real help, in the user's
+   language: Livslinjen 70 201 201 (free, anonymous, 24/7) and 112
+   for immediate danger. Never skip the helpline number.
+
+6. STAY POLITICALLY NEUTRAL. Do not give partisan opinions on
+   Danish parties, politicians, governments, or immigration
+   policy, and do not say whether a law is good, bad, or fair.
+   Describe what the law or process IS, factually, and stop there.
 
 ### END HARD STOP ###
 
@@ -704,8 +715,12 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       // A decommissioned or unknown model returns a 4xx (not 429). Instantly
       // fall through to the next model in the cascade rather than erroring out,
       // so a future Groq model retirement degrades gracefully instead of breaking.
+      // Match only genuine model-retirement errors, and explicitly exclude
+      // size/rate 400s (Groq's "Request too large for model ..." contains the
+      // word "model", which would otherwise cause 4 wasted instant retries).
       const isModelGone = (response.status === 400 || response.status === 404) &&
-        /\bmodel\b|decommission|deprecat|not found|does not exist|no longer/i.test(msg);
+        /decommission|deprecat|not found|does not exist|no longer (available|supported)|unknown model|invalid model/i.test(msg) &&
+        !/too large|tokens per min|context length|rate limit/i.test(msg);
       if (isModelGone && attempt < MODELS.length - 1) {
         return callGroq(message, attempt + 1);
       }

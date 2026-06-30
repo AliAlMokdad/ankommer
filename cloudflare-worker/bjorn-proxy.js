@@ -25,6 +25,11 @@ const ALLOWED_ORIGINS = [
 ];
 
 const RATE_LIMIT_PER_HOUR = 60;
+
+// Pin the model server-side to the free-tier set, regardless of client input,
+// so a caller spoofing the Origin header can never make the Worker request a
+// paid model under the account key. Both are free-tier production models.
+const ALLOWED_MODELS = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b'];
 const HOUR_MS = 60 * 60 * 1000;
 
 // In-memory bucket — resets when the Worker restarts. Good enough for free tier.
@@ -125,7 +130,7 @@ export default {
           'Authorization': `Bearer ${env.GROQ_API_KEY}`
         },
         body: JSON.stringify({
-          model: body.model || 'openai/gpt-oss-120b',
+          model: ALLOWED_MODELS.includes(body.model) ? body.model : 'openai/gpt-oss-120b',
           messages: body.messages,
           temperature: body.temperature ?? 0.7,
           max_tokens: body.max_tokens ?? 1024,
