@@ -905,6 +905,7 @@ const APIs = (() => {
           timezone: 'Europe/Copenhagen',
         });
         const res  = await fetch(`${base}?${params}`, { signal: timeoutSignal(6000) });
+        if (!res.ok) throw new Error(`weather HTTP ${res.status}`);
         const json = await res.json();
         if (json.daily?.temperature_2m_max?.[0] != null) {
           apiData = {
@@ -1465,6 +1466,7 @@ const APIs = (() => {
         '&current=temperature_2m,weathercode,windspeed_10m,precipitation&timezone=Europe%2FCopenhagen',
         { signal: timeoutSignal(5000) }
       );
+      if (!res.ok) throw new Error(`today-weather HTTP ${res.status}`);
       const data = await res.json();
       const c    = data.current;
       const emoji = getWmoEmoji(c.weathercode);

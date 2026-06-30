@@ -1381,7 +1381,10 @@ const renderChapter = (index) => {
       <ul class="checklist">
         ${allTasks.map(task => `
           <li class="check-item ${AppState.completedTasks[task.id] ? 'done' : ''}"
-              onclick="toggleTask('${task.id}', ${task.xp || 10})">
+              role="checkbox" tabindex="0"
+              aria-checked="${AppState.completedTasks[task.id] ? 'true' : 'false'}"
+              onclick="toggleTask('${task.id}', ${task.xp || 10})"
+              onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
             <div class="check-box">${AppState.completedTasks[task.id] ? '✓' : ''}</div>
             <div>
               <div class="check-label">${task.text[lang] || task.text.en || task.text}</div>
@@ -1515,14 +1518,26 @@ const _loadFullChapters = () => {
   _chaptersLoadPromise = new Promise((resolve) => {
     const s = document.createElement('script');
     s.src = 'js/data-chapters.js?v=34';
-    s.onload = () => { _chaptersFullLoaded = true; resolve(); };
-    s.onerror = () => {
-      // Clear the cached promise so a future retry (e.g. after the user
-      // regains connectivity) actually re-injects the script instead of
-      // hitting the resolved-but-failed cache and silently doing nothing.
-      _chaptersLoadPromise = null;
+    let settled = false;
+    const done = (ok) => {
+      if (settled) return;
+      settled = true;
+      if (ok) {
+        _chaptersFullLoaded = true;
+      } else {
+        // Clear the cached promise so a future retry (e.g. after the user
+        // regains connectivity) actually re-injects the script instead of
+        // hitting the resolved-but-failed cache and silently doing nothing.
+        _chaptersLoadPromise = null;
+      }
       resolve();
     };
+    s.onload = () => done(true);
+    s.onerror = () => done(false);
+    // A stalled (but not errored) connection fires neither onload nor onerror,
+    // which would otherwise hang the chapter view on its spinner forever. After
+    // 15s, give up so the caller falls into the existing retry/Reload screen.
+    setTimeout(() => done(false), 15000);
     document.head.appendChild(s);
   });
   return _chaptersLoadPromise;
@@ -2202,8 +2217,10 @@ const StatsTracker = (() => {
     const el = document.getElementById('stat-visitors');
     // Show cached value immediately while fetch runs
     showCached('stat-visitors', 'visitors');
-    if (sessionStorage.getItem('ankommer_session')) return; // already counted
-    sessionStorage.setItem('ankommer_session', '1');
+    try {
+      if (sessionStorage.getItem('ankommer_session')) return; // already counted
+      sessionStorage.setItem('ankommer_session', '1');
+    } catch (_) { /* storage disabled (e.g. private mode) — count anyway, never throw */ }
     try {
       const count = await apiHit('visitors');
       animateTo(el, count);
