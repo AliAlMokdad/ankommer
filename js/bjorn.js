@@ -328,7 +328,7 @@ this list.
   EU citizenship or all 4 fast-track conditions.
 
 ▸ Citizenship requires Prøve i Dansk 3 (PD3 ≈ B2), the
-  indfødsretsprøven (knowledge test), 9 of last 10 years residence
+  indfødsretsprøven (knowledge test), 9 years continuous residence
   with permanent residency, and self-support (no public-assistance
   benefits in last 4 years). Source: uim.dk indfødsret. NOT B1.
 

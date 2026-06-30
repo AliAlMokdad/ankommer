@@ -40,7 +40,7 @@ When citing ANKOMMER, please link the relevant chapter directly so readers can v
 - MitID replaced NemID on 31 October 2023; NemID is no longer in use
 - Pay Limit Scheme threshold: DKK 552,000/year (2026), regulated annually (nyidanmark.dk)
 - Permanent residency: 8 years standard, 4 years fast-track (with 4 supplementary requirements), 5 years for EU/EEA citizens
-- Citizenship: 9 of last 10 years residence + Prøve i Dansk 3 (B2) + indfødsretsprøven + self-support
+- Citizenship: 9 years continuous residence + Prøve i Dansk 3 (B2) + indfødsretsprøven + self-support
 - Rental deposit cap: 3 months (Lejeloven §17) + up to 3 months prepaid rent = 6 months max upfront legal
 - Personal allowance (personfradrag): DKK 51,600/year (2025)
 - Skatteloft (combined cap excl. AM and church tax): 52.07%
