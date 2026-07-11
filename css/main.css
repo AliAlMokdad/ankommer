@@ -2000,6 +2000,9 @@ body.app-active .footer-top {
 }
 .footer-bottom p { font-size: 0.82rem; }
 .footer-legal { color: rgba(255,255,255,0.25) !important; font-size: 0.75rem !important; }
+.footer-who { color: rgba(255,255,255,0.55); font-size: 0.78rem; margin-top: 4px; } /* 0.55 clears WCAG AA (>4.5:1) on the dark footer while staying muted; matches the footer-legal contrast fix */
+.footer-who a { color: rgba(255,255,255,0.62); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+.footer-who a:hover, .footer-who a:focus-visible { color: #fff; }
 
 /* ── 16. BJÖRN CHAT WIDGET ─────────────────────────── */
 .bjorn-widget {
@@ -4966,6 +4969,10 @@ h3 { letter-spacing: -0.012em; }
     justify-content: center;
     flex-wrap: wrap;
   }
+  /* "Who is behind this?" is a laptop-only touch. On phones the
+     "Built by Ali — say hi" founder pill above already covers it,
+     so hide the extra line to keep the phone footer clean. */
+  .footer-who { display: none; }
 }
 
 /* RTL languages — swap nav-shift direction already handled, plus
