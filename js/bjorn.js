@@ -672,9 +672,15 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     // If the panel was closed since this send started, stop the whole cascade
     // here so a stale request cannot keep fetching or mutating history.
     if (gen !== _genId) throw new Error('cancelled');
-    // Push user message BEFORE the call, but roll back on failure so
-    // a failed request doesn't leave an unanswered message in history.
-    conversationHistory.push({ role: 'user', content: message });
+    // Push the user message BEFORE the call, tracked by IDENTITY so rollback
+    // removes exactly THIS turn, never a newer send's turn that a fast
+    // close -> reopen -> resend may have appended after it.
+    const userTurn = { role: 'user', content: message };
+    const dropUserTurn = () => {
+      const i = conversationHistory.indexOf(userTurn);
+      if (i !== -1) conversationHistory.splice(i, 1);
+    };
+    conversationHistory.push(userTurn);
 
     // Build OpenAI-compatible messages array.
     // Reduced from 12 → 6 to keep token count well under Groq free-tier
@@ -715,13 +721,16 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
         }),
         signal: controller.signal
       });
+    } catch (e) {
+      dropUserTurn(); // network error before any response: remove our own turn
+      throw e;
     } finally {
       clearTimeout(abortTimer);
       if (_activeController === controller) _activeController = null;
     }
 
     if (!response.ok) {
-      conversationHistory.pop(); // rollback unanswered user message
+      dropUserTurn(); // rollback OUR unanswered user message by identity
       const errBody = await response.json().catch(() => ({}));
       // The proxy returns { error: "string" }; Groq returns { error: { message } }.
       // Accept both so the real reason surfaces instead of a generic "API error".
@@ -774,10 +783,12 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       throw new Error(msg);
     }
 
-    const data  = await response.json();
+    let data;
+    try { data = await response.json(); }
+    catch (e) { dropUserTurn(); throw e; }
     let reply = data.choices?.[0]?.message?.content;
     if (!reply) {
-      conversationHistory.pop(); // rollback unanswered user message
+      dropUserTurn(); // rollback OUR unanswered user message by identity
       throw new Error('Empty response from Groq');
     }
 
@@ -791,7 +802,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
                    .replace(/<think>[\s\S]*$/i, '')
                    .trim();
       if (!reply) {
-        conversationHistory.pop(); // rollback — nothing left after stripping
+        dropUserTurn(); // rollback OUR turn by identity — nothing left after stripping
         throw new Error('Empty response after stripping reasoning');
       }
     }
@@ -829,6 +840,11 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       reply = "I'm Bjørn, your Denmark guide. What would you like to know about moving here?";
     }
 
+    // Final ownership check: if the panel closed while the reply was in flight,
+    // do not commit this turn. Remove our own user turn and bail so a stale send
+    // never appends an assistant reply the user will not see, and never disturbs
+    // a newer send's turns.
+    if (gen !== _genId) { dropUserTurn(); throw new Error('cancelled'); }
     conversationHistory.push({ role: 'assistant', content: reply });
     saveHistory(); // save both user + assistant message only on success
     return reply;
@@ -1026,34 +1042,20 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
         await new Promise(r => setTimeout(r, 800 + Math.random() * 600));
         reply = getOfflineResponse(message);
       }
+      // If the panel was closed while waiting, do nothing: callGroq already
+      // handled its own history rollback by identity, and a newer send (if any)
+      // owns the spinner and input. Touching either here would corrupt them.
+      if (myGen !== _genId) return;
       showThinking(false);
-      if (myGen !== _genId) {
-        // Panel was closed mid-request. callGroq already committed this turn to
-        // history + storage, so abandon the unseen exchange to keep history and
-        // the model's context in sync with what the user actually saw.
-        if (conversationHistory[conversationHistory.length - 1]?.role === 'assistant') {
-          conversationHistory.pop();
-          if (conversationHistory[conversationHistory.length - 1]?.role === 'user') conversationHistory.pop();
-          saveHistory();
-        }
-        return;
-      }
       renderMessage(reply, 'bjorn');
       // Fire live stat counter — every answered question counts
       window.dispatchEvent(new Event('bjornMessageSent'));
     } catch (err) {
-      showThinking(false);
-      // Roll back any unanswered user turn (pushed in callGroq before the fetch)
-      // so a failed message never leaks into the next request's context. Covers
-      // every failure path — network "Failed to fetch", JSON parse errors, and
-      // aborts — not just timeouts.
-      if (conversationHistory.length &&
-          conversationHistory[conversationHistory.length - 1]?.role === 'user' &&
-          conversationHistory[conversationHistory.length - 1]?.content === message) {
-        conversationHistory.pop();
-      }
-      // If the panel was closed while waiting, don't render into a hidden panel.
+      // Stale send (panel closed, or a newer send now owns the UI): callGroq
+      // already rolled back its own user turn by identity, so just bail without
+      // touching the spinner or rendering into a panel the user moved on from.
       if (myGen !== _genId) return;
+      showThinking(false);
       let errorMsg = '❌ ';
       if (err.name === 'AbortError') {
         const offline = getOfflineResponse(message);
