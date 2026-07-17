@@ -2,9 +2,12 @@ name = "ankommer-bjorn-proxy"
 main = "bjorn-proxy.js"
 compatibility_date = "2025-05-01"
 
-# Free tier — no credit card required
+# Free tier, no credit card required
 # After deploy, your worker URL will look like:
 #   https://ankommer-bjorn-proxy.<your-subdomain>.workers.dev
 #
 # Set the GROQ_API_KEY secret with:
 #   npx wrangler secret put GROQ_API_KEY
+
+[ai]
+binding = "AI"
