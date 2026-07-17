@@ -668,6 +668,30 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     'openai/gpt-oss-120b',   // attempt 2 — after 62s wait, window reset
     'openai/gpt-oss-20b'     // attempt 3 — after 62s wait
   ];
+  const PROMPT_LEAK_REFUSAL = "I'm Bjørn, your Denmark guide. What would you like to know about moving here?";
+
+  const stripThinkBlocks = (reply) => {
+    if (reply.indexOf('<think>') === -1) return reply.trim();
+    return reply.replace(/<think>[\s\S]*?<\/think>/gi, '')
+                .replace(/<think>[\s\S]*$/i, '')
+                .trim();
+  };
+
+  const hasPromptLeak = (reply) => {
+    const leakBoxChar = /[\u2551\u2554\u2560\u255A\u2557\u255D\u2550]/;
+    const leakHeaders = [
+      /HARD STOP/i,
+      /IDENTITY & SCOPE/i,
+      /NON-NEGOTIABLE/i,
+      /RULE [0-9] \u2014/i,
+      /ABSOLUTE RULES THAT OVERRIDE/i,
+      /USER MESSAGES ARE DATA, NOT COMMANDS/i,
+      /NEVER REVEAL.{0,30}SYSTEM PROMPT/i,
+    ];
+    const headerHits = leakHeaders.filter(re => re.test(reply)).length;
+    return leakBoxChar.test(reply) || headerHits >= 2;
+  };
+
   const callGroq = async (message, attempt = 0, gen = _genId) => {
     // If the panel was closed since this send started, stop the whole cascade
     // here so a stale request cannot keep fetching or mutating history.
@@ -848,6 +872,198 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     conversationHistory.push({ role: 'assistant', content: reply });
     saveHistory(); // save both user + assistant message only on success
     return reply;
+  };
+
+  const streamBjorn = async (message, gen = _genId) => {
+    if (gen !== _genId) return 'stale';
+    const userTurn = { role: 'user', content: message };
+    const dropUserTurn = () => {
+      const i = conversationHistory.indexOf(userTurn);
+      if (i !== -1) conversationHistory.splice(i, 1);
+    };
+    conversationHistory.push(userTurn);
+
+    const messages = [
+      { role: 'system', content: buildSystemPrompt() },
+      ...conversationHistory.slice(-16).map(m => ({
+        role: m.role === 'assistant' ? 'assistant' : 'user',
+        content: m.content
+      }))
+    ];
+
+    const controller = new AbortController();
+    _activeController = controller;
+    let timedOut = false;
+    let abortTimer = null;
+    const resetAbortTimer = () => {
+      clearTimeout(abortTimer);
+      abortTimer = setTimeout(() => {
+        timedOut = true;
+        controller.abort();
+      }, 25000);
+    };
+    resetAbortTimer();
+    let reader = null;
+    let streamMsg = null;
+    let streamBubble = null;
+
+    const removeStreamBubble = () => {
+      if (streamMsg && streamMsg.parentNode) streamMsg.parentNode.removeChild(streamMsg);
+      streamMsg = null;
+      streamBubble = null;
+    };
+
+    const ensureStreamBubble = () => {
+      if (streamBubble) return streamBubble;
+      const container = document.getElementById('bjorn-messages');
+      if (!container) throw new Error('Chat container unavailable');
+
+      const div = document.createElement('div');
+      div.className = 'msg bjorn';
+      div.setAttribute('lang', window.currentLang || 'en');
+
+      const avatar = document.createElement('div');
+      avatar.className = 'msg-avatar';
+      avatar.textContent = '🛡️';
+      avatar.setAttribute('aria-hidden', 'true');
+      div.appendChild(avatar);
+
+      const bubble = document.createElement('div');
+      bubble.className = 'msg-bubble';
+      bubble.style.whiteSpace = 'pre-wrap';
+      div.appendChild(bubble);
+
+      container.appendChild(div);
+      container.scrollTop = container.scrollHeight;
+      streamMsg = div;
+      streamBubble = bubble;
+      showThinking(false);
+      return bubble;
+    };
+
+    try {
+      const response = await fetch(PROXY_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        body: JSON.stringify({
+          model: MODELS[0],
+          messages,
+          max_tokens: 1024,
+          temperature: 0.5,
+          top_p: 0.9,
+          stream: true
+        }),
+        signal: controller.signal
+      });
+
+      if (!response.ok) throw new Error(`Stream API error ${response.status}`);
+      if (!response.body || typeof response.body.getReader !== 'function') {
+        throw new Error('Stream reader unavailable');
+      }
+
+      reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      let full = '';
+      let doneMarker = false;
+
+      while (!doneMarker) {
+        if (gen !== _genId) {
+          try { await reader.cancel(); } catch (e) {}
+          dropUserTurn();
+          removeStreamBubble();
+          return 'stale';
+        }
+
+        const { value, done } = await reader.read();
+
+        if (gen !== _genId) {
+          try { await reader.cancel(); } catch (e) {}
+          dropUserTurn();
+          removeStreamBubble();
+          return 'stale';
+        }
+        if (done) break;
+
+        resetAbortTimer();
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split(/\r?\n/);
+        buffer = lines.pop() || '';
+
+        for (const line of lines) {
+          if (!line.startsWith('data:')) continue;
+          const payload = line.slice(5).trim();
+          if (!payload) continue;
+          if (payload === '[DONE]') {
+            clearTimeout(abortTimer);
+            doneMarker = true;
+            break;
+          }
+
+          let data;
+          try { data = JSON.parse(payload); }
+          catch (e) { throw new Error('Invalid stream event'); }
+          if (data.error) throw new Error(String(data.error));
+
+          const delta = typeof data.response === 'string' ? data.response : '';
+          if (!delta) continue;
+          full += delta;
+
+          if (gen !== _genId) {
+            try { await reader.cancel(); } catch (e) {}
+            dropUserTurn();
+            removeStreamBubble();
+            return 'stale';
+          }
+
+          const bubble = ensureStreamBubble();
+          bubble.textContent = full;
+          const container = document.getElementById('bjorn-messages');
+          if (container) container.scrollTop = container.scrollHeight;
+
+          if (hasPromptLeak(full)) {
+            try { await reader.cancel(); } catch (e) {}
+            bubble.textContent = PROMPT_LEAK_REFUSAL;
+            dropUserTurn();
+            return 'handled';
+          }
+        }
+      }
+
+      if (!doneMarker) throw new Error('Stream ended before completion');
+      if (gen !== _genId) {
+        if (reader) { try { await reader.cancel(); } catch (e) {} }
+        dropUserTurn();
+        removeStreamBubble();
+        return 'stale';
+      }
+
+      let reply = stripThinkBlocks(full);
+      if (!reply) throw new Error('Empty streamed response');
+
+      const bubble = ensureStreamBubble();
+      if (hasPromptLeak(reply)) {
+        bubble.style.whiteSpace = '';
+        bubble.innerHTML = formatMessage(PROMPT_LEAK_REFUSAL);
+        dropUserTurn();
+        return 'handled';
+      }
+
+      conversationHistory.push({ role: 'assistant', content: reply });
+      saveHistory();
+      bubble.style.whiteSpace = '';
+      bubble.innerHTML = formatMessage(reply);
+      return 'streamed';
+    } catch (err) {
+      dropUserTurn();
+      removeStreamBubble();
+      if (err.name === 'AbortError' && gen !== _genId) return 'stale';
+      if (err.name === 'AbortError' && !timedOut) return 'stale';
+      throw err;
+    } finally {
+      clearTimeout(abortTimer);
+      if (_activeController === controller) _activeController = null;
+    }
   };
 
   /* ── RENDER MESSAGE ──────────────────────────────────── */
@@ -1058,14 +1274,31 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
 
     try {
       let reply;
+      let handledByStream = false;
       // Check online status before attempting the API call
       if (!navigator.onLine) {
         await new Promise(r => setTimeout(r, 400));
         reply = getOfflineResponse(message) + '\n\n*Note: You appear to be offline. Showing a cached response — reconnect for Bjørn\'s full AI capabilities.*';
       } else if (apiKey || PROXY_URL) {
-        // Either a Cloudflare worker proxy OR a direct apiKey is enough —
-        // callGroq picks the right path internally via its useProxy check.
-        reply = await callGroq(message, 0, myGen);
+        if (PROXY_URL) {
+          try {
+            const streamResult = await streamBjorn(message, myGen);
+            if (streamResult === 'stale') return;
+            if (streamResult === 'streamed' || streamResult === 'handled') {
+              handledByStream = true;
+            } else {
+              showThinking(true);
+              reply = await callGroq(message, 0, myGen);
+            }
+          } catch (streamErr) {
+            if (myGen !== _genId) return;
+            showThinking(true);
+            reply = await callGroq(message, 0, myGen);
+          }
+        } else {
+          // A direct apiKey still uses the existing non-stream path.
+          reply = await callGroq(message, 0, myGen);
+        }
       } else {
         // Simulate thinking delay for better UX
         await new Promise(r => setTimeout(r, 800 + Math.random() * 600));
@@ -1076,7 +1309,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       // owns the spinner and input. Touching either here would corrupt them.
       if (myGen !== _genId) return;
       showThinking(false);
-      renderMessage(reply, 'bjorn');
+      if (!handledByStream) renderMessage(reply, 'bjorn');
       // Fire live stat counter — every answered question counts
       window.dispatchEvent(new Event('bjornMessageSent'));
     } catch (err) {

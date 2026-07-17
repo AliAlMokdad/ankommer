@@ -88,6 +88,38 @@ function openAiResponse(content, origin) {
   }, 200, origin);
 }
 
+function sseHeaders(origin) {
+  return {
+    'Content-Type': 'text/event-stream',
+    'Cache-Control': 'no-cache',
+    ...corsHeaders(origin)
+  };
+}
+
+function sseTextResponse(content, origin) {
+  const encoder = new TextEncoder();
+  const stream = new ReadableStream({
+    start(controller) {
+      controller.enqueue(encoder.encode(`data: ${JSON.stringify({ response: content })}\n\n`));
+      controller.enqueue(encoder.encode('data: [DONE]\n\n'));
+      controller.close();
+    }
+  });
+  return new Response(stream, { status: 200, headers: sseHeaders(origin) });
+}
+
+function sseErrorResponse(message, origin) {
+  const encoder = new TextEncoder();
+  const stream = new ReadableStream({
+    start(controller) {
+      controller.enqueue(encoder.encode(`data: ${JSON.stringify({ error: message })}\n\n`));
+      controller.enqueue(encoder.encode('data: [DONE]\n\n'));
+      controller.close();
+    }
+  });
+  return new Response(stream, { status: 200, headers: sseHeaders(origin) });
+}
+
 async function runCloudflareAi(body, env) {
   const out = await env.AI.run(CLOUDFLARE_MODEL, {
     messages: body.messages,
@@ -100,6 +132,59 @@ async function runCloudflareAi(body, env) {
   }
 
   return null;
+}
+
+async function runCloudflareAiStream(body, env) {
+  const stream = await env.AI.run(CLOUDFLARE_MODEL, {
+    messages: body.messages,
+    max_tokens: body.max_tokens ?? 1024,
+    temperature: Math.min(body.temperature ?? 0.5, 0.7),
+    stream: true
+  });
+
+  if (!stream || typeof stream.getReader !== 'function') {
+    throw new Error('Cloudflare stream unavailable');
+  }
+
+  return stream;
+}
+
+async function runGroqFallbackText(body, env) {
+  if (!env.GROQ_API_KEY) {
+    throw new Error('Worker fallback is not configured.');
+  }
+
+  const groqRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${env.GROQ_API_KEY}`
+    },
+    body: JSON.stringify({
+      model: ALLOWED_MODELS.includes(body.model) ? body.model : DEFAULT_GROQ_MODEL,
+      messages: body.messages,
+      temperature: body.temperature ?? 0.7,
+      max_tokens: body.max_tokens ?? 1024,
+      stream: false
+    })
+  });
+
+  const text = await groqRes.text();
+  let data = {};
+  try { data = JSON.parse(text); } catch (_) {}
+
+  if (!groqRes.ok) {
+    const rawErr = data && data.error;
+    const msg = (typeof rawErr === 'string' ? rawErr : rawErr?.message) || `Groq fallback failed with ${groqRes.status}`;
+    throw new Error(msg);
+  }
+
+  const content = data.choices?.[0]?.message?.content;
+  if (!content) {
+    throw new Error('Groq fallback returned an empty response.');
+  }
+
+  return content;
 }
 
 async function runGroqFallback(body, env, origin) {
@@ -168,6 +253,21 @@ export default {
 
     if (!Array.isArray(body.messages) || body.messages.length === 0) {
       return errorResponse('messages array is required', 400, origin);
+    }
+
+    if (body.stream === true) {
+      try {
+        const stream = await runCloudflareAiStream(body, env);
+        return new Response(stream, { status: 200, headers: sseHeaders(origin) });
+      } catch (_) {
+        try {
+          const content = await runGroqFallbackText(body, env);
+          return sseTextResponse(content, origin);
+        } catch (fallbackErr) {
+          const msg = fallbackErr?.message || 'Streaming providers are unavailable.';
+          return sseErrorResponse(msg, origin);
+        }
+      }
     }
 
     // Primary path: Cloudflare Workers AI with Llama 3.3 70B.
