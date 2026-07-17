@@ -98,8 +98,12 @@ const AnkommerDownloadHelper = (() => {
       (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   };
 
+  // Only true in-app webviews (Instagram, Messenger, TikTok, etc.) genuinely
+  // cannot save a file. A normal browser, including iOS Safari and Android
+  // Chrome, must fall through to the anchor download, never this guidance
+  // (telling a Safari user to open Safari is a dead end).
   const needsBrowserGuidance = () =>
-    IN_APP_UA.test(navigator.userAgent || '') || isIOS();
+    IN_APP_UA.test(navigator.userAgent || '');
 
   const revokeObjectURLLater = (url) => {
     let done = false;
@@ -137,21 +141,26 @@ const AnkommerDownloadHelper = (() => {
     // download (a.download works there and a share sheet would be a regression).
     const isTouch = window.matchMedia('(pointer: coarse)').matches || window.matchMedia('(max-width: 600px)').matches;
     if (isTouch && typeof File === 'function' && navigator.share && navigator.canShare) {
-      const file = new File([blob], safeFilename, { type });
+      // iOS restricts which file types it will share (application/json and
+      // text/calendar are often refused). If the real type is not shareable,
+      // retry as text/plain: identical bytes, same filename, but a type iOS
+      // will accept so the share sheet (Save to Files) actually appears.
+      let file = new File([blob], safeFilename, { type });
       let canShareFiles = false;
       try { canShareFiles = navigator.canShare({ files: [file] }); } catch (_) {}
-
+      if (!canShareFiles) {
+        try {
+          const alt = new File([blob], safeFilename, { type: 'text/plain' });
+          if (navigator.canShare({ files: [alt] })) { file = alt; canShareFiles = true; }
+        } catch (_) {}
+      }
       if (canShareFiles) {
         try {
-          await navigator.share({
-            files: [file],
-            title: title || safeFilename,
-            text: text || ''
-          });
+          await navigator.share({ files: [file], title: title || safeFilename, text: text || '' });
           return { ok: true, method: 'share' };
         } catch (err) {
           if (err?.name === 'AbortError') return { ok: false, reason: 'cancelled' };
-          throw err;
+          // Share failed for another reason: fall through to the anchor download.
         }
       }
     }
