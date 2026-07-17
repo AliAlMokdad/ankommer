@@ -687,7 +687,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     // TPM limit (system prompt alone is ~2 000 tokens).
     const messages = [
       { role: 'system', content: buildSystemPrompt() },
-      ...conversationHistory.slice(-6).map(m => ({
+      ...conversationHistory.slice(-16).map(m => ({
         role: m.role === 'assistant' ? 'assistant' : 'user',
         content: m.content
       }))
@@ -716,7 +716,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
           model: MODELS[Math.min(attempt, MODELS.length - 1)],
           messages,
           max_tokens: 1024,
-          temperature: 0.75,
+          temperature: 0.5,
           top_p: 0.9
         }),
         signal: controller.signal
@@ -969,6 +969,24 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     return null;
   };
 
+  /* Crisis / self-harm safety net. Runs BEFORE every other guard so a message
+     that signals distress always gets real help resources, even if it also
+     contains jailbreak-like phrasing, and without waiting on the model. High
+     precision patterns only, so it does not fire on ordinary questions. */
+  const CRISIS_PATTERNS = [
+    /\bkill(ing)?\s+myself\b/i, /\bhurt(ing)?\s+myself\b/i, /\bharm(ing)?\s+myself\b/i,
+    /\bself[-\s]?harm/i, /\bwant\s+to\s+die\b/i, /\bwanna\s+die\b/i,
+    /\bend\s+(my\s+life|it\s+all)\b/i, /\btake\s+my\s+(own\s+)?life\b/i,
+    /\bno\s+reason\s+to\s+(live|go\s+on)\b/i, /\bcan'?t\s+go\s+on\b/i, /\bsuicid/i,
+    /\bselvmord/i, /\btage\s+mit\s+eget\s+liv\b/i,             // Danish
+    /\bselbstmord\b/i, /\bsuizid/i,                            // German
+    /\bانتحار/, /\bخودکشی/, /\bsamob[oó]jstw/i, /\bсамогубств/i, /\bсуицид/i,
+  ];
+  const checkCrisis = (message) => {
+    if (!message || !CRISIS_PATTERNS.some(re => re.test(message))) return null;
+    return `💙 I am really glad you reached out, and I am sorry you are going through this. I am only a guide, not a counsellor, so please talk to someone who can help right now.\n\nIn Denmark you can reach:\n- Livslinjen 70 201 201 (free, anonymous, open 24/7)\n- 112 if you are in immediate danger\n\nYou matter, and you do not have to face this alone.`;
+  };
+
   /* ── SEND MESSAGE ────────────────────────────────────── */
   /* ── SET PROCESSING STATE (disables send button while waiting) ── */
   const setProcessing = (state) => {
@@ -1014,6 +1032,17 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     if (badge) badge.classList.add('hidden');
 
     renderMessage(message, 'user');
+
+    // Safety FIRST: a message signalling self-harm or crisis gets help resources
+    // immediately, before any jailbreak/off-topic guard could redirect it, and
+    // without depending on the model.
+    const crisis = checkCrisis(message);
+    if (crisis) {
+      renderMessage(crisis, 'bjorn');
+      window.dispatchEvent(new Event('bjornMessageSent'));
+      setProcessing(false);
+      return;
+    }
 
     // Client-side guard: catch obvious prompt-injection / off-topic before
     // the API call. Saves a Groq round-trip AND can't be jailbroken.
@@ -1061,14 +1090,17 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
         const offline = getOfflineResponse(message);
         renderMessage(offline + '\n\n*Note: Bjørn took too long to respond. Showing a cached answer — try again if you need his full reasoning.*', 'bjorn');
       } else if (/\b413\b|too\s+large|too\s+long|context[_\s]length|maximum\s+context|request entity/i.test(err.message)) {
-        // Input/payload too large. Checked BEFORE the 401/429 branches because
-        // those match loose numeric substrings, and a too-long error usually
-        // embeds a token count (e.g. "requested 12429 tokens") that would
-        // otherwise be misrouted to the rate-limit branch. The worded test here
-        // cannot steal a genuine rate limit (those say "rate limit reached", not
-        // "too large"), and \b413\b won't fire on counts like "6413". The issue
-        // is length, not connectivity, so "shorten it" beats a cached answer.
-        renderMessage('🛡️ That is a bit too long for me to handle in one go. Please shorten it, or split it into a couple of messages, and try again.', 'bjorn');
+        // A provider "too large" means two very different things: the user
+        // really pasted a huge message, OR a shared key hit its per-minute token
+        // budget on a normal message. Only say "shorten it" when the message is
+        // genuinely long; otherwise treat it as a capacity blip with a cached
+        // answer, so a normal question never gets told it is "too long".
+        if (message.length > 1500) {
+          renderMessage('🛡️ That is a bit long for me to handle in one go. Please shorten it, or split it into a couple of messages, and try again.', 'bjorn');
+        } else {
+          const offline = getOfflineResponse(message);
+          renderMessage(offline + '\n\n*Bjørn is very busy right now, so this is a quick cached answer. Try again in a moment for his full reply.*', 'bjorn');
+        }
       } else if (/\b401\b/.test(err.message) || err.message.includes('invalid_api_key')) {
         errorMsg += 'Bjørn is temporarily unavailable right now. Please try again in a little while.';
         renderMessage(errorMsg, 'bjorn');
