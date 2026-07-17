@@ -189,6 +189,14 @@ const Calculators = (() => {
     const needsBrowserGuidance = () =>
       IN_APP_UA.test(navigator.userAgent || '');
 
+    const isTouchDevice = () => {
+      try {
+        return window.matchMedia('(pointer: coarse)').matches || window.matchMedia('(max-width: 600px)').matches;
+      } catch (_) {
+        return navigator.maxTouchPoints > 0;
+      }
+    };
+
     const revokeObjectURLLater = (url) => {
       let done = false;
       let timer = null;
@@ -211,6 +219,58 @@ const Calculators = (() => {
       document.addEventListener('visibilitychange', onVisibilityChange);
     };
 
+    const shareFile = async (blob, { safeFilename, type, title, text }) => {
+      if (typeof File !== 'function' || !navigator.share || !navigator.canShare) {
+        return { ok: false, reason: 'unavailable' };
+      }
+
+      let file;
+      let canShareFiles = false;
+      try {
+        file = new File([blob], safeFilename, { type });
+        canShareFiles = navigator.canShare({ files: [file] });
+      } catch (_) {
+        canShareFiles = false;
+      }
+
+      if (!canShareFiles) {
+        try {
+          const alt = new File([blob], safeFilename, { type: 'text/plain' });
+          if (navigator.canShare({ files: [alt] })) {
+            file = alt;
+            canShareFiles = true;
+          }
+        } catch (_) {}
+      }
+
+      if (!canShareFiles) return { ok: false, reason: 'unavailable' };
+
+      try {
+        await navigator.share({ files: [file], title: title || safeFilename, text: text || '' });
+        return { ok: true, method: 'share' };
+      } catch (err) {
+        if (err?.name === 'AbortError') return { ok: false, reason: 'cancelled' };
+        return { ok: false, reason: 'failed' };
+      }
+    };
+
+    const triggerAnchorDownload = (blob, safeFilename) => {
+      try {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = safeFilename;
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        revokeObjectURLLater(url);
+        return true;
+      } catch (_) {
+        return false;
+      }
+    };
+
     const download = async (blob, {
       filename,
       mimeType,
@@ -220,31 +280,18 @@ const Calculators = (() => {
     } = {}) => {
       const safeFilename = filename || 'download';
       const type = mimeType || blob.type || 'application/octet-stream';
+      const isTouch = isTouchDevice();
 
       // Prefer Web Share only on touch devices; on a laptop keep the direct
       // download (a.download works there and a share sheet would be a regression).
-      const isTouch = window.matchMedia('(pointer: coarse)').matches || window.matchMedia('(max-width: 600px)').matches;
-      if (isTouch && typeof File === 'function' && navigator.share && navigator.canShare) {
-        // iOS restricts which file types it will share; retry as text/plain if
-        // the real type is refused so the share sheet actually appears.
-        let file = new File([blob], safeFilename, { type });
-        let canShareFiles = false;
-        try { canShareFiles = navigator.canShare({ files: [file] }); } catch (_) {}
-        if (!canShareFiles) {
-          try {
-            const alt = new File([blob], safeFilename, { type: 'text/plain' });
-            if (navigator.canShare({ files: [alt] })) { file = alt; canShareFiles = true; }
-          } catch (_) {}
-        }
-        if (canShareFiles) {
-          try {
-            await navigator.share({ files: [file], title: title || safeFilename, text: text || '' });
-            return { ok: true, method: 'share' };
-          } catch (err) {
-            if (err?.name === 'AbortError') return { ok: false, reason: 'cancelled' };
-            // Share failed otherwise: fall through to the anchor download.
-          }
-        }
+      if (isTouch) {
+        const shared = await shareFile(blob, { safeFilename, type, title, text });
+        if (shared.ok || shared.reason === 'cancelled') return shared;
+        // Share failed otherwise: fall through silently to the anchor download.
+      }
+
+      if (triggerAnchorDownload(blob, safeFilename)) {
+        return { ok: true, method: 'download' };
       }
 
       if (needsBrowserGuidance()) {
@@ -255,16 +302,11 @@ const Calculators = (() => {
         };
       }
 
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = safeFilename;
-      a.style.display = 'none';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      revokeObjectURLLater(url);
-      return { ok: true, method: 'download' };
+      return {
+        ok: false,
+        reason: 'failed',
+        message: guidanceMessage || defaultGuidance
+      };
     };
 
     return { download };
@@ -1043,6 +1085,7 @@ const Calculators = (() => {
     };
 
     btn.addEventListener('click', async () => {
+      try {
       const dateInput = document.getElementById('cal-arrival-date');
       const v = dateInput?.value;
       if (!v) {
@@ -1079,17 +1122,22 @@ const Calculators = (() => {
         });
       } catch (err) {
         console.warn('Calendar download failed:', err);
-        showCalMsg(err.message || t('calDownloadGuide'));
+        showCalMsg(t('calDownloadGuide'), 'info');
         return;
       }
       if (!result?.ok) {
         if (result?.reason === 'guidance') showCalMsg(result.message, 'info');
+        else if (result?.reason !== 'cancelled') showCalMsg(t('calDownloadGuide'), 'info');
         return;
       }
       // Visible confirmation
       const orig = btn.textContent;
       btn.textContent = '✓ ' + t('calDone');
       setTimeout(() => { btn.textContent = orig; }, 2500);
+      } catch (err) {
+        console.warn('Calendar download failed:', err);
+        showCalMsg(t('calDownloadGuide'), 'info');
+      }
     });
   };
 

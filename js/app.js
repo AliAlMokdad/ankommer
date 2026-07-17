@@ -105,6 +105,14 @@ const AnkommerDownloadHelper = (() => {
   const needsBrowserGuidance = () =>
     IN_APP_UA.test(navigator.userAgent || '');
 
+  const isTouchDevice = () => {
+    try {
+      return window.matchMedia('(pointer: coarse)').matches || window.matchMedia('(max-width: 600px)').matches;
+    } catch (_) {
+      return navigator.maxTouchPoints > 0;
+    }
+  };
+
   const revokeObjectURLLater = (url) => {
     let done = false;
     let timer = null;
@@ -127,62 +135,169 @@ const AnkommerDownloadHelper = (() => {
     document.addEventListener('visibilitychange', onVisibilityChange);
   };
 
+  const shareFile = async (blob, { safeFilename, type, title, text }) => {
+    if (typeof File !== 'function' || !navigator.share || !navigator.canShare) {
+      return { ok: false, reason: 'unavailable' };
+    }
+
+    let file;
+    let canShareFiles = false;
+    try {
+      file = new File([blob], safeFilename, { type });
+      canShareFiles = navigator.canShare({ files: [file] });
+    } catch (_) {
+      canShareFiles = false;
+    }
+
+    if (!canShareFiles) {
+      try {
+        const alt = new File([blob], safeFilename, { type: 'text/plain' });
+        if (navigator.canShare({ files: [alt] })) {
+          file = alt;
+          canShareFiles = true;
+        }
+      } catch (_) {}
+    }
+
+    if (!canShareFiles) return { ok: false, reason: 'unavailable' };
+
+    try {
+      await navigator.share({ files: [file], title: title || safeFilename, text: text || '' });
+      return { ok: true, method: 'share' };
+    } catch (err) {
+      if (err?.name === 'AbortError') return { ok: false, reason: 'cancelled' };
+      return { ok: false, reason: 'failed' };
+    }
+  };
+
+  const triggerAnchorDownload = (blob, safeFilename) => {
+    try {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = safeFilename;
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      revokeObjectURLLater(url);
+      return true;
+    } catch (_) {
+      return false;
+    }
+  };
+
+  const copyWithTextarea = (payloadText) => {
+    try {
+      const textarea = document.createElement('textarea');
+      textarea.value = payloadText;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'fixed';
+      textarea.style.top = '-1000px';
+      textarea.style.left = '-1000px';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      const copied = document.execCommand && document.execCommand('copy');
+      textarea.remove();
+      return !!copied;
+    } catch (_) {
+      return false;
+    }
+  };
+
+  const copyText = async (payloadText) => {
+    if (!payloadText) return false;
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(payloadText);
+        return true;
+      }
+    } catch (_) {}
+    return copyWithTextarea(payloadText);
+  };
+
+  const showManualCopyPanel = (payloadText) => {
+    if (!payloadText) return false;
+    try {
+      document.getElementById('ankommer-manual-copy')?.remove();
+
+      const panel = document.createElement('div');
+      panel.id = 'ankommer-manual-copy';
+      panel.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:99999;padding:14px;background:#fff;color:#1f2937;border:1px solid rgba(0,0,0,0.18);border-radius:8px;box-shadow:0 12px 32px rgba(0,0,0,0.22);font:14px/1.4 system-ui,sans-serif;';
+
+      const message = document.createElement('p');
+      message.textContent = 'Your plan is shown below. Copy it somewhere safe before closing this page.';
+      message.style.cssText = 'margin:0 0 10px;font-weight:600;';
+
+      const textarea = document.createElement('textarea');
+      textarea.value = payloadText;
+      textarea.setAttribute('readonly', '');
+      textarea.style.cssText = 'width:100%;height:150px;box-sizing:border-box;margin:0 0 10px;padding:8px;font:12px/1.4 ui-monospace,monospace;';
+
+      const close = document.createElement('button');
+      close.type = 'button';
+      close.textContent = 'Close';
+      close.style.cssText = 'padding:8px 12px;border:0;border-radius:6px;background:#2e6da4;color:#fff;font-weight:700;';
+      close.addEventListener('click', () => panel.remove());
+
+      panel.append(message, textarea, close);
+      document.body.appendChild(panel);
+      textarea.focus();
+      textarea.select();
+      return true;
+    } catch (_) {
+      return false;
+    }
+  };
+
   const download = async (blob, {
     filename,
     mimeType,
     title,
     text,
+    copyText: fallbackCopyText,
     guidanceMessage
   } = {}) => {
     const safeFilename = filename || 'download';
     const type = mimeType || blob.type || 'application/octet-stream';
+    const isTouch = isTouchDevice();
 
     // Prefer Web Share only on touch devices; on a laptop keep the direct
     // download (a.download works there and a share sheet would be a regression).
-    const isTouch = window.matchMedia('(pointer: coarse)').matches || window.matchMedia('(max-width: 600px)').matches;
-    if (isTouch && typeof File === 'function' && navigator.share && navigator.canShare) {
-      // iOS restricts which file types it will share (application/json and
-      // text/calendar are often refused). If the real type is not shareable,
-      // retry as text/plain: identical bytes, same filename, but a type iOS
-      // will accept so the share sheet (Save to Files) actually appears.
-      let file = new File([blob], safeFilename, { type });
-      let canShareFiles = false;
-      try { canShareFiles = navigator.canShare({ files: [file] }); } catch (_) {}
-      if (!canShareFiles) {
-        try {
-          const alt = new File([blob], safeFilename, { type: 'text/plain' });
-          if (navigator.canShare({ files: [alt] })) { file = alt; canShareFiles = true; }
-        } catch (_) {}
-      }
-      if (canShareFiles) {
-        try {
-          await navigator.share({ files: [file], title: title || safeFilename, text: text || '' });
-          return { ok: true, method: 'share' };
-        } catch (err) {
-          if (err?.name === 'AbortError') return { ok: false, reason: 'cancelled' };
-          // Share failed for another reason: fall through to the anchor download.
-        }
-      }
+    // Desktop: a direct file download is the clean, expected behavior.
+    if (!isTouch) {
+      if (triggerAnchorDownload(blob, safeFilename)) return { ok: true, method: 'download' };
+      return { ok: false, reason: 'guidance', message: guidanceMessage || defaultGuidance };
     }
+
+    // Touch: Web Share first (best on iOS and Android, offers Save to Files).
+    const shared = await shareFile(blob, { safeFilename, type, title, text });
+    if (shared.ok || shared.reason === 'cancelled') return shared;
+
+    // Share unavailable or failed. Prefer a copy fallback for text payloads (the
+    // plan), since a.download is unreliable on iOS and would be a jarring extra
+    // step. This guarantees the user keeps their data with no error and no
+    // redundant double action.
+    if (fallbackCopyText) {
+      if (await copyText(fallbackCopyText)) return { ok: true, method: 'copy' };
+      if (showManualCopyPanel(fallbackCopyText)) return { ok: true, method: 'manual-copy' };
+    }
+
+    // No copy payload (e.g. the calendar .ics) or copy was blocked: the anchor
+    // download is the next best thing (on iOS an .ics opens into the Calendar
+    // app, which is what the user wants there).
+    if (triggerAnchorDownload(blob, safeFilename)) return { ok: true, method: 'download' };
 
     if (needsBrowserGuidance()) {
-      return {
-        ok: false,
-        reason: 'guidance',
-        message: guidanceMessage || defaultGuidance
-      };
+      return { ok: false, reason: 'guidance', message: guidanceMessage || defaultGuidance };
     }
-
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = safeFilename;
-    a.style.display = 'none';
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    revokeObjectURLLater(url);
-    return { ok: true, method: 'download' };
+    return {
+      ok: false,
+      reason: 'failed',
+      message: guidanceMessage || 'Could not save your plan here. Please copy it before closing this page.'
+    };
   };
 
   return { download };
@@ -192,7 +307,6 @@ const t_ = (key, lang, ...args) => {
   const val = UI_T[key]?.[lang] || UI_T[key]?.en;
   return typeof val === 'function' ? val(...args) : (val || '');
 };
-
 /* ── SAFE STORAGE HELPERS ──────────────────────────── */
 // Guards against corrupted/tampered localStorage values crashing the app
 const safeParseJSON = (str, fallback) => {
@@ -244,17 +358,28 @@ const ProgressIO = {
   },
 
   // Trigger a save or share of the snapshot
-  download: (opts = {}) => {
-    const payload = ProgressIO.exportAll();
-    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-    const filename = `ankommer-plan-${new Date().toISOString().slice(0,10)}.json`;
-    return AnkommerDownloadHelper.download(blob, {
-      filename,
-      mimeType: 'application/json',
-      title: 'ANKOMMER plan',
-      text: 'Save your ANKOMMER plan.',
-      ...opts
-    });
+  download: async (opts = {}) => {
+    try {
+      const payload = ProgressIO.exportAll();
+      const payloadText = JSON.stringify(payload, null, 2);
+      const blob = new Blob([payloadText], { type: 'application/json' });
+      const filename = `ankommer-plan-${new Date().toISOString().slice(0,10)}.json`;
+      return await AnkommerDownloadHelper.download(blob, {
+        filename,
+        mimeType: 'application/json',
+        title: 'ANKOMMER plan',
+        text: 'Save your ANKOMMER plan.',
+        copyText: payloadText,
+        ...opts
+      });
+    } catch (err) {
+      console.warn('Plan export failed:', err);
+      return {
+        ok: false,
+        reason: 'failed',
+        message: 'Could not save your plan here. Please keep this page open and try again in Safari or Chrome.'
+      };
+    }
   },
 
   // Read a user-supplied file and merge it into localStorage.
@@ -314,15 +439,32 @@ const initProgressIO = () => {
       });
       if (!result?.ok) {
         if (result?.reason === 'guidance') alert(result.message);
+        else if (result?.reason !== 'cancelled') alert(progressText(
+          'footer_progress_export_err',
+          'Could not save your plan here. Please keep this page open and try again in Safari or Chrome.'
+        ));
         return;
       }
       // Cheap visible confirmation — no toast component needed
       const orig = exportBtn.textContent;
+      if (result.method === 'copy' || result.method === 'manual-copy') {
+        exportBtn.textContent = result.method === 'copy'
+          ? progressText(
+              'footer_progress_copied',
+              'Your plan is copied to the clipboard. Paste it somewhere safe to keep it.'
+            )
+          : 'Your plan is shown below. Copy it somewhere safe before closing this page.';
+        setTimeout(() => { exportBtn.textContent = orig; }, 4000);
+        return;
+      }
       exportBtn.textContent = '✓ ' + (i18n.t('footer_progress_done') || 'Saved');
       setTimeout(() => { exportBtn.textContent = orig; }, 2000);
     } catch (e) {
       console.warn('Export failed:', e);
-      alert((i18n.t('footer_progress_export_err') || 'Could not save your plan') + ': ' + e.message);
+      alert(progressText(
+        'footer_progress_export_err',
+        'Could not save your plan here. Please keep this page open and try again in Safari or Chrome.'
+      ));
     }
   });
 
@@ -347,7 +489,7 @@ const initProgressIO = () => {
       window.location.reload();
     } catch (err) {
       console.warn('Import failed:', err);
-      alert((i18n.t('footer_progress_import_err') || 'Could not read that file') + ': ' + err.message);
+      alert(i18n.t('footer_progress_import_err') || 'Could not read that file. Please choose a valid ANKOMMER plan export.');
       e.target.value = '';
     }
   });
