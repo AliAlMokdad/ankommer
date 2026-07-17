@@ -87,6 +87,98 @@ const UI_T = {
   tl_tab_year1:     { en:'Year 1',  fr:'An 1',      ar:'السنة 1',   es:'Año 1',     da:'År 1',     de:'Jahr 1',   uk:'Рік 1',     pl:'Rok 1',     ur:'سال 1',   fa:'سال ۱'  },
   minUnit:          { en:'min',     fr:'min',       ar:'دقيقة',     es:'min',       da:'min',      de:'Min.',     uk:'хв',        pl:'min',       ur:'منٹ',     fa:'دقیقه'  },
 };
+
+const AnkommerDownloadHelper = (() => {
+  const IN_APP_UA = /FBAN|FBAV|Instagram|Messenger|LinkedInApp|TikTok|Twitter|Snapchat|Line\/|Pinterest|GSA/i;
+  const defaultGuidance = 'Open ankommer.org in Safari or Chrome, then try saving again.';
+
+  const isIOS = () => {
+    const ua = navigator.userAgent || '';
+    return /iPad|iPhone|iPod/i.test(ua) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  };
+
+  const needsBrowserGuidance = () =>
+    IN_APP_UA.test(navigator.userAgent || '') || isIOS();
+
+  const revokeObjectURLLater = (url) => {
+    let done = false;
+    let timer = null;
+
+    const cleanup = () => {
+      if (done) return;
+      done = true;
+      URL.revokeObjectURL(url);
+      window.removeEventListener('pagehide', cleanup);
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+      if (timer) clearTimeout(timer);
+    };
+
+    const onVisibilityChange = () => {
+      if (document.visibilityState === 'hidden') cleanup();
+    };
+
+    timer = setTimeout(cleanup, 60000);
+    window.addEventListener('pagehide', cleanup, { once: true });
+    document.addEventListener('visibilitychange', onVisibilityChange);
+  };
+
+  const download = async (blob, {
+    filename,
+    mimeType,
+    title,
+    text,
+    guidanceMessage
+  } = {}) => {
+    const safeFilename = filename || 'download';
+    const type = mimeType || blob.type || 'application/octet-stream';
+
+    // Prefer Web Share only on touch devices; on a laptop keep the direct
+    // download (a.download works there and a share sheet would be a regression).
+    const isTouch = window.matchMedia('(pointer: coarse)').matches || window.matchMedia('(max-width: 600px)').matches;
+    if (isTouch && typeof File === 'function' && navigator.share && navigator.canShare) {
+      const file = new File([blob], safeFilename, { type });
+      let canShareFiles = false;
+      try { canShareFiles = navigator.canShare({ files: [file] }); } catch (_) {}
+
+      if (canShareFiles) {
+        try {
+          await navigator.share({
+            files: [file],
+            title: title || safeFilename,
+            text: text || ''
+          });
+          return { ok: true, method: 'share' };
+        } catch (err) {
+          if (err?.name === 'AbortError') return { ok: false, reason: 'cancelled' };
+          throw err;
+        }
+      }
+    }
+
+    if (needsBrowserGuidance()) {
+      return {
+        ok: false,
+        reason: 'guidance',
+        message: guidanceMessage || defaultGuidance
+      };
+    }
+
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = safeFilename;
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    revokeObjectURLLater(url);
+    return { ok: true, method: 'download' };
+  };
+
+  return { download };
+})();
+window.AnkommerDownloadHelper = AnkommerDownloadHelper;
 const t_ = (key, lang, ...args) => {
   const val = UI_T[key]?.[lang] || UI_T[key]?.en;
   return typeof val === 'function' ? val(...args) : (val || '');
@@ -142,18 +234,18 @@ const ProgressIO = {
     };
   },
 
-  // Trigger a browser download of the snapshot
-  download: () => {
+  // Trigger a save or share of the snapshot
+  download: (opts = {}) => {
     const payload = ProgressIO.exportAll();
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-    const url  = URL.createObjectURL(blob);
-    const a    = document.createElement('a');
-    a.href     = url;
-    a.download = `ankommer-plan-${new Date().toISOString().slice(0,10)}.json`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    const filename = `ankommer-plan-${new Date().toISOString().slice(0,10)}.json`;
+    return AnkommerDownloadHelper.download(blob, {
+      filename,
+      mimeType: 'application/json',
+      title: 'ANKOMMER plan',
+      text: 'Save your ANKOMMER plan.',
+      ...opts
+    });
   },
 
   // Read a user-supplied file and merge it into localStorage.
@@ -198,9 +290,23 @@ const initProgressIO = () => {
   const importBtn = document.getElementById('progress-import-btn');
   const fileInput = document.getElementById('progress-import-file');
 
-  exportBtn?.addEventListener('click', () => {
+  const progressText = (key, fallback) => {
+    const val = i18n.t(key);
+    return val && val !== key ? val : fallback;
+  };
+
+  exportBtn?.addEventListener('click', async () => {
     try {
-      ProgressIO.download();
+      const result = await ProgressIO.download({
+        guidanceMessage: progressText(
+          'footer_progress_download_guide',
+          'Open ankommer.org in Safari or Chrome, then try saving your plan again.'
+        )
+      });
+      if (!result?.ok) {
+        if (result?.reason === 'guidance') alert(result.message);
+        return;
+      }
       // Cheap visible confirmation — no toast component needed
       const orig = exportBtn.textContent;
       exportBtn.textContent = '✓ ' + (i18n.t('footer_progress_done') || 'Saved');

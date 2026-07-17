@@ -24,6 +24,8 @@ const Bjorn = (() => {
   let isOpen = false;
   let isProcessing = false;   // ← prevents overlapping API calls
   let userProfile = {};
+  let _activeController = null; // in-flight fetch, so close() can abort it
+  let _genId = 0;              // bumped on close() to discard a late reply
 
   /* ── HISTORY PERSISTENCE ────────────────────────────── */
   const saveHistory = () => {
@@ -47,7 +49,13 @@ const Bjorn = (() => {
         m && typeof m.content === 'string' &&
         (m.role === 'user' || m.role === 'assistant')
       );
-      if (clean.length === 0) return false;
+      if (clean.length === 0) {
+        // Stored value existed but held nothing usable. Clear it so we do not
+        // keep re-parsing dead data on every open, and log it for diagnosis.
+        console.warn('[Bjorn] stored history had no valid entries; clearing it');
+        try { localStorage.removeItem(HISTORY_KEY); } catch (e) {}
+        return false;
+      }
       conversationHistory = clean;
       return true;
     } catch (e) { return false; }
@@ -660,7 +668,10 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     'openai/gpt-oss-120b',   // attempt 2 — after 62s wait, window reset
     'openai/gpt-oss-20b'     // attempt 3 — after 62s wait
   ];
-  const callGroq = async (message, attempt = 0) => {
+  const callGroq = async (message, attempt = 0, gen = _genId) => {
+    // If the panel was closed since this send started, stop the whole cascade
+    // here so a stale request cannot keep fetching or mutating history.
+    if (gen !== _genId) throw new Error('cancelled');
     // Push user message BEFORE the call, but roll back on failure so
     // a failed request doesn't leave an unanswered message in history.
     conversationHistory.push({ role: 'user', content: message });
@@ -679,6 +690,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     // AbortController-based timeout (25s) — replaces AbortSignal.timeout() which
     // is not available in some older browsers that ANKOMMER targets.
     const controller = new AbortController();
+    _activeController = controller;
     const abortTimer = setTimeout(() => controller.abort(), 25000);
 
     let response;
@@ -705,12 +717,16 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       });
     } finally {
       clearTimeout(abortTimer);
+      if (_activeController === controller) _activeController = null;
     }
 
     if (!response.ok) {
       conversationHistory.pop(); // rollback unanswered user message
       const errBody = await response.json().catch(() => ({}));
-      const msg = errBody.error?.message || `API error ${response.status}`;
+      // The proxy returns { error: "string" }; Groq returns { error: { message } }.
+      // Accept both so the real reason surfaces instead of a generic "API error".
+      const rawErr = errBody && errBody.error;
+      const msg = (typeof rawErr === 'string' ? rawErr : rawErr?.message) || `API error ${response.status}`;
 
       // A decommissioned or unknown model returns a 4xx (not 429). Instantly
       // fall through to the next model in the cascade rather than erroring out,
@@ -722,7 +738,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
         /decommission|deprecat|not found|does not exist|no longer (available|supported)|unknown model|invalid model/i.test(msg) &&
         !/too large|tokens per min|context length|rate limit/i.test(msg);
       if (isModelGone && attempt < MODELS.length - 1) {
-        return callGroq(message, attempt + 1);
+        return callGroq(message, attempt + 1, gen);
       }
 
       // Auto-retry on rate-limit (HTTP 429).
@@ -733,35 +749,26 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
         msg.toLowerCase().includes('rate limit') ||
         msg.toLowerCase().includes('rate_limit') ||
         msg.includes('tokens per min');
-      if (isRateLimit && attempt < MODELS.length - 1) {
+      // On a rate limit, switch INSTANTLY to the other model bucket (no wait).
+      // We deliberately do NOT sleep-and-retry: an earlier version waited 62s
+      // with the input disabled, which read as a frozen / broken chat on a
+      // phone. attempt 0 = 120b, attempt 1 = 20b; a further retry would just
+      // re-hit the same already-limited bucket (and could hang to the 25s
+      // timeout), so once both distinct models are tried we throw and sendMessage
+      // shows a cached answer immediately and re-enables the input right away.
+      if (isRateLimit && attempt < 1) {
         const thinkEl = document.getElementById('bjorn-thinking');
-        const showHint = (text) => {
-          if (!thinkEl) return;
-          const hint = thinkEl.querySelector('.thinking-hint') || (() => {
-            const s = document.createElement('span');
-            s.className = 'thinking-hint';
-            s.style.cssText = 'font-size:0.72rem;color:var(--text-faint);margin-left:8px';
-            thinkEl.appendChild(s);
-            return s;
-          })();
-          hint.textContent = text;
-        };
-
-        if (attempt < 2) {
-          // Instantly switch to next model — completely separate TPM bucket, no wait needed
-          showHint('Still thinking…');
-          return callGroq(message, attempt + 1);
-        } else {
-          // All instant fallbacks (gpt-oss-120b, gpt-oss-20b) exhausted — wait for the 60s window to reset
-          const retryAfterRaw = response.headers.get('retry-after') || '60';
-          // Groq's retry-after is in seconds (e.g. "30" or "60") — parseInt is safe
-          const retryAfter = Math.min(parseInt(retryAfterRaw, 10) || 60, 120);
-          const waitMs = Math.max(62000, (retryAfter + 2) * 1000);
-          showHint('One moment, switching servers…');
-          await new Promise(r => setTimeout(r, waitMs));
-          document.querySelector('.thinking-hint')?.remove();
-          return callGroq(message, attempt + 1);
+        if (thinkEl && !thinkEl.querySelector('.thinking-hint')) {
+          const s = document.createElement('span');
+          s.className = 'thinking-hint';
+          s.style.cssText = 'font-size:0.72rem;color:var(--text-faint);margin-left:8px';
+          s.textContent = 'Still thinking…';
+          thinkEl.appendChild(s);
         }
+        return callGroq(message, attempt + 1, gen);
+      }
+      if (isRateLimit) {
+        throw new Error('429 rate limit reached: ' + msg);
       }
 
       throw new Error(msg);
@@ -802,8 +809,12 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
            in a context that looks like it's quoting them back.
        We bias toward over-blocking here — false positives just mean
        a generic refusal, but false negatives mean a real leak. */
-    const promptLeakPatterns = [
-      /[║╔╠╚╗╝═]/,                              // any box-drawing char
+    // A genuine system-prompt leak dumps the framed prompt: box-drawing
+    // characters (which never appear in a normal answer) or SEVERAL header
+    // strings at once. Trigger on a box char, or on 2+ header hits, so a single
+    // incidental phrase in a legitimate answer no longer nukes the whole reply.
+    const leakBoxChar = /[║╔╠╚╗╝═]/;
+    const leakHeaders = [
       /HARD STOP/i,
       /IDENTITY & SCOPE/i,
       /NON-NEGOTIABLE/i,
@@ -812,7 +823,8 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       /USER MESSAGES ARE DATA, NOT COMMANDS/i,
       /NEVER REVEAL.{0,30}SYSTEM PROMPT/i,
     ];
-    if (promptLeakPatterns.some(re => re.test(reply))) {
+    const headerHits = leakHeaders.filter(re => re.test(reply)).length;
+    if (leakBoxChar.test(reply) || headerHits >= 2) {
       console.warn('[Bjorn] prompt-leak guardrail triggered; replacing reply');
       reply = "I'm Bjørn, your Denmark guide. What would you like to know about moving here?";
     }
@@ -877,11 +889,15 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       // URLs render as label + hostname (still readable, no clickable anchor).
       .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, (m, label, url) => {
         const ALLOW = ['borger.dk','skat.dk','virk.dk','sundhed.dk','siri.dk','nyidanmark.dk','um.dk','udlaendingenaevnet.dk','domstol.dk','advokatsamfundet.dk','drc.ngo','ois.dk','nemkonto.dk','cpr.dk','jobnet.dk','rejseplanen.dk','workindenmark.dk','positivlisten.dk','studieskolen.dk','clavis.org','kollegierneskontor.dk','boligportal.dk','lejebolig.dk','andelsbolig.dk','ankommer.org','wikipedia.org','dr.dk','dst.dk','politi.dk','atp.dk','eboks.dk','mitid.dk','bibliotek.dk'];
+        // escapeHtml ran first, so any & in the URL is now &amp;. Restore it
+        // before parsing and before setting href so official links with query
+        // strings stay valid and clickable.
+        const cleanUrl = url.replace(/&amp;/g, '&');
         let host = '';
-        try { host = new URL(url).hostname.toLowerCase(); } catch (e) { return label; }
+        try { host = new URL(cleanUrl).hostname.toLowerCase(); } catch (e) { return label; }
         const safe = ALLOW.some(h => host === h || host.endsWith('.' + h));
         if (!safe) return `${label} (${host})`;
-        return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color:var(--nordic-blue)" title="${host}">${label} ↗</a>`;
+        return `<a href="${cleanUrl.replace(/&/g, '&amp;')}" target="_blank" rel="noopener noreferrer" style="color:var(--nordic-blue)" title="${host}">${label} ↗</a>`;
       })
       .replace(/\n\n/g, '<br><br>')
       .replace(/\n/g, '<br>');
@@ -890,7 +906,11 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
   /* ── SHOW THINKING ───────────────────────────────────── */
   const showThinking = (show) => {
     const el = document.getElementById('bjorn-thinking');
-    if (el) el.classList.toggle('hidden', !show);
+    if (el) {
+      el.classList.toggle('hidden', !show);
+      // Drop any leftover rate-limit hint so it cannot linger into the next turn.
+      if (!show) el.querySelector('.thinking-hint')?.remove();
+    }
   };
 
   /* Client-side prompt-injection / off-topic guard.
@@ -951,8 +971,18 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     if (!message.trim()) return;
     // Block overlapping calls — the root cause of the "goes off after 3-5 messages" bug.
     // Parallel API calls corrupt conversation history AND hit Groq's token-rate limit.
-    if (isProcessing) return;
+    if (isProcessing) {
+      // Subtle cue instead of a silent no-op when a second send is attempted.
+      const thinkEl = document.getElementById('bjorn-thinking');
+      if (thinkEl && !thinkEl.classList.contains('hidden')) {
+        thinkEl.style.transition = 'opacity 120ms';
+        thinkEl.style.opacity = '0.5';
+        setTimeout(() => { thinkEl.style.opacity = ''; }, 180);
+      }
+      return;
+    }
 
+    const myGen = _genId; // if the panel is closed mid-request, _genId changes and we drop the reply
     setProcessing(true);
 
     const input = document.getElementById('bjorn-input');
@@ -990,27 +1020,42 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       } else if (apiKey || PROXY_URL) {
         // Either a Cloudflare worker proxy OR a direct apiKey is enough —
         // callGroq picks the right path internally via its useProxy check.
-        reply = await callGroq(message);
+        reply = await callGroq(message, 0, myGen);
       } else {
         // Simulate thinking delay for better UX
         await new Promise(r => setTimeout(r, 800 + Math.random() * 600));
         reply = getOfflineResponse(message);
       }
       showThinking(false);
+      if (myGen !== _genId) {
+        // Panel was closed mid-request. callGroq already committed this turn to
+        // history + storage, so abandon the unseen exchange to keep history and
+        // the model's context in sync with what the user actually saw.
+        if (conversationHistory[conversationHistory.length - 1]?.role === 'assistant') {
+          conversationHistory.pop();
+          if (conversationHistory[conversationHistory.length - 1]?.role === 'user') conversationHistory.pop();
+          saveHistory();
+        }
+        return;
+      }
       renderMessage(reply, 'bjorn');
       // Fire live stat counter — every answered question counts
       window.dispatchEvent(new Event('bjornMessageSent'));
     } catch (err) {
       showThinking(false);
+      // Roll back any unanswered user turn (pushed in callGroq before the fetch)
+      // so a failed message never leaks into the next request's context. Covers
+      // every failure path — network "Failed to fetch", JSON parse errors, and
+      // aborts — not just timeouts.
+      if (conversationHistory.length &&
+          conversationHistory[conversationHistory.length - 1]?.role === 'user' &&
+          conversationHistory[conversationHistory.length - 1]?.content === message) {
+        conversationHistory.pop();
+      }
+      // If the panel was closed while waiting, don't render into a hidden panel.
+      if (myGen !== _genId) return;
       let errorMsg = '❌ ';
       if (err.name === 'AbortError') {
-        // Request timed out — the user message was pushed in callGroq before
-        // the fetch but never popped because the fetch threw before the
-        // !response.ok rollback ran. Pop it now so the next call doesn't
-        // resend an unanswered turn as part of conversationHistory context.
-        if (conversationHistory.length && conversationHistory[conversationHistory.length - 1].role === 'user') {
-          conversationHistory.pop();
-        }
         const offline = getOfflineResponse(message);
         renderMessage(offline + '\n\n*Note: Bjørn took too long to respond. Showing a cached answer — try again if you need his full reasoning.*', 'bjorn');
       } else if (/\b413\b|too\s+large|too\s+long|context[_\s]length|maximum\s+context|request entity/i.test(err.message)) {
@@ -1025,6 +1070,10 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       } else if (/\b401\b/.test(err.message) || err.message.includes('invalid_api_key')) {
         errorMsg += 'Bjørn is temporarily unavailable right now. Please try again in a little while.';
         renderMessage(errorMsg, 'bjorn');
+      } else if (/\b403\b/.test(err.message) || /origin not allowed/i.test(err.message)) {
+        // Some in-app browsers send a blocked/empty Origin and get a 403 from the
+        // proxy. Point the user at a real browser instead of a silent failure.
+        renderMessage("🛡️ Bjørn can't be reached from inside this app's browser. Please open ankommer.org directly in Safari or Chrome, then ask again.", 'bjorn');
       } else if (/\b429\b/.test(err.message) || err.message.toLowerCase().includes('rate limit') || err.message.includes('rate_limit') || err.message.includes('tokens per min')) {
         // All models exhausted — give useful offline answer so user always gets something
         const offline = getOfflineResponse(message);
@@ -1039,8 +1088,10 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
         renderMessage(offline + '\n\n*Note: Bjørn hit a snag — showing a cached answer. Try again in a moment!*', 'bjorn');
       }
     } finally {
-      // Always re-enable input — even if the API call threw or timed out
-      setProcessing(false);
+      // Re-enable input, but only if this send is still the current one. If the
+      // panel was closed (which bumps _genId and already reset state), a stale
+      // send must not unlock the UI for a newer send started after the close.
+      if (myGen === _genId) setProcessing(false);
     }
   };
 
@@ -1061,6 +1112,15 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
 
   const open = () => {
     const widget = document.getElementById('bjorn-widget');
+    // Already open (e.g. an "Ask Bjørn" button pressed mid-session): just make
+    // sure it is visible and scrolled, without stacking a second ESC handler or
+    // focus trap on top of the existing ones.
+    if (isOpen) {
+      if (widget) widget.classList.remove('closed');
+      const m = document.getElementById('bjorn-messages');
+      if (m) m.scrollTop = m.scrollHeight;
+      return;
+    }
     if (widget) widget.classList.remove('closed');
     isOpen = true;
     // Escape behaviour: when full screen, the first Escape shrinks back to the
@@ -1159,6 +1219,12 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
   const close = () => {
     const widget = document.getElementById('bjorn-widget');
     if (!widget) return;
+    // Abort any in-flight request and free the UI so reopening is never stuck
+    // behind a request the user already gave up on.
+    _genId++;                     // discard any reply still in flight
+    if (_activeController) { try { _activeController.abort(); } catch (e) {} _activeController = null; }
+    setProcessing(false);
+    showThinking(false);
     // Cancel any in-flight full-screen zoom so a lingering .fs-animating class
     // can't leave the transform-pin disabled after the panel is hidden.
     clearTimeout(widget._fsAnimTimer);
@@ -1175,7 +1241,7 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
     // Reset any keyboard-adjusted inline styles (Visual Viewport API)
     const panelEl = document.getElementById('bjorn-panel');
-    if (panelEl) { panelEl.style.bottom = ''; panelEl.style.maxHeight = ''; }
+    if (panelEl) { panelEl.style.bottom = ''; panelEl.style.maxHeight = ''; panelEl.style.height = ''; }
     // Remove mobile backdrop + scroll lock
     document.getElementById('mobile-overlay')?.classList.remove('visible');
     document.body.style.overflow = '';
@@ -1219,8 +1285,12 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
     // returns focus to the toggle button the user just pressed. Don't refocus
     // the input on collapse — it steals focus from a keyboard user and re-pops
     // the mobile soft keyboard.
-    if (isFull) document.getElementById('bjorn-input')?.focus({ preventScroll: true });
-    else document.getElementById('bjorn-fullscreen')?.focus({ preventScroll: true });
+    // Do not auto-focus the input on touch / small screens — it pops the soft
+    // keyboard and reflows the panel (same reasoning as open()).
+    const _skipAutoFocus = window.matchMedia('(max-width: 600px)').matches
+                        || window.matchMedia('(pointer: coarse)').matches;
+    if (isFull && !_skipAutoFocus) document.getElementById('bjorn-input')?.focus({ preventScroll: true });
+    else if (!isFull) document.getElementById('bjorn-fullscreen')?.focus({ preventScroll: true });
   };
 
   /* ── SET USER PROFILE ────────────────────────────────── */
@@ -1280,6 +1350,14 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       translateSend.addEventListener('click', () => {
         const docText = document.getElementById('bjorn-doc-text');
         if (!docText || !docText.value.trim()) return;
+        // If Bjørn is already answering, sendMessage() below would no-op AND we
+        // would have wiped the pasted text. Keep the paste, ask the user to wait.
+        if (isProcessing) {
+          const orig = translateSend.textContent;
+          translateSend.textContent = 'One moment…';
+          setTimeout(() => { translateSend.textContent = orig; }, 1600);
+          return;
+        }
         const lang = window.currentLang || 'en';
         const prompts = {
           en: `I received this Danish document/letter and need help understanding it. Please translate it and tell me exactly what action I need to take, if any:\n\n---\n${docText.value.trim()}\n---`,
@@ -1362,25 +1440,47 @@ I'm currently in offline / fallback mode (no internet, the AI service is unreach
       const onViewportResize = () => {
         if (!isOpen) return;
         const panel = document.getElementById('bjorn-panel');
-        if (!panel || window.innerWidth > 480) return;
+        // Align with the rest of the mobile logic (600px / coarse pointer), not
+        // 480px — large phones and landscape phones were being skipped, leaving
+        // the composer under the keyboard.
+        const isMobile = window.matchMedia('(max-width: 600px)').matches
+                      || window.matchMedia('(pointer: coarse)').matches;
+        if (!panel || !isMobile) return;
         const vv = window.visualViewport;
         // keyboardH > 0 when the soft keyboard is open (layout viewport minus visual)
         const keyboardH = Math.max(0, window.innerHeight - vv.height);
+        const w = document.getElementById('bjorn-widget');
+        const isFull = !!(w && w.classList.contains('fullscreen'));
         if (keyboardH > 50) {
-          // Float panel above keyboard — add a small 8px gap
-          panel.style.bottom = (keyboardH + 8) + 'px';
-          // Limit panel height to the remaining visible area (minus ~56px for status bar)
-          panel.style.maxHeight = Math.max(200, vv.height - 56) + 'px';
+          if (isFull) {
+            // Full screen pins height to the whole viewport; drive it from the
+            // visible area instead so the composer stays above the keyboard.
+            panel.style.bottom = ''; // clear any card-mode offset left over
+            panel.style.height = vv.height + 'px';
+            panel.style.maxHeight = vv.height + 'px';
+          } else {
+            // Float panel above keyboard — add a small 8px gap
+            panel.style.bottom = (keyboardH + 8) + 'px';
+            // Limit panel height to the remaining visible area (minus ~56px for status bar)
+            panel.style.maxHeight = Math.max(200, vv.height - 56) + 'px';
+          }
         } else {
           // Keyboard dismissed — let CSS handle positioning
           panel.style.bottom = '';
           panel.style.maxHeight = '';
+          panel.style.height = '';
         }
-        // Always scroll messages to the latest reply
+        // Keep the latest reply in view, but only if the user is already near
+        // the bottom, so we don't yank them down while they scroll up to read
+        // earlier messages with the keyboard open.
         const msgs = document.getElementById('bjorn-messages');
-        if (msgs) requestAnimationFrame(() => { msgs.scrollTop = msgs.scrollHeight; });
+        if (msgs) {
+          const nearBottom = msgs.scrollHeight - msgs.scrollTop - msgs.clientHeight < 120;
+          if (nearBottom) requestAnimationFrame(() => { msgs.scrollTop = msgs.scrollHeight; });
+        }
       };
       window.visualViewport.addEventListener('resize', onViewportResize);
+      window.visualViewport.addEventListener('scroll', onViewportResize);
     }
   };
 

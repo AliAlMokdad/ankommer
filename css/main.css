@@ -3690,10 +3690,15 @@ body:has(.bjorn-widget.fullscreen) .pwa-install-banner { display: none; }
   .bjorn-close-btn { width: 44px !important; height: 44px !important; padding: 0 !important; }
   /* Bjørn input textarea — single-line, was 31px. Bump to 44 so it's
      tappable. line-height keeps text vertically centred. */
-  .bjorn-input-area textarea { min-height: 44px !important; line-height: 1.5; padding: 12px 14px; }
+  .bjorn-input-area textarea { min-height: 44px !important; line-height: 1.5; padding: 12px 14px; font-size: 16px !important; }
+  /* 16px minimum kills iOS Safari's auto-zoom-on-focus, which was zooming the
+     whole page and reflowing the panel the instant the chat box was tapped. */
+  .bjorn-doc-textarea { font-size: 16px !important; }
   /* Quick-prompt chips: white-space:nowrap + tight padding meant a 21px
      tall pill. Force a comfortable hit area. */
   .quick-btn { padding: 12px 14px !important; min-height: 44px !important; }
+  /* Send button was 36px, under the 44px minimum tap target on phones. */
+  .bjorn-send { width: 44px !important; height: 44px !important; }
   /* Wizard close button — explicit 44 not just min, since it's in an
      absolute position context. */
   .wizard-close { width: 44px !important; height: 44px !important; }

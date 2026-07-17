@@ -32,6 +32,7 @@ const Calculators = (() => {
       lessThanMonth:'less than a month', month:'month', months:'months', years:'years', yearsAfter:'After', yearsResidence:'years of residence',
       calNoDate:'Please enter your arrival date first.', calBadDate:'That date doesn\'t look valid. Please pick again.',
       calOutOfRange:'Please pick a date within the next 50 years.', calDone:'Calendar downloaded',
+      calDownloadGuide:'Open ankommer.org in Safari or Chrome, then try saving the calendar again.',
       arrivalOutOfRange:'Please pick an arrival date within the last/next 50 years.',
       arrivalInvalid:'That date doesn\'t look valid. Please pick again.',
       apt_room:'Room / flatshare', apt_studio:'Studio', apt_1bed:'1-bedroom', apt_2bed:'2-bedroom', apt_3bed:'3+ bedroom',
@@ -171,6 +172,98 @@ const Calculators = (() => {
   };
   const DATE_LOCALE = { en:'en-GB', fr:'fr-FR', ar:'ar', es:'es-ES', da:'da-DK', de:'de-DE', uk:'uk-UA', pl:'pl-PL', ur:'ur', fa:'fa-IR' };
   const dateLocale = () => DATE_LOCALE[window.currentLang || 'en'] || 'en-GB';
+
+  const LocalDownloadHelper = (() => {
+    const IN_APP_UA = /FBAN|FBAV|Instagram|Messenger|LinkedInApp|TikTok|Twitter|Snapchat|Line\/|Pinterest|GSA/i;
+    const defaultGuidance = 'Open ankommer.org in Safari or Chrome, then try saving again.';
+
+    const isIOS = () => {
+      const ua = navigator.userAgent || '';
+      return /iPad|iPhone|iPod/i.test(ua) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    };
+
+    const needsBrowserGuidance = () =>
+      IN_APP_UA.test(navigator.userAgent || '') || isIOS();
+
+    const revokeObjectURLLater = (url) => {
+      let done = false;
+      let timer = null;
+
+      const cleanup = () => {
+        if (done) return;
+        done = true;
+        URL.revokeObjectURL(url);
+        window.removeEventListener('pagehide', cleanup);
+        document.removeEventListener('visibilitychange', onVisibilityChange);
+        if (timer) clearTimeout(timer);
+      };
+
+      const onVisibilityChange = () => {
+        if (document.visibilityState === 'hidden') cleanup();
+      };
+
+      timer = setTimeout(cleanup, 60000);
+      window.addEventListener('pagehide', cleanup, { once: true });
+      document.addEventListener('visibilitychange', onVisibilityChange);
+    };
+
+    const download = async (blob, {
+      filename,
+      mimeType,
+      title,
+      text,
+      guidanceMessage
+    } = {}) => {
+      const safeFilename = filename || 'download';
+      const type = mimeType || blob.type || 'application/octet-stream';
+
+      // Prefer Web Share only on touch devices; on a laptop keep the direct
+      // download (a.download works there and a share sheet would be a regression).
+      const isTouch = window.matchMedia('(pointer: coarse)').matches || window.matchMedia('(max-width: 600px)').matches;
+      if (isTouch && typeof File === 'function' && navigator.share && navigator.canShare) {
+        const file = new File([blob], safeFilename, { type });
+        let canShareFiles = false;
+        try { canShareFiles = navigator.canShare({ files: [file] }); } catch (_) {}
+
+        if (canShareFiles) {
+          try {
+            await navigator.share({
+              files: [file],
+              title: title || safeFilename,
+              text: text || ''
+            });
+            return { ok: true, method: 'share' };
+          } catch (err) {
+            if (err?.name === 'AbortError') return { ok: false, reason: 'cancelled' };
+            throw err;
+          }
+        }
+      }
+
+      if (needsBrowserGuidance()) {
+        return {
+          ok: false,
+          reason: 'guidance',
+          message: guidanceMessage || defaultGuidance
+        };
+      }
+
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = safeFilename;
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      revokeObjectURLLater(url);
+      return { ok: true, method: 'download' };
+    };
+
+    return { download };
+  })();
+  const downloadHelper = () => window.AnkommerDownloadHelper || LocalDownloadHelper;
 
   /* ══════════════════════════════════════════════════════
      1. SALARY CALCULATOR — Real Danish Tax Logic (2025 rates)
@@ -943,7 +1036,7 @@ const Calculators = (() => {
       setTimeout(() => msgEl.remove(), 4000);
     };
 
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', async () => {
       const dateInput = document.getElementById('cal-arrival-date');
       const v = dateInput?.value;
       if (!v) {
@@ -968,14 +1061,25 @@ const Calculators = (() => {
       const lang = window.currentLang || 'en';
       const ics = buildICS(arrival, lang);
       const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
-      const url  = URL.createObjectURL(blob);
-      const a    = document.createElement('a');
-      a.href     = url;
-      a.download = `denmark-deadlines-${icsDate(arrival)}.ics`;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      const filename = `denmark-deadlines-${icsDate(arrival)}.ics`;
+      let result;
+      try {
+        result = await downloadHelper().download(blob, {
+          filename,
+          mimeType: 'text/calendar;charset=utf-8',
+          title: 'ANKOMMER Denmark Deadline Calendar',
+          text: 'Save these Denmark deadline reminders.',
+          guidanceMessage: t('calDownloadGuide')
+        });
+      } catch (err) {
+        console.warn('Calendar download failed:', err);
+        showCalMsg(err.message || t('calDownloadGuide'));
+        return;
+      }
+      if (!result?.ok) {
+        if (result?.reason === 'guidance') showCalMsg(result.message, 'info');
+        return;
+      }
       // Visible confirmation
       const orig = btn.textContent;
       btn.textContent = '✓ ' + t('calDone');
