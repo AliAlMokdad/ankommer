@@ -430,6 +430,10 @@ const initProgressIO = () => {
   };
 
   exportBtn?.addEventListener('click', async () => {
+    // Confirmations go through the on-brand toast, NEVER the button label.
+    // Stuffing a full sentence into a nowrap button ballooned it well past the
+    // phone screen width, which broke the layout on mobile. The label stays put.
+    const toast = (msg, type) => { window.App?.showToast?.(msg, type); };
     try {
       const result = await ProgressIO.download({
         guidanceMessage: progressText(
@@ -438,33 +442,29 @@ const initProgressIO = () => {
         )
       });
       if (!result?.ok) {
-        if (result?.reason === 'guidance') alert(result.message);
-        else if (result?.reason !== 'cancelled') alert(progressText(
+        if (result?.reason === 'cancelled') return; // user dismissed the share sheet
+        toast(result?.message || progressText(
           'footer_progress_export_err',
-          'Could not save your plan here. Please keep this page open and try again in Safari or Chrome.'
-        ));
+          'Could not save your plan here. Please try again in Safari or Chrome.'
+        ), 'warning');
         return;
       }
-      // Cheap visible confirmation — no toast component needed
-      const orig = exportBtn.textContent;
-      if (result.method === 'copy' || result.method === 'manual-copy') {
-        exportBtn.textContent = result.method === 'copy'
-          ? progressText(
-              'footer_progress_copied',
-              'Your plan is copied to the clipboard. Paste it somewhere safe to keep it.'
-            )
-          : 'Your plan is shown below. Copy it somewhere safe before closing this page.';
-        setTimeout(() => { exportBtn.textContent = orig; }, 4000);
-        return;
+      if (result.method === 'copy') {
+        toast(progressText('footer_progress_copied', 'Plan copied. Paste it somewhere safe to keep it.'), 'success');
+      } else if (result.method === 'manual-copy') {
+        // The panel already shows the plan text, so a toast would be redundant.
+      } else {
+        // Real file save, or the share sheet completed: a short, fitting confirmation.
+        const orig = exportBtn.textContent;
+        exportBtn.textContent = '✓ ' + (i18n.t('footer_progress_done') || 'Saved');
+        setTimeout(() => { exportBtn.textContent = orig; }, 2000);
       }
-      exportBtn.textContent = '✓ ' + (i18n.t('footer_progress_done') || 'Saved');
-      setTimeout(() => { exportBtn.textContent = orig; }, 2000);
     } catch (e) {
       console.warn('Export failed:', e);
-      alert(progressText(
+      toast(progressText(
         'footer_progress_export_err',
-        'Could not save your plan here. Please keep this page open and try again in Safari or Chrome.'
-      ));
+        'Could not save your plan here. Please try again in Safari or Chrome.'
+      ), 'warning');
     }
   });
 
