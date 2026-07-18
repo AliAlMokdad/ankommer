@@ -292,6 +292,9 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 .icon-btn svg { width: 18px; height: 18px; }
 .icon-btn:hover { background: var(--bg-secondary); }
+/* Telegram link in the nav: a plain <a> styled exactly like the other icon-btns
+   (monochrome, matches search/theme). It is an external link to the Bjørn bot. */
+.telegram-nav-link { text-decoration: none; }
 
 /* ── 5. LOADING SCREEN ─────────────────────────────── */
 #loader {
@@ -5185,4 +5188,48 @@ h3 { letter-spacing: -0.012em; }
 @media (prefers-reduced-motion: reduce) {
   .reset-dialog { animation: none; }
   .reset-btn:hover { transform: none; }
+}
+
+/* ── Telegram nav link fit on phones ──────────────────────────────────────────
+   The nav bar has room for the language pill, search, the Telegram link and the
+   hamburger, but not also the theme toggle at phone widths. So on phones the
+   theme toggle moves into the hamburger drawer (see .rail-settings) and the
+   standalone nav toggle is hidden; the (oversized) wordmark is right-sized a
+   little so everything sits comfortably with 44px tap targets intact. */
+@media (max-width: 600px) {
+  .nav-right #theme-toggle { display: none; }   /* moves into the drawer on phones */
+}
+@media (max-width: 412px) { .nav-logo { font-size: 1.14rem; } }
+@media (max-width: 360px) { .nav-logo { font-size: 1.02rem; } }
+@media (max-width: 340px) { .nav-logo { font-size: 0.82rem; } .nav-right { gap: 1px; } }
+
+/* Theme toggle relocated into the hamburger drawer on phones (see above). Hidden
+   on desktop, where the nav toggle is used. Styled as a settings row at the
+   bottom of the rail, below the XP block. */
+.rail-settings { display: none; }
+@media (max-width: 600px) {
+  .rail-settings {
+    display: block;
+    margin: 12px 12px 10px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .rail-theme-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg-card);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background var(--t-fast);
+  }
+  .rail-theme-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+  .rail-theme-btn:hover { background: var(--bg-secondary); }
 }
