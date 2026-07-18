@@ -5071,3 +5071,71 @@ h3 { letter-spacing: -0.012em; }
 @media (prefers-reduced-motion: reduce) {
   #rain-canvas { display: none !important; }
 }
+
+/* ── "Start over" confirm dialog ─────────────────────────────
+   Reuses the site's modal language (see .search-overlay). Fully
+   theme-aware via tokens, centered, RTL-safe (flex mirrors with
+   dir), and keyboard/screen-reader friendly. */
+.reset-overlay {
+  position: fixed; inset: 0; z-index: 9500;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.reset-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.55);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+}
+.reset-dialog {
+  position: relative; z-index: 1;
+  width: min(440px, 100%);
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: 18px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+  padding: 24px 24px 20px;
+  animation: wiz-modal-in 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+.reset-dialog-title {
+  margin: 0 0 10px;
+  font-size: 1.2rem; font-weight: 700; line-height: 1.25;
+  color: var(--text);
+}
+.reset-dialog-body {
+  margin: 0 0 20px;
+  font-size: 0.95rem; line-height: 1.55;
+  color: var(--text-muted);
+}
+.reset-dialog-actions {
+  display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap;
+}
+.reset-btn {
+  padding: 10px 18px; border-radius: 999px;
+  font-size: 0.9rem; font-weight: 600; font-family: inherit;
+  cursor: pointer; min-height: 44px;
+  border: 1px solid var(--border-strong);
+  transition: background 200ms ease, border-color 200ms ease,
+              color 200ms ease, transform 200ms ease;
+}
+.reset-btn-cancel {
+  background: var(--bg-secondary); color: var(--text);
+}
+.reset-btn-cancel:hover { border-color: var(--text-faint); transform: translateY(-1px); }
+.reset-btn-confirm {
+  background: transparent; color: var(--brand-red);
+  border-color: var(--brand-red);
+}
+.reset-btn-confirm:hover {
+  /* Fixed #C60C30, not the token: dark theme lifts --brand-red to #FF4D6A,
+     where white text is only ~3.2:1 (below AA). #C60C30 keeps white text at
+     ~6:1 in both themes. Light --brand-red already equals #C60C30. */
+  background: #C60C30; color: #fff;
+  transform: translateY(-1px);
+}
+.reset-btn:disabled { opacity: 0.55; cursor: default; transform: none; }
+.reset-btn:focus-visible { outline: 2px solid var(--nordic-blue); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  .reset-dialog { animation: none; }
+  .reset-btn:hover { transform: none; }
+}

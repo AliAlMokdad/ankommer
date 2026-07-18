@@ -12,6 +12,7 @@ desktop.ini
 
 # Claude / agent state
 .claude/
+.autoreview/
 
 # Logs
 *.log

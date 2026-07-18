@@ -300,7 +300,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@1,400;1,600&family=DM+Mono:wght@400;500&family=Cairo:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css?v=74" />
+  <link rel="stylesheet" href="css/main.css?v=76" />
 </head>
 <body>
 
@@ -987,17 +987,15 @@
       </nav>
     </div>
 
-    <!-- Tier 2 — Save / Restore your plan -->
-    <div class="footer-progress-row" role="region" aria-label="Save your progress">
+    <!-- Tier 2 — Progress: auto-saved locally, with one-tap Start over -->
+    <div class="footer-progress-row" role="region" aria-label="Your saved progress">
       <div class="footer-progress-text">
         <span class="footer-progress-icon" aria-hidden="true">💾</span>
-        <span class="footer-progress-label" data-i18n="footer_progress_label">Switching device or worried about losing your progress?</span>
+        <span class="footer-progress-label" data-i18n="footer_progress_label">Your progress saves automatically on this device.</span>
       </div>
       <div class="footer-progress-actions">
-        <button type="button" class="footer-progress-btn" id="progress-export-btn" data-i18n="footer_progress_export">⬇ Download my plan</button>
-        <button type="button" class="footer-progress-btn" id="progress-import-btn" data-i18n="footer_progress_import">⬆ Restore from file</button>
+        <button type="button" class="footer-progress-btn" id="progress-reset-btn" data-i18n="footer_progress_reset" data-i18n-aria="footer_progress_reset_aria" aria-label="Start over and clear my saved progress">↺ Start over</button>
       </div>
-      <input type="file" id="progress-import-file" accept="application/json,.json" aria-label="Restore plan from file" hidden />
     </div>
 
     <!-- Tier 3 — Signature + Legal -->
@@ -1013,7 +1011,7 @@
              whenever a site keeps any user state in localStorage. -->
         <details class="footer-privacy">
           <summary data-i18n="footer_privacy_title">Privacy &amp; your data</summary>
-          <p data-i18n="footer_privacy_body">ANKOMMER stores your language, theme, completed tasks, Viking Points, and (optional) wizard answers locally in your browser — never sent to a server. We use no advertising cookies and no third-party tracking. The AI agents on this site only gather and organize public data. They never collect, store, or share your personal data with anyone. Calculator, weather, and exchange-rate lookups call public APIs (Open-Meteo, exchange-rate API, Rejseplanen, DAWA, nyidanmark.dk links) which receive only the request data needed to answer. To clear everything, use your browser's clear-site-data tool, or the "Download my plan" / "Restore from file" buttons above.</p>
+          <p data-i18n="footer_privacy_body">ANKOMMER stores your language, theme, completed tasks, Viking Points, and (optional) wizard answers locally in your browser — never sent to a server. We use no advertising cookies and no third-party tracking. The AI agents on this site only gather and organize public data. They never collect, store, or share your personal data with anyone. Calculator, weather, and exchange-rate lookups call public APIs (Open-Meteo, exchange-rate API, Rejseplanen, DAWA, nyidanmark.dk links) which receive only the request data needed to answer. To reset your progress, use the "Start over" button above. To erase everything stored, use your browser's clear-site-data tool.</p>
         </details>
       </div>
       <div class="footer-bottom-right">
@@ -1166,7 +1164,7 @@
 <!-- v24: cache-busting query string forces a fresh fetch when we ship new JS,
      since /js/* historically had a 1-year immutable cache header. Bump the
      query string in lockstep with sw.js CACHE_NAME on every release. -->
-<script defer src="js/data.js?v=42"></script>
+<script defer src="js/data.js?v=44"></script>
 <script defer src="js/data-chapters-meta.js?v=31"></script>
 <!-- Removed prefetch tag: js/data-chapters.js is dynamically injected on
      first openChapter() call. The prefetch caused a duplicate fetch in
@@ -1176,7 +1174,7 @@
 <script defer src="js/bjorn.js?v=57"></script>
 <script defer src="js/calculators.js?v=39"></script>
 <script defer src="js/apis.js?v=32"></script>
-<script defer src="js/app.js?v=74"></script>
+<script defer src="js/app.js?v=76"></script>
 <!-- Shared backdrop for mobile modals (lang dropdown, Bjørn panel) -->
 <div id="mobile-overlay" class="mobile-overlay" aria-hidden="true"></div>
 </body>

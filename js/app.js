@@ -325,174 +325,137 @@ const safeSetItem = (key, value) => {
 const safeGetItem = (key, fallback = null) => {
   try { return localStorage.getItem(key) ?? fallback; } catch (e) { return fallback; }
 };
-
-/* ══════════════════════════════════════════════════════
-   PROGRESS EXPORT / IMPORT
-   ──────────────────────────────────────────────────────
-   localStorage gets wiped when users clear their browser, switch
-   devices, or use private mode. This lets them download a JSON
-   file ("ankommer-plan.json") and re-import it elsewhere.
-   No backend, no account, no cost.
-══════════════════════════════════════════════════════ */
-const PROGRESS_KEYS = [
-  'ankommer_lang', 'ankommer_theme', 'ankommer_xp',
-  'ankommer_tasks', 'ankommer_wizard', 'ankommer_profile',
-  'ankommer_roadmap_profile', 'ankommer_roadmap_dismissed',
-  'ankommer_pwa_dismissed', 'ankommer_last_visit'
-];
-
-const ProgressIO = {
-  // Build a portable snapshot of every ankommer_* localStorage entry
-  exportAll: () => {
-    const data = {};
-    PROGRESS_KEYS.forEach(k => {
-      const v = safeGetItem(k);
-      if (v !== null && v !== undefined) data[k] = v;
-    });
-    return {
-      ankommer_export: 1,                       // file format version
-      exportedAt: new Date().toISOString(),
-      lang: window.currentLang || 'en',
-      data
-    };
-  },
-
-  // Trigger a save or share of the snapshot
-  download: async (opts = {}) => {
-    try {
-      const payload = ProgressIO.exportAll();
-      const payloadText = JSON.stringify(payload, null, 2);
-      const blob = new Blob([payloadText], { type: 'application/json' });
-      const filename = `ankommer-plan-${new Date().toISOString().slice(0,10)}.json`;
-      return await AnkommerDownloadHelper.download(blob, {
-        filename,
-        mimeType: 'application/json',
-        title: 'ANKOMMER plan',
-        text: 'Save your ANKOMMER plan.',
-        copyText: payloadText,
-        ...opts
-      });
-    } catch (err) {
-      console.warn('Plan export failed:', err);
-      return {
-        ok: false,
-        reason: 'failed',
-        message: 'Could not save your plan here. Please keep this page open and try again in Safari or Chrome.'
-      };
-    }
-  },
-
-  // Read a user-supplied file and merge it into localStorage.
-  // Keys that already have a non-empty value are NOT overwritten unless
-  // `overwrite` is true — protects users from accidental data loss when
-  // they upload an older export onto a more recent state.
-  importFile: (file, { overwrite = false } = {}) => new Promise((resolve, reject) => {
-    if (!file) return reject(new Error('No file provided'));
-    if (file.size > 1_000_000) return reject(new Error('File too large (max 1 MB)'));
-    const reader = new FileReader();
-    reader.onerror = () => reject(new Error('Could not read file'));
-    reader.onload = () => {
-      try {
-        const json = JSON.parse(reader.result);
-        if (!json || json.ankommer_export !== 1 || !json.data) {
-          return reject(new Error('Not a valid ANKOMMER export'));
-        }
-        let restored = 0, skipped = 0;
-        Object.entries(json.data).forEach(([k, v]) => {
-          if (!PROGRESS_KEYS.includes(k)) return;            // ignore unknown keys
-          if (typeof v !== 'string') return;                  // safety: must be string
-          const existing = safeGetItem(k);
-          if (existing && !overwrite) { skipped++; return; }
-          safeSetItem(k, v);
-          restored++;
-        });
-        resolve({ restored, skipped, exportedAt: json.exportedAt });
-      } catch (e) {
-        reject(new Error('File is not valid JSON'));
-      }
-    };
-    reader.readAsText(file);
-  })
+// Mirror of safeSetItem for deletions: Safari private mode and disabled
+// storage throw on removeItem too, so every deletion goes through here.
+const safeRemoveItem = (key) => {
+  try { localStorage.removeItem(key); } catch (e) { /* ignore */ }
 };
 
-// Expose for inline UI handlers and DevTools
-window.ProgressIO = ProgressIO;
+/* ══════════════════════════════════════════════════════
+   PROGRESS: auto-saved locally, with one-tap Start over
+   ──────────────────────────────────────────────────────
+   Progress lives in localStorage and saves itself as the user
+   goes. There is no export or import: the only control is
+   "Start over", which clears the journey (points, tasks, wizard,
+   roadmap) while keeping language, theme and Björn chat.
+   No backend, no account, no cost.
+══════════════════════════════════════════════════════ */
+// The exact keys "Start over" clears. Preferences (lang, theme),
+// housekeeping (pwa_dismissed, last_visit, global counters) and the
+// Björn chat history are deliberately NOT in this list.
+const JOURNEY_RESET_KEYS = [
+  'ankommer_xp',
+  'ankommer_tasks',
+  'ankommer_tl_tasks',
+  'ankommer_wizard',
+  'ankommer_profile',
+  'ankommer_roadmap_profile',
+  'ankommer_roadmap_dismissed',
+  'ankommer_ratings'
+];
 
-// UI wiring for the footer Save / Restore buttons
-const initProgressIO = () => {
-  const exportBtn = document.getElementById('progress-export-btn');
-  const importBtn = document.getElementById('progress-import-btn');
-  const fileInput = document.getElementById('progress-import-file');
+const RESET_FLAG = 'ankommer_reset_done';
 
-  const progressText = (key, fallback) => {
-    const val = i18n.t(key);
-    return val && val !== key ? val : fallback;
+// Wipe the journey, then reload to a fresh home. A one-shot sessionStorage
+// flag survives the reload so the "Starting fresh" toast can show once the
+// new page has booted (a toast fired before reload would never appear).
+const resetJourney = () => {
+  JOURNEY_RESET_KEYS.forEach(k => safeRemoveItem(k));
+  try { sessionStorage.setItem(RESET_FLAG, '1'); } catch (_) {}
+  try {
+    if (window.location.hash) {
+      // Drop the #chapter-N hash so we land on a clean home view.
+      window.location.href = window.location.pathname + window.location.search;
+    } else {
+      window.location.reload();
+    }
+  } catch (_) {
+    window.location.reload();
+  }
+};
+window.resetJourney = resetJourney;
+
+// Footer "Start over" button + its on-brand confirm dialog.
+const initProgressReset = () => {
+  // Post-reset toast: show once, after the fresh page has settled. Everything
+  // is deferred into the timeout and individually guarded, so an init-time
+  // hiccup (i18n or App not ready yet) can never swallow the toast or strand
+  // the flag. The flag is cleared inside the timeout, right before showing.
+  try {
+    if (sessionStorage.getItem(RESET_FLAG)) {
+      setTimeout(() => {
+        try { sessionStorage.removeItem(RESET_FLAG); } catch (_) {}
+        let doneMsg = 'Starting fresh';
+        try { const m = i18n.t('footer_progress_reset_done'); if (m) doneMsg = m; } catch (_) {}
+        try { if (window.App && App.showToast) App.showToast(doneMsg, 'success'); } catch (_) {}
+      }, 600);
+    }
+  } catch (_) {}
+
+  const btn = document.getElementById('progress-reset-btn');
+  if (!btn) return;
+
+  let overlay = null;
+  let trap = null;
+  let escHandler = null;
+
+  const closeDialog = () => {
+    if (!overlay) return;
+    if (trap) { trap.deactivate(); trap = null; }
+    if (escHandler) { document.removeEventListener('keydown', escHandler, true); escHandler = null; }
+    overlay.remove();
+    overlay = null;
+    try { btn.focus(); } catch (_) {}
   };
 
-  exportBtn?.addEventListener('click', async () => {
-    // Confirmations go through the on-brand toast, NEVER the button label.
-    // Stuffing a full sentence into a nowrap button ballooned it well past the
-    // phone screen width, which broke the layout on mobile. The label stays put.
-    const toast = (msg, type) => { window.App?.showToast?.(msg, type); };
-    try {
-      const result = await ProgressIO.download({
-        guidanceMessage: progressText(
-          'footer_progress_download_guide',
-          'Open ankommer.org in Safari or Chrome, then try saving your plan again.'
-        )
-      });
-      if (!result?.ok) {
-        if (result?.reason === 'cancelled') return; // user dismissed the share sheet
-        toast(result?.message || progressText(
-          'footer_progress_export_err',
-          'Could not save your plan here. Please try again in Safari or Chrome.'
-        ), 'warning');
-        return;
-      }
-      if (result.method === 'copy') {
-        toast(progressText('footer_progress_copied', 'Plan copied. Paste it somewhere safe to keep it.'), 'success');
-      } else if (result.method === 'manual-copy') {
-        // The panel already shows the plan text, so a toast would be redundant.
-      } else {
-        // Real file save, or the share sheet completed: a short, fitting confirmation.
-        const orig = exportBtn.textContent;
-        exportBtn.textContent = '✓ ' + (i18n.t('footer_progress_done') || 'Saved');
-        setTimeout(() => { exportBtn.textContent = orig; }, 2000);
-      }
-    } catch (e) {
-      console.warn('Export failed:', e);
-      toast(progressText(
-        'footer_progress_export_err',
-        'Could not save your plan here. Please try again in Safari or Chrome.'
-      ), 'warning');
-    }
-  });
+  const openDialog = () => {
+    if (overlay) return;
+    const tr = (k, fb) => { const v = i18n.t(k); return v && v !== k ? v : fb; };
 
-  importBtn?.addEventListener('click', () => fileInput?.click());
+    overlay = document.createElement('div');
+    overlay.className = 'reset-overlay';
+    overlay.innerHTML =
+      '<div class="reset-backdrop" data-reset-cancel></div>' +
+      '<div class="reset-dialog" role="dialog" aria-modal="true" ' +
+      'aria-labelledby="reset-dialog-title" aria-describedby="reset-dialog-body">' +
+      '<h2 id="reset-dialog-title" class="reset-dialog-title"></h2>' +
+      '<p id="reset-dialog-body" class="reset-dialog-body"></p>' +
+      '<div class="reset-dialog-actions">' +
+      '<button type="button" class="reset-btn reset-btn-cancel" data-reset-cancel></button>' +
+      '<button type="button" class="reset-btn reset-btn-confirm"></button>' +
+      '</div></div>';
 
-  fileInput?.addEventListener('change', async (e) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    try {
-      // Ask before overwriting an active session
-      const hasState = !!safeGetItem('ankommer_xp') || !!safeGetItem('ankommer_tasks');
-      const overwrite = hasState
-        ? confirm(i18n.t('footer_progress_confirm') ||
-                  'Restoring will overwrite your current plan. Continue?')
-        : true;
-      if (!overwrite) { e.target.value = ''; return; }
+    // Text via textContent only: never inject translation strings as HTML.
+    overlay.querySelector('.reset-dialog-title').textContent = tr('footer_progress_reset_title', 'Start over?');
+    overlay.querySelector('.reset-dialog-body').textContent  = tr('footer_progress_reset_body', 'This clears your progress on this device. Your language, theme and Björn chat stay. This cannot be undone.');
+    const cancelBtn = overlay.querySelector('.reset-btn-cancel');
+    const confirmBtn = overlay.querySelector('.reset-btn-confirm');
+    cancelBtn.textContent = tr('footer_progress_reset_cancel', 'Cancel');
+    confirmBtn.textContent = tr('footer_progress_reset_confirm', 'Start over');
 
-      const result = await ProgressIO.importFile(file, { overwrite: true });
-      const msg = (i18n.t('footer_progress_restored') || 'Restored {n} items')
-                    .replace('{n}', result.restored);
-      alert(msg);
-      window.location.reload();
-    } catch (err) {
-      console.warn('Import failed:', err);
-      alert(i18n.t('footer_progress_import_err') || 'Could not read that file. Please choose a valid ANKOMMER plan export.');
-      e.target.value = '';
-    }
-  });
+    overlay.querySelectorAll('[data-reset-cancel]').forEach(el =>
+      el.addEventListener('click', closeDialog)
+    );
+    confirmBtn.addEventListener('click', () => {
+      confirmBtn.disabled = true;
+      cancelBtn.disabled = true;
+      resetJourney();
+    });
+
+    document.body.appendChild(overlay);
+
+    // Focus trap. FocusTrap wires Escape via onEscape; the capture-phase
+    // listener is a fallback in case focus ever lands outside the trap.
+    trap = FocusTrap(overlay, { onEscape: closeDialog });
+    trap.activate(btn);
+    escHandler = (e) => { if (e.key === 'Escape') { e.preventDefault(); closeDialog(); } };
+    document.addEventListener('keydown', escHandler, true);
+
+    // Default focus on Cancel: the safe choice for a destructive action.
+    setTimeout(() => { try { cancelBtn.focus(); } catch (_) {} }, 0);
+  };
+
+  btn.addEventListener('click', openDialog);
 };
 
 /* ── APP STATE ─────────────────────────────────────── */
@@ -3362,7 +3325,7 @@ document.addEventListener('DOMContentLoaded', () => {
   _try('initBeginBtn',     () => initBeginBtn());
   _try('initWizardClose',  () => initWizardClose());
   _try('initMobileSidebar',() => initMobileSidebar());
-  _try('initProgressIO',   () => initProgressIO());
+  _try('initProgressReset', () => initProgressReset());
 
   // Content
   _try('updateDailyFeed',       () => updateDailyFeed());
@@ -3396,6 +3359,15 @@ document.addEventListener('DOMContentLoaded', () => {
   _try('crossTabSync', () => {
     window.addEventListener('storage', (e) => {
       if (!e.key || !e.key.startsWith('ankommer_')) return;
+      // "Start over" in another tab removes the journey keys. Reload this tab so
+      // it adopts the fresh state, instead of letting stale in-memory data (a
+      // timeline tick, roadmap, wizard) rewrite a just-cleared key. Only
+      // resetJourney removes these keys, so a removal here unambiguously means a
+      // reset happened in another tab.
+      if (e.newValue === null && JOURNEY_RESET_KEYS.includes(e.key)) {
+        window.location.reload();
+        return;
+      }
       if (e.key === 'ankommer_xp') {
         const n = parseInt(e.newValue || '0', 10);
         AppState.xp = Number.isFinite(n) ? n : 0;
