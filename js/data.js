@@ -6,6 +6,9 @@
 /* ── TRANSLATIONS ──────────────────────────────────── */
 const TRANSLATIONS = {
   en: {
+    tg_qr_label: "Bjørn on Telegram",
+    tg_qr_open: "Open in Telegram",
+    tg_qr_aria: "Chat with Bjørn on Telegram",
     loader_sub: "Preparing your Denmark…",
     nav_progress: "Your journey",
     nav_bjorn: "Ask Bjørn",
@@ -189,6 +192,9 @@ const TRANSLATIONS = {
     footer_ch0: "Before You Land", footer_ch1: "First 72 Hours", footer_ch2: "Papers & Legal", footer_ch3: "Housing", footer_all_chapters: "Browse all 16 chapters →",
   },
   fr: {
+    tg_qr_label: "Bjørn sur Telegram",
+    tg_qr_open: "Ouvrir dans Telegram",
+    tg_qr_aria: "Discuter avec Bjørn sur Telegram",
     loader_sub: "Préparation de votre Danemark…",
     nav_progress: "Votre parcours",
     nav_bjorn: "Demander à Bjørn",
@@ -372,6 +378,9 @@ const TRANSLATIONS = {
     footer_ch0: "Avant d'Atterrir", footer_ch1: "Les 72 Premières Heures", footer_ch2: "Documents & Légal", footer_ch3: "Logement", footer_all_chapters: "Parcourir les 16 chapitres →",
   },
   ar: {
+    tg_qr_label: "بيورن على تيليجرام",
+    tg_qr_open: "افتح في تيليجرام",
+    tg_qr_aria: "الدردشة مع بيورن على تيليجرام",
     loader_sub: "جارٍ تحضير دليلك في الدنمارك…",
     nav_progress: "رحلتك",
     nav_bjorn: "اسأل بيورن",
@@ -555,6 +564,9 @@ const TRANSLATIONS = {
     footer_ch0: "قبل وصولك", footer_ch1: "أول 72 ساعة", footer_ch2: "الوثائق والشؤون القانونية", footer_ch3: "السكن", footer_all_chapters: "← تصفح جميع الـ 16 فصلاً",
   },
   es: {
+    tg_qr_label: "Bjørn en Telegram",
+    tg_qr_open: "Abrir en Telegram",
+    tg_qr_aria: "Chatea con Bjørn en Telegram",
     loader_sub: "Preparando tu Dinamarca…",
     nav_progress: "Tu viaje",
     nav_bjorn: "Pregunta a Bjørn",
@@ -738,6 +750,9 @@ const TRANSLATIONS = {
     footer_ch0: "Antes de Llegar", footer_ch1: "Las Primeras 72 Horas", footer_ch2: "Papeles y Legal", footer_ch3: "Vivienda", footer_all_chapters: "Ver los 16 capítulos →",
   },
   da: {
+    tg_qr_label: "Bjørn på Telegram",
+    tg_qr_open: "Åbn i Telegram",
+    tg_qr_aria: "Chat med Bjørn på Telegram",
     loader_sub: "Forbereder dit Danmark…",
     nav_progress: "Din rejse",
     nav_bjorn: "Spørg Bjørn",
@@ -923,6 +938,9 @@ const TRANSLATIONS = {
 
   /* ── GERMAN ──────────────────────────────────────── */
   de: {
+    tg_qr_label: "Bjørn auf Telegram",
+    tg_qr_open: "In Telegram öffnen",
+    tg_qr_aria: "Mit Bjørn auf Telegram chatten",
     loader_sub: "Dein Dänemark wird vorbereitet…",
     nav_progress: "Deine Reise",
     nav_bjorn: "Bjørn fragen",
@@ -1108,6 +1126,9 @@ const TRANSLATIONS = {
 
   /* ── UKRAINIAN ───────────────────────────────────── */
   uk: {
+    tg_qr_label: "Бйорн у Telegram",
+    tg_qr_open: "Відкрити в Telegram",
+    tg_qr_aria: "Спілкуйтеся з Бйорном у Telegram",
     loader_sub: "Готуємо твою Данію…",
     nav_progress: "Твоя подорож",
     nav_bjorn: "Запитати Бйорна",
@@ -1293,6 +1314,9 @@ const TRANSLATIONS = {
 
   /* ── POLISH ──────────────────────────────────────── */
   pl: {
+    tg_qr_label: "Bjørn na Telegramie",
+    tg_qr_open: "Otwórz w Telegramie",
+    tg_qr_aria: "Czatuj z Bjørnem na Telegramie",
     loader_sub: "Przygotowujemy Twoją Danię…",
     nav_progress: "Twoja podróż",
     nav_bjorn: "Zapytaj Bjørna",
@@ -1477,6 +1501,9 @@ const TRANSLATIONS = {
   }
 ,
   ur: {
+    tg_qr_label: "ٹیلیگرام پر بیورن",
+    tg_qr_open: "ٹیلیگرام میں کھولیں",
+    tg_qr_aria: "ٹیلیگرام پر بیورن سے بات کریں",
     loader_sub: "آپ کا ڈنمارک تیار ہو رہا ہے…",
     nav_progress: "آپ کا سفر",
     nav_bjorn: "بیورن سے پوچھیں",
@@ -1661,6 +1688,9 @@ const TRANSLATIONS = {
   }
 ,
   fa: {
+    tg_qr_label: "بیورن در تلگرام",
+    tg_qr_open: "باز کردن در تلگرام",
+    tg_qr_aria: "با بیورن در تلگرام گفتگو کنید",
     loader_sub: "دانمارک شما در حال آماده‌سازی است…",
     nav_progress: "سفر شما",
     nav_bjorn: "از بیورن بپرسید",

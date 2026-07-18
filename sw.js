@@ -7,7 +7,7 @@
  *   - Cross-origin APIs:     pass through, never cache (live data only)
  */
 
-const CACHE_NAME = 'ankommer-v131';
+const CACHE_NAME = 'ankommer-v132';
 
 const PRECACHE_URLS = [
   '/',
@@ -23,6 +23,7 @@ const PRECACHE_URLS = [
   '/icons/icon-192.png',
   '/icons/icon-512.png',
   '/og-image.png',
+  '/bjorn-telegram-qr.svg',
   // Static chapter pages — so offline first-visit to /chapter/X.html
   // returns the chapter, not the homepage.
   '/chapter/before-you-land.html',

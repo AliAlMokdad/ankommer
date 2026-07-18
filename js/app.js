@@ -2362,6 +2362,16 @@ const renderChaptersPreview = () => {
       ${readTime ? `<div class="ch-preview-time">${readTime}</div>` : ''}
     </button>`;
   }).join('');
+
+  // Bjørn on Telegram: a compact QR tile that matches the chapter-card grid. On a laptop it shows the
+  // QR (scan with your phone to get Bjørn in Telegram); on touch/mobile it swaps to a tap-to-open
+  // button, since you cannot scan your own screen. Label + aria are localized (all languages, RTL-safe).
+  const tgUrl = 'https://t.me/AskAnkommerBot';
+  grid.innerHTML += `<a class="ch-preview-card ch-qr-card" href="${tgUrl}" target="_blank" rel="noopener" aria-label="${i18n.t('tg_qr_aria')}">
+      <span class="ch-qr-chip"><img class="ch-qr-img" src="/bjorn-telegram-qr.svg" alt="" width="150" height="150" loading="lazy" decoding="async"></span>
+      <span class="ch-qr-tap" aria-hidden="true">✈️ ${i18n.t('tg_qr_open')}</span>
+      <span class="ch-qr-label">${i18n.t('tg_qr_label')}</span>
+    </a>`;
 };
 window.renderChaptersPreview = renderChaptersPreview;
 
